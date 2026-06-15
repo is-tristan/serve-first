@@ -1,0 +1,139 @@
+/*
+* =============================================
+* Headings
+* ============================================= 
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading);
+    font-weight: 700;
+    line-height: 100%;
+    margin: 0;
+    padding: 0;
+    text-wrap: pretty;
+
+    @media (width < 1024px) {
+        text-align: center;
+    }
+
+    @media (width >=768px) {
+        text-wrap: balance;
+    }
+
+    &.lightHeadingGradient {
+        background: var(--lightHeadingGradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: var(--light);
+    }
+
+    &.darkHeadingGradient {
+        background: var(--darkHeadingGradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: var(--dark);
+    }
+}
+
+
+h1 {
+    font-size: 2rem;
+
+    &.pageTitle {
+        font-size: clamp(2rem, 4.5vw, 4.5rem);
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+
+    &.sectionTitle {
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        line-height: 120%;
+    }
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+
+/*
+* =============================================
+* Text, lists, inputs, links
+* ============================================= 
+*/
+
+small,
+p,
+ul,
+ol {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 166.66%;
+    text-wrap: pretty;
+    font-weight: 300;
+
+    @media (width < 1024px) {
+        text-align: center;
+    }
+
+    @media (width >=768px) and (width <1200px) {
+        text-align: center;
+    }
+}
+
+ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    list-style: square;
+
+    li {
+        &::marker {
+            color: var(--primary);
+        }
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.large {
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        line-height: 150%;
+    }
+
+    &.extraLarge {
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    }
+}
+
+ul {
+    margin: 0;
+}

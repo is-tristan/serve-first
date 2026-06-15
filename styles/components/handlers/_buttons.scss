@@ -1,0 +1,87 @@
+@use "../../init/mixins" as *;
+
+.btn {
+    @include btn();
+
+    &.primary {
+        background: rgba(var(--primaryRgb), 0.15);
+        border-color: var(--primary);
+        color: var(--light);
+
+        @media (width >=768px) {
+            backdrop-filter: blur(0.25rem);
+        }
+
+        &:hover,
+        &:focus {
+            background: rgba(var(--primaryRgb), 0.25);
+            border-color: var(--primary);
+        }
+    }
+
+    &.secondary {
+        background: var(--secondary);
+        color: var(--dark);
+    }
+
+    &.accent {
+        background: var(--accent);
+    }
+
+    &.dark {
+        background: var(--dark);
+    }
+
+    &.transparent {
+        background: transparent;
+        border-color: rgba(var(--lightRgb), 0.25);
+
+        &:hover {
+            background: rgba(var(--lightRgb), 0.15);
+        }
+    }
+
+    &.transparentDark {
+        border-color: var(--dark);
+        color: var(--dark);
+        background: transparent;
+
+        &:hover {
+            background: var(--dark);
+            color: var(--light);
+        }
+    }
+
+    &.fullWidth {
+        width: 100%;
+        min-width: 100%;
+        flex-basis: 100%;
+    }
+}
+
+.textLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    width: max-content;
+    padding: 0;
+    border: none;
+    border-radius: none;
+    overflow: visible;
+    position: relative;
+    color: var(--light);
+    transition: var(--ease);
+
+    &:hover {
+        &::before {
+            width: 0;
+            left: unset;
+            right: 0;
+        }
+    }
+
+    &.colorPrimary {
+        color: var(--primary);
+    }
+}

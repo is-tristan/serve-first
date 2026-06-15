@@ -1,0 +1,39 @@
+:root {
+    font-size: 1rem;
+
+    // Fonts
+    --heading: var(--font-special-gothic-expanded-one), ui-sans, sans;
+    --text: var(--font-poppins), ui-sans-serif, sans-serif;
+
+    // Colours
+    --primary: #0090d0;
+    --primaryRgb: 0, 144, 208;
+    --primaryAlt: #006FA0;
+    --primaryAltRgb: 0, 111, 160;
+    --dark: #0C0C0D;
+    --darkRgb: 12, 12, 13;
+    --light: #FFFFFF;
+    --lightRgb: 255, 255, 255;
+    --lightAlt: #F5F5F5;
+    --lightAltRgb: 245, 245, 245;
+
+    // Gradients
+    --lightHeadingGradient: linear-gradient(to right, rgba(var(--lightRgb), 1), rgba(var(--lightRgb), 0.5));
+    --darkHeadingGradient: linear-gradient(to right, rgba(var(--darkRgb), 0.5), rgba(var(--lightAltRgb), 0.1));
+
+    // Borders & Radius
+    --btnRadius: 10rem;
+    --borderRadius: 0.875rem;
+    --border: #E0E0E0;
+    --borderDark: rgba(var(--lightRgb), 0.1);
+
+    // Animations
+    --ease: all 0.25s ease;
+
+    // Header
+    --headerHeight: 6rem;
+    --mobileHeaderHeight: 4.5rem;
+
+    // Layout
+    --layoutMaxWidth: 1512px;
+}

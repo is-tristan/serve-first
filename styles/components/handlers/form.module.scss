@@ -1,0 +1,121 @@
+@use "../../init/mixins" as *;
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.5rem;
+
+    * {
+        font-family: var(--text);
+        font-weight: 500;
+        text-align: left;
+    }
+
+    &[data-theme="light"] {
+        label,
+        legend {
+            color: var(--light);
+        }
+        .submit {
+            background: transparent;
+            color: var(--light);
+            border-color: rgba(var(--lightRgb), 0.25);
+
+            &:hover {
+                background: rgba(var(--lightRgb), 0.1);
+            }
+        }
+    }
+}
+
+.fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    border: none;
+    flex-basis: 100%;
+    
+    &.half {
+        @media (width >=768px) {
+            flex-basis: calc(50% - 0.75rem);
+        }
+    }
+
+    .legend {
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+
+        .required {
+            color: var(--primary);
+            font-weight: 700;
+        }
+    }
+    
+    .field {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input:not([type="checkbox"]),
+        textarea {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            border-radius: var(--borderRadius);
+            border: 1.5px solid var(--border);
+            transition: all 0.1s ease;
+
+            &:focus,
+            &:active {
+                outline: 2px solid var(--primary);
+                outline-offset: 2px;
+            }
+        }
+
+        textarea {
+            min-height: 7.5rem;
+        }
+    }
+
+    &.consent {
+        .field {
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 0.25rem;
+
+            input {
+                width: 1rem;
+                height: 1rem;
+                border-radius: 0.25rem;
+            }
+
+            label {
+                font-size: 0.75rem;
+                font-weight: 500;
+                line-height: 125%;
+            }
+        }
+    }
+}
+
+.formFooter {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    flex-basis: 100%;
+
+    .submit {
+        @include btn();
+        background: var(--dark);
+
+        &:hover {
+            scale: 1.025;
+            background: var(--primary);
+        }
+    }
+}

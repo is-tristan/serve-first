@@ -1,0 +1,18 @@
+.container {
+    &.sectionSplitTitle {
+        @media (width >=1024px) {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 3rem;
+
+            .headingCol {
+                flex-basis: calc(66.66% - 1.5rem);
+            }
+
+            .contentCol {
+                flex-basis: calc(33.33% - 1.5rem);
+            }
+        }
+    }
+}

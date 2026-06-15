@@ -1,0 +1,32 @@
+<svg width="1512" height="850" viewBox="0 0 1512 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_254_2)">
+<foreignObject x="-550" y="-550" width="2612" height="1950"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(275px);clip-path:url(#bgblur_1_254_2_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_n_254_2)" data-figma-bg-blur-radius="550">
+<rect width="1512" height="850" fill="#0C0C0D" fill-opacity="0.2" style="mix-blend-mode:soft-light"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_n_254_2" x="-550" y="-550" width="2612" height="1950" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.66666668653488159 0.66666668653488159" stitchTiles="stitch" numOctaves="3" result="noise" seed="8399" />
+<feComponentTransfer in="noise" result="coloredNoise1">
+<feFuncR type="linear" slope="2" intercept="-0.5" />
+<feFuncG type="linear" slope="2" intercept="-0.5" />
+<feFuncB type="linear" slope="2" intercept="-0.5" />
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feComponentTransfer in="noise1Clipped" result="color1">
+<feFuncA type="table" tableValues="0 0.15" />
+</feComponentTransfer>
+<feMerge result="effect1_noise_254_2">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<clipPath id="bgblur_1_254_2_clip_path" transform="translate(550 550)"><rect width="1512" height="850"/>
+</clipPath><clipPath id="clip0_254_2">
+<rect width="1512" height="850" fill="white"/>
+</clipPath>
+</defs>
+</svg>

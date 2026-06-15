@@ -1,0 +1,52 @@
+.footer {
+    background-image: url('/static/logo/logo-mark.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    p {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    position: relative;
+    filter: invert(1) brightness(0);
+
+    @media (width >=1024px) {
+        width: 100%;
+        height: 4rem;
+    }
+}
+
+.socialItems {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+
+    .socialItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background: var(--dark);
+        color: var(--light);
+        border-radius: var(--borderRadius);
+        transition: var(--ease);
+
+        &:hover {
+            background: var(--primary);
+            scale: 1.1;
+        }
+    }
+}

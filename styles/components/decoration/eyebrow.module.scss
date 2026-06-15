@@ -1,0 +1,18 @@
+.eyebrow {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+
+    @media (width >=768px) {
+        gap: 0.875rem;
+    }
+
+    &[data-type="secondary"] {
+        font-weight: 400;
+    }
+}
