@@ -27,7 +27,7 @@ export const platformStoryData = [
         ]
     },
     {
-        eyebrow: "01 | lorem ipsum",
+        eyebrow: "02 | lorem ipsum",
         image: "/decoration/no-image-placeholder.webp",
         title: "Lorem ipsum dolor sit amet.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
@@ -54,7 +54,7 @@ export const platformStoryData = [
         ]
     },
     {
-        eyebrow: "01 | lorem ipsum",
+        eyebrow: "03 | lorem ipsum",
         image: "/decoration/no-image-placeholder.webp",
         title: "Lorem ipsum dolor sit amet.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",

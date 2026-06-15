@@ -89,18 +89,22 @@ export default function Heading({
 
             )}
 
-            <motion.div
-                className="buttons"
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-                initial={{ opacity: 0, y: 16 }}
-                transition={{ duration: 0.5, delay: description ? 0.5 : 0.25 }}
-            >
+            {btnTextPrimary || btnTextSecondary && (
 
-                {btnTextPrimary && (<Button text={btnTextPrimary} href={btnLinkPrimary} target={btnTargetPrimary} className={btnClassPrimary} />)}
+                <motion.div
+                    className="buttons"
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+                    initial={{ opacity: 0, y: 16 }}
+                    transition={{ duration: 0.5, delay: description ? 0.5 : 0.25 }}
+                >
 
-                {btnTextSecondary && (<Button text={btnTextSecondary} href={btnLinkSecondary} target={btnTargetSecondary} className={btnClassSecondary} />)}
+                    {btnTextPrimary && (<Button text={btnTextPrimary} href={btnLinkPrimary} target={btnTargetPrimary} className={btnClassPrimary} />)}
 
-            </motion.div>
+                    {btnTextSecondary && (<Button text={btnTextSecondary} href={btnLinkSecondary} target={btnTargetSecondary} className={btnClassSecondary} />)}
+
+                </motion.div>
+
+            )}
 
         </div>
 

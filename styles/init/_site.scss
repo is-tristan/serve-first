@@ -11,6 +11,9 @@
             }
 
             .contentCol {
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
                 flex-basis: calc(33.33% - 1.5rem);
             }
         }

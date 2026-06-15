@@ -15,4 +15,12 @@
     &[data-type="secondary"] {
         font-weight: 400;
     }
+
+    &[data-text-color="colorLight"] {
+        color: var(--light);
+    }
+
+    &[data-text-color="colorDark"] {
+        color: var(--dark);
+    }
 }

@@ -12,14 +12,16 @@
     --primaryAltRgb: 0, 111, 160;
     --dark: #0C0C0D;
     --darkRgb: 12, 12, 13;
+    --darkAlt: #181820;
+    --darkAltRgb: 24, 24, 32;
     --light: #FFFFFF;
     --lightRgb: 255, 255, 255;
-    --lightAlt: #F5F5F5;
-    --lightAltRgb: 245, 245, 245;
+    --lightAlt: #E0DCE8;
+    --lightAltRgb: 224, 220, 232;
 
     // Gradients
     --lightHeadingGradient: linear-gradient(to right, rgba(var(--lightRgb), 1), rgba(var(--lightRgb), 0.5));
-    --darkHeadingGradient: linear-gradient(to right, rgba(var(--darkRgb), 0.5), rgba(var(--lightAltRgb), 0.1));
+    --darkHeadingGradient: linear-gradient(to right, var(--dark) 5%,  rgba(var(--darkRgb), 0.4));
 
     // Borders & Radius
     --btnRadius: 10rem;
