@@ -22,24 +22,50 @@
     transition: var(--ease);
 
     @media (width >=768px) {
-        flex-basis: calc(50% - 1rem);
+        flex-basis: calc(50% - 0.67rem);
         padding: 2rem;
     }
 
     @media (width >=1024px) {
         &:not(:nth-child(1)):not(:nth-child(2)) {
-            flex-basis: calc(33.33% - 1rem);
+            flex-basis: calc(calc(100% / 3) - 0.67rem);
         }
     }
 
-    .productHighlightItemIcon {
-        transition: var(--ease);  
+    &::before,
+    &::after {
+        position: absolute;
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
+        filter: blur(5rem);
+        visibility: hidden;
+        opacity: 0;
+        transition: var(--ease);
+
+        @media (width >=768px) {
+            content: '';
+        }
+    }
+
+    &::before {
+        top: -2.5rem;
+        left: -2.5rem;
+        background: var(--primary);
+    }
+
+    &::after {
+        bottom: -2.5rem;
+        right: -2.5rem;
+        background: var(--secondary);
     }
 
     .productHighlightItemContent {
         display: flex;
         flex-flow: column nowrap;
         gap: 0.75rem;
+        position: relative;
+        z-index: 1;
 
         h3,
         p {
@@ -52,14 +78,24 @@
     &:active {
         background: var(--dark);
 
+        &::before,
+        &::after {
+            visibility: visible;
+            opacity: 1;
+        }
+
         .productHighlightItemIcon {
             filter: brightness(0) invert(1);
         }
-    
-        span,
+
+        span:not(a span),
         h3,
         p {
             color: var(--light);
+        }
+
+        a {
+            color: var(--secondary);
         }
 
         @media (width >=768px) {
@@ -75,7 +111,20 @@
 
         .productHighlightItem {
             background: var(--darkAlt);
-            color: var(--light);
+
+            &::before,
+            &::after {
+                content: unset;
+            }
+
+            h3,
+            p {
+                color: var(--light);
+            }
+
+            a {
+                color: var(--primary);
+            }
 
             &:hover,
             &:focus,

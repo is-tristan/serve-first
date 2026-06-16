@@ -28,6 +28,24 @@ export default function Heading({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const normalizedDescription = typeof description === "string"
+        ? description.trim()
+        : "";
+    const descriptionContent = (() => {
+        if (!normalizedDescription) {
+            return normalizedDescription;
+        }
+
+        if (descriptionTag === "p") {
+            return normalizedDescription.replace(/^<p[^>]*>/i, "").replace(/<\/p>$/i, "").trim();
+        }
+
+        if (descriptionTag === "ul") {
+            return normalizedDescription.replace(/^<ul[^>]*>/i, "").replace(/<\/ul>$/i, "").trim();
+        }
+
+        return normalizedDescription;
+    })();
 
     return (
 
@@ -77,9 +95,9 @@ export default function Heading({
                     {(() => {
                         switch (descriptionTag) {
                             case "p":
-                                return <p dangerouslySetInnerHTML={{ __html: description }} />;
+                                return <p dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
                             case "ul":
-                                return <ul dangerouslySetInnerHTML={{ __html: description }} />;
+                                return <ul dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
                             default:
                                 return null;
                         }

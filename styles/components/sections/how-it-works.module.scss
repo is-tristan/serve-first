@@ -1,0 +1,41 @@
+.howItWorksItem {
+
+    .featureListItemNumber {
+        font-family: var(--heading);
+        font-size: clamp(2rem, 4.5vw, 4.5rem);
+        color: transparent;
+        -webkit-text-stroke: 1.5px var(--primary);
+    }
+
+    .howItWorksItemButton {
+        color: var(--primary);
+        background: rgba(var(--primaryRgb), 0.05);
+        border-color: var(--primary);
+
+        &:hover {
+            background: rgba(var(--primaryRgb), 0.15);
+        }
+    }
+
+    &:nth-child(even) {
+        .featureListItemNumber {
+            -webkit-text-stroke: 1.5px var(--secondary);
+        }
+
+        .howItWorksItemList {
+            svg {
+                fill: var(--secondary);
+            }
+        }
+
+        .howItWorksItemButton {
+            color: var(--secondary);
+            background: rgba(var(--secondaryRgb), 0.05);
+            border-color: var(--secondary);
+
+            &:hover {
+                background: rgba(var(--secondaryRgb), 0.15);
+            }
+        }
+    }
+}

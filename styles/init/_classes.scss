@@ -66,6 +66,8 @@
         &::after {
             content: '.';
             color: var(--primary);
+            -webkit-text-fill-color: var(--primary);
+            text-fill-color: var(--primary);
         }
     }
 }

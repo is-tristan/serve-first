@@ -19,3 +19,63 @@
         }
     }
 }
+
+.sectionHasGradients {
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: 0;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        filter: blur(10rem);
+        opacity: 0.125;
+        transition: var(--ease);
+
+        @media (width >=768px) {
+            content: '';
+        }
+    }
+
+    &::before {
+        top: -10rem;
+        left: -10rem;
+        background: var(--primary);
+    }
+
+    &::after {
+        bottom: -10rem;
+        right: -10rem;
+        background: var(--secondary);
+    }
+}
+
+.iconList {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+
+    .iconListItem {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .icon {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1rem;
+        height: 1rem;
+
+        @media (width >=768px) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}

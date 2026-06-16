@@ -22,7 +22,7 @@ export default function PlatformStory({
 
     return (
 
-        <section className={`row ${styles.platformStory}`} data-theme={theme}>
+        <section className={`row ${styles.platformStory} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
 
             <div className={'container sectionSplitTitle noPaddingBottom'}>
 

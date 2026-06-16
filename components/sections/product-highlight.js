@@ -24,7 +24,7 @@ export default function ProductHighlight({
 
     return (
 
-        <section className={`row ${styles.productHighlight}`} data-theme={theme}>
+        <section className={`row ${styles.productHighlight} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
 
             <div className={'container sectionSplitTitle noPaddingBottom'}>
 
@@ -54,7 +54,7 @@ export default function ProductHighlight({
 
                             {item.icon && (
 
-                                <div className={styles.productHighlightItemIcon}>
+                                <div className={styles.productHighlightItemIcon} style={{ transition: "var(--ease)", position: "relative", zIndex: 1 }}>
 
                                     <Image src={item.icon} alt={item.title} width={24} height={24} />
 
