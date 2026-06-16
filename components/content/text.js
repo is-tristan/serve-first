@@ -28,6 +28,7 @@ export default function Heading({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+
     const normalizedDescription = typeof description === "string"
         ? description.trim()
         : "";
@@ -56,7 +57,7 @@ export default function Heading({
                 <motion.div
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
                     initial={{ opacity: 0, y: 16 }}
-                    transition={{ duration: 0.5, delay: 0.25 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                     className="heading hasFullStop"
                 >
 
@@ -88,7 +89,7 @@ export default function Heading({
                 <motion.div
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
                     initial={{ opacity: 0, y: 16 }}
-                    transition={{ duration: 0.5, delay: 0.25 }}
+                    transition={{ duration: 0.5, delay: 0.75 }}
                     className={contentClass}
                 >
 

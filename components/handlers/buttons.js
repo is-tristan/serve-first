@@ -17,6 +17,7 @@ export default function Button({ text,
     hasAnimation = true,
     icon = arrowRightShort,
     dataName = undefined,
+    delay = 0.25
 }) {
 
     const ref = useRef(null);
@@ -24,7 +25,7 @@ export default function Button({ text,
 
     return (
 
-        <motion.div ref={ref} animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }} initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.25 }}>
+        <motion.div ref={ref} animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }} initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: delay }}>
 
             <Link href={href} target={target} className={`btn ${className}`} data-name={dataName}>
 

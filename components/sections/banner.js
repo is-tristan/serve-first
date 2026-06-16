@@ -59,6 +59,7 @@ export default function Banner({
                                     text="Lorem ipsum dolor sit amet."
                                     href="#"
                                     className="textLink"
+                                    delay={1}
                                 />
 
                             </div>

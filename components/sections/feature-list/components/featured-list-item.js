@@ -1,0 +1,101 @@
+"use client";
+
+// Imports
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
+
+// Next
+import Image from "next/image";
+
+// Components
+import Eyebrow from "@/components/decoration/eyebrow";
+import Button from "@/components/handlers/buttons";
+
+// Styles
+import styles from "@/styles/components/sections/feature-list.module.scss";
+
+// Icons
+import { checkmark } from "@/utils/icons";
+
+export default function FeaturedListItem({
+    index = 0,
+    theme = "light",
+    image,
+    eyebrow,
+    title,
+    description,
+    list = [],
+    button
+}) {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+    return (
+
+        <motion.div
+            ref={ref}
+            className={styles.featureListItem}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
+            transition={{ duration: 0.5, delay: 0.25 + (index * 0.12) }}
+        >
+
+            <div className={styles.colRight}>
+
+                <Image
+                    className={styles.featureListItemImage}
+                    src={image}
+                    alt={title}
+                    fill
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                />
+
+            </div>
+
+            <div className={`${styles.colLeft} ${styles.featureListItemContent}`}>
+
+                <div className={`hasFullStop ${styles.featureListItemHeader}`}>
+
+                    {eyebrow && (<Eyebrow hasAnimation={false} text={eyebrow} />)}
+
+                    {title && (<h2 className={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`}>{title}</h2>)}
+
+                </div>
+
+                {description && (<p>{description}</p>)}
+
+                {list.length > 0 && (
+
+                    <div className="iconList">
+
+                        {list.map((listItem, listIndex) => (
+
+                            <div key={listIndex} className="iconListItem">
+
+                                <div className="icon colorPrimary" dangerouslySetInnerHTML={{ __html: checkmark }} />
+
+                                <span>{listItem.text}</span>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                )}
+
+                <div className={styles.featuredItemFooter}>
+
+                    {button && (<Button className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+
+                </div>
+
+            </div>
+
+        </motion.div>
+
+    );
+
+}

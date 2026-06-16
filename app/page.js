@@ -1,8 +1,8 @@
 import Banner from "@/components/sections/banner";
-import PlatformStory from "@/components/sections/platform-story";
-import ProductHighlight from "@/components/sections/product-highlight";
-import FeatureList from "@/components/sections/feature-list";
-import HowItWorks from "@/components/sections/how-it-works";
+import PlatformStory from "@/components/sections/platform-story/platform-story";
+import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
+import FeatureList from "@/components/sections/feature-list/feature-list";
+import HowItWorks from "@/components/sections/how-it-works/how-it-works";
 import { howItWorksData } from "@/data/how-it-works-data";
 
 export default function Home() {
