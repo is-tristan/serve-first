@@ -74,7 +74,7 @@ export default function Banner({
 
                     <div className={`hidden-s hidden-m hidden-l ${styles.imageCol}`}>
 
-                        <Image className={styles.bannerImage} src={image} alt={title} width={1024} height={1024} loading="eager" />
+                        <Image className={styles.bannerImage} src={image} alt={title} width={1024} height={1024} loading="eager" priority />
 
                     </div>
 
@@ -86,7 +86,7 @@ export default function Banner({
 
                 <div className={styles.backgroundImage}>
 
-                    <Image src={backgroundImage} alt={title} fill loading="eager" />
+                    <Image src={backgroundImage} alt={title} fill loading="eager" priority />
 
                 </div>
 
