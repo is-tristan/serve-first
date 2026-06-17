@@ -6,11 +6,11 @@
     gap: 0.25rem;
     text-align: center;
     width: auto;
-    padding: 1rem;
+    padding: 0.875rem;
     border-radius: var(--btnRadius);
     border: 1px solid transparent;
     font-family: var(--text);
-    font-size: 0.75rem;
+    font-size: 0.66rem;
     font-weight: 700;
     line-height: 1;
     color: var(--light);
@@ -21,8 +21,14 @@
 
     @media (width >=768px) {
         flex: 0 0 auto;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
+        line-height: 1;
         width: max-content;
+        padding: 1rem;
+    }
+
+    @media (width >=1024px) {
+        font-size: 0.875rem;
     }
 
     .icon {
@@ -30,19 +36,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 1rem;
-        height: 1rem;
+        width: 0.875rem;
+        height: 0.875rem;
         position: relative;
         transition: var(--ease);
 
         @media (width >=768px) {
-            width: 1.25rem;
-            height: 1.25rem;
+            width: 1rem;
+            height: 1rem;
         }
 
         @media (width >=1024px) {
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.25rem;
+            height: 1.25rem;
         }
 
         svg {

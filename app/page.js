@@ -3,11 +3,8 @@ import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
 import FeatureList from "@/components/sections/feature-list/feature-list";
 import HowItWorks from "@/components/sections/how-it-works/how-it-works";
-import { howItWorksData } from "@/data/how-it-works-data";
 
 export default function Home() {
-  const howItWorksHeading = howItWorksData?.[0]?.heading || [];
-  const howItWorksItems = howItWorksData?.[1]?.data || [];
 
   return (
 
@@ -27,9 +24,9 @@ export default function Home() {
 
       <FeatureList theme="dark" />
 
-      <HowItWorks heading={howItWorksHeading} data={howItWorksItems} />
+      <HowItWorks />
 
-      <HowItWorks theme="dark" heading={howItWorksHeading} data={howItWorksItems} />
+      <HowItWorks theme="dark" />
 
     </>
 

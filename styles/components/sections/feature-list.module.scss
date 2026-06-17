@@ -19,11 +19,19 @@
          padding-top: 4rem;
          flex-flow: row-reverse nowrap;
          justify-content: space-between;
-         gap: 2rem;
+         gap: 1.5rem;
+
+         @media (width >=1280px) {
+             gap: 2rem;
+         }
 
          .colLeft,
          .colRight {
-             flex-basis: calc(50% - 2rem);
+             flex-basis: calc(50% - 1.5rem);
+
+             @media (width >=1280px) {
+                 flex-basis: calc(50% - 2rem);
+             }
          }
 
          &:nth-child(even) {
@@ -40,18 +48,22 @@
          border-radius: var(--borderRadius);
 
          @media (width < 768px) {
-             aspect-ratio: 1/1;
+             aspect-ratio: 4/3;
          }
 
-         @media (width < 1024px) {
-             aspect-ratio: 4/3;
+         @media (width >=768px) and (width < 1024px) {
+             aspect-ratio: 16/9;
          }
      }
 
      .colLeft {
          display: flex;
          flex-flow: column nowrap;
-         gap: 1.5rem;
+         gap: 1rem;
+
+         @media (width >=768px) {
+             gap: 1.5rem;
+         }
 
          p {
              margin-bottom: 0;
@@ -65,7 +77,11 @@
      }
 
      .featuredItemFooter {
-        padding-top: 1.5rem;
+         padding-top: 1rem;
+
+         @media (width >=1024px) {
+            padding-top: 1.5rem;
+         }
      }
  }
 

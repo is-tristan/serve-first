@@ -2,8 +2,8 @@ export const howItWorksData = [
     {
         heading: [
             {
-                eyebrow: "Lorem ipsum dolor.",
-                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                eyebrow: "- How It Works Component",
+                title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
             }
         ]

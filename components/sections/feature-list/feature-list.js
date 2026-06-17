@@ -7,7 +7,7 @@ import { featureListData } from "@/data/feature-list-data";
 // Styles
 import styles from "@/styles/components/sections/feature-list.module.scss";
 
-export default function FeatureList({ theme = "light", data = featureListData || [] }) {
+export default function FeatureList({ theme = "light", eyebrow = "- Feature List Component", data = featureListData || [] }) {
 
     return (
 

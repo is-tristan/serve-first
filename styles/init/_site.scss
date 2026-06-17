@@ -41,15 +41,25 @@
     }
 
     &::before {
-        top: -10rem;
-        left: -10rem;
+        top: -7.5rem;
+        left: -7.5rem;
         background: var(--primary);
+
+        @media (width >= 1024px) {
+            top: -10rem;
+            left: -10rem;
+        }
     }
 
     &::after {
-        bottom: -10rem;
-        right: -10rem;
+        bottom: -7.5rem;
+        right: -7.5rem;
         background: var(--secondary);
+
+        @media (width >= 1024px) {
+            bottom: -10rem;
+            right: -10rem;
+        }
     }
 }
 
@@ -57,6 +67,12 @@
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
+
+    @media (width >=768px) and (width < 1024px) {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
 
     .iconListItem {
         display: flex;

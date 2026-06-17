@@ -1,6 +1,6 @@
 export const featureListData = [
     {
-        eyebrow: "- Lorem ipsum dolor sit amet.",
+        eyebrow: "- Feature List Component",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.",
         image: "/decoration/no-image-placeholder.webp",
@@ -25,7 +25,7 @@ export const featureListData = [
         }
     },
     {
-        eyebrow: "- Lorem ipsum dolor sit amet.",
+        eyebrow: "- Feature List Component",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.",
         image: "/decoration/no-image-placeholder.webp",
@@ -50,7 +50,7 @@ export const featureListData = [
         }
     },
     {
-        eyebrow: "- Lorem ipsum dolor sit amet.",
+        eyebrow: "- Feature List Component",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.",
         image: "/decoration/no-image-placeholder.webp",

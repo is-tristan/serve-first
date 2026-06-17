@@ -13,7 +13,7 @@ import { productHighlightData } from "@/data/product-highlight-data";
 
 export default function ProductHighlight({
     theme = "light",
-    eyebrow = "- Lorem ipsum dolor sit amet.",
+    eyebrow = "- Product Highlight Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     link = "#",
     data = productHighlightData || []

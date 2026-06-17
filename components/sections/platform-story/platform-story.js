@@ -11,7 +11,7 @@ import { platformStoryData } from "@/data/platform-story-data";
 
 export default function PlatformStory({
     theme = "light",
-    eyebrow = "- Lorem ipsum dolor sit amet.",
+    eyebrow = "- Platform Story Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
     data = platformStoryData || []

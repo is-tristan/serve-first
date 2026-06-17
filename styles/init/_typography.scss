@@ -15,14 +15,10 @@ h6 {
     line-height: 100%;
     margin: 0;
     padding: 0;
-    text-wrap: pretty;
+    text-wrap: balance;
 
-    @media (width < 1024px) {
+    @media (width >=576px) and (width < 1024px) {
         text-align: center;
-    }
-
-    @media (width >=768px) {
-        text-wrap: balance;
     }
 
     &.lightHeadingGradient {
@@ -44,10 +40,10 @@ h6 {
 
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
 
     &.pageTitle {
-        font-size: clamp(2rem, 4.5vw, 4.5rem);
+        font-size: clamp(1.9rem, 4.5vw, 4.5rem);
     }
 }
 
@@ -61,19 +57,23 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.25rem, 1.25vw, 1.25rem);
+    font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+    line-height: 125%;
 }
 
 h4 {
     font-size: 1.125rem;
+    line-height: 120%;
 }
 
 h5 {
     font-size: 1rem;
+    line-height: 115%;
 }
 
 h6 {
     font-size: 0.875rem;
+    line-height: 110%;
 }
 
 /*
@@ -86,16 +86,12 @@ small,
 p,
 ul,
 ol {
-    font-size: clamp(0.875rem, 1vw, 1rem);
-    line-height: 166.66%;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    line-height: 165%;
     text-wrap: pretty;
     font-weight: 300;
 
-    @media (width < 1024px) {
-        text-align: center;
-    }
-
-    @media (width >=768px) and (width <1200px) {
+    @media (width >=576px) and (width < 1024px) {
         text-align: center;
     }
 }
@@ -104,9 +100,16 @@ ul {
     display: flex;
     flex-flow: column nowrap;
     gap: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 1.5rem;
+    padding: 0 0 1rem 1.5rem;
     list-style: square;
+
+    @media (width >=576px) and (width < 1024px) {
+        align-items: center;
+    }
+
+    @media (width >=1280px) {
+        padding: 0.5rem 0 1.5rem 2.5rem;
+    }
 
     li {
         &::marker {
@@ -117,7 +120,7 @@ ul {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     padding: 0;
 
     &:last-child {

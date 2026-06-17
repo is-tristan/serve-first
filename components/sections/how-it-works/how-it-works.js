@@ -10,11 +10,11 @@ import { howItWorksData } from "@/data/how-it-works-data";
 import styles from "@/styles/components/sections/feature-list.module.scss";
 import stylesAlt from "@/styles/components/sections/how-it-works.module.scss";
 
-export default function HowItWorks({ theme = "light", heading = [], data = howItWorksData || [] }) {
+export default function HowItWorks({ theme = "light", heading, data }) {
 
-    const headingItems = Array.isArray(heading) ? heading : Array.isArray(data?.heading) ? data.heading : Array.isArray(data?.[0]?.heading) ? data[0].heading : [];
+    const headingItems = heading ?? howItWorksData?.[0]?.heading ?? [];
 
-    const items = Array.isArray(data) ? data : Array.isArray(data?.data) ? data.data : Array.isArray(data?.[1]?.data) ? data[1].data : [];
+    const items = data ?? howItWorksData?.[1]?.data ?? [];
 
     return (
 

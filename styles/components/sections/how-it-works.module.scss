@@ -11,6 +11,10 @@
         color: var(--primary);
         background: rgba(var(--primaryRgb), 0.05);
         border-color: var(--primary);
+        
+        @media (width >=768px) and (width < 1024px) {
+            margin: 0 auto;
+        }
 
         &:hover {
             background: rgba(var(--primaryRgb), 0.15);

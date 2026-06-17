@@ -12,11 +12,13 @@
 .productHighlightItem {
     flex-basis: 100%;
 
-    @media (width >=768px) {
-        flex-basis: calc(50% - 0.67rem);
+    @media (width >=768px) and (width < 1024px) {
+        flex: 1 0 calc(50% - 0.67rem);
     }
 
     @media (width >=1024px) {
+        flex: 1 0 calc(50% - 0.67rem);
+
         &:not(:nth-child(1)):not(:nth-child(2)) {
             flex-basis: calc(calc(100% / 3) - 0.67rem);
         }
@@ -26,7 +28,7 @@
 .productHighlightItemInner {
     display: flex;
     flex-flow: column nowrap;
-    gap: 0.75rem;
+    gap: 1rem;
     background: rgba(var(--lightAltRgb), 0.25);
     border: 1px solid transparent;
     border-radius: var(--borderRadius);
@@ -35,7 +37,7 @@
     overflow: hidden;
     transition: var(--ease);
 
-    @media (width >=768px) {
+    @media (width >=1280px) {
         padding: 2rem;
     }
 

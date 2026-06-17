@@ -10,7 +10,7 @@ import Button from "../handlers/buttons";
 import styles from "@/styles/components/sections/banner.module.scss";
 
 export default function Banner({
-    eyebrow = "- Lorem ipsum dolor sit amet.",
+    eyebrow = "- Banner Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.</p>",
     image = "/images/servefirst-iphone-mockup-dashboard.webp",

@@ -1,8 +1,17 @@
 .banner {
     position: relative;
+    min-height: 35rem;
+
+    @media (width >=768px) {
+        min-height: calc(66.66vh - var(--mobileHeaderHeight));
+    }
 
     @media (width >=1024px) {
-        min-height: calc(100vh - var(--headerHeight));
+        min-height: calc(70vh - var(--headerHeight));
+    }
+
+    @media (width >=1280px) {
+        min-height: calc(87.5vh - var(--headerHeight));
     }
 
     .bannerContainer {
