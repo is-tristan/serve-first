@@ -1,152 +1,86 @@
-.splide {
+.carouselNavigation {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
 
-    &.hasPagination {
-        .splide__pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
-            position: unset;
-            margin: 3rem auto 0;
+    @media (width >=768px) {
+        margin-top: 2rem;
+    }
 
-            .splide__pagination__page {
-                width: 1.5rem;
-                height: 1rem;
-                border-radius: 5rem;
-                background: transparent;
-                border: 1px solid var(--primary);
-                opacity: 1;
-                padding: 0;
-                margin: 0;
-                cursor: pointer;
-                transition: var(--ease);
+    .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: transparent;
+        color: #6B6878;
+        cursor: pointer;
+        transition: var(--ease);
 
-                @media (width >=1024px) {
-                    width: 2rem;
-                    height: 1.5rem;
-                }
-
-                &:hover {
-                    background: var(--primary);
-                    border-color: var(--primary);
-                }
-
-                &.is-active {
-                    transform: unset;
-                    width: 2.5rem;
-                    background: var(--primary);
-
-                    @media (width >=1024px) {
-                        width: 3.5rem;
-                    }
-                }
-            }
+        &:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--light);
         }
     }
 
-    &.paginationFlexStart {
+    .pagination {
+        display: none;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+
         @media (width >=1024px) {
-            .splide__pagination {
-                justify-content: flex-start;
-                margin-left: 0;
-            }
+            display: flex;
         }
     }
 
-    &.hasArrows {
-        .splide__arrow {
-            display: none;
-            justify-content: center;
-            align-items: center;
-            width: 3.5rem;
-            height: 3.5rem;
-            background: var(--dark);
-            border: 2px solid var(--light);
-            border-radius: 50%;
-            opacity: 1 !important;
-            box-shadow: 0 0.25rem 1rem rgba(var(--darkRgb), 0.1);
-            border: 1px solid rgba(var(--darkRgb), 0.15);
-            transition: var(--ease);
-            z-index: 100;
+    .paginationDot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0.5rem;
+        height: 0.5rem;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background: var(--border);
+        cursor: pointer;
+        transition: var(--ease);
 
-            @media (width >=1024px) {
-                display: flex;
-            }
+        &:hover {
+            background: rgba(var(--darkRgb), 0.3);
+        }
 
-            @media (width >=1600px) {
-                display: flex;
-                width: 4rem;
-                height: 4rem;
-            }
+        &.active {
+            background: var(--primary);
+            transform: scale(1.35);
+        }
+    }
 
-            svg {
-                display: none;
-            }
+    &.navDark {
+        .arrow {
+            border-color: var(--borderDark);
+        }
 
-            &::after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                margin: auto;
-                width: 50%;
-                height: 50%;
-                background: url("/wp-content/themes/vite/static/icons/arrow-right-light.svg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                opacity: 0.75;
-                transition: var(--ease);
+        .paginationDot {
+            background: var(--borderDark);
+
+            &.active {
+                background: var(--primary);
             }
 
             &:hover {
-                &::after {
-                    opacity: 1;
-                }
-            }
-
-            &.splide__arrow--prev {
-                left: 2.5%;
-                transform: scale(-1) translateY(50%) translateX(50%);
-            }
-
-            &.splide__arrow--next {
-                right: 2.5%;
-                transform: translateY(-50%) translateX(50%);
+                background: rgba(var(--lightRgb), 0.3);
             }
         }
-    }
-
-    &.hasMobilePagination {
-        .splide__track {
-            padding-bottom: 3rem !important;
-        }
-    }
-}
-
-.sliderHasGradients {
-    position: relative;
-    overflow: hidden;
-
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        background: linear-gradient(to right, var(--lightAlt), transparent);
-        width: 1.5rem;
-        height: 100%;
-
-        @media (width >=1024px) {
-            width: 7.5rem;
-        }
-    }
-
-    &::after {
-        left: unset;
-        right: 0;
-        background: linear-gradient(to left, var(--lightAlt), transparent);
     }
 }

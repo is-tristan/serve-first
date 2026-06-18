@@ -96,7 +96,7 @@ ol {
     }
 }
 
-ul {
+ul:not(.splide__list) {
     display: flex;
     flex-flow: column nowrap;
     gap: 0.75rem;

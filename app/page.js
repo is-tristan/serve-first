@@ -7,6 +7,7 @@ import IndustryCards from "@/components/sections/industry-cards/industry-cards";
 import ModuleStats from "@/components/sections/module-stats/module-stats";
 import RoleContext from "@/components/sections/role-context/role-context";
 import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
+import CustomerStory from "@/components/sections/customer-story/customer-story";
 
 export default function Home() {
 
@@ -47,6 +48,10 @@ export default function Home() {
       <ChallengeFrame />
 
       <ChallengeFrame theme="dark" />
+
+      <CustomerStory />
+
+      <CustomerStory theme="dark" />
 
     </>
 
