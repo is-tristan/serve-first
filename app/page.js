@@ -3,6 +3,10 @@ import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
 import FeatureList from "@/components/sections/feature-list/feature-list";
 import HowItWorks from "@/components/sections/how-it-works/how-it-works";
+import IndustryCards from "@/components/sections/industry-cards/industry-cards";
+import ModuleStats from "@/components/sections/module-stats/module-stats";
+import RoleContext from "@/components/sections/role-context/role-context";
+import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
 
 export default function Home() {
 
@@ -27,6 +31,22 @@ export default function Home() {
       <HowItWorks />
 
       <HowItWorks theme="dark" />
+
+      <IndustryCards />
+
+      <IndustryCards theme="dark" />
+
+      <ModuleStats />
+
+      <ModuleStats theme="dark" />
+
+      <RoleContext />
+
+      <RoleContext theme="dark" />
+
+      <ChallengeFrame />
+
+      <ChallengeFrame theme="dark" />
 
     </>
 

@@ -17,11 +17,26 @@
             background: rgba(var(--primaryRgb), 0.25);
             border-color: var(--primary);
         }
+
+        &.colorPrimary {
+            color: var(--primary);
+        }
     }
 
     &.secondary {
-        background: var(--secondary);
-        color: var(--dark);
+        background: rgba(var(--secondaryRgb), 0.15);
+        border-color: var(--secondary);
+        color: var(--light);
+
+        @media (width >=768px) {
+            backdrop-filter: blur(0.25rem);
+        }
+
+        &:hover,
+        &:focus {
+            background: rgba(var(--secondaryRgb), 0.25);
+            border-color: var(--secondary);
+        }
     }
 
     &.accent {

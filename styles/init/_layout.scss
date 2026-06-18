@@ -97,7 +97,6 @@
                 p {
                     margin-right: auto;
                     margin-left: auto;
-                    text-align: center;
                 }
             }
 
@@ -111,11 +110,13 @@
 
             h1,
             h2 {
-                max-width: 55rem;
+                max-width: 50rem;
             }
 
             p {
-                max-width: 55rem;
+                max-width: 35rem;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
     }
@@ -174,6 +175,30 @@
             >div,
             >article {
                 flex: 1 1 calc(calc(100% / 3) - 2rem);
+            }
+        }
+    }
+
+    // Quad Columns
+    &.quadCols {
+        @media (width >=768px) {
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: 1.5rem;
+
+            >div,
+            >article {
+                flex: 1 1 calc(calc(100% / 2) - 1.5rem);
+            }
+        }
+
+        @media (width >=1024px) {
+            flex-flow: row nowrap;
+
+            >div,
+            >article {
+                flex: 1 1 calc(calc(100% / 4) - 1.5rem);
             }
         }
     }
@@ -240,10 +265,6 @@
 
     @media (width >=768px) {
         gap: 1.5rem;
-    }
-
-    @media (width >=1024px) {
-        gap: 2rem;
     }
 
     &[data-alignment="center"] {

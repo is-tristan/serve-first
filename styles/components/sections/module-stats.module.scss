@@ -1,0 +1,45 @@
+.moduleStatsItems {
+    margin-top: 1.5rem;
+}
+
+.moduleStatItem {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background: rgba(var(--lightAltRgb), 0.25);
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--border);
+
+    .moduleStatItemNumbers {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.15rem;
+        font-family: var(--heading);
+        font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+        color: var(--primary);
+    }
+
+    &:nth-child(even) {
+        .moduleStatItemNumbers {
+            color: var(--secondary);
+        }
+    }
+}
+
+.moduleStats {
+    &[data-theme="dark"] {
+        background: var(--dark);
+        color: var(--light);
+
+        .moduleStatItem {
+            background: rgba(var(--darkAltRgb), 0.25);
+            border-color: var(--borderDark);
+        }
+    }
+}

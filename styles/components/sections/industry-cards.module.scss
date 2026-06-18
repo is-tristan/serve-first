@@ -1,0 +1,116 @@
+.industryCardsHeading {
+    p {
+        @media (width >=1024px) {
+            max-width: 35rem;
+        }
+    }
+}
+
+.industryCard {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    width: 100%;
+    background: rgba(var(--lightAltRgb), 0.25);
+    padding: 1.5rem;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--border);
+    position: relative;
+
+    @media (width >=768px) {
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    @media (width >=1024px) {
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+
+        >div {
+            flex: 0 0 calc(50% - 1rem);
+        }
+
+        &:nth-child(even) {
+            flex-flow: row nowrap;
+
+            .industryCardHeader {
+                span {
+                    color: var(--secondary);
+                }
+            }
+
+            .industryCardNumber {
+                color: var(--secondary);
+            }
+
+            a {
+                color: var(--secondary);
+            }
+        }
+    }
+}
+
+.industryCardImage {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--borderRadius);
+    aspect-ratio: 16/9;
+
+    @media (width < 768px) {
+        aspect-ratio: 4/3;
+    }
+}
+
+.industryCardContent,
+.industryCardHeader {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+
+    &.industryCardContent {
+        justify-content: center;
+
+        @media (width >=1024px) {
+            gap: 2rem;
+        }
+    }
+}
+
+.industryCardHeader {
+    gap: 1rem;
+
+    h3 {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+}
+
+.industryCardNumbers {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.75rem;
+
+    .industryCardNumber {
+        font-family: var(--heading);
+        font-size: clamp(1.25rem, 2vw, 2rem);
+        color: var(--primary);
+    }
+}
+
+.industryCards {
+    &[data-theme="light"] {
+        [data-name="primaryButton"] {
+            background: var(--primary);
+        }
+    }
+
+    &[data-theme="dark"] {
+        background: var(--dark);
+        color: var(--light);
+
+        .industryCard {
+            background: var(--darkAlt);
+            border-color: var(--borderDark);
+        }
+    }
+}

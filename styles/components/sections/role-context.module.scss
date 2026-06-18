@@ -1,0 +1,114 @@
+.roleContextHeading {
+    p {
+        @media (width >=1024px) {
+            max-width: 35rem;
+        }
+    }
+}
+
+.roleContextItems {
+    @media (width >=1024px) {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        >div {
+            flex-basis: calc(50% - 1.5rem);
+        }
+    }
+}
+
+.roleContextItem {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(var(--lightAltRgb), 0.25);
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    position: relative;
+
+    @media (width >=1024px) {
+        padding: 2rem;
+    }
+
+    &:nth-child(even) {
+        .roleContextNumber {
+            color: var(--secondary);
+        }
+
+        [data-name="roleContextButton"] {
+            color: var(--secondary);
+        }
+    }
+}
+
+.roleContextHeader {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.75rem;
+
+    span {
+        color: var(--dark);
+    }
+
+    h3 {
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+    }
+}
+
+.roleContextContent {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    width: 100%;
+
+    .roleContextNumber {
+        font-family: var(--heading);
+        font-size: clamp(1.25rem, 2vw, 2rem);
+        color: var(--primary);
+    }
+}
+
+.roleContextFooter {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+
+    @media (width >=1024px) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        p {
+            max-width: 50%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.roleContext {
+    &[data-theme="dark"] {
+        background: var(--dark);
+        color: var(--light);
+
+        .roleContextItem {
+            background: var(--darkAlt);
+            border-color: var(--borderDark);
+        }
+
+        .roleContextHeader {
+            span {
+                color: var(--light);
+            }
+        }
+
+        .roleContextContent {
+            p {
+                color: rgba(var(--lightRgb), 0.5);
+            }
+        }
+    }
+}
