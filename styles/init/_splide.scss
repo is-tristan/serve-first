@@ -58,11 +58,14 @@
 
         &:hover {
             background: rgba(var(--darkRgb), 0.3);
+            width: 1.25rem;
+            border-radius: 0.5rem;
         }
 
         &.active {
             background: var(--primary);
-            transform: scale(1.35);
+            width: 1.25rem;
+            border-radius: 0.5rem;
         }
     }
 
