@@ -31,7 +31,7 @@ export default function ContentGridItem({
             ref={ref}
             className={styles.contentGridItem}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.12) }}
+            initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
             {item.image && (
@@ -66,7 +66,7 @@ export default function ContentGridItem({
 
                     </div>
 
-                    <Button text={item.button.text} href={item.button.href} target={item.button.target} className="textLink fw400" />
+                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink fw400" />
 
                 </div>
 

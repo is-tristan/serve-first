@@ -35,7 +35,7 @@ export default function RoleContextItem({
             ref={ref}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             initial={{ opacity: 0, y: 16 }}
-            transition={{ duration: 0.5, delay: 0.25 + (index * 0.12) }}
+            transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
             <div className={styles.roleContextHeader}>

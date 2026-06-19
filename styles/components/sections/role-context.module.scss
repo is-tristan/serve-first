@@ -57,6 +57,12 @@
     h3 {
         font-size: clamp(1.25rem, 2vw, 1.5rem);
     }
+
+    img {
+        @media (width >=768px) and (width < 1024px) {
+            margin: 0 auto;
+        }
+    }
 }
 
 .roleContextContent {

@@ -13,6 +13,8 @@ import EvaSpotlight from "@/components/sections/eva-spotlight/eva-spotlight";
 import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
 import CtaBannerTwo from "@/components/sections/cta-banners/cta-banner-2";
 import ContentGrid from "@/components/sections/content-grid/content-grid";
+import Faq from "@/components/sections/faq/faq";
+import LogoBar from "@/components/sections/logo-bar/logo-bar";
 
 export default function Home() {
 
@@ -75,8 +77,16 @@ export default function Home() {
       <CtaBannerTwo theme="dark" />
 
       <ContentGrid />
-      
+
       <ContentGrid theme="dark" />
+
+      <Faq />
+
+      <Faq theme="dark" />
+
+      <LogoBar />
+
+      <LogoBar theme="dark" />
 
     </>
 

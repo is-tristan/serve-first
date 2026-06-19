@@ -25,6 +25,12 @@
     }
 }
 
+.challengeFrameEyebrow {
+    @media (width >=768px) and (width < 1024px) {
+       margin: 0 auto;
+    }
+}
+
 .challengeFrameContent {
     display: flex;
     flex-flow: column nowrap;
@@ -58,6 +64,10 @@
     display: flex;
     flex-flow: row wrap;
     gap: 0.5rem;
+
+    @media (width >=768px) and (width < 1024px) {
+        justify-content: center;
+    }
 
     .challengeFrameTag {
         display: flex;
