@@ -22,8 +22,8 @@
     --lightAltRgb: 224, 220, 232;
 
     // Gradients
-    --lightHeadingGradient: linear-gradient(to right, rgba(var(--lightRgb), 1), rgba(var(--lightRgb), 0.5));
-    --darkHeadingGradient: linear-gradient(to right, var(--dark) 5%,  rgba(var(--darkRgb), 0.4));
+    --lightHeadingGradient: linear-gradient(to right, var(--light) 15%, rgba(var(--lightRgb), 0.5));
+    --darkHeadingGradient: linear-gradient(to right, var(--dark), rgba(var(--darkRgb), 0.5));
 
     // Borders & Radius
     --btnRadius: 10rem;

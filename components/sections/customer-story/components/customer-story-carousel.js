@@ -1,14 +1,20 @@
 "use client";
 
+// Imports
 import { useRef, useState } from "react";
+import { motion, useInView } from "motion/react";
 
+// Splide
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
+// Components
 import CustomerStoryItem from "@/components/sections/customer-story/components/customer-story-item";
 
+// Styles
 import styles from "@/styles/components/sections/customer-story.module.scss";
 
+// Icons
 import { chevronLeft, chevronRight } from "@/utils/icons";
 
 export default function CustomerStoryCarousel({ theme = "light", data = [] }) {
@@ -16,9 +22,12 @@ export default function CustomerStoryCarousel({ theme = "light", data = [] }) {
     const splideRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.5 });
+
     return (
 
-        <div className={styles.customerStoryCarousel}>
+        <motion.div className={styles.customerStoryCarousel} ref={ref} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }} initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 }}>
 
             <div className={styles.customerStoryCarouselInner}>
 
@@ -83,7 +92,7 @@ export default function CustomerStoryCarousel({ theme = "light", data = [] }) {
 
             </div>
 
-        </div>
+        </motion.div>
 
     )
 

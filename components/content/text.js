@@ -8,6 +8,7 @@ import { motion, useInView } from "motion/react";
 import Button from "../handlers/buttons";
 
 export default function Heading({
+    hasAnimation = true,
     className = undefined,
     headingClass = undefined,
     contentClass = undefined,
@@ -55,9 +56,9 @@ export default function Heading({
             {title && (
 
                 <motion.div
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-                    initial={{ opacity: 0, y: 16 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
+                    animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
+                    initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
+                    transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
                     className="heading hasFullStop"
                 >
 
@@ -87,9 +88,9 @@ export default function Heading({
             {description && (
 
                 <motion.div
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-                    initial={{ opacity: 0, y: 16 }}
-                    transition={{ duration: 0.5, delay: 0.75 }}
+                    animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
+                    initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
+                    transition={hasAnimation ? { duration: 0.5, delay: 0.75 } : undefined}
                     className={contentClass}
                 >
 

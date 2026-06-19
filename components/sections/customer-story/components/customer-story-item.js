@@ -3,6 +3,7 @@ import Image from "next/image";
 
 // Components
 import Button from "@/components/handlers/buttons";
+import ReviewerInitials from "@/components/misc/reviewer-initials";
 
 // Styles
 import styles from "@/styles/components/sections/customer-story.module.scss";
@@ -11,7 +12,7 @@ import styles from "@/styles/components/sections/customer-story.module.scss";
 import { quoteIcon } from "@/utils/icons";
 
 // Utils
-import { useNumberCounter } from "@/utils/number-counter";
+import { useNumberCounter } from "@/helpers/number-counter";
 
 export default function CustomerStoryItem({ item = {} }) {
 
@@ -58,15 +59,7 @@ export default function CustomerStoryItem({ item = {} }) {
 
                     ) : (
 
-                        <div className={styles.reviewerImageInitials}>
-
-                            {item.reviewerName.split(" ").map((name, index) => (
-
-                                <span key={index}>{name.charAt(0)}</span>
-
-                            ))}
-
-                        </div>
+                        <ReviewerInitials name={item.reviewerName} />
 
                     )}
 

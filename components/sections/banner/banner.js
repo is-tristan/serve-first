@@ -2,9 +2,9 @@
 import Image from "next/image";
 
 // Components
-import Eyebrow from "../decoration/eyebrow";
-import Text from "../content/text";
-import Button from "../handlers/buttons";
+import Eyebrow from "@/components/decoration/eyebrow";
+import Text from "@/components/content/text";
+import Button from "@/components/handlers/buttons";
 
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";

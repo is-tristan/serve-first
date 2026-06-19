@@ -29,6 +29,14 @@ h6 {
         color: var(--light);
     }
 
+    &.darkAltHeadingGradient {
+        background: linear-gradient(to top right, var(--dark), var(--primary));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: var(--dark);
+    }
+
     &.darkHeadingGradient {
         background: var(--darkHeadingGradient);
         background-clip: text;

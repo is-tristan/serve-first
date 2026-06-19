@@ -119,6 +119,23 @@
                 margin-left: auto;
             }
         }
+
+        &.ctaCentered {
+
+            @media (width >=1024px) {
+
+                h1,
+                h2 {
+                    max-width: 50rem;
+                }
+
+                p {
+                    max-width: 55rem;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+        }
     }
 
     // Dual Columns

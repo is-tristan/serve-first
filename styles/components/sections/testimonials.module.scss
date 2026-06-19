@@ -1,0 +1,52 @@
+.testimonialItem {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+
+    h2 {
+        font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+        line-height: 115%;
+    }
+}
+
+.testimonialItemRating {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+
+    .testimonialItemStar {
+        width: 0.875rem;
+        height: 0.875rem;
+
+        @media (width >=768px) {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        @media (width >=1024px) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+.testimonialMeta {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.testimonials {
+    &[data-theme="dark"] {
+        background: var(--dark);
+        color: var(--light);
+    }
+}

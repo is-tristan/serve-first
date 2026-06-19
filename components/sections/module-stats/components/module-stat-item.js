@@ -8,7 +8,7 @@ import { motion, useInView } from "motion/react";
 import styles from "@/styles/components/sections/module-stats.module.scss";
 
 // Utils
-import { useNumberCounter } from "@/utils/number-counter";
+import { useNumberCounter } from "@/helpers/number-counter";
 
 export default function ModuleStatItem({
     index,

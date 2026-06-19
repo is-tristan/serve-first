@@ -1,0 +1,64 @@
+// Components
+import Text from "@/components/content/text";
+import Button from "@/components/handlers/buttons";
+
+// Styles
+import styles from "@/styles/components/sections/cta-banners.module.scss";
+
+// Background Image
+const backgroundImage = "/backgrounds/cta-banner-1-background.svg";
+
+export default function CtaBannerOne({
+    name = "ctaBanner1",
+    theme = "light",
+    title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.",
+    buttonPrimary = {
+        text: "Lorem ipsum dolor sit amet.",
+        href: "#",
+        target: "_self",
+    },
+    buttonSecondary = {
+        text: "Lorem ipsum dolor sit amet.",
+        href: "#",
+        target: "_self",
+    }
+}) {
+
+    return (
+
+        <section
+            className={`row colorLight ${styles.ctaBanner}`}
+            data-theme="light"
+            data-name={name}
+            style={{
+                backgroundColor: theme === "dark" ? "var(--dark)" : "var(--primary)",
+                backgroundImage: theme === "dark" ? `url(${backgroundImage})` : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}>
+
+            <div className={`container centered ctaCentered`}>
+
+                <div className="content">
+
+                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "light"}`} title={title} description={description} />
+
+                    <div className="buttons">
+
+                        {buttonPrimary && (<Button text={buttonPrimary.text} href={buttonPrimary.href} target={buttonPrimary.target} className={`${theme === "dark" ? "primary" : "transparent"}`} />)}
+
+                        {buttonSecondary && (<Button text={buttonSecondary.text} href={buttonSecondary.href} target={buttonSecondary.target} className="textLink fw400 colorLight" />)}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    )
+
+}

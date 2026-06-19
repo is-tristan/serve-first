@@ -1,0 +1,32 @@
+.ctaBannerContent {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+    box-shadow: 0 0 1.5rem 0 rgba(var(--darkRgb), 0.1);
+    width: 100%;
+
+    @media (width >=768px) {
+        padding: 2rem;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (width >=1024px) {
+        gap: 3rem;
+        padding: 3rem;
+    }
+}
+
+.ctaBannerTwo {
+    &[data-theme="dark"] {
+        .ctaBannerContent {
+            background: var(--darkAlt);
+            box-shadow: none;
+        }
+    }
+}

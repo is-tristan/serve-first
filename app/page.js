@@ -1,4 +1,4 @@
-import Banner from "@/components/sections/banner";
+import Banner from "@/components/sections/banner/banner";
 import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
 import FeatureList from "@/components/sections/feature-list/feature-list";
@@ -8,6 +8,11 @@ import ModuleStats from "@/components/sections/module-stats/module-stats";
 import RoleContext from "@/components/sections/role-context/role-context";
 import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
 import CustomerStory from "@/components/sections/customer-story/customer-story";
+import Testimonials from "@/components/sections/testimonials/testimonials";
+import EvaSpotlight from "@/components/sections/eva-spotlight/eva-spotlight";
+import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import CtaBannerTwo from "@/components/sections/cta-banners/cta-banner-2";
+import ContentGrid from "@/components/sections/content-grid/content-grid";
 
 export default function Home() {
 
@@ -52,6 +57,26 @@ export default function Home() {
       <CustomerStory />
 
       <CustomerStory theme="dark" />
+
+      <Testimonials />
+
+      <Testimonials theme="dark" />
+
+      <EvaSpotlight />
+
+      <EvaSpotlight theme="dark" />
+
+      <CtaBannerOne />
+
+      <CtaBannerOne theme="dark" />
+
+      <CtaBannerTwo />
+
+      <CtaBannerTwo theme="dark" />
+
+      <ContentGrid />
+      
+      <ContentGrid theme="dark" />
 
     </>
 

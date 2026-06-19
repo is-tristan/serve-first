@@ -2,6 +2,7 @@
 
 .btn {
     @include btn();
+    box-shadow: 0 0 1.5rem 0 rgba(var(--darkRgb), 0.1);
 
     &.primary {
         background: rgba(var(--primaryRgb), 0.15);
@@ -39,20 +40,14 @@
         }
     }
 
-    &.accent {
-        background: var(--accent);
-    }
-
-    &.dark {
-        background: var(--dark);
-    }
-
     &.transparent {
         background: transparent;
-        border-color: rgba(var(--lightRgb), 0.25);
+        color: var(--light);
+        border-color: rgba(var(--lightRgb), 0.15);
+        box-shadow: none;
 
         &:hover {
-            background: rgba(var(--lightRgb), 0.15);
+            background: rgba(var(--lightRgb), 0.25);
         }
     }
 
@@ -60,6 +55,7 @@
         border-color: var(--dark);
         color: var(--dark);
         background: transparent;
+        box-shadow: none;
 
         &:hover {
             background: var(--dark);
@@ -86,6 +82,7 @@
     overflow: visible;
     position: relative;
     color: var(--light);
+    box-shadow: unset;
     transition: var(--ease);
 
     @media (width < 576px) {
@@ -107,5 +104,13 @@
 
     &.colorPrimary {
         color: var(--primary);
+    }
+
+    &.colorLight {
+        color: var(--light);
+    }
+
+    &.colorDark {
+        color: var(--dark);
     }
 }
