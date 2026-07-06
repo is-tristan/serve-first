@@ -4,7 +4,7 @@ export const contentGridData = [
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
         readTime: 10,
-        image: "/decoration/content-grid-image-primary.svg",
+        image: "/decoration/content-grid-image-primary-alt.svg",
         button: {
             text: "Lorem ipsum",
             href: "#",
@@ -16,7 +16,7 @@ export const contentGridData = [
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
         readTime: 5,
-        image: "/decoration/content-grid-image-secondary.svg",
+        image: "/decoration/content-grid-image-primary-alt.svg",
         button: {
             text: "Lorem ipsum",
             href: "#",
@@ -28,7 +28,7 @@ export const contentGridData = [
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi.",
         readTime: 8,
-        image: "/decoration/content-grid-image-primary.svg",
+        image: "/decoration/content-grid-image-primary-alt.svg",
         button: {
             text: "Lorem ipsum",
             href: "#",

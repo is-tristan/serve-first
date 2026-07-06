@@ -11,9 +11,8 @@
     border: 1px solid transparent;
     font-family: var(--text);
     font-size: 0.66rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
-    color: var(--light);
     overflow: hidden;
     position: relative;
     transition: var(--ease);
@@ -59,8 +58,6 @@
     }
 
     &:hover {
-        color: var(--light);
-
         .icon {
             transform: translateX(0.25rem);
         }

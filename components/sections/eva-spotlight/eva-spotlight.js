@@ -34,7 +34,7 @@ export default function EvaSpotlight({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkAltHeadingGradient"}`} title={title} description={description} />
+                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "colorPrimaryAlt"}`} title={title} description={description} descriptionClass={`fw400`} />
                     
                 </div>
 

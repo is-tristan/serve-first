@@ -24,13 +24,13 @@ export default function ModuleStats({
 }) {
     return (
 
-        <section className={`row ${styles.moduleStats} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.moduleStats} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`} data-theme={theme}>
 
             <div className="container centered noPaddingBottom">
 
                 {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} description={description} />
+                <Text headingClass={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`} title={title} description={description} descriptionClass={`fw400`} />
 
                 {btnPrimary && (<Button text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className="primary colorPrimary" />)}
 

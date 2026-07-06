@@ -26,67 +26,43 @@ export default function Home() {
 
       <PlatformStory />
 
-      <PlatformStory theme="dark" />
-
       <ProductHighlight />
-
-      <ProductHighlight theme="dark" />
 
       <FeatureList />
 
-      <FeatureList theme="dark" />
+      <FeatureList theme="primary" />
 
       <HowItWorks />
 
-      <HowItWorks theme="dark" />
-
       <IndustryCards />
-
-      <IndustryCards theme="dark" />
 
       <ModuleStats />
 
-      <ModuleStats theme="dark" />
+      <ModuleStats theme="primary" />
 
       <RoleContext />
 
-      <RoleContext theme="dark" />
-
       <ChallengeFrame />
-
-      <ChallengeFrame theme="dark" />
 
       <CustomerStory />
 
-      <CustomerStory theme="dark" />
-
       <Testimonials />
 
-      <Testimonials theme="dark" />
+      <Testimonials theme="primary" />
 
       <EvaSpotlight />
 
-      <EvaSpotlight theme="dark" />
-
       <CtaBannerOne />
 
-      <CtaBannerOne theme="dark" />
+      <CtaBannerOne theme="primary" />
 
       <CtaBannerTwo />
 
-      <CtaBannerTwo theme="dark" />
-
       <ContentGrid />
-
-      <ContentGrid theme="dark" />
 
       <Faq />
 
-      <Faq theme="dark" />
-
       <LogoBar />
-
-      <LogoBar theme="dark" />
 
     </>
 

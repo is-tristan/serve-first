@@ -66,7 +66,7 @@ export default function ContentGridItem({
 
                     </div>
 
-                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink fw400" />
+                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink" />
 
                 </div>
 

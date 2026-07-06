@@ -34,7 +34,7 @@ export default function ContentGrid({
 
                     {title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} />)}
 
-                    {button && (<Button text={button.text} href={button.href} target={button.target} className="textLink colorPrimary fw400" />)}
+                    {button && (<Button text={button.text} href={button.href} target={button.target} className="textLink colorPrimary" />)}
 
                 </div>
 

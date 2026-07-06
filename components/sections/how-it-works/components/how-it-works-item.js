@@ -64,7 +64,7 @@ export default function HowItWorksItem({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<h2 className={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`}>{title}</h2>)}
+                    {title && (<h2 className={`sectionTitle colorPrimaryAlt`}>{title}</h2>)}
 
                 </div>
 

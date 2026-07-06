@@ -55,7 +55,7 @@ export default function ProductHighlightItem({
 
                     {title && (<h3>{title}</h3>)}
 
-                    {link && (<Button text={linkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary fw400" />)}
+                    {link && (<Button text={linkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary" />)}
 
                 </div>
 

@@ -50,7 +50,7 @@ export default function ModuleStatItem({
 
             </div>
 
-            {description && (<p>{description}</p>)}
+            {description && (<p className="fw400">{description}</p>)}
 
         </motion.div>
 

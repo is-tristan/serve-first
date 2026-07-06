@@ -17,6 +17,7 @@ export default function Heading({
     titleTag = "h2",
     descriptionTag = "p",
     description = null,
+    descriptionClass = undefined,
     btnTextPrimary,
     btnLinkPrimary = "#",
     btnClassPrimary = "primary",
@@ -97,9 +98,9 @@ export default function Heading({
                     {(() => {
                         switch (descriptionTag) {
                             case "p":
-                                return <p dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
+                                return <p className={descriptionClass} dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
                             case "ul":
-                                return <ul dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
+                                return <ul className={descriptionClass} dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
                             default:
                                 return null;
                         }

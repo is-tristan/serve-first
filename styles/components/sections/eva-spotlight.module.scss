@@ -3,7 +3,7 @@
     flex-flow: column nowrap;
     gap: 1.5rem;
     width: 100%;
-    background: var(--dark);
+    background: var(--primaryAlt);
     padding: 1.5rem;
     border-radius: var(--borderRadius);
     box-shadow: 0 0 1.5rem 0 rgba(var(--darkRgb), 0.1);
@@ -117,28 +117,7 @@
     }
 }
 
-.evaSpotlight {
-
-    &[data-theme="light"] {
-        .evaSpotlightItem {
-
-            &::before,
-            &::after {
-                @media (width >=768px) {
-                    content: '';
-                }
-            }
-        }
-    }
-
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-
-        .evaSpotlightItem {
-            background: var(--darkAlt);
-            border-color: var(--borderDark);
-            box-shadow: none;
-        }
-    }
+.evaSpotlightItemButton {
+    background: var(--secondary);
+    color: var(--primaryAlt);
 }

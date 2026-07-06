@@ -6,24 +6,24 @@
     --text: var(--font-poppins), ui-sans-serif, sans-serif;
 
     // Colours
-    --primary: #0090d0;
-    --primaryRgb: 0, 144, 208;
-    --primaryAlt: #006FA0;
-    --primaryAltRgb: 0, 111, 160;
-    --secondary: #A060FF;
-    --secondaryRgb: 160, 96, 255;
+    --primary: #965EA2;
+    --primaryRgb: 150, 94, 162;
+    --primaryAlt: #4A2257;
+    --primaryAltRgb: 74, 34, 87;
+    --secondary: #b78dbf;
+    --secondaryRgb: 183, 141, 191;
     --dark: #0C0C0D;
     --darkRgb: 12, 12, 13;
     --darkAlt: #181820;
     --darkAltRgb: 24, 24, 32;
     --light: #FFFFFF;
     --lightRgb: 255, 255, 255;
-    --lightAlt: #E0DCE8;
-    --lightAltRgb: 224, 220, 232;
+    --lightAlt: #E9DCEB;
+    --lightAltRgb: 233, 220, 235;
 
     // Gradients
     --lightHeadingGradient: linear-gradient(to right, var(--light) 15%, rgba(var(--lightRgb), 0.5));
-    --darkHeadingGradient: linear-gradient(to right, var(--dark), rgba(var(--darkRgb), 0.5));
+    --darkHeadingGradient: linear-gradient(to right, var(--primaryAlt), rgba(var(--primaryAltRgb), 0.95), var(--dark));
 
     // Borders & Radius
     --btnRadius: 10rem;

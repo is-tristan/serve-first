@@ -35,7 +35,7 @@ export default function ProductHighlight({
 
                 <div className={`contentCol`}>
 
-                    {link && (<Button text="Lorem ipsum." href={link} className="textLink colorPrimary fw400" />)}
+                    {link && (<Button text="Lorem ipsum." href={link} className="textLink colorPrimary" />)}
 
                 </div>
 

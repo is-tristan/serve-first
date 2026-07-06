@@ -10,9 +10,8 @@
     text-align: center;
     gap: 1rem;
     padding: 1.5rem 1rem;
-    background: rgba(var(--lightAltRgb), 0.25);
     border-radius: var(--borderRadius);
-    border: 1px solid var(--border);
+    border: 1px solid var(--primaryAlt);
 
     .moduleStatItemNumbers {
         display: flex;
@@ -21,25 +20,29 @@
         justify-content: center;
         gap: 0.15rem;
         font-family: var(--heading);
-        font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+        font-size: clamp(1.75rem, 4vw, 4rem);
         color: var(--primary);
     }
 
     &:nth-child(even) {
         .moduleStatItemNumbers {
-            color: var(--secondary);
+            color: var(--primaryAlt);
         }
     }
 }
 
 .moduleStats {
-    &[data-theme="dark"] {
-        background: var(--dark);
+    &[data-theme="primary"] {
         color: var(--light);
 
         .moduleStatItem {
-            background: rgba(var(--darkAltRgb), 0.25);
-            border-color: var(--borderDark);
+            border-color: var(--light);
+
+            &:nth-child(even) {
+                .moduleStatItemNumbers {
+                    color: var(--light);
+                }
+            }
         }
     }
 }

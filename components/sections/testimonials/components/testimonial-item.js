@@ -38,13 +38,13 @@ export default function TestimonialItem({
 
             </div>
 
-            {quote && (<h2 className={theme === "light" ? "darkAltHeadingGradient" : "lightHeadingGradient"}>“{quote}”</h2>)}
+            {quote && (<h2 className={theme === "primary" ? "colorLight" : "colorPrimaryAlt"}>“{quote}”</h2>)}
 
             <div className={styles.testimonialMeta}>
 
                 <ReviewerInitials name={name} />
 
-                <div className={styles.testimonialMetaItems}>
+                <div className={`${styles.testimonialMetaItems} ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>
 
                     <h3>{name}</h3>
 

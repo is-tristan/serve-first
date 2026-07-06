@@ -58,7 +58,7 @@ export default function EvaSpotlightItem({
 
                 {item.button && (
 
-                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="secondary" />
+                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className={`${styles.evaSpotlightItemButton}`} />
 
                 )}
 

@@ -51,10 +51,6 @@
         visibility: hidden;
         opacity: 0;
         transition: var(--ease);
-
-        @media (width >=768px) {
-            content: '';
-        }
     }
 
     &::before {
@@ -85,7 +81,7 @@
     &:hover,
     &:focus,
     &:active {
-        background: var(--dark);
+        background: var(--primary);
 
         &::before,
         &::after {
@@ -99,13 +95,11 @@
 
         span:not(a span),
         h3,
-        p {
+        p,
+        a {
             color: var(--light);
         }
 
-        a {
-            color: var(--secondary);
-        }
 
         @media (width >=768px) {
             transform: scale(1.025);

@@ -33,4 +33,12 @@
     &[data-text-color="colorDark"] {
         color: var(--dark);
     }
+
+    &[data-text-color="colorPrimaryAlt"] {
+        color: var(--primaryAlt);
+    }
+
+    &[data-text-color="colorSecondary"] {
+        color: var(--secondary);
+    }
 }

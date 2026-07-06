@@ -20,7 +20,7 @@ export const platformStoryData = [
         ],
         button: [
             {
-                text: "Lorem ipsum dolor sit amet.",
+                text: "Lorem ipsum",
                 href: "#",
                 target: "_self",
             }
@@ -47,7 +47,7 @@ export const platformStoryData = [
         ],
         button: [
             {
-                text: "Lorem ipsum dolor sit amet.",
+                text: "Lorem ipsum",
                 href: "#",
                 target: "_self",
             }
@@ -74,7 +74,7 @@ export const platformStoryData = [
         ],
         button: [
             {
-                text: "Lorem ipsum dolor sit amet.",
+                text: "Lorem ipsum",
                 href: "#",
                 target: "_self",
             }

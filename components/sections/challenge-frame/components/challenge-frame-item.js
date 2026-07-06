@@ -68,7 +68,7 @@ export default function ChallengeFrameItem({
 
                     )}
 
-                    {button && (<Button dataName="challengeFrameButton" className="textLink colorPrimary fw400" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                    {button && (<Button dataName="challengeFrameButton" className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
 
                 </div>
 

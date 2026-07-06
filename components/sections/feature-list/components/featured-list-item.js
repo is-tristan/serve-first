@@ -58,9 +58,9 @@ export default function FeaturedListItem({
 
                 <div className={`hasFullStop ${styles.featureListItemHeader}`}>
 
-                    {eyebrow && (<Eyebrow hasAnimation={false} text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow hasAnimation={false} textColor={`${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={eyebrow} />)}
 
-                    {title && (<h2 className={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`}>{title}</h2>)}
+                    {title && (<h2 className={`sectionTitle ${theme === "primary" ? "colorLight" : "darkHeadingGradient"}`}>{title}</h2>)}
 
                 </div>
 
@@ -74,7 +74,7 @@ export default function FeaturedListItem({
 
                             <div key={listIndex} className="iconListItem">
 
-                                <div className="icon colorPrimary" dangerouslySetInnerHTML={{ __html: checkmark }} />
+                                <div className={`icon ${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} dangerouslySetInnerHTML={{ __html: checkmark }} />
 
                                 <span>{listItem.text}</span>
 
@@ -88,7 +88,7 @@ export default function FeaturedListItem({
 
                 <div className={styles.featuredItemFooter}>
 
-                    {button && (<Button className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                    {button && (<Button className={`textLink ${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
 
                 </div>
 

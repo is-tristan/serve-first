@@ -37,16 +37,10 @@ export default function CtaBannerTwo({
     return (
 
         <section
-            className={`row ${styles.ctaBanner} ${styles.ctaBannerTwo} ${theme === "dark" ? "colorLight" : undefined}`}
+            className={`row ${styles.ctaBanner} ${styles.ctaBannerTwo}`}
             data-theme={theme}
             data-name={name}
-            style={{
-                backgroundColor: theme === "dark" ? "var(--dark)" : undefined,
-                backgroundImage: theme === "dark" ? `url(${backgroundImage})` : undefined,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-            }}>
+        >
 
             <div className={`container centered ctaCentered`}>
 
@@ -58,13 +52,13 @@ export default function CtaBannerTwo({
                     className={styles.ctaBannerContent}
                 >
 
-                    <Text hasAnimation={false} headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkAltHeadingGradient"}`} title={title} description={description} />
+                    <Text hasAnimation={false} headingClass={`sectionTitle colorPrimaryAlt`} title={title} description={description} />
 
                     <div className="buttons">
 
                         {buttonPrimary && (<Button hasAnimation={false} text={buttonPrimary.text} href={buttonPrimary.href} target={buttonPrimary.target} className={`primary ${theme === "light" ? "colorPrimary" : undefined}`} />)}
 
-                        {buttonSecondary && (<Button hasAnimation={false} text={buttonSecondary.text} href={buttonSecondary.href} target={buttonSecondary.target} className={`textLink fw400 ${theme === "dark" ? "colorLight" : "colorDark"}`} />)}
+                        {buttonSecondary && (<Button hasAnimation={false} text={buttonSecondary.text} href={buttonSecondary.href} target={buttonSecondary.target} className={`textLink colorPrimary fw500`} />)}
 
                     </div>
 

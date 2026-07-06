@@ -38,7 +38,7 @@ export default function Faq({
 
                 <div className="contentCol">
 
-                    {button && (<Button text={button.text} href={button.href} target={button.target} className="textLink colorPrimary fw400" />)}
+                    {button && (<Button text={button.text} href={button.href} target={button.target} className="textLink colorPrimary" />)}
 
                 </div>
 

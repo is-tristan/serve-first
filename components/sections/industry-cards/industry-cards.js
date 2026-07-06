@@ -38,7 +38,7 @@ export default function IndustryCards({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} description={description} />
+                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} description={description} descriptionClass={`fw400`} />
 
                 </div>
 
@@ -73,7 +73,7 @@ export default function IndustryCards({
 
                     {btnPrimary && (<Button dataName={"primaryButton"} text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className="primary" />)}
 
-                    {btnSecondary && (<Button text={btnSecondary.text} href={btnSecondary.href} target={btnSecondary.target} className="textLink colorPrimary" />)}
+                    {btnSecondary && (<Button text={btnSecondary.text} href={btnSecondary.href} target={btnSecondary.target} className="textLink colorDark" />)}
 
                 </div>
 

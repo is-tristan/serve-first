@@ -5,22 +5,13 @@
     box-shadow: 0 0 1.5rem 0 rgba(var(--darkRgb), 0.1);
 
     &.primary {
-        background: rgba(var(--primaryRgb), 0.15);
+        background: var(--primary);
         border-color: var(--primary);
         color: var(--light);
 
-        @media (width >=768px) {
-            backdrop-filter: blur(0.25rem);
-        }
-
         &:hover,
         &:focus {
-            background: rgba(var(--primaryRgb), 0.25);
-            border-color: var(--primary);
-        }
-
-        &.colorPrimary {
-            color: var(--primary);
+            background: rgba(var(--primaryRgb), 0.95);
         }
     }
 
@@ -63,6 +54,12 @@
         }
     }
 
+    &.light {
+        background: var(--light);
+        color: var(--primaryAlt);
+        border-color: var(--light);
+    }
+
     &.fullWidth {
         width: 100%;
         min-width: 100%;
@@ -81,7 +78,8 @@
     border-radius: 0;
     overflow: visible;
     position: relative;
-    color: var(--light);
+    color: var(--primary);
+    font-weight: 400;
     box-shadow: unset;
     transition: var(--ease);
 
@@ -95,22 +93,54 @@
     }
 
     &:hover {
-        &::before {
-            width: 0;
-            left: unset;
-            right: 0;
-        }
+        color: rgba(var(--primaryRgb), 0.875);
     }
 
     &.colorPrimary {
         color: var(--primary);
+
+        &:hover {
+            color: rgba(var(--primaryRgb), 0.875);
+        }
+    }
+
+    &.colorPrimaryAlt {
+        color: var(--primaryAlt);
+
+        &:hover {
+            color: rgba(var(--primaryAltRgb), 0.875);
+        }
+    }
+
+    &.colorSecondary {
+        color: var(--secondary);
+
+        &:hover {
+            color: rgba(var(--secondaryRgb), 0.875);
+        }
     }
 
     &.colorLight {
         color: var(--light);
+
+        &:hover {
+            color: rgba(var(--lightRgb), 0.875);
+        }
+    }
+
+    &.colorLightAlt {
+        color: var(--lightAlt);
+
+        &:hover {
+            color: rgba(var(--lightAltRgb), 0.875);
+        }
     }
 
     &.colorDark {
         color: var(--dark);
+
+        &:hover {
+            color: rgba(var(--darkRgb), 0.875);
+        }
     }
 }

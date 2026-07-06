@@ -67,7 +67,7 @@ export default function IndustryCard({
 
                 <div className={styles.industryCardFooter}>
 
-                    {button && (<Button className="textLink fw400 colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                    {button && (<Button className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
 
                 </div>
 

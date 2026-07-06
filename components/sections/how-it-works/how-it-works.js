@@ -34,7 +34,7 @@ export default function HowItWorks({ theme = "light", heading, data }) {
 
                             {item.eyebrow && (<Eyebrow text={item.eyebrow} />)}
 
-                            {item.title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={item.title} description={item.description} />)}
+                            {item.title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={item.title} description={item.description} descriptionClass={`fw400`} />)}
 
                         </div>
 

@@ -19,7 +19,7 @@ export default function Testimonials({
 
     return (
 
-        <section className={`row ${styles.testimonials} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.testimonials} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`} data-theme={theme}>
 
             <div className={`container noPaddingBottom`}>
 

@@ -109,7 +109,7 @@ export default function CustomerStoryItem({ item = {} }) {
 
                 <div className={styles.statsButton}>
 
-                    {item.button && (<Button text={item.button.text} href={item.button.href} target={item.button.target} className="textLink colorPrimary fw400" hasAnimation={false} />)}
+                    {item.button && (<Button text={item.button.text} href={item.button.href} target={item.button.target} className="textLink colorPrimary" hasAnimation={false} />)}
 
                 </div>
 

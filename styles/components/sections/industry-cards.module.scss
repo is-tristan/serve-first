@@ -11,10 +11,9 @@
     flex-flow: column nowrap;
     gap: 1.5rem;
     width: 100%;
-    background: rgba(var(--lightAltRgb), 0.25);
+    background: #f3f3f3;
     padding: 1.5rem;
     border-radius: var(--borderRadius);
-    border: 1px solid var(--border);
     position: relative;
 
     @media (width >=768px) {
@@ -65,14 +64,10 @@
 .industryCardHeader {
     display: flex;
     flex-flow: column nowrap;
-    gap: 1.5rem;
+    gap: 1.25rem;
 
     &.industryCardContent {
         justify-content: center;
-
-        @media (width >=1024px) {
-            gap: 2rem;
-        }
     }
 }
 

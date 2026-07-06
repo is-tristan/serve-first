@@ -11,7 +11,7 @@ export default function FeatureList({ theme = "light", eyebrow = "- Feature List
 
     return (
 
-        <section className={`row ${styles.featureList} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.featureList}`} data-theme={theme}>
 
             {data.length > 0 && (
 

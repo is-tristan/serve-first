@@ -86,8 +86,8 @@
  }
 
  .featureList {
-     &[data-theme="dark"] {
-         background: var(--dark);
+     &[data-theme="primary"] {
+         background: var(--primaryAlt);
          color: var(--light);
 
          .featureListItem {

@@ -9,25 +9,27 @@ import Button from "@/components/handlers/buttons";
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";
 
+// Background Decorations
+import bdTr from "@/public/backgrounds/banner/banner-decoration-top-right.svg";
+import bdBl from "@/public/backgrounds/banner/banner-decoration-bottom-left.svg";
+
 export default function Banner({
     eyebrow = "- Banner Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.</p>",
-    image = "/images/servefirst-iphone-mockup-dashboard.webp",
-    backgroundImage = "/backgrounds/banner-background.webp",
+    image = "/decoration/no-image-placeholder.webp",
     bannerType = "home",
     hasButtons = true,
-    hasNoise = true
+    hasBackgroundDecoration = true,
 }) {
 
     return (
 
         <section
             id="banner"
-            className={`row colorLight ${styles.banner} ${styles.className}`}
-            data-background-image={backgroundImage ? "true" : "false"}
+            className={`row bgLightAlt ${styles.banner} ${styles.className}`}
+            data-background-decoration={hasBackgroundDecoration ? "true" : "false"}
             data-banner-type={bannerType}
-            data-has-noise={hasNoise ? "true" : "false"}
         >
 
             <div className={`container dualCols ${styles.bannerContainer}`}>
@@ -39,10 +41,11 @@ export default function Banner({
                         {eyebrow && (<Eyebrow text={eyebrow} />)}
 
                         <Text
-                            headingClass={`lightHeadingGradient pageTitle`}
+                            headingClass={`pageTitle`}
                             titleTag="h1"
                             title={title}
                             description={description}
+                            descriptionClass={`fw400`}
                         />
 
                         {hasButtons && (
@@ -72,7 +75,7 @@ export default function Banner({
 
                 {image && (
 
-                    <div className={`hidden-s hidden-m hidden-l ${styles.imageCol}`}>
+                    <div className={`hidden-s hidden-m hidden-l imageFill ${styles.imageCol}`}>
 
                         <Image className={styles.bannerImage} src={image} alt={title} width={1024} height={1024} loading="eager" priority />
 
@@ -82,13 +85,15 @@ export default function Banner({
 
             </div>
 
-            {backgroundImage && (
+            {hasBackgroundDecoration && (
 
-                <div className={styles.backgroundImage}>
+                <>
 
-                    <Image src={backgroundImage} alt={title} fill loading="eager" priority />
+                    <div className={`${styles.backgroundDecoration} ${styles.bdTr}`} style={{ backgroundImage: `url(${bdTr.src})` }} />
 
-                </div>
+                    <div className={`${styles.backgroundDecoration} ${styles.bdBl}`} style={{ backgroundImage: `url(${bdBl.src})` }} />
+
+                </>
 
             )}
 

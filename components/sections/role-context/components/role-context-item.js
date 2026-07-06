@@ -56,7 +56,7 @@ export default function RoleContextItem({
 
                     {description && (<p>{description}</p>)}
 
-                    {button && (<Button dataName={"roleContextButton"} className="textLink colorPrimary fw400" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                    {button && (<Button dataName={"roleContextButton"} className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
 
                 </div>
 

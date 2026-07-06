@@ -3,6 +3,10 @@
     color: var(--primary);
 }
 
+.colorPrimaryAlt {
+    color: var(--primaryAlt);
+}
+
 .colorSecondary {
     color: var(--secondary);
 }
@@ -15,9 +19,17 @@
     color: var(--light);
 }
 
+.colorLightAlt {
+    color: var(--lightAlt);
+}
+
 // Backgrounds
 .bgPrimary {
     background-color: var(--primary);
+}
+
+.bgPrimaryAlt {
+    background-color: var(--primaryAlt);
 }
 
 .bgSecondary {
@@ -30,6 +42,10 @@
 
 .bgLight {
     background-color: var(--light);
+}
+
+.bgLightAlt {
+    background-color: var(--lightAlt);
 }
 
 .bgDarkAlt {
