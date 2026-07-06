@@ -30,3 +30,15 @@
         }
     }
 }
+
+.ctaBannerContact {
+    .formCol {
+        padding: 1rem;
+        border: 1px solid;
+        border-radius: var(--borderRadius);
+
+        @media (width >=768px) {
+            padding: 1.5rem;
+        }
+    }
+}

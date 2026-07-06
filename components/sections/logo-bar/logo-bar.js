@@ -15,11 +15,11 @@ export default function LogoBar({
 }) {
     return (
 
-        <section className={`row ${styles.logoBar} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.logoBar} bgLightAlt`} data-theme={theme}>
 
             <div className="container centered noPaddingBottom">
 
-                <Eyebrow text={eyebrow} />
+                <Eyebrow text={eyebrow} textColor="colorPrimaryAlt" />
 
             </div>
 

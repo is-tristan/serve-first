@@ -3,7 +3,7 @@
 .form {
     display: flex;
     flex-flow: row wrap;
-    gap: 1.5rem;
+    gap: 1rem;
 
     * {
         font-family: var(--text);
@@ -14,15 +14,36 @@
     &[data-theme="light"] {
         label,
         legend {
-            color: var(--light);
+            color: var(--primaryAlt);
         }
+
+        input,
+        textarea {
+            border-color: var(--primaryAlt) !important;
+            color: var(--primaryAlt) !important;
+
+            &::placeholder {
+                color: rgba(var(--primaryAltRgb), 0.5) !important;
+            }
+        }
+
         .submit {
-            background: transparent;
+            background: var(--primaryAlt);
             color: var(--light);
-            border-color: rgba(var(--lightRgb), 0.25);
+            border-color: var(--primaryAlt);
 
             &:hover {
-                background: rgba(var(--lightRgb), 0.1);
+                background: rgba(var(--primaryAltRgb), 0.9);
+            }
+        }
+
+        .demoLink {
+            color: var(--primaryAlt);
+        }
+
+        .result {
+            span {
+                color: var(--primaryAlt);
             }
         }
     }
@@ -36,7 +57,7 @@
     margin: 0;
     border: none;
     flex-basis: 100%;
-    
+
     &.half {
         @media (width >=768px) {
             flex-basis: calc(50% - 0.75rem);
@@ -44,17 +65,16 @@
     }
 
     .legend {
-        font-weight: 700;
+        font-weight: 400;
         font-size: 0.75rem;
-        text-transform: uppercase;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.66rem;
+        color: var(--light);
 
-        .required {
-            color: var(--primary);
-            font-weight: 700;
+        @media (width >=768px) {
+            font-size: 0.875rem;
         }
     }
-    
+
     .field {
         display: flex;
         align-items: center;
@@ -65,16 +85,23 @@
             display: flex;
             align-items: center;
             width: 100%;
-            padding: 1rem;
+            padding: 0.75rem 1rem;
             border-radius: var(--borderRadius);
-            border: 1.5px solid var(--border);
+            border: 1px solid rgba(var(--lightRgb), 0.25);
+            background: rgba(var(--lightRgb), 0.1);
+            color: var(--light);
             transition: all 0.1s ease;
+
+            &::placeholder {
+                color: rgba(var(--lightRgb), 0.5);
+            }
 
             &:focus,
             &:active {
-                outline: 2px solid var(--primary);
+                outline: 2px solid var(--secondary);
                 outline-offset: 2px;
             }
+
         }
 
         textarea {
@@ -95,9 +122,11 @@
             }
 
             label {
+                display: inline-block;
                 font-size: 0.75rem;
                 font-weight: 500;
                 line-height: 125%;
+                color: var(--light);
             }
         }
     }
@@ -111,11 +140,29 @@
 
     .submit {
         @include btn();
-        background: var(--dark);
+        background: var(--primary);
+        color: var(--light);
 
         &:hover {
-            scale: 1.025;
-            background: var(--primary);
+            background: rgba(var(--primaryRgb), 0.9);
+        }
+    }
+
+    .demoLink {
+        color: var(--light);
+    }
+
+    .result {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+            font-size: 0.75rem;
+            font-weight: 500;
+            line-height: 150%;
+            color: var(--light);
         }
     }
 }

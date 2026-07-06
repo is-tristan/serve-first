@@ -15,6 +15,7 @@ import CtaBannerTwo from "@/components/sections/cta-banners/cta-banner-2";
 import ContentGrid from "@/components/sections/content-grid/content-grid";
 import Faq from "@/components/sections/faq/faq";
 import LogoBar from "@/components/sections/logo-bar/logo-bar";
+import CtaBannerContact from "@/components/sections/cta-banners/cta-banner-contact";
 
 export default function Home() {
 
@@ -63,6 +64,10 @@ export default function Home() {
       <Faq />
 
       <LogoBar />
+
+      <CtaBannerContact theme="primary" />
+
+      <CtaBannerContact />
 
     </>
 
