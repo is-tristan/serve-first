@@ -1,5 +1,5 @@
 // Styles
-import styles from "@/styles/components/layouts/header.module.scss";
+import styles from "@/styles/components/layouts/header/header.module.scss";
 
 // Components
 import HeaderLogo from "@/components/layouts/header/parts/header-logo";

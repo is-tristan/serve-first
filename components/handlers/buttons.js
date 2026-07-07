@@ -31,7 +31,7 @@ export default function Button({ text,
 
                 <span>{text}</span>
 
-                <div className={"icon"} dangerouslySetInnerHTML={{ __html: icon }} />
+                {icon && (<div className={"icon"} dangerouslySetInnerHTML={{ __html: icon }} />)}
 
             </Link>
 

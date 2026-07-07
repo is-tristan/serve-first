@@ -5,10 +5,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Styles
-import styles from "@/styles/components/layouts/header.module.scss";
+import styles from "@/styles/components/layouts/header/header-mobile-menu.module.scss";
 
 // Data
-import { data } from "@/data/menu-items-data";
+import { menuItemsData as data } from "../items/menu-items-data";
 
 // Icons
 import { closeIcon } from "@/utils/icons";

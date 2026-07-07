@@ -41,6 +41,10 @@ a:active {
     outline: 0;
 }
 
+button {
+    font-family: var(--text);
+}
+
 .app {
     width: 100%;
     max-width: 100%;

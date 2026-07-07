@@ -1,0 +1,58 @@
+// Mobile Menu
+.mobileMenuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(var(--lightRgb), 0.1);
+}
+
+.mobileMenuToggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    color: var(--light);
+    fill: var(--light);
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mobileMenu {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+    width: 90%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: var(--ease);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    background: var(--secondary);
+    color: var(--light);
+    padding: 2rem;
+    box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1);
+
+    &[data-toggled="true"] {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .mobileMenuItems {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2rem;
+        text-align: left;
+    }
+}

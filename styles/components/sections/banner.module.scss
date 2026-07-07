@@ -1,7 +1,6 @@
 .banner {
     position: relative;
     min-height: 35rem;
-
     @media (width >=768px) {
         min-height: calc(66.66vh - var(--mobileHeaderHeight));
     }
@@ -17,6 +16,11 @@
     .bannerContainer {
         position: relative;
         z-index: 1;
+        padding-top: var(--mobileHeaderHeight);
+
+        @media (width >=1024px) {
+            padding-top: var(--headerHeight);
+        }
 
         h1 {
             max-width: 100%;

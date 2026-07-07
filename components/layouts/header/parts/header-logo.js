@@ -1,22 +1,17 @@
 // Next
 import Link from "next/link";
-import Image from "next/image";
 
 // Icons
-const logo = "/static/logo/logo-light.svg";
+import { logo } from "@/utils/icons";
 
 // Styles
-import styles from "@/styles/components/layouts/header.module.scss";
+import styles from "@/styles/components/layouts/header/header.module.scss";
 
 export default function HeaderLogo() {
 
     return (
 
-        <Link href="/" className={styles.logo} aria-label="Home">
-
-            <Image src={logo} alt="Logo" fill loading="eager" />
-
-        </Link>
+        <Link href="/" className={styles.logo} aria-label="Home" dangerouslySetInnerHTML={{ __html: logo }} />
 
     )
 

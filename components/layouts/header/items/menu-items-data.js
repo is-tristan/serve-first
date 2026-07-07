@@ -1,0 +1,188 @@
+import {
+    captureIcon,
+    analyseIcon,
+    actionIcon,
+    byRoleIcon,
+    byIndustryIcon,
+    byChallengeIcon,
+    customerExperienceIcon,
+    marketingIntelligenceIcon,
+    operationalExcellenceIcon,
+    aboutUsIcon, contactUsIcon
+} from '@/utils/icons';
+
+export const menuItemsData = [
+    {
+        label: "How It Works",
+        href: "#",
+        submenu: [
+            {
+                label: "Capture",
+                href: "/how-it-works/capture",
+                icon: captureIcon,
+            },
+            {
+                label: "Analyse",
+                href: "/how-it-works/analyse",
+                icon: analyseIcon,
+            },
+            {
+                label: "Action",
+                href: "/how-it-works/action",
+                icon: actionIcon,
+            },
+        ],
+    },
+    {
+        label: "Solutions",
+        href: "#",
+        submenu: [
+            {
+                label: "By Role",
+                href: "/solutions/by-role",
+                icon: byRoleIcon,
+                submenu: [
+                    {
+                        label: "CX Leaders",
+                        href: "/solutions/by-role/cx-leaders",
+                    },
+                    {
+                        label: "Operations Directors",
+                        href: "/solutions/by-role/operations-directors",
+                    },
+                    {
+                        label: "Compliance Manager",
+                        href: "/solutions/by-role/compliance-managers",
+                    },
+                ]
+            },
+            {
+                label: "By Industry",
+                href: "/solutions/by-industry",
+                icon: byIndustryIcon,
+                submenu: [
+                    {
+                        label: "Retail",
+                        href: "/solutions/by-industry/retail",
+                    },
+                    {
+                        label: "Leisure and Hospitality",
+                        href: "/solutions/by-industry/leisure-and-hospitality",
+                    },
+                    {
+                        label: "Healthcare",
+                        href: "/solutions/by-industry/healthcare",
+                    },
+                    {
+                        label: "Restaurants",
+                        href: "/solutions/by-industry/restaurants",
+                    },
+                    {
+                        label: "Facilities Management",
+                        href: "/solutions/by-industry/facilities-management",
+                    },
+                    {
+                        label: "Venues and Events",
+                        href: "/solutions/by-industry/venues-and-events",
+                    },
+                ],
+            },
+            {
+                label: "By Challenge",
+                href: "/solutions/by-challenge",
+                icon: byChallengeIcon,
+                submenu: [
+                    {
+                        label: "Inconsistent standards across locations",
+                        href: "/solutions/by-challenge/inconsistent-standards-across-locations",
+                    },
+                    {
+                        label: "Too many tools, too many siloed data sources",
+                        href: "/solutions/by-challenge/too-many-tools-too-many-siloed-data-sources",
+                    },
+                    {
+                        label: "Struggling to prove what's improving",
+                        href: "/solutions/by-challenge/struggling-to-prove-whats-improving",
+                    },
+                    {
+                        label: "Data that never leads to action",
+                        href: "/solutions/by-challenge/data-that-never-leads-to-action",
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        label: "Products",
+        href: "#",
+        submenu: [
+            {
+                label: "Customer Experience",
+                href: "/products/customer-experience",
+                icon: customerExperienceIcon,
+                submenu: [
+                    {
+                        label: "Feedback Terminals",
+                        href: "/products/customer-experience/feedback-terminals",
+                    },
+                    {
+                        label: "Survey",
+                        href: "/products/customer-experience/survey",
+                    },
+                    {
+                        label: "Mystery Shopping",
+                        href: "/products/customer-experience/mystery-shopping",
+                    },
+                    {
+                        label: "Client Connect",
+                        href: "/products/customer-experience/client-connect",
+                    },
+                ],
+            },
+            {
+                label: "Marketing Intelligence",
+                href: "#",
+                icon: marketingIntelligenceIcon,
+                submenu: [
+                    {
+                        label: "Competitive Benchmarking",
+                        href: "/marketing-intelligence/competitive-benchmarking",
+                    },
+                    {
+                        label: "Review Monitoring",
+                        href: "/marketing-intelligence/review-monitoring",
+                    },
+                ],
+            },
+            {
+                label: "Operational Excellence",
+                href: "#",
+                icon: operationalExcellenceIcon,
+            },
+        ],
+    },
+    {
+        label: "EVA",
+        href: "#",
+    },
+    {
+        label: "Company",
+        href: "#",
+        submenu: [
+            {
+                label: "About Us",
+                href: "/company/about-us",
+                icon: aboutUsIcon,
+            },
+            {
+                label: "Contact Us",
+                href: "/company/contact-us",
+                icon: contactUsIcon,
+            },
+        ],
+    },
+    {
+        label: "Resources",
+        href: "#",
+    },
+]

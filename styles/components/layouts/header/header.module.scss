@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+
+    .headerContainer {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        height: var(--mobileHeaderHeight);
+        position: relative;
+
+        @media (width >=1024px) {
+            height: var(--headerHeight);
+        }
+    }
+}
+
+// Header Logo
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    min-width: 6.5rem;
+    position: relative;
+    color: var(--primary);
+    transition: var(--quickEase);
+
+    &:hover {
+        color: rgba(var(--primaryRgb), 0.875);
+    }
+
+    svg {
+        width: auto;
+        height: 100%;
+    }
+}
+
+// Header Buttons
+.headerButtons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+    .desktopButtons {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+
+        .primaryBtn {
+            padding: 0.75rem;
+
+            svg {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+    }
+}
