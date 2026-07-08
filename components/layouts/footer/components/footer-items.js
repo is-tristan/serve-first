@@ -7,7 +7,7 @@ import FooterContactItems from "./footer-contact-items";
 import FooterSocialItems from "./footer-social-items";
 
 // Styles
-import styles from "@/styles/components/layouts/footer/footer-items.module.scss";
+import styles from "@/styles/components/layouts/footer/footer.module.scss";
 
 // Data
 import { company, solutions, products } from "../items/footer-items-data";
@@ -44,6 +44,8 @@ export default function FooterItems() {
             }
 
             <div className={`${styles.footerCol} ${styles.footerColContact}`}>
+
+                <span className={styles.footerColTitle}>Contact Us</span>
 
                 <FooterContactItems />
 

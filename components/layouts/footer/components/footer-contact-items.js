@@ -19,8 +19,6 @@ export default function FooterContactItems() {
 
                 <div className={styles.footerContactItems}>
 
-                    <span className={styles.footerColTitle}>Contact Us</span>
-
                     {contactItems.map((item, index) => (
 
                         <Link
