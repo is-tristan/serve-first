@@ -1,43 +1,193 @@
 "use client";
 
+// React
+import { useEffect, useState } from "react";
+
 // Next
 import Link from "next/link";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 // Styles
 import styles from "@/styles/components/layouts/header/header-mobile-menu.module.scss";
 
 // Data
-import { menuItemsData as data } from "../items/menu-items-data";
+import { menuItemsData as data } from "@/components/layouts/header/items/menu-items-data";
 
 // Icons
-import { closeIcon } from "@/utils/icons";
+import { logo, closeIcon, chevronDown, arrowUpRight } from "@/utils/icons";
 
 export default function HeaderMobileMenu({ isOpen = false, onClose }) {
 
+    const pathname = usePathname();
+    const [openSubmenu, setOpenSubmenu] = useState(null);
+    const [openNestedSubmenu, setOpenNestedSubmenu] = useState(null);
+
+    const isActive = (href) => {
+        return pathname === href;
+    };
+
+    const isSubmenuOpen = (label) => {
+        return openSubmenu === label;
+    };
+
+    const isNestedSubmenuOpen = (submenuItem) => {
+        return openNestedSubmenu === submenuItem.label;
+    };
+
+    const handleSubmenuToggle = (label) => {
+        setOpenSubmenu((current) => (current === label ? null : label));
+        setOpenNestedSubmenu(null);
+    };
+
+    const handleNestedSubmenuToggle = (submenuItem) => {
+        setOpenNestedSubmenu((current) => (current === submenuItem.label ? null : submenuItem.label));
+    };
+
+    const handleLinkClick = () => {
+        onClose();
+        setOpenSubmenu(null);
+        setOpenNestedSubmenu(null);
+    };
+
+    useEffect(() => {
+        if (!isOpen) {
+            setOpenSubmenu(null);
+            setOpenNestedSubmenu(null);
+        }
+    }, [isOpen]);
+
     return (
 
-        <div className={`hidden-xl hidden-xxl ${styles.mobileMenu}`} data-toggled={isOpen}>
+        <>
 
-            <div className={styles.mobileMenuHeader}>
+            <div className={`hidden-xxl ${styles.mobileMenu}`} data-toggled={isOpen}>
 
-                <Image src="/static/logo/logo-light.svg" alt="Logo" loading="lazy" width={160} height={64} />
+                <div className={styles.mobileMenuHeader}>
 
-                <span className={styles.mobileMenuToggle} onClick={onClose} dangerouslySetInnerHTML={{ __html: closeIcon }} />
+                    <Link href="/" className={styles.mobileMenuLogo} aria-label="Home" dangerouslySetInnerHTML={{ __html: logo }} />
+
+                    <span className={`${styles.mobileMenuToggle} ${styles.mobileMenuClose}`} onClick={onClose} dangerouslySetInnerHTML={{ __html: closeIcon }} />
+
+                </div>
+
+                <div className={styles.mobileMenuItems}>
+
+                    {data.map((item) => (
+
+                        <div key={item.label} className={styles.mobileMenuItem} data-active={isActive(item.href)}>
+
+                            {item.submenu ? (
+
+                                <>
+
+                                    <button
+                                        type="button"
+                                        className={styles.mobileMenuItemToggle}
+                                        data-submenu-open={isSubmenuOpen(item.label)}
+                                        onClick={() => handleSubmenuToggle(item.label)}
+                                    >
+
+                                        <span>{item.label}</span>
+
+                                        <span className={styles.mobileMenuItemIcon} dangerouslySetInnerHTML={{ __html: chevronDown }} />
+
+                                    </button>
+
+                                    <div className={styles.mobileSubmenu} data-submenu-open={isSubmenuOpen(item.label)}>
+
+                                        {item.submenu.map((submenuItem) => (
+
+                                            <div key={submenuItem.label} className={styles.mobileSubmenuItem}>
+
+                                                {submenuItem.submenu ? (
+
+                                                    <>
+
+                                                        <button
+                                                            type="button"
+                                                            className={styles.mobileSubmenuItemToggle}
+                                                            data-submenu-open={isNestedSubmenuOpen(submenuItem)}
+                                                            onClick={() => handleNestedSubmenuToggle(submenuItem)}
+                                                        >
+
+                                                            {submenuItem.icon && (<div className={styles.mobileSubmenuItemIcon} dangerouslySetInnerHTML={{ __html: submenuItem.icon }} />)}
+
+                                                            <span>{submenuItem.label}</span>
+
+                                                            <span className={styles.mobileSubmenuItemChevron} dangerouslySetInnerHTML={{ __html: chevronDown }} />
+
+                                                        </button>
+
+                                                        <div className={styles.mobileNestedSubmenu} data-submenu-open={isNestedSubmenuOpen(submenuItem)}>
+
+                                                            <Link className={styles.mobileNestedSubmenuTitle} href={submenuItem.href} onClick={handleLinkClick}>
+
+                                                                <span>{submenuItem.label}</span>
+
+                                                                <span className={styles.mobileNestedSubmenuTitleIcon} dangerouslySetInnerHTML={{ __html: arrowUpRight }} />
+
+                                                            </Link>
+
+                                                            <div className={styles.mobileNestedSubmenuItems}>
+
+                                                                {submenuItem.submenu.map((nestedSubmenuItem) => (
+
+                                                                    <Link
+                                                                        key={nestedSubmenuItem.label}
+                                                                        href={nestedSubmenuItem.href}
+                                                                        className={styles.mobileNestedSubmenuItemLink}
+                                                                        onClick={handleLinkClick}
+                                                                    >
+
+                                                                        <span>{nestedSubmenuItem.label}</span>
+
+                                                                    </Link>
+
+                                                                ))}
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </>
+
+                                                ) : (
+
+                                                    <Link href={submenuItem.href} className={styles.mobileSubmenuItemLink} onClick={handleLinkClick}>
+
+                                                        {submenuItem.icon && (<div className={styles.mobileSubmenuItemIcon} dangerouslySetInnerHTML={{ __html: submenuItem.icon }} />)}
+
+                                                        <span>{submenuItem.label}</span>
+
+                                                    </Link>
+
+                                                )}
+
+                                            </div>
+
+                                        ))}
+
+                                    </div>
+
+                                </>
+
+                            ) : (
+
+                                <Link href={item.href} className={styles.mobileMenuItemLink} onClick={handleLinkClick}>{item.label}</Link>
+
+                            )}
+
+                        </div>
+
+                    ))}
+
+                </div>
 
             </div>
 
-            <div className={styles.mobileMenuItems}>
+            <div className={`hidden-xxl ${styles.mobileMenuBackdrop}`} onClick={onClose} data-toggled={isOpen} />
 
-                {data.map((item) => (
-
-                    <Link href={item.href} key={item.label} onClick={onClose}>{item.label}</Link>
-
-                ))}
-
-            </div>
-
-        </div>
+        </>
 
     )
 

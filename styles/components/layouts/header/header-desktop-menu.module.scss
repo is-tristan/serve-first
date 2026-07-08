@@ -3,19 +3,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     color: var(--light);
     padding: 0 1.75rem;
     height: 3.5rem;
     background: var(--light);
     border: 1px solid rgba(var(--lightRgb), 0.1);
     border-radius: var(--borderRadius);
-}
 
-.hasSubmenu {
-    display: flex;
-    flex-flow: column nowrap;
-    position: relative;
+    @media (width >=1366px) {
+        gap: 1rem;
+    }
 }
 
 .menuItemLink {
@@ -50,14 +47,21 @@
     }
 }
 
+// Submenu
+.hasSubmenu {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
 .desktopSubmenu {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 50vw;
+    max-width: calc(100% - 8rem);
     position: absolute;
     right: 0;
-    top: 5.5rem;
+    top: 7rem;
     left: 0;
     margin: 0 auto;
     opacity: 0;
@@ -65,16 +69,21 @@
     padding: 2rem;
     background: var(--light);
     border-radius: var(--borderRadius);
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
     color: var(--dark);
     transition: var(--cubic);
+
+    @media (width >=1512px) {
+        max-width: calc(100% - 10rem);
+    }
 
     &::before {
         content: "";
         position: absolute;
-        top: -1.5rem;
+        top: -2rem;
         right: 0;
         left: 0;
-        height: 1.5rem;
+        height: 2rem;
     }
 
     &[data-submenu-open="true"] {
