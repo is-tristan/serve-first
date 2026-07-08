@@ -24,6 +24,7 @@ import 'lenis/dist/lenis.css'
 
 // Components
 import Header from "@/components/layouts/header/header";
+import Footer from "@/components/layouts/footer/footer";
 
 export const metadata = {
   title: "Serve First",
@@ -34,7 +35,7 @@ export default function RootLayout({ children }) {
 
   return (
 
-    <html lang="en" className={`${specialGothicExpandedOne.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${specialGothicExpandedOne.variable} ${poppins.variable}`} data-scroll-behavior="smooth">
 
       <body>
 
@@ -45,6 +46,8 @@ export default function RootLayout({ children }) {
           <Header />
 
           {children}
+
+          <Footer />
 
         </div>
 

@@ -30,9 +30,9 @@ export default function GetADemo() {
 
             <LogoBar backgroundColor="bgLight" />
 
-            <Testimonials theme="primary" />
+            <Testimonials />
 
-            <CtaBannerContact hasDemoLink={false} formBtnText="Book my demo" fullForm={true} />
+            <CtaBannerContact hasDemoLink={false} formBtnText="Book my demo" fullForm={true} theme="primary" />
 
         </>
 

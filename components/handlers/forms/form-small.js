@@ -125,7 +125,7 @@ export default function FormSmall({ theme = "primary", hasDemoLink = true, formB
 
                     <div className={`buttons`} style={{ gap: "1rem" }}>
 
-                        <button className={styles.submit} type="submit">{formBtnText}</button>
+                        <button style={{ width: hasDemoLink ? "auto" : "100%" }} className={styles.submit} type="submit">{formBtnText}</button>
 
                         {hasDemoLink && (<Link href="/book-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
 
@@ -133,9 +133,9 @@ export default function FormSmall({ theme = "primary", hasDemoLink = true, formB
 
                     <div className={styles.formFooterText}>
 
-                        <div className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
+                        <div style={{ color: theme === "primary" ? "var(--light)" : "var(--primaryAlt)" }} className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
 
-                        <span>No obligation. We will not pass your details on.</span>
+                        <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>No obligation. We will not pass your details on.</span>
 
                     </div>
 

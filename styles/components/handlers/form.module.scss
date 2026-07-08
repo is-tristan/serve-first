@@ -141,8 +141,10 @@
     .formFooterText {
         display: flex;
         flex-flow: row nowrap;
+        justify-content: center;
         align-items: center;
         gap: 0.5rem;
+        opacity: 0.9;
 
         .formFooterTextIcon {
             width: 1.5rem;

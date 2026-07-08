@@ -14,10 +14,22 @@ export const platformStoryData = [
         title: "Analyse",
         description: "EVA reads it all as it lands, scoring sentiment and surfacing the themes that matter, in plain English your teams can use.",
         image: "/decoration/no-image-placeholder.webp",
+        button: [
+            {
+                text: "Learn More",
+                href: "/how-it-works/analyse",
+            }
+        ]
     },
     {
         title: "Action",
         description: "Then we do something with it: routing fixes, raising tasks and closing the loop, so insight turns into outcomes on the ground.",
         image: "/decoration/no-image-placeholder.webp",
+        button: [
+            {
+                text: "Explore",
+                href: "/how-it-works/action",
+            }
+        ]
     },
 ];
