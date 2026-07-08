@@ -32,7 +32,7 @@ export default function HeaderButtons() {
 
                     <Button text="Sign in" href="#" className={`textLink ${styles.textLinkBtn}`} hasAnimation={false} icon={null} />
 
-                    <Button text="Book a demo" href="#" className={`primary hidden-s ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
+                    <Button text="Book a demo" href="/get-a-demo" className={`primary hidden-s ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
 
                 </div>
 

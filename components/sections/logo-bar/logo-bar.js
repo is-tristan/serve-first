@@ -9,13 +9,13 @@ import { logoData } from "@/data/logo-data";
 import styles from "@/styles/components/sections/logo-bar.module.scss";
 
 export default function LogoBar({
-    theme = "light",
+    backgroundColor = "bgLightAlt",
     eyebrow = "- Logo Bar Component",
     data = logoData || []
 }) {
     return (
 
-        <section className={`row ${styles.logoBar} bgLightAlt`} data-theme={theme}>
+        <section className={`row ${styles.logoBar} ${backgroundColor}`}>
 
             <div className="container centered noPaddingBottom">
 

@@ -138,6 +138,25 @@
     gap: 1rem;
     flex-basis: 100%;
 
+    .formFooterText {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+
+        .formFooterTextIcon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primaryAlt);
+        }
+
+        span {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: rgba(var(--darkRgb), 0.75);
+        }
+    }
+
     .submit {
         @include btn();
         background: var(--primary);

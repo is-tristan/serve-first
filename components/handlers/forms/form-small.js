@@ -12,7 +12,10 @@ import Link from "next/link";
 // Styles
 import styles from "@/styles/components/handlers/form.module.scss";
 
-export default function ContactForm({ theme = "primary" }) {
+// Icons
+import { shieldTick } from "@/utils/icons";
+
+export default function FormSmall({ theme = "primary", hasDemoLink = true, formBtnText = "Send Message" }) {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -112,7 +115,7 @@ export default function ContactForm({ theme = "primary" }) {
 
                         <input type="checkbox" name="terms" id="terms" required aria-required="true" />
 
-                        <label htmlFor="terms" style={{color: theme === "primary" ? "var(--light)" : "var(--dark)"}}>I have read and agree to your <Link href="/privacy-policy" target="_blank" className={theme === "primary" ? "colorSecondary" : "colorPrimaryAlt"} style={{textDecoration: "underline"}}>privacy policy</Link>.</label>
+                        <label htmlFor="terms" style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>I have read and agree to your <Link href="/privacy-policy" target="_blank" className={theme === "primary" ? "colorSecondary" : "colorPrimaryAlt"} style={{ textDecoration: "underline" }}>privacy policy</Link>.</label>
 
                     </div>
 
@@ -120,11 +123,19 @@ export default function ContactForm({ theme = "primary" }) {
 
                 <div className={styles.formFooter}>
 
-                    <div className={`buttons`} style={{gap: "1rem"}}>
+                    <div className={`buttons`} style={{ gap: "1rem" }}>
 
-                        <button className={styles.submit} type="submit">Send Message</button>
+                        <button className={styles.submit} type="submit">{formBtnText}</button>
 
-                        <Link href="#" target="_blank" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>
+                        {hasDemoLink && (<Link href="/book-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
+
+                    </div>
+
+                    <div className={styles.formFooterText}>
+
+                        <div className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
+
+                        <span>No obligation. We will not pass your details on.</span>
 
                     </div>
 

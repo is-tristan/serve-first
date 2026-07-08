@@ -171,7 +171,7 @@ export const menuItemsData = [
         submenu: [
             {
                 label: "About Us",
-                href: "/company/about-us",
+                href: "/company/about",
                 icon: aboutUsIcon,
             },
             {

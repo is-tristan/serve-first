@@ -21,6 +21,14 @@ export default function Banner({
     bannerType = "home",
     hasButtons = true,
     hasBackgroundDecoration = true,
+    buttonPrimary = {
+        text: "Get a demo",
+        href: "/get-a-demo",
+    },
+    buttonSecondary = {
+        text: "Talk to us",
+        href: "/company/contact",
+    },
 }) {
 
     return (
@@ -52,18 +60,26 @@ export default function Banner({
 
                             <div className={`buttons ${styles.bannerButtons}`}>
 
-                                <Button
-                                    text="Lorem ipsum dolor sit amet."
-                                    href="#"
-                                    className="primary"
-                                />
+                                {buttonPrimary.text && (
 
-                                <Button
-                                    text="Lorem ipsum dolor sit amet."
-                                    href="#"
-                                    className="textLink"
-                                    delay={1}
-                                />
+                                    <Button
+                                        text={buttonPrimary.text}
+                                        href={buttonPrimary.href}
+                                        className="primary"
+                                    />
+
+                                )}
+
+                                {buttonSecondary.text && (
+
+                                    <Button
+                                        text={buttonSecondary.text}
+                                        href={buttonSecondary.href}
+                                        className="textLink"
+                                        delay={1}
+                                    />
+
+                                )}
 
                             </div>
 

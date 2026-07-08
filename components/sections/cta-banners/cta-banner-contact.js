@@ -1,15 +1,16 @@
 // Components
 import Heading from "@/components/content/text";
-import ContactForm from "@/components/handlers/form";
+import FormSmall from "@/components/handlers/forms/form-small";
+import FormFull from "@/components/handlers/forms/form-full";
 
 // Styles
 import styles from "@/styles/components/sections/cta-banners.module.scss";
 
-export default function CtaBannerContact({ theme = "light" }) {
+export default function CtaBannerContact({ theme = "light", hasDemoLink = true, formBtnText = "Send Message", fullForm = false }) {
 
     return (
 
-        <section className={`row ${styles.ctaBannerContact} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`}>
+        <section id="book-demo" className={`row ${styles.ctaBannerContact} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`}>
 
             <div className="container dualCols">
 
@@ -31,7 +32,15 @@ export default function CtaBannerContact({ theme = "light" }) {
                     }}
                 >
 
-                    <ContactForm theme={theme} />
+                    {fullForm ? (
+
+                        <FormFull theme={theme} hasDemoLink={hasDemoLink} formBtnText={formBtnText} />
+
+                    ) : (
+
+                        <FormSmall theme={theme} hasDemoLink={hasDemoLink} formBtnText={formBtnText} />
+                        
+                    )}
 
                 </div>
 
