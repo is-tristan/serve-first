@@ -1,12 +1,14 @@
-// Styles
-import styles from "@/styles/components/layouts/header/header.module.scss";
+import { getMenuAds } from "@/sanity/lib/queries"
 
-// Components
-import HeaderLogo from "@/components/layouts/header/parts/header-logo";
-import HeaderMenu from "@/components/layouts/header/parts/header-menu";
-import HeaderButtons from "@/components/layouts/header/parts/header-buttons";
+import styles from "@/styles/components/layouts/header/header.module.scss"
 
-export default function HeaderContainer() {
+import HeaderLogo from "@/components/layouts/header/parts/header-logo"
+import HeaderMenu from "@/components/layouts/header/parts/header-menu"
+import HeaderActions from "@/components/layouts/header/parts/header-actions"
+
+export default async function HeaderContainer() {
+
+    const menuAds = await getMenuAds()
 
     return (
 
@@ -14,9 +16,9 @@ export default function HeaderContainer() {
 
             <HeaderLogo />
 
-            <HeaderMenu />
+            <HeaderMenu menuAds={menuAds} />
 
-            <HeaderButtons />
+            <HeaderActions menuAds={menuAds} />
 
         </div>
 

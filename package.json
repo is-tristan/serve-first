@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
+    "sanity": "sanity dev",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
@@ -15,14 +16,19 @@
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.19.11",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^5.31.1",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "lenis": "^1.3.23",
     "motion": "^12.40.0",
     "next": "16.2.9",
+    "next-sanity": "^13.1.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "sass": "^1.101.0"
+    "sanity": "^5.31.1",
+    "sass": "^1.101.0",
+    "styled-components": "^6.4.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",

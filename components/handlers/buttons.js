@@ -10,7 +10,8 @@ import Link from "next/link";
 // Icons
 import { arrowRightShort } from "@/utils/icons";
 
-export default function Button({ text,
+export default function Button({
+    text,
     href = "#",
     target = "_self",
     className = "primary",

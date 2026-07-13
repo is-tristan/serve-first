@@ -14,7 +14,7 @@ import stylesMobileMenu from "@/styles/components/layouts/header/header-mobile-m
 // Icons
 import { chevronRightAlt } from "@/utils/icons";
 
-export default function HeaderButtons() {
+export default function HeaderActions({ menuAds }) {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -30,7 +30,7 @@ export default function HeaderButtons() {
 
                 <div className={`${styles.headerButtons}`}>
 
-                    <Button text="Sign in" href="#" className={`textLink ${styles.textLinkBtn}`} hasAnimation={false} icon={null} />
+                    <Button text="Sign in" href="#" className={`textLink colorDark ${styles.textLinkBtn}`} hasAnimation={false} icon={null} />
 
                     <Button text="Book a demo" href="/get-a-demo" className={`primary hidden-s ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
 
@@ -48,7 +48,7 @@ export default function HeaderButtons() {
 
             </div>
 
-            <HeaderMobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+            <HeaderMobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} menuAds={menuAds} />
 
         </>
 

@@ -5,7 +5,6 @@ import { useState } from "react";
 
 // Next
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 // Data
@@ -15,12 +14,19 @@ import { menuItemsData as data } from "@/components/layouts/header/items/menu-it
 import styles from "@/styles/components/layouts/header/header-desktop-menu.module.scss";
 
 // Icons
-import { arrowUpRight, chevronDown } from "@/utils/icons";
+import { chevronDown, chevronRightAlt, arrowRightShort, aiIcon } from "@/utils/icons";
 
-// Header Ad
-const headerAd = "/decoration/header-ad.webp"
+// Components
+import HeaderAd from "@/components/layouts/header/parts/header-ad";
 
-export default function HeaderMenu() {
+const menuAdKeys = {
+    "How It Works": "howItWorks",
+    "Solutions": "solutions",
+    "Products": "products",
+    "Company": "company",
+};
+
+export default function HeaderMenu({ menuAds }) {
 
     const pathname = usePathname();
     const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -62,7 +68,7 @@ export default function HeaderMenu() {
                 return (
 
                     <div
-                        style={{ display: "flex", alignItems: "center", height: "100%" }}
+                        className={styles.menuItemOuter}
                         key={item.label}
                         data-menu-item={item.label.toLowerCase().replaceAll(" ", "-")}
                         data-active={isActive(item.href)}
@@ -96,19 +102,35 @@ export default function HeaderMenu() {
 
                                                 {item.submenu.map((submenuItem) => (
 
-                                                    <button
-                                                        key={submenuItem.label}
-                                                        type="button"
-                                                        className={styles.submenuLeftItem}
-                                                        data-submenu-item-active={isSelectedSubmenuItem(submenuItem)}
-                                                        onClick={() => handleSubmenuItemSelect(submenuItem)}
-                                                    >
+                                                    submenuItem.submenu ? (
 
-                                                        {submenuItem.icon && (<div className={styles.submenuLeftItemIcon} dangerouslySetInnerHTML={{ __html: submenuItem.icon }} />)}
+                                                        <button
+                                                            key={submenuItem.label}
+                                                            type="button"
+                                                            className={styles.submenuLeftItem}
+                                                            data-submenu-item-active={isSelectedSubmenuItem(submenuItem)}
+                                                            onClick={() => handleSubmenuItemSelect(submenuItem)}
+                                                        >
 
-                                                        {submenuItem.label && (<span>{submenuItem.label}</span>)}
+                                                            {submenuItem.label && (<span>{submenuItem.label}</span>)}
 
-                                                    </button>
+                                                        </button>
+
+                                                    ) : (
+
+                                                        <Link
+                                                            key={submenuItem.label}
+                                                            href={submenuItem.href}
+                                                            className={styles.submenuLeftItem}
+                                                        >
+
+                                                            {submenuItem.label && (<span>{submenuItem.label}</span>)}
+
+                                                            <div className={styles.submenuLeftItemIcon} dangerouslySetInnerHTML={{ __html: chevronRightAlt }} />
+
+                                                        </Link>
+
+                                                    )
 
                                                 ))}
 
@@ -122,47 +144,44 @@ export default function HeaderMenu() {
                                                         key={submenuItem.label}
                                                         className={styles.submenuRight}
                                                         data-submenu-open={isSelectedSubmenuItem(submenuItem)}
+                                                        data-has-child-submenu={submenuItem.submenu?.length > 0}
                                                     >
-
-                                                        <Link className={styles.submenuRightTitle} href={submenuItem.href}>
-
-                                                            <h3>{submenuItem.label}</h3>
-
-                                                            <div className={styles.submenuRightIcon} dangerouslySetInnerHTML={{ __html: arrowUpRight }} />
-
-                                                        </Link>
 
                                                         {submenuItem.submenu && (
 
-                                                            <div className={styles.submenuRightItems}>
+                                                            <div className={styles.submenuRightContent}>
 
-                                                                {submenuItem.submenu.map((nestedSubmenuItem) => (
+                                                                <div className={styles.submenuRightTitle}>
 
-                                                                    <Link
-                                                                        key={nestedSubmenuItem.label}
-                                                                        href={nestedSubmenuItem.href}
-                                                                        className={styles.submenuRightItemLink}
-                                                                    >
+                                                                    <h3>{submenuItem.label}</h3>
 
-                                                                        <span>{nestedSubmenuItem.label}</span>
+                                                                </div>
 
-                                                                    </Link>
+                                                                <div className={styles.submenuRightItems}>
 
-                                                                ))}
+                                                                    {submenuItem.submenu.map((nestedSubmenuItem) => (
+
+                                                                        <Link
+                                                                            key={nestedSubmenuItem.label}
+                                                                            href={nestedSubmenuItem.href}
+                                                                            className={styles.submenuRightItemLink}
+                                                                        >
+
+                                                                            <span className={styles.submenuRightItemText}>{nestedSubmenuItem.label}</span>
+
+                                                                            <span className={styles.submenuRightItemIcon} dangerouslySetInnerHTML={{ __html: arrowRightShort }} />
+
+                                                                        </Link>
+
+                                                                    ))}
+
+                                                                </div>
 
                                                             </div>
 
                                                         )}
 
-                                                        {headerAd && (
-
-                                                            <Link href="#" className={styles.headerAd}>
-
-                                                                <Image src={headerAd} alt="Header Ad" fill loading="lazy" sizes="100%" />
-
-                                                            </Link>
-
-                                                        )}
+                                                        <HeaderAd ad={menuAds?.[menuAdKeys[item.label]]} />
 
                                                     </div>
 
@@ -180,11 +199,13 @@ export default function HeaderMenu() {
 
                         ) : (
 
-                            <div className={styles.menuItem}>
+                            <div className={`${styles.menuItem}`}>
 
                                 <Link href={item.href} key={item.label} className={styles.menuItemLink}>
 
                                     <span>{item.label}</span>
+
+                                    {item.icon && (<span className={styles.menuItemIcon} dangerouslySetInnerHTML={{ __html: item.icon }} />)}
 
                                 </Link>
 

@@ -1,4 +1,5 @@
 import {
+    aiIcon,
     captureIcon,
     analyseIcon,
     actionIcon,
@@ -146,11 +147,11 @@ export const menuItemsData = [
                 submenu: [
                     {
                         label: "Competitive Benchmarking",
-                        href: "/marketing-intelligence/competitive-benchmarking",
+                        href: "/products/marketing-intelligence/competitive-benchmarking",
                     },
                     {
                         label: "Review Monitoring",
-                        href: "/marketing-intelligence/review-monitoring",
+                        href: "/products/marketing-intelligence/review-monitoring",
                     },
                 ],
             },
@@ -158,12 +159,30 @@ export const menuItemsData = [
                 label: "Operational Excellence",
                 href: "#",
                 icon: operationalExcellenceIcon,
+                submenu: [
+                    {
+                        label: "Audits",
+                        href: "/products/operational-excellence/audits",
+                    },
+                    {
+                        label: "Task Management",
+                        href: "/products/operational-excellence/task-management",
+                    },
+                    {
+                        label: "Helpdesk",
+                        href: "/products/operational-excellence/helpdesk",
+                    },
+                    {
+                        label: "Knowledge Base",
+                        href: "/products/operational-excellence/knowledge-base",
+                    },
+                    {
+                        label: "Martyn's Law Compliance",
+                        href: "/products/operational-excellence/martyns-law-compliance",
+                    },
+                ],
             },
         ],
-    },
-    {
-        label: "EVA",
-        href: "#",
     },
     {
         label: "Company",
@@ -185,4 +204,9 @@ export const menuItemsData = [
         label: "Resources",
         href: "#",
     },
+    {
+        label: "Meet EVA",
+        href: "#",
+        icon: aiIcon,
+    }
 ]

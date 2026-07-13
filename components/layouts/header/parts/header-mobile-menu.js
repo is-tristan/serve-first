@@ -14,9 +14,19 @@ import styles from "@/styles/components/layouts/header/header-mobile-menu.module
 import { menuItemsData as data } from "@/components/layouts/header/items/menu-items-data";
 
 // Icons
-import { logo, closeIcon, chevronDown, arrowUpRight } from "@/utils/icons";
+import { logo, closeIcon, chevronDown } from "@/utils/icons";
 
-export default function HeaderMobileMenu({ isOpen = false, onClose }) {
+// Components
+import HeaderAd from "@/components/layouts/header/parts/header-ad";
+
+const menuAdKeys = {
+    "How It Works": "howItWorks",
+    "Solutions": "solutions",
+    "Products": "products",
+    "Company": "company",
+};
+
+export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
 
     const pathname = usePathname();
     const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -120,14 +130,6 @@ export default function HeaderMobileMenu({ isOpen = false, onClose }) {
 
                                                         <div className={styles.mobileNestedSubmenu} data-submenu-open={isNestedSubmenuOpen(submenuItem)}>
 
-                                                            <Link className={styles.mobileNestedSubmenuTitle} href={submenuItem.href} onClick={handleLinkClick}>
-
-                                                                <span>{submenuItem.label}</span>
-
-                                                                <span className={styles.mobileNestedSubmenuTitleIcon} dangerouslySetInnerHTML={{ __html: arrowUpRight }} />
-
-                                                            </Link>
-
                                                             <div className={styles.mobileNestedSubmenuItems}>
 
                                                                 {submenuItem.submenu.map((nestedSubmenuItem) => (
@@ -167,13 +169,29 @@ export default function HeaderMobileMenu({ isOpen = false, onClose }) {
 
                                         ))}
 
+                                        {menuAds?.[menuAdKeys[item.label]] && (
+
+                                            <div className={styles.mobileMenuAd} onClick={handleLinkClick}>
+
+                                                <HeaderAd ad={menuAds[menuAdKeys[item.label]]} />
+
+                                            </div>
+
+                                        )}
+
                                     </div>
 
                                 </>
 
                             ) : (
 
-                                <Link href={item.href} className={styles.mobileMenuItemLink} onClick={handleLinkClick}>{item.label}</Link>
+                                <Link href={item.href} className={styles.mobileMenuItemLink} onClick={handleLinkClick}>
+
+                                    {item.label}
+
+                                    {item.icon && (<div className={styles.mobileMenuItemIcon} dangerouslySetInnerHTML={{ __html: item.icon }} />)}
+
+                                </Link>
 
                             )}
 
