@@ -18,6 +18,7 @@ export default function Banner({
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.</p>",
     image = "/decoration/no-image-placeholder.webp",
+    imageSizing = "Fill",
     bannerType = "home",
     hasButtons = true,
     hasBackgroundDecoration = true,
@@ -91,9 +92,9 @@ export default function Banner({
 
                 {image && (
 
-                    <div className={`hidden-s hidden-m hidden-l imageFill ${styles.imageCol}`}>
+                    <div className={`hidden-s hidden-m hidden-l image${imageSizing} ${styles.imageCol}`}>
 
-                        <Image className={styles.bannerImage} src={image} alt={title} width={1024} height={1024} loading="eager" priority />
+                        <Image className={styles.bannerImage} src={image} alt={title} width={768} height={768} loading="eager" sizes="100%" style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }} priority />
 
                     </div>
 

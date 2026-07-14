@@ -412,6 +412,14 @@
     }
 }
 
+.imageContain {
+    aspect-ratio: 1 / 1;
+    
+    img {
+        object-fit: contain;
+    }
+}
+
 // Column Links
 .colLink {
     display: flex;

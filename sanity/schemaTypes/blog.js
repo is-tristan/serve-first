@@ -1,0 +1,148 @@
+import { defineArrayMember, defineField, defineType } from "sanity"
+
+import { DocumentTextIcon } from "@sanity/icons"
+
+export const blog = defineType({
+    name: "blog",
+    title: "Blog Post",
+    type: "document",
+    icon: DocumentTextIcon,
+    fields: [
+        defineField({
+            name: "title",
+            title: "Title",
+            type: "string",
+            validation: (rule) => rule.required(),
+        }),
+        defineField({
+            name: "slug",
+            title: "Slug",
+            type: "slug",
+            options: {
+                source: "title",
+                maxLength: 96,
+            },
+            validation: (rule) => rule.required(),
+        }),
+        defineField({
+            name: "coverImage",
+            title: "Cover Image",
+            type: "image",
+            options: {
+                hotspot: true,
+            },
+            fields: [
+                defineField({
+                    name: "alt",
+                    title: "Alternative Text",
+                    type: "string",
+                }),
+            ],
+        }),
+        defineField({
+            name: "excerpt",
+            title: "Excerpt",
+            type: "text",
+            rows: 3,
+            validation: (rule) => rule.max(200).warning("Keep it under 200 characters"),
+        }),
+        defineField({
+            name: "content",
+            title: "Content",
+            type: "array",
+            of: [
+                defineArrayMember({
+                    type: "block",
+                }),
+                defineArrayMember({
+                    type: "image",
+                    options: {
+                        hotspot: true,
+                    },
+                    fields: [
+                        defineField({
+                            name: "alt",
+                            title: "Alternative Text",
+                            type: "string",
+                        }),
+                    ],
+                }),
+            ],
+        }),
+        defineField({
+            name: "publishedAt",
+            title: "Published At",
+            type: "datetime",
+            initialValue: () => new Date().toISOString(),
+            validation: (rule) => rule.required(),
+        }),
+        defineField({
+            name: "authors",
+            title: "Authors",
+            type: "array",
+            of: [
+                defineArrayMember({
+                    type: "reference",
+                    to: [{ type: "author" }],
+                }),
+            ],
+        }),
+        defineField({
+            name: "seo",
+            title: "SEO",
+            type: "object",
+            options: {
+                collapsible: true,
+                collapsed: false,
+            },
+            fields: [
+                defineField({
+                    name: "title",
+                    title: "SEO Title",
+                    type: "string",
+                    description: "Overrides the post title if provided",
+                    validation: (rule) => rule.max(60).warning("Keep under 60 characters"),
+                }),
+                defineField({
+                    name: "description",
+                    title: "SEO Description",
+                    type: "text",
+                    rows: 3,
+                    description: "Falls back to the excerpt if empty",
+                    validation: (rule) => rule.max(160).warning("Keep under 160 characters"),
+                }),
+            ],
+        }),
+    ],
+    orderings: [
+        {
+            title: "Published Date, New",
+            name: "publishedAtDesc",
+            by: [{ field: "publishedAt", direction: "desc" }],
+        },
+        {
+            title: "Published Date, Old",
+            name: "publishedAtAsc",
+            by: [{ field: "publishedAt", direction: "asc" }],
+        },
+    ],
+    preview: {
+        select: {
+            title: "title",
+            media: "coverImage",
+            publishedAt: "publishedAt",
+            author0: "authors.0.name",
+        },
+        prepare({ title, media, publishedAt, author0 }) {
+            const date = publishedAt
+                ? new Date(publishedAt).toLocaleDateString()
+                : "No date"
+
+            return {
+                title,
+                media,
+                subtitle: author0 ? `${date} · ${author0}` : date,
+            }
+        },
+    },
+})
