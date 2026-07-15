@@ -11,7 +11,6 @@ import styles from "@/styles/components/sections/faq.module.scss";
 import { faqData } from "@/data/faq-data";
 
 export default function Faq({
-    theme = "light",
     eyebrow = "- FAQ Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     data = faqData || [],
@@ -24,7 +23,7 @@ export default function Faq({
 
     return (
 
-        <section className={`row ${styles.faq} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.faq}`}>
 
             <div className="container sectionSplitTitle noPaddingBottom">
 
@@ -32,7 +31,7 @@ export default function Faq({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} />)}
+                    {title && (<Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />)}
 
                 </div>
 

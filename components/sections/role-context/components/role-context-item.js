@@ -46,11 +46,11 @@ export default function RoleContextItem({
 
                 {title && (<h3>{title}</h3>)}
 
+                {number && (<span className={styles.roleContextNumber}>{number}</span>)}
+
             </div>
 
             <div className={styles.roleContextContent}>
-
-                {number && (<span className={styles.roleContextNumber}>{number}</span>)}
 
                 <div className={styles.roleContextFooter}>
 

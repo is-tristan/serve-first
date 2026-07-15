@@ -107,16 +107,3 @@
         }
     }
 }
-
-.contentGrid {
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-
-        .contentGridItem {
-            background: var(--darkAlt);
-            border-color: var(--borderDark);
-            box-shadow: unset;
-        }
-    }
-}

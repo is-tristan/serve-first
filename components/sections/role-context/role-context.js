@@ -11,7 +11,6 @@ import styles from "@/styles/components/sections/role-context.module.scss";
 import { roleContextData } from "@/data/role-context-data";
 
 export default function RoleContext({
-    theme = "light",
     eyebrow = "- Role Context Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
@@ -25,7 +24,7 @@ export default function RoleContext({
 
     return (
 
-        <section className={`row ${styles.roleContext} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.roleContext}`}>
 
             <div className="container noPaddingBottom">
 
@@ -33,7 +32,7 @@ export default function RoleContext({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} description={description} />
+                    <Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} description={description} />
 
                 </div>
 

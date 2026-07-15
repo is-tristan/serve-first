@@ -17,7 +17,7 @@ import styles from "@/styles/components/sections/customer-story.module.scss";
 // Icons
 import { chevronLeft, chevronRight } from "@/utils/icons";
 
-export default function CustomerStoryCarousel({ theme = "light", data = [] }) {
+export default function CustomerStoryCarousel({ data = [] }) {
 
     const splideRef = useRef(null);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,7 +59,7 @@ export default function CustomerStoryCarousel({ theme = "light", data = [] }) {
 
             </div>
 
-            <div className={`carouselNavigation ${theme === "dark" ? "navDark" : undefined}`}>
+            <div className="carouselNavigation">
 
                 <button
                     className="arrow arrowLeft"

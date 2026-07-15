@@ -24,6 +24,7 @@ export default function FeaturedListItem({
     eyebrow,
     title,
     description,
+    htmlDescription = false,
     list = [],
     button
 }) {
@@ -76,7 +77,7 @@ export default function FeaturedListItem({
 
                                 <div className={`icon ${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} dangerouslySetInnerHTML={{ __html: checkmark }} />
 
-                                <span>{listItem.text}</span>
+                                {htmlDescription ? (<div dangerouslySetInnerHTML={{ __html: listItem.text }} />) : (<span>{listItem.text}</span>)}
 
                             </div>
 
@@ -88,7 +89,7 @@ export default function FeaturedListItem({
 
                 <div className={styles.featuredItemFooter}>
 
-                    {button && (<Button className={`textLink ${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                    {button && button.text && (<Button className={`textLink ${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
 
                 </div>
 

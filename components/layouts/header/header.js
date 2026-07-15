@@ -1,19 +1,17 @@
-// Styles
-import styles from "@/styles/components/layouts/header/header.module.scss";
-
 // Components
-import HeaderContainer from "@/components/layouts/header/parts/header-container";
+import HeaderShell from "@/components/layouts/header/parts/header-shell"
+import HeaderContainer from "@/components/layouts/header/parts/header-container"
 
-export default function Header({ type = "default" }) {
+export default function Header() {
 
     return (
 
-        <header id="header" className={styles.header} data-type={type}>
+        <HeaderShell>
 
             <HeaderContainer />
 
-        </header>
+        </HeaderShell>
 
-    );
-    
+    )
+
 }

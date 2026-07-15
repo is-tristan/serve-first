@@ -106,39 +106,3 @@
         }
     }
 }
-
-
-.productHighlight {
-    &[data-theme="dark"] {
-        background: var(--dark);
-
-        .productHighlightItemInner {
-            background: var(--darkAlt);
-
-            &::before,
-            &::after {
-                content: unset;
-            }
-
-            h3,
-            p {
-                color: var(--light);
-            }
-
-            a {
-                color: var(--primary);
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-                background: rgba(var(--primaryRgb), 0.05);
-                border-color: var(--primary);
-
-                @media (width >=768px) {
-                    transform: scale(1.025);
-                }
-            }
-        }
-    }
-}

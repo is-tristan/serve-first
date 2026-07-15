@@ -31,47 +31,51 @@ export default function PlatformStoryItem({
 
         <motion.div className={styles.platformStoryItem} ref={ref} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }} initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}>
 
-            <div className={styles.platformStoryItemHeader}>
+            <div className={styles.platformStoryItemContainer}>
 
-                {eyebrow && (<Eyebrow hasAnimation={false} type="secondary" text={eyebrow} />)}
+                <div className={styles.platformStoryItemHeader}>
 
-                {image && (
+                    {eyebrow && (<Eyebrow hasAnimation={false} type="secondary" text={eyebrow} />)}
 
-                    <div className={styles.platformStoryItemImage}>
+                    {image && (
 
-                        <Image src={image} alt={title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" />
+                        <div className={styles.platformStoryItemImage}>
+
+                            <Image src={image} alt={title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" />
+
+                        </div>
+
+                    )}
+
+                </div>
+
+                {(title || description || list.length > 0) && (
+
+                    <div className={styles.platformStoryItemContent}>
+
+                        {title && (<h3>{title}</h3>)}
+
+                        {description && (<p>{description}</p>)}
+
+                        {list.length > 0 && (
+
+                            <ul>
+
+                                {list.map((listItem, index) => (
+
+                                    <li key={index}>{listItem.text}</li>
+
+                                ))}
+
+                            </ul>
+
+                        )}
 
                     </div>
 
                 )}
 
             </div>
-
-            {(title || description || list.length > 0) && (
-
-                <div className={styles.platformStoryItemContent}>
-
-                    {title && (<h3>{title}</h3>)}
-
-                    {description && (<p>{description}</p>)}
-
-                    {list.length > 0 && (
-
-                        <ul>
-
-                            {list.map((listItem, index) => (
-
-                                <li key={index}>{listItem.text}</li>
-
-                            ))}
-
-                        </ul>
-
-                    )}
-
-                </div>
-
-            )}
 
             {button.length > 0 && (
 

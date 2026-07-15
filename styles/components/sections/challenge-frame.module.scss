@@ -86,17 +86,3 @@
         }
     }
 }
-
-.challengeFrame {
-
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-
-        .challengeFrameItem {
-            background: var(--darkAlt);
-            border-color: var(--borderDark);
-            box-shadow: none;
-        }
-    }
-}

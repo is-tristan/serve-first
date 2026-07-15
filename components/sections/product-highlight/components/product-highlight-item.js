@@ -17,7 +17,6 @@ import styles from "@/styles/components/sections/product-highlight.module.scss";
 
 export default function ProductHighlightItem({
     index = 0,
-    theme = "light",
     icon,
     eyebrow,
     title,
@@ -51,7 +50,7 @@ export default function ProductHighlightItem({
 
                 <div className={styles.productHighlightItemContent}>
 
-                    {eyebrow && (<Eyebrow hasAnimation={false} type="secondary" textColor={theme === "dark" ? "colorLight" : "colorDark"} text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow hasAnimation={false} type="secondary" textColor="colorDark" text={eyebrow} />)}
 
                     {title && (<h3>{title}</h3>)}
 

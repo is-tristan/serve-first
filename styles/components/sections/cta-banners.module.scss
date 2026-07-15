@@ -22,15 +22,6 @@
     }
 }
 
-.ctaBannerTwo {
-    &[data-theme="dark"] {
-        .ctaBannerContent {
-            background: var(--darkAlt);
-            box-shadow: none;
-        }
-    }
-}
-
 .ctaBannerContact {
     .formCol {
         padding: 1rem;

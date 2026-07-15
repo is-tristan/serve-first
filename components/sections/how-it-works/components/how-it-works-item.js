@@ -20,7 +20,6 @@ import { checkmark } from "@/utils/icons";
 
 export default function HowItWorksItem({
     index = 0,
-    theme = "light",
     image,
     title,
     number,

@@ -120,23 +120,3 @@
         }
     }
 }
-
-.customerStory {
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-
-        .customerStoryCarouselInner {
-
-            @media (width >=1024px) {
-                box-shadow: none;
-                border: 1px solid var(--borderDark);
-                background: var(--darkAlt);
-            }
-
-            img {
-                filter: brightness(0) invert(1);
-            }
-        }
-    }
-}

@@ -1,22 +1,26 @@
-"use client";
+"use client"
 
-// React
-import { useState } from "react";
+import { useState } from "react"
 
-// Components
-import Button from "@/components/handlers/buttons";
-import HeaderMobileMenu from "@/components/layouts/header/parts/header-mobile-menu";
+import { usePathname } from "next/navigation"
+
+import Button from "@/components/handlers/buttons"
+import HeaderMobileMenu from "@/components/layouts/header/parts/header-mobile-menu"
+
+import { getHeaderType } from "@/components/layouts/header/get-header-type"
 
 // Styles
-import styles from "@/styles/components/layouts/header/header.module.scss";
-import stylesMobileMenu from "@/styles/components/layouts/header/header-mobile-menu.module.scss";
+import styles from "@/styles/components/layouts/header/header.module.scss"
+import stylesMobileMenu from "@/styles/components/layouts/header/header-mobile-menu.module.scss"
 
 // Icons
-import { chevronRightAlt } from "@/utils/icons";
+import { chevronRightAlt } from "@/utils/icons"
 
 export default function HeaderActions({ menuAds }) {
 
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname()
+    const headerType = getHeaderType(pathname)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen((prev) => !prev);
@@ -26,7 +30,7 @@ export default function HeaderActions({ menuAds }) {
 
         <>
 
-            <div className={`${styles.headerActions}`}>
+            <div className={`${styles.headerActions}`} data-header-type={headerType}>
 
                 <div className={`${styles.headerButtons}`}>
 

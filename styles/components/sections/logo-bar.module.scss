@@ -16,10 +16,3 @@
         aspect-ratio: 5 / 1;
     }
 }
-
-.logoBar {
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-    }
-}

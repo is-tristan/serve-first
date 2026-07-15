@@ -12,7 +12,6 @@ import { productHighlightData } from "@/data/product-highlight-data";
 
 
 export default function ProductHighlight({
-    theme = "light",
     eyebrow = "- Product Highlight Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     link = "#",
@@ -21,7 +20,7 @@ export default function ProductHighlight({
 
     return (
 
-        <section className={`row ${styles.productHighlight} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.productHighlight}`}>
 
             <div className={"container sectionSplitTitle noPaddingBottom"}>
 
@@ -29,7 +28,7 @@ export default function ProductHighlight({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} />
+                    <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />
 
                 </div>
 
@@ -49,7 +48,6 @@ export default function ProductHighlight({
                         <ProductHighlightItem
                             key={index}
                             index={index}
-                            theme={theme}
                             icon={item.icon}
                             eyebrow={item.eyebrow}
                             title={item.title}

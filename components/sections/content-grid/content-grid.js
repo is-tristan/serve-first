@@ -11,7 +11,6 @@ import styles from "@/styles/components/sections/content-grid.module.scss";
 import { contentGridData } from "@/data/content-grid-data";
 
 export default function ContentGrid({
-    theme = "light",
     eyebrow = "- Content Grid Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     button = {
@@ -24,7 +23,7 @@ export default function ContentGrid({
 
     return (
 
-        <section className={`row ${styles.contentGrid} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.contentGrid}`}>
 
             <div className="container noPaddingBottom">
 
@@ -32,7 +31,7 @@ export default function ContentGrid({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<Text headingClass={`sectionTitle sectionTitleContained ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} />)}
+                    {title && (<Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} />)}
 
                     {button && (<Button text={button.text} href={button.href} target={button.target} className="textLink colorPrimary" />)}
 

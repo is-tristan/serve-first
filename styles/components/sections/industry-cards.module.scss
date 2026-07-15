@@ -97,19 +97,7 @@
 }
 
 .industryCards {
-    &[data-theme="light"] {
-        [data-name="primaryButton"] {
-            background: var(--primary);
-        }
-    }
-
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-
-        .industryCard {
-            background: var(--darkAlt);
-            border-color: var(--borderDark);
-        }
+    [data-name="primaryButton"] {
+        background: var(--primary);
     }
 }

@@ -26,6 +26,13 @@
             gap: 1.5rem;
         }
     }
+
+    &[data-header-type="minimal"] {
+        .headerContainer {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
 }
 
 // Header Logo

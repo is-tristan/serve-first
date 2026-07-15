@@ -1,58 +1,43 @@
 // Components
-import Eyebrow from "../../decoration/eyebrow";
-import Text from "../../content/text";
+import Eyebrow from "@/components/decoration/eyebrow";
+import Text from "@/components/content/text";
 import HowItWorksItem from "@/components/sections/how-it-works/components/how-it-works-item";
-
-// Data
-import { howItWorksData } from "@/data/how-it-works-data";
 
 // Styles
 import styles from "@/styles/components/sections/feature-list.module.scss";
 import stylesAlt from "@/styles/components/sections/how-it-works.module.scss";
 
-export default function HowItWorks({ theme = "light", heading, data }) {
+// Data
+import { howItWorksData } from "@/data/how-it-works-data";
 
-    const headingItems = heading ?? howItWorksData?.[0]?.heading ?? [];
-
-    const items = data ?? howItWorksData?.[1]?.data ?? [];
+export default function HowItWorks({
+    eyebrow = "- How It Works Component",
+    title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
+    data = howItWorksData || []
+}) {
 
     return (
 
-        <section
-            className={`row ${stylesAlt.howItWorks} ${styles.featureList} ${theme === "dark" ? "sectionHasGradients" : undefined}`}
-            data-theme={theme}
-            style={{ gap: "0" }}
-        >
+        <section className={`row ${stylesAlt.howItWorks} ${styles.featureList}`} style={{ gap: "0" }} >
 
-            {headingItems.length > 0 && (
+            <div className={`container centered noPaddingBottom ${stylesAlt.howItWorksHeading}`}>
 
-                <div className={`container centered noPaddingBottom`}>
+                {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {headingItems.map((item, index) => (
+                {title && (<Text headingClass={`sectionTitle sectionTitleContained`} title={title} description={description} />)}
 
-                        <div key={index} className={`heading ${stylesAlt.howItWorksHeading}`}>
+            </div>
 
-                            {item.eyebrow && (<Eyebrow text={item.eyebrow} />)}
-
-                            {item.title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={item.title} description={item.description} descriptionClass={`fw400`} />)}
-
-                        </div>
-
-                    ))}
-
-                </div>
-
-            )}
-
-            {items.length > 0 && (
+            {data.length > 0 && (
 
                 <div className={`container ${styles.featureListItems}`}>
 
-                    {items.map((item, index) => (
+                    {data.map((item, index) => (
+
                         <HowItWorksItem
                             key={index}
                             index={index}
-                            theme={theme}
                             image={item.image}
                             title={item.title}
                             number={item.number}

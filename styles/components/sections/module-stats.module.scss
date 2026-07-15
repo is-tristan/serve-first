@@ -13,6 +13,10 @@
     border-radius: var(--borderRadius);
     border: 1px solid var(--primaryAlt);
 
+    @media (width >=1024px) {
+        justify-content: flex-start;
+    }
+
     .moduleStatItemNumbers {
         display: flex;
         flex-flow: row nowrap;

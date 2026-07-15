@@ -16,7 +16,6 @@ const backgroundImage = "/backgrounds/cta-banner-2-background.svg";
 
 export default function CtaBannerTwo({
     name = "ctaBanner2",
-    theme = "light",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.",
     buttonPrimary = {
@@ -38,7 +37,6 @@ export default function CtaBannerTwo({
 
         <section
             className={`row ${styles.ctaBanner} ${styles.ctaBannerTwo}`}
-            data-theme={theme}
             data-name={name}
         >
 
@@ -56,7 +54,7 @@ export default function CtaBannerTwo({
 
                     <div className="buttons">
 
-                        {buttonPrimary && (<Button hasAnimation={false} text={buttonPrimary.text} href={buttonPrimary.href} target={buttonPrimary.target} className={`primary ${theme === "light" ? "colorPrimary" : undefined}`} />)}
+                        {buttonPrimary && (<Button hasAnimation={false} text={buttonPrimary.text} href={buttonPrimary.href} target={buttonPrimary.target} className="primary colorPrimary" />)}
 
                         {buttonSecondary && (<Button hasAnimation={false} text={buttonSecondary.text} href={buttonSecondary.href} target={buttonSecondary.target} className={`textLink colorPrimary fw500`} />)}
 

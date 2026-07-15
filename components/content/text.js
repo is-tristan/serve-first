@@ -9,6 +9,7 @@ import Button from "../handlers/buttons";
 
 export default function Heading({
     hasAnimation = true,
+    hasFullStop = true,
     className = undefined,
     headingClass = undefined,
     contentClass = undefined,
@@ -60,7 +61,7 @@ export default function Heading({
                     animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
                     initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
                     transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
-                    className="heading hasFullStop"
+                    className={`heading ${hasFullStop ? "hasFullStop" : undefined}`}
                 >
 
                     {(() => {

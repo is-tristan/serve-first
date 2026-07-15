@@ -1,10 +1,8 @@
-// Next
-import Image from "next/image";
-
 // Components
 import Eyebrow from "@/components/decoration/eyebrow";
 import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
+import ImageCol from "@/components/sections/banner/componets/image-col";
 
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";
@@ -21,7 +19,9 @@ export default function Banner({
     imageSizing = "Fill",
     bannerType = "home",
     hasButtons = true,
+    hasFullStop = true,
     hasBackgroundDecoration = true,
+    trustLine = null,
     buttonPrimary = {
         text: "Get a demo",
         href: "/get-a-demo",
@@ -50,6 +50,7 @@ export default function Banner({
                         {eyebrow && (<Eyebrow text={eyebrow} />)}
 
                         <Text
+                            hasFullStop={hasFullStop}
                             headingClass={`pageTitle`}
                             titleTag="h1"
                             title={title}
@@ -82,6 +83,14 @@ export default function Banner({
 
                                 )}
 
+                                {trustLine && (
+                                    <Text
+                                        description={trustLine}
+                                        descriptionClass={`fw300 italic`}
+                                    />
+
+                                )}
+
                             </div>
 
                         )}
@@ -92,11 +101,7 @@ export default function Banner({
 
                 {image && (
 
-                    <div className={`hidden-s hidden-m hidden-l image${imageSizing} ${styles.imageCol}`}>
-
-                        <Image className={styles.bannerImage} src={image} alt={title} width={768} height={768} loading="eager" sizes="100%" style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }} priority />
-
-                    </div>
+                    <ImageCol image={image} imageSizing={imageSizing} title={title} />
 
                 )}
 

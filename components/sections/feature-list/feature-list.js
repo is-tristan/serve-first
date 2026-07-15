@@ -7,7 +7,7 @@ import { featureListData } from "@/data/feature-list-data";
 // Styles
 import styles from "@/styles/components/sections/feature-list.module.scss";
 
-export default function FeatureList({ theme = "light", eyebrow = "- Feature List Component", data = featureListData || [] }) {
+export default function FeatureList({ theme = "light", data = featureListData || [], htmlDescription = false }) {
 
     return (
 
@@ -18,6 +18,7 @@ export default function FeatureList({ theme = "light", eyebrow = "- Feature List
                 <div className={`container ${styles.featureListItems}`}>
 
                     {data.map((item, index) => (
+
                         <FeaturedListItem
                             key={index}
                             index={index}
@@ -26,6 +27,7 @@ export default function FeatureList({ theme = "light", eyebrow = "- Feature List
                             eyebrow={item.eyebrow}
                             title={item.title}
                             description={item.description}
+                            htmlDescription={htmlDescription}
                             list={item.list}
                             button={item.button}
                         />

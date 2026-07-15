@@ -11,7 +11,6 @@ import styles from "@/styles/components/sections/industry-cards.module.scss";
 import { industryCardsData } from "@/data/industry-cards-data";
 
 export default function IndustryCards({
-    theme = "light",
     eyebrow = "- Industry Cards Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
@@ -30,7 +29,7 @@ export default function IndustryCards({
 
     return (
 
-        <section className={`row ${styles.industryCards} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.industryCards}`}>
 
             <div className="container noPaddingBottom">
 
@@ -38,7 +37,7 @@ export default function IndustryCards({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} description={description} descriptionClass={`fw400`} />
+                    <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} description={description} descriptionClass={`fw400`} />
 
                 </div>
 

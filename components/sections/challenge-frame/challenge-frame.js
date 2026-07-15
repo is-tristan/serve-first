@@ -10,14 +10,13 @@ import ChallengeFrameItem from "@/components/sections/challenge-frame/components
 import styles from "@/styles/components/sections/challenge-frame.module.scss";
 
 export default function ChallengeFrame({
-    theme = "light",
     eyebrow = "- Challenge Frame Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     data = challengeFrameData || []
 }) {
     return (
 
-        <section className={`row ${styles.challengeFrame} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.challengeFrame}`}>
 
             <div className="container noPaddingBottom">
 
@@ -25,7 +24,7 @@ export default function ChallengeFrame({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} />)}
+                    {title && (<Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} />)}
 
                 </div>
 

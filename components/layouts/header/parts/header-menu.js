@@ -17,7 +17,9 @@ import styles from "@/styles/components/layouts/header/header-desktop-menu.modul
 import { chevronDown, chevronRightAlt, arrowRightShort, aiIcon } from "@/utils/icons";
 
 // Components
-import HeaderAd from "@/components/layouts/header/parts/header-ad";
+import HeaderAd from "@/components/layouts/header/parts/header-ad"
+
+import { getHeaderType } from "@/components/layouts/header/get-header-type"
 
 const menuAdKeys = {
     "How It Works": "howItWorks",
@@ -25,13 +27,14 @@ const menuAdKeys = {
     "Products": "products",
     "Company": "company",
     "Resources": "resources",
-};
+}
 
 export default function HeaderMenu({ menuAds }) {
 
-    const pathname = usePathname();
-    const [openSubmenu, setOpenSubmenu] = useState(null);
-    const [selectedSubmenuItem, setSelectedSubmenuItem] = useState(null);
+    const pathname = usePathname()
+    const headerType = getHeaderType(pathname)
+    const [openSubmenu, setOpenSubmenu] = useState(null)
+    const [selectedSubmenuItem, setSelectedSubmenuItem] = useState(null)
 
     const isActive = (href) => {
         return pathname === href;
@@ -62,7 +65,7 @@ export default function HeaderMenu({ menuAds }) {
 
     return (
 
-        <div className={`hidden-s hidden-m hidden-l hidden-xl ${styles.desktopMenu}`}>
+        <div className={`hidden-s hidden-m hidden-l hidden-xl ${styles.desktopMenu}`} data-header-type={headerType}>
 
             {data.map((item) => {
 

@@ -9,13 +9,12 @@ import styles from "@/styles/components/sections/customer-story.module.scss";
 import { customerStoryData } from "@/data/customer-story-data";
 
 export default function CustomerStory({
-    theme = "light",
     eyebrow = "- Customer Story Component",
     data = customerStoryData || []
 }) {
     return (
 
-        <section className={`row ${styles.customerStory} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.customerStory}`}>
 
             <div className="container noPaddingBottom">
 
@@ -27,7 +26,7 @@ export default function CustomerStory({
 
                 <div className="container noPaddingTop">
 
-                    <CustomerStoryCarousel theme={theme} data={data} />
+                    <CustomerStoryCarousel data={data} />
                     
                 </div>
 

@@ -100,23 +100,3 @@
         font-weight: 400;
     }
 }
-
-.faq {
-    &[data-theme="dark"] {
-        background: var(--dark);
-        color: var(--light);
-
-        .faqItemInner {
-            background: var(--darkAlt);
-            border-color: var(--borderDark);
-
-            &[style*="--isOpen: 1"],
-            &:hover {
-                border-color: var(--primary);
-                background: rgba(var(--primaryRgb), 0.1);
-            }
-
-
-        }
-    }
-}

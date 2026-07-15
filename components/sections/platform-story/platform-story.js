@@ -10,7 +10,6 @@ import styles from "@/styles/components/sections/platform-story.module.scss";
 import { platformStoryData } from "@/data/platform-story-data";
 
 export default function PlatformStory({
-    theme = "light",
     eyebrow = "- Platform Story Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
@@ -19,7 +18,7 @@ export default function PlatformStory({
 
     return (
 
-        <section className={`row ${styles.platformStory} ${theme === "dark" ? "sectionHasGradients" : undefined}`} data-theme={theme}>
+        <section className={`row ${styles.platformStory}`}>
 
             <div className={"container sectionSplitTitle noPaddingBottom"}>
 
@@ -27,7 +26,7 @@ export default function PlatformStory({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "darkHeadingGradient"}`} title={title} />
+                    <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />
 
                 </div>
 

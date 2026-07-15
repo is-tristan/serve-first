@@ -1,3 +1,29 @@
+.evaSpotlightFeaturedImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--borderRadius);
+
+    img {
+        object-fit: cover;
+    }
+
+    &[data-aspect-ratio="1/1"] {
+        aspect-ratio: 1/1;
+    }
+
+    &[data-aspect-ratio="4/3"] {
+        aspect-ratio: 4/3;
+    }
+
+    &[data-aspect-ratio="16/9"] {
+        aspect-ratio: 16/9;
+    }
+}
+
 .evaSpotlightItem {
     display: flex;
     flex-flow: column nowrap;

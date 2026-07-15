@@ -30,9 +30,9 @@ export default function ModuleStats({
 
                 {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                <Text headingClass={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`} title={title} description={description} descriptionClass={`fw400`} />
+                <Text headingClass={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`} title={title ? title : null} description={description ? description : null} descriptionClass={`fw400`} />
 
-                {btnPrimary && (<Button text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className="primary colorPrimary" />)}
+                {btnPrimary && btnPrimary.text && (<Button text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className="primary colorPrimary" />)}
 
             </div>
 
