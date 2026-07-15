@@ -44,7 +44,7 @@ export const blog = defineType({
             title: "Excerpt",
             type: "text",
             rows: 3,
-            validation: (rule) => rule.max(200).warning("Keep it under 200 characters"),
+            validation: (rule) => rule.max(160).warning("Keep it under 160 characters"),
         }),
         defineField({
             name: "content",
@@ -75,6 +75,24 @@ export const blog = defineType({
             type: "datetime",
             initialValue: () => new Date().toISOString(),
             validation: (rule) => rule.required(),
+        }),
+        defineField({
+            name: "readTime",
+            title: "Read Time",
+            type: "number",
+            description: "Estimated reading time in minutes",
+            validation: (rule) => rule.required().min(1).integer(),
+        }),
+        defineField({
+            name: "categories",
+            title: "Categories",
+            type: "array",
+            of: [
+                defineArrayMember({
+                    type: "reference",
+                    to: [{ type: "category" }],
+                }),
+            ],
         }),
         defineField({
             name: "authors",
@@ -132,16 +150,18 @@ export const blog = defineType({
             media: "coverImage",
             publishedAt: "publishedAt",
             author0: "authors.0.name",
+            category0: "categories.0.title",
         },
-        prepare({ title, media, publishedAt, author0 }) {
+        prepare({ title, media, publishedAt, author0, category0 }) {
             const date = publishedAt
                 ? new Date(publishedAt).toLocaleDateString()
                 : "No date"
+            const parts = [date, category0, author0].filter(Boolean)
 
             return {
                 title,
                 media,
-                subtitle: author0 ? `${date} · ${author0}` : date,
+                subtitle: parts.join(" · "),
             }
         },
     },

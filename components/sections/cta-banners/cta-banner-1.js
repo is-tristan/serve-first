@@ -14,14 +14,12 @@ export default function CtaBannerOne({
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.",
     buttonPrimary = {
-        text: "Lorem ipsum dolor sit amet.",
-        href: "#",
-        target: "_self",
+        text: "Get a Demo",
+        href: "/get-a-demo",
     },
     buttonSecondary = {
-        text: "Lorem ipsum dolor sit amet.",
-        href: "#",
-        target: "_self",
+        text: "Talk to us",
+        href: "/company/contact",
     }
 }) {
 

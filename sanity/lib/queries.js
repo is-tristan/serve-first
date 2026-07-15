@@ -34,6 +34,9 @@ export const menuAdsQuery = defineQuery(/* groq */ `
         },
         company {
             ${menuAdProjection}
+        },
+        resources {
+            ${menuAdProjection}
         }
     }
 `)
@@ -41,6 +44,70 @@ export const menuAdsQuery = defineQuery(/* groq */ `
 export async function getMenuAds() {
     const { data } = await sanityFetch({
         query: menuAdsQuery,
+    })
+
+    return data
+}
+
+export const blogsQuery = defineQuery(/* groq */ `
+    *[_type == "blog" && defined(slug.current)] | order(publishedAt desc) [0...3] {
+        _id,
+        title,
+        excerpt,
+        readTime,
+        "slug": slug.current,
+        "category": categories[0]->title,
+        coverImage {
+            asset->{
+                _id,
+                url,
+                metadata {
+                    lqip,
+                    dimensions
+                }
+            },
+            hotspot,
+            crop,
+            alt
+        }
+    }
+`)
+
+export async function getBlogs() {
+    const { data } = await sanityFetch({
+        query: blogsQuery,
+    })
+
+    return data
+}
+
+export const mediaQuery = defineQuery(/* groq */ `
+    *[_type == "media" && defined(slug.current)] | order(publishedAt desc) [0...3] {
+        _id,
+        title,
+        excerpt,
+        readTime,
+        "slug": slug.current,
+        "category": categories[0]->title,
+        coverImage {
+            asset->{
+                _id,
+                url,
+                metadata {
+                    lqip,
+                    dimensions
+                }
+            },
+            hotspot,
+            crop,
+            alt
+        }
+    }
+`)
+
+export async function getMedia() {
+    const { data } = await sanityFetch({
+        query: mediaQuery,
     })
 
     return data

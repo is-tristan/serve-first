@@ -59,6 +59,7 @@ export const menuAds = defineType({
         menuAdField("solutions", "Solutions"),
         menuAdField("products", "Products"),
         menuAdField("company", "Company"),
+        menuAdField("resources", "Resources"),
     ],
     preview: {
         prepare() {

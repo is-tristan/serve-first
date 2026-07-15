@@ -76,7 +76,7 @@ export default function Banner({
                                     <Button
                                         text={buttonSecondary.text}
                                         href={buttonSecondary.href}
-                                        className="textLink"
+                                        className="textLink fw500 colorPrimary"
                                         delay={1}
                                     />
 

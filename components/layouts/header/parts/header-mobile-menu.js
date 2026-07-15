@@ -24,6 +24,7 @@ const menuAdKeys = {
     "Solutions": "solutions",
     "Products": "products",
     "Company": "company",
+    "Resources": "resources",
 };
 
 export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {

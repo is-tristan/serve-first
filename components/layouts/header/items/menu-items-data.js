@@ -203,6 +203,16 @@ export const menuItemsData = [
     {
         label: "Resources",
         href: "#",
+        submenu: [
+            {
+                label: "Blog",
+                href: "/resources/blog",
+            },
+            {
+                label: "Media",
+                href: "/resources/media",
+            },
+        ],
     },
     {
         label: "Meet EVA",

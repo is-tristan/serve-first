@@ -34,17 +34,17 @@ export default function ContentGridItem({
             initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
-            {item.image && (
-
-                <div className={styles.contentGridItemImage}>
-
-                    <Image src={item.image} alt={item.title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ "objectFit": "cover" }} />
-
-                </div>
-
-            )}
-
             <div className={styles.contentGridItemContent}>
+
+                {item.image && (
+
+                    <div className={styles.contentGridItemImage}>
+
+                        <Image src={item.image} alt={item.title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ "objectFit": "cover" }} />
+
+                    </div>
+
+                )}
 
                 <div className={styles.contentGridItemHeader}>
 
@@ -56,19 +56,19 @@ export default function ContentGridItem({
 
                 {item.description && (<p>{item.description}</p>)}
 
-                <div className={styles.contentGridItemFooter}>
+            </div>
 
-                    <div className={styles.contentGridItemReadTime}>
+            <div className={styles.contentGridItemFooter}>
 
-                        <div className={styles.contentGridItemReadTimeIcon} dangerouslySetInnerHTML={{ __html: clock }} />
+                <div className={styles.contentGridItemReadTime}>
 
-                        {item.readTime && (<span className={styles.contentGridItemReadTime}>{item.readTime} min read</span>)}
+                    <div className={styles.contentGridItemReadTimeIcon} dangerouslySetInnerHTML={{ __html: clock }} />
 
-                    </div>
-
-                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink" />
+                    {item.readTime && (<span className={styles.contentGridItemReadTime}>{item.readTime} min read</span>)}
 
                 </div>
+
+                <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink" />
 
             </div>
 
