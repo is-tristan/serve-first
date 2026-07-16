@@ -16,6 +16,7 @@ import {
     notificationTextIcon,
     usersCheckedIcon,
     clockCheckIcon,
+    fileCheckIcon,
 } from "@/utils/icons";
 
 export const roleContextData = [
@@ -31,7 +32,7 @@ export const roleContextData = [
     },
     {
         icon: routeIcon,
-        title: "Close every gap", 
+        title: "Close every gap",
         description: "Failed checks raise Task management actions, so nothing is left open."
     },
     {
@@ -45,8 +46,8 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Digital Audits, Mystery shopping and Helpdesk capture how every site is really running, scored the same way everywhere.",
-        image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_01_digital_audit_and_comparison.png",
+        description: "Audits and Martyn's Law checklists capture timestamped records, photos and sign-offs as the work is done, at every site.",
+        image: "/images/solutions/by-role/compliance-manager/compliance_manager_platform_story_01_compliance_checklist.png",
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -55,8 +56,8 @@ export const howItWorksData = [
     {
         number: "02",
         title: "Analyse",
-        description: "Every site is compared like for like, and EVA flags the locations slipping and the standard behind the slip.",
-        image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_02_failed_checks_task_creation.png",
+        description: "EVA reads compliance status across the estate and flags the sites that are due, overdue or at risk, early.",
+        image: "/images/solutions/by-role/compliance-manager/compliance_manager_platform_story_02_compliance_management_logs.png",
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -65,8 +66,8 @@ export const howItWorksData = [
     {
         number: "03",
         title: "Action",
-        description: "Failed checks raise corrective tasks routed to an owner with a due date, tracked to proof of completion.",
-        image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_03_network_performance_summary.png",
+        description: "Every failed check raises a corrective action with an owner and a due date, tracked to proof of completion.",
+        image: "/images/solutions/by-role/compliance-manager/compliance_manager_platform_story_03_compliance_gap_identification.png",
         button: {
             text: "Explore",
             href: "/how-it-works/action",
@@ -83,6 +84,13 @@ export const productHighlightData = [
         link: "/products/operational-excellence/audits",
     },
     {
+        icon: fileCheckIcon,
+        eyebrow: "Martyn's Law compliance",
+        title: "Evidence your Martyn's Law obligations.",
+        linkText: "Explore",
+        link: "/products/operational-excellence/martyns-law",
+    },
+    {
         icon: userCheckIcon,
         eyebrow: "Task management",
         title: "Turn insight into assigned, tracked tasks.",
@@ -90,30 +98,16 @@ export const productHighlightData = [
         link: "/products/operational-excellence/task-management",
     },
     {
-        icon: shoppingBagSimpleIcon,
-        eyebrow: "Mystery shopping",
-        title: "See your sites the way your customers do.",
-        linkText: "Explore",
-        link: "/products/customer-experience/mystery-shopping",
-    },
-    {
-        icon: notificationTextIcon,
-        eyebrow: "Helpdesk",
-        title: "Turn every issue into a tracked, resolved ticket.",
-        linkText: "Explore",
-        link: "/products/operational-excellence/helpdesk",
-    },
-    {
-        icon: usersCheckedIcon,
+        icon: checkCircleBrokenIcon,
         eyebrow: "Knowledge Base",
-        title: "Keep procedures and training in one place.",
+        title: "Keep policies and procedures in one place.",
         linkText: "Explore",
-        link: "/products/operational-excellence/task-management",
+        link: "/products/operational-excellence/knowledge-base",
     },
     {
         icon: aiIcon,
         eyebrow: "EVA AI",
-        title: "Ask how the estate is doing, get next actions.",
+        title: "Ask which sites are due or at risk, fast.",
         linkText: "Meet EVA",
         link: "/eva",
     },
@@ -125,59 +119,59 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "100",
         numberSuffix: "%",
-        description: "Audit pass rate",
+        description: "Compliance rate",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "95",
         numberSuffix: "%",
-        description: "Task completion",
+        description: "Sites covered",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "90",
         numberSuffix: "+h",
-        description: "Time saved a week",
+        description: "Evidence on request",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "200",
         numberSuffix: "+",
-        description: "Sites on standard",
+        description: "Training completion",
     }
 ]
 
 export const challengeFrameData = [
     {
-        eyebrow: "01 | Lack of visibility",
-        title: "You cannot see which sites are slipping until it shows up in the numbers.",
-        description: "Serve First scores every site against your standards in real time, so a slipping location is visible the moment it dips, not at month end.",
+        eyebrow: "01 | Lack of evidence",
+        title: "When someone asks for evidence, you need it now, for every site, not next week.",
+        description: "Serve First keeps a timestamped audit trail for every site, so proof is ready on request, for any location and any date, without a scramble.",
         tags: [
             {
-                tag: "Live audit scores",
+                tag: "Compliance checklists",
             },
         ]
     },
     {
         eyebrow: "02 | Lack of action",
-        title: "A problem gets spotted on a visit, then lost before anyone fixes it.",
-        description: "Every failed check raises a corrective task routed to the right owner and tracked to done, so what you find on site is closed, not forgotten.",
+        title: "Checks happen, but the evidence is scattered or missing.",
+        description: "Evidence is captured as the work is done, with photos, records and sign-offs attached to each check, so the trail is complete by default.",
         tags: [
             {
-                tag: "Routed tasks",
+                tag: "Timestamped evidence",
             },
         ]
     },
     {
         eyebrow: "03 | Lack of insight",
-        title: "Customer and operational data live in different tools, so proving cause is slow.",
-        description: "Serve First brings both into one operating picture, so you can connect a drop in satisfaction to the standard behind it and address the real cause.",
+        title: "A gap is found, but nothing guarantees it gets closed.",
+        description: "Every failed check raises a corrective action with an owner and a due date, tracked to proof of completion, so obligations are met, not just noted.",
         tags: [
             {
-                tag: "One operating picture",
+                tag: "Audit trails",
             },
         ]
     }
@@ -185,19 +179,19 @@ export const challengeFrameData = [
 
 export const faqData = [
     {
-        question: "How does Serve First keep standards consistent across sites?",
-        answer: "Every site runs the same digital audits and checks, scored the same way, so you can compare locations directly and hold them all to one standard, rather than trusting each site to mark its own work.",
+        question: "How does Serve First help with Martyn's Law?",
+        answer: "It turns your Martyn's Law duties into structured checklists run at every venue, captures the evidence as the work is done and keeps an audit trail, so you can demonstrate your protection measures on request."
+    },
+    {
+        question: "Is the evidence good enough for an audit?",
+        answer: "Every check is timestamped, attributed and stored with its photos and sign-offs, so the audit trail shows what was done, by whom and when, across every site."
     },
     {
         question: "What happens when a check fails?",
-        answer: "A corrective task is raised automatically, routed to the owner who can fix it, with a due date and proof of completion, so the gap is closed and you can see it was."
+        answer: "A corrective action is raised automatically, routed to an owner with a due date and tracked to proof of completion, so gaps are closed and documented."
     },
     {
-        question: "Can I see everything in one place?",
-        answer: "Yes. Audits, tasks, helpdesk and customer feedback report into one operating picture, so you manage the estate from one view instead of stitching tools together."
-    },
-    {
-        question: "Do I still get reporting without a separate tool?",
-        answer: "Outcome tracking is built in. You see standards, completion and the trend over time in one place, with proof of completion behind every fix."
+        question: "Can I prove compliance across every site at once?",
+        answer: "Yes. Every site reports into one operating picture, so you can see compliance status across the estate and produce evidence for any location immediately."
     }
 ]

@@ -42,43 +42,43 @@ export default function ComplianceManager() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="From the standard you set to the standard met"
-                description="Three stages keep execution visible, check to proof."
+                title="From obligation to evidence, without the scramble"
+                description="Three stages turn duty of care into ready proof."
                 data={howItWorksData}
             />
 
             <ProductHighlight
                 eyebrow="What you get"
-                title="The toolkit for operations directors"
-                description="The functions ops leaders run on, connected so insight turns into action."
+                title="The toolkit for compliance managers"
+                description="The functions compliance leads rely on, connected so evidence and action sit together."
                 linkText={null}
                 data={productHighlightData}
             />
 
             <ModuleStats
                 eyebrow="The difference"
-                title="What changes when execution is visible"
-                description="The outcomes ops directors see once standards are scored and gaps are routed."
+                title="What changes when proof is built in"
+                description="The outcomes compliance leads see once evidence is captured as work is done."
                 data={moduleStatsData}
             />
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Too many sites, too many tools, not enough proof."
+                title="Could you prove compliance today, at every site?"
                 hasFullStop={false}
                 data={challengeFrameData}
             />
 
             <FAQ
-                eyebrow="Questions ops leaders ask"
-                title="Operations, answered"
+                eyebrow="Questions compliance leads ask"
+                title="Compliance, answered"
                 button={null}
                 data={faqData}
             />
 
             <CtaBannerOne
-                title="See what Serve First can do for your operation"
-                description="Book a personalised demo and we will show you how operations directors hold every site to the same standard, on your data."
+                title="See what Serve First can do for your compliance"
+                description="Book a personalised demo and we will show you how compliance managers evidence duty of care across every site, on your data."
             />
 
         </>
