@@ -1,6 +1,7 @@
+import { placeHolderIcon } from "@/utils/icons";
 export const roleContextData = [
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         number: "000",
@@ -12,7 +13,7 @@ export const roleContextData = [
         }
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         number: "000",
@@ -24,7 +25,7 @@ export const roleContextData = [
         }
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         number: "000",
@@ -36,7 +37,7 @@ export const roleContextData = [
         }
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         number: "000",

@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
 // Next
-import Image from "next/image";
 import Link from "next/link";
 
 // Components
@@ -39,24 +38,25 @@ export default function ProductHighlightItem({
 
             <div className={styles.productHighlightItemInner}>
 
-                {icon && (
-
-                    <div className={styles.productHighlightItemIcon} style={{ transition: "var(--ease)", position: "relative", zIndex: 1 }}>
-
-                        <Image src={icon} alt={title} width={24} height={24} />
-
-                    </div>
-                )}
-
                 <div className={styles.productHighlightItemContent}>
+
+                    {icon && (
+
+                        <div className={styles.productHighlightItemIcon} style={{ transition: "var(--ease)", position: "relative", zIndex: 1 }}>
+
+                            <span dangerouslySetInnerHTML={{ __html: icon }} style={{ display: "inline-block", width: "24px", height: "24px", color: "var(--primary)", opacity: 0.75 }} />
+
+                        </div>
+                    )}
 
                     {eyebrow && (<Eyebrow hasAnimation={false} type="secondary" textColor="colorDark" text={eyebrow} />)}
 
                     {title && (<h3>{title}</h3>)}
 
-                    {link && (<Button text={linkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary" />)}
 
                 </div>
+
+                {link && (<Button text={linkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary" />)}
 
                 {link && <Link href={link} target={target} className={"colLink"}></Link>}
 

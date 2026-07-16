@@ -1,7 +1,6 @@
 "use client";
 
 // Next
-import Image from "next/image";
 import Link from "next/link";
 
 // Imports  
@@ -40,7 +39,7 @@ export default function RoleContextItem({
 
             <div className={styles.roleContextHeader}>
 
-                {icon && (<Image src={icon} alt={title} width={24} height={24} />)}
+                {icon && (<span dangerouslySetInnerHTML={{ __html: icon }} style={{ display: "inline-block", width: "24px", height: "24px", color: "var(--primary)", opacity: 0.75 }} />)}
 
                 {eyebrow && (<Eyebrow type="secondary" hasAnimation={false} text={eyebrow} />)}
 
@@ -62,7 +61,11 @@ export default function RoleContextItem({
 
             </div>
 
-            <Link href={button.href} target={button.target} className={"colLink"}></Link>
+            {button && (
+
+                <Link href={button.href} target={button.target} className={"colLink"}></Link>
+
+            )}
 
         </motion.div>
 

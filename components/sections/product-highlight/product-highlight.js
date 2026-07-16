@@ -15,6 +15,7 @@ export default function ProductHighlight({
     eyebrow = "- Product Highlight Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     link = "#",
+    linkText = "Lorem ipsum.",
     data = productHighlightData || []
 }) {
 
@@ -34,7 +35,7 @@ export default function ProductHighlight({
 
                 <div className={`contentCol`}>
 
-                    {link && (<Button text="Lorem ipsum." href={link} className="textLink colorPrimary" />)}
+                    {linkText && (<Button text={linkText} href={link} className="textLink colorPrimary" />)}
 
                 </div>
 

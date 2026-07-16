@@ -14,6 +14,7 @@ export default function HowItWorks({
     eyebrow = "- How It Works Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
+    imageSizing = "Cover",
     data = howItWorksData || []
 }) {
 
@@ -39,6 +40,7 @@ export default function HowItWorks({
                             key={index}
                             index={index}
                             image={item.image}
+                            imageSizing={item.imageSizing}
                             title={item.title}
                             number={item.number}
                             eyebrow={item.eyebrow}

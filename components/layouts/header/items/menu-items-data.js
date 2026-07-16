@@ -53,7 +53,7 @@ export const menuItemsData = [
                     },
                     {
                         label: "Compliance Manager",
-                        href: "/solutions/by-role/compliance-managers",
+                        href: "/solutions/by-role/compliance-manager",
                     },
                 ]
             },

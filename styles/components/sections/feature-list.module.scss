@@ -12,14 +12,13 @@
      display: flex;
      flex-flow: column nowrap;
      gap: 1.5rem;
-     padding-top: 2rem;
      border-top: 1px solid var(--border);
      width: 100%;
 
      @media (width >=1024px) {
-         padding-top: 4rem;
          flex-flow: row-reverse nowrap;
          justify-content: space-between;
+         align-items: center;
          gap: 1.5rem;
 
          @media (width >=1280px) {
@@ -45,16 +44,6 @@
          justify-content: center;
          align-items: center;
          position: relative;
-         overflow: hidden;
-         border-radius: var(--borderRadius);
-
-         @media (width < 768px) {
-             aspect-ratio: 4/3;
-         }
-
-         @media (width >=768px) and (width < 1024px) {
-             aspect-ratio: 16/9;
-         }
      }
 
      .colLeft {

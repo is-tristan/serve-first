@@ -6,6 +6,7 @@
     @media (width >=768px) {
         flex-flow: row wrap;
         justify-content: space-between;
+        align-items: stretch;
     }
 }
 
@@ -28,11 +29,13 @@
 .productHighlightItemInner {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     gap: 1rem;
     background: rgba(var(--lightAltRgb), 0.25);
     border: 1px solid transparent;
     border-radius: var(--borderRadius);
     padding: 1.5rem;
+    height: 100%;
     position: relative;
     overflow: hidden;
     transition: var(--ease);
@@ -75,6 +78,12 @@
         h3,
         p {
             transition: var(--ease);
+        }
+
+        h3 {
+            @media (width >=1024px) {
+                max-width: 30ch;
+            }
         }
     }
 

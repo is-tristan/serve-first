@@ -1,34 +1,36 @@
+import { placeHolderIcon } from "@/utils/icons";
+
 export const productHighlightData = [
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         linkText: "Lorem ipsum",
         link: "#",
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         linkText: "Lorem ipsum",
         link: "#",
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         linkText: "Lorem ipsum",
         link: "#",
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         linkText: "Lorem ipsum",
         link: "#",
     },
     {
-        icon: "/decoration/icon-placeholder.svg",
+        icon: placeHolderIcon,
         eyebrow: "Lorem ipsum dolor.",
         title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         linkText: "Lorem ipsum",
