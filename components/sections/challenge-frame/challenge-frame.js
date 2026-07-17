@@ -12,6 +12,7 @@ import styles from "@/styles/components/sections/challenge-frame.module.scss";
 export default function ChallengeFrame({
     eyebrow = "- Challenge Frame Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description,
     hasFullStop = true,
     data = challengeFrameData || []
 }) {
@@ -26,6 +27,8 @@ export default function ChallengeFrame({
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
                     {title && (<Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} hasFullStop={hasFullStop} />)}
+
+                    {description && (<Text description={description} />)}
 
                 </div>
 

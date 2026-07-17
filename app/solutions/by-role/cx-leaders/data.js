@@ -4,7 +4,7 @@ import {
     routeIcon,
     checkCircleBrokenIcon,
     aiIcon,
-    clipboardIcon,
+    clipBoardCheckIcon,
     messageAlertSquareIcon,
     userRightIcon,
     messageSmileSquareIcon,
@@ -68,7 +68,7 @@ export const howItWorksData = [
 
 export const productHighlightData = [
     {
-        icon: clipboardIcon,
+        icon: clipBoardCheckIcon,
         eyebrow: "Survey",
         title: "Reach customers on web, kiosk, email and SMS.",
         linkText: "Explore",

@@ -23,6 +23,10 @@
 }
 
 .ctaBannerContact {
+    &[data-theme="primary"] {
+        color: var(--light);
+    }
+
     .formCol {
         padding: 1rem;
         border: 1px solid;

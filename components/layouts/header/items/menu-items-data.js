@@ -95,19 +95,19 @@ export const menuItemsData = [
                 submenu: [
                     {
                         label: "Inconsistent standards across locations",
-                        href: "/solutions/by-challenge/inconsistent-standards-across-locations",
+                        href: "/solutions/by-challenge/inconsistent-standards",
                     },
                     {
                         label: "Too many tools, too many siloed data sources",
-                        href: "/solutions/by-challenge/too-many-tools-too-many-siloed-data-sources",
+                        href: "/solutions/by-challenge/siloed-tools-and-data",
                     },
                     {
                         label: "Struggling to prove what's improving",
-                        href: "/solutions/by-challenge/struggling-to-prove-whats-improving",
+                        href: "/solutions/by-challenge/prove-improvement",
                     },
                     {
                         label: "Data that never leads to action",
-                        href: "/solutions/by-challenge/data-that-never-leads-to-action",
+                        href: "/solutions/by-challenge/data-to-action",
                     },
                 ],
             },

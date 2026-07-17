@@ -6,7 +6,7 @@ import ProductHighlight from "@/components/sections/product-highlight/product-hi
 import ModuleStats from "@/components/sections/module-stats/module-stats";
 import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
 import FAQ from "@/components/sections/faq/faq";
-import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import CtaBannerContact from "@/components/sections/cta-banners/cta-banner-contact";
 
 // Data
 import {
@@ -76,7 +76,7 @@ export default function ComplianceManager() {
                 data={faqData}
             />
 
-            <CtaBannerOne
+            <CtaBannerContact
                 title="See what Serve First can do for your compliance"
                 description="Book a personalised demo and we will show you how compliance managers evidence duty of care across every site, on your data."
             />

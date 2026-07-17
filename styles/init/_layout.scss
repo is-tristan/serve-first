@@ -110,11 +110,11 @@
 
             h1,
             h2 {
-                max-width: 50rem;
+                max-width: 30ch;
             }
 
             p {
-                max-width: 35rem;
+                max-width: 60ch;
                 margin-right: auto;
                 margin-left: auto;
             }
@@ -126,11 +126,11 @@
 
                 h1,
                 h2 {
-                    max-width: 50rem;
+                    max-width: 30ch;
                 }
 
                 p {
-                    max-width: 55rem;
+                    max-width: 60ch;
                     margin-right: auto;
                     margin-left: auto;
                 }
@@ -340,7 +340,7 @@
                 text-align: inherit;
 
                 @media (width >=1024px) {
-                    max-width: 50rem;
+                    max-width: 30ch;
                 }
             }
         }

@@ -14,6 +14,7 @@ import { productHighlightData } from "@/data/product-highlight-data";
 export default function ProductHighlight({
     eyebrow = "- Product Highlight Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    description,
     link = "#",
     linkText = "Lorem ipsum.",
     data = productHighlightData || []
@@ -30,6 +31,8 @@ export default function ProductHighlight({
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
                     <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />
+
+                    {description && (<Text description={description} />)}
 
                 </div>
 

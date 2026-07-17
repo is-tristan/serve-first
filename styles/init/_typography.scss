@@ -51,8 +51,9 @@ h1 {
     font-size: 1.75rem;
 
     &.pageTitle {
-        font-size: clamp(1.9rem, 4.5vw, 4.5rem);
+        font-size: clamp(1.9rem, 4vw, 4rem);
         color: var(--primaryAlt);
+        text-wrap: pretty;
     }
 }
 
@@ -62,11 +63,16 @@ h2 {
     &.sectionTitle {
         font-size: clamp(1.5rem, 2.5vw, 2.5rem);
         line-height: 120%;
+        color: var(--primaryAlt);
+
+        &.colorLight {
+            color: var(--light);
+        }
     }
 
     &.sectionTitleContained {
         @media (width >=1024px) {
-            max-width: 20ch;
+            max-width: 20ch !important;
         }
     }
 }
