@@ -77,6 +77,7 @@ export default function OperationsDirector() {
             />
 
             <CtaBannerContact
+                theme="primary"
                 title="See what Serve First can do for your operation"
                 description="Book a personalised demo and we will show you how operations directors hold every site to the same standard, on your data."
             />

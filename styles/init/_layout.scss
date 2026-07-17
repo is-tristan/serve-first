@@ -175,15 +175,16 @@
     &.flexAuto {
         gap: 1.5rem;
 
-        @media (width >=1024px) {
+        @media (width >=768px) {
             flex-flow: row wrap;
             justify-content: space-between;
             align-items: stretch;
-            gap: 2rem;
+            gap: 2rem 1rem;
 
             >div,
             >article {
-                flex: 1 1 calc(50% - 2rem);
+                flex: 1 1 calc(50% - 1rem);
+                width: 100%;
             }
         }
 
@@ -191,7 +192,7 @@
 
             >div,
             >article {
-                flex: 1 1 calc(calc(100% / 3) - 2rem);
+                flex: 1 1 calc(calc(100% / 3) - 1rem);
             }
         }
     }
@@ -202,11 +203,11 @@
             flex-flow: row wrap;
             justify-content: space-between;
             align-items: stretch;
-            gap: 1.5rem;
+            gap: 2rem 1rem;
 
             >div,
             >article {
-                flex: 1 1 calc(calc(100% / 2) - 1.5rem);
+                flex: 1 1 calc(calc(100% / 2) - 1rem);
             }
         }
 
@@ -215,7 +216,7 @@
 
             >div,
             >article {
-                flex: 1 1 calc(calc(100% / 4) - 1.5rem);
+                flex: 1 1 calc(calc(100% / 4) - 1rem);
             }
         }
     }

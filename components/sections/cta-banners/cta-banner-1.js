@@ -35,7 +35,7 @@ export default function CtaBannerOne({
 
                 <div className="content">
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "light"}`} title={title} description={description} />
+                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "colorLight"}`} title={title} description={description} />
 
                     <div className="buttons">
 

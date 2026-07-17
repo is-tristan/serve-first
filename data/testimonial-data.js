@@ -1,9 +1,9 @@
 export const testimonialData = [
     {
         rating: 5,
-        name: "Reviewer Name",
-        position: "Position, Company Name",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris.",
+        name: "Emma Bijker",
+        position: "Senior Customer Experience & Training Specialist, The Body Shop",
+        quote: "Serve First has transformed how we manage customer experience, giving us clear insights that have driven tangible results for our business.",
     },
     {
         rating: 4.5,

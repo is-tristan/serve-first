@@ -6,7 +6,7 @@ import {
     usersUpIcon,
     notificationTextIcon,
     messageSmileSquareIcon,
-    clipboardIcon,
+    clipBoardIcon,
     aiIcon
 } from "@/utils/icons";
 

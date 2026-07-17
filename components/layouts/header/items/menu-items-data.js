@@ -71,12 +71,12 @@ export const menuItemsData = [
                         href: "/solutions/by-industry/leisure-and-hospitality",
                     },
                     {
-                        label: "Healthcare",
-                        href: "/solutions/by-industry/healthcare",
-                    },
-                    {
                         label: "Restaurants",
                         href: "/solutions/by-industry/restaurants",
+                    },
+                    {
+                        label: "Healthcare",
+                        href: "/solutions/by-industry/healthcare",
                     },
                     {
                         label: "Facilities Management",

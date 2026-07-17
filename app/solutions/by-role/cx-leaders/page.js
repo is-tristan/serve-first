@@ -78,6 +78,7 @@ export default function CXLeader() {
             />
 
             <CtaBannerContact
+                theme="primary"
                 title="See what Serve First can do for customer experience"
                 description="Book a personalised demo and we will show you how CX leaders turn estate-wide feedback into action at every site, on your data."
             />

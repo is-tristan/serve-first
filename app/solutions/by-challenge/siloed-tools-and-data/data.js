@@ -6,7 +6,7 @@ import {
     usersUpIcon,
     notificationTextIcon,
     messageAlertSquareIcon,
-    clipboardIcon
+    clipBoardIcon
 } from "@/utils/icons";
 
 export const challengeFrameData = [
@@ -135,7 +135,7 @@ export const productHighlightData = [
         link: "/products/customer-experience/mystery-shopping",
     },
     {
-        icon: clipboardIcon,
+        icon: clipBoardIcon,
         eyebrow: "Knowledge Base",
         title: "Measure CSAT by site, in the same picture.",
         linkText: "Explore",

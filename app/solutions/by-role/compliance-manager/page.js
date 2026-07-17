@@ -77,6 +77,7 @@ export default function ComplianceManager() {
             />
 
             <CtaBannerContact
+                theme="primary"
                 title="See what Serve First can do for your compliance"
                 description="Book a personalised demo and we will show you how compliance managers evidence duty of care across every site, on your data."
             />

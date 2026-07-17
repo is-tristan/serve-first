@@ -60,15 +60,23 @@ export default function ContentGridItem({
 
             <div className={styles.contentGridItemFooter}>
 
-                <div className={styles.contentGridItemReadTime}>
+                {item.button && (
 
-                    <div className={styles.contentGridItemReadTimeIcon} dangerouslySetInnerHTML={{ __html: clock }} />
+                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink" />
+                    
+                )}
 
-                    {item.readTime && (<span className={styles.contentGridItemReadTime}>{item.readTime} min read</span>)}
+                {item.readTime && (
 
-                </div>
+                    <div className={styles.contentGridItemReadTime}>
 
-                <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink" />
+                        <div className={styles.contentGridItemReadTimeIcon} dangerouslySetInnerHTML={{ __html: clock }} />
+
+                        {item.readTime && (<span className={styles.contentGridItemReadTime}>{item.readTime} min read</span>)}
+
+                    </div>
+
+                )}
 
             </div>
 

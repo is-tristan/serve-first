@@ -13,6 +13,7 @@ import { contentGridData } from "@/data/content-grid-data";
 export default function ContentGrid({
     eyebrow = "- Content Grid Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    colCount = 3,
     button = {
         text: "Lorem ipsum",
         href: "#",
@@ -41,7 +42,7 @@ export default function ContentGrid({
 
             {data.length > 0 && (
 
-                <div className="container flexAuto noPaddingTop">
+                <div className={`container noPaddingTop ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`}>
 
                     {data.map((item, index) => (
 
@@ -50,7 +51,8 @@ export default function ContentGrid({
                     ))}
 
                 </div>
-            )}
+            )
+            }
 
         </section >
 

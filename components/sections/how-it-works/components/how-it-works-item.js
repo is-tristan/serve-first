@@ -47,7 +47,7 @@ export default function HowItWorksItem({
 
                 <Image
                     className={styles.featureListItemImage}
-                    src={image || "/decoration/no-image-placeholder.webp"}
+                    src={image || "/decoration/how-it-works-placeholder.png"}
                     alt={title || "How it works image"}
                     width={768}
                     height={576}
