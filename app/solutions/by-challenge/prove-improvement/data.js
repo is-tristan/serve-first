@@ -139,7 +139,7 @@ export const productHighlightData = [
         eyebrow: "Helpdesk",
         title: "Show resolution times improving, tracked.",
         linkText: "Explore",
-        link: "/products/operational-excellence/knowledge-base",
+        link: "/products/operational-excellence/helpdesk",
     },
 ]
 

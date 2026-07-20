@@ -28,7 +28,7 @@ export default function InconsistentStandards() {
                 eyebrow="Solutions by challenge"
                 title="The same standard, at every single site"
                 description="When standards drift between locations, customers feel it. Serve First scores every site against your standards, routes each gap to an owner and proves the fix."
-                image="/images/solutions/by-challenge/inconsistent-standards/inconsistent_standards_hero_multi-location_standards_comparison.png"
+                image="/images/solutions/by-challenge/inconsistent-standards/inconsistent-standards-cover.png"
                 imageSizing="Contain"
             />
 

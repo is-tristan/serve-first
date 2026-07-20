@@ -43,34 +43,22 @@ export const logoData = [
 
 export const challengeFrameData = [
     {
-        eyebrow: "01 | Guest experience slipping",
+        eyebrow: "01 | Guest Feedback",
         title: "Guest experience slips quietly between sites, and you hear about it in the reviews.",
         description: "Serve First captures guest feedback at every site and flags where experience is slipping, so you catch a dip before it reaches your ratings.",
-        tags: [
-            {
-                tag: "Guest Feedback",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "02 | Standards slipping",
+        eyebrow: "02 | Review Monitoring",
         title: "Brand standards hold at the flagship but drift at the busier, harder sites.",
         description: "The same digital audits run at every location, scored the same way, so you hold all sites to one standard rather than trusting each to self-assess.",
-        tags: [
-            {
-                tag: "Review Monitoring",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "03 | Data that never leads to action",
+        eyebrow: "03 | Proof of Completion",
         title: "A great review and a complaint say different things, but live in different tools.",
         description: "Reviews, surveys and feedback sit in one operating picture, and each issue routes to the team that can resolve it, tracked to proof of completion.",
-        tags: [
-            {
-                tag: "Proof of Completion",
-            }
-        ]
+        tags: []
     }
 ]
 
@@ -79,7 +67,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Feedback terminals, Survey and Review monitoring capture how guests feel at every site, in the moment and across the web.",
-        image: "",
+        image: "/images/solutions/by-industry/leisure-and-hospitality/leisure-and-hospitality-capture.png",
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -89,7 +77,7 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "EVA reads the feedback as it lands and flags where the guest experience is slipping, at which site and why.",
-        image: "",
+        image: "/images/solutions/by-industry/leisure-and-hospitality/leisure-and-hospitality-analyse.png",
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -99,7 +87,7 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Each issue routes to the team that can resolve it, tracked to done, so a dip is put right before it reaches your reviews.",
-        image: "",
+        image: "/images/solutions/by-industry/leisure-and-hospitality/leisure-and-hospitality-action.png",
         button: {
             text: "Explore",
             href: "/how-it-works/action",
@@ -187,8 +175,8 @@ export const testimonialData = [
 
 export const contentGridData = [
     {
-        title: "Inconsistent standards across locations",
-        description: "Hold every site to brand standard, not just the flagship.",
+        title: "Inconsistent standards",
+        description: "Hold every site to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Explore",
@@ -196,8 +184,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Too many tools and siloed data",
-        description: "Connect guest feedback, reviews and operations in one picture.",
+        title: "Siloed tools and data",
+        description: "Bring every signal into one picture.",
         image: "/images/solutions/by-industry/retail/Too_many_tools_and_siloed_data_icon.svg",
         button: {
             text: "Explore",
@@ -205,8 +193,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Struggling to prove improvement",
-        description: "Prove the guest experience is improving, with the fixes behind it.",
+        title: "Prove improvement",
+        description: "Show the difference with evidence.",
         image: "/images/solutions/by-industry/retail/Struggling_to_prove_improvement_icon.svg",
         button: {
             text: "Explore",
@@ -214,8 +202,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Data that never leads to action",
-        description: "Turn a poor review or a dip into a routed, tracked action.",
+        title: "Turn data into action",
+        description: "Turn each finding into a routed, tracked corrective action.",
         image: "/images/solutions/by-industry/retail/data_that_never_leads_to_action_icon.svg",
         button: {
             text: "Explore",

@@ -21,7 +21,9 @@ import { checkmark } from "@/utils/icons";
 export default function HowItWorksItem({
     index = 0,
     image,
-    imageSizing = "Cover",
+    imageSizing = "Contain",
+    imageWidth = 576,
+    imageHeight = 384,
     title,
     number,
     eyebrow,
@@ -49,10 +51,10 @@ export default function HowItWorksItem({
                     className={styles.featureListItemImage}
                     src={image || "/decoration/how-it-works-placeholder.png"}
                     alt={title || "How it works image"}
-                    width={768}
-                    height={576}
+                    width={imageWidth}
+                    height={imageHeight}
                     loading="lazy"
-                    style={{ objectFit: imageSizing === "Cover" ? "cover" : "contain" }}
+                    style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
                 />
 
 

@@ -32,7 +32,7 @@ export default function Retail() {
                 eyebrow="Solutions by industry"
                 title="Every store, the same standard"
                 description="Serve First helps compliance managers run checks, capture evidence and prove duty of care across every site, with audit trails ready the moment anyone asks."
-                image="/images/solutions/by-industry/retail/industry-retail-hero.png"
+                image="/images/solutions/by-industry/retail/retail-cover.png"
                 imageSizing="Contain"
             />
 
@@ -43,7 +43,7 @@ export default function Retail() {
 
             <ChallengeFrame
                 eyebrow="The retail challenge"
-                title="Plenty of dashboards, not nearly enough done"
+                title="Consistency is hard when every store runs itself"
                 data={challengeFrameData}
             />
 

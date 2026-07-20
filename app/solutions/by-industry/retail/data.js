@@ -1,4 +1,4 @@
-import {
+    import {
     checkCircleBrokenIcon,
     fileCheckIcon,
     clipBoardCheckIcon,
@@ -43,34 +43,22 @@ export const logoData = [
 
 export const challengeFrameData = [
     {
-        eyebrow: "01 | Inconsistent performance",
+        eyebrow: "01 | Store Audits",
         title: "What head office sets and what the shop floor delivers are rarely the same.",
         description: "Serve First scores every store against your standards with the same digital audits, so drift shows up the moment it starts rather than at the next visit.",
-        tags: [
-            {
-                tag: "Store Audits",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "02 | Falling standards",
+        eyebrow: "02 | Customer feedback",
         title: "A dip in one store is invisible until it shows up in the sales or the reviews.",
         description: "Every store reports into one operating picture, with EVA flagging the locations slipping and the standard behind it, so you step in early.",
-        tags: [
-            {
-                tag: "Customer feedback",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "03 | Gaps left open",
+        eyebrow: "03 | Proof of Completion",
         title: "Issues spotted in store get raised, then lost before anyone fixes them.",
         description: "Each gap becomes a task routed to the store manager and tracked to proof of completion, so the fix holds and you can show it did.",
-        tags: [
-            {
-                tag: "Proof of Completion",
-            }
-        ]
+        tags: []
     }
 ]
 
@@ -79,7 +67,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Teams run digital Audits, mystery shopping visits and CSAT checks at every store, recording scores and photo evidence as they go.",
-        image: "",
+        image: "/images/solutions/by-industry/retail/retail-capture.png",
         button: {
             text: "Explore capture",
             href: "/how-it-works/capture",
@@ -89,7 +77,7 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "Every store is scored and compared like for like, with EVA flagging which locations are slipping and what is driving it.",
-        image: "",
+        image: "/images/solutions/by-industry/retail/retail-analyse.png",
         button: {
             text: "See the analysis",
             href: "/how-it-works/analyse",
@@ -99,7 +87,7 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Failed checks raise tasks routed to the right store manager and tracked to done, so the gap closes and the standard holds.",
-        image: "",
+        image: "/images/solutions/by-industry/retail/retail-action.png",
         button: {
             text: "Drive it to done",
             href: "/how-it-works/action",
@@ -187,8 +175,8 @@ export const testimonialData = [
 
 export const contentGridData = [
     {
-        title: "Inconsistent standards across locations",
-        description: "Keep every store to the same standard, scored and compared.",
+        title: "Inconsistent standards",
+        description: "Hold every site to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Explore",
@@ -196,8 +184,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Too many tools and siloed data",
-        description: "Bring feedback, audits and reviews into one operating picture.",
+        title: "Siloed tools and data",
+        description: "Bring every signal into one picture.",
         image: "/images/solutions/by-industry/retail/Too_many_tools_and_siloed_data_icon.svg",
         button: {
             text: "Explore",
@@ -205,8 +193,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Struggling to prove improvement",
-        description: "Prove standards are improving, with the work behind the numbers.",
+        title: "Prove improvement",
+        description: "Show the difference with evidence.",
         image: "/images/solutions/by-industry/retail/Struggling_to_prove_improvement_icon.svg",
         button: {
             text: "Explore",
@@ -214,8 +202,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Data that never leads to action",
-        description: "Turn each customer signal into a routed, tracked action.",
+        title: "Turn data into action",
+        description: "Turn each finding into a routed, tracked corrective action.",
         image: "/images/solutions/by-industry/retail/data_that_never_leads_to_action_icon.svg",
         button: {
             text: "Explore",

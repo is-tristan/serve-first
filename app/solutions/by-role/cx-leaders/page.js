@@ -28,7 +28,7 @@ export default function CXLeader() {
                 eyebrow="For customer experience leaders"
                 title="Own the customer experience across every site"
                 description="Serve First gives CX leaders one live view of customer sentiment across every location, and the tools to turn it into action, so you move from measuring experience to improving it."
-                image="/images/solutions/by-role/cx-leaders/cx_leaders_hero_customer_experience_score_overview.png"
+                image="/images/solutions/by-role/cx-leaders/cx-leaders-cover.png"
                 imageSizing="Contain"
             />
 

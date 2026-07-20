@@ -43,34 +43,22 @@ export const logoData = [
 
 export const challengeFrameData = [
     {
-        eyebrow: "01 | Feedback and checks apart",
+        eyebrow: "01 | Patient feedback",
         title: "Patient feedback and compliance checks live apart, so proving standards takes effort.",
         description: "Serve First brings patient feedback and quality audits into one operating picture, so sentiment and compliance sit together rather than in separate tools.",
-        tags: [
-            {
-                tag: "Patient feedback",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "02 | Evidence hard to find",
+        eyebrow: "02 | Quality audits",
         title: "When evidence is needed, assembling it across sites is slow and stressful.",
         description: "Audits capture timestamped records and sign-offs as the work is done, so a complete audit trail is ready on request for any site and date.",
-        tags: [
-            {
-                tag: "Quality audits",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "03 | Action not tracked",
+        eyebrow: "03 | Proof of Completion",
         title: "A finding is logged, but nothing guarantees the action is closed.",
         description: "Every failed check raises a corrective action routed to an owner and tracked to proof of completion, so standards are met, not just noted.",
-        tags: [
-            {
-                tag: "Proof of Completion",
-            }
-        ]
+        tags: []
     }
 ]
 
@@ -79,7 +67,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Quality and compliance Audits run at every site, with patient feedback captured alongside, recorded with timestamps and sign-offs.",
-        image: "",
+        image: "/images/solutions/by-industry/healthcare/healthcare-capture.png",
         button: {
             text: "Explore capture",
             href: "/how-it-works/capture",
@@ -89,7 +77,7 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "Every site is scored and compared, with EVA flagging where standards or sentiment are slipping and why.",
-        image: "",
+        image: "/images/solutions/by-industry/healthcare/healthcare-analyse.png",
         button: {
             text: "See the analysis",
             href: "/how-it-works/analyse",
@@ -99,7 +87,7 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Failed checks raise corrective actions routed to an owner and tracked to proof of completion, ready to evidence on request.",
-        image: "",
+        image: "/images/solutions/by-industry/healthcare/healthcare-action.png",
         button: {
             text: "Drive it to done",
             href: "/how-it-works/action",
@@ -187,8 +175,8 @@ export const testimonialData = [
 
 export const contentGridData = [
     {
-        title: "Inconsistent standards across locations",
-        description: "Hold care and compliance standards across every site.",
+        title: "Inconsistent standards",
+        description: "Hold every site to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Explore",
@@ -196,8 +184,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Too many tools and siloed data",
-        description: "Bring patient feedback and audits into one operating picture.",
+        title: "Siloed tools and data",
+        description: "Bring every signal into one picture.",
         image: "/images/solutions/by-industry/retail/Too_many_tools_and_siloed_data_icon.svg",
         button: {
             text: "Explore",
@@ -205,8 +193,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Struggling to prove improvement",
-        description: "Prove standards are improving, with the evidence to show it.",
+        title: "Prove improvement",
+        description: "Show the difference with evidence.",
         image: "/images/solutions/by-industry/retail/Struggling_to_prove_improvement_icon.svg",
         button: {
             text: "Explore",
@@ -214,7 +202,7 @@ export const contentGridData = [
         }
     },
     {
-        title: "Data that never leads to action",
+        title: "Turn data into action",
         description: "Turn each finding into a routed, tracked corrective action.",
         image: "/images/solutions/by-industry/retail/data_that_never_leads_to_action_icon.svg",
         button: {
@@ -223,7 +211,6 @@ export const contentGridData = [
         }
     },
 ]
-
 export const faqData = [
     {
         question: "What is patient experience software?",

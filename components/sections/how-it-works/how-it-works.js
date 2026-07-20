@@ -31,7 +31,7 @@ export default function HowItWorks({
 
             {data.length > 0 && (
 
-                <div className={`container ${styles.featureListItems}`}>
+                <div className={`container ${styles.featureListItems} ${stylesAlt.howItWorksItems}`}>
 
                     {data.map((item, index) => (
 
@@ -40,6 +40,8 @@ export default function HowItWorks({
                             index={index}
                             image={item.image}
                             imageSizing={item.imageSizing}
+                            imageWidth={item.imageWidth}
+                            imageHeight={item.imageHeight}
                             title={item.title}
                             number={item.number}
                             eyebrow={item.eyebrow}

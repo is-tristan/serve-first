@@ -1,4 +1,27 @@
+.howItWorksItems {
+    gap: 0;
+}
+
 .howItWorksItem {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @media (width >=768px) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    @media (width >=1024px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &:last-child {
+        @media all {
+            padding-bottom: 0;
+        }
+    }
+
     .featureListItemNumber {
         font-family: var(--heading);
         font-size: clamp(2rem, 5.25vw, 5.25rem);
@@ -9,7 +32,7 @@
         color: var(--primary);
         background: rgba(var(--primaryRgb), 0.15);
         border-color: var(--primary);
-        
+
         @media (width >=768px) and (width < 1024px) {
             margin: 0 auto;
         }

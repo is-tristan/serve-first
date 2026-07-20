@@ -7,7 +7,7 @@ import {
     magnifyingGlassIcon,
     userCheckIcon,
     clockCheckIcon,
-    fileCheckIcon,
+    certificateIcon,
 } from "@/utils/icons";
 
 export const roleContextData = [
@@ -75,7 +75,7 @@ export const productHighlightData = [
         link: "/products/operational-excellence/audits",
     },
     {
-        icon: fileCheckIcon,
+        icon: certificateIcon,
         eyebrow: "Martyn's Law compliance",
         title: "Evidence your Martyn's Law obligations.",
         linkText: "Explore",

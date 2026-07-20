@@ -125,7 +125,7 @@ export const productHighlightData = [
         eyebrow: "Helpdesk",
         title: "Keep every issue in one tracked place.",
         linkText: "Explore",
-        link: "/products/customer-experience/survey",
+        link: "/products/operational-excellence/helpdesk",
     },
     {
         icon: messageAlertSquareIcon,

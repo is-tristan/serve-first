@@ -43,34 +43,22 @@ export const logoData = [
 
 export const challengeFrameData = [
     {
-        eyebrow: "01 | Standards slipping",
+        eyebrow: "01 | Food safety audits",
         title: "Food safety and service standards drift between sites and shifts.",
         description: "Serve First runs the same food safety and service audits at every site, scored consistently, so standards are checked the same way on every shift.",
-        tags: [
-            {
-                tag: "Food safety audits",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "02 | Evidence missing",
+        eyebrow: "02 | Guest Feedback",
         title: "When the audit is on paper, the evidence is patchy and hard to find later.",
         description: "Digital checks capture timestamps, photos and sign-offs as the shift runs, so the evidence builds itself and is ready when you need it.",
-        tags: [
-            {
-                tag: "Guest Feedback",
-            }
-        ]
+        tags: []
     },
     {
-        eyebrow: "03 | Action missed",
+        eyebrow: "03 | Proof of Completion",
         title: "A problem gets noted, then slips back before the next visit.",
         description: "Every failed check raises a corrective task routed to the right owner and tracked to done, so issues close before the next service.",
-        tags: [
-            {
-                tag: "Proof of Completion",
-            }
-        ]
+        tags: []
     }
 ]
 
@@ -79,7 +67,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Teams run food safety and service Audits at every site, with guest feedback captured alongside, recorded as the shift runs.",
-        image: "",
+        image: "/images/solutions/by-industry/restaurants/restaurants-capture.png",
         button: {
             text: "Explore capture",
             href: "/how-it-works/capture",
@@ -89,7 +77,7 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "Every site is scored and compared, with EVA flagging where safety or service is slipping and what is behind it.",
-        image: "",
+        image: "/images/solutions/by-industry/restaurants/restaurants-analyse.png",
         button: {
             text: "See the analysis",
             href: "/how-it-works/analyse",
@@ -99,7 +87,7 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Failed checks raise corrective tasks routed to the right owner and tracked to done, so issues close before the next service.",
-        image: "",
+        image: "/images/solutions/by-industry/restaurants/restaurants-action.png",
         button: {
             text: "Drive it to done",
             href: "/how-it-works/action",
@@ -187,8 +175,8 @@ export const testimonialData = [
 
 export const contentGridData = [
     {
-        title: "Inconsistent standards across locations",
-        description: "Hold food safety and service to standard at every site.",
+        title: "Inconsistent standards",
+        description: "Hold every site to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Explore",
@@ -196,8 +184,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Too many tools and siloed data",
-        description: "Bring checks, feedback and reviews into one operating picture.",
+        title: "Siloed tools and data",
+        description: "Bring every signal into one picture.",
         image: "/images/solutions/by-industry/retail/Too_many_tools_and_siloed_data_icon.svg",
         button: {
             text: "Explore",
@@ -205,8 +193,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Struggling to prove improvement",
-        description: "Prove standards are improving, with the evidence behind them.",
+        title: "Prove improvement",
+        description: "Show the difference with evidence.",
         image: "/images/solutions/by-industry/retail/Struggling_to_prove_improvement_icon.svg",
         button: {
             text: "Explore",
@@ -214,8 +202,8 @@ export const contentGridData = [
         }
     },
     {
-        title: "Data that never leads to action",
-        description: "Turn each failed check or complaint into a tracked fix.",
+        title: "Turn data into action",
+        description: "Turn each finding into a routed, tracked corrective action.",
         image: "/images/solutions/by-industry/retail/data_that_never_leads_to_action_icon.svg",
         button: {
             text: "Explore",
