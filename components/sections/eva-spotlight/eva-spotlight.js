@@ -18,6 +18,9 @@ export default function EvaSpotlight({
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
         "image": "/decoration/no-image-placeholder.webp",
+        "imageWidth": 576,
+        "imageHeight": 768,
+        "imageSizing": "contain",
         "button": {
             "text": "Lorem ipsum dolor sit amet",
             "href": "#",

@@ -19,7 +19,7 @@ export default function HowItWorks({
 
     return (
 
-        <section className={`row ${stylesAlt.howItWorks} ${styles.featureList}`} style={{ gap: "0" }} >
+        <section className={`row ${stylesAlt.howItWorks} ${styles.featureList}`} style={{ gap: "0" }} data-name="how-it-works">
 
             <div className={`container centered noPaddingBottom ${stylesAlt.howItWorksHeading}`}>
 

@@ -39,6 +39,7 @@ export default function Banner({
             className={`row bgLightAlt ${styles.banner} ${styles.className}`}
             data-background-decoration={hasBackgroundDecoration ? "true" : "false"}
             data-banner-type={bannerType}
+            data-name="banner"
         >
 
             <div className={`container dualCols ${styles.bannerContainer}`}>

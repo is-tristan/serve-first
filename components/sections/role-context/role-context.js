@@ -24,7 +24,10 @@ export default function RoleContext({
 
     return (
 
-        <section className={`row ${styles.roleContext}`}>
+        <section
+            className={`row ${styles.roleContext}`}
+            data-name="role-context"
+        >
 
             <div className="container noPaddingBottom">
 

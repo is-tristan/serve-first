@@ -21,6 +21,9 @@ export default function FeaturedListItem({
     index = 0,
     theme = "light",
     image,
+    imageSizing = "Contain",
+    imageWidth = 576,
+    imageHeight = 384,
     eyebrow,
     title,
     description,
@@ -46,13 +49,13 @@ export default function FeaturedListItem({
 
                 <Image
                     className={styles.featureListItemImage}
-                    src={image}
-                    alt={title}
-                    fill
+                    src={image || "/decoration/how-it-works-placeholder.png"}
+                    alt={title || "How it works image"}
+                    width={imageWidth}
+                    height={imageHeight}
                     loading="lazy"
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
                 />
-
             </div>
 
             <div className={`${styles.colLeft} ${styles.featureListItemContent}`}>

@@ -11,7 +11,7 @@ export default function FeatureList({ theme = "light", data = featureListData ||
 
     return (
 
-        <section className={`row ${styles.featureList}`} data-theme={theme}>
+        <section className={`row ${styles.featureList}`} data-theme={theme} data-name="feature-list">
 
             {data.length > 0 && (
 
@@ -24,6 +24,9 @@ export default function FeatureList({ theme = "light", data = featureListData ||
                             index={index}
                             theme={theme}
                             image={item.image}
+                            imageWidth={item.imageWidth}
+                            imageHeight={item.imageHeight}
+                            imageSizing={item.imageSizing}
                             eyebrow={item.eyebrow}
                             title={item.title}
                             description={item.description}

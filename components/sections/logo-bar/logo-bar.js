@@ -15,7 +15,10 @@ export default function LogoBar({
 }) {
     return (
 
-        <section className={`row ${styles.logoBar} ${backgroundColor}`}>
+        <section
+            className={`row ${styles.logoBar} ${backgroundColor}`}
+            data-name="logo-bar"
+        >
 
             <div className="container centered noPaddingBottom">
 

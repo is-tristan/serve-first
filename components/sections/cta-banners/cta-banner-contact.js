@@ -10,7 +10,11 @@ export default function CtaBannerContact({ title = "Book your personalised platf
 
     return (
 
-        <section id="book-demo" className={`row ${styles.ctaBannerContact} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`}>
+        <section
+            id="book-demo"
+            className={`row ${styles.ctaBannerContact} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`}
+            data-name="ctaBannerContact"
+        >
 
             <div className="container dualCols">
 
@@ -39,7 +43,7 @@ export default function CtaBannerContact({ title = "Book your personalised platf
                     ) : (
 
                         <FormSmall theme={theme} hasDemoLink={hasDemoLink} formBtnText={formBtnText} />
-                        
+
                     )}
 
                 </div>

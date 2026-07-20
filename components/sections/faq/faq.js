@@ -23,7 +23,10 @@ export default function Faq({
 
     return (
 
-        <section className={`row ${styles.faq}`}>
+        <section
+            className={`row ${styles.faq}`}
+            data-name="faq"
+        >
 
             <div className="container sectionSplitTitle noPaddingBottom">
 

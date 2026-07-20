@@ -6,7 +6,6 @@ import {
     usersUpIcon,
     notificationTextIcon,
     messageSmileSquareIcon,
-    clipBoardIcon,
     aiIcon
 } from "@/utils/icons";
 
@@ -140,7 +139,7 @@ export const productHighlightData = [
         eyebrow: "Review monitoring",
         title: "Turn review themes into tracked fixes.",
         linkText: "Explore",
-        link: "/products/market-intelligence/review-monitoring",
+        link: "/products/marketing-intelligence/review-monitoring",
     },
 ]
 
@@ -192,7 +191,7 @@ export const faqData = [
         question: "Who decides what the next action is?",
         answer: "Failed checks raise corrective tasks automatically against your standards, and EVA recommends the next actions with the reason behind them, shaped by role. Your team stays in control of what is assigned and to whom."
     },
-    {   
+    {
         question: "How is this different from a BI dashboard?",
         answer: "A dashboard shows you the problem and stops. Serve First is a system of action: the same signal that draws the chart also raises the task, routes it to an owner and tracks it to proof of completion, so the chart and the fix are never separated."
     },

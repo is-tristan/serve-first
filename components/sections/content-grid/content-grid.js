@@ -13,7 +13,7 @@ import { contentGridData } from "@/data/content-grid-data";
 export default function ContentGrid({
     eyebrow = "- Content Grid Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    colCount = 3,
+    colCount = 4,
     button = {
         text: "Lorem ipsum",
         href: "#",
@@ -24,7 +24,10 @@ export default function ContentGrid({
 
     return (
 
-        <section className={`row ${styles.contentGrid}`}>
+        <section
+            className={`row ${styles.contentGrid}`}
+            data-name="content-grid"
+        >
 
             <div className="container noPaddingBottom">
 

@@ -11,9 +11,7 @@ import Button from "@/components/handlers/buttons";
 // Styles
 import styles from "@/styles/components/sections/eva-spotlight.module.scss";
 
-export default function EvaSpotlightItem({
-    item = {}
-}) {
+export default function EvaSpotlightItem({ item = {} }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -26,7 +24,13 @@ export default function EvaSpotlightItem({
 
                 <div className={styles.evaSpotlightItemImage}>
 
-                    <Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, 50vw" style={{ "objectFit": "cover" }} />
+                    <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={item.imageWidth}
+                        height={item.imageHeight}
+                        style={{ "objectFit": item.imageSizing }}
+                    />
 
                 </div>
 

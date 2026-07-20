@@ -122,7 +122,7 @@ export const productHighlightData = [
         eyebrow: "Knowledge Base",
         title: "Keep procedures in one place teams find.",
         linkText: "Explore",
-        link: "/products/operational-excellence/helpdesk",
+        link: "/products/operational-excellence/knowledge-base",
     },
     {
         icon: aiIcon,

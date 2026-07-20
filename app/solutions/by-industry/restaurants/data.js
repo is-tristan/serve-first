@@ -122,7 +122,7 @@ export const productHighlightData = [
         eyebrow: "Review monitoring",
         title: "Track reviews across every site.",
         linkText: "Explore",
-        link: "/products/market-intelligence/review-monitoring",
+        link: "/products/marketing-intelligence/review-monitoring",
     },
     {
         icon: checkCircleBrokenIcon,

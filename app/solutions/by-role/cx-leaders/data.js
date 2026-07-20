@@ -79,14 +79,14 @@ export const productHighlightData = [
         eyebrow: "Feedback terminals",
         title: "Capture honest feedback the moment it happens.",
         linkText: "Explore",
-        link: "/products/market-intelligence/review-monitoring",
+        link: "/products/customer-experience/feedback-terminals",
     },
     {
         icon: messageSmileSquareIcon,
         eyebrow: "Review monitoring",
         title: "Track and respond to reviews in one place.",
         linkText: "Explore",
-        link: "/products/market-intelligence/review-monitoring",
+        link: "/products/marketing-intelligence/review-monitoring",
     },
     {
         icon: aiIcon,

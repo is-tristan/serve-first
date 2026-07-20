@@ -18,7 +18,10 @@ export default function PlatformStory({
 
     return (
 
-        <section className={`row ${styles.platformStory}`}>
+        <section
+            className={`row ${styles.platformStory}`}
+            data-name="platform-story"
+        >
 
             <div className={"container sectionSplitTitle noPaddingBottom"}>
 

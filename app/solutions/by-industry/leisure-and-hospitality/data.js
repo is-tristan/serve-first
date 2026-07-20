@@ -108,7 +108,7 @@ export const productHighlightData = [
         eyebrow: "Feedback terminals",
         title: "Capture feedback into the same platform.",
         linkText: "Explore",
-        link: "/products/customer-experience/mystery-shopping",
+        link: "/products/customer-experience/feedback-terminals",
     },
     {
         icon: clipBoardCheckIcon,
@@ -122,7 +122,7 @@ export const productHighlightData = [
         eyebrow: "Review monitoring",
         title: "Track and respond to reviews in one place.",
         linkText: "Explore",
-        link: "/products/market-intelligence/review-monitoring",
+        link: "/products/marketing-intelligence/review-monitoring",
     },
     {
         icon: fileCheckIcon,

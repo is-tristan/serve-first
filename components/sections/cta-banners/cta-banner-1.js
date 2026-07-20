@@ -28,7 +28,7 @@ export default function CtaBannerOne({
         <section
             className={`row colorLight ${styles.ctaBanner} ${theme === "primary" ? "bgPrimaryAlt" : "bgPrimary"}`}
             data-theme="light"
-            data-name={name}
+            data-name={name ? name : "ctaBanner1"}
         >
 
             <div className={`container centered ctaCentered`}>

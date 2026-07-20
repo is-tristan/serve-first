@@ -101,7 +101,7 @@ export const productHighlightData = [
         eyebrow: "Knowledge Base",
         title: "Keep procedures and training in one place.",
         linkText: "Explore",
-        link: "/products/operational-excellence/task-management",
+        link: "/products/operational-excellence/knowledge-base",
     },
     {
         icon: aiIcon,

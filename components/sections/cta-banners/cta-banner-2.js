@@ -37,7 +37,7 @@ export default function CtaBannerTwo({
 
         <section
             className={`row ${styles.ctaBanner} ${styles.ctaBannerTwo}`}
-            data-name={name}
+            data-name={name ? name : "ctaBanner2"}
         >
 
             <div className={`container centered ctaCentered`}>

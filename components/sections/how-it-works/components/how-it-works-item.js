@@ -57,7 +57,6 @@ export default function HowItWorksItem({
                     style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
                 />
 
-
             </div>
 
             <div className={`${styles.colLeft} ${styles.featureListItemContent}`}>

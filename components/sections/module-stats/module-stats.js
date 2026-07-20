@@ -24,7 +24,11 @@ export default function ModuleStats({
 }) {
     return (
 
-        <section className={`row ${styles.moduleStats} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`} data-theme={theme}>
+        <section
+            className={`row ${styles.moduleStats} ${theme === "primary" ? "bgPrimaryAlt" : "bgLightAlt"}`}
+            data-theme={theme}
+            data-name="module-stats"
+        >
 
             <div className="container centered noPaddingBottom">
 

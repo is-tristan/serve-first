@@ -1,6 +1,5 @@
 import {
     fileCheckIcon,
-    clipBoardCheckIcon,
     usersIcon,
     aiIcon,
     checkCircleBrokenIcon,

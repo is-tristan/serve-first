@@ -22,7 +22,10 @@ export default function ProductHighlight({
 
     return (
 
-        <section className={`row ${styles.productHighlight}`}>
+        <section
+            className={`row ${styles.productHighlight}`}
+            data-name="product-highlight"
+        >
 
             <div className={"container sectionSplitTitle noPaddingBottom"}>
 

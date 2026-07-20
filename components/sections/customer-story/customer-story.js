@@ -14,7 +14,10 @@ export default function CustomerStory({
 }) {
     return (
 
-        <section className={`row ${styles.customerStory}`}>
+        <section
+            className={`row ${styles.customerStory}`}
+            data-name="customer-story"
+        >
 
             <div className="container noPaddingBottom">
 
@@ -27,7 +30,7 @@ export default function CustomerStory({
                 <div className="container noPaddingTop">
 
                     <CustomerStoryCarousel data={data} />
-                    
+
                 </div>
 
             )}

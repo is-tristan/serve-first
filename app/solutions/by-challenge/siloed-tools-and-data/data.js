@@ -132,7 +132,7 @@ export const productHighlightData = [
         eyebrow: "Feedback terminals",
         title: "Capture feedback into the same platform.",
         linkText: "Explore",
-        link: "/products/customer-experience/mystery-shopping",
+        link: "/products/customer-experience/feedback-terminals",
     },
     {
         icon: clipBoardIcon,

@@ -29,7 +29,10 @@ export default function IndustryCards({
 
     return (
 
-        <section className={`row ${styles.industryCards}`}>
+        <section
+            className={`row ${styles.industryCards}`}
+            data-name="industry-cards"
+        >
 
             <div className="container noPaddingBottom">
 
@@ -53,7 +56,7 @@ export default function IndustryCards({
                             key={index}
                             index={index}
                             eyebrow={item.eyebrow}
-                            title={item.title}                       
+                            title={item.title}
                             image={item.image}
                             number={item.number}
                             numberText={item.numberText}

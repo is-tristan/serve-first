@@ -18,7 +18,10 @@ export default function ChallengeFrame({
 }) {
     return (
 
-        <section className={`row ${styles.challengeFrame}`}>
+        <section
+            className={`row ${styles.challengeFrame}`}
+            data-name="challenge-frame"
+        >
 
             <div className="container noPaddingBottom">
 
