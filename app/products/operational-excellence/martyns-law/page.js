@@ -29,7 +29,7 @@ import {
     faqData
 } from "./data";
 
-export default async function KnowledgeBase() {
+export default async function MartynsLaw() {
 
     return (
 
@@ -37,9 +37,9 @@ export default async function KnowledgeBase() {
 
             <Banner
                 eyebrow="Operational excellence"
-                title="One source of truth for every team"
-                description="Serve First Knowledge Base keeps procedures, policies and training in one searchable place, so frontline teams find the right answer without asking around."
-                image="/images/products/operational-excellence/knowledge-base/knowledge-base-cover.png"
+                title="Martyn's Law, evidenced at every site"
+                description="Serve First helps you meet Martyn's Law obligations with compliance checklists, training records and evidence capture, so duty of care is documented, not assumed."
+                image="/images/products/operational-excellence/martyns-law/martyns-law-cover.png"
                 imageSizing="Contain"
                 buttonPrimary={{
                     text: "See it in action",

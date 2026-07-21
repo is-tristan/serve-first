@@ -178,7 +178,7 @@ export const menuItemsData = [
                     },
                     {
                         label: "Martyn's Law Compliance",
-                        href: "/products/operational-excellence/martyns-law-compliance",
+                        href: "/products/operational-excellence/martyns-law",
                     },
                 ],
             },

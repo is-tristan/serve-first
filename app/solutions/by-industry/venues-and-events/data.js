@@ -107,7 +107,7 @@ export const productHighlightData = [
         eyebrow: "Martyn's Law compliance",
         title: "Evidence your Martyn's Law duties.",
         linkText: "Explore",
-        link: "/products/operational-excellence/martyns-law-compliance",
+        link: "/products/operational-excellence/martyns-law",
     },
     {
         icon: chartBreakoutIcon,

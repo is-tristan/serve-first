@@ -168,7 +168,7 @@ export const productHighlightData = [
         eyebrow: "Martyn's Law compliance",
         title: "Keep duty-of-care guidance current.",
         linkText: "Explore",
-        link: "/products/operational-excellence/martyns-law-compliance",
+        link: "/products/operational-excellence/martyns-law",
     },
     {
         icon: clipBoardCheckIcon,
