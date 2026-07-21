@@ -7,29 +7,49 @@ import {
     checkCircleBrokenIcon,
     fileCheckIcon,
     notificationTextIcon,
-    certificateIcon
+    usersIcon
 } from "@/utils/icons";
+
+export const challengeFrameData = [
+    {
+        eyebrow: "The requirement",
+        title: "Martyn's Law expects you to put plans in place, train staff and prove it.",
+        subheading: "How Serve First solves it",
+        description: "Serve First turns the obligations into checklists, training records and captured evidence, with audit trails that show what you did and when, across every venue you run.",
+        tags: [
+            {
+                tag: "Compliance checklists",
+            },
+            {
+                tag: "Training records",
+            },
+            {
+                tag: "Audit trails",
+            },
+        ]
+    }
+]
 
 export const featureListData = [
     {
-        eyebrow: "Answers where they work",
-        title: "The right procedure, on demand, anywhere",
-        description: "Bring SOPs, policies and training into one searchable home. Version control keeps a single current answer live, and role-based access means each team sees what applies to them and nothing out of date.",
-        image: "/images/products/operational-excellence/knowledge-base/knowledge-base-feature-list-image.png",
+        eyebrow: "Built for duty of care",
+        title: "Evidence that stands up to scrutiny",
+        description: "BChecklists, training records and incident logs come together with timestamped audit trails. Your readiness is documented as you go, so demonstrating duty of care is a click, not a scramble.",
+        image: "/images/products/operational-excellence/martyns-law/martyns-law-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 576,
         list: [
             {
-                text: "Centralised content and search",
+                text: "Guided compliance checklists",
             },
             {
-                text: "Version control keeps it current",
+                text: "Staff training records per site",
             },
             {
-                text: "Role-based access controls",
+                text: "Timestamped evidence capture",
             },
             {
-                text: "Built-in training modules",
+                text: "Incident reporting and logs",
             },
         ],
         button: {
@@ -39,55 +59,12 @@ export const featureListData = [
     }
 ]
 
-export const roleContextData = [
-    {
-        icon: fileSearchIcon,
-        eyebrow: "One home",
-        title: "Centralised content and search",
-        description: "Keep SOPs, policies and training in one searchable home, so teams find the answer in seconds.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
-    },
-    {
-        icon: clockRefreshIcon,
-        eyebrow: "Always current",
-        title: "Version control built in",
-        description: "Version control keeps one answer live and retires the old, so teams never work from stale guidance.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
-    },
-    {
-        icon: userEditBrokenIcon,
-        eyebrow: "Right access",
-        title: "Role-based access controls",
-        description: "Give each team the guidance that applies to their role, so a manager and a lead see the right thing.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
-    },
-    {
-        icon: usersCheckIcon,
-        eyebrow: "Training built in",
-        title: "Built-in training modules",
-        description: "Training sits beside the procedures it supports, so teams learn and check the standard in one place.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
-    }
-]
-
 export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Procedures, policies and training are captured in one place, organised by type and the teams who need them.",
-        image: "/images/products/operational-excellence/knowledge-base/knowledge-base-capture.png",
+        description: "Work through compliance checklists that capture risk assessments, training records and evidence per venue.",
+        image: "/images/products/operational-excellence/martyns-law/martyns-law-capture.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
@@ -98,20 +75,20 @@ export const howItWorksData = [
     {
         number: "02",
         title: "Analyse",
-        description: "Version control keeps one current answer live, with role-based access controlling exactly who sees what.",
-        image: "/images/products/operational-excellence/knowledge-base/knowledge-base-analyse.png",
+        description: "Everything is timestamped and linked to the right site, so your readiness is documented and easy to review.",
+        image: "/images/products/operational-excellence/martyns-law/martyns-law-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how access works",
+            text: "See how records analyse",
             href: "/how-it-works/analyse",
         }
     },
     {
         number: "03",
         title: "Action",
-        description: "Teams find the right guidance in seconds, linked from the tickets and tasks they are already working on.",
-        image: "/images/products/operational-excellence/knowledge-base/knowledge-base-action.png",
+        description: "Audit trails show exactly what was done and when, so you can demonstrate Martyn's Law readiness on request.",
+        image: "/images/products/operational-excellence/martyns-law/martyns-law-action.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
@@ -121,59 +98,39 @@ export const howItWorksData = [
     },
 ]
 
-export const challengeFrameData = [
-    {
-        eyebrow: "Challenge 01",
-        title: "Teams work from old documents because the current answer is hard to find.",
-        subheading: "How Serve First solves it",
-        description: "Serve First keeps one current, searchable answer with role-based access and links it from the tasks and tickets teams use, so the right guidance is always to hand.",
-        tags: [
-            {
-                tag: "One current answer",
-            },
-            {
-                tag: "Role-based access",
-            },
-            {
-                tag: "Found in context",
-            },
-        ]
-    }
-]
-
 export const productHighlightData = [
     {
         icon: fileCheckIcon,
         eyebrow: "Audits",
-        title: "Check the standard is being followed.",
+        title: "Run safety and readiness checks.",
         linkText: "Explore",
         link: "/products/operational-excellence/audits",
     },
     {
         icon: checkCircleBrokenIcon,
         eyebrow: "Task management",
-        title: "Link guidance to the work itself.",
+        title: "Route corrective actions to done.",
         linkText: "Explore",
         link: "/products/operational-excellence/task-management",
     },
     {
+        icon: usersIcon,
+        eyebrow: "Knowledge Base",
+        title: "Keep duty-of-care guidance current.",
+        linkText: "Explore",
+        link: "/products/operational-excellence/knowledge-base",
+    },
+    {
         icon: notificationTextIcon,
         eyebrow: "Helpdesk",
-        title: "Answer tickets from your own docs.",
+        title: "Log and resolve incidents in one place.",
         linkText: "Explore",
         link: "/products/operational-excellence/helpdesk",
     },
     {
-        icon: certificateIcon,
-        eyebrow: "Martyn's Law compliance",
-        title: "Keep duty-of-care guidance current.",
-        linkText: "Explore",
-        link: "/products/operational-excellence/martyns-law",
-    },
-    {
         icon: clipBoardCheckIcon,
         eyebrow: "Survey",
-        title: "Hear where guidance is unclear.",
+        title: "Capture feedback from every venue.",
         linkText: "Explore",
         link: "/products/customer-experience/survey",
     }
@@ -183,7 +140,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Retail",
-        description: "Keep store procedures in one place.",
+        description: "Evidence readiness across every store.",
         image: "/images/products/shared/retail-industry-icon.svg",
         button: {
             text: "Explore",
@@ -193,7 +150,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Give every site the same playbook.",
+        description: "Evidence safety across every site.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -203,7 +160,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Restaurants",
-        description: "Keep restaurant SOPs current and found.",
+        description: "Show readiness across every restaurant.",
         image: "/images/products/shared/restaurant-industry-icon.svg",
         button: {
             text: "Explore",
@@ -213,7 +170,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Keep clinical and site procedures current.",
+        description: "Evidence duty of care at every site.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -223,7 +180,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Facilities management",
-        description: "Standardise procedures across every contract.",
+        description: "Evidence safety across every contract.",
         image: "/images/products/shared/facilities-management-industry-icon.svg",
         button: {
             text: "Explore",
@@ -233,7 +190,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Venues & events",
-        description: "Keep venue procedures current and searchable.",
+        description: "Evidence Martyn's Law at every venue.",
         image: "/images/products/shared/venues-events-industry-icon.svg",
         button: {
             text: "Explore",
@@ -292,27 +249,27 @@ export const testimonialData = [
 
 export const faqData = [
     {
-        question: "What is knowledge base software?",
-        answer: "Knowledge base software keeps procedures, policies and training in one searchable place, so teams find the right answer without asking around. Serve First adds version control and role-based access, so each team sees the current answer that applies to them."
+        question: "What is Martyn's Law compliance software?",
+        answer: "It turns your obligations under Martyn's Law, the Terrorism (Protection of Premises) Act 2025, into structured checklists, training records and evidence capture, with audit trails per venue. Serve First documents readiness as you go, so duty of care is evidenced rather than assumed."
     },
     {
-        question: "How does it keep content current?",
-        answer: "Version control keeps a single current answer live, so old guidance is retired rather than left to confuse, and teams are never working from an out-of-date document."
+        question: "What does Martyn's Law require, and who does it apply to?",
+        answer: "It applies to qualifying premises and events expecting 200+ people. Standard-tier sites (200 to 799) put public protection procedures in place and notify the Security Industry Authority. Enhanced-tier sites (800 or more) also document protective measures. Serve First turns each duty into a guided checklist with evidence captured."
     },
     {
-        question: "Can different teams see different content?",
-        answer: "Yes. Role-based access means each team sees what applies to them and nothing out of date, so a site manager and a regional lead each get the guidance relevant to their role."
+        question: "When does Martyn's Law come into force?",
+        answer: "It received Royal Assent in April 2025, with an implementation period of at least 24 months, so enforcement is expected no earlier than 2027. That lead-in is time to get ready, and Serve First helps you build the procedures, training records and evidence now, so you can show readiness when the duties take effect."
     },
     {
-        question: "How do teams find the right answer quickly?",
-        answer: "Content is centralised and searchable, and guidance links straight from the tickets and tasks teams are already working on, so the answer is found in seconds, in context."
+        question: "Can we demonstrate readiness on request?",
+        answer: "Yes. Audit trails show exactly what was done and when, per venue, so you can demonstrate Martyn's Law readiness on request rather than scrambling to assemble proof."
     },
     {
-        question: "Can EVA answer from our documentation?",
-        answer: "Yes. You can ask EVA a policy or procedure question and get the answer drawn from your own documentation, with the source shown, so you can trust where it came from."
+        question: "Does it keep training records per site?",
+        answer: "Yes. Staff training records are kept per venue, so you can show who was trained, on what and when, across every site you run."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every site works from the same current answer in one place, so standards stay consistent however many locations you run."
+        question: "Does it work across multiple venues?",
+        answer: "Serve First is built for multi-site operations. Every venue reports into one operating picture, so you can see readiness and compliance across them all and address what is outstanding."
     }
 ]

@@ -5,7 +5,6 @@ import { Suspense } from "react";
 import Banner from "@/components/sections/banner/banner";
 import FeatureList from "@/components/sections/feature-list/feature-list";
 import HowItWorks from "@/components/sections/how-it-works/how-it-works";
-import RoleContext from "@/components/sections/role-context/role-context";
 import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
 import EvaSpotlight from "@/components/sections/eva-spotlight/eva-spotlight";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
@@ -20,7 +19,6 @@ import IsLoading from "@/components/handlers/is-loading";
 import {
     howItWorksData,
     featureListData,
-    roleContextData,
     challengeFrameData,
     productHighlightData,
     contentGridData,
@@ -50,32 +48,21 @@ export default async function MartynsLaw() {
                 }}
             />
 
+            <ChallengeFrame
+                eyebrow="What the law requires"
+                title="New obligations, real accountability for venues"
+                data={challengeFrameData}
+            />
+
             <FeatureList
                 data={featureListData}
             />
 
-            <RoleContext
-                eyebrow="Knowledge Base capability"
-                title="Keep every team on the current answer"
-                description="Keep SOPs, policies and training in one searchable place, so frontline teams find the current answer in seconds without asking around."
-                data={roleContextData}
-                btnPrimary={{
-                    text: "Get a demo",
-                    href: "/get-a-demo",
-                }}
-            />
-
             <HowItWorks
-                eyebrow="How knowledge works"
-                title="Knowledge that stays current and found"
-                description="Knowledge that stays current and stays found."
+                eyebrow="How it is evidenced"
+                title="Obligation to evidence, every venue"
+                description="From obligation to evidence, across every venue."
                 data={howItWorksData}
-            />
-
-            <ChallengeFrame
-                eyebrow="Common challenges"
-                title="Procedures exist, but no one finds them"
-                data={challengeFrameData}
             />
 
             <EvaSpotlight
@@ -84,9 +71,9 @@ export default async function MartynsLaw() {
                 description={null}
                 item={{
                     "eyebrow": "EVA AI",
-                    "title": "Ask, and get the answer from your own docs",
-                    "description": "Ask EVA a policy or procedure question and get the right answer, cited straight from your documentation.",
-                    "image": "/images/products/operational-excellence/knowledge-base/knowledge-base-eva.png",
+                    "title": "Ask exactly where each venue really stands",
+                    "description": "Ask EVA where each venue stands on compliance and get an evidence-backed answer drawn from your records.",
+                    "image": "/images/products/operational-excellence/martyns-law/martyns-law-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
                     "imageSizing": "contain",
@@ -99,10 +86,9 @@ export default async function MartynsLaw() {
 
             <ProductHighlight
                 eyebrow="More from Serve First"
-                title="More of the platform your teams can use."
-                description="Knowledge Base sits in the same platform as the rest of Serve First, so the right answer is linked to the work it supports."
+                title="More of the platform your teams can use"
+                description="Martyn's Law compliance sits in the same platform as the rest of Serve First, so readiness connects to the checks and evidence behind it."
                 linkText={null}
-                colCount={4}
                 data={productHighlightData}
             />
 
@@ -135,15 +121,15 @@ export default async function MartynsLaw() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Knowledge Base, answered"
+                title="Martyn's Law, answered"
                 button={null}
                 data={faqData}
             />
 
             <CtaBannerOne
                 theme="primary"
-                title="See what Serve First can do for your teams"
-                description="Book a personalised demo and we will show you how Knowledge Base keeps every site working to the same answer."
+                title="See what Serve First can do for compliance"
+                description="Book a personalised demo and we will show you how Serve First evidences Martyn's Law across your venues."
             />
 
         </>
