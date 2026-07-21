@@ -63,7 +63,12 @@ export default function RoleContextItem({
 
             {button && (
 
-                <Link href={button.href} target={button.target} className={"colLink"}></Link>
+                <Link
+                    href={button.href}
+                    target={button.target}
+                    className="colLink"
+                    aria-label={button.text || title || "Learn more"}
+                ></Link>
 
             )}
 

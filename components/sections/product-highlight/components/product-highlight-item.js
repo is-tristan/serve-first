@@ -58,7 +58,16 @@ export default function ProductHighlightItem({
 
                 {link && (<Button text={linkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary" />)}
 
-                {link && <Link href={link} target={target} className={"colLink"}></Link>}
+                {link && (
+
+                    <Link
+                        href={link}
+                        target={target}
+                        className="colLink"
+                        aria-label={linkText || title || "Learn more"}
+                    ></Link>
+
+                )}
 
             </div>
 

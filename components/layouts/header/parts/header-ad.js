@@ -63,7 +63,12 @@ export default function HeaderAd({ ad }) {
 
             {ad.link && (
 
-                <Link href={ad.link} className={`colLink ${styles.headerAdLink}`}></Link>
+                <Link
+                    href={ad.link}
+                    className={`colLink ${styles.headerAdLink}`}
+                    aria-label={ad.linkText || ad.title || "View promotion"}
+                ></Link>
+
             )}
 
         </>

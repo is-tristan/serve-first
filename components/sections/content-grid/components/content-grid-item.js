@@ -80,7 +80,12 @@ export default function ContentGridItem({
 
             </div>
 
-            <Link href={item.button.href} target={item.button.target} className={"colLink"}></Link>
+            <Link
+                href={item.button.href}
+                target={item.button.target}
+                className="colLink"
+                aria-label={item.button.text || item.title || "Read more"}
+            ></Link>
 
         </motion.article >
 

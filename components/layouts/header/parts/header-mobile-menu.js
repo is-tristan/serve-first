@@ -71,7 +71,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
 
         <>
 
-            <div className={`hidden-xxl ${styles.mobileMenu}`} data-toggled={isOpen}>
+            <div className={`hidden-xxl ${styles.mobileMenu}`} data-toggled={isOpen} role="navigation">
 
                 <div className={styles.mobileMenuHeader}>
 

@@ -30,20 +30,26 @@ export default function FaqItem({
             <div className={styles.faqItemInner}
                 onClick={() => setIsOpen(!isOpen)}
                 style={{ "--isOpen": isOpen ? 1 : 0 }}
-                aria-expanded={isOpen}
-                aria-controls={`faq-item-${index}`}
-                aria-label={`FAQ Item ${index + 1}`}
             >
 
                 <div className={styles.faqItemQuestionHeader}>
 
                     <h3>{item.question}</h3>
 
-                    <button className={styles.faqItemButton}></button>
+                    <button
+                        type="button"
+                        className={styles.faqItemButton}
+                        aria-expanded={isOpen}
+                        aria-controls={`faq-item-${index}`}
+                        aria-label={`${isOpen ? "Collapse" : "Expand"} ${item.question || `FAQ item ${index + 1}`}`}
+                    ></button>
 
                 </div>
 
-                <div className={styles.faqItemQuestionContent}>
+                <div
+                    id={`faq-item-${index}`}
+                    className={styles.faqItemQuestionContent}
+                >
 
                     <p>{item.answer}</p>
 

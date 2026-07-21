@@ -14,6 +14,14 @@ import TestimonialItem from "@/components/sections/testimonials/components/testi
 // Styles
 import styles from "@/styles/components/sections/testimonials.module.scss";
 
+const setAccessibleRoles = (splide) => {
+    splide.Components.Elements.list.setAttribute("role", "list");
+
+    splide.Components.Slides.get().forEach(({ slide }) => {
+        slide.setAttribute("role", "listitem");
+    });
+};
+
 export default function TestimonialCarousel({ theme = "light", data = [] }) {
 
     const ref = useRef(null);
@@ -23,7 +31,10 @@ export default function TestimonialCarousel({ theme = "light", data = [] }) {
 
         <motion.div className={styles.testimonialCarousel} ref={ref} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }} initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 }}>
 
-            <Splide options={{ type: "loop", perPage: 1, perMove: 1, arrows: false, pagination: false, gap: "1rem", autoplay: false }}>
+            <Splide
+                options={{ type: "loop", perPage: 1, perMove: 1, arrows: false, pagination: false, gap: "1rem", autoplay: false }}
+                onMounted={setAccessibleRoles}
+            >
 
                 {data.map((item, index) => (
 

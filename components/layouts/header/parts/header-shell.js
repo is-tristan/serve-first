@@ -12,7 +12,7 @@ export default function HeaderShell({ children }) {
 
     return (
 
-        <header id="header" className={styles.header} data-header-type={headerType}>
+        <header id="header" className={styles.header} data-header-type={headerType} role="banner">
 
             {children}
 

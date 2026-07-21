@@ -10,7 +10,7 @@ export default function Footer() {
 
     return (
 
-        <footer id="footer" className={`${styles.footer} bgLightAlt`}>
+        <footer id="footer" className={`${styles.footer} bgLightAlt`} role="contentinfo">
 
             <div className={`container ${styles.footerContainer}`}>
 
