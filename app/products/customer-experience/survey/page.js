@@ -1,3 +1,4 @@
+// React
 import { Suspense } from "react";
 
 // Components
@@ -14,6 +15,7 @@ import ModuleStats from "@/components/sections/module-stats/module-stats";
 import Testimonials from "@/components/sections/testimonials/testimonials";
 import FAQ from "@/components/sections/faq/faq";
 import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import IsLoading from "@/components/handlers/is-loading";
 
 // Data
 import {
@@ -41,12 +43,16 @@ export default async function Survey() {
                 description="Reach customers on web, kiosk, email and SMS, and Serve First turns every response into structured insight your teams use the same day."
                 image="/images/products/customer-experience/survey/survey-cover.png"
                 imageSizing="Contain"
+                buttonPrimary={{
+                    text: "See it in action",
+                    href: "/how-it-works/analyse",
+                }}
+                buttonSecondary={{
+                    text: null
+                }}
             />
 
             <FeatureList
-                eyebrow="Features"
-                title="Survey"
-                description="Survey is a tool that allows you to create and manage surveys."
                 data={featureListData}
             />
 
@@ -54,11 +60,11 @@ export default async function Survey() {
                 eyebrow="Survey capabilities"
                 title="Ask the right question, on every channel"
                 description="Reach customers on web, kiosk, email and SMS, and read what they tell you the same day, not at month end."
+                data={roleContextData}
                 btnPrimary={{
                     text: "Get a demo",
                     href: "/get-a-demo",
                 }}
-                data={roleContextData}
             />
 
             <HowItWorks
@@ -84,7 +90,7 @@ export default async function Survey() {
                     "description": "EVA reads every survey response as it lands and tells you, in plain English, what your customers are saying.",
                     "image": "/images/products/customer-experience/survey/survey-eva-ai.png",
                     "imageWidth": 768,
-                    "imageHeight": 576,
+                    "imageHeight": 768,
                     "imageSizing": "contain",
                     "button": {
                         "text": "Meet EVA",
@@ -117,7 +123,7 @@ export default async function Survey() {
                 data={contentGridData2}
             />
 
-            <Suspense fallback={null}>
+            <Suspense fallback={<IsLoading />}>
 
                 <BlogGrid />
 

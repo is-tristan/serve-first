@@ -139,7 +139,7 @@ export const productHighlightData = [
         eyebrow: "Review monitoring",
         title: "Turn review themes into tracked fixes.",
         linkText: "Explore",
-        link: "/products/marketing-intelligence/review-monitoring",
+        link: "/products/market-intelligence/review-monitoring",
     },
 ]
 

@@ -147,11 +147,11 @@ export const menuItemsData = [
                 submenu: [
                     {
                         label: "Competitive Benchmarking",
-                        href: "/products/marketing-intelligence/competitive-benchmarking",
+                        href: "/products/market-intelligence/competitive-benchmarking",
                     },
                     {
                         label: "Review Monitoring",
-                        href: "/products/marketing-intelligence/review-monitoring",
+                        href: "/products/market-intelligence/review-monitoring",
                     },
                 ],
             },

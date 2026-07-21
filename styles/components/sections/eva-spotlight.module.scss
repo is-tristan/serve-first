@@ -81,6 +81,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @media (width < 768px) {
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .evaSpotlightItemContent {

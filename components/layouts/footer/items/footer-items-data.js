@@ -44,7 +44,7 @@ export const products = {
         },
         {
             label: "Marketing Intelligence",
-            href: "/products/marketing-intelligence"
+            href: "/products/market-intelligence"
         },
         {
             label: "Operational Excellence",

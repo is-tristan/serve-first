@@ -42,7 +42,7 @@ export default function TestimonialItem({
 
             <div className={styles.testimonialMeta}>
 
-                <ReviewerInitials name={name} />
+                <ReviewerInitials name={name} className={styles.testimonialMetaInitials} />
 
                 <div className={`${styles.testimonialMetaItems} ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>
 

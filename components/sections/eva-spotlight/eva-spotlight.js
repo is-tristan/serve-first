@@ -16,6 +16,7 @@ export default function EvaSpotlight({
     item = {
         "eyebrow": "EVA AI",
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+        "titleSuffix": ".",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
         "image": "/decoration/no-image-placeholder.webp",
         "imageWidth": 576,
@@ -52,6 +53,7 @@ export default function EvaSpotlight({
                     <EvaFeaturedImage
                         featuredImage={featuredImage}
                         title={title}
+                        titleSuffix={item.titleSuffix}
                         aspectRatio={aspectRatio}
                     />
 

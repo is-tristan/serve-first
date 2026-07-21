@@ -161,7 +161,7 @@ export const productHighlightData = [
         eyebrow: "Review monitoring",
         title: "Track public reviews across the web.",
         linkText: "Explore",
-        link: "/products/marketing-intelligence/review-monitoring",
+        link: "/products/market-intelligence/review-monitoring",
     },
     {
         icon: fileCheckIcon,
@@ -248,7 +248,7 @@ export const contentGridData2 = [
         description: "Hold every site to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
-            text: "Explore",
+            text: "Fix inconsistent standards",
             href: "/solutions/by-challenge/inconsistent-standards",
         }
     },
@@ -257,7 +257,7 @@ export const contentGridData2 = [
         description: "Bring every signal into one picture.",
         image: "/images/solutions/by-industry/retail/Too_many_tools_and_siloed_data_icon.svg",
         button: {
-            text: "Explore",
+            text: "Connect your data",
             href: "/solutions/by-challenge/siloed-tools-and-data",
         }
     },
@@ -266,7 +266,7 @@ export const contentGridData2 = [
         description: "Show the difference with evidence.",
         image: "/images/solutions/by-industry/retail/Struggling_to_prove_improvement_icon.svg",
         button: {
-            text: "Explore",
+            text: "See how to prove it",
             href: "/solutions/by-challenge/prove-improvement",
         }
     },
@@ -275,12 +275,11 @@ export const contentGridData2 = [
         description: "Turn each finding into a routed, tracked corrective action.",
         image: "/images/solutions/by-industry/retail/data_that_never_leads_to_action_icon.svg",
         button: {
-            text: "Explore",
+            text: "Turn data into action",
             href: "/solutions/by-challenge/data-to-action",
         }
     },
 ]
-
 export const moduleStatsData = [
     {
         numberPrefix: "",

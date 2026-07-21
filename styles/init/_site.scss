@@ -47,7 +47,7 @@
         left: -7.5rem;
         background: var(--primary);
 
-        @media (width >= 1024px) {
+        @media (width >=1024px) {
             top: -10rem;
             left: -10rem;
         }
@@ -58,7 +58,7 @@
         right: -7.5rem;
         background: var(--secondary);
 
-        @media (width >= 1024px) {
+        @media (width >=1024px) {
             bottom: -10rem;
             right: -10rem;
         }
@@ -114,4 +114,16 @@
     font-size: 100%;
     line-height: 1;
     text-transform: uppercase;
+
+    @media (width >=1024px) {
+        width: 100%;
+        min-width: 4rem;
+        height: 100%;
+        min-height: 4rem;
+        aspect-ratio: 1/1;
+
+        span {
+            font-size: 1.25rem;
+        }
+    }
 }
