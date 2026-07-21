@@ -22,6 +22,9 @@ import "@/styles/main.scss";
 import { ReactLenis } from 'lenis/react'
 import 'lenis/dist/lenis.css'
 
+// Next
+import { Analytics } from "@vercel/analytics/next";
+
 // Components
 import Header from "@/components/layouts/header/header";
 import Footer from "@/components/layouts/footer/footer";
@@ -55,6 +58,8 @@ export default function RootLayout({ children }) {
         </div>
 
         <SanityLive />
+
+        <Analytics />
 
       </body>
 
