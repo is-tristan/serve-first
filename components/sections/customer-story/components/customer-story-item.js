@@ -31,7 +31,7 @@ export default function CustomerStoryItem({ item = {} }) {
 
                 <div className={styles.customerStoryMeta}>
 
-                    <Image src={item.companyImage} alt={item.companyName} width={48} height={48} />
+                    <Image src={item.companyImage} alt={item.companyName} width={48} height={48} sizes="48px" />
 
                     <div className={styles.customerStoryMetaItems}>
 
@@ -55,7 +55,7 @@ export default function CustomerStoryItem({ item = {} }) {
 
                     {item.reviewerImage ? (
 
-                        <Image src={item.reviewerImage} alt={item.reviewerName} width={48} height={48} />
+                        <Image src={item.reviewerImage} alt={item.reviewerName} width={48} height={48} sizes="48px" />
 
                     ) : (
 

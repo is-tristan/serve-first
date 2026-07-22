@@ -33,7 +33,7 @@ export default function ProductHighlight({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />
+                    <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />
 
                     {description && (<Text description={description} />)}
 

@@ -1,34 +1,38 @@
 export const logoData = [
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/alphega-pharmacy-logo.svg",
+        alt: "Alphega Pharmacy",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/aramark-logo.svg",
+        alt: "Aramark",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/auntie-annes-logo.svg",
+        alt: "Auntie Anne's",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/brentford-fc-logo.svg",
+        alt: "Brentford FC",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/burger-and-sauce-logo.svg",
+        alt: "Burger and Sauce",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/elior-logo.svg",
+        alt: "Elior",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
+        src: "/images/logos/spud-bros-logo.svg",
+        alt: "Spud Bros",
     },
     {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    }
+        src: "/images/logos/the-body-shop-logo.svg",
+        alt: "The Body Shop",
+    },
+    {
+        src: "/images/logos/topps-tiles-logo.svg",
+        alt: "Topps Tiles",
+    },
 ]

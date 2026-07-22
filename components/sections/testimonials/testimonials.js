@@ -35,11 +35,15 @@ export default function Testimonials({
 
             </div>
 
-            <div className={`container centered noPaddingTop`}>
+            {btnPrimary && (
 
-                {btnPrimary && (<Button text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className={`primary ${theme === "light" ? "colorPrimary" : undefined}`} />)}
+                <div className={`container centered noPaddingTop`}>
 
-            </div>
+                    <Button text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className={`primary ${theme === "light" ? "colorPrimary" : undefined}`} />
+
+                </div>
+
+            )}
 
         </section>
 

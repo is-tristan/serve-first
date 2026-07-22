@@ -29,7 +29,7 @@ export default function ChallengeFrame({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} hasFullStop={hasFullStop} />)}
+                    {title && (<Text headingClass={`sectionTitle sectionTitleContained colorPrimaryAlt`} title={title} hasFullStop={hasFullStop} />)}
 
                     {description && (<Text description={description} />)}
 

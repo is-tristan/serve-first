@@ -25,7 +25,7 @@ export default function ImageCol({ image, imageSizing, title }) {
             transition={{ duration: 0.5, delay: 1 }}
         >
 
-            <Image className={styles.bannerImage} src={image} alt={title} width={768} height={768} loading="eager" sizes="100%" style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }} priority />
+            <Image className={styles.bannerImage} src={image} alt={title} width={768} height={768} loading="eager" quality={90} sizes="(max-width: 1279px) 100vw, min(50vw, 768px)" style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }} priority />
 
         </motion.div>
 

@@ -29,10 +29,10 @@ export default function LogoBarCarousel({ data = [] }) {
                 options={{
                     type: "loop",
                     drag: "free",
-                    gap: "3rem",
+                    gap: "1rem",
                     arrows: false,
                     pagination: false,
-                    perPage: 3,
+                    perPage: 5,
                     perMove: 1,
                     pauseOnHover: false,
                     pauseOnFocus: false,
@@ -44,7 +44,7 @@ export default function LogoBarCarousel({ data = [] }) {
                         pauseOnHover: false,
                         pauseOnFocus: false,
                         rewind: false,
-                        speed: 0.5,
+                        speed: 0.4,
                     },
                     breakpoints: {
                         1023: {
@@ -56,7 +56,7 @@ export default function LogoBarCarousel({ data = [] }) {
                             },
                         },
                         767: {
-                            perPage: 1,
+                            perPage: 2,
                             gap: "1.5rem",
                             padding: {
                                 left: "5%",
@@ -71,7 +71,7 @@ export default function LogoBarCarousel({ data = [] }) {
 
                     <SplideSlide key={index} className={styles.logoCarouselItem}>
 
-                        <Image src={logo.src} alt={logo.alt} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ "objectFit": "cover" }} />
+                        <Image src={logo.src} alt={logo.alt} fill loading="lazy" sizes="(max-width: 767px) 40vw, (max-width: 1023px) 25vw, 15vw" />
 
                     </SplideSlide>
 

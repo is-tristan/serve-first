@@ -54,6 +54,8 @@ export default function HowItWorksItem({
                     width={imageWidth}
                     height={imageHeight}
                     loading="lazy"
+                    quality={90}
+                    sizes="(max-width: 1023px) 100vw, 50vw"
                     style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
                 />
 

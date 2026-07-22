@@ -2,6 +2,7 @@
 
 // Next
 import Image from "next/image";
+import Link from "next/link";
 
 // Imports
 import { useRef } from "react";
@@ -41,7 +42,15 @@ export default function IndustryCard({
 
                 <div className={styles.industryCardImage}>
 
-                    <Image src={image} alt={title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ "objectFit": "cover" }} />
+                    <Image
+                        src={image}
+                        alt={title}
+                        width={471}
+                        height={202}
+                        loading="lazy"
+                        quality={90}
+                        sizes="(max-width: 1023px) 100vw, 50vw"
+                    />
 
                 </div>
 
@@ -72,6 +81,8 @@ export default function IndustryCard({
                 </div>
 
             </div>
+
+            {button && (<Link href={button.href} target={button.target} className={`colLink`} aria-label={button.text} />)}
 
         </motion.div>
 

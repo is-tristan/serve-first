@@ -19,6 +19,7 @@ export default function Heading({
     descriptionTag = "p",
     description = null,
     descriptionClass = undefined,
+    htmlDescription = null,
     btnTextPrimary,
     btnLinkPrimary = "#",
     btnClassPrimary = "primary",
@@ -87,7 +88,7 @@ export default function Heading({
 
             )}
 
-            {description && (
+            {(description || htmlDescription) && (
 
                 <motion.div
                     animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
@@ -96,7 +97,7 @@ export default function Heading({
                     className={contentClass}
                 >
 
-                    {(() => {
+                    {description && (() => {
                         switch (descriptionTag) {
                             case "p":
                                 return <p className={descriptionClass} dangerouslySetInnerHTML={{ __html: descriptionContent }} />;
@@ -107,6 +108,9 @@ export default function Heading({
                         }
 
                     })()}
+
+                    {htmlDescription && (<div className={descriptionClass} dangerouslySetInnerHTML={{ __html: htmlDescription }} />)}
+
                 </motion.div>
 
             )}
@@ -117,7 +121,7 @@ export default function Heading({
                     className="buttons"
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
                     initial={{ opacity: 0, y: 16 }}
-                    transition={{ duration: 0.5, delay: description ? 0.5 : 0.25 }}
+                    transition={{ duration: 0.5, delay: description || htmlDescription ? 0.5 : 0.25 }}
                 >
 
                     {btnTextPrimary && (<Button text={btnTextPrimary} href={btnLinkPrimary} target={btnTargetPrimary} className={btnClassPrimary} />)}

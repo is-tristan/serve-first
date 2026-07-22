@@ -40,9 +40,18 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        aspect-ratio: 16/9;
         overflow: hidden;
+        width: 100%;
+        height: max-content;
         border-radius: var(--borderRadius);
+
+        img {
+            @media (width < 768px) {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
     }
 }
 
@@ -50,7 +59,7 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 0.75rem;
-    
+
     h3 {
         font-family: var(--text);
         font-weight: 500;

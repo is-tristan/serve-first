@@ -41,7 +41,8 @@ export default function HeaderAd({ ad }) {
                         alt={ad.title || "Header Ad"}
                         fill
                         loading="lazy"
-                        sizes="100%"
+                        quality={90}
+                        sizes="240px"
                     />
 
                 </div>

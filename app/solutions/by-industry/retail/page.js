@@ -12,7 +12,6 @@ import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
 
 // Data
 import {
-    logoData,
     challengeFrameData,
     howItWorksData,
     productHighlightData,
@@ -36,10 +35,7 @@ export default function Retail() {
                 imageSizing="Contain"
             />
 
-            <LogoBar
-                eyebrow="Trusted by"
-                data={logoData}
-            />
+            <LogoBar eyebrow="Trusted by" />
 
             <ChallengeFrame
                 eyebrow="The retail challenge"

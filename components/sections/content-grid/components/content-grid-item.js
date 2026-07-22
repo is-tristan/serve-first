@@ -40,7 +40,7 @@ export default function ContentGridItem({
 
                     <div className={styles.contentGridItemImage}>
 
-                        <Image src={item.image} alt={item.title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ "objectFit": "cover" }} />
+                        <Image src={item.image} alt={item.title} fill loading="lazy" quality={90} sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ "objectFit": "cover" }} />
 
                     </div>
 

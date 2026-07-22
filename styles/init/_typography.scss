@@ -36,14 +36,6 @@ h6 {
         -webkit-text-fill-color: transparent;
         color: var(--dark);
     }
-
-    &.darkHeadingGradient {
-        background: var(--darkHeadingGradient);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: var(--dark);
-    }
 }
 
 
@@ -72,7 +64,7 @@ h2 {
 
     &.sectionTitleContained {
         @media (width >=1024px) {
-            max-width: 20ch !important;
+            max-width: 25ch !important;
         }
     }
 }

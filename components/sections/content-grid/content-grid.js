@@ -35,7 +35,7 @@ export default function ContentGrid({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} />)}
+                    {title && (<Text headingClass={`sectionTitle sectionTitleContained colorPrimaryAlt`} title={title} />)}
 
                     {button && (<Button text={button.text} href={button.href} target={button.target} className="textLink colorPrimary" />)}
 

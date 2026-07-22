@@ -10,7 +10,7 @@ import styles from "@/styles/components/sections/logo-bar.module.scss";
 
 export default function LogoBar({
     backgroundColor = "bgLightAlt",
-    eyebrow = "- Logo Bar Component",
+    eyebrow = "Trusted by",
     data = logoData || []
 }) {
     return (

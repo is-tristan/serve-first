@@ -29,7 +29,7 @@ export default function PlatformStory({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />
+                    <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />
 
                 </div>
 

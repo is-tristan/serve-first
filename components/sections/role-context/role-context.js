@@ -35,7 +35,7 @@ export default function RoleContext({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle sectionTitleContained darkHeadingGradient`} title={title} description={description} />
+                    <Text headingClass={`sectionTitle sectionTitleContained colorPrimaryAlt`} title={title} description={description} />
 
                 </div>
 

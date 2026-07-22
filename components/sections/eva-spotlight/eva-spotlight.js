@@ -18,6 +18,7 @@ export default function EvaSpotlight({
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "titleSuffix": ".",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
+        "htmlDescription": "",
         "image": "/decoration/no-image-placeholder.webp",
         "imageWidth": 576,
         "imageHeight": 768,

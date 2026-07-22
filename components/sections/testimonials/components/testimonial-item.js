@@ -1,4 +1,5 @@
 // Components
+import Image from "next/image";
 import ReviewerInitials from "@/components/misc/reviewer-initials";
 
 // Styles
@@ -22,7 +23,8 @@ export default function TestimonialItem({
     rating,
     name,
     position,
-    quote
+    quote,
+    companyLogo = null
 }) {
     return (
 
@@ -42,7 +44,18 @@ export default function TestimonialItem({
 
             <div className={styles.testimonialMeta}>
 
-                <ReviewerInitials name={name} className={styles.testimonialMetaInitials} />
+                {companyLogo ? (
+
+                    <div className={styles.testimonialMetaCompanyLogo}>
+
+                        <Image src={companyLogo} alt={name} width={72} height={72} sizes="72px" />
+
+                    </div>
+
+                ) : (
+                    <ReviewerInitials name={name} className={styles.testimonialMetaInitials} />
+                )}
+
 
                 <div className={`${styles.testimonialMetaItems} ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>
 

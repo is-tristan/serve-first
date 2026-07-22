@@ -54,6 +54,8 @@ export default function FeaturedListItem({
                     width={imageWidth}
                     height={imageHeight}
                     loading="lazy"
+                    quality={90}
+                    sizes="(max-width: 1023px) 100vw, 50vw"
                     style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
                 />
             </div>
@@ -64,7 +66,7 @@ export default function FeaturedListItem({
 
                     {eyebrow && (<Eyebrow hasAnimation={false} textColor={`${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={eyebrow} />)}
 
-                    {title && (<h2 className={`sectionTitle ${theme === "primary" ? "colorLight" : "darkHeadingGradient"}`}>{title}</h2>)}
+                    {title && (<h2 className={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>{title}</h2>)}
 
                 </div>
 

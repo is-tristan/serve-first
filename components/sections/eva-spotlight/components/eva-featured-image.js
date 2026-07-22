@@ -33,8 +33,9 @@ export default function EvaFeaturedImage({
             <Image
                 src={featuredImage}
                 alt={title}
-                sizes="100%"
                 fill
+                quality={90}
+                sizes="(max-width: 1280px) 100vw, 1200px"
             />
 
         </motion.div>

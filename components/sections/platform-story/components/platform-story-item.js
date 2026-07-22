@@ -41,7 +41,16 @@ export default function PlatformStoryItem({
 
                         <div className={styles.platformStoryItemImage}>
 
-                            <Image src={image} alt={title} fill loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" />
+                            <Image
+                                src={image}
+                                alt={title}
+                                width={384}
+                                height={384}
+                                loading="lazy"
+                                quality={90}
+                                sizes="(max-width: 1023px) 100vw, 33vw"
+                                style={{ "objectFit": "contain" }}
+                            />
 
                         </div>
 

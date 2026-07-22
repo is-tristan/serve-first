@@ -23,7 +23,6 @@
 
     // Gradients
     --lightHeadingGradient: linear-gradient(to right, var(--light) 15%, rgba(var(--lightRgb), 0.5));
-    --darkHeadingGradient: linear-gradient(to right, var(--primaryAlt), rgba(var(--primaryAltRgb), 0.95), var(--dark));
 
     // Borders & Radius
     --btnRadius: 10rem;
@@ -41,5 +40,5 @@
     --mobileHeaderHeight: 4.5rem;
 
     // Layout
-    --layoutMaxWidth: 1440px;
+    --layoutMaxWidth: 1512px;
 }

@@ -40,7 +40,7 @@ export default function IndustryCards({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    <Text headingClass={`sectionTitle darkHeadingGradient`} title={title} description={description} descriptionClass={`fw400`} />
+                    <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} description={description} descriptionClass={`fw400`} />
 
                 </div>
 

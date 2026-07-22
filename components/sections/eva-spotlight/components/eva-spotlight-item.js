@@ -27,8 +27,10 @@ export default function EvaSpotlightItem({ item = {} }) {
                     <Image
                         src={item.image}
                         alt={item.title}
-                        width={item.imageWidth}
-                        height={item.imageHeight}
+                        width={item.imageWidth || 576}
+                        height={item.imageHeight || 768}
+                        quality={90}
+                        sizes="(max-width: 1023px) 100vw, 50vw"
                         style={{ "objectFit": item.imageSizing }}
                     />
 
@@ -59,6 +61,8 @@ export default function EvaSpotlightItem({ item = {} }) {
                 </div>
 
                 {item.description && (<p>{item.description}</p>)}
+
+                {item.htmlDescription && (<div dangerouslySetInnerHTML={{ "__html": item.htmlDescription }} />)}
 
                 {item.button && (
 

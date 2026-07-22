@@ -34,7 +34,7 @@ export default function Faq({
 
                     {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                    {title && (<Text headingClass={`sectionTitle darkHeadingGradient`} title={title} />)}
+                    {title && (<Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />)}
 
                 </div>
 

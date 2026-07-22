@@ -6,41 +6,6 @@ import {
     checkCircleBrokenIcon
 } from "@/utils/icons";
 
-export const logoData = [
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    },
-    {
-        src: "/decoration/logo-placeholder.svg",
-        alt: "Logo",
-    }
-]
-
 export const challengeFrameData = [
     {
         eyebrow: "01 | Food safety audits",

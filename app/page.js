@@ -1,21 +1,26 @@
+// React
+import { Suspense } from "react";
+
+// Components
 import Banner from "@/components/sections/banner/banner";
+import LogoBar from "@/components/sections/logo-bar/logo-bar";
 import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
-import FeatureList from "@/components/sections/feature-list/feature-list";
-import HowItWorks from "@/components/sections/how-it-works/how-it-works";
-import IndustryCards from "@/components/sections/industry-cards/industry-cards";
-import ModuleStats from "@/components/sections/module-stats/module-stats";
-import RoleContext from "@/components/sections/role-context/role-context";
-import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
-import CustomerStory from "@/components/sections/customer-story/customer-story";
 import Testimonials from "@/components/sections/testimonials/testimonials";
 import EvaSpotlight from "@/components/sections/eva-spotlight/eva-spotlight";
-import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
-import CtaBannerTwo from "@/components/sections/cta-banners/cta-banner-2";
 import ContentGrid from "@/components/sections/content-grid/content-grid";
-import Faq from "@/components/sections/faq/faq";
-import LogoBar from "@/components/sections/logo-bar/logo-bar";
-import CtaBannerContact from "@/components/sections/cta-banners/cta-banner-contact";
+import IndustryCards from "@/components/sections/industry-cards/industry-cards";
+import BlogGrid from "@/components/dynamic-sections/blog-grid";
+import IsLoading from "@/components/handlers/is-loading";
+import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+
+// Data
+import {
+  platformStoryData,
+  productHighlightData,
+  contentGridData,
+  industryCardsData,
+} from "./data.js";
 
 export default function Home() {
 
@@ -23,51 +28,83 @@ export default function Home() {
 
     <>
 
-      <Banner bannerType="home" />
-
-      <PlatformStory />
-
-      <ProductHighlight />
-
-      <FeatureList />
-
-      <FeatureList theme="primary" />
-
-      <HowItWorks />
-
-      <IndustryCards />
-
-      <ModuleStats />
-
-      <ModuleStats theme="primary" />
-
-      <RoleContext />
-
-      <ChallengeFrame />
-
-      <CustomerStory />
-
-      <Testimonials />
-
-      <Testimonials theme="primary" />
-
-      <EvaSpotlight />
-
-      <CtaBannerOne />
-
-      <CtaBannerOne theme="primary" />
-
-      <CtaBannerTwo />
-
-      <ContentGrid />
-
-      <Faq />
+      <Banner
+        eyebrow="Operational intelligence for customer experience"
+        title="Catch every issue before your customers feel it"
+        description="Serve First connects your customer, operational and market signals across every site, then turns them into the actions that put things right."
+        image="/images/home/home-cover.png"
+        imageSizing="Contain"
+        buttonSecondary={{
+          text: "See how it works",
+          href: "/how-it-works/capture",
+        }} />
 
       <LogoBar />
 
-      <CtaBannerContact theme="primary" />
+      <PlatformStory
+        eyebrow="- Lorem ipsum dolor sit amet."
+        title="The fastest way from feedback to fixed"
+        description={null}
+        data={platformStoryData}
+      />
 
-      <CtaBannerContact />
+      <ProductHighlight
+        eyebrow="One platform"
+        title="One connected picture"
+        description="The customer and the operation, finally in the same view."
+        linkText={null}
+        data={productHighlightData}
+      />
+
+      <Testimonials btnPrimary={null} />
+
+      <EvaSpotlight
+        eyebrow={null}
+        title={null}
+        description={null}
+        item={{
+          "eyebrow": "Meet EVA",
+          "title": "The always-on analyst for every site",
+          "description": null,
+          "htmlDescription": "<p><strong class='fw700'>EVA reads the signals across every site and hands you the next actions, no dashboard hunting.</strong></p> <p>EVA sits across every signal in one operating picture, finds what needs attention and tells you the action to take, where and why. No digging through dashboards to work out your next move.</p>",
+          "image": "/images/home/home-eva.png",
+          "imageWidth": 575,
+          "imageHeight": 576,
+          "imageSizing": "contain",
+          "button": {
+            "text": "Meet EVA",
+            "href": "/eva",
+          }
+        }} />
+
+      <ContentGrid
+        eyebrow="By challenge"
+        title="Solve the problem you came here with"
+        button={null}
+        data={contentGridData}
+      />
+
+      <IndustryCards
+        eyebrow="By industry"
+        title="Built for every multi-site business"
+        description="One platform, tuned to the standards and signals your sector runs on."
+        button={null}
+        data={industryCardsData}
+        btnPrimary={null}
+        btnSecondary={null}
+      />
+
+      <Suspense fallback={<IsLoading />}>
+
+        <BlogGrid />
+
+      </Suspense>
+
+      <CtaBannerOne
+        theme="primary"
+        title="See it on your sites"
+        description="A personalised walkthrough with your locations, teams and data."
+      />
 
     </>
 
