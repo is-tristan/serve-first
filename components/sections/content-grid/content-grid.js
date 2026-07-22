@@ -14,6 +14,8 @@ export default function ContentGrid({
     eyebrow = "- Content Grid Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     colCount = 4,
+    containerTopClass,
+    containerBottomClass,
     button = {
         text: "Lorem ipsum",
         href: "#",
@@ -29,7 +31,7 @@ export default function ContentGrid({
             data-name="content-grid"
         >
 
-            <div className="container noPaddingBottom">
+            <div className={`container noPaddingBottom ${containerTopClass}`}>
 
                 <div className="content">
 
@@ -45,7 +47,7 @@ export default function ContentGrid({
 
             {data.length > 0 && (
 
-                <div className={`container noPaddingTop ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`}>
+                <div className={`container noPaddingTop ${containerBottomClass} ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`}>
 
                     {data.map((item, index) => (
 

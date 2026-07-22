@@ -8,7 +8,7 @@ import { urlFor } from "@/sanity/lib/image"
 // Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
-export default async function BlogGrid({ eyebrow = "From the blog", title = "Worth a read" }) {
+export default async function BlogGrid({ eyebrow = "From the blog", title = "Worth a read", containerTopClass = "", containerBottomClass = "" }) {
 
     const blogs = await getBlogs()
 
@@ -33,6 +33,8 @@ export default async function BlogGrid({ eyebrow = "From the blog", title = "Wor
             eyebrow={eyebrow}
             title={title}
             colCount={3}
+            containerTopClass={containerTopClass}
+            containerBottomClass={containerBottomClass}
             button={{
                 text: "View all articles",
                 href: "/resources/blog",
