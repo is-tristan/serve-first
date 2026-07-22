@@ -50,6 +50,11 @@
         color: rgba(var(--primaryRgb), 0.875);
     }
 
+    &:focus,
+    &:active {
+        color: var(--primary);
+    }
+
     svg {
         width: auto;
         height: 100%;
