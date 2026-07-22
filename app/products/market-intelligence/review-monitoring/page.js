@@ -83,7 +83,7 @@ export default async function ReviewMonitoring() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask what your reviews really add up to overall",
                         "description": "Ask EVA what your reviews are saying across sites and get the themes behind your rating in plain English.",
                     "image": "/images/products/market-intelligence/review-monitoring/review-monitoring-eva.png",

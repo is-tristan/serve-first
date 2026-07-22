@@ -36,7 +36,7 @@ export default function NotFound() {
                 }}
                 buttonSecondary={{
                     text: "Talk to us",
-                    href: "/company/contact",
+                    href: "/company/contact-us",
                 }}
             />
 

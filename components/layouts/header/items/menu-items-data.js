@@ -45,7 +45,7 @@ export const menuItemsData = [
                 submenu: [
                     {
                         label: "CX Leaders",
-                        href: "/solutions/by-role/cx-leaders",
+                        href: "/solutions/by-role/cx-leader",
                     },
                     {
                         label: "Operations Directors",
@@ -195,7 +195,7 @@ export const menuItemsData = [
             },
             {
                 label: "Contact Us",
-                href: "/company/contact-us",
+                href: "/company/contact-us-us",
                 icon: contactUsIcon,
             },
         ],
@@ -216,7 +216,7 @@ export const menuItemsData = [
     },
     {
         label: "Meet EVA",
-        href: "#",
+        href: "/eva",
         icon: aiIcon,
     }
 ]

@@ -48,7 +48,7 @@ export const roleContextData = [
         description: "See which sites meet the standard and which are slipping, with the gap already routed as a task.",
         button: {
             text: "For ops directors",
-            href: "/solutions/by-role/operations-director",
+            href: "/solutions/by-role/operations-directors",
         }
     },
     {
@@ -57,7 +57,7 @@ export const roleContextData = [
         description: "See how standards at each site show up in customer sentiment, and where to focus next.",
         button: {
             text: "For CX leaders",
-            href: "/solutions/by-role/cx-leader",
+            href: "/solutions/by-role/cx-leaders",
         }
     },
     {

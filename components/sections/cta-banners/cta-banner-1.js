@@ -19,7 +19,7 @@ export default function CtaBannerOne({
     },
     buttonSecondary = {
         text: "Talk to us",
-        href: "/company/contact",
+        href: "/company/contact-us",
     }
 }) {
 

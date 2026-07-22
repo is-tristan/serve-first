@@ -34,14 +34,14 @@ export default async function FeedbackTerminals() {
         <>
 
             <Banner
-                eyebrow="Achieve Operational Excellence"
+                eyebrow="Customer experience"
                 title="Capture feedback the moment it happens"
                 description="Honest, in-the-moment reactions from every location, routed to the people who can fix them before a customer leaves unhappy."
                 image="/images/products/customer-experience/feedback-terminals/feedback-terminals-cover.png"
                 imageSizing="Contain"
                 buttonPrimary={{
                     text: "See it in action",
-                    href: "/how-it-works/analyse",
+                    href: "/get-a-demo",
                 }}
                 buttonSecondary={{
                     text: null
@@ -77,7 +77,7 @@ export default async function FeedbackTerminals() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask what your scores are really telling you",
                     "description": "EVA reads every terminal response across your estate and answers, in plain English, what is driving your scores.",
                     "image": "/images/products/customer-experience/feedback-terminals/feedback-terminals-eva.png",

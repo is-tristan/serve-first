@@ -14,7 +14,7 @@ export default function EvaSpotlight({
     featuredImage,
     aspectRatio = "16/9",
     item = {
-        "eyebrow": "EVA AI",
+        "eyebrow": "EVA",
         "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
         "titleSuffix": ".",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",

@@ -70,7 +70,7 @@ export default async function MartynsLaw() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask exactly where each venue really stands",
                     "description": "Ask EVA where each venue stands on compliance and get an evidence-backed answer drawn from your records.",
                     "image": "/images/products/operational-excellence/martyns-law/martyns-law-eva.png",

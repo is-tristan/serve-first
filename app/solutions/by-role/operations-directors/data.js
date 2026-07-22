@@ -105,7 +105,7 @@ export const productHighlightData = [
     },
     {
         icon: aiIcon,
-        eyebrow: "EVA AI",
+        eyebrow: "EVA",
         title: "Ask how the estate is doing, get next actions.",
         linkText: "Meet EVA",
         link: "/eva",

@@ -28,7 +28,7 @@ export const roleContextData = [
     },
     {
         icon: checkCircleBrokenIcon,
-        title: "Proof it improved",
+        title: "Showcase improvements",
         description: "See the trend move after the fix, with action and result side by side, so you can prove improvement.",
     }
 ]
@@ -90,7 +90,7 @@ export const productHighlightData = [
     },
     {
         icon: aiIcon,
-        eyebrow: "EVA AI",
+        eyebrow: "EVA",
         title: "Ask what your scores are really telling you.",
         linkText: "Meet EVA",
         link: "/eva",

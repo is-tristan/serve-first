@@ -83,7 +83,7 @@ export default async function KnowledgeBase() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask, and get the answer from your own docs",
                     "description": "Ask EVA a policy or procedure question and get the right answer, cited straight from your documentation.",
                     "image": "/images/products/operational-excellence/knowledge-base/knowledge-base-eva.png",

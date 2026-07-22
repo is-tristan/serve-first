@@ -97,7 +97,7 @@ export const productHighlightData = [
     },
     {
         icon: aiIcon,
-        eyebrow: "EVA AI",
+        eyebrow: "EVA",
         title: "Ask which sites are due or at risk, fast.",
         linkText: "Meet EVA",
         link: "/eva",

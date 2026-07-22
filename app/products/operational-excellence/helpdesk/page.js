@@ -83,7 +83,7 @@ export default async function HelpDesk() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask what your tickets are really telling you",
                     "description": "Ask EVA about ticket volumes, resolution times and themes, and get a clear answer without building a report.",
                     "image": "/images/products/operational-excellence/helpdesk/helpdesk-eva.png",

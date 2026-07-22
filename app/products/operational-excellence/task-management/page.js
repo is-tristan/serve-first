@@ -83,7 +83,7 @@ export default async function TaskManagement() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask what is really still outstanding now",
                     "description": "Ask EVA what is outstanding across your sites and get a clear picture of what still needs to happen.",
                     "image": "/images/products/operational-excellence/task-management/task-management-eva.png",

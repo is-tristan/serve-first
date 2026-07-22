@@ -49,7 +49,7 @@ export const roleContextData = [
         description: "Failed checks become corrective tasks with owners and due dates, closed and verified.",
         button: {
             text: "For ops directors",
-            href: "/solutions/by-role/operations-director",
+            href: "/solutions/by-role/operations-directors",
         }
     },
     {
@@ -58,7 +58,7 @@ export const roleContextData = [
         description: "Customer issues route straight to the site that can fix them, tracked through to done.",
         button: {
             text: "For CX leaders",
-            href: "/solutions/by-role/cx-leader",
+            href: "/solutions/by-role/cx-leaders",
         }
     },
     {
@@ -108,7 +108,7 @@ export const howItWorksData = [
 export const productHighlightData = [
     {
         icon: aiIcon,
-        eyebrow: "EVA Ai",
+        eyebrow: "EVA",
         title: "Names the next action, with the reason.",
         linkText: "Meet EVA",
         link: "/eva",

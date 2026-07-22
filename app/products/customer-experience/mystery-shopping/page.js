@@ -83,7 +83,7 @@ export default async function MysteryShopping() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask what your visits are really revealing",
                         "description": "Ask EVA what your visits reveal across the estate and get a clear, evidence-backed answer in seconds.",
                     "image": "/images/products/customer-experience/mystery-shopping/mystery-shopping-eva.png",

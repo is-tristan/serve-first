@@ -8,21 +8,6 @@
     border: 1px solid var(--border);
     background-color: var(--light);
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
-
-    &:nth-child(even) {
-        .challengeFrameEyebrow span {
-            color: var(--secondary);
-        }
-
-        .challengeFrameFooter [data-name="challengeFrameButton"] {
-            color: var(--secondary);
-        }
-
-        .challengeFrameTags .challengeFrameTag {
-            background: rgba(var(--secondaryRgb), 0.133);
-            color: var(--secondary);
-        }
-    }
 }
 
 .challengeFrameEyebrow {

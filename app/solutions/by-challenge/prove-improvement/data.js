@@ -49,7 +49,7 @@ export const roleContextData = [
         description: "Show standards rising site by site, with the corrective work that drove them documented.",
         button: {
             text: "For ops directors",
-            href: "/solutions/by-role/operations-director",
+            href: "/solutions/by-role/operations-directors",
         }
     },
     {
@@ -58,7 +58,7 @@ export const roleContextData = [
         description: "Show sentiment improving and tie it to the fixes behind it, not just the trend line.",
         button: {
             text: "For CX leaders",
-            href: "/solutions/by-role/cx-leader",
+            href: "/solutions/by-role/cx-leaders",
         }
     },
     {
@@ -108,7 +108,7 @@ export const howItWorksData = [
 export const productHighlightData = [
     {
         icon: aiIcon,
-        eyebrow: "EVA Ai",
+        eyebrow: "EVA",
         title: "Ask what changed and why, in plain English.",
         linkText: "Meet EVA",
         link: "/eva",

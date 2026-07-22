@@ -28,7 +28,7 @@ export default function Banner({
     },
     buttonSecondary = {
         text: "Talk to us",
-        href: "/company/contact",
+        href: "/company/contact-us",
     },
 }) {
 

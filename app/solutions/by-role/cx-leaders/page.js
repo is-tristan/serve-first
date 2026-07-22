@@ -35,7 +35,6 @@ export default function CXLeader() {
             <RoleContext
                 eyebrow="Built for CX leaders"
                 title="Not measuring experience. Improving it"
-                description="If you own customer experience across a multi-site business, you already have scores. What you need is to see what is behind them and put it right, everywhere."
                 btnPrimary={null}
                 data={roleContextData}
             />

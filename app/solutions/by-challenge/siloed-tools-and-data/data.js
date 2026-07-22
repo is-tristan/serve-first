@@ -49,7 +49,7 @@ export const roleContextData = [
         description: "One view of audits, tasks and performance across the estate, without stitching exports together.",
         button: {
             text: "For ops directors",
-            href: "/solutions/by-role/operations-director",
+            href: "/solutions/by-role/operations-directors",
         }
     },
     {
@@ -58,7 +58,7 @@ export const roleContextData = [
         description: "Customer feedback connected to the operation behind it, so the cause of a dip is visible.",
         button: {
             text: "For CX leaders",
-            href: "/solutions/by-role/cx-leader",
+            href: "/solutions/by-role/cx-leaders",
         }
     },
     {

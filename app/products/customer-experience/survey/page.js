@@ -85,7 +85,7 @@ export default async function Survey() {
                 title={null}
                 description={null}
                 item={{
-                    "eyebrow": "EVA AI",
+                    "eyebrow": "EVA",
                     "title": "Ask what your customers are really saying",
                     "description": "EVA reads every survey response as it lands and tells you, in plain English, what your customers are saying.",
                     "image": "/images/products/customer-experience/survey/survey-eva-ai.png",

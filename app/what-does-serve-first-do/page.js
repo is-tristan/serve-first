@@ -50,7 +50,7 @@ export default function WhatDoesServeFirstDo() {
             />
 
             <EvaSpotlight
-                eyebrow="EVA AI"
+                eyebrow="EVA"
                 title="The intelligence layer that reads every signal"
                 description="EVA reads feedback and operational data as it arrives, clusters themes, scores sentiment and writes plain-English summaries, so teams know what matters without reading dashboards."
                 featuredImage="/decoration/no-image-placeholder.webp"
