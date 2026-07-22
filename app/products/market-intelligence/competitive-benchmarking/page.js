@@ -1,0 +1,158 @@
+// React
+import { Suspense } from "react";
+
+// Components
+import Banner from "@/components/sections/banner/banner";
+import FeatureList from "@/components/sections/feature-list/feature-list";
+import HowItWorks from "@/components/sections/how-it-works/how-it-works";
+import RoleContext from "@/components/sections/role-context/role-context";
+import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
+import EvaSpotlight from "@/components/sections/eva-spotlight/eva-spotlight";
+import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
+import ContentGrid from "@/components/sections/content-grid/content-grid";
+import BlogGrid from "@/components/dynamic-sections/blog-grid";
+import Testimonials from "@/components/sections/testimonials/testimonials";
+import FAQ from "@/components/sections/faq/faq";
+import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import IsLoading from "@/components/handlers/is-loading";
+
+// Data
+import {
+    howItWorksData,
+    featureListData,
+    roleContextData,
+    challengeFrameData,
+    productHighlightData,
+    contentGridData,
+    contentGridData2,
+    testimonialData,
+    faqData
+} from "./data";
+
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/products/market-intelligence/review-monitoring");
+
+export default async function ReviewMonitoring() {
+
+    return (
+
+        <>
+
+            <Banner
+                eyebrow="Market intelligence platform"
+                title="See how each of your sites compares to the competition next door"
+                description="Serve First looks at the public reviews for your locations and their nearby rivals, then shows you, site by site, where you are ahead, where you are behind and what is driving the difference."
+                image="/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-cover.png"
+                imageSizing="Contain"
+                buttonPrimary={{
+                    text: "See it in action",
+                    href: "/get-a-demo",
+                }}
+                buttonSecondary={{
+                    text: null
+                }}
+            />
+
+            {/* <FeatureList
+                data={featureListData}
+            />
+
+            <RoleContext
+                eyebrow="Review monitoring capability"
+                title="Stay on top of every review"
+                description="See every review from across the web in one place, reply without switching tools, and catch a drop in sentiment while you can still act."
+                data={roleContextData}
+                btnPrimary={{
+                    text: "Get a demo",
+                    href: "/get-a-demo",
+                }}
+            />
+
+            <HowItWorks
+                eyebrow="How monitoring works"
+                title="From public review to resolved issue"
+                description="Turn public feedback into operational action."
+                data={howItWorksData}
+            />
+
+            <ChallengeFrame
+                eyebrow="Common challenges"
+                title="Reviews everywhere, but oversight nowhere"
+                data={challengeFrameData}
+            />
+
+            <EvaSpotlight
+                eyebrow={null}
+                title={null}
+                description={null}
+                item={{
+                    "eyebrow": "EVA",
+                    "title": "Ask what your reviews really add up to overall",
+                        "description": "Ask EVA what your reviews are saying across sites and get the themes behind your rating in plain English.",
+                    "image": "/images/products/market-intelligence/review-monitoring/review-monitoring-eva.png",
+                    "imageWidth": 768,
+                    "imageHeight": 768,
+                    "imageSizing": "contain",
+                    "button": {
+                        "text": "Meet EVA",
+                        "href": "/eva",
+                    }
+                }}
+            />
+
+            <ProductHighlight
+                eyebrow="More from Serve First"
+                title="The toolkit for customer experience leaders"
+                description="The functions CX leaders rely on most, connected so insight turns into action."
+                linkText={null}
+                colCount={4}
+                data={productHighlightData}
+            />
+
+            <ContentGrid
+                eyebrow="By industry"
+                title="See it in your sector"
+                button={null}
+                colCount={3}
+                data={contentGridData}
+            />
+
+            <ContentGrid
+                eyebrow="By challenge"
+                title="Solve the problem you came here with"
+                button={null}
+                data={contentGridData2}
+            />
+
+            <Suspense fallback={<IsLoading />}>
+
+                <BlogGrid />
+
+            </Suspense>
+
+            <Testimonials
+                theme="primary"
+                data={testimonialData}
+                btnPrimary={null}
+            />
+
+            <FAQ
+                eyebrow="Common questions"
+                title="Review monitoring, answered"
+                button={null}
+                data={faqData}
+            />
+
+            <CtaBannerOne
+                theme="primary"
+                title="See what Serve First can do for your reputation"
+                description="Book a personalised demo and we will show you every review across your estate, gathered in one place."
+            /> */}
+
+        </>
+
+    )
+
+}

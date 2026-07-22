@@ -86,13 +86,13 @@ export default function HeaderMenu({ menuAds }) {
 
                                 <div className={`${styles.menuItem} ${styles.hasSubmenu}`}>
 
-                                    <Link href={item.href} key={item.label} className={styles.menuItemLink}>
+                                    <div key={item.label} className={`${styles.menuItemLink}`} style={{ cursor: "pointer" }} aria-label={`Open ${item.label} Submenu`}>
 
                                         <span>{item.label}</span>
 
                                         <span className={styles.menuItemIcon} dangerouslySetInnerHTML={{ __html: chevronDown }} />
 
-                                    </Link>
+                                    </div>
 
                                 </div>
 
