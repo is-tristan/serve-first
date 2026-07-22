@@ -45,7 +45,7 @@ export const menuItemsData = [
                 submenu: [
                     {
                         label: "CX Leaders",
-                        href: "/solutions/by-role/cx-leader",
+                        href: "/solutions/by-role/cx-leaders",
                     },
                     {
                         label: "Operations Directors",
