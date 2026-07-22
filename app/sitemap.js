@@ -1,0 +1,167 @@
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+
+const staticRoutes = [
+    {
+        path: "/",
+        changeFrequency: "weekly",
+        priority: 1,
+    },
+    {
+        path: "/what-does-serve-first-do",
+        changeFrequency: "monthly",
+        priority: 0.9,
+    },
+    {
+        path: "/eva",
+        changeFrequency: "monthly",
+        priority: 0.9,
+    },
+    {
+        path: "/get-a-demo",
+        changeFrequency: "monthly",
+        priority: 0.9,
+    },
+    {
+        path: "/company/about",
+        changeFrequency: "monthly",
+        priority: 0.7,
+    },
+    {
+        path: "/company/contact-us",
+        changeFrequency: "monthly",
+        priority: 0.7,
+    },
+    {
+        path: "/resources/blog",
+        changeFrequency: "weekly",
+        priority: 0.6,
+    },
+    {
+        path: "/resources/media",
+        changeFrequency: "weekly",
+        priority: 0.6,
+    },
+    {
+        path: "/solutions/by-role/cx-leaders",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-role/operations-directors",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-role/compliance-manager",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-industry/retail",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-industry/leisure-and-hospitality",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-industry/restaurants",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-industry/healthcare",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-industry/facilities-management",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-industry/venues-and-events",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-challenge/inconsistent-standards",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-challenge/siloed-tools-and-data",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-challenge/prove-improvement",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/solutions/by-challenge/data-to-action",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/customer-experience/feedback-terminals",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/customer-experience/survey",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/customer-experience/mystery-shopping",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/market-intelligence/review-monitoring",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/operational-excellence/audits",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/operational-excellence/task-management",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/operational-excellence/helpdesk",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/operational-excellence/knowledge-base",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/operational-excellence/martyns-law",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+]
+
+export default function sitemap() {
+
+    const lastModified = new Date()
+
+    return staticRoutes.map((route) => ({
+        url: `${siteUrl}${route.path === "/" ? "" : route.path}`,
+        lastModified,
+        changeFrequency: route.changeFrequency,
+        priority: route.priority,
+    }))
+
+}

@@ -18,6 +18,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/solutions/by-challenge/inconsistent-standards");
+
 export default function InconsistentStandards() {
 
     return (

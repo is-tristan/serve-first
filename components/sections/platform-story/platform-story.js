@@ -52,6 +52,9 @@ export default function PlatformStory({
                             index={index}
                             eyebrow={item.eyebrow}
                             image={item.image}
+                            imageWidth={item.imageWidth}
+                            imageHeight={item.imageHeight}
+                            imageSizing={item.imageSizing}
                             title={item.title}
                             description={item.description}
                             list={item.list}

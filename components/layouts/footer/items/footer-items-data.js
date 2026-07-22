@@ -1,55 +1,71 @@
 // Footer Items
 export const company = {
-    title: "How It Works",
+    title: "By Industries",
     items: [
         {
-            label: "Capture",
-            href: "/how-it-works/capture"
+            label: "Retail",
+            href: "/solutions/by-industry/retail",
         },
         {
-            label: "Analyse",
-            href: "/how-it-works/analyse"
+            label: "Leisure and Hospitality",
+            href: "/solutions/by-industry/leisure-and-hospitality",
         },
         {
-            label: "Action",
-            href: "/how-it-works/action"
-        }
+            label: "Restaurants",
+            href: "/solutions/by-industry/restaurants",
+        },
+        {
+            label: "Healthcare",
+            href: "/solutions/by-industry/healthcare",
+        },
+        {
+            label: "Facilities Management",
+            href: "/solutions/by-industry/facilities-management",
+        },
+        {
+            label: "Venues and Events",
+            href: "/solutions/by-industry/venues-and-events",
+        },
     ]
 }
 
 export const solutions = {
-    title: "Solutions",
+    title: "By Role",
     items: [
         {
-            label: "By Role",
-            href: "/solutions/by-role"
+            label: "CX Leaders",
+            href: "/solutions/by-role/cx-leader",
         },
         {
-            label: "By Industry",
-            href: "/solutions/by-industry"
+            label: "Operations Directors",
+            href: "/solutions/by-role/operations-directors",
         },
         {
-            label: "By Challenge",
-            href: "/solutions/by-challenge"
-        }
+            label: "Compliance Manager",
+            href: "/solutions/by-role/compliance-manager",
+        },
     ]
 }
 
 export const products = {
-    title: "Products",
+    title: "By Challenge",
     items: [
         {
-            label: "Customer Experience",
-            href: "/products/customer-experience"
+            label: "Inconsistent standards",
+            href: "/solutions/by-challenge/inconsistent-standards",
         },
         {
-            label: "Marketing Intelligence",
-            href: "/products/market-intelligence"
+            label: "Siloed tools and data",
+            href: "/solutions/by-challenge/siloed-tools-and-data",
         },
         {
-            label: "Operational Excellence",
-            href: "/products/operational-excellence"
-        }
+            label: "Proof of improvement",
+            href: "/solutions/by-challenge/prove-improvement",
+        },
+        {
+            label: "Data to action",
+            href: "/solutions/by-challenge/data-to-action",
+        },
     ]
 }
 
@@ -57,36 +73,48 @@ export const explore = {
     title: "Explore",
     items: [
         {
-            label: "EVA",
-            href: "#",
+            label: "Meet EVA",
+            href: "/eva",
         },
         {
-            label: "Company",
-            href: "#",
+            label: "About Us",
+            href: "/company/about-us",
         },
         {
-            label: "Resources",
-            href: "#",
-        }
+            label: "What We Do",
+            href: "/what-does-serve-first-do",
+        },
+        {
+            label: "Contact Us",
+            href: "/company/contact-us-us",
+        },
+        {
+            label: "Blog",
+            href: "/resources/blog",
+        },
+        {
+            label: "Media",
+            href: "/resources/media",
+        },
     ]
 }
 
 export const footerPolicyItems = [
     {
         label: "Privacy Policy",
-        href: "/privacy-policy"
+        href: "/legal/privacy-policy"
     },
     {
         label: "Terms & Conditions",
-        href: "/terms-and-conditions"
+        href: "/legal/terms-and-conditions"
     },
     {
         label: "Accessibility",
-        href: "/accessibility"
+        href: "/legal/accessability"
     },
     {
         label: "Sitemap",
-        href: "/sitemap"
+        href: "/sitemap.xml"
     }
 ]
 

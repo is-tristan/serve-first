@@ -22,6 +22,11 @@ import {
   industryCardsData,
 } from "./data.js";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/");
+
 export default function Home() {
 
   return (
@@ -42,7 +47,7 @@ export default function Home() {
       <LogoBar />
 
       <PlatformStory
-        eyebrow="- Lorem ipsum dolor sit amet."
+        eyebrow={null}
         title="The fastest way from feedback to fixed"
         description={null}
         data={platformStoryData}

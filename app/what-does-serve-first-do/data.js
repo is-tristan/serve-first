@@ -1,7 +1,10 @@
 export const platformStoryData = [
     {
         eyebrow: "01 | Capture",
-        image: "/decoration/no-image-placeholder.webp",
+        image: "/images/home/home-capture.png",
+        imageWidth: 768,
+        imageHeight: 384,
+        imageSizing: "cover",
         title: "Capture",
         description: "Bring together every customer, operational and market signal, from surveys and audits to mystery shopping and reviews.",
         list: [
@@ -17,14 +20,17 @@ export const platformStoryData = [
         ],
         button: [
             {
-                text: "Learn more",
+                text: "See how it works",
                 href: "/how-it-works/capture",
             }
         ]
     },
     {
         eyebrow: "02 | Analyse",
-        image: "/decoration/no-image-placeholder.webp",
+        image: "/images/home/home-analyse.png",
+        imageWidth: 768,
+        imageHeight: 384,
+        imageSizing: "cover",
         title: "Analyse",
         description: "Understand the patterns, risks and root causes behind the data, not just what was reported, across every site, region and team.",
         list: [
@@ -32,7 +38,7 @@ export const platformStoryData = [
                 text: "Trends, risks and location-level performance",
             },
             {
-                text: "Competitive benchmarking and reputation",
+                text: "Competitive benchmarking and reputation ",
             },
             {
                 text: "Plain-English summaries from EVA",
@@ -40,19 +46,22 @@ export const platformStoryData = [
         ],
         button: [
             {
-                text: "Learn more",
+                text: "See how it works",
                 href: "/how-it-works/analyse",
             }
         ]
     },
     {
         eyebrow: "03 | Action",
-        image: "/decoration/no-image-placeholder.webp",
+        image: "/images/home/home-action.png",
+        imageWidth: 768,
+        imageHeight: 384,
+        imageSizing: "cover",
         title: "Action",
         description: "Turn insight into assigned tasks, workflows and training, with proof of completion.",
         list: [
             {
-                text: " Tasks routed to the right person",
+                text: "Tasks routed to the right person",
             },
             {
                 text: "Event-based workflows and training links",
@@ -63,19 +72,21 @@ export const platformStoryData = [
         ],
         button: [
             {
-                text: "Learn more",
+                text: "See how it works",
                 href: "/how-it-works/action",
             }
         ]
-    },
-];
+    }
+]
 
 export const featureListData = [
     {
         eyebrow: "One connected platform",
         title: "Everything that shapes the customer experience, in one place",
         description: "Most businesses run these in separate tools. Serve First connects all four, so feedback, standards, reputation and data work as one picture.",
-        image: "/decoration/no-image-placeholder.webp",
+        image: "/images/what-does-serve-first-do/wdsfd-feature-list-image.png",
+        imageWidth: 567,
+        imageHeight: 567,
         list: [
             {
                 text: "<span><strong>Brand promise:</strong> Mystery shopping and service evaluations</span>",
@@ -91,7 +102,8 @@ export const featureListData = [
             },
         ],
         button: {
-            text: null
+            text: "See it in action",
+            href: "/get-a-demo",
         }
     }
 ]
@@ -203,6 +215,6 @@ export const faqData = [
     },
     {
         question: "What is Martyn's Law and does Serve First help with compliance?",
-        answer: "Logo, nav, Privacy / Terms / Cookies, copyright"
+        answer: "Martyn's Law is UK legislation that requires qualifying premises and events to assess and prepare for terrorist threats. Serve First supports compliance by managing the assessments, checks and actions involved, and tracking proof of completion alongside the rest of a location's operational standards."
     },
 ]

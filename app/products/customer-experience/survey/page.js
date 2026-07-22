@@ -31,6 +31,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/products/customer-experience/survey");
+
 export default async function Survey() {
 
     return (
@@ -45,7 +50,7 @@ export default async function Survey() {
                 imageSizing="Contain"
                 buttonPrimary={{
                     text: "See it in action",
-                    href: "/how-it-works/analyse",
+                    href: "/get-a-demo",
                 }}
                 buttonSecondary={{
                     text: null

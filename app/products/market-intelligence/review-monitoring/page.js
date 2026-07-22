@@ -29,6 +29,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/products/market-intelligence/review-monitoring");
+
 export default async function ReviewMonitoring() {
 
     return (
@@ -43,7 +48,7 @@ export default async function ReviewMonitoring() {
                 imageSizing="Contain"
                 buttonPrimary={{
                     text: "See it in action",
-                    href: "/how-it-works/analyse",
+                    href: "/get-a-demo",
                 }}
                 buttonSecondary={{
                     text: null

@@ -54,9 +54,10 @@
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3),
-    &:nth-child(4) {
+    &:nth-child(4),
+    &:nth-child(5) {
         @media (width >=1280px) {
-            padding-right: 3rem;
+            padding-right: 1.5rem;
             border-right: 1px solid rgba(var(--primaryAltRgb), 0.15);
         }
     }

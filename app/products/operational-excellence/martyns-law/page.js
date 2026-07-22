@@ -27,6 +27,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/products/operational-excellence/martyns-law");
+
 export default async function MartynsLaw() {
 
     return (
@@ -41,7 +46,7 @@ export default async function MartynsLaw() {
                 imageSizing="Contain"
                 buttonPrimary={{
                     text: "See it in action",
-                    href: "/how-it-works/analyse",
+                    href: "/get-a-demo",
                 }}
                 buttonSecondary={{
                     text: null

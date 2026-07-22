@@ -1,5 +1,4 @@
 import {
-    checkCircleBrokenIcon,
     messageAlertSquareIcon,
     shoppingBagSimpleIcon,
     messageSmileSquareIcon,
@@ -11,6 +10,9 @@ export const platformStoryData = [
     {
         eyebrow: "01 | Capture",
         image: "/images/home/home-capture.png",
+        imageWidth: 768,
+        imageHeight: 384,
+        imageSizing: "cover",
         title: "Capture every signal",
         description: "From every site and channel, in real time.",
         list: [],
@@ -24,6 +26,9 @@ export const platformStoryData = [
     {
         eyebrow: "02 | Analyse",
         image: "/images/home/home-analyse.png",
+        imageWidth: 768,
+        imageHeight: 384,
+        imageSizing: "cover",
         title: "Analyse with EVA",
         description: "Patterns, risks and root causes, in plain English.",
         list: [],
@@ -38,6 +43,9 @@ export const platformStoryData = [
     {
         eyebrow: "03 | Action",
         image: "/images/home/home-action.png",
+        imageWidth: 768,
+        imageHeight: 384,
+        imageSizing: "cover",
         title: "Action on the frontline",
         description: "Tasks routed to whoever can resolve it.",
         list: [],
@@ -50,6 +58,7 @@ export const platformStoryData = [
         ]
     }
 ]
+
 
 export const productHighlightData = [
     {

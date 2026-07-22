@@ -21,6 +21,11 @@ import {
     faqData,
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/solutions/by-industry/leisure-and-hospitality");
+
 export default function LeisureAndHospitality() {
 
     return (

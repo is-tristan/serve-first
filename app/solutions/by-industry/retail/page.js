@@ -21,6 +21,11 @@ import {
     faqData,
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/solutions/by-industry/retail");
+
 export default function Retail() {
 
     return (

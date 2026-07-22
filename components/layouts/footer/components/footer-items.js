@@ -10,11 +10,11 @@ import FooterSocialItems from "./footer-social-items";
 import styles from "@/styles/components/layouts/footer/footer.module.scss";
 
 // Data
-import { company, solutions, products } from "../items/footer-items-data";
+import { company, solutions, products, explore } from "../items/footer-items-data";
 
 export default function FooterItems() {
 
-    const footerItems = [company, solutions, products];
+    const footerItems = [company, solutions, products, explore];
 
     return (
 

@@ -18,6 +18,9 @@ export default function PlatformStoryItem({
     index = 0,
     eyebrow,
     image,
+    imageWidth = 384,
+    imageHeight = 384,
+    imageSizing = "contain",
     title,
     description,
     list = [],
@@ -44,12 +47,12 @@ export default function PlatformStoryItem({
                             <Image
                                 src={image}
                                 alt={title}
-                                width={384}
-                                height={384}
+                                width={imageWidth}
+                                height={imageHeight}
                                 loading="lazy"
                                 quality={90}
                                 sizes="(max-width: 1023px) 100vw, 33vw"
-                                style={{ "objectFit": "contain" }}
+                                style={{ "objectFit": imageSizing }}
                             />
 
                         </div>

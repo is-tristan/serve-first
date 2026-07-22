@@ -18,6 +18,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/solutions/by-challenge/siloed-tools-and-data");
+
 export default function SiloedToolsAndData() {
 
     return (

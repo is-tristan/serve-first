@@ -27,6 +27,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/products/customer-experience/feedback-terminals");
+
 export default async function FeedbackTerminals() {
 
     return (

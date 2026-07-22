@@ -14,6 +14,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/eva");
+
 export default function Eva() {
 
     return (

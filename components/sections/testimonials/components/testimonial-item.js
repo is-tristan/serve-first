@@ -48,7 +48,14 @@ export default function TestimonialItem({
 
                     <div className={styles.testimonialMetaCompanyLogo}>
 
-                        <Image src={companyLogo} alt={name} width={72} height={72} sizes="72px" />
+                        <Image
+                            src={companyLogo}
+                            alt={name}
+                            width={72}
+                            height={72}
+                            sizes="72px"
+                            style={{ filter: theme === "primary" ? "invert(1) saturate(0) brightness(2)" : "none" }}
+                        />
 
                     </div>
 

@@ -1,0 +1,13 @@
+.privacyPolicyContainer {
+    gap: 1.25rem;
+}
+
+.privacyPolicySection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    p {
+        margin-bottom: 0;
+    }
+}

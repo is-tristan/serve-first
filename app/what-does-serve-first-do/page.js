@@ -9,7 +9,18 @@ import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
 import Faq from "@/components/sections/faq/faq";
 
 // Data
-import { platformStoryData, featureListData, challengeFrameData, moduleStatsData, faqData } from "./data";
+import {
+    platformStoryData,
+    featureListData,
+    challengeFrameData,
+    moduleStatsData,
+    faqData
+} from "./data";
+
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/what-does-serve-first-do");
 
 export default function WhatDoesServeFirstDo() {
 
@@ -20,6 +31,7 @@ export default function WhatDoesServeFirstDo() {
             <Banner
                 eyebrow="Serve First explained"
                 title="What does Serve First do?"
+                image={null}
                 hasFullStop={false}
                 description="The Customer Experience and Operational Intelligence platform for multi-location businesses in retail, hospitality, leisure and healthcare. We capture, analyse and action every signal across every location."
                 trustLine="Trusted by retail, hospitality, leisure and healthcare brands across the UK."
@@ -50,14 +62,28 @@ export default function WhatDoesServeFirstDo() {
             />
 
             <EvaSpotlight
-                eyebrow="EVA"
-                title="The intelligence layer that reads every signal"
-                description="EVA reads feedback and operational data as it arrives, clusters themes, scores sentiment and writes plain-English summaries, so teams know what matters without reading dashboards."
-                featuredImage="/decoration/no-image-placeholder.webp"
+                eyebrow={null}
+                title={null}
+                description={null}
+                item={{
+                    "eyebrow": "Meet EVA",
+                    "title": "The intelligence layer that reads every signal",
+                    "titleSuffix": ".",
+                    "description": "",
+                    "htmlDescription": "<p>EVA reads feedback and operational data as it arrives, clusters themes, scores sentiment and writes plain-English summaries, so teams know what matters without reading dashboards.</p> <p> <strong class='fw700'>Example input:</strong> <br> EVA: Manchester Piccadilly is down 8 points. The main driver is queue time, mentioned in 63% of negative feedback this week. I have recommended actions ready. </p>",
+                    "image": "/images/what-does-serve-first-do/wdsfd-eva.png",
+                    "imageWidth": 576,
+                    "imageHeight": 576,
+                    "imageSizing": "contain",
+                    "button": {
+                        "text": "Explore EVA",
+                        "href": "/eva",
+                    }
+                }
+                }
             />
 
             <ModuleStats
-                theme="primary"
                 eyebrow="What changes with Serve First"
                 title="From scattered signals to a single system of action"
                 description={null}
@@ -68,18 +94,11 @@ export default function WhatDoesServeFirstDo() {
             <CtaBannerOne
                 title="See what Serve First can do across your locations"
                 description="Book a personalised demo and we will show you how the platform works with your estate, your data and your team."
-                buttonPrimary={
-                    {
-                        text: "Book a demo",
-                        href: "/get-a-demo",
-                    }
-                }
-                buttonSecondary={null}
             />
 
             <Faq
-                eyebrow="Frequently asked questions"
-                title="Answers to the most common questions"
+                eyebrow="Common questions"
+                title="What we do for LLM, answered"
                 description={null}
                 data={faqData}
                 button={

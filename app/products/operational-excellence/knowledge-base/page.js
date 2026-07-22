@@ -29,6 +29,11 @@ import {
     faqData
 } from "./data";
 
+import { getPageMetadata } from "@/data/seo-map-data";
+
+
+export const metadata = getPageMetadata("/products/operational-excellence/knowledge-base");
+
 export default async function KnowledgeBase() {
 
     return (
@@ -43,7 +48,7 @@ export default async function KnowledgeBase() {
                 imageSizing="Contain"
                 buttonPrimary={{
                     text: "See it in action",
-                    href: "/how-it-works/analyse",
+                    href: "/get-a-demo",
                 }}
                 buttonSecondary={{
                     text: null
