@@ -18,16 +18,13 @@ const poppins = Poppins({
 // Styles
 import "@/styles/main.scss";
 
-// Lenis
-import { ReactLenis } from 'lenis/react'
-import 'lenis/dist/lenis.css'
-
 // Next
 import { Analytics } from "@vercel/analytics/next";
 
 // Components
 import Header from "@/components/layouts/header/header";
 import Footer from "@/components/layouts/footer/footer";
+import SmoothScroll from "@/components/handlers/smooth-scroll";
 
 // Sanity
 import { SanityLive } from "@/sanity/lib/live";
@@ -47,7 +44,7 @@ export default function RootLayout({ children }) {
 
         <div id="app" className="app">
 
-          <ReactLenis root />
+          <SmoothScroll />
 
           <Header />
 
