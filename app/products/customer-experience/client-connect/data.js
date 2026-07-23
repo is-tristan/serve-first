@@ -1,7 +1,7 @@
 import {
-    dataFlowIcon,
-    announcementIcon,
+    calendarCheckIcon,
     layoutIcon,
+    shieldTick,
     graphIcon,
     checkCircleBrokenIcon,
     messageAlertSquareIcon,
@@ -12,24 +12,24 @@ import {
 
 export const featureListData = [
     {
-        eyebrow: "One builder, every channel",
-        title: "Surveys that fit how customers respond",
-        description: "Build a survey once and Serve First fits it to each channel. Logic branching keeps it short for the customer, and sentiment analysis reads every answer so your team starts from insight, not raw data.",
-        image: "/images/products/customer-experience/survey/survey-feature-list-image.png",
+        eyebrow: "Built for B2B accounts",
+        title: "Feedback your account teams can use",
+        description: "Choose the contacts, set the cadence and send. Every invitation is tracked from delivery to response, and the data lands in the same dashboards your account teams already work from each week.",
+        image: "/images/products/customer-experience/client-connect/client-connect-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 576,
         list: [
             {
-                text: "Custom templates and branding",
+                text: "Branded review invitations",
             },
             {
-                text: "Logic branching keeps it short",
+                text: "Tracked send and delivery",
             },
             {
-                text: "Web, kiosk, email and SMS",
+                text: "Scheduled review cycles per account",
             },
             {
-                text: "Real-time results and sentiment",
+                text: "Unsubscribe and repeat guards",
             },
         ],
         button: {
@@ -39,52 +39,12 @@ export const featureListData = [
     }
 ]
 
-export const challengeFrameData = [
-    {
-        eyebrow: "Challenge 01",
-        title: "You run surveys and watch the scores, but the causes never reach the floor.",
-        subheading: "How Serve First solves it",
-        description: "Serve First scores every response as it lands and routes the cause to the right site as a task, so a falling score becomes a fix you can track, not another chart.",
-        tags: [
-            {
-                tag: "Live response scoring",
-            },
-            {
-                tag: "Cause by site",
-            },
-            {
-                tag: "Tracked follow-up",
-            },
-        ]
-    }
-]
-
 export const roleContextData = [
     {
         icon: layoutIcon,
-        eyebrow: "Templates",
-        title: "Custom templates and branding",
-        description: "Shape every question to your brand and start from a template, so each survey looks like yours.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
-    },
-    {
-        icon: dataFlowIcon,
-        eyebrow: "Smart Logic",
-        title: "Logic branching keeps it short",
-        description: "Customers answer only what applies to them, which keeps surveys short and lifts completion.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
-    },
-    {
-        icon: announcementIcon,
-        eyebrow: "Every Channel",
-        title: "Web, kiosk, email and SMS",
-        description: "Build a survey once and send it across web, kiosk, email and SMS, reaching customers where they are.",
+        eyebrow: "Branded invites",
+        title: "Branded review invitations",
+        description: "Send branded invitations to your B2B contacts, so the request feels part of the account relationship.",
         button: {
             text: "See it in action",
             href: "/get-a-demo",
@@ -92,9 +52,29 @@ export const roleContextData = [
     },
     {
         icon: graphIcon,
-        eyebrow: "Live Sentiment",
-        title: "Live results and sentiment",
-        description: "Responses stream in live and score sentiment as they land, so themes surface the same day.",
+        eyebrow: "Tracked sends",
+        title: "Tracked send and delivery",
+        description: "Track every invitation from delivery to response, so you always know who has replied and who to chase.",
+        button: {
+            text: "See it in action",
+            href: "/get-a-demo",
+        }
+    },
+    {
+        icon: calendarCheckIcon,
+        eyebrow: "Set cadence",
+        title: "Review cycles per account",
+        description: "Set a cadence per account, monthly, quarterly or annual, so feedback fits each client relationship.",
+        button: {
+            text: "See it in action",
+            href: "/get-a-demo",
+        }
+    },
+    {
+        icon: shieldTick,
+        eyebrow: "Safe sending",
+        title: "Unsubscribe and repeat guards",
+        description: "Guard contacts from over-emailing with unsubscribe and repeat limits, so programmes stay welcome.",
         button: {
             text: "See it in action",
             href: "/get-a-demo",
@@ -106,39 +86,59 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Surveys capture responses across web, kiosk, email and SMS, on whatever channel each customer prefers to use.",
-        image: "/images/products/customer-experience/survey/survey-capture.png",
+        description: "Send branded review invitations to your B2B clients on a set cadence, with every send tracked end to end.",
+        image: "/images/products/customer-experience/client-connect/client-connect-capture.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "Explore survey capture",
+            text: "See how we close it",
             href: "/how-it-works/capture",
         }
     },
     {
         number: "02",
         title: "Analyse",
-        description: "Results stream in live with sentiment scoring, so the themes worth acting on surface as the answers arrive.",
-        image: "/images/products/customer-experience/survey/survey-analyse.png",
+        description: "Responses return as structured data, with completion rates and trends on the Client Connect dashboard.",
+        image: "/images/products/customer-experience/client-connect/client-connect-analyse.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
-            text: "See the analysis",
+            text: "See how we close it",
             href: "/how-it-works/analyse",
         }
     },
     {
         number: "03",
         title: "Action",
-        description: "Insights route into tasks and follow-ups, so what customers tell you turns into action the same day.",
-        image: "/images/products/customer-experience/survey/survey-action.png",
+        description: "Serve First flags accounts at risk early and hands your team the Voice-of-Customer evidence to take back to the client.",
+        image: "/images/products/customer-experience/client-connect/client-connect-action.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "Turn answers into action",
+            text: "See how we close it",
             href: "/how-it-works/action",
         }
     },
+]
+
+export const challengeFrameData = [
+    {
+        eyebrow: "Challenge 01",
+        title: "You hear what clients think, but not next to what you actually delivered.",
+        subheading: "How Serve First solves it",
+        description: "Serve First sits client feedback beside the audits, tickets and KPIs for that account, so you see the cause behind a score and protect the contract before renewal.",
+        tags: [
+            {
+                tag: "Feedback by account",
+            },
+            {
+                tag: "Beside delivery",
+            },
+            {
+                tag: "Renewal risk flagged",
+            },
+        ]
+    }
 ]
 
 export const productHighlightData = [

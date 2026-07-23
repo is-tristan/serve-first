@@ -78,7 +78,7 @@ export const howItWorksData = [
         description: "Teams run digital Audits and CSAT checks against your standards at every site, recording scores and evidence as they go.",
         image: "/images/solutions/by-challenge/inconsistent-standards/inconsistent-standards-capture.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -90,7 +90,7 @@ export const howItWorksData = [
         description: "Every site is scored and compared like for like, with EVA flagging which locations are slipping and the cause behind it.",
         image: "/images/solutions/by-challenge/inconsistent-standards/inconsistent-standards-analyse.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -102,7 +102,7 @@ export const howItWorksData = [
         description: "Failed checks raise tasks routed to the right owner and tracked to done, so the gap closes and the standard holds.",
         image: "/images/solutions/by-challenge/inconsistent-standards/inconsistent-standards-action.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/action",

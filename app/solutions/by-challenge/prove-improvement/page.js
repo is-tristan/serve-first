@@ -33,7 +33,7 @@ export default function ProveImprovement() {
                 eyebrow="Solutions by challenge"
                 title="Prove what is working, not just what happened"
                 description="Knowing something improved is not the same as proving it. Serve First gives each role an action plan, not just evidence, tying every fix to proof of completion so you can show what changed and why."
-                image="/images/solutions/by-challenge/prove-improvement/prove_improvement_hero_improvement_summary_dashboard.png"
+                image="/images/solutions/by-challenge/prove-improvement/prove-improvement-cover.png"
                 imageSizing="Contain"
             />
 

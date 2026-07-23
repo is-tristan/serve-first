@@ -40,6 +40,7 @@ export const howItWorksData = [
         title: "Analyse",
         description: "Every store is scored and compared like for like, with EVA flagging which locations are slipping and what is driving it.",
         image: "/images/solutions/by-industry/retail/retail-analyse.png",
+        imageWidth: 768,
         button: {
             text: "See the analysis",
             href: "/how-it-works/analyse",

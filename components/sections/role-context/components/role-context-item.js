@@ -30,47 +30,51 @@ export default function RoleContextItem({
     return (
 
         <motion.div
-            className={styles.roleContextItem}
+            className={styles.roleContextItemContainer}
             ref={ref}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             initial={{ opacity: 0, y: 16 }}
             transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
-            <div className={styles.roleContextHeader}>
+            <div className={styles.roleContextItem} data-has-link={button ? true : false}>
 
-                {icon && (<span dangerouslySetInnerHTML={{ __html: icon }} style={{ display: "inline-block", width: "24px", height: "24px", color: "var(--primary)", opacity: 0.75 }} />)}
+                <div className={styles.roleContextHeader}>
 
-                {eyebrow && (<Eyebrow type="secondary" hasAnimation={false} text={eyebrow} />)}
+                    {icon && (<span className={styles.roleContextItemIcon} dangerouslySetInnerHTML={{ __html: icon }} />)}
 
-                {title && (<h3>{title}</h3>)}
+                    {eyebrow && (<Eyebrow type="secondary" hasAnimation={false} text={eyebrow} />)}
 
-                {number && (<span className={styles.roleContextNumber}>{number}</span>)}
+                    {title && (<h3>{title}</h3>)}
 
-            </div>
-
-            <div className={styles.roleContextContent}>
-
-                <div className={styles.roleContextFooter}>
-
-                    {description && (<p>{description}</p>)}
-
-                    {button && (<Button dataName={"roleContextButton"} className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                    {number && (<span className={styles.roleContextNumber}>{number}</span>)}
 
                 </div>
 
+                <div className={styles.roleContextContent}>
+
+                    <div className={styles.roleContextFooter}>
+
+                        {description && (<p>{description}</p>)}
+
+                        {button && (<Button dataName={"roleContextButton"} className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+
+                    </div>
+
+                </div>
+
+                {button && (
+
+                    <Link
+                        href={button.href}
+                        target={button.target}
+                        className="colLink"
+                        aria-label={button.text || title || "Learn more"}
+                    ></Link>
+
+                )}
+
             </div>
-
-            {button && (
-
-                <Link
-                    href={button.href}
-                    target={button.target}
-                    className="colLink"
-                    aria-label={button.text || title || "Learn more"}
-                ></Link>
-
-            )}
 
         </motion.div>
 

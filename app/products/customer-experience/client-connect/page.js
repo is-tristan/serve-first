@@ -56,14 +56,14 @@ export default async function ClientConnect() {
                 }}
             />
 
-            {/* <FeatureList
+            <FeatureList
                 data={featureListData}
             />
 
             <RoleContext
-                eyebrow="Survey capabilities"
-                title="Ask the right question, on every channel"
-                description="Reach customers on web, kiosk, email and SMS, and read what they tell you the same day, not at month end."
+                eyebrow="Client Connect capability"
+                title="Hear from the clients you serve"
+                description="Run structured feedback programmes for your B2B accounts, send branded invitations, and read every response beside the delivery behind it."
                 data={roleContextData}
                 btnPrimary={{
                     text: "Get a demo",
@@ -72,15 +72,15 @@ export default async function ClientConnect() {
             />
 
             <HowItWorks
-                eyebrow="How it works"
-                title="One platform, from question to insight"
-                description="From draft to insight without leaving the platform."
+                eyebrow="How a programme runs"
+                title="One workflow, from invite to outcome"
+                description="A managed invitation workflow, built on the survey engine."
                 data={howItWorksData}
             />
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Plenty of feedback, but no change on the floor"
+                title="Client feedback that lives apart from delivery"
                 data={challengeFrameData}
             />
 
@@ -90,9 +90,9 @@ export default async function ClientConnect() {
                 description={null}
                 item={{
                     "eyebrow": "EVA",
-                    "title": "Ask what your customers are really saying",
-                    "description": "EVA reads every survey response as it lands and tells you, in plain English, what your customers are saying.",
-                    "image": "/images/products/customer-experience/survey/survey-eva-ai.png",
+                    "title": "Ask how every account is really trending",
+                    "description": "Ask EVA how each account is trending and get a clear, evidence-backed read across your whole client base.",
+                    "image": "/images/products/customer-experience/client-connect/client-connect-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
                     "imageSizing": "contain",
@@ -104,9 +104,8 @@ export default async function ClientConnect() {
             />
 
             <ProductHighlight
-                eyebrow="What you get"
-                title="The toolkit for customer experience leaders"
-                description="The functions CX leaders rely on most, connected so insight turns into action."
+                eyebrow="More from Serve First"
+                title="More of the platform your teams can use"
                 linkText={null}
                 colCount={4}
                 data={productHighlightData}
@@ -157,7 +156,7 @@ export default async function ClientConnect() {
                 theme="primary"
                 title="See what Serve First can do for your locations"
                 description="Book a personalised demo and we will show you how surveys work across your channels and your sites today."
-            /> */}
+            />
 
         </>
 

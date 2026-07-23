@@ -77,7 +77,9 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Every customer and operational signal is captured in one place, so nothing worth resolving is lost in a dashboard.",
-        image: "/images/solutions/by-challenge/data-to-action/data_action_how_it_works_01_live_signal_capture.png",
+        image: "/images/solutions/by-challenge/data-to-action/data-to-action-capture.png",
+        imageWidth: 768,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -87,7 +89,9 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "EVA reads each signal and names the next action, with the site and the reason, so no one digs to know what to do.",
-        image: "/images/solutions/by-challenge/data-to-action/data_action_how_it_works_02_eva_ai_signal_summary.png",
+        image: "/images/solutions/by-challenge/data-to-action/data-to-action-analyse.png",
+        imageWidth: 768,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -97,7 +101,9 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Tasks route to the right owner and Helpdesk resolves the rest, every one tracked to proof of completion.",
-        image: "/images/solutions/by-challenge/data-to-action/data_action_how_it_works_03_action_plan_tracking_proof_of_completion.png",
+        image: "/images/solutions/by-challenge/data-to-action/data-to-action-action.png",
+        imageWidth: 768,
+        imageHeight: 512,
         button: {
             text: "Explore",
             href: "/how-it-works/action",

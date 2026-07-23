@@ -77,7 +77,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Feedback, audits, reviews and tickets are captured into one connected platform, with no manual collation between systems.",
-        image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed_tools_and_data_how_it_works_01_multi-source_one_platform.png",
+        image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed-tools-and-data-capture.png",
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -87,7 +87,9 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "EVA reads across every signal and gives you one operating picture, so a plain answer to how are we doing is always ready.",
-        image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed_tools_and_data_how_it_works_02_eva_ai_estate_overview.png",
+        image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed-tools-and-data-analyse.png",
+        imageWidth: 768,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -97,7 +99,9 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Insights route into tasks and follow-ups, tracked to done, so a single view turns into action, not another report.",
-        image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed_tools_and_data_how_it_works_03_insights_actionable_plans.png",
+        image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed-tools-and-data-action.png",
+        imageWidth: 768,
+        imageHeight: 576,
         button: {
             text: "Explore",
             href: "/how-it-works/action",
@@ -191,7 +195,7 @@ export const faqData = [
         question: "How is this different from a reporting tool?",
         answer: "A reporting tool stops at the chart. Serve First is a system of action: every insight routes into a task with an owner and proof of completion, so the single view leads to a fix rather than another report."
     },
-    {   
+    {
         question: "What is a single view of operations?",
         answer: "It is one operating picture that brings customer and operational signals together by site, so feedback, audits, tickets and reviews sit in the same place. Everyone works from the same source rather than exporting from separate tools and reconciling by hand."
     },

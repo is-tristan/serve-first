@@ -22,7 +22,7 @@ export default function HowItWorksItem({
     index = 0,
     image,
     imageSizing = "Contain",
-    imageWidth = 576,
+    imageWidth = 768,
     imageHeight = 384,
     title,
     number,

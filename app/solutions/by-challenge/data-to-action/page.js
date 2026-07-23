@@ -33,7 +33,7 @@ export default function DataToAction() {
                 eyebrow="Solutions by challenge"
                 title="Stop reporting problems. Start resolving them"
                 description="Most platforms stop at a dashboard. Serve First turns every signal into the next action, routed to an owner and tracked to done, so insight leads to a fix, not just another report."
-                image="/images/solutions/by-challenge/data-to-action/data_action_hero_from_insight_to_resolved_fix.png"
+                image="/images/solutions/by-challenge/data-to-action/data-to-action-cover.png"
                 imageSizing="Contain"
             />
 

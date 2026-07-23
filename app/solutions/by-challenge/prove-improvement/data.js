@@ -77,7 +77,9 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Every signal and the action taken on it are captured together, so the record of what you did builds itself as you go.",
-        image: "/images/solutions/by-challenge/prove-improvement/prove_improvement_how_it_works_01_signal_and_action_record.png",
+        image: "/images/solutions/by-challenge/prove-improvement/prove-improvement-capture.png",
+        imageWidth: 768,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -87,7 +89,9 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "EVA reads the trend and the actions behind it, so you see not just that a score moved but what actually moved it.",
-        image: "/images/solutions/by-challenge/prove-improvement/prove_improvement_how_it_works_02_eva_ai_trend_reading.png",
+        image: "/images/solutions/by-challenge/prove-improvement/prove-improvement-analyse.png",
+        imageWidth: 768,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -97,7 +101,9 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Every fix is tracked to proof of completion, so improvement is evidenced, not asserted, whenever anyone asks for it.",
-        image: "/images/solutions/by-challenge/prove-improvement/prove_improvement_how_it_works_03_improvement_evidence_reporting.png",
+        image: "/images/solutions/by-challenge/prove-improvement/prove-improvement-action.png",
+        imageWidth: 768,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/action",
