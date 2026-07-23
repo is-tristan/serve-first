@@ -1,3 +1,12 @@
+.ctaBanner {
+    &[data-theme="light"] {
+        h2::after {
+            color: var(--light);
+            -webkit-text-fill-color: var(--light);
+        }
+    }
+}
+
 .ctaBannerContent {
     display: flex;
     flex-flow: column nowrap;

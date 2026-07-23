@@ -15,7 +15,7 @@ import styles from "@/styles/components/handlers/form.module.scss";
 // Icons
 import { shieldTick } from "@/utils/icons";
 
-export default function FormFull({ theme = "primary", hasDemoLink = true, formBtnText = "Send message" }) {
+export default function FormFull({ theme = "primary", hasDemoLink = true, formBtnText = "Send message", hasAnimation = true }) {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -43,7 +43,13 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
     return (
 
-        <motion.div ref={ref} initial={{ opacity: 0, y: 100 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }} transition={{ duration: 0.5, delay: 0.25 }}>
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 100 }}
+            animate={hasAnimation && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+            transition={hasAnimation ? { duration: 0.5, delay: 0.25 } : { duration: 0, delay: 0 }}
+            className={`${styles.formContainer}`}
+        >
 
             <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
 

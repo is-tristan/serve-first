@@ -1,0 +1,45 @@
+.lpBanner {
+    padding-top: calc(var(--mobileHeaderHeight) / 1.5);
+    
+    @media (width >=1024px) {
+        padding-top: var(--desktopHeaderHeight);
+    }
+
+    p {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .formCol {
+        background: rgba(var(--primaryRgb), 0.25);
+        padding: 2rem;
+        border-radius: var(--borderRadius);
+    }
+
+    .checklist {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+
+        .checklistItem {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 0.5rem;
+
+            .checkmark {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                flex-shrink: 0;
+
+                @media (width >=1024px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+}

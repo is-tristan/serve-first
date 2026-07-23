@@ -5,9 +5,6 @@ import Button from "@/components/handlers/buttons";
 // Styles
 import styles from "@/styles/components/sections/cta-banners.module.scss";
 
-// Background Image
-const backgroundImage = "/backgrounds/cta-banner-1-background.svg";
-
 export default function CtaBannerOne({
     name = "ctaBanner1",
     theme = "light",

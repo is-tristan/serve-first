@@ -1,9 +1,21 @@
 @use "../../init/mixins" as *;
 
+.formContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+
+    .formTitle {
+        font-weight: 700;
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+        color: var(--primaryAlt);
+    }
+}
+
 .form {
     display: flex;
     flex-flow: row wrap;
-    gap: 1rem;
+    gap: 1.25rem 1rem;
 
     * {
         font-family: var(--text);
@@ -12,6 +24,7 @@
     }
 
     &[data-theme="light"] {
+
         label,
         legend {
             color: var(--primaryAlt);
@@ -24,7 +37,7 @@
             color: var(--primaryAlt) !important;
 
             &::placeholder {
-                color: rgba(var(--primaryAltRgb), 0.5) !important;
+                color: rgba(var(--primaryAltRgb), 0.75) !important;
             }
         }
 
@@ -32,7 +45,7 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234A2257' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
 
             &:invalid {
-                color: rgba(var(--primaryAltRgb), 0.5) !important;
+                color: rgba(var(--primaryAltRgb), 0.75) !important;
             }
         }
 
@@ -169,7 +182,6 @@
     .formFooterText {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: center;
         align-items: center;
         gap: 0.5rem;
         opacity: 0.9;

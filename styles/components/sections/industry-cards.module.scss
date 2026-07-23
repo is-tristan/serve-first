@@ -6,6 +6,16 @@
     }
 }
 
+.industryCardContainer {
+    @media (width >=1024px) {
+        &:nth-child(even) {
+            .industryCard {
+                flex-flow: row nowrap;
+            }
+        }
+    }
+}
+
 .industryCard {
     display: flex;
     flex-flow: column nowrap;
@@ -33,24 +43,6 @@
 
         >div {
             flex: 0 0 calc(50% - 1rem);
-        }
-
-        &:nth-child(even) {
-            flex-flow: row nowrap;
-
-            .industryCardHeader {
-                span {
-                    color: var(--secondary);
-                }
-            }
-
-            .industryCardNumber {
-                color: var(--secondary);
-            }
-
-            a {
-                color: var(--secondary);
-            }
         }
     }
 }

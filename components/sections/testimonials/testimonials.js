@@ -10,11 +10,7 @@ import { testimonialData } from "@/data/testimonial-data";
 
 export default function Testimonials({
     theme = "light",
-    btnPrimary = {
-        text: "Lorem ipsum dolor sit amet.",
-        href: "#",
-        target: "_self",
-    }
+    btnPrimary = null
 }) {
 
     return (

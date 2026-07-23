@@ -15,7 +15,13 @@ import styles from "@/styles/components/handlers/form.module.scss";
 // Icons
 import { shieldTick } from "@/utils/icons";
 
-export default function FormSmall({ theme = "primary", hasDemoLink = true, formBtnText = "Send message" }) {
+export default function FormSmall({
+    theme = "primary",
+    hasDemoLink = true,
+    formBtnText = "Send message",
+    formTitle = null,
+    formSmallText = "No obligation. We will not pass your details on.",
+    hasAnimation = true }) {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -43,7 +49,15 @@ export default function FormSmall({ theme = "primary", hasDemoLink = true, formB
 
     return (
 
-        <motion.div ref={ref} initial={{ opacity: 0, y: 100 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }} transition={{ duration: 0.5, delay: 0.25 }}>
+        <motion.div
+            ref={ref}
+            animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
+            initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
+            transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
+            className={`${styles.formContainer}`}
+        >
+
+            {formTitle && (<span className={styles.formTitle}>{formTitle}</span>)}
 
             <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
 
@@ -147,7 +161,7 @@ export default function FormSmall({ theme = "primary", hasDemoLink = true, formB
 
                         <div style={{ color: theme === "primary" ? "var(--light)" : "var(--primaryAlt)" }} className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
 
-                        <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>No obligation. We will not pass your details on.</span>
+                        {formSmallText && <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>{formSmallText}</span>}
 
                     </div>
 

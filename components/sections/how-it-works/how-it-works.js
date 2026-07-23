@@ -26,7 +26,7 @@ export default function HowItWorks({
 
                 {eyebrow && (<Eyebrow text={eyebrow} />)}
 
-                {title && (<Text headingClass={`sectionTitle sectionTitleContained`} title={title} description={description} />)}
+                {title && (<Text headingClass={`sectionTitle sectionTitleContained`} title={title} descriptionClass="fw400" description={description} />)}
 
             </div>
 
