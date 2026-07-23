@@ -40,6 +40,7 @@ export default function CXLeader() {
             <RoleContext
                 eyebrow="Built for CX leaders"
                 title="Not measuring experience. Improving it"
+                description={null}
                 btnPrimary={null}
                 data={roleContextData}
             />
@@ -65,6 +66,10 @@ export default function CXLeader() {
                 title="What changes when CX leads with action"
                 description="The outcomes CX leaders see once feedback connects to the fix."
                 data={moduleStatsData}
+                btnPrimary={{
+                    text: "See it in action",
+                    href: "/get-a-demo",
+                }}
             />
 
             <ChallengeFrame

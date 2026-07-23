@@ -101,7 +101,19 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
                     <div className={styles.field}>
 
-                        <input type="text" name="subject" required autoComplete="false" placeholder="Demo, sales, support or something else." aria-required="true" />
+                        <select name="subject" required defaultValue="" aria-required="true">
+
+                            <option value="" disabled>Demo, sales, support or something else.</option>
+
+                            <option value="Demo">Demo</option>
+
+                            <option value="Sales">Sales</option>
+
+                            <option value="Support">Support</option>
+
+                            <option value="Something else">Something else</option>
+
+                        </select>
 
                     </div>
 

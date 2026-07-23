@@ -139,7 +139,6 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Lack of insight",
         title: "You have feedback from every site, but no fast way to see what is driving it.",
-        description: "Serve First connects every customer signal to the operation behind it, so EVA can show the cause of each shift and route the fix to the team that owns it.",
         tags: [
             {
                 tag: "Role-based actions",
@@ -149,7 +148,6 @@ export const challengeFrameData = [
     {
         eyebrow: "02 | Lack of accountability",
         title: "Issues get raised, but you cannot tell whether anyone actually resolved them.",
-        description: "Every issue is routed to the team that owns it and tracked to proof of completion, so you can see what was done, by whom and when, at each site.",
         tags: [
             {
                 tag: "Root-cause analysis",
@@ -159,7 +157,6 @@ export const challengeFrameData = [
     {
         eyebrow: "03 | Lack of improvement",
         title: "The board asks if experience is improving, and you can show scores, not proof.",
-        description: "Serve First ties each action to the outcome that followed, so you can evidence that a fix moved the number, not just that the number moved.",
         tags: [
             {
                 tag: "Proof of improvement",
