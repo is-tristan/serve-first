@@ -15,10 +15,15 @@
     padding: 1.5rem;
     border-radius: var(--borderRadius);
     position: relative;
+    transition: var(--ease);
 
     @media (width >=768px) {
         padding: 2rem;
         gap: 2rem;
+    }
+
+    &:hover {
+        transform: translateY(-0.5rem);
     }
 
     @media (width >=1024px) {

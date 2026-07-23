@@ -29,7 +29,7 @@ import SmoothScroll from "@/components/handlers/smooth-scroll";
 // Sanity
 import { SanityLive } from "@/sanity/lib/live";
 
-import { getPageMetadata } from "@/data/seo-map-data";
+import { getPageMetadata } from "@/seo/seo-map-data";
 
 export const metadata = getPageMetadata("/");
 

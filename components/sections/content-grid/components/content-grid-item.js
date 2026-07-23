@@ -29,63 +29,67 @@ export default function ContentGridItem({
 
         <motion.article
             ref={ref}
-            className={styles.contentGridItem}
+            className={styles.contentGridItemContainer}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
-            <div className={styles.contentGridItemContent}>
+            <div className={styles.contentGridItem}>
 
-                {item.image && (
+                <div className={styles.contentGridItemContent}>
 
-                    <div className={styles.contentGridItemImage}>
+                    {item.image && (
 
-                        <Image src={item.image} alt={item.title} fill loading="lazy" quality={90} sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ "objectFit": "cover" }} />
+                        <div className={styles.contentGridItemImage}>
+
+                            <Image src={item.image} alt={item.title} fill loading="lazy" quality={90} sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ "objectFit": "cover" }} />
+
+                        </div>
+
+                    )}
+
+                    <div className={styles.contentGridItemHeader}>
+
+                        {item.category && (<span className={styles.contentGridItemCategory}>{item.category}</span>)}
+
+                        {item.title && (<h3>{item.title}</h3>)}
 
                     </div>
 
-                )}
-
-                <div className={styles.contentGridItemHeader}>
-
-                    {item.category && (<span className={styles.contentGridItemCategory}>{item.category}</span>)}
-
-                    {item.title && (<h3>{item.title}</h3>)}
+                    {item.description && (<p>{item.description}</p>)}
 
                 </div>
 
-                {item.description && (<p>{item.description}</p>)}
+                <div className={styles.contentGridItemFooter}>
+
+                    {item.button && (
+
+                        <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className={`textLink ${styles.contentGridItemButton}`} />
+
+                    )}
+
+                    {item.readTime && (
+
+                        <div className={styles.contentGridItemReadTime}>
+
+                            <div className={styles.contentGridItemReadTimeIcon} dangerouslySetInnerHTML={{ __html: clock }} />
+
+                            {item.readTime && (<span className={styles.contentGridItemReadTime}>{item.readTime} min read</span>)}
+
+                        </div>
+
+                    )}
+
+                </div>
+
+                <Link
+                    href={item.button.href}
+                    target={item.button.target}
+                    className={`colLink ${styles.contentGridItemLink}`}
+                    aria-label={item.button.text || item.title || "Read more"}
+                ></Link>
 
             </div>
-
-            <div className={styles.contentGridItemFooter}>
-
-                {item.button && (
-
-                    <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className="textLink" />
-                    
-                )}
-
-                {item.readTime && (
-
-                    <div className={styles.contentGridItemReadTime}>
-
-                        <div className={styles.contentGridItemReadTimeIcon} dangerouslySetInnerHTML={{ __html: clock }} />
-
-                        {item.readTime && (<span className={styles.contentGridItemReadTime}>{item.readTime} min read</span>)}
-
-                    </div>
-
-                )}
-
-            </div>
-
-            <Link
-                href={item.button.href}
-                target={item.button.target}
-                className="colLink"
-                aria-label={item.button.text || item.title || "Read more"}
-            ></Link>
 
         </motion.article >
 

@@ -22,7 +22,7 @@ import {
   industryCardsData,
 } from "./data.js";
 
-import { getPageMetadata } from "@/data/seo-map-data";
+import { getPageMetadata } from "@/seo/seo-map-data.js";
 
 
 export const metadata = getPageMetadata("/");
