@@ -5,7 +5,7 @@ import Banner from "@/components/sections/banner/banner";
 import { accessibilitySections } from "./data";
 
 // Styles
-import styles from "@/styles/screens/legal/legal-pages.module.scss";
+import styles from "@/styles/components/screens/legal/legal-pages.module.scss";
 
 export default function Accessibility() {
 
