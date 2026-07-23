@@ -24,7 +24,6 @@ import {
     challengeFrameData,
     productHighlightData,
     contentGridData,
-    contentGridData2,
     faqData
 } from "./data";
 
@@ -54,14 +53,20 @@ export default async function ReviewMonitoring() {
                 }}
             />
 
-            {/* <FeatureList
+            <ChallengeFrame
+                eyebrow="The problem"
+                title="You know your own scores. You cannot see the shop next door"
+                data={challengeFrameData}
+            />
+
+            <FeatureList
                 data={featureListData}
             />
 
             <RoleContext
-                eyebrow="Review monitoring capability"
-                title="Stay on top of every review"
-                description="See every review from across the web in one place, reply without switching tools, and catch a drop in sentiment while you can still act."
+                eyebrow="How the benchmark works"
+                title="See how each site compares locally"
+                description="See how every location compares with its real local rivals, built for you from public sources you can check, with no surveys to send."
                 data={roleContextData}
                 btnPrimary={{
                     text: "Get a demo",
@@ -70,16 +75,10 @@ export default async function ReviewMonitoring() {
             />
 
             <HowItWorks
-                eyebrow="How monitoring works"
-                title="From public review to resolved issue"
-                description="Turn public feedback into operational action."
+                eyebrow="From comparison to a fix"
+                title="Benchmarking is only useful if it changes something"
+                description="Serve First does not stop at the chart. It turns the gap into something each site can act on."
                 data={howItWorksData}
-            />
-
-            <ChallengeFrame
-                eyebrow="Common challenges"
-                title="Reviews everywhere, but oversight nowhere"
-                data={challengeFrameData}
             />
 
             <EvaSpotlight
@@ -88,9 +87,9 @@ export default async function ReviewMonitoring() {
                 description={null}
                 item={{
                     "eyebrow": "EVA",
-                    "title": "Ask what your reviews really add up to overall",
-                        "description": "Ask EVA what your reviews are saying across sites and get the themes behind your rating in plain English.",
-                    "image": "/images/products/market-intelligence/review-monitoring/review-monitoring-eva.png",
+                    "title": "Just ask how you compare",
+                    "description": "Ask EVA where you lead and where rivals are winning, and get a plain answer with the reason behind it. EVA recommends where to focus; your team decides what to do.",
+                    "image": "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
                     "imageSizing": "contain",
@@ -102,11 +101,10 @@ export default async function ReviewMonitoring() {
             />
 
             <ProductHighlight
-                eyebrow="More from Serve First"
-                title="The toolkit for customer experience leaders"
+                eyebrow="Part of the platform"
+                title="It connects to the rest of Serve First"
                 description="The functions CX leaders rely on most, connected so insight turns into action."
                 linkText={null}
-                colCount={4}
                 data={productHighlightData}
             />
 
@@ -118,12 +116,7 @@ export default async function ReviewMonitoring() {
                 data={contentGridData}
             />
 
-            <ContentGrid
-                eyebrow="By challenge"
-                title="Solve the problem you came here with"
-                button={null}
-                data={contentGridData2}
-            />
+            <Testimonials btnPrimary={null} />
 
             <Suspense fallback={<IsLoading />}>
 
@@ -131,23 +124,17 @@ export default async function ReviewMonitoring() {
 
             </Suspense>
 
-            <Testimonials
-                theme="primary"
-                btnPrimary={null}
-            />
-
             <FAQ
                 eyebrow="Common questions"
-                title="Review monitoring, answered"
+                title="Competitive benchmarking, answered"
                 button={null}
                 data={faqData}
             />
 
             <CtaBannerOne
-                theme="primary"
-                title="See what Serve First can do for your reputation"
-                description="Book a personalised demo and we will show you every review across your estate, gathered in one place."
-            /> */}
+                title="See how your sites compare in their local market"
+                description="Book a demo and we will benchmark your locations against the rivals that matter to them."
+            />
 
         </>
 

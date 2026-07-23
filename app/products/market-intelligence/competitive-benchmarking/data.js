@@ -1,35 +1,54 @@
 import {
     clipBoardCheckIcon,
-    listIcon,
+    userCheckIcon,
     messageChatCircleIcon,
-    graphIcon,
-    compareIcon,
+    lineGapIcon,
+    chartBreakoutIcon,
     checkCircleBrokenIcon,
-    notificationTextIcon,
     shoppingBagSimpleIcon,
-    fileSearchIcon
+    fileCheckIcon,
+    messageSmileSquareIcon
 } from "@/utils/icons";
+
+export const challengeFrameData = [
+    {
+        eyebrow: "Challenge 01",
+        title: "How Serve First solves it",
+        description: "Serve First reads the public reviews for your sites and their local rivals, scores them the same way, and shows the gap for every location, so you can see exactly who you are losing to and what to put right.",
+        tags: [
+            {
+                tag: "Compared site by site",
+            },
+            {
+                tag: "Based on real reviews",
+            },
+            {
+                tag: "The reason, not just the score",
+            },
+        ]
+    }
+]
 
 export const featureListData = [
     {
-        eyebrow: "Reputation in real time",
-        title: "Respond before a review costs you a customer",
-        description: "Every review across every platform is gathered and scored as it lands. Negatives are flagged the moment they appear, so the right manager can reply while the response still changes the outcome.",
-        image: "/images/products/market-intelligence/review-monitoring/review-monitoring-feature-list-image.png",
+        eyebrow: "What you get",
+        title: "A clear read on every local market",
+        description: "In one view you see how each site rates against the rivals near it, what those rivals do well, and where the gap is widest, so you know where to focus first.",
+        image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 576,
         list: [
             {
-                text: "Aggregated reviews per site",
+                text: "Your score next to theirs",
             },
             {
-                text: "Response management built in",
+                text: "The rivals near each site",
             },
             {
-                text: "Sentiment tracking and alerts",
+                text: "What customers praise and complain about",
             },
             {
-                text: "Competitor review comparison",
+                text: "Where the gap is biggest",
             },
         ],
         button: {
@@ -41,10 +60,10 @@ export const featureListData = [
 
 export const roleContextData = [
     {
-        icon: listIcon,
-        eyebrow: "One feed",
-        title: "Aggregated reviews per site",
-        description: "See every review from across the web in one feed, grouped by site, so nothing gets missed.",
+        icon: userCheckIcon,
+        eyebrow: "Local rivals",
+        title: "Finds your real rivals",
+        description: "Serve First finds the rivals genuinely near each site and after the same customers, not a national average.",
         button: {
             text: "See it in action",
             href: "/get-a-demo",
@@ -52,29 +71,29 @@ export const roleContextData = [
     },
     {
         icon: messageChatCircleIcon,
-        eyebrow: "Reply in-app",
-        title: "Response management built in",
-        description: "Reply to reviews inside Serve First, so your team works in one place instead of every platform.",
+        eyebrow: "Review sentiment",
+        title: "Reads words, not stars",
+        description: "Serve First reads every public review and scores how people feel, so a four-star dip cannot slip by.",
         button: {
             text: "See it in action",
             href: "/get-a-demo",
         }
     },
     {
-        icon: graphIcon,
-        eyebrow: "Live alerts",
-        title: "Sentiment tracking and alerts",
-        description: "Serve First scores every review as it lands and flags negatives at once, so you respond in time.",
+        icon: lineGapIcon,
+        eyebrow: "The gap",
+        title: "Shows what drives the gap",
+        description: "Serve First groups reviews into topics like service and wait times, so you see what wins or loses custom.",
         button: {
             text: "See it in action",
             href: "/get-a-demo",
         }
     },
     {
-        icon: compareIcon,
-        eyebrow: "Against rivals",
-        title: "Competitor review comparison",
-        description: "Compare your review sentiment with nearby rivals, so you know where your reputation leads or trails.",
+        icon: chartBreakoutIcon,
+        eyebrow: "Always current",
+        title: "Updates every month",
+        description: "Serve First refreshes the comparison every month, so you hold a current read on each market, never stale.",
         button: {
             text: "See it in action",
             href: "/get-a-demo",
@@ -86,68 +105,48 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Reviews from every platform are captured into one feed, scored for sentiment and grouped by location.",
-        image: "/images/products/market-intelligence/review-monitoring/review-monitoring-capture.png",
+        description: "Serve First finds the rivals near each site and collects their public reviews automatically, every month.",
+        image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-capture.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "Explore review capture",
+            text: "See how capture works",
             href: "/how-it-works/capture",
         }
     },
     {
         number: "02",
         title: "Analyse",
-        description: "Negatives are flagged and recurring themes surfaced, so you see what is hurting reputation before it spreads.",
-        image: "/images/products/market-intelligence/review-monitoring/review-monitoring-analyse.png",
+        description: "It scores sentiment and topics for you and your rivals, so you see how you compare and what is behind the gap, location by location.",
+        image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how analyse works",
+            text: "See how analysis works",
             href: "/how-it-works/analyse",
         }
     },
     {
         number: "03",
         title: "Action",
-        description: "Respond from the platform and turn repeat complaints into tasks, so the same issue stops coming back.",
-        image: "/images/products/market-intelligence/review-monitoring/review-monitoring-action.png",
+        description: "The gaps become tasks and training for each site, routed to an owner and tracked to done, so locations actually close the distance.",
+        image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-action.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "Respond and take action",
+            text: "See how action works",
             href: "/how-it-works/action",
         }
     },
 ]
 
-export const challengeFrameData = [
-    {
-        eyebrow: "Challenge 01",
-        title: "Reviews land across platforms faster than any one team can read them.",
-        subheading: "How Serve First solves it",
-        description: "Serve First brings every review into one feed by site, flags the urgent ones and turns repeat complaints into tasks, so the same issue stops coming back.",
-        tags: [
-            {
-                tag: "One review feed",
-            },
-            {
-                tag: "Urgent flagged",
-            },
-            {
-                tag: "Repeat issues fixed",
-            },
-        ]
-    }
-]
-
 export const productHighlightData = [
     {
-        icon: fileSearchIcon,
-        eyebrow: "Competitive benchmarking",
-        title: "Compare your sites with local rivals.",
+        icon: messageSmileSquareIcon,
+        eyebrow: "Review monitoring",
+        title: "Bring every public review into one feed.",
         linkText: "Explore",
-        link: "/products/market-intelligence/competitive-benchmarking",
+        link: "/products/market-intelligence/review-monitoring",
     },
     {
         icon: clipBoardCheckIcon,
@@ -157,33 +156,33 @@ export const productHighlightData = [
         link: "/products/customer-experience/survey",
     },
     {
-        icon: notificationTextIcon,
-        eyebrow: "Helpdesk",
-        title: "Turn complaints into tracked tickets.",
+        icon: shoppingBagSimpleIcon,
+        eyebrow: "Mystery shopping",
+        title: "See your sites the way your customers do.",
         linkText: "Explore",
-        link: "/products/operational-excellence/helpdesk",
+        link: "/products/customer-experience/mystery-shopping",
+    },
+    {
+        icon: fileCheckIcon,
+        eyebrow: "Audits",
+        title: "Check standards at every location.",
+        linkText: "Explore",
+        link: "/products/operational-excellence/audits",
     },
     {
         icon: checkCircleBrokenIcon,
         eyebrow: "Task management",
-        title: "Route every fix to an owner, to done.",
+        title: "Route every fix to an owner, tracked to done.",
         linkText: "Explore",
         link: "/products/operational-excellence/task-management",
-    },
-    {
-        icon: shoppingBagSimpleIcon,
-        eyebrow: "Mystery shopping",
-        title: "See your sites the way customers do.",
-        linkText: "Explore",
-        link: "/products/customer-experience/mystery-shopping",
-    },
+    }
 ]
 
 export const contentGridData = [
     {
         category: "By Industry",
         title: "Retail",
-        description: "Track store reviews across every platform.",
+        description: "Compare each store with the shops near it.",
         image: "/images/products/shared/retail-industry-icon.svg",
         button: {
             text: "Explore",
@@ -193,7 +192,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Protect your rating at every site.",
+        description: "Compare each site with nearby venues.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -203,7 +202,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Restaurants",
-        description: "Manage reviews for every restaurant.",
+        description: "See how each restaurant rates against local rivals.",
         image: "/images/products/shared/restaurant-industry-icon.svg",
         button: {
             text: "Explore",
@@ -213,7 +212,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Monitor feedback across patient-facing sites.",
+        description: "Compare patient-facing sites with local peers.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -223,7 +222,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Facilities management",
-        description: "Track reviews across every contract you run.",
+        description: "Compare each contract against local operators.",
         image: "/images/products/shared/facilities-management-industry-icon.svg",
         button: {
             text: "Explore",
@@ -233,7 +232,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Venues & events",
-        description: "Watch reviews for every venue and event.",
+        description: "Compare each venue with others in its area.",
         image: "/images/products/shared/venues-events-industry-icon.svg",
         button: {
             text: "Explore",
@@ -242,69 +241,29 @@ export const contentGridData = [
     }
 ]
 
-export const contentGridData2 = [
-    {
-        title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
-        image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
-        button: {
-            text: "Fix inconsistent standards",
-            href: "/solutions/by-challenge/inconsistent-standards",
-        }
-    },
-    {
-        title: "Siloed tools and data",
-        description: "Bring every signal into one picture.",
-        image: "/images/solutions/by-industry/retail/Too_many_tools_and_siloed_data_icon.svg",
-        button: {
-            text: "Connect your data",
-            href: "/solutions/by-challenge/siloed-tools-and-data",
-        }
-    },
-    {
-        title: "Prove improvement",
-        description: "Show the difference with evidence.",
-        image: "/images/solutions/by-industry/retail/Struggling_to_prove_improvement_icon.svg",
-        button: {
-            text: "See how to prove it",
-            href: "/solutions/by-challenge/prove-improvement",
-        }
-    },
-    {
-        title: "Turn data into action",
-        description: "Turn each finding into a routed, tracked corrective action.",
-        image: "/images/solutions/by-industry/retail/data_that_never_leads_to_action_icon.svg",
-        button: {
-            text: "Turn data into action",
-            href: "/solutions/by-challenge/data-to-action",
-        }
-    },
-]
-
-
 export const faqData = [
     {
-        question: "What is online review monitoring?",
-        answer: "Online review monitoring gathers reviews from across platforms into one place, scores them and flags the ones that need attention. Serve First goes further, turning repeat complaints into tasks, so a review leads to a fix rather than just a notification."
+        question: "What does competitive benchmarking actually do?",
+        answer: "It compares each of your locations with the rivals near it, using their public reviews. Serve First scores both the same way and shows you where you are ahead, where you are behind, and the topics driving the difference, so a comparison leads to a fix rather than just a chart."
     },
     {
-        question: "Which review platforms does it cover?",
-        answer: "Reviews from across your locations and platforms are brought into one feed and grouped by site, so you track every site's reputation in one place rather than logging into each platform separately."
+        question: "How do you know which competitors to compare us with?",
+        answer: "Serve First works out the nearby competitors for each site automatically, so every location is measured against the rivals that actually compete for its customers, not a generic national list."
     },
     {
-        question: "How fast can we respond to a negative review?",
-        answer: "Negative reviews are flagged the moment they appear and routed to the right manager, who can respond from within Serve First, so you reply while the response still changes the outcome."
+        question: "Where does the data come from?",
+        answer: "From public reviews of your sites and their local rivals. Serve First reads the words, not just the star rating, and scores the sentiment and topics behind each one."
     },
     {
-        question: "Can we see the themes behind our rating?",
-        answer: "Yes. Reviews are scored for sentiment and recurring themes are surfaced, so you can see what is driving your rating and address the cause rather than reacting review by review."
+        question: "How often is it updated?",
+        answer: "Competitor reviews are refreshed each month, so you have a current read on every local market rather than a one-off snapshot that dates quickly."
     },
     {
-        question: "Does review feedback connect to operations?",
-        answer: "Yes. Because monitoring sits in the same platform as tasks and audits, a recurring complaint becomes a tracked corrective action, so the same issue stops coming back."
+        question: "Can we act on what it shows, or is it just a report?",
+        answer: "You can act on it. The gaps become tasks and training routed to the right site and owner, tracked through to done, so each location closes the distance on the rivals that matter to it."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every site's reviews roll up into one operating picture, so you can compare locations, spot the ones slipping and put them right, however many you run."
+        question: "Does it work across lots of sites?",
+        answer: "Yes. Serve First is built for multi-site operators. Every location is benchmarked in one operating picture, so you can see where you lead, where you trail and where to focus, however many sites you run."
     }
 ]
