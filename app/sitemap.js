@@ -52,7 +52,7 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
-        path: "/solutions/by-role/compliance-manager",
+        path: "/solutions/by-role/compliance-managers",
         changeFrequency: "monthly",
         priority: 0.8,
     },

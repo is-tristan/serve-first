@@ -38,7 +38,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Audits and Martyn's Law checklists capture timestamped records, photos and sign-offs as the work is done, at every site.",
-        image: "/images/solutions/by-role/compliance-manager/compliance_manager_platform_story_01_compliance_checklist.png",
+        image: "/images/solutions/by-role/compliance-managers/compliance-managers-capture.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
@@ -50,7 +50,7 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "EVA reads compliance status across the estate and flags the sites that are due, overdue or at risk, early.",
-        image: "/images/solutions/by-role/compliance-manager/compliance_manager_platform_story_02_compliance_management_logs.png",
+        image: "/images/solutions/by-role/compliance-managers/compliance-managers-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
@@ -62,7 +62,7 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Every failed check raises a corrective action with an owner and a due date, tracked to proof of completion.",
-        image: "/images/solutions/by-role/compliance-manager/compliance_manager_platform_story_03_compliance_gap_identification.png",
+        image: "/images/solutions/by-role/compliance-managers/compliance-managers-action.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {

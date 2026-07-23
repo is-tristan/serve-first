@@ -67,7 +67,7 @@ export const roleContextData = [
         description: "Evidence and checks in the same platform as the work, so nothing lives in a separate tool.",
         button: {
             text: "For compliance managers",
-            href: "/solutions/by-role/compliance-manager",
+            href: "/solutions/by-role/compliance-managers",
         }
     }
 ]

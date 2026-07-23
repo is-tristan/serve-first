@@ -39,7 +39,7 @@ export const howItWorksData = [
         number: "01",
         title: "Capture",
         description: "Digital audits, mystery shopping and helpdesk capture how every site is really running, scored the same way everywhere.",
-        image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_01_digital_audit_and_comparison.png",
+        image: "/images/solutions/by-role/operations-directors/operations-directors-capture.png",
         imageWidth: 768,
         imageHeight: 512,
         button: {
@@ -51,7 +51,7 @@ export const howItWorksData = [
         number: "02",
         title: "Analyse",
         description: "Every site is compared like for like, and EVA flags the locations slipping and the standard behind the slip.",
-        image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_02_failed_checks_task_creation.png",
+        image: "/images/solutions/by-role/operations-directors/operations-directors-analyse.png",
         imageWidth: 768,
         imageHeight: 512,
         button: {
@@ -63,9 +63,9 @@ export const howItWorksData = [
         number: "03",
         title: "Action",
         description: "Failed checks raise corrective tasks routed to an owner with a due date, tracked to proof of completion.",
-        image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_03_network_performance_summary.png",
+        image: "/images/solutions/by-role/operations-directors/operations-directors-action.png",
         imageWidth: 768,
-        imageHeight: 512,
+        imageHeight: 768,
         button: {
             text: "Explore",
             href: "/how-it-works/action",

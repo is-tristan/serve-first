@@ -52,8 +52,8 @@ export const menuItemsData = [
                         href: "/solutions/by-role/operations-directors",
                     },
                     {
-                        label: "Compliance Manager",
-                        href: "/solutions/by-role/compliance-manager",
+                        label: "Compliance Managers",
+                        href: "/solutions/by-role/compliance-managers",
                     },
                 ]
             },

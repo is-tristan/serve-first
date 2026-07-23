@@ -67,7 +67,7 @@ export const roleContextData = [
         description: "Gaps raise corrective actions automatically, so nothing stays open and unevidenced.",
         button: {
             text: "For compliance managers",
-            href: "/solutions/by-role/compliance-manager",
+            href: "/solutions/by-role/compliance-managers",
         }
     }
 ]

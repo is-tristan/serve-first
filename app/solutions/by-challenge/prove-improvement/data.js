@@ -67,7 +67,7 @@ export const roleContextData = [
         description: "Show duty of care met and evidenced, with a complete audit trail for any site and date.",
         button: {
             text: "For compliance managers",
-            href: "/solutions/by-role/compliance-manager",
+            href: "/solutions/by-role/compliance-managers",
         }
     }
 ]

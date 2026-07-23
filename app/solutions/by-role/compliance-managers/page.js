@@ -21,9 +21,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-role/compliance-manager");
+export const metadata = getPageMetadata("/solutions/by-role/compliance-managers");
 
-export default function ComplianceManager() {
+export default function ComplianceManagers() {
 
     return (
 
@@ -33,7 +33,7 @@ export default function ComplianceManager() {
                 eyebrow="For compliance managers"
                 title="Compliance you can evidence, not assume"
                 description="Serve First helps compliance managers run checks, capture evidence and prove duty of care across every site, with audit trails ready the moment anyone asks."
-                image="/images/solutions/by-role/compliance-manager/compliance_manager_hero_compliance_audit_trail.png"
+                image="/images/solutions/by-role/compliance-managers/compliance-managers-cover.png"
                 imageSizing="Contain"
             />
 

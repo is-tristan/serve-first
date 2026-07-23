@@ -33,7 +33,7 @@ export default function OperationsDirector() {
                 eyebrow="For operations directors"
                 title="Consistent execution across every site"
                 description="Serve First gives operations directors one view of standards, tasks and performance across the estate, and routes every issue to the person who can resolve it, so execution is something you can prove."
-                image="/images/solutions/by-role/operations-directors/ops_director_hero_estate_execution_score_overview.png"
+                image="/images/solutions/by-role/operations-directors/operations-directors-cover.png"
                 imageSizing="Contain"
             />
 

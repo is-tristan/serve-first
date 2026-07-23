@@ -66,7 +66,7 @@ export const roleContextData = [
         description: "See checks completed and evidenced at every site, with audit trails ready on request.",
         button: {
             text: "For compliance managers",
-            href: "/solutions/by-role/compliance-manager",
+            href: "/solutions/by-role/compliance-managers",
         }
     }
 ]

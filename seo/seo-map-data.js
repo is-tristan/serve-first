@@ -114,7 +114,7 @@ export const seoMapData = {
             "retail operations software",
         ],
     },
-    "/solutions/by-role/compliance-manager": {
+    "/solutions/by-role/compliance-managers": {
         title: "Compliance Management Software, Multi-Site | Serve First",
         description: "Evidence duty of care across every site with Serve First. Compliance managers get checklists, captured evidence and audit trails ready on request.",
         keywords: [
