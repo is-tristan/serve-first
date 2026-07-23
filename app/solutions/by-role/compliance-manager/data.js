@@ -14,7 +14,7 @@ export const roleContextData = [
     {
         icon: checkDoneIcon,
         title: "Turn obligations into checks",
-        description: "Run Audits and Martyn's Law compliance checklists against the standards you must meet."
+        description: "Run audits and Martyn's Law compliance checklists against the standards."
     },
     {
         icon: clockCheckIcon,

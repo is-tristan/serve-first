@@ -15,12 +15,12 @@ export const roleContextData = [
     {
         icon: checkDoneIcon,
         title: "Prove the standard",
-        description: "Run digital Audits and Mystery shopping across every site, with scores you can compare."
+        description: "Run digital audits and mystery shopping across every site, with scores you can compare."
     },
     {
         icon: routeIcon,
         title: "Close the gaps",
-        description: "Failed checks raise Task management actions automatically, routed to the right owner."
+        description: "Failed checks raise task management actions automatically, routed to the right owner."
     },
     {
         icon: chartBreakoutIcon,
@@ -38,8 +38,10 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Digital Audits, Mystery shopping and Helpdesk capture how every site is really running, scored the same way everywhere.",
+        description: "Digital audits, mystery shopping and helpdesk capture how every site is really running, scored the same way everywhere.",
         image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_01_digital_audit_and_comparison.png",
+        imageWidth: 768,
+        imageHeight: 512,
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -50,6 +52,8 @@ export const howItWorksData = [
         title: "Analyse",
         description: "Every site is compared like for like, and EVA flags the locations slipping and the standard behind the slip.",
         image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_02_failed_checks_task_creation.png",
+        imageWidth: 768,
+        imageHeight: 512,
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -60,6 +64,8 @@ export const howItWorksData = [
         title: "Action",
         description: "Failed checks raise corrective tasks routed to an owner with a due date, tracked to proof of completion.",
         image: "/images/solutions/by-role/operations-directors/ops_director_platform_story_03_network_performance_summary.png",
+        imageWidth: 768,
+        imageHeight: 512,
         button: {
             text: "Explore",
             href: "/how-it-works/action",

@@ -39,6 +39,8 @@ export const howItWorksData = [
         title: "Capture",
         description: "Feedback terminals, Survey and Review monitoring capture sentiment at every site, across web, kiosk, email, SMS and reviews.",
         image: "/images/solutions/by-role/cx-leaders/cx-leaders-capture.png",
+        imageWidth: 768,
+        imageHeight: 384,
         button: {
             text: "Explore",
             href: "/how-it-works/capture",
@@ -49,6 +51,8 @@ export const howItWorksData = [
         title: "Analyse",
         description: "EVA reads every response as it lands and tells you, in plain English, what is driving sentiment at each location.",
         image: "/images/solutions/by-role/cx-leaders/cx-leaders-analyse.png",
+        imageWidth: 768,
+        imageHeight: 576,
         button: {
             text: "Explore",
             href: "/how-it-works/analyse",
@@ -59,6 +63,8 @@ export const howItWorksData = [
         title: "Action",
         description: "Each issue becomes a task routed to the team that owns it, tracked to proof of completion, so the loop closes.",
         image: "/images/solutions/by-role/cx-leaders/cx-leaders-action.png",
+        imageWidth: 768,
+        imageHeight: 576,
         button: {
             text: "Explore",
             href: "/how-it-works/action",

@@ -65,6 +65,10 @@ export default function ComplianceManager() {
                 title="What changes when proof is built in"
                 description="The outcomes compliance leads see once evidence is captured as work is done."
                 data={moduleStatsData}
+                btnPrimary={{
+                    text: "See it in action",
+                    href: "/get-a-demo",
+                }}
             />
 
             <ChallengeFrame

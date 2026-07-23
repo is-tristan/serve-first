@@ -15,7 +15,7 @@ import styles from "@/styles/components/handlers/form.module.scss";
 // Icons
 import { shieldTick } from "@/utils/icons";
 
-export default function FormSmall({ theme = "primary", hasDemoLink = true, formBtnText = "Send Message" }) {
+export default function FormSmall({ theme = "primary", hasDemoLink = true, formBtnText = "Send message" }) {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {

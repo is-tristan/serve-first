@@ -65,12 +65,15 @@ export default function OperationsDirector() {
                 title="What changes when execution is visible"
                 description="The outcomes ops directors see once standards are scored and gaps are routed."
                 data={moduleStatsData}
+                btnPrimary={{
+                    text: "See it in action",
+                    href: "/get-a-demo",
+                }}
             />
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Too many sites, too many tools, not enough proof."
-                hasFullStop={false}
+                title="Too many sites, too many tools, not enough proof"
                 data={challengeFrameData}
             />
 

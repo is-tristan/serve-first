@@ -1,9 +1,11 @@
 .challengeFrameItem {
     display: flex;
     flex-flow: column wrap;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 1.25rem;
     padding: 1.5rem;
+    height: 100%;
     border-radius: var(--borderRadius);
     border: 1px solid var(--border);
     background-color: var(--light);

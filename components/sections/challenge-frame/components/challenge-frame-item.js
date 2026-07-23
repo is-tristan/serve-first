@@ -27,28 +27,32 @@ export default function ChallengeFrameItem({
     return (
 
         <motion.div
-            className={styles.challengeFrameItem}
+            className={styles.challengeFrameItemContainer}
             ref={ref}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             initial={{ opacity: 0, y: 16 }}
             transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
-            <div className={styles.challengeFrameEyebrow}>
+            <div className={styles.challengeFrameItem}>
 
-                {eyebrow && (<Eyebrow type="secondary" hasAnimation={false} text={eyebrow} />)}
+                <div className={styles.challengeFrameContent}>
 
-            </div>
+                    <div className={styles.challengeFrameEyebrow}>
 
-            <div className={styles.challengeFrameContent}>
+                        {eyebrow && (<Eyebrow type="secondary" hasAnimation={false} text={eyebrow} />)}
 
-                <div className={styles.challengeFrameHeader}>
+                    </div>
 
-                    {title && (<h3>{title}</h3>)}
+                    <div className={styles.challengeFrameHeader}>
 
-                    {subheading && (<p className="fw700">{subheading}</p>)}
+                        {title && (<h3>{title}</h3>)}
 
-                    {description && (<p>{description}</p>)}
+                        {subheading && (<p className="fw700">{subheading}</p>)}
+
+                        {description && (<p>{description}</p>)}
+
+                    </div>
 
                 </div>
 
