@@ -25,7 +25,7 @@ export default function Testimonials({
             data-name="testimonials"
         >
 
-            <div className={`container noPaddingBottom`}>
+            <div className={`container ${btnPrimary ? "noPaddingBottom" : ""}`}>
 
                 {testimonialData.length > 0 && (
 

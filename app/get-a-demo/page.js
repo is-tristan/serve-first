@@ -30,7 +30,7 @@ export default function GetADemo() {
 
             <LogoBar />
 
-            <Testimonials btnPrimary={{ text: null }} />
+            <Testimonials btnPrimary={null} />
 
             <CtaBannerContact hasDemoLink={false} formBtnText="Book my demo" fullForm={true} theme="primary" />
 
