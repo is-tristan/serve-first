@@ -1,6 +1,3 @@
-// React
-import { Suspense } from "react";
-
 // Components
 import Banner from "@/components/sections/banner/banner";
 import FeatureList from "@/components/sections/feature-list/feature-list";
@@ -9,13 +6,11 @@ import RoleContext from "@/components/sections/role-context/role-context";
 import ChallengeFrame from "@/components/sections/challenge-frame/challenge-frame";
 import EvaSpotlight from "@/components/sections/eva-spotlight/eva-spotlight";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
-import ContentGrid from "@/components/sections/content-grid/content-grid";
-import BlogGrid from "@/components/dynamic-sections/blog-grid";
 import ModuleStats from "@/components/sections/module-stats/module-stats";
 import Testimonials from "@/components/sections/testimonials/testimonials";
+import ContentGrid from "@/components/sections/content-grid/content-grid";
 import FAQ from "@/components/sections/faq/faq";
 import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
-import IsLoading from "@/components/handlers/is-loading";
 
 // Data
 import {
@@ -24,9 +19,8 @@ import {
     roleContextData,
     challengeFrameData,
     productHighlightData,
-    contentGridData,
-    contentGridData2,
     moduleStatsData,
+    contentGridData,
     faqData
 } from "./data";
 
@@ -111,31 +105,10 @@ export default async function ClientConnect() {
                 data={productHighlightData}
             />
 
-            <ContentGrid
-                eyebrow="By industry"
-                title="See it in your sector"
-                button={null}
-                colCount={3}
-                data={contentGridData}
-            />
-
-            <ContentGrid
-                eyebrow="By challenge"
-                title="Solve the problem you came here with"
-                button={null}
-                data={contentGridData2}
-            />
-
-            <Suspense fallback={<IsLoading />}>
-
-                <BlogGrid />
-
-            </Suspense>
-
             <ModuleStats
                 eyebrow="The difference"
-                title="What changes when data drives action"
-                description="The outcomes teams see once every signal ends in a tracked fix."
+                title="What changes when standards hold"
+                description="The outcomes teams see once every site is scored and gaps are put right."
                 data={moduleStatsData}
                 btnPrimary={null}
             />
@@ -145,17 +118,24 @@ export default async function ClientConnect() {
                 btnPrimary={null}
             />
 
+            <ContentGrid
+                eyebrow="By challenge"
+                title="Solve the problem you came here with"
+                button={null}
+                data={contentGridData}
+            />
+
             <FAQ
                 eyebrow="Common questions"
-                title="Customer surveys, answered"
+                title="Client Connect, answered"
                 button={null}
                 data={faqData}
             />
 
             <CtaBannerOne
                 theme="primary"
-                title="See what Serve First can do for your locations"
-                description="Book a personalised demo and we will show you how surveys work across your channels and your sites today."
+                title="See what Serve First can do for your accounts"
+                description="Book a personalised demo and we will show you how Client Connect runs feedback across your B2B accounts."
             />
 
         </>

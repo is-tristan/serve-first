@@ -4,8 +4,8 @@ import {
     shieldTick,
     graphIcon,
     checkCircleBrokenIcon,
-    messageAlertSquareIcon,
-    shoppingBagSimpleIcon,
+    clipBoardCheckIcon,
+    notificationTextIcon,
     messageSmileSquareIcon,
     fileCheckIcon
 } from "@/utils/icons";
@@ -143,32 +143,25 @@ export const challengeFrameData = [
 
 export const productHighlightData = [
     {
-        icon: messageAlertSquareIcon,
-        eyebrow: "Feedback terminals",
-        title: "Capture on-site reactions in the moment.",
+        icon: clipBoardCheckIcon,
+        eyebrow: "Survey",
+        title: "Run CSAT and NPS across every site.",
         linkText: "Explore",
-        link: "/products/customer-experience/feedback-terminals",
-    },
-    {
-        icon: shoppingBagSimpleIcon,
-        eyebrow: "Mystery shopping",
-        title: "See your sites the way customers do.",
-        linkText: "Explore",
-        link: "/products/customer-experience/mystery-shopping",
-    },
-    {
-        icon: messageSmileSquareIcon,
-        eyebrow: "Review monitoring",
-        title: "Track public reviews across the web.",
-        linkText: "Explore",
-        link: "/products/market-intelligence/review-monitoring",
+        link: "/products/customer-experience/survey",
     },
     {
         icon: fileCheckIcon,
         eyebrow: "Audits",
-        title: "Turn failed checks into corrective action.",
+        title: "Score standards at every location.",
         linkText: "Explore",
         link: "/products/operational-excellence/audits",
+    },
+    {
+        icon: notificationTextIcon,
+        eyebrow: "Helpdesk",
+        title: "Log and resolve issues in one place.",
+        linkText: "Explore",
+        link: "/products/operational-excellence/helpdesk",
     },
     {
         icon: checkCircleBrokenIcon,
@@ -177,72 +170,47 @@ export const productHighlightData = [
         linkText: "Explore",
         link: "/products/operational-excellence/task-management",
     },
+    {
+        icon: messageSmileSquareIcon,
+        eyebrow: "Review monitoring",
+        title: "Track public reviews across the web.",
+        linkText: "Explore",
+        link: "/products/market-intelligence/review-monitoring",
+    },
 ]
 
-export const contentGridData = [
+export const moduleStatsData = [
     {
-        category: "By Industry",
-        title: "Retail",
-        description: "Measure CSAT and NPS across every store.",
-        image: "/images/products/shared/retail-industry-icon.svg",
-        button: {
-            text: "Explore",
-            href: "/solutions/by-industry/retail",
-        }
+        numberPrefix: "",
+        startNumber: "0",
+        endNumber: "3",
+        numberSuffix: "x",
+        description: "Faster issue resolution",
     },
     {
-        category: "By Industry",
-        title: "Leisure & hospitality",
-        description: "Hear from guests at every site, in the moment.",
-        image: "/images/products/shared/hospitality-industry-icon.svg",
-        button: {
-            text: "Explore",
-            href: "/solutions/by-industry/leisure-and-hospitality",
-        }
+        numberPrefix: "",
+        startNumber: "0",
+        endNumber: "197",
+        numberSuffix: "%",
+        description: "Net revenue retention",
     },
     {
-        category: "By Industry",
-        title: "Restaurants",
-        description: "Track guest satisfaction across every restaurant.",
-        image: "/images/products/shared/restaurant-industry-icon.svg",
-        button: {
-            text: "Explore",
-            href: "/solutions/by-industry/restaurants",
-        }
+        numberPrefix: "",
+        startNumber: "0",
+        endNumber: "143",
+        numberSuffix: "%",
+        description: "ARR growth",
     },
     {
-        category: "By Industry",
-        title: "Healthcare",
-        description: "Capture patient feedback at every location.",
-        image: "/images/products/shared/healthcare-industry-icon.svg",
-        button: {
-            text: "Explore",
-            href: "/solutions/by-industry/healthcare",
-        }
-    },
-    {
-        category: "By Industry",
-        title: "Facilities management",
-        description: "Facilities management.",
-        image: "/images/products/shared/facilities-management-industry-icon.svg",
-        button: {
-            text: "Explore",
-            href: "/solutions/by-industry/facilities-management",
-        }
-    },
-    {
-        category: "By Industry",
-        title: "Venues & events",
-        description: "Survey guests across every venue and event.",
-        image: "/images/products/shared/venues-events-industry-icon.svg",
-        button: {
-            text: "Explore",
-            href: "/solutions/by-industry/venues-and-events",
-        }
+        numberPrefix: "",
+        startNumber: "0",
+        endNumber: "91",
+        numberSuffix: "%",
+        description: "Survey response rate",
     }
 ]
 
-export const contentGridData2 = [
+export const contentGridData = [
     {
         title: "Inconsistent standards",
         description: "Hold every site to the same standard.",
@@ -280,61 +248,30 @@ export const contentGridData2 = [
         }
     },
 ]
-export const moduleStatsData = [
-    {
-        numberPrefix: "",
-        startNumber: "0",
-        endNumber: "3",
-        numberSuffix: "x",
-        description: "Faster issue resolution",
-    },
-    {
-        numberPrefix: "",
-        startNumber: "0",
-        endNumber: "197",
-        numberSuffix: "%",
-        description: "Net revenue retention",
-    },
-    {
-        numberPrefix: "",
-        startNumber: "0",
-        endNumber: "143",
-        numberSuffix: "%",
-        description: "ARR growth",
-    },
-    {
-        numberPrefix: "",
-        startNumber: "0",
-        endNumber: "91",
-        numberSuffix: "%",
-        description: "Survey response rate",
-    }
-]
-
 
 export const faqData = [
     {
-        question: "What is customer survey software?",
-        answer: "Customer survey software lets you build a survey once and send it across the channels your customers use, then turns the responses into structured insight. Serve First goes further, routing what you learn into tasks so a survey leads to action, not just a results screen."
+        question: "What is Client Connect?",
+        answer: "Client Connect is a B2B client feedback tool built into Serve First. Account and customer success teams use it to send structured review invitations to their clients and see the responses sit alongside the operational data already in the platform, so feedback connects to what was actually delivered."
     },
     {
-        question: "Which channels can I run surveys on?",
-        answer: "Web, kiosk, email and SMS, from one builder. You design the survey once and Serve First fits it to each channel, so you reach customers wherever they are without rebuilding it for every format."
+        question: "How is it different from a standalone feedback tool?",
+        answer: "A standalone tool tells you what a client thinks. Client Connect shows what they think next to your audits, tickets and KPIs, so you can see the cause behind the score. It runs in the platform your team already uses, with no second login and no integration to maintain."
     },
     {
-        question: "Can surveys adapt to each respondent?",
-        answer: "Yes. Logic branching shows each customer only the questions that apply to them, which keeps the survey short, lifts completion rates and gives you cleaner data to work from."
+        question: "Who is Client Connect for?",
+        answer: "It is built for B2B service businesses where the client relationship is contract-driven, multi-stakeholder and renewable. The day-to-day users are account managers, customer success leads and operations directors who own client relationships and need something they can run themselves."
     },
     {
-        question: "How quickly do results come back?",
-        answer: "Responses stream in live, with sentiment scoring applied as each answer lands, so the themes worth attention surface the same day rather than at the end of a reporting cycle."
+        question: "Can we collect feedback from more than one contact per client?",
+        answer: "Yes. You manage clients and contacts in a lightweight CRM view and can weight responses by seniority, so you hear from every stakeholder who shapes the relationship, not just a single contact, and a client with many sites still rolls up to one account view."
     },
     {
-        question: "Does survey feedback connect to operations?",
-        answer: "Yes. Because surveys sit in the same platform as audits, tasks and the rest of your operation, a drop in a score and the site behind it appear together, and the follow-up is routed to an owner and tracked."
+        question: "How often can we send reviews?",
+        answer: "On whatever cadence suits the relationship: monthly performance check-ins, quarterly business reviews, annual relationship reviews or an ad hoc post-meeting survey. Sends can be scheduled and recur per contract, and every invitation is tracked from draft through to response."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Survey results roll up into one operating picture, so you can compare locations, spot the ones slipping and put them right, however many sites you run."
+        question: "How is Client Connect priced?",
+        answer: "Client Connect is priced per contract, not per location, per user or per response, which matches the way the relationships you are protecting actually renew. Talk to us for current pricing and the tier that fits the number of contracts you manage."
     }
 ]
