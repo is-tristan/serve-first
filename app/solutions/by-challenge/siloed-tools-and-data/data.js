@@ -156,14 +156,14 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "197",
         numberSuffix: "%",
-        description: "Net Revenue Retention",
+        description: "Net revenue retention",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "143",
         numberSuffix: "%",
-        description: "ARR Growth",
+        description: "ARR growth",
     },
     {
         numberPrefix: "",

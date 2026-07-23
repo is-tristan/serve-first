@@ -10,19 +10,16 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Store Audits",
         title: "What head office sets and what the shop floor delivers are rarely the same.",
-        description: "Serve First scores every store against your standards with the same digital audits, so drift shows up the moment it starts rather than at the next visit.",
         tags: []
     },
     {
         eyebrow: "02 | Customer feedback",
         title: "A dip in one store is invisible until it shows up in the sales or the reviews.",
-        description: "Every store reports into one operating picture, with EVA flagging the locations slipping and the standard behind it, so you step in early.",
         tags: []
     },
     {
         eyebrow: "03 | Proof of Completion",
         title: "Issues spotted in store get raised, then lost before anyone fixes them.",
-        description: "Each gap becomes a task routed to the store manager and tracked to proof of completion, so the fix holds and you can show it did.",
         tags: []
     }
 ]
@@ -111,14 +108,14 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "197",
         numberSuffix: "%",
-        description: "Net Revenue Retention",
+        description: "Net revenue retention",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "143",
         numberSuffix: "%",
-        description: "ARR Growth",
+        description: "ARR growth",
     },
     {
         numberPrefix: "",
