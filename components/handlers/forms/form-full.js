@@ -103,7 +103,7 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
                         <select name="subject" required defaultValue="" aria-required="true">
 
-                            <option value="" disabled>Demo, sales, support or something else.</option>
+                            <option value="" disabled>Select a topic</option>
 
                             <option value="Demo">Demo</option>
 

@@ -25,7 +25,6 @@ import {
     productHighlightData,
     contentGridData,
     contentGridData2,
-    testimonialData,
     faqData
 } from "./data";
 
@@ -131,7 +130,6 @@ export default async function Audits() {
             </Suspense>
 
             <Testimonials
-                data={testimonialData}
                 btnPrimary={null}
             />
 

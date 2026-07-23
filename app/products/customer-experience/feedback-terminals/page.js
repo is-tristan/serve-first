@@ -23,7 +23,6 @@ import {
     productHighlightData,
     contentGridData,
     contentGridData2,
-    testimonialData,
     faqData
 } from "./data";
 
@@ -128,7 +127,6 @@ export default async function FeedbackTerminals() {
 
             <Testimonials
                 theme="primary"
-                data={testimonialData}
                 btnPrimary={null}
             />
 

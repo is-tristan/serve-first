@@ -91,7 +91,7 @@ export default function FormSmall({ theme = "primary", hasDemoLink = true, formB
 
                         <select name="subject" required defaultValue="" aria-required="true">
 
-                            <option value="" disabled>Demo, sales, support or something else.</option>
+                            <option value="" disabled>Select a topic</option>
 
                             <option value="Demo">Demo</option>
 

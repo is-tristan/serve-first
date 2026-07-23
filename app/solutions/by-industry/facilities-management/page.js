@@ -16,7 +16,6 @@ import {
     howItWorksData,
     productHighlightData,
     moduleStatsData,
-    testimonialData,
     contentGridData,
     faqData,
 } from "./data";
@@ -73,7 +72,6 @@ export default function FacilitiesManagement() {
 
             <Testimonials
                 theme="primary"
-                data={testimonialData}
                 btnPrimary={null}
             />
 

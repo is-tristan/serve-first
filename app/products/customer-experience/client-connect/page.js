@@ -27,7 +27,6 @@ import {
     contentGridData,
     contentGridData2,
     moduleStatsData,
-    testimonialData,
     faqData
 } from "./data";
 
@@ -144,7 +143,6 @@ export default async function ClientConnect() {
 
             <Testimonials
                 theme="primary"
-                data={testimonialData}
                 btnPrimary={null}
             />
 
