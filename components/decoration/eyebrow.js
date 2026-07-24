@@ -12,6 +12,7 @@ export default function Eyebrow({
     delay = 0.25,
     type = "primary",
     textColor = "primary",
+    hasDash = false,
     text }) {
 
     const ref = useRef(null);
@@ -25,7 +26,20 @@ export default function Eyebrow({
 
                 <span className={`${styles.text}`}>
 
-                    {text}
+                    {hasDash ? (
+
+                        <>
+
+                            <span className={styles.dash}>-</span> {text}
+
+                        </>
+
+                    ) : (
+
+                        text
+
+                    )}
+
 
                 </span>
 

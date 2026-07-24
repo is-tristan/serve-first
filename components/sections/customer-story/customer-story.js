@@ -21,7 +21,7 @@ export default function CustomerStory({
 
             <div className="container noPaddingBottom">
 
-                <Eyebrow text={eyebrow} />
+                <Eyebrow text={eyebrow} hasDash={true} />
 
             </div>
 

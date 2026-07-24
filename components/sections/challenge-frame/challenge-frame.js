@@ -27,7 +27,7 @@ export default function ChallengeFrame({
 
                 <div className={`content`}>
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     {title && (<Text headingClass={`sectionTitle sectionTitleContained colorPrimaryAlt`} title={title} hasFullStop={hasFullStop} />)}
 

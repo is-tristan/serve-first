@@ -20,6 +20,7 @@ import { checkmark } from "@/utils/icons";
 
 export default function HowItWorksItem({
     index = 0,
+    eyebrowHasDash = false,
     image,
     imageSizing = "Contain",
     imageWidth = 768,
@@ -67,7 +68,7 @@ export default function HowItWorksItem({
 
                     {number && (<span className={stylesAlt.featureListItemNumber}>{number}</span>)}
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={eyebrowHasDash} />)}
 
                     {title && (<h2 className={`sectionTitle colorPrimaryAlt`}>{title}</h2>)}
 

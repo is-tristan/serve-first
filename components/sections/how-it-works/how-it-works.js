@@ -14,6 +14,7 @@ export default function HowItWorks({
     containerClass = "noPaddingTop",
     eyebrow = "- How It Works Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    titleClass = "sectionTitleContained",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
     data = howItWorksData || []
 }) {
@@ -24,9 +25,9 @@ export default function HowItWorks({
 
             <div className={`container centered noPaddingBottom ${stylesAlt.howItWorksHeading} ${containerClass}`}>
 
-                {eyebrow && (<Eyebrow text={eyebrow} />)}
+                {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
-                {title && (<Text headingClass={`sectionTitle sectionTitleContained`} title={title} descriptionClass="fw400" description={description} />)}
+                {title && (<Text headingClass={`sectionTitle sectionTitleContained ${titleClass}`} title={title} descriptionClass="fw400" description={description} />)}
 
             </div>
 
@@ -49,6 +50,7 @@ export default function HowItWorks({
                             description={item.description}
                             list={item.list}
                             button={item.button}
+                            eyebrowHasDash={item.eyebrowHasDash}
                         />
 
                     ))}

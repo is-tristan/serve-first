@@ -27,7 +27,7 @@ export default function PlatformStory({
 
                 <div className={`content headingCol`}>
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />
 

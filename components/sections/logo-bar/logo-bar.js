@@ -22,7 +22,7 @@ export default function LogoBar({
 
             <div className="container centered noPaddingBottom">
 
-                <Eyebrow text={eyebrow} textColor="colorPrimaryAlt" />
+                <Eyebrow text={eyebrow} textColor="colorPrimaryAlt" hasDash={true} />
 
             </div>
 

@@ -35,7 +35,7 @@ export default function ContentGrid({
 
                 <div className="content">
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     {title && (<Text headingClass={`sectionTitle sectionTitleContained colorPrimaryAlt`} title={title} />)}
 

@@ -9,6 +9,7 @@ import styles from "@/styles/components/sections/eva-spotlight.module.scss";
 
 export default function EvaSpotlight({
     eyebrow = "- Eva Spotlight Component",
+    titleContainerClass,
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
     featuredImage,
@@ -35,11 +36,11 @@ export default function EvaSpotlight({
 
         <section className={`row ${styles.evaSpotlight}`}>
 
-            <div className="container centered noPaddingBottom">
+            <div className={`container centered noPaddingBottom ${titleContainerClass}`}>
 
                 <div className={`content`}>
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} description={description} descriptionClass={`fw400`} />
 

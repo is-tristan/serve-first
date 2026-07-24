@@ -15,6 +15,7 @@ export default function IndustryCards({
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
     data = industryCardsData || [],
+    industryCardsContainerClass = "noPaddingTop noPaddingBottom",
     btnPrimary = {
         text: "Lorem ipsum dolor sit amet.",
         href: "#",
@@ -38,7 +39,7 @@ export default function IndustryCards({
 
                 <div className={`content contentCol ${styles.industryCardsHeading}`}>
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} description={description} descriptionClass={`fw400`} />
 
@@ -48,7 +49,7 @@ export default function IndustryCards({
 
             {data.length > 0 && (
 
-                <div className="container noPaddingTop noPaddingBottom" style={{ "gap": "1.5rem" }}>
+                <div className={`container ${industryCardsContainerClass}`} style={{ "gap": "1.5rem" }}>
 
                     {data.map((item, index) => (
 
@@ -58,6 +59,7 @@ export default function IndustryCards({
                             eyebrow={item.eyebrow}
                             title={item.title}
                             image={item.image}
+                            imageFit={item.imageFit}
                             number={item.number}
                             numberText={item.numberText}
                             button={item.button}
@@ -69,17 +71,21 @@ export default function IndustryCards({
 
             )}
 
-            <div className="container noPaddingTop">
+            {btnPrimary || btnSecondary && (
 
-                <div className={`buttons ${styles.industryCardsButtons}`}>
+                <div className="container noPaddingTop">
 
-                    {btnPrimary && (<Button dataName={"primaryButton"} text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className="primary" />)}
+                    <div className={`buttons ${styles.industryCardsButtons}`}>
 
-                    {btnSecondary && (<Button text={btnSecondary.text} href={btnSecondary.href} target={btnSecondary.target} className="textLink colorDark" />)}
+                        {btnPrimary && (<Button dataName={"primaryButton"} text={btnPrimary.text} href={btnPrimary.href} target={btnPrimary.target} className="primary" />)}
+
+                        {btnSecondary && (<Button text={btnSecondary.text} href={btnSecondary.href} target={btnSecondary.target} className="textLink colorDark" />)}
+
+                    </div>
 
                 </div>
 
-            </div>
+            )}
 
         </section>
 

@@ -32,7 +32,7 @@ export default function ModuleStats({
 
             <div className="container centered noPaddingBottom">
 
-                {eyebrow && (<Eyebrow text={eyebrow} />)}
+                {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                 <Text headingClass={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`} title={title ? title : null} description={description ? description : null} descriptionClass={`fw400`} />
 

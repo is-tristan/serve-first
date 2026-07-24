@@ -33,7 +33,7 @@ export default function RoleContext({
 
                 <div className={`content contentCol ${styles.roleContextHeading}`}>
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     <Text headingClass={`sectionTitle sectionTitleContained colorPrimaryAlt`} title={title} description={description} />
 

@@ -20,6 +20,7 @@ export default function IndustryCard({
     eyebrow,
     title,
     image,
+    imageFit = "contain",
     number,
     numberText,
     button
@@ -52,6 +53,7 @@ export default function IndustryCard({
                             loading="lazy"
                             quality={90}
                             sizes="(max-width: 1023px) 100vw, 50vw"
+                            style={{ objectFit: imageFit }}
                         />
 
                     </div>

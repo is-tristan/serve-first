@@ -34,7 +34,7 @@ export default function ContentGridItem({
             initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
         >
 
-            <div className={styles.contentGridItem}>
+            <div className={styles.contentGridItem} data-has-link={item.button ? true : false}>
 
                 <div className={styles.contentGridItemContent}>
 
@@ -82,12 +82,16 @@ export default function ContentGridItem({
 
                 </div>
 
-                <Link
-                    href={item.button.href}
-                    target={item.button.target}
-                    className={`colLink ${styles.contentGridItemLink}`}
-                    aria-label={item.button.text || item.title || "Read more"}
-                ></Link>
+                {item.button && (
+
+                    <Link
+                        href={item.button.href}
+                        target={item.button.target}
+                        className={`colLink ${styles.contentGridItemLink}`}
+                        aria-label={item.button.text || item.title || "Read more"}
+                    />
+
+                )}
 
             </div>
 

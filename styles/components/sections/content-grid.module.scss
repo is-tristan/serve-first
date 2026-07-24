@@ -20,12 +20,10 @@
         flex-grow: 0 !important;
     }
 
-    @media (hover: hover) {
-        &:hover {
-            transform: translateY(-0.5rem);
-
-            .contentGridItemButton >div:last-child {
-                transform: translateX(0.15rem);
+    &[data-has-link="true"] {
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-0.5rem);
             }
         }
     }

@@ -26,7 +26,6 @@ import {
 
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-
 export const metadata = getPageMetadata("/products/customer-experience/client-connect");
 
 export default async function ClientConnect() {
@@ -101,7 +100,6 @@ export default async function ClientConnect() {
                 eyebrow="More from Serve First"
                 title="More of the platform your teams can use"
                 linkText={null}
-                colCount={4}
                 data={productHighlightData}
             />
 

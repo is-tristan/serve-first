@@ -32,7 +32,7 @@ export default function Faq({
 
                 <div className="content headingCol">
 
-                    {eyebrow && (<Eyebrow text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     {title && (<Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />)}
 
