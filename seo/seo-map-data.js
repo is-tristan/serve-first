@@ -26,6 +26,24 @@ export const seoMapData = {
             "survey builder",
         ],
     },
+    "/products/customer-experience/client-connect": {
+        title: "Client Connect, B2B Feedback Programmes | Serve First",
+        description: "Run your own B2B feedback programmes with Serve First Client Connect. Send branded review invitations, track every response and report on results.",
+        keywords: [
+            "B2B feedback programmes",
+            "client review invitations",
+            "account feedback tracking",
+        ],
+    },
+    "/products/market-intelligence/competitive-benchmarking": {
+        title: "Competitive Benchmarking by Location | Serve First",
+        description: "Benchmark every location against nearby competitors with Serve First. Sentiment analysis, topic insights and ratings from all public reviews.",
+        keywords: [
+            "competitive benchmarking",
+            "location-level competitor analysis",
+            "review benchmarking",
+        ],
+    },
     "/products/market-intelligence/review-monitoring": {
         title: "Online Review Monitoring for Multi-Site Brands | Serve First",
         description: "Monitor and respond to reviews across every location and platform with Serve First. Aggregated reviews, sentiment tracking and response management.",
@@ -78,6 +96,15 @@ export const seoMapData = {
             "task management software",
             "frontline action tracking",
             "operational task workflows",
+        ],
+    },
+    "/products/operational-excellence/reporting": {
+        title: "Multi-Site Reporting and Dashboards | Serve First",
+        description: "Bring customer and operational data into one view with Serve First reporting. Configurable dashboards, cross-location insight and board-ready exports.",
+        keywords: [
+            "multi-site reporting",
+            "operational dashboards",
+            "performance reporting",
         ],
     },
     "/": {
