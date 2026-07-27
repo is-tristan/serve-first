@@ -40,7 +40,7 @@ export const menuItemsData = [
         submenu: [
             {
                 label: "By Role",
-                href: "/solutions/by-role",
+                href: "#",
                 icon: byRoleIcon,
                 submenu: [
                     {
@@ -59,7 +59,7 @@ export const menuItemsData = [
             },
             {
                 label: "By Industry",
-                href: "/solutions/by-industry",
+                href: "#",
                 icon: byIndustryIcon,
                 submenu: [
                     {
@@ -90,7 +90,7 @@ export const menuItemsData = [
             },
             {
                 label: "By Challenge",
-                href: "/solutions/by-challenge",
+                href: "#",
                 icon: byChallengeIcon,
                 submenu: [
                     {
@@ -119,7 +119,7 @@ export const menuItemsData = [
         submenu: [
             {
                 label: "Customer Experience",
-                href: "/products/customer-experience",
+                href: "#",
                 icon: customerExperienceIcon,
                 submenu: [
                     {
@@ -195,7 +195,7 @@ export const menuItemsData = [
             },
             {
                 label: "Contact Us",
-                href: "/company/contact-us-us",
+                href: "/company/contact-us",
                 icon: contactUsIcon,
             },
         ],

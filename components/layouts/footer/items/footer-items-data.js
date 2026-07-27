@@ -34,7 +34,7 @@ export const solutions = {
     items: [
         {
             label: "CX Leaders",
-            href: "/solutions/by-role/cx-leader",
+            href: "/solutions/by-role/cx-leaders",
         },
         {
             label: "Operations Directors",
@@ -78,7 +78,7 @@ export const explore = {
         },
         {
             label: "About Us",
-            href: "/company/about-us",
+            href: "/company/about",
         },
         {
             label: "What We Do",
@@ -86,7 +86,7 @@ export const explore = {
         },
         {
             label: "Contact Us",
-            href: "/company/contact-us-us",
+            href: "/company/contact-us",
         },
         {
             label: "Blog",

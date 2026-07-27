@@ -3,7 +3,7 @@ import Banner from "@/components/sections/banner/banner";
 import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ModuleStats from "@/components/sections/module-stats/module-stats";
 import Testimonials from "@/components/sections/testimonials/testimonials";
-import CtaBannerTwo from "@/components/sections/cta-banners/cta-banner-2";
+import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
 
 // Data
 import { platformStoryData } from "./data";
@@ -24,19 +24,24 @@ export default function About() {
             <PlatformStory
                 eyebrow="What we believe in here"
                 title="Insight on its own is only half the job"
-                description="Most tools stop at telling you what happened. Serve First was built to close the gap between knowing and doing, across every location you run."
+                description={null}
                 data={platformStoryData}
             />
 
             <ModuleStats
                 eyebrow="By the numbers"
                 title="The Serve First story, so far"
+                description="What began as a better way to act on customer feedback has grown into one connected platform for the people who serve."
+                btnPrimary = {{
+                    text: "Talk to us",
+                    href: "/company/contact-us",
+                }}
             />
 
             <Testimonials theme="primary" />
 
-            <CtaBannerTwo
-                title="See what serving first really looks like"
+            <CtaBannerOne
+                title="Experience what it truly means to serve first"
                 description="Book a personalised demo and see how Serve First works with your estate, your data and your whole team."
                 buttonPrimary={
                     {

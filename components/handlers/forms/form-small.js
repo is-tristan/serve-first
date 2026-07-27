@@ -141,7 +141,7 @@ export default function FormSmall({
 
                         <input type="checkbox" name="terms" id="terms" required aria-required="true" />
 
-                        <label htmlFor="terms" style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>I have read and agree to your <Link href="/privacy-policy" target="_blank" className={theme === "primary" ? "colorSecondary" : "colorPrimaryAlt"} style={{ textDecoration: "underline" }}>privacy policy</Link>.</label>
+                        <label htmlFor="terms" style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>I have read and agree to your <Link href="/legal/privacy-policy" target="_blank" className={theme === "primary" ? "colorSecondary" : "colorPrimaryAlt"} style={{ textDecoration: "underline" }}>privacy policy</Link>.</label>
 
                     </div>
 

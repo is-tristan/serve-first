@@ -2,29 +2,29 @@ export const moduleStatsData = [
     {
         numberPrefix: "",
         startNumber: "0",
-        endNumber: "100",
-        numberSuffix: "+",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
-    },
-    {
-        numberPrefix: "",
-        startNumber: "0",
-        endNumber: "200",
-        numberSuffix: "+",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
-    },
-    {
-        numberPrefix: "",
-        startNumber: "0",
-        endNumber: "4",
+        endNumber: "3",
         numberSuffix: "x",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
+        description: "Faster issue resolution",
     },
     {
         numberPrefix: "",
         startNumber: "0",
-        endNumber: "98",
+        endNumber: "197",
         numberSuffix: "%",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
+        description: "Net revenue retention",
+    },
+    {
+        numberPrefix: "",
+        startNumber: "0",
+        endNumber: "143",
+        numberSuffix: "%",
+        description: "ARR growth",
+    },
+    {
+        numberPrefix: "",
+        startNumber: "0",
+        endNumber: "91",
+        numberSuffix: "%",
+        description: "Survey response rate",
     }
 ]

@@ -37,15 +37,13 @@ export default async function Media() {
                 eyebrow="News and announcements"
                 title="What we are building, and why"
                 description="Company news, product releases and the milestones behind Serve First. The story of how multi-site operators are moving from reports to real intelligence."
+                image={null}
             />
 
             <ContentGrid
                 eyebrow="Latest updates"
-                title="Press, releases and recognition so far"
-                button={{
-                    text: "View all news",
-                    href: "#",
-                }}
+                title="Press, releases and recognition in the media so far"
+                button={null}
                 data={contentGridData}
             />
             

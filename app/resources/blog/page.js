@@ -36,16 +36,14 @@ export default async function Blog() {
             <Banner
                 eyebrow="The Serve First blog"
                 title="Ideas genuinely worth acting on"
-                description="Practical thinking on customer experience, operations and multi-site intelligence, written for the people who run the floor, not just report on it."
+                description="Practical thinking on customer experience, operational excellence and multi-site intelligence, written for the people who run the floor, not just report on it."
+                image={null}
             />
 
             <ContentGrid
                 eyebrow="Latest articles"
                 title="Guides, playbooks and field notes today"
-                button={{
-                    text: "View all articles",
-                    href: "#",
-                }}
+                button={null}
                 data={contentGridData}
             />
 
