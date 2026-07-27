@@ -71,7 +71,8 @@ export default function VenuesAndEvents() {
                     "eyebrow": "Martyn's Law",
                     "title": "Meet your Martyn's Law duties at every venue",
                     "description": "Turn your Martyn's Law obligations into checklists, training records and evidence, documented across every venue.",
-                    "image": "/decoration/no-image-placeholder.webp",
+                    "image": "/images/solutions/by-industry/venues-and-events/venues-and-events-martyns-law.png",
+                    "imageSizing": "contain",
                     "button": {
                         "text": "See Martyn's Law",
                         "href": "/products/operational-excellence/martyns-law",
