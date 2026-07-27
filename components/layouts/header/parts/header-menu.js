@@ -19,8 +19,6 @@ import { chevronDown, chevronRightAlt, arrowRightShort, aiIcon } from "@/utils/i
 // Components
 import HeaderAd from "@/components/layouts/header/parts/header-ad"
 
-import { getHeaderType } from "@/components/layouts/header/get-header-type"
-
 const menuAdKeys = {
     "How It Works": "howItWorks",
     "Solutions": "solutions",
@@ -32,7 +30,6 @@ const menuAdKeys = {
 export default function HeaderMenu({ menuAds }) {
 
     const pathname = usePathname()
-    const headerType = getHeaderType(pathname)
     const [openSubmenu, setOpenSubmenu] = useState(null)
     const [selectedSubmenuItem, setSelectedSubmenuItem] = useState(null)
 
@@ -65,7 +62,7 @@ export default function HeaderMenu({ menuAds }) {
 
     return (
 
-        <div className={`hidden-s hidden-m hidden-l hidden-xl ${styles.desktopMenu}`} data-header-type={headerType} role="navigation">
+        <div className={`hidden-s hidden-m hidden-l hidden-xl ${styles.desktopMenu}`} role="navigation">
 
             {data.map((item) => {
 

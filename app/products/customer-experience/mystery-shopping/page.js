@@ -40,7 +40,7 @@ export default async function MysteryShopping() {
         <>
 
             <Banner
-                eyebrow="Beyond the satisfaction survey"
+                eyebrow="Customer experience platform"
                 title="See your locations the way customers do"
                 description="Serve First mystery shopping puts a trained assessor in your locations, scoring the experience against your standards and showing you exactly where service slips."
                 image="/images/products/customer-experience/mystery-shopping/mystery-shopping-cover.png"

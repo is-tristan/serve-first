@@ -26,13 +26,6 @@
             gap: 1.5rem;
         }
     }
-
-    &[data-header-type="minimal"] {
-        .headerContainer {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-    }
 }
 
 // Header Logo
@@ -74,7 +67,7 @@
         height: 3.5rem;
         background: var(--light);
         border: 1px solid rgba(var(--lightRgb), 0.1);
-        border-radius: var(--borderRadius);
+        border-radius: calc(var(--borderRadius) * 5);
     }
 
     .headerButtons {

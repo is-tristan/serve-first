@@ -1,16 +1,17 @@
 // Components
-import HeaderShell from "@/components/layouts/header/parts/header-shell"
 import HeaderContainer from "@/components/layouts/header/parts/header-container"
+
+import styles from "@/styles/components/layouts/header/header.module.scss"
 
 export default function Header() {
 
     return (
 
-        <HeaderShell>
+        <header id="header" className={styles.header} role="banner">
 
             <HeaderContainer />
 
-        </HeaderShell>
+        </header>
 
     )
 

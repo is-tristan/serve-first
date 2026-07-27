@@ -2,12 +2,8 @@
 
 import { useState } from "react"
 
-import { usePathname } from "next/navigation"
-
 import Button from "@/components/handlers/buttons"
 import HeaderMobileMenu from "@/components/layouts/header/parts/header-mobile-menu"
-
-import { getHeaderType } from "@/components/layouts/header/get-header-type"
 
 // Styles
 import styles from "@/styles/components/layouts/header/header.module.scss"
@@ -18,8 +14,6 @@ import { chevronRightAlt } from "@/utils/icons"
 
 export default function HeaderActions({ menuAds }) {
 
-    const pathname = usePathname()
-    const headerType = getHeaderType(pathname)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
     const toggleMobileMenu = () => {
@@ -30,7 +24,7 @@ export default function HeaderActions({ menuAds }) {
 
         <>
 
-            <div className={`${styles.headerActions}`} data-header-type={headerType}>
+            <div className={`${styles.headerActions}`}>
 
                 <div className={`${styles.headerButtons}`}>
 

@@ -17,7 +17,7 @@ export const featureListData = [
         description: "Bring SOPs, policies and training into one searchable home. Version control keeps a single current answer live, and role-based access means each team sees what applies to them and nothing out of date.",
         image: "/images/products/operational-excellence/knowledge-base/knowledge-base-feature-list-image.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         list: [
             {
                 text: "Centralised content and search",
@@ -113,7 +113,7 @@ export const howItWorksData = [
         description: "Teams find the right guidance in seconds, linked from the tickets and tasks they are already working on.",
         image: "/images/products/operational-excellence/knowledge-base/knowledge-base-action.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Put guidance into action",
             href: "/how-it-works/action",

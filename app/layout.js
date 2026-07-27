@@ -47,7 +47,11 @@ export default function RootLayout({ children }) {
 
           <Header />
 
-          {children}
+          <main id="main" className="main" aria-label="Main content">
+
+            {children}
+
+          </main>
 
           <Footer />
 

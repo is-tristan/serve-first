@@ -91,7 +91,7 @@ export default async function ReviewMonitoring() {
                     "description": "Ask EVA where you lead and where rivals are winning, and get a plain answer with the reason behind it. EVA recommends where to focus; your team decides what to do.",
                     "image": "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-eva.png",
                     "imageWidth": 768,
-                    "imageHeight": 768,
+                    "imageHeight": 576,
                     "imageSizing": "contain",
                     "button": {
                         "text": "Meet EVA",

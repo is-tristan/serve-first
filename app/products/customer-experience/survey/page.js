@@ -43,7 +43,7 @@ export default async function Survey() {
 
             <Banner
                 eyebrow="Customer experience platform"
-                title="Ask the right question, everywhere"
+                title="Ask the right questions, everywhere"
                 description="Reach customers on web, kiosk, email and SMS, and Serve First turns every response into structured insight your teams use the same day."
                 image="/images/products/customer-experience/survey/survey-cover.png"
                 imageSizing="contain"

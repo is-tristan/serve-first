@@ -85,8 +85,8 @@ export const featureListData = [
         title: "Everything that shapes the customer experience, in one place",
         description: "Most businesses run these in separate tools. Serve First connects all four, so feedback, standards, reputation and data work as one picture.",
         image: "/images/what-does-serve-first-do/wdsfd-feature-list-image.png",
-        imageWidth: 567,
-        imageHeight: 567,
+        imageWidth: 768,
+        imageHeight: 576,
         list: [
             {
                 text: "<span><strong>Brand promise:</strong> Mystery shopping and service evaluations</span>",
@@ -163,28 +163,28 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "100",
         numberSuffix: "+",
-        description: "Capture — Every customer, operational and market signal in one place",
+        description: "Capture: every customer, operational and market signal in one place",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "200",
         numberSuffix: "+",
-        description: "Analyse — Patterns, risks and root causes surfaced by EVA",
+        description: "Analyse: patterns, risks and root causes surfaced by EVA",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "4",
         numberSuffix: "x",
-        description: "Action — Assigned tasks and workflows with proof of completion",
+        description: "Action: assigned tasks and workflows with proof of completion",
     },
     {
         numberPrefix: "",
         startNumber: "0",
         endNumber: "98",
         numberSuffix: "%",
-        description: "Prove — Improvement tracked over time, reportable to leadership",
+        description: "Prove: improvement tracked over time, reportable to leadership",
     }
 ]
 
@@ -215,6 +215,6 @@ export const faqData = [
     },
     {
         question: "What is Martyn's Law and does Serve First help with compliance?",
-        answer: "Martyn's Law is UK legislation that requires qualifying premises and events to assess and prepare for terrorist threats. Serve First supports compliance by managing the assessments, checks and actions involved, and tracking proof of completion alongside the rest of a location's operational standards."
+        answer: "Martyn's Law (the Terrorism (Protection of Premises) Act) is UK legislation requiring venues and public premises to take steps to be better prepared for and protected from terrorist attacks, with duties scaling up according to a venue's capacity. Serve First helps you meet it by turning your Martyn's Law duties into structured checklists run at every venue, capturing evidence as the work is done and keeping an audit trail per site, so you can demonstrate your protection measures on request.",
     },
 ]

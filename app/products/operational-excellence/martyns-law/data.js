@@ -34,10 +34,10 @@ export const featureListData = [
     {
         eyebrow: "Built for duty of care",
         title: "Evidence that stands up to scrutiny",
-        description: "BChecklists, training records and incident logs come together with timestamped audit trails. Your readiness is documented as you go, so demonstrating duty of care is a click, not a scramble.",
+        description: "Checklists, training records and incident logs come together with timestamped audit trails. Your readiness is documented as you go, so demonstrating duty of care is a click, not a scramble.",
         image: "/images/products/operational-excellence/martyns-law/martyns-law-feature-list-image.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         list: [
             {
                 text: "Guided compliance checklists",
@@ -66,7 +66,7 @@ export const howItWorksData = [
         description: "Work through compliance checklists that capture risk assessments, training records and evidence per venue.",
         image: "/images/products/operational-excellence/martyns-law/martyns-law-capture.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Explore capture",
             href: "/how-it-works/capture",

@@ -8,7 +8,7 @@
     width: max-content;
     background: var(--light);
     border: 1px solid rgba(var(--lightRgb), 0.1);
-    border-radius: var(--borderRadius);
+    border-radius: calc(var(--borderRadius) * 5);
 
     @media (width < 1366px) {
         flex: 1 1 auto;
@@ -16,10 +16,6 @@
 
     @media (width >=1366px) {
         gap: 1rem;
-    }
-
-    &[data-header-type="minimal"] {
-        display: none;
     }
 }
 

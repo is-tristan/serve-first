@@ -101,7 +101,7 @@ export const howItWorksData = [
         description: "Each ticket carries its context and history, routed by survey and location so only the right team sees it.",
         image: "/images/products/operational-excellence/helpdesk/helpdesk-analyse.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "See how issues analyse",
             href: "/how-it-works/analyse",
@@ -113,7 +113,7 @@ export const howItWorksData = [
         description: "Reply by email or SMS with AI-drafted suggestions, then track every ticket through to resolved, fully logged.",
         image: "/images/products/operational-excellence/helpdesk/helpdesk-action.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Resolve issues in action",
             href: "/how-it-works/action",

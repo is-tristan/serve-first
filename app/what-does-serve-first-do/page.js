@@ -57,7 +57,7 @@ export default function WhatDoesServeFirstDo() {
 
             <ChallengeFrame
                 eyebrow="Why teams choose Serve First"
-                title="Built for the problems multi-site teams know too well"
+                title="Built for the problems that multi-site teams know too well"
                 data={challengeFrameData}
             />
 

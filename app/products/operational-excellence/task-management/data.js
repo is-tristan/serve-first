@@ -17,7 +17,7 @@ export const featureListData = [
         description: "Create a task from a low score, a failed audit or a ticket, assign it by site and team, and follow it to done. Overdue alerts keep long-running issues visible instead of quietly slipping.",
         image: "/images/products/operational-excellence/task-management/task-management-feature-list-image.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         list: [
             {
                 text: "Assign by site and by team",
@@ -101,7 +101,7 @@ export const howItWorksData = [
         description: "Each task is prioritised and assigned by site and team, with progress visible across the whole estate.",
         image: "/images/products/operational-excellence/task-management/task-management-analyse.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "See how work is analysed",
             href: "/how-it-works/analyse",

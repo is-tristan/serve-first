@@ -103,7 +103,7 @@ export default function FormSmall({
 
                     <div className={styles.field}>
 
-                        <select name="subject" required defaultValue="" aria-required="true">
+                        <select name="subject" required defaultValue="" aria-required="true" aria-label="What is this about?">
 
                             <option value="" disabled>Select a topic</option>
 

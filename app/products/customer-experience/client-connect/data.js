@@ -17,7 +17,7 @@ export const featureListData = [
         description: "Choose the contacts, set the cadence and send. Every invitation is tracked from delivery to response, and the data lands in the same dashboards your account teams already work from each week.",
         image: "/images/products/customer-experience/client-connect/client-connect-feature-list-image.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         list: [
             {
                 text: "Branded review invitations",

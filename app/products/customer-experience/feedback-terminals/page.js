@@ -38,7 +38,7 @@ export default async function FeedbackTerminals() {
         <>
 
             <Banner
-                eyebrow="Customer experience"
+                eyebrow="Customer experience platform"
                 title="Capture feedback the moment it happens"
                 description="Honest, in-the-moment reactions from every location, routed to the people who can fix them before a customer leaves unhappy."
                 image="/images/products/customer-experience/feedback-terminals/feedback-terminals-cover.png"

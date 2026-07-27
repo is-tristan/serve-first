@@ -88,7 +88,7 @@ export const howItWorksData = [
         description: "Trained evaluators capture real-world visits against your standards, recording detail and evidence as they go.",
         image: "/images/products/customer-experience/mystery-shopping/mystery-shopping-capture.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "Explore covert capture",
             href: "/how-it-works/capture",
@@ -100,7 +100,7 @@ export const howItWorksData = [
         description: "Findings come back as structured scores and themes, so patterns across sites surface before they become problems.",
         image: "/images/products/customer-experience/mystery-shopping/mystery-shopping-analyse.png",
         imageWidth: 768,
-        imageHeight: 576,
+        imageHeight: 768,
         button: {
             text: "See how findings analyse",
             href: "/how-it-works/analyse",
