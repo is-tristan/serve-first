@@ -44,7 +44,7 @@ export default async function HelpDesk() {
                 title="Every issue, tracked to resolved"
                 description="Serve First Helpdesk turns feedback, ratings and messages into trackable tickets in one inbox, so nothing falls through the cracks and every reply is logged."
                 image="/images/products/operational-excellence/helpdesk/helpdesk-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

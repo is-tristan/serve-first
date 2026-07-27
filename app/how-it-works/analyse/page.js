@@ -38,7 +38,7 @@ export default function Analyse() {
                 title="From scores to the reason behind them"
                 description="Analyse is stage two. EVA reads every signal as it lands, scores sentiment and surfaces the themes that matter, in plain English, so you see not just what happened across your sites but why."
                 image="/images/how-it-works/analyse/analyse-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <ChallengeFrame

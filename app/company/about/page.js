@@ -19,6 +19,8 @@ export default function About() {
                 eyebrow="About Serve First, in short"
                 title="Built for the people who serve"
                 description="We help multi-site operators turn every customer signal into action. Not another dashboard to watch, but a platform that does something about what it sees."
+                image="/images/company/about/about-cover.png"
+                imageSizing="contain"
             />
 
             <PlatformStory
@@ -32,7 +34,7 @@ export default function About() {
                 eyebrow="By the numbers"
                 title="The Serve First story, so far"
                 description="What began as a better way to act on customer feedback has grown into one connected platform for the people who serve."
-                btnPrimary = {{
+                btnPrimary={{
                     text: "Talk to us",
                     href: "/company/contact-us",
                 }}

@@ -36,7 +36,7 @@ export default function FacilitiesManagement() {
                 title="Every contract, every site, on standard"
                 description="FM lives on SLAs and proof. Serve First connects audits, issues and feedback across every client site, so you hold standards and show clients exactly what was done."
                 image="/images/solutions/by-industry/facilities-management/fm-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <LogoBar eyebrow="Trusted by" />

@@ -30,7 +30,7 @@ export default function Eva() {
                 title="Know what is happening. Know what to do next"
                 description="EVA does the analysis, so you are not juggling reports. Ask in plain language and EVA gives you the latest status across every site, what needs your attention, and a plan of action shaped by your role."
                 image="/images/eva/eva-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonSecondary={{ text: null }}
             />
 
@@ -64,7 +64,7 @@ export default function Eva() {
                 title="From a question to a grounded answer"
                 description="Three steps, every single time you ask EVA."
                 data={howItWorksData}
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <Testimonials btnPrimary={null} />

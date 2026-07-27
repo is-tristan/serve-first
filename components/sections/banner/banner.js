@@ -16,7 +16,7 @@ export default function Banner({
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.</p>",
     image = "/decoration/no-image-placeholder.webp",
-    imageSizing = "Fill",
+    imageSizing = "cover",
     bannerType = "default",
     hasButtons = true,
     hasFullStop = true,

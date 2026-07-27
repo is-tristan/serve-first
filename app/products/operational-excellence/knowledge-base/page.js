@@ -44,7 +44,7 @@ export default async function KnowledgeBase() {
                 title="One source of truth for every team"
                 description="Serve First Knowledge Base keeps procedures, policies and training in one searchable place, so frontline teams find the right answer without asking around."
                 image="/images/products/operational-excellence/knowledge-base/knowledge-base-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

@@ -29,6 +29,7 @@ export default function PlatformStoryItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const normalizedImageSizing = imageSizing?.toLowerCase() === "contain" ? "contain" : "cover";
 
     return (
 
@@ -52,7 +53,7 @@ export default function PlatformStoryItem({
                                 loading="lazy"
                                 quality={90}
                                 sizes="(max-width: 1023px) 100vw, 33vw"
-                                style={{ "objectFit": imageSizing }}
+                                style={{ objectFit: normalizedImageSizing }}
                             />
 
                         </div>

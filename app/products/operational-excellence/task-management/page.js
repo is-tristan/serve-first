@@ -44,7 +44,7 @@ export default async function TaskManagement() {
                 title="Where insight finally becomes action"
                 description="Serve First task management routes the right action to the right person at every site, with deadlines, ownership and progress you can see, not chase."
                 image="/images/products/operational-excellence/task-management/task-management-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

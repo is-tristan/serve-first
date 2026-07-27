@@ -36,7 +36,7 @@ export default function Healthcare() {
                 title="Patient experience, proven at every site"
                 description="In healthcare, standards and trust are everything. Serve First connects patient feedback with how each site runs, so you can raise care standards and evidence them when it matters."
                 image="/images/solutions/by-industry/healthcare/healthcare-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <LogoBar eyebrow="Trusted by" />

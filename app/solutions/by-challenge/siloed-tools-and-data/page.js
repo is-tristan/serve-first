@@ -34,7 +34,7 @@ export default function SiloedToolsAndData() {
                 title="One operating picture, not ten logins"
                 description="When every tool holds a piece of the picture, no one sees the whole. Serve First connects your customer and operational signals in one operating picture, so the answer is ready when you ask."
                 image="/images/solutions/by-challenge/siloed-tools-and-data/siloed-tools-and-data-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <ChallengeFrame

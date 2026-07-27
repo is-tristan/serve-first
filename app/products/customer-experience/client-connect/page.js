@@ -39,7 +39,7 @@ export default async function ClientConnect() {
                 title="Hear from the clients you serve"
                 description="Client Connect lets you run structured feedback programmes for your B2B accounts, sending branded invitations, tracking every send and reporting on the results."
                 image="/images/products/customer-experience/client-connect/client-connect-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

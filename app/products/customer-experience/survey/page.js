@@ -46,7 +46,7 @@ export default async function Survey() {
                 title="Ask the right question, everywhere"
                 description="Reach customers on web, kiosk, email and SMS, and Serve First turns every response into structured insight your teams use the same day."
                 image="/images/products/customer-experience/survey/survey-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

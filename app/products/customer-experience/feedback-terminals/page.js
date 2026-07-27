@@ -42,7 +42,7 @@ export default async function FeedbackTerminals() {
                 title="Capture feedback the moment it happens"
                 description="Honest, in-the-moment reactions from every location, routed to the people who can fix them before a customer leaves unhappy."
                 image="/images/products/customer-experience/feedback-terminals/feedback-terminals-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

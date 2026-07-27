@@ -36,7 +36,7 @@ export default function Retail() {
                 title="Every store, the same standard"
                 description="From the shop floor to head office, Serve First connects what customers feel with how each store runs, so you can raise standards and prove they hold, everywhere you trade."
                 image="/images/solutions/by-industry/retail/retail-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <LogoBar eyebrow="Trusted by" />

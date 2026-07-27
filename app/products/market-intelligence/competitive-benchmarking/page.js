@@ -43,7 +43,7 @@ export default async function ReviewMonitoring() {
                 title="See how each of your sites compares to the competition next door"
                 description="Serve First looks at the public reviews for your locations and their nearby rivals, then shows you, site by site, where you are ahead, where you are behind and what is driving the difference."
                 image="/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

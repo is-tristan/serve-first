@@ -22,7 +22,9 @@ export default function LpBanner({
     hasFullStop = true,
     hasBackgroundDecoration = true,
     formBtnText = "Show me my sites",
+    hasDemoLink = true,
     formSmallText,
+    formType,
     buttonPrimary = {
         text: "Get a demo",
         href: "/get-a-demo",
@@ -100,7 +102,7 @@ export default function LpBanner({
 
                 </div>
 
-                <FormCol formBtnText={formBtnText} formSmallText={formSmallText} />
+                <FormCol formBtnText={formBtnText} formSmallText={formSmallText} formType={formType} hasDemoLink={hasDemoLink} />
 
             </div>
 

@@ -45,9 +45,9 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
         <motion.div
             ref={ref}
-            initial={{ opacity: 0, y: 100 }}
-            animate={hasAnimation && isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-            transition={hasAnimation ? { duration: 0.5, delay: 0.25 } : { duration: 0, delay: 0 }}
+            animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
+            initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
+            transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
             className={`${styles.formContainer}`}
         >
 

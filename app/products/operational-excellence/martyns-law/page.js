@@ -42,7 +42,7 @@ export default async function MartynsLaw() {
                 title="Martyn's Law, evidenced at every site"
                 description="Serve First helps you meet Martyn's Law obligations with compliance checklists, training records and evidence capture, so duty of care is documented, not assumed."
                 image="/images/products/operational-excellence/martyns-law/martyns-law-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

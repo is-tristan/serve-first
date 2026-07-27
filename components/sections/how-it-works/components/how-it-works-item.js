@@ -22,7 +22,7 @@ export default function HowItWorksItem({
     index = 0,
     eyebrowHasDash = false,
     image,
-    imageSizing = "Contain",
+    imageSizing = "contain",
     imageWidth = 768,
     imageHeight = 384,
     title,
@@ -35,6 +35,7 @@ export default function HowItWorksItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const normalizedImageSizing = imageSizing?.toLowerCase() === "contain" ? "contain" : "cover";
 
     return (
 
@@ -57,7 +58,7 @@ export default function HowItWorksItem({
                     loading="lazy"
                     quality={90}
                     sizes="(max-width: 1023px) 100vw, 50vw"
-                    style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
+                    style={{ objectFit: normalizedImageSizing }}
                 />
 
             </div>

@@ -34,7 +34,7 @@ export default function CXLeader() {
                 title="Own the customer experience across every site"
                 description="Serve First gives CX leaders one live view of customer sentiment across every location, and the tools to turn it into action, so you move from measuring experience to improving it."
                 image="/images/solutions/by-role/cx-leaders/cx-leaders-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <RoleContext
@@ -50,7 +50,7 @@ export default function CXLeader() {
                 title="From customer signal to closed loop"
                 description="Three stages run every signal from capture to a fix."
                 data={howItWorksData}
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <ProductHighlight

@@ -21,7 +21,7 @@ export default function FeaturedListItem({
     index = 0,
     theme = "light",
     image,
-    imageSizing = "Contain",
+    imageSizing = "contain",
     imageWidth = 576,
     imageHeight = 384,
     eyebrow,
@@ -34,6 +34,7 @@ export default function FeaturedListItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const normalizedImageSizing = imageSizing?.toLowerCase() === "contain" ? "contain" : "cover";
 
     return (
 
@@ -56,7 +57,7 @@ export default function FeaturedListItem({
                     loading="lazy"
                     quality={90}
                     sizes="(max-width: 1023px) 100vw, 50vw"
-                    style={{ objectFit: imageSizing === "Contain" ? "contain" : "cover" }}
+                    style={{ objectFit: normalizedImageSizing }}
                 />
             </div>
 

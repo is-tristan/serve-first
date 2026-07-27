@@ -1,8 +1,7 @@
 // Components
-import Banner from "@/components/sections/banner/banner";
+import LpBanner from "@/components/screens/lp/lp-banner/lp-banner";
 import LogoBar from "@/components/sections/logo-bar/logo-bar";
 import Testimonials from "@/components/sections/testimonials/testimonials";
-import CtaBannerContact from "@/components/sections/cta-banners/cta-banner-contact";
 
 export default function GetADemo() {
 
@@ -10,15 +9,17 @@ export default function GetADemo() {
 
         <>
 
-            <Banner
+            <LpBanner
                 bannerType="company"
                 eyebrow="Book a personalised demo"
                 title="See Serve First on your estate"
                 description="A personalised walkthrough with your sites, your data and your team in mind. No generic tour, just the platform working the way it would for you."
+                formType="full"
+                formBtnText="Book my demo"
+                hasDemoLink={false}
                 buttonPrimary={
                     {
-                        text: "Book now",
-                        href: "#book-demo",
+                        text: null
                     }
                 }
                 buttonSecondary={
@@ -30,9 +31,7 @@ export default function GetADemo() {
 
             <LogoBar />
 
-            <Testimonials btnPrimary={null} />
-
-            <CtaBannerContact hasDemoLink={false} formBtnText="Book my demo" fullForm={true} theme="primary" />
+            <Testimonials theme="primary" btnPrimary={null} />
 
         </>
 

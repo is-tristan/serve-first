@@ -37,7 +37,7 @@ export default function VenuesAndEvents() {
                 title="Safe, smooth, sold-out, every event"
                 description="Venues juggle safety, crowds and experience at once. Serve First connects safety checks, guest feedback and issues on the night, so every event runs to standard and you can prove it."
                 image="/images/solutions/by-industry/venues-and-events/venues-and-events-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <LogoBar eyebrow="Trusted by" />

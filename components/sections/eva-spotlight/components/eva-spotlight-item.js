@@ -15,6 +15,7 @@ export default function EvaSpotlightItem({ item = {} }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const normalizedImageSizing = item.imageSizing?.toLowerCase() === "contain" ? "contain" : "cover";
 
     return (
 
@@ -31,7 +32,7 @@ export default function EvaSpotlightItem({ item = {} }) {
                         height={item.imageHeight || 768}
                         quality={90}
                         sizes="(max-width: 1023px) 100vw, 50vw"
-                        style={{ "objectFit": item.imageSizing }}
+                        style={{ objectFit: normalizedImageSizing }}
                     />
 
                 </div>

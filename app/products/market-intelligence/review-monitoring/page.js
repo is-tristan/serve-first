@@ -44,7 +44,7 @@ export default async function ReviewMonitoring() {
                 title="Every review, every site, one view"
                 description="Serve First brings reviews from across your locations and platforms into one place, so you can track sentiment, respond fast and protect your reputation."
                 image="/images/products/market-intelligence/review-monitoring/review-monitoring-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

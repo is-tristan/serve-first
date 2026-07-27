@@ -36,7 +36,7 @@ export default function LeisureAndHospitality() {
                 title="Every cover, every site, to standard"
                 description="Speed, safety and consistency make or break a multi-site restaurant. Serve First connects what guests feel with how each kitchen and floor runs, so standards hold at every cover."
                 image="/images/solutions/by-industry/restaurants/restaurants-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <LogoBar eyebrow="Trusted by" />

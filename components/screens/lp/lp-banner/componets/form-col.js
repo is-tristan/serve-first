@@ -6,11 +6,12 @@ import { motion, useInView } from "motion/react";
 
 // Components
 import FormSmall from "@/components/handlers/forms/form-small";
+import FormFull from "@/components/handlers/forms/form-full";
 
 // Styles
 import styles from "@/styles/components/screens/lp/lp.module.scss";
 
-export default function FormCol({ formBtnText, formSmallText }) {
+export default function FormCol({ formBtnText, formSmallText, formType, hasDemoLink }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.25 });
@@ -25,13 +26,30 @@ export default function FormCol({ formBtnText, formSmallText }) {
             transition={{ duration: 0.5, delay: 0.25 }}
         >
 
-            <FormSmall
-                formTitle="Book a 20-minute demo"
-                formBtnText={formBtnText}
-                theme="light"
-                hasAnimation={false}
-                formSmallText={formSmallText}
-            />
+            {formType === "full" ? (
+
+                <FormFull
+                    formTitle="Book a 20-minute demo"
+                    formBtnText={formBtnText}
+                    theme="light"
+                    hasAnimation={false}
+                    formSmallText={formSmallText}
+                    hasDemoLink={hasDemoLink}
+                />
+
+            ) : (
+
+                <FormSmall
+                    formTitle="Book a 20-minute demo"
+                    formBtnText={formBtnText}
+                    theme="light"
+                    hasAnimation={false}
+                    formSmallText={formSmallText}
+                    hasDemoLink={hasDemoLink}
+                />
+                
+            )}
+
 
         </motion.div>
 

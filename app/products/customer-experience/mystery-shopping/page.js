@@ -44,7 +44,7 @@ export default async function MysteryShopping() {
                 title="See your locations the way customers do"
                 description="Serve First mystery shopping puts a trained assessor in your locations, scoring the experience against your standards and showing you exactly where service slips."
                 image="/images/products/customer-experience/mystery-shopping/mystery-shopping-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
                 buttonPrimary={{
                     text: "See it in action",
                     href: "/get-a-demo",

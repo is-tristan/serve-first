@@ -34,7 +34,7 @@ export default function ComplianceManagers() {
                 title="Compliance you can evidence, not assume"
                 description="Serve First helps compliance managers run checks, capture evidence and prove duty of care across every site, with audit trails ready the moment anyone asks."
                 image="/images/solutions/by-role/compliance-managers/compliance-managers-cover.png"
-                imageSizing="Contain"
+                imageSizing="contain"
             />
 
             <RoleContext

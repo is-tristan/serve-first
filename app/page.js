@@ -38,7 +38,7 @@ export default function Home() {
         title="Catch every issue before your customers feel it"
         description="Serve First connects your customer, operational and market signals across every site, then turns them into the actions that put things right."
         image="/images/home/home-cover.png"
-        imageSizing="Contain"
+        imageSizing="contain"
         buttonSecondary={{
           text: "See how it works",
           href: "/how-it-works/capture",
