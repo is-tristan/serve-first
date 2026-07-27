@@ -1,6 +1,6 @@
 // Components
-import Banner from "@/components/sections/banner/banner";
-import CtaBannerContact from "@/components/sections/cta-banners/cta-banner-contact";
+import LpBanner from "@/components/screens/lp/lp-banner/lp-banner";
+import Testimonials from "@/components/sections/testimonials/testimonials";
 
 export default function GetADemo() {
 
@@ -8,15 +8,16 @@ export default function GetADemo() {
 
         <>
 
-            <Banner
+            <LpBanner
                 bannerType="Get in touch with us"
                 eyebrow="Talk to the real people behind it"
                 title="Built for the people who serve"
                 description="Whether you want a demo, have a question or need support, you will reach a real person who knows the platform, not a ticket queue."
+                formBtnText="Book my demo"
+                hasDemoLink={false}
                 buttonPrimary={
                     {
-                        text: "See how it works",
-                        href: "/how-it-works/capture",
+                        text: null
                     }
                 }
                 buttonSecondary={
@@ -26,7 +27,7 @@ export default function GetADemo() {
                 }
             />
 
-            <CtaBannerContact hasDemoLink={true} formBtnText="Send message" fullForm={false} theme="primary" />
+            <Testimonials theme="primary" btnPrimary={null} />
 
         </>
 
