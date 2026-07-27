@@ -1,13 +1,16 @@
 "use client";
 
 // React
-import { useState, useRef } from 'react';
+import { useState, useRef } from "react";
 
 // Motion
-import { motion, useInView } from 'motion/react';
+import { motion, useInView } from "motion/react";
 
 // Next
 import Link from "next/link";
+
+// Components
+import FormComplete from "@/components/handlers/forms/form-complete";
 
 // Styles
 import styles from "@/styles/components/handlers/form.module.scss";
@@ -17,6 +20,7 @@ import { shieldTick } from "@/utils/icons";
 
 export default function FormFull({ theme = "primary", hasDemoLink = true, formBtnText = "Send message", hasAnimation = true }) {
     const [result, setResult] = useState("");
+    const [isComplete, setIsComplete] = useState(false);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -31,11 +35,16 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
         const data = await response.json();
         if (data.success) {
-            setResult("Your request has been submitted successfully! We will get back to you as soon as possible.");
-            event.target.reset();
+            setResult("");
+            setIsComplete(true);
         } else {
             setResult("There was an error submitting your request. Please try again.");
         }
+    };
+
+    const handleSendAnother = () => {
+        setIsComplete(false);
+        setResult("");
     };
 
     const ref = useRef(null);
@@ -50,6 +59,12 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
             transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
             className={`${styles.formContainer}`}
         >
+
+            {isComplete ? (
+
+                <FormComplete onSendAnother={handleSendAnother} />
+
+            ) : (
 
             <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
 
@@ -201,7 +216,9 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
                 </div>
 
-            </form >
+            </form>
+
+            )}
 
         </motion.div>
 

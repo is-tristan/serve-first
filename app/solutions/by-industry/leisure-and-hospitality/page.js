@@ -34,7 +34,7 @@ export default function LeisureAndHospitality() {
             <Banner
                 eyebrow="Solutions by industry"
                 title="Every guest, every site, looked after"
-                description="Your reviews are only as good as your worst site. Serve First connects guest feedback with how each site runs, so a dip is caught and fixed before guests feel it"
+                description="Your reviews are only as good as your worst site. Serve First connects guest feedback with how each site runs, so a dip is caught and fixed before guests feel it."
                 image="/images/solutions/by-industry/leisure-and-hospitality/leisure-and-hospitality-cover.png"
                 imageSizing="contain"
             />

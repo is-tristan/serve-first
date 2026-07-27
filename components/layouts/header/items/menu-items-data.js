@@ -14,7 +14,7 @@ import {
 
 export const menuItemsData = [
     {
-        label: "How It Works",
+        label: "How it works",
         href: "#",
         submenu: [
             {

@@ -1,13 +1,16 @@
 "use client";
 
 // React
-import { useState, useRef } from 'react';
+import { useState, useRef } from "react";
 
 // Motion
-import { motion, useInView } from 'motion/react';
+import { motion, useInView } from "motion/react";
 
 // Next
 import Link from "next/link";
+
+// Components
+import FormComplete from "@/components/handlers/forms/form-complete";
 
 // Styles
 import styles from "@/styles/components/handlers/form.module.scss";
@@ -23,6 +26,7 @@ export default function FormSmall({
     formSmallText = "No obligation. We will not pass your details on.",
     hasAnimation = true }) {
     const [result, setResult] = useState("");
+    const [isComplete, setIsComplete] = useState(false);
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -37,11 +41,16 @@ export default function FormSmall({
 
         const data = await response.json();
         if (data.success) {
-            setResult("Your request has been submitted successfully! We will get back to you as soon as possible.");
-            event.target.reset();
+            setResult("");
+            setIsComplete(true);
         } else {
             setResult("There was an error submitting your request. Please try again.");
         }
+    };
+
+    const handleSendAnother = () => {
+        setIsComplete(false);
+        setResult("");
     };
 
     const ref = useRef(null);
@@ -56,6 +65,14 @@ export default function FormSmall({
             transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
             className={`${styles.formContainer}`}
         >
+
+            {isComplete ? (
+
+                <FormComplete onSendAnother={handleSendAnother} />
+
+            ) : (
+
+            <>
 
             {formTitle && (<span className={styles.formTitle}>{formTitle}</span>)}
 
@@ -173,7 +190,11 @@ export default function FormSmall({
 
                 </div>
 
-            </form >
+            </form>
+
+            </>
+
+            )}
 
         </motion.div>
 
