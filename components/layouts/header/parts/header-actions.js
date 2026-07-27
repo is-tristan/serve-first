@@ -28,9 +28,9 @@ export default function HeaderActions({ menuAds }) {
 
                 <div className={`${styles.headerButtons}`}>
 
-                    <Button text="Sign in" href="#" className={`textLink colorDark ${styles.textLinkBtn}`} hasAnimation={false} icon={null} />
+                    <Button text="Sign in" href="https://app.servefirst.co.uk/user/login" target="_blank" rel="noopener noreferrer" className={`textLink colorDark ${styles.textLinkBtn}`} hasAnimation={false} icon={null} />
 
-                    <Button text="Book a demo" href="/get-a-demo" className={`primary hidden-s ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
+                    <Button text="Book a demo" href="/get-a-demo" className={`primary ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
 
                 </div>
 

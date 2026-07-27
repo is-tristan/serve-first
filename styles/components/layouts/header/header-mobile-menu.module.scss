@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background: var(--lightAlt);
     border-radius: 0.5rem;
     cursor: pointer;
@@ -26,11 +26,19 @@
         margin: auto;
 
         &:first-child {
-            top: 0.75rem;
+            top: 0.66rem;
+
+            @media (width >=1024px) {
+                top: 0.75rem;
+            }
         }
 
         &:last-child {
-            bottom: 0.75rem;
+            bottom: 0.66rem;
+
+            @media (width >=1024px) {
+                bottom: 0.75rem;
+            }
         }
     }
 }

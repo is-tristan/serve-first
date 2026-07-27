@@ -34,10 +34,13 @@
     align-items: center;
     justify-content: flex-start;
     height: 100%;
-    min-width: 6.5rem;
     position: relative;
     color: var(--primary);
     transition: var(--quickEase);
+
+    @media (width >=1024px) {
+        min-width: 6.5rem;
+    }
 
     &:hover {
         color: rgba(var(--primaryRgb), 0.875);
@@ -82,11 +85,20 @@
         }
 
         .primaryBtn {
-            padding: 0.66rem;
+            padding: 0.5rem;
+
+            @media (width >=1024px) {
+                padding: 0.66rem;
+            }
 
             svg {
-                width: 1rem;
-                height: 1rem;
+                width: 0.875rem;
+                height: 0.875rem;
+
+                @media (width >=1024px) {
+                    width: 1rem;
+                    height: 1rem;
+                }
             }
         }
     }
