@@ -50,6 +50,7 @@ export default function ProveImprovement() {
                 description="Proving progress matters to every seat at the table. Serve First keeps the action and the outcome together, so each role can evidence its part of the story."
                 btnPrimary={null}
                 data={roleContextData}
+                colCount={3}
             />
 
             <HowItWorks

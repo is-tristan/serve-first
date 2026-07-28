@@ -17,7 +17,7 @@
     padding: 1.25rem;
     border-radius: var(--borderRadius);
     border: 1px solid transparent;
-    background: #f3f3f3;
+    background: rgba(var(--lightAltRgb), .25);
     cursor: pointer;
     transition: var(--ease);
 

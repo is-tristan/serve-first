@@ -20,7 +20,7 @@ import { logo, closeIcon, chevronDown } from "@/utils/icons";
 import HeaderAd from "@/components/layouts/header/parts/header-ad";
 
 const menuAdKeys = {
-    "How It Works": "howItWorks",
+    "How it works": "howItWorks",
     "Solutions": "solutions",
     "Products": "products",
     "Company": "company",

@@ -93,7 +93,7 @@ export default function Heading({
                 <motion.div
                     animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
                     initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
-                    transition={hasAnimation ? { duration: 0.5, delay: 0.75 } : undefined}
+                    transition={hasAnimation ? { duration: 0.5, delay: 0.66 } : undefined}
                     className={contentClass}
                 >
 

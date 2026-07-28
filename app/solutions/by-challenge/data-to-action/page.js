@@ -49,6 +49,7 @@ export default function DataToAction() {
                 description="Insight that goes nowhere frustrates every role. Serve First routes each signal to the person who can resolve it, shaped around how each team works."
                 btnPrimary={null}
                 data={roleContextData}
+                colCount={3}
             />
 
             <HowItWorks

@@ -49,6 +49,7 @@ export default function SiloedToolsAndData() {
                 description="Disconnected tools cost every role differently. Serve First puts customer, operational and market signals in one operating picture, shaped around each seat."
                 btnPrimary={null}
                 data={roleContextData}
+                colCount={3}
             />
 
             <HowItWorks

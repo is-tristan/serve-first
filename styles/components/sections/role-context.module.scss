@@ -14,6 +14,12 @@
         >div {
             flex: 1 0 calc(50% - 1.5rem);
         }
+
+        &[data-col-count="3"] {
+            >div {
+                flex: 1 0 calc(calc(100% / 3) - 1.5rem);
+            }
+        }
     }
 }
 

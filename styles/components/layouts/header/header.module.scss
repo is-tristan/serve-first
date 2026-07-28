@@ -91,6 +91,12 @@
                 padding: 0.66rem;
             }
 
+            >div {
+                @media (width < 768px) {
+                    display: none;
+                }
+            }
+
             svg {
                 width: 0.875rem;
                 height: 0.875rem;

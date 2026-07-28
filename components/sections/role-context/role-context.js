@@ -15,6 +15,7 @@ export default function RoleContext({
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
     data = roleContextData || [],
+    colCount = null,
     btnPrimary = {
         text: "Lorem ipsum dolor sit amet.",
         href: "#",
@@ -43,7 +44,7 @@ export default function RoleContext({
 
             {data.length > 0 && (
 
-                <div className={`container noPaddingTop noPaddingBottom ${styles.roleContextItems}`}>
+                <div className={`container noPaddingTop noPaddingBottom ${styles.roleContextItems}`} data-col-count={colCount}>
 
                     {data.map((item, index) => (
 

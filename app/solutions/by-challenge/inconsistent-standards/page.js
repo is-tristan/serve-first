@@ -50,6 +50,7 @@ export default function InconsistentStandards() {
                 description="Inconsistent standards land differently depending on your seat. Serve First gives each role its own view of the same picture, so everyone pulls in one direction."
                 btnPrimary={null}
                 data={roleContextData}
+                colCount={3}
             />
 
             <HowItWorks
