@@ -51,7 +51,7 @@ export default function LpBanner({
 
                     <div className="content">
 
-                        {eyebrow && (<Eyebrow text={eyebrow} />)}
+                        {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                         <Text
                             hasFullStop={hasFullStop}
