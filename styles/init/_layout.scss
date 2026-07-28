@@ -19,13 +19,12 @@
 // Container
 .container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     gap: 1rem;
     width: 100%;
     margin: 0 auto;
-    padding: 3rem 1.75rem;
+    padding: 2rem 1.75rem;
 
     @media (width >=576px) and (width < 1024px) {
         text-align: center;
@@ -198,6 +197,8 @@
 
     // Quad Columns
     &.quadCols {
+        gap: 1.5rem;
+
         @media (width >=768px) {
             flex-flow: row wrap;
             justify-content: space-between;
@@ -414,7 +415,7 @@
 
 .imageContain {
     aspect-ratio: 1 / 1;
-    
+
     img {
         object-fit: contain;
     }

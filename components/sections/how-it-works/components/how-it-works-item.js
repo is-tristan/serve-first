@@ -69,7 +69,7 @@ export default function HowItWorksItem({
 
                     {number && (<span className={stylesAlt.featureListItemNumber}>{number}</span>)}
 
-                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={eyebrowHasDash} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={eyebrowHasDash} hasAnimation={false} />)}
 
                     {title && (<h2 className={`sectionTitle colorPrimaryAlt`}>{title}</h2>)}
 

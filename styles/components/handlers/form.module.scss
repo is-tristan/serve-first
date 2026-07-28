@@ -21,7 +21,11 @@
 .form {
     display: flex;
     flex-flow: row wrap;
+    gap: 0.75rem;
+   
+   @media (width >=768px) {
     gap: 1.25rem 1rem;
+   }
 
     * {
         font-family: var(--text);
@@ -95,11 +99,12 @@
     .legend {
         font-weight: 400;
         font-size: 0.75rem;
-        margin-bottom: 0.66rem;
+        margin-bottom: 0.4rem;
         color: var(--light);
 
         @media (width >=768px) {
             font-size: 0.875rem;
+            margin-bottom: 0.66rem;
         }
     }
 
@@ -114,7 +119,7 @@
             display: flex;
             align-items: center;
             width: 100%;
-            padding: 0.75rem 1rem;
+            padding: 0.75rem;
             border-radius: var(--borderRadius);
             border: 1px solid rgba(var(--lightRgb), 0.25);
             background: rgba(var(--lightRgb), 0.1);
@@ -136,7 +141,7 @@
         select {
             appearance: none;
             cursor: pointer;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%234a2257' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             padding-right: 2.5rem;
@@ -188,21 +193,34 @@
     .formFooterText {
         display: flex;
         flex-flow: row nowrap;
-        align-items: center;
         gap: 0.33rem;
-        opacity: 0.9;
-        margin-top: 1rem;
+        opacity: 0.8;
+        margin-top: 0.5rem;
+
+        @media (width >=768px) {
+            margin-top: 1rem;
+            align-items: center;
+        }
 
         .formFooterTextIcon {
-            width: 1rem;
-            height: 1rem;
+            width: 2rem;
+            height: 2rem;
             color: var(--primaryAlt);
+
+            @media (width >=768px) {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
         }
 
         span {
             font-size: 0.75rem;
+            line-height: 125%;
             font-weight: 400;
-            color: rgba(var(--darkRgb), 0.75);
+
+            @media (width >=768px) {
+                font-size: 0.75rem;
+            }
         }
     }
 
@@ -218,7 +236,11 @@
 
     .demoLink {
         color: var(--light);
-        font-size: 0.875rem;
+        font-size: 0.66rem;
+
+        @media (width >=768px) {
+            font-size: 0.875rem;
+        }
     }
 
     .result {

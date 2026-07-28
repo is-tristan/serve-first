@@ -14,12 +14,16 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: var(--borderRadius);
     border: 1px solid transparent;
     background: #f3f3f3;
     cursor: pointer;
     transition: var(--ease);
+
+    @media (width >=1024px) {
+        padding: 1.5rem;
+    }
 
     * {
         text-align: left;
@@ -55,6 +59,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+
+    h3 {
+        @media (width < 768px) {
+            font-size: 0.9rem;
+        }
+    }
 }
 
 .faqItemButton {

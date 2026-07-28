@@ -1,5 +1,16 @@
 .moduleStatsItems {
     margin-top: 1.5rem;
+
+    @media (width < 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem !important;
+
+        >div {
+            grid-column: span 1;
+            width: 100%;
+        }
+    }
 }
 
 .moduleStatItem {

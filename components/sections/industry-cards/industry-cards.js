@@ -49,7 +49,7 @@ export default function IndustryCards({
 
             {data.length > 0 && (
 
-                <div className={`container ${industryCardsContainerClass}`} style={{ "gap": "1.5rem" }}>
+                <div className={`container ${styles.industryCardsItems} ${industryCardsContainerClass}`} style={{ "gap": "1.5rem" }}>
 
                     {data.map((item, index) => (
 

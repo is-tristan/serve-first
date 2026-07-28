@@ -1,3 +1,17 @@
+.industryCardsItems {
+    @media (width >=768px) and (width < 1024px) {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 1rem;
+        
+        >div {
+            flex: 1 1 calc(50% - 1rem);
+            width: 100%;
+        }
+    }
+}
+
 .industryCardsHeading {
     p {
         @media (width >=1024px) {

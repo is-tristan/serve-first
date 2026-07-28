@@ -20,7 +20,7 @@ export default function LogoBar({
             data-name="logo-bar"
         >
 
-            <div className="container centered noPaddingBottom">
+            <div className="container centered noPaddingBottom mobileCentered">
 
                 <Eyebrow text={eyebrow} textColor="colorPrimaryAlt" hasDash={true} />
 

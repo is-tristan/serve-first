@@ -1,4 +1,8 @@
 .ctaBanner {
+    @media (width < 768px) {
+        min-height: 20rem;
+    }
+
     &[data-theme="light"] {
         h2::after {
             color: var(--light);

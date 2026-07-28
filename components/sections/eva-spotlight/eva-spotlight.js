@@ -36,21 +36,25 @@ export default function EvaSpotlight({
 
         <section className={`row ${styles.evaSpotlight}`}>
 
-            <div className={`container centered noPaddingBottom ${titleContainerClass}`}>
+            {eyebrow || title || description && (
 
-                <div className={`content`}>
+                <div className={`container centered noPaddingBottom ${titleContainerClass}`}>
 
-                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
+                    <div className={`content`}>
 
-                    <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} description={description} descriptionClass={`fw400`} />
+                        {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
+
+                        <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} description={description} descriptionClass={`fw400`} />
+
+                    </div>
 
                 </div>
 
-            </div>
+            )}
 
             {featuredImage ? (
 
-                <div className="container noPaddingTop">
+                <div className={`container ${eyebrow || title || description ? "noPaddingTop" : undefined}`}>
 
                     <EvaFeaturedImage
                         featuredImage={featuredImage}
@@ -63,7 +67,7 @@ export default function EvaSpotlight({
 
             ) : (
 
-                <div className="container noPaddingTop">
+                <div className={`container ${eyebrow || title || description ? "noPaddingTop" : undefined}`}>
 
                     {item && (<EvaSpotlightItem item={item} />)}
 

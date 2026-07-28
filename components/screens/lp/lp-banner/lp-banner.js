@@ -45,7 +45,7 @@ export default function LpBanner({
             data-name="banner"
         >
 
-            <div className={`container dualCols ${styles.bannerContainer}`}>
+            <div className={`container dualCols ${styles.bannerContainer} ${lpStyles.lpBannerContainer}`}>
 
                 <div className={`contentCol ${styles.contentCol}`}>
 
