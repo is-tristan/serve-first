@@ -1,6 +1,6 @@
 import { defineArrayMember, defineField, defineType } from "sanity"
 
-import { ImageIcon } from "@sanity/icons"
+import { ImageIcon } from "@sanity/icons/Image"
 
 export const media = defineType({
     name: "media",
@@ -93,6 +93,18 @@ export const media = defineType({
                     to: [{ type: "category" }],
                 }),
             ],
+        }),
+        defineField({
+            name: "tags",
+            title: "Tags",
+            type: "array",
+            of: [
+                defineArrayMember({
+                    type: "reference",
+                    to: [{ type: "tag" }],
+                }),
+            ],
+            validation: (rule) => rule.unique(),
         }),
         defineField({
             name: "authors",

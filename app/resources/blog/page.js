@@ -1,24 +1,22 @@
-// Components
 import Banner from "@/components/sections/banner/banner"
-import ContentGrid from "@/components/sections/content-grid/content-grid"
-import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import BlogContentGrid from "@/components/screens/resources/blog/blog-content-grid"
+import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1"
 
-// Sanity
-import { getBlogs } from "@/sanity/lib/queries"
+import { getAllBlogs } from "@/sanity/lib/queries"
 import { urlFor } from "@/sanity/lib/image"
 
-// Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
 export default async function Blog() {
 
-    const blogs = await getBlogs()
+    const blogs = await getAllBlogs()
 
     const contentGridData = (blogs || []).map((blog) => ({
         category: blog.category,
         title: blog.title,
         description: blog.excerpt,
         readTime: blog.readTime,
+        slug: blog.slug,
         image: blog.coverImage?.asset
             ? urlFor(blog.coverImage).width(800).height(600).fit("crop").url()
             : imagePlaceholder,
@@ -40,10 +38,9 @@ export default async function Blog() {
                 image={null}
             />
 
-            <ContentGrid
+            <BlogContentGrid
                 eyebrow="Latest articles"
                 title="Guides, playbooks and field notes today"
-                button={null}
                 data={contentGridData}
             />
 

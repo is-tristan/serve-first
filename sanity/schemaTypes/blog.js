@@ -1,6 +1,6 @@
 import { defineArrayMember, defineField, defineType } from "sanity"
 
-import { DocumentTextIcon } from "@sanity/icons"
+import { DocumentTextIcon } from "@sanity/icons/DocumentText"
 
 export const blog = defineType({
     name: "blog",
@@ -93,6 +93,18 @@ export const blog = defineType({
                     to: [{ type: "category" }],
                 }),
             ],
+        }),
+        defineField({
+            name: "tags",
+            title: "Tags",
+            type: "array",
+            of: [
+                defineArrayMember({
+                    type: "reference",
+                    to: [{ type: "tag" }],
+                }),
+            ],
+            validation: (rule) => rule.unique(),
         }),
         defineField({
             name: "authors",

@@ -47,6 +47,12 @@ h1 {
         color: var(--primaryAlt);
         text-wrap: pretty;
     }
+
+    &.pageTitleSmall {
+        font-size: clamp(1.9rem, 2.75vw, 2.75rem);
+        color: var(--primaryAlt);
+        text-wrap: pretty;
+    }
 }
 
 h2 {

@@ -1,3 +1,5 @@
+@use "../../init/_mixins" as *;
+
 .challengeFrameItem {
     display: flex;
     flex-flow: column wrap;
@@ -14,7 +16,7 @@
 
 .challengeFrameEyebrow {
     @media (width >=768px) and (width < 1024px) {
-       margin: 0 auto;
+        margin: 0 auto;
     }
 }
 
@@ -57,19 +59,8 @@
     }
 
     .challengeFrameTag {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.75rem;
-        font-weight: 500;
-        padding: 0.5rem;
-        color: var(--primary);
-        border-radius: var(--borderRadius);
-        background: rgba(var(--primaryRgb), 0.133);
-
-        @media (width >=768px) {
-            font-size: 0.875rem;
+        & {
+            @include category();
         }
     }
 }

@@ -1,6 +1,6 @@
 import { defineField, defineType } from "sanity"
 
-import { ImageIcon } from "@sanity/icons"
+import { ImageIcon } from "@sanity/icons/Image"
 
 const menuAdFields = [
     defineField({
