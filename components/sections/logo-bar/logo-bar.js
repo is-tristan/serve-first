@@ -9,20 +9,19 @@ import { logoData } from "@/data/logo-data";
 import styles from "@/styles/components/sections/logo-bar.module.scss";
 
 export default function LogoBar({
-    backgroundColor = "bgLightAlt",
     eyebrow = "Trusted by",
     data = logoData || []
 }) {
     return (
 
         <section
-            className={`row ${styles.logoBar} ${backgroundColor}`}
+            className={`row ${styles.logoBar} bgPrimaryAlt colorLight`}
             data-name="logo-bar"
         >
 
             <div className="container centered noPaddingBottom mobileCentered">
 
-                <Eyebrow text={eyebrow} textColor="colorPrimaryAlt" hasDash={true} />
+                <Eyebrow text={eyebrow} textColor="colorLightAlt" hasDash={true} />
 
             </div>
 

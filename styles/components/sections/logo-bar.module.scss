@@ -1,4 +1,4 @@
-$animationSpeed: 15s;
+$animationSpeed: 12.5s;
 $slideWidthMobile: 33.33vw;
 $slideWidthDesktop: 20vw;
 $slideHeightMobile: 2.25rem;
@@ -75,5 +75,6 @@ $slideHeightDesktop: 7.5rem;
         height: 100%;
         max-width: 100%;
         object-fit: contain;
+        filter: brightness(0) invert(1);
     }
 }

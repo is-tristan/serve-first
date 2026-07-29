@@ -33,7 +33,7 @@ export default function LpTerminals() {
 
             <LogoBar />
 
-            <Testimonials theme="primary" />
+            <Testimonials />
 
             <Faq
                 eyebrow="Common questions"

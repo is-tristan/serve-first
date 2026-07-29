@@ -33,7 +33,7 @@ export default function LpAudit() {
 
             <LogoBar />
 
-            <Testimonials theme="primary" />
+            <Testimonials />
 
             <Faq
                 eyebrow="Common questions"
