@@ -1,6 +1,9 @@
 // Components
 import LpBanner from "@/components/screens/lp/lp-banner/lp-banner";
 import Testimonials from "@/components/sections/testimonials/testimonials";
+import { getPageMetadata } from "@/seo/seo-map-data";
+
+export const metadata = getPageMetadata("/company/contact-us");
 
 export default function GetADemo() {
 

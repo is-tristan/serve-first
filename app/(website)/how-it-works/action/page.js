@@ -26,7 +26,7 @@ import {
 
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-export const metadata = getPageMetadata("/how-it    -works/action");
+export const metadata = getPageMetadata("/how-it-works/action");
 
 export default function Action() {
 

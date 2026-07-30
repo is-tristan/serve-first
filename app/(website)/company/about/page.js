@@ -4,9 +4,12 @@ import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ModuleStats from "@/components/sections/module-stats/module-stats";
 import Testimonials from "@/components/sections/testimonials/testimonials";
 import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import { getPageMetadata } from "@/seo/seo-map-data";
 
 // Data
 import { platformStoryData } from "./data";
+
+export const metadata = getPageMetadata("/company/about");
 
 export default function About() {
 

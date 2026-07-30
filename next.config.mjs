@@ -1,6 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
+  async redirects() {
+    return [
+      {
+        source: "/solutions/by-role/compliance-manager",
+        destination: "/solutions/by-role/compliance-managers",
+        permanent: true,
+      },
+      {
+        source: "/cookies-policy",
+        destination: "/legal/cookie-policy",
+        permanent: true,
+      },
+      {
+        source: "/privacy-policy",
+        destination: "/legal/privacy-policy",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     qualities: [75, 90],
     remotePatterns: [

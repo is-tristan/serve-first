@@ -21,7 +21,7 @@ export default function HeaderAd({ ad }) {
     }
 
     const imageUrl = ad.image?.asset
-        ? urlFor(ad.image).width(384).height(384).fit("crop").url()
+        ? urlFor(ad.image).url()
         : imagePlaceholder
 
     if (!imageUrl && !ad.title && !ad.description && !ad.link) {
@@ -39,10 +39,12 @@ export default function HeaderAd({ ad }) {
                     <Image
                         src={imageUrl}
                         alt={ad.title || "Header Ad"}
-                        fill
+                        width={512}
+                        height={256}
                         loading="lazy"
                         quality={90}
-                        sizes="240px"
+                        sizes="512px"
+                        style={{ objectFit: "contain" }}
                     />
 
                 </div>

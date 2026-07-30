@@ -6,6 +6,9 @@ import Banner from "@/components/sections/banner/banner";
 import styles from "@/styles/components/screens/legal/legal-pages.module.scss";
 // Data
 import { cookiePolicySections } from "./data";
+import { getPageMetadata } from "@/seo/seo-map-data";
+
+export const metadata = getPageMetadata("/legal/cookie-policy");
 
 export default function CookiePolicy() {
   return (

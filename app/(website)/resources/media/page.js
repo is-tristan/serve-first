@@ -6,9 +6,12 @@ import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
 // Sanity
 import { getMedia } from "@/sanity/lib/queries"
 import { urlFor } from "@/sanity/lib/image"
+import { getPageMetadata } from "@/seo/seo-map-data"
 
 // Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
+
+export const metadata = getPageMetadata("/resources/media")
 
 export default async function Media() {
 

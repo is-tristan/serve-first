@@ -4,8 +4,11 @@ import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1"
 
 import { getAllBlogs } from "@/sanity/lib/queries"
 import { urlFor } from "@/sanity/lib/image"
+import { getPageMetadata } from "@/seo/seo-map-data"
 
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
+
+export const metadata = getPageMetadata("/resources/blog")
 
 export default async function Blog() {
 

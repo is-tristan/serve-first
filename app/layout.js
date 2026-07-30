@@ -1,5 +1,10 @@
-// Typography
 import { Special_Gothic_Expanded_One, Poppins } from "next/font/google";
+
+import { Analytics } from "@vercel/analytics/next";
+
+import "@/styles/main.scss";
+
+import { getPageMetadata } from "@/seo/seo-map-data";
 
 const specialGothicExpandedOne = Special_Gothic_Expanded_One({
   variable: "--font-special-gothic-expanded-one",
@@ -15,22 +20,6 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "700"],
 });
 
-// Styles
-import "@/styles/main.scss";
-
-// Next
-import { Analytics } from "@vercel/analytics/next";
-
-// Components
-import Header from "@/components/layouts/header/header";
-import Footer from "@/components/layouts/footer/footer";
-import SmoothScroll from "@/components/handlers/smooth-scroll";
-
-// Sanity
-import { SanityLive } from "@/sanity/lib/live";
-
-import { getPageMetadata } from "@/seo/seo-map-data";
-
 export const metadata = getPageMetadata("/");
 
 export default function RootLayout({ children }) {
@@ -41,23 +30,7 @@ export default function RootLayout({ children }) {
 
       <body>
 
-        <div id="app" className="app">
-
-          <SmoothScroll />
-
-          <Header />
-
-          <main id="main" className="main" aria-label="Main content">
-
-            {children}
-
-          </main>
-
-          <Footer />
-
-        </div>
-
-        <SanityLive />
+        {children}
 
         <Analytics />
 

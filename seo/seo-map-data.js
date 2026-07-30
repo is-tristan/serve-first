@@ -1,7 +1,7 @@
 export const seoMapData = {
     "/products/customer-experience/feedback-terminals": {
-        title: "Feedback Terminals for Multi-Site Businesses | Serve First",
-        description: "Capture honest, in-the-moment customer feedback at every location with Serve First feedback terminals. Real-time capture, offline mode, instant alerts.",
+        title: "Smiley Face Feedback Terminals & Buttons - Serve First",
+        description: "Deploy feedback buttons and smiley-face terminals with ease. Serve First's AI-powered tools help you capture customer sentiment instantly, in any location.",
         keywords: [
             "feedback terminals",
             "real-time customer feedback",
@@ -9,8 +9,8 @@ export const seoMapData = {
         ],
     },
     "/products/customer-experience/mystery-shopping": {
-        title: "Mystery Shopping Software for Multi-Site Brands | Serve First",
-        description: "Run scenario-based mystery shopping across every site with Serve First. Detailed scorecards, video evidence and competitor benchmarking in one platform.",
+        title: "Tailored Mystery Shopping Services & Insights - Serve First",
+        description: "Our AI-powered mystery shopping turn insights into advantage. Tailored programmes that assess the retail moments that matter. Free pilots available.",
         keywords: [
             "mystery shopping software",
             "covert service assessment",
@@ -27,8 +27,8 @@ export const seoMapData = {
         ],
     },
     "/products/customer-experience/client-connect": {
-        title: "Client Connect, B2B Feedback Programmes | Serve First",
-        description: "Run your own B2B feedback programmes with Serve First Client Connect. Send branded review invitations, track every response and report on results.",
+        title: "Enterprise Feedback Management & B2B CRM - Serve First",
+        description: "Automate B2B feedback, relationships and NPS with our enterprise feedback management system; Client Connect. Drive insight, engagement and growth",
         keywords: [
             "B2B feedback programmes",
             "client review invitations",
@@ -54,8 +54,8 @@ export const seoMapData = {
         ],
     },
     "/products/operational-excellence/audits": {
-        title: "Digital Audit Software for Multi-Site Operations | Serve First",
-        description: "Run digital audits and inspections across every site with Serve First. Photo evidence, scoring, corrective actions and pass-fail reporting.",
+        title: "Facilities Management Software & Audits - Serve First",
+        description: "Streamline Facilities Management with AI software and 360 degree facility audits. Serve First keeps your operations compliant and efficient.",
         keywords: [
             "digital audit software",
             "site inspections",
@@ -63,8 +63,8 @@ export const seoMapData = {
         ],
     },
     "/products/operational-excellence/helpdesk": {
-        title: "Helpdesk and Issue Resolution Software | Serve First",
-        description: "Triage, respond to and resolve customer issues in one place with Serve First Helpdesk. Unified inbox, multi-channel replies and full audit trail.",
+        title: "Helpdesk Reputation & Complaint Management Software - Serve First",
+        description: "Streamline complaints and protect your brand with our online reputation and complaint management software. Serve First helps you capture issues early to act fast",
         keywords: [
             "helpdesk software",
             "issue resolution",
@@ -81,8 +81,8 @@ export const seoMapData = {
         ],
     },
     "/products/operational-excellence/martyns-law": {
-        title: "Martyn's Law Compliance Software for Venues | Serve First",
-        description: "Meet Martyn's Law obligations with Serve First. Compliance checklists, staff training records, evidence capture and audit trails for every site.",
+        title: "United Outcomes and Serve First - Serve First",
+        description: "Serve First & United Outcomes partner to create a fast, 60-second Martyn's Law risk assessment app for venues. Join the waitlist now",
         keywords: [
             "Martyn's Law compliance",
             "venue safety obligations",
@@ -108,8 +108,8 @@ export const seoMapData = {
         ],
     },
     "/": {
-        title: "Serve First | Operational Intelligence for CX",
-        description: "Serve First connects customer, operational and market signals across every site, then turns them into the actions that put things right.",
+        title: "AI Customer Experience Software Platform - Serve First",
+        description: "Unify reviews, surveys & receipts with an AI-driven CX platform. Serve First turns real-time customer feedback into smarter decisions across every channel",
         keywords: [
             "operational intelligence for customer experience",
             "multi-location customer experience",
@@ -197,8 +197,8 @@ export const seoMapData = {
         ],
     },
     "/eva": {
-        title: "EVA: AI Analyst for Multi-Site Operations | Serve First",
-        description: "Meet EVA, the AI analyst inside Serve First. It reads your results across every site and turns them into a role-based plan of the actions to take next.",
+        title: "EVA: AI Analyst For Multi-Site Operations - Serve First",
+        description: "EVA does the analysis, so you are not juggling reports. Ask in plain language and EVA gives you the latest status across every site",
         keywords: [
             "AI assistant for multi-site operations",
             "ask your data",
@@ -209,8 +209,8 @@ export const seoMapData = {
         ],
     },
     "/solutions/by-industry/retail": {
-        title: "Retail Customer Experience Software, Multi-Store | Serve First",
-        description: "Hold every store to one standard. Serve First connects customer feedback with how each store runs, and turns the gaps into action.",
+        title: "Retail Analytics & Customer Journey Mapping - Serve First",
+        description: "Visualise your customers journey and optimise store performance with retail analytics tools. Serve First empowers audits, insights, and smarter retail decisions.",
         keywords: [
             "customer experience software for retail",
             "multi-store standards",
@@ -220,8 +220,8 @@ export const seoMapData = {
         ],
     },
     "/solutions/by-industry/leisure-and-hospitality": {
-        title: "Guest Experience Software for Hospitality | Serve First",
-        description: "Protect the guest experience at every site. Serve First catches a dip and routes the fix before it reaches your reviews.",
+        title: "Hospitality Audits & Guest Experience Tools - Serve First",
+        description: "Discover how Serve First transforms hospitality audits with intuitive guest experience software. From hotel and restaurant inspections to guest journey insights.",
         keywords: [
             "guest experience software for hospitality",
             "hotel feedback",
@@ -242,8 +242,8 @@ export const seoMapData = {
         ],
     },
     "/solutions/by-industry/healthcare": {
-        title: "Patient Experience and Quality Software | Serve First",
-        description: "Raise care standards and evidence them. Serve First connects patient feedback with how each site runs, tied to proof of completion.",
+        title: "Health & Wellness Audits - Patient & Member Journeys - Serve First",
+        description: "Explore how Serve First supports gym audits and healthcare experiences. Learn how to measure patient satisfaction and map member journeys simply and effectively.",
         keywords: [
             "patient experience software",
             "healthcare quality audits",
@@ -253,8 +253,8 @@ export const seoMapData = {
         ],
     },
     "/solutions/by-industry/facilities-management": {
-        title: "Facilities Management Audit and Proof Software | Serve First",
-        description: "Hold standards and prove them to clients. Serve First connects audits, issues and feedback across every contract in one operating picture.",
+        title: "Facilities Management Software & Audits - Serve First",
+        description: "Streamline Facilities Management with AI software and 360 degree facility audits. Serve First keeps your operations compliant and efficient.",
         keywords: [
             "facilities management software",
             "SLA audits",
@@ -284,6 +284,41 @@ export const seoMapData = {
             "Serve First explained",
         ],
     },
+    "/how-it-works/capture": {
+        title: "Capture Customer Feedback From Every Channel | Serve First",
+        description: "Bring every customer signal into one place; terminals, surveys, reviews and audits,  across every site, in real time and offline-ready.",
+    },
+    "/how-it-works/analyse": {
+        title: "Analyse Customer Feedback and Find the Cause | Serve First",
+        description: "Go from scores to the reason behind them. Serve First scores sentiment in real time and surfaces themes per site and across the estate.",
+    },
+    "/how-it-works/action": {
+        title: "Turn Customer Insight Into Action | Serve First",
+        description: "Insight is not the finish line. Serve First routes fixes to the frontline with role-based plans, proof of completion and a closed loop.",
+    },
+    "/company/contact-us": {
+        title: "Contact Us - Serve First",
+    },
+    "/company/about": {
+        title: "About Serve First | Built for the People Who Serve",
+        description: "Serve First helps multi-site operators turn every customer signal into action, not another dashboard. Trusted by brands including The Body Shop.",
+    },
+    "/get-a-demo": {
+        title: "Book a Demo | See Serve First on Your Estate",
+        description: "Book a personalised Serve First demo and see how it works with your estate, your data and your teams across every site you run.",
+    },
+    "/resources/blog": {
+        title: "Blog - Serve First",
+    },
+    "/resources/media": {
+        title: "News - Serve First",
+    },
+    "/legal/cookie-policy": {
+        title: "Cookies Policy - Serve First",
+    },
+    "/legal/privacy-policy": {
+        title: "Privacy Policy - Serve First",
+    },
 };
 
 export function getPageMetadata(path) {
@@ -299,14 +334,21 @@ export function getPageMetadata(path) {
 
     }
 
-    return {
+    const metadata = {
         title: page.title,
-        description: page.description,
         keywords: page.keywords,
         openGraph: {
             title: page.title,
-            description: page.description,
         },
     };
+
+    if (page.description) {
+
+        metadata.description = page.description;
+        metadata.openGraph.description = page.description;
+
+    }
+
+    return metadata;
 
 }
