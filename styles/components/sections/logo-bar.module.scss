@@ -72,5 +72,9 @@ $slideHeightDesktop: 7.5rem;
 
     img {
         object-fit: contain;
+
+        @media (width < 768px) {
+            height: $slideHeightMobile;
+        }
     }
 }
