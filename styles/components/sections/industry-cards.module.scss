@@ -46,6 +46,10 @@
         gap: 2rem;
     }
 
+    @media (width >=1024px) {
+        min-height: 25rem;
+    }
+
     &:hover {
         transform: translateY(-0.5rem);
     }
