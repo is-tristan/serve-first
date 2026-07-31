@@ -19,7 +19,8 @@ import { clock } from "@/utils/icons";
 
 export default function ContentGridItem({
     index,
-    item = {}
+    item = {},
+    imageAspectRatio
 }) {
 
     const ref = useRef(null);
@@ -40,7 +41,7 @@ export default function ContentGridItem({
 
                     {item.image && (
 
-                        <div className={styles.contentGridItemImage}>
+                        <div className={styles.contentGridItemImage} style={{ "aspectRatio": imageAspectRatio ? imageAspectRatio : "2.75" }}>
 
                             <Image src={item.image} alt={item.title} fill loading="lazy" quality={90} sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" style={{ "objectFit": "cover" }} />
 

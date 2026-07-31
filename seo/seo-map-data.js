@@ -312,6 +312,7 @@ export const seoMapData = {
     },
     "/resources/media": {
         title: "News - Serve First",
+        description: "Welcome to Serve First News: your go-to source for our latest funding, product launches, event appearances, and sector insights.",
     },
     "/legal/cookie-policy": {
         title: "Cookies Policy - Serve First",

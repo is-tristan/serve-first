@@ -71,10 +71,6 @@ $slideHeightDesktop: 7.5rem;
     }
 
     img {
-        width: auto;
-        height: 100%;
-        max-width: 100%;
         object-fit: contain;
-        filter: brightness(0) invert(1);
     }
 }

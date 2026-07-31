@@ -123,6 +123,7 @@ export default function HeaderMenu({ menuAds }) {
                                                             key={submenuItem.label}
                                                             href={submenuItem.href}
                                                             className={styles.submenuLeftItem}
+                                                            onClick={handleSubmenuClose}
                                                         >
 
                                                             {submenuItem.label && (<span>{submenuItem.label}</span>)}
@@ -166,6 +167,7 @@ export default function HeaderMenu({ menuAds }) {
                                                                             key={nestedSubmenuItem.label}
                                                                             href={nestedSubmenuItem.href}
                                                                             className={styles.submenuRightItemLink}
+                                                                            onClick={handleSubmenuClose}
                                                                         >
 
                                                                             <span className={styles.submenuRightItemText}>{nestedSubmenuItem.label}</span>
@@ -182,7 +184,7 @@ export default function HeaderMenu({ menuAds }) {
 
                                                         )}
 
-                                                        <HeaderAd ad={menuAds?.[menuAdKeys[item.label]]} />
+                                                        <HeaderAd ad={menuAds?.[menuAdKeys[item.label]]} onClick={handleSubmenuClose} />
 
                                                     </div>
 
@@ -202,7 +204,7 @@ export default function HeaderMenu({ menuAds }) {
 
                             <div className={`${styles.menuItem}`}>
 
-                                <Link href={item.href} key={item.label} className={styles.menuItemLink}>
+                                <Link href={item.href} key={item.label} className={styles.menuItemLink} onClick={handleSubmenuClose}>
 
                                     <span>{item.label}</span>
 

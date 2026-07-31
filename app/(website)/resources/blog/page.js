@@ -21,7 +21,7 @@ export default async function Blog() {
         readTime: blog.readTime,
         slug: blog.slug,
         image: blog.coverImage?.asset
-            ? urlFor(blog.coverImage).width(800).height(600).fit("crop").url()
+            ? urlFor(blog.coverImage).width(800).height(457).fit("crop").url()
             : imagePlaceholder,
         button: {
             text: "Read more",

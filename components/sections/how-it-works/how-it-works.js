@@ -25,9 +25,13 @@ export default function HowItWorks({
 
             <div className={`container centered noPaddingBottom ${stylesAlt.howItWorksHeading} ${containerClass}`}>
 
-                {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
+                <div className="content">
 
-                {title && (<Text headingClass={`sectionTitle sectionTitleContained ${titleClass}`} title={title} descriptionClass="fw400" description={description} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
+
+                    {title && (<Text headingClass={`sectionTitle sectionTitleContained ${titleClass}`} title={title} descriptionClass="fw400" description={description} />)}
+
+                </div>
 
             </div>
 

@@ -18,7 +18,7 @@ export default async function BlogGrid({ eyebrow = "From the blog", title = "Wor
         description: blog.excerpt,
         readTime: blog.readTime,
         image: blog.coverImage?.asset
-            ? urlFor(blog.coverImage).width(800).height(600).fit("crop").url()
+            ? urlFor(blog.coverImage).width(800).height(457).fit("crop").url()
             : imagePlaceholder,
         button: {
             text: "Read more",
@@ -40,6 +40,7 @@ export default async function BlogGrid({ eyebrow = "From the blog", title = "Wor
                 href: "/resources/blog",
             }}
             data={contentGridData}
+            imageAspectRatio="1.75"
         />
 
     )

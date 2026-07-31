@@ -17,6 +17,7 @@ export default function BlogContentGrid({
     colCount = 3,
     containerTopClass,
     containerBottomClass,
+    imageAspectRatio = "1.75",
     data = [],
 }) {
 
@@ -54,7 +55,7 @@ export default function BlogContentGrid({
 
                     {visiblePosts.map((item, index) => (
 
-                        <ContentGridItem key={item.slug || index} index={index % postsPerPage} item={item} />
+                        <ContentGridItem key={item.slug || index} index={index % postsPerPage} item={item} imageAspectRatio={imageAspectRatio} />
 
                     ))}
 

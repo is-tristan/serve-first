@@ -14,7 +14,7 @@ import styles from "@/styles/components/layouts/header/header-desktop-menu.modul
 // Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
-export default function HeaderAd({ ad }) {
+export default function HeaderAd({ ad, onClick }) {
 
     if (!ad) {
         return null
@@ -70,6 +70,7 @@ export default function HeaderAd({ ad }) {
                     href={ad.link}
                     className={`colLink ${styles.headerAdLink}`}
                     aria-label={ad.linkText || ad.title || "View promotion"}
+                    onClick={onClick}
                 ></Link>
 
             )}

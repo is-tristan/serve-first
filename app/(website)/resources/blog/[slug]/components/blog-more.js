@@ -12,7 +12,7 @@ export default function BlogMore({ blog }) {
         description: item.excerpt,
         readTime: item.readTime,
         image: item.coverImage?.asset
-            ? urlFor(item.coverImage).width(800).height(600).fit("crop").url()
+            ? urlFor(item.coverImage).width(800).height(457).fit("crop").url()
             : imagePlaceholder,
         button: {
             text: "Read more",
@@ -37,6 +37,7 @@ export default function BlogMore({ blog }) {
                 target: "_self",
             }}
             data={contentGridData}
+            imageAspectRatio="1.75"
         />
 
     )

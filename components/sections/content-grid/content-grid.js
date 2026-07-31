@@ -21,7 +21,8 @@ export default function ContentGrid({
         href: "#",
         target: "_self",
     },
-    data = contentGridData || []
+    imageAspectRatio,
+    data = contentGridData || [],
 }) {
 
     return (
@@ -51,7 +52,7 @@ export default function ContentGrid({
 
                     {data.map((item, index) => (
 
-                        <ContentGridItem key={index} index={index} item={item} />
+                        <ContentGridItem key={index} index={index} item={item} imageAspectRatio={imageAspectRatio} />
 
                     ))}
 

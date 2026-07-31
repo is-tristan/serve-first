@@ -97,6 +97,7 @@ export default function Home() {
         data={industryCardsData}
         btnPrimary={null}
         btnSecondary={null}
+        industryCardsContainerClass="noPaddingTop"
       />
 
       <Suspense fallback={<IsLoading />}>
