@@ -71,14 +71,14 @@ export default async function MysteryShopping() {
 
             <HowItWorks
                 eyebrow="How a visit works"
-                title="Every visit, scored to your standard"
+                title="Every visit<span class='colorPrimary'>,</span> scored to your standard"
                 description="From scenario to scorecard, every visit follows your standards."
                 data={howItWorksData}
             />
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Visits that score you, but rarely change you"
+                title="Visits that score you<span class='colorPrimary'>,</span> but rarely change you"
                 data={challengeFrameData}
             />
 
@@ -138,7 +138,7 @@ export default async function MysteryShopping() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Mystery shopping, answered"
+                title="Mystery shopping<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

@@ -85,7 +85,7 @@ export default function FacilitiesManagement() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Facilities management, answered"
+                title="Facilities management<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

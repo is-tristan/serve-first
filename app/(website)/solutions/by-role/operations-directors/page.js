@@ -73,13 +73,13 @@ export default function OperationsDirector() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Too many sites, too many tools, not enough proof"
+                title="Too many sites<span class='colorPrimary'>,</span> too many tools<span class='colorPrimary'>,</span> not enough proof"
                 data={challengeFrameData}
             />
 
             <FAQ
                 eyebrow="Questions ops leaders ask"
-                title="Operations, answered"
+                title="Operations<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

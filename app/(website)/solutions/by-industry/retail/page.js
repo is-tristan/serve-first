@@ -85,7 +85,7 @@ export default function Retail() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Retail customer experience, answered"
+                title="Retail customer experience<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

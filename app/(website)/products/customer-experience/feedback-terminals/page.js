@@ -65,7 +65,7 @@ export default async function FeedbackTerminals() {
 
             <HowItWorks
                 eyebrow="How it works on site"
-                title="From the floor to the fix, without delay"
+                title="From the floor to the fix<span class='colorPrimary'>,</span> without delay"
                 description="Three connected stages, no manual collection."
                 data={howItWorksData}
             />
@@ -132,7 +132,7 @@ export default async function FeedbackTerminals() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Feedback terminals, answered"
+                title="Feedback terminals<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

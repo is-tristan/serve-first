@@ -43,13 +43,13 @@ export default async function Blog() {
 
             <BlogContentGrid
                 eyebrow="Latest articles"
-                title="Guides, playbooks and field notes today"
+                title="Guides<span class='colorPrimary'>,</span> playbooks and field notes today"
                 data={contentGridData}
             />
 
             <CtaBannerOne
                 theme="primary"
-                title="Reading is a great start. Doing is better"
+                title="Reading is a great start<span class='colorPrimary'>.</span> Doing is better"
                 description="Book a personalised demo and see the thinking put to work across your sites, your data and your team."
             />
 

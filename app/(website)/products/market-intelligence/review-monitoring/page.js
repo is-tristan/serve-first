@@ -78,7 +78,7 @@ export default async function ReviewMonitoring() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Reviews everywhere, but oversight nowhere"
+                title="Reviews everywhere<span class='colorPrimary'>,</span> but oversight nowhere"
                 data={challengeFrameData}
             />
 
@@ -138,7 +138,7 @@ export default async function ReviewMonitoring() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Review monitoring, answered"
+                title="Review monitoring<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

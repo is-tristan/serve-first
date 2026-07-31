@@ -78,7 +78,7 @@ export default async function HelpDesk() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Issues raised, then lost in a shared inbox"
+                title="Issues raised<span class='colorPrimary'>,</span> then lost in a shared inbox"
                 data={challengeFrameData}
             />
 
@@ -138,7 +138,7 @@ export default async function HelpDesk() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Helpdesk, your questions answered"
+                title="Helpdesk<span class='colorPrimary'>,</span> your questions answered"
                 button={null}
                 data={faqData}
             />

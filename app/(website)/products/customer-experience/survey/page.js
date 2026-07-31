@@ -62,7 +62,7 @@ export default async function Survey() {
 
             <RoleContext
                 eyebrow="Survey capabilities"
-                title="Ask the right question, on every channel"
+                title="Ask the right question<span class='colorPrimary'>,</span> on every channel"
                 description="Reach customers on web, kiosk, email and SMS, and read what they tell you the same day, not at month end."
                 data={roleContextData}
                 btnPrimary={{
@@ -73,14 +73,14 @@ export default async function Survey() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="One platform, from question to insight"
+                title="One platform<span class='colorPrimary'>,</span> from question to insight"
                 description="From draft to insight without leaving the platform."
                 data={howItWorksData}
             />
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Plenty of feedback, but no change on the floor"
+                title="Plenty of feedback<span class='colorPrimary'>,</span> but no change on the floor"
                 data={challengeFrameData}
             />
 
@@ -148,7 +148,7 @@ export default async function Survey() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Customer surveys, answered"
+                title="Customer surveys<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

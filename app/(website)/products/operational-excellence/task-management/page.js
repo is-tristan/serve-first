@@ -78,7 +78,7 @@ export default async function TaskManagement() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Plenty of insight, but follow-through that slips"
+                title="Plenty of insight<span class='colorPrimary'>,</span> but follow-through that slips"
                 data={challengeFrameData}
             />
 
@@ -137,7 +137,7 @@ export default async function TaskManagement() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Task management, answered"
+                title="Task management<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

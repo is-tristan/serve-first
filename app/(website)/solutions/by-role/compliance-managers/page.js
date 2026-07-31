@@ -39,7 +39,7 @@ export default function ComplianceManagers() {
 
             <RoleContext
                 eyebrow="Built for compliance managers"
-                title="If it is not evidenced, it did not happen"
+                title="If it is not evidenced<span class='colorPrimary'>,</span> it did not happen"
                 description="Compliance is about proof, not intentions. Serve First turns your obligations into checklists, captured evidence and audit trails across every site and venue you cover."
                 btnPrimary={null}
                 data={roleContextData}
@@ -47,7 +47,7 @@ export default function ComplianceManagers() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="From obligation to evidence, without the scramble"
+                title="From obligation to evidence<span class='colorPrimary'>,</span> without the scramble"
                 description="Three stages turn duty of care into ready proof."
                 data={howItWorksData}
             />
@@ -73,14 +73,14 @@ export default function ComplianceManagers() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Could you prove compliance today, at every site?"
+                title="Could you prove compliance today<span class='colorPrimary'>,</span> at every site<span class='colorPrimary'>?</span>"
                 hasFullStop={false}
                 data={challengeFrameData}
             />
 
             <FAQ
                 eyebrow="Questions compliance leads ask"
-                title="Compliance, answered"
+                title="Compliance<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

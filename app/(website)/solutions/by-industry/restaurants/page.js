@@ -85,7 +85,7 @@ export default function LeisureAndHospitality() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Restaurant operations, answered"
+                title="Restaurant operations<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

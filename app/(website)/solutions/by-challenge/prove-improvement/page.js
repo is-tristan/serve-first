@@ -39,7 +39,7 @@ export default function ProveImprovement() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="You know it is better<span class='colorPrimaryAlt'>.</span> Can you prove it<span class='colorPrimaryAlt'>?</span>"
+                title="You know it is better<span class='colorPrimary'>.</span> Can you prove it<span class='colorPrimary'>?</span>"
                 hasFullStop={false}
                 data={challengeFrameData}
             />
@@ -78,7 +78,7 @@ export default function ProveImprovement() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Proving improvement, answered."
+                title="Proving improvement<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

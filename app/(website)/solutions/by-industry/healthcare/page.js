@@ -43,7 +43,7 @@ export default function Healthcare() {
 
             <ChallengeFrame
                 eyebrow="The healthcare challenge"
-                title="Care standards you must meet, and prove"
+                title="Care standards you must meet<span class='colorPrimary'>,</span> and prove"
                 data={challengeFrameData}
             />
 
@@ -85,7 +85,7 @@ export default function Healthcare() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Patient experience, answered"
+                title="Patient experience<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

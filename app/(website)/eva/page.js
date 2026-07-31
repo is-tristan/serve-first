@@ -55,7 +55,7 @@ export default function Eva() {
 
             <FeatureList
                 eyebrow="What EVA can do"
-                title="Know what is happening. Know what to do next"
+                title="Know what is happening<span class='colorPrimary'>.</span> Know what to do next"
                 data={featureListData}
             />
 
@@ -71,7 +71,7 @@ export default function Eva() {
 
             <FAQ
                 eyebrow="Questions CX leaders ask"
-                title="EVA, answered"
+                title="EVA<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

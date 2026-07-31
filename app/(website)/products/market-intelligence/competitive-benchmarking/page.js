@@ -55,7 +55,7 @@ export default async function ReviewMonitoring() {
 
             <ChallengeFrame
                 eyebrow="The problem"
-                title="You know your own scores. You cannot see the shop next door"
+                title="You know your own scores<span class='colorPrimary'>.</span> You cannot see the shop next door"
                 data={challengeFrameData}
             />
 
@@ -126,7 +126,7 @@ export default async function ReviewMonitoring() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Competitive benchmarking, answered"
+                title="Competitive benchmarking<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

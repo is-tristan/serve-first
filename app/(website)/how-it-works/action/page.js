@@ -52,7 +52,7 @@ export default function Action() {
             <HowItWorks
                 containerClass={null}
                 eyebrow="The model"
-                title="Capture, analyse, action. This is stage three"
+                title="Capture<span class='colorPrimary'>,</span> analyse<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage three"
                 titleClass="sectionTitleConstrained"
                 description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
                 data={howItWorksData}
@@ -111,7 +111,7 @@ export default function Action() {
             />
 
             <CtaBannerOne
-                title="Stop at insight, or actually fix it"
+                title="Stop at insight<span class='colorPrimary'>,</span> or actually fix it"
                 description="See how Serve First captures, analyses and actions every signal across your sites, in one connected platform."
             />
 

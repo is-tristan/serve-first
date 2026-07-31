@@ -45,14 +45,14 @@ export default async function Media() {
 
             <ContentGrid
                 eyebrow="Latest updates"
-                title="Press, releases and recognition in the media so far"
+                title="Press<span class='colorPrimary'>,</span> releases and recognition in the media so far"
                 button={null}
                 data={contentGridData}
             />
             
             <CtaBannerOne
                 theme="primary"
-                title="See what the headlines are really about."
+                title="See what the headlines are really about"
                 description="Book a personalised demo and see the platform behind the news, working with your estate and your data."
             />
 

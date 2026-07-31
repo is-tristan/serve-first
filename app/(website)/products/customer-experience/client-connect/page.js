@@ -66,7 +66,7 @@ export default async function ClientConnect() {
 
             <HowItWorks
                 eyebrow="How a programme runs"
-                title="One workflow, from invite to outcome"
+                title="One workflow<span class='colorPrimary'>,</span> from invite to outcome"
                 description="A managed invitation workflow, built on the survey engine."
                 data={howItWorksData}
             />
@@ -125,7 +125,7 @@ export default async function ClientConnect() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Client Connect, answered"
+                title="Client Connect<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

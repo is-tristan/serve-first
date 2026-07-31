@@ -54,7 +54,7 @@ export default async function MartynsLaw() {
 
             <ChallengeFrame
                 eyebrow="What the law requires"
-                title="New obligations, real accountability for venues"
+                title="New obligations<span class='colorPrimary'>,</span> real accountability for venues"
                 data={challengeFrameData}
             />
 
@@ -64,7 +64,7 @@ export default async function MartynsLaw() {
 
             <HowItWorks
                 eyebrow="How it is evidenced"
-                title="Obligation to evidence, every venue"
+                title="Obligation to evidence<span class='colorPrimary'>,</span> every venue"
                 description="From obligation to evidence, across every venue."
                 data={howItWorksData}
             />
@@ -124,7 +124,7 @@ export default async function MartynsLaw() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Martyn's Law, answered"
+                title="Martyn's Law<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

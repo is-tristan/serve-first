@@ -51,7 +51,7 @@ export default function Analyse() {
             <HowItWorks
                 containerClass={null}
                 eyebrow="The model"
-                title="Capture, analyse, action. This is stage two"
+                title="Capture<span class='colorPrimary'>,</span> analyse<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage two"
                 titleClass="sectionTitleConstrained"
                 description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
                 data={howItWorksData}

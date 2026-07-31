@@ -35,7 +35,7 @@ export default function About() {
 
             <ModuleStats
                 eyebrow="By the numbers"
-                title="The Serve First story, so far"
+                title="The Serve First story<span class='colorPrimary'>,</span> so far"
                 description="What began as a better way to act on customer feedback has grown into one connected platform for the people who serve."
                 btnPrimary={{
                     text: "Talk to us",

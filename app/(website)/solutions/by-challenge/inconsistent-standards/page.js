@@ -46,7 +46,7 @@ export default function InconsistentStandards() {
 
             <RoleContext
                 eyebrow="Who feels it"
-                title="One challenge, three seats at the table"
+                title="One challenge<span class='colorPrimary'>,</span> three seats at the table"
                 description="Inconsistent standards land differently depending on your seat. Serve First gives each role its own view of the same picture, so everyone pulls in one direction."
                 btnPrimary={null}
                 data={roleContextData}
@@ -78,7 +78,7 @@ export default function InconsistentStandards() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Consistent standards, answered"
+                title="Consistent standards<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

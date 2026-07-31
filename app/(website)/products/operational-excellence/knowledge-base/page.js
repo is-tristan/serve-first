@@ -78,7 +78,7 @@ export default async function KnowledgeBase() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Procedures exist, but no one finds them"
+                title="Procedures exist<span class='colorPrimary'>,</span> but no one finds them"
                 data={challengeFrameData}
             />
 
@@ -138,7 +138,7 @@ export default async function KnowledgeBase() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Knowledge Base, answered"
+                title="Knowledge Base<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

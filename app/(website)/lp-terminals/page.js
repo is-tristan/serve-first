@@ -43,7 +43,7 @@ export default function LpTerminals() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="From the floor to the fix, fast"
+                title="From the floor to the fix<span class='colorPrimary'>,</span> fast"
                 description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
                 data={howItWorksData}
             />

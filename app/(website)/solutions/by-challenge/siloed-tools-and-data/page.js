@@ -39,13 +39,13 @@ export default function SiloedToolsAndData() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Your data is everywhere, so the truth is nowhere"
+                title="Your data is everywhere<span class='colorPrimary'>,</span> so the truth is nowhere"
                 data={challengeFrameData}
             />
 
             <RoleContext
                 eyebrow="Who feels it"
-                title="One picture, shaped around each role"
+                title="One picture<span class='colorPrimary'>,</span> shaped around each role"
                 description="Disconnected tools cost every role differently. Serve First puts customer, operational and market signals in one operating picture, shaped around each seat."
                 btnPrimary={null}
                 data={roleContextData}
@@ -77,7 +77,7 @@ export default function SiloedToolsAndData() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="One connected picture, answered"
+                title="One connected picture<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

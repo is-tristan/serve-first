@@ -135,7 +135,7 @@ export default async function Audits() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Digital audits, answered"
+                title="Digital audits<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

@@ -39,7 +39,7 @@ export default function CXLeader() {
 
             <RoleContext
                 eyebrow="Built for CX leaders"
-                title="Not measuring experience. Improving it"
+                title="Not measuring experience<span class='colorPrimary'>.</span> Improving it"
                 description={null}
                 btnPrimary={null}
                 data={roleContextData}
@@ -74,14 +74,14 @@ export default function CXLeader() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="You can see the score. Can you see the cause?"
+                title="You can see the score<span class='colorPrimary'>.</span> Can you see the cause<span class='colorPrimary'>?</span>"
                 hasFullStop={false}
                 data={challengeFrameData}
             />
 
             <FAQ
                 eyebrow="Questions CX leaders ask"
-                title="Customer experience management, answered"
+                title="Customer experience management<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

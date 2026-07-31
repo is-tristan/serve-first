@@ -39,7 +39,7 @@ export default function DataToAction() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Plenty of dashboards, not nearly enough done"
+                title="Plenty of dashboards<span class='colorPrimary'>,</span> not nearly enough done"
                 data={challengeFrameData}
             />
 
@@ -54,7 +54,7 @@ export default function DataToAction() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="From signal to fix, not signal to report"
+                title="From signal to fix<span class='colorPrimary'>,</span> not signal to report"
                 description="Three connected stages, built to end in action."
                 data={howItWorksData}
             />
@@ -77,7 +77,7 @@ export default function DataToAction() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Insight to action, answered"
+                title="Insight to action<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

@@ -44,7 +44,7 @@ export default function VenuesAndEvents() {
 
             <ChallengeFrame
                 eyebrow="The venues challenge"
-                title="High stakes, big crowds, no second chances"
+                title="High stakes<span class='colorPrimary'>,</span> big crowds<span class='colorPrimary'>,</span> no second chances"
                 data={challengeFrameData}
             />
 
@@ -103,7 +103,7 @@ export default function VenuesAndEvents() {
 
             <FAQ
                 eyebrow="Common questions"
-                title="Venue safety and experience, answered"
+                title="Venue safety and experience<span class='colorPrimary'>,</span> answered"
                 button={null}
                 data={faqData}
             />

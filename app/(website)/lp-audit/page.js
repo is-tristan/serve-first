@@ -43,7 +43,7 @@ export default function LpAudit() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="From standard to proof, every site"
+                title="From standard to proof<span class='colorPrimary'>,</span> every site"
                 description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
                 data={howItWorksData}
             />

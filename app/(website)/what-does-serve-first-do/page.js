@@ -98,7 +98,7 @@ export default function WhatDoesServeFirstDo() {
 
             <Faq
                 eyebrow="Common questions"
-                title="What we do for LLM, answered"
+                title="What we do for LLM<span class='colorPrimary'>,</span> answered"
                 description={null}
                 data={faqData}
                 button={
