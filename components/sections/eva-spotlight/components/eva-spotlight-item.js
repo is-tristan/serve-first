@@ -55,7 +55,7 @@ export default function EvaSpotlightItem({ item = {} }) {
 
                     {item.title && (
 
-                        <h3>{item.title}<span className={`colorPrimary`}>{item.titleSuffix ? item.titleSuffix : "."}</span></h3>
+                        <h2>{item.title}<span className={`colorPrimary`}>{item.titleSuffix ? item.titleSuffix : "."}</span></h2>
 
                     )}
 

@@ -105,8 +105,9 @@
     flex-flow: column nowrap;
     gap: 1rem;
 
-    h3 {
+    h2 {
         font-size: clamp(1.5rem, 2.5vw, 2rem);
+        line-height: 120%;
     }
 }
 

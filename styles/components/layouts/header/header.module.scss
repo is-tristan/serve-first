@@ -26,6 +26,12 @@
             gap: 1.5rem;
         }
     }
+
+    &[data-has-topbar="true"] {
+        @media (width >=1024px) {
+            padding-top: var(--desktopTopbarHeight);
+        }
+    }
 }
 
 // Header Logo

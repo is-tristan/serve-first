@@ -13,7 +13,7 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Plenty of dashboards",
         title: "You have no shortage of dashboards, and no shortage of unread reports.",
-        description: "EVA reads each signal and names the next action, with the site and the reason, so insight arrives ready to use rather than waiting to be interpreted.",
+        description: "EVA reads each signal and names the next action, with the site and the reason, so insight arrives ready to use, not waiting to be interpreted.",
         tags: [
             {
                 tag: "System of action",

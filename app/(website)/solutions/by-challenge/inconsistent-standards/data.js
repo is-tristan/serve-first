@@ -12,7 +12,7 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Standards drift",
         title: "One standard leaves head office and changes a little at every site.",
-        description: "Serve First runs the same digital Audits at every site, scored the same way, so the standard is checked like for like and drift shows up immediately.",
+        // description: "Serve First runs the same digital Audits at every site, scored the same way, so the standard is checked like for like and drift shows up immediately.",
         tags: [
             {
                 tag: "Store audits",
@@ -22,7 +22,7 @@ export const challengeFrameData = [
     {
         eyebrow: "02 | Ratings change",
         title: "You cannot see which locations are slipping until customers feel it.",
-        description: "Every site is scored and compared in one operating picture, with EVA flagging the locations that are slipping and the standard behind the slip.",
+        // description: "Every site is scored and compared in one operating picture, with EVA flagging the locations that are slipping and the standard behind the slip.",
         tags: [
             {
                 tag: "Routed tasks",
@@ -32,7 +32,7 @@ export const challengeFrameData = [
     {
         eyebrow: "03 | Inconsistent standards",
         title: "Issues get raised on a visit, then quietly slip back within weeks.",
-        description: "Every failed check raises a corrective task routed to an owner and tracked to proof of completion, so the fix holds and you can show it did.",
+        // description: "Every failed check raises a corrective task routed to an owner and tracked to proof of completion, so the fix holds and you can show it did.",
         tags: [
             {
                 tag: "Proof of completion",

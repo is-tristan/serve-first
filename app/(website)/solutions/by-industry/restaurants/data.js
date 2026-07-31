@@ -10,19 +10,19 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Food safety audits",
         title: "Food safety and service standards drift between sites and shifts.",
-        description: "Serve First runs the same food safety and service audits at every site, scored consistently, so standards are checked the same way on every shift.",
+        // description: "Serve First runs the same food safety and service audits at every site, scored consistently, so standards are checked the same way on every shift.",
         tags: []
     },
     {
         eyebrow: "02 | Guest Feedback",
         title: "When the audit is on paper, the evidence is patchy and hard to find later.",
-        description: "Digital checks capture timestamps, photos and sign-offs as the shift runs, so the evidence builds itself and is ready when you need it.",
+        // description: "Digital checks capture timestamps, photos and sign-offs as the shift runs, so the evidence builds itself and is ready when you need it.",
         tags: []
     },
     {
         eyebrow: "03 | Proof of Completion",
         title: "A problem gets noted, then slips back before the next visit.",
-        description: "Every failed check raises a corrective task routed to the right owner and tracked to done, so issues close before the next service.",
+        // description: "Every failed check raises a corrective task routed to the right owner and tracked to done, so issues close before the next service.",
         tags: []
     }
 ]

@@ -23,17 +23,13 @@ export default function PlatformStory({
             data-name="platform-story"
         >
 
-            <div className={"container sectionSplitTitle noPaddingBottom"}>
+            <div className={"container noPaddingBottom"}>
 
-                <div className={`content headingCol`}>
+                <div className={`content`}>
 
                     {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
                     <Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />
-
-                </div>
-
-                <div className={`contentCol`}>
 
                     {description && (<Text description={description} />)}
 

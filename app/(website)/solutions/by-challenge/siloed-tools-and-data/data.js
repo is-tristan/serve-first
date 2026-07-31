@@ -13,7 +13,7 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Data is siloed",
         title: "Customer and operational data sit in different tools and different teams.",
-        description: "Feedback, audits, tickets and reviews are captured into one connected platform, so every signal lands in the same place without manual exports.",
+        // description: "Feedback, audits, tickets and reviews are captured into one connected platform, so every signal lands in the same place without manual exports.",
         tags: [
             {
                 tag: "Connected signals",
@@ -23,7 +23,7 @@ export const challengeFrameData = [
     {
         eyebrow: "02 | Signals are disconnected",
         title: "Proving how the estate is doing means stitching exports together by hand.",
-        description: "EVA reads across every signal and answers in plain English, so the question how are we doing takes seconds, not a week of spreadsheet work.",
+        // description: "EVA reads across every signal and answers in plain English, so the question how are we doing takes seconds, not a week of spreadsheet work.",
         tags: [
             {
                 tag: "One operating picture",
@@ -33,7 +33,7 @@ export const challengeFrameData = [
     {
         eyebrow: "03 | Answers are hidden",
         title: "The business is connected in real life, but disconnected in your systems.",
-        description: "Serve First gives every team one operating picture, so insight routes into tasks and follow-ups instead of dying in a dashboard nobody owns.",
+        // description: "Serve First gives every team one operating picture, so insight routes into tasks and follow-ups instead of dying in a dashboard nobody owns.",
         tags: [
             {
                 tag: "Answers in seconds",

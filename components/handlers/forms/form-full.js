@@ -158,7 +158,7 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
 
                     <div className={styles.field}>
 
-                        <input type="text" name="sites" required autoComplete="false" placeholder="How many locations you operate." aria-required="true" />
+                        <input type="number" min="1" name="sites" required autoComplete="false" placeholder="How many locations you operate." aria-required="true" />
 
                     </div>
 

@@ -193,7 +193,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Hear from guests at every site, in the moment.",
+        description: "Hear from occupants at every site you manage.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
