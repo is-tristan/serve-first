@@ -31,7 +31,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Site Audits and Helpdesk capture how every site is running against each SLA, with issues logged as they happen.",
+        description: "Site audits and helpdesk capture how every site is running against each SLA, with issues logged as they happen.",
         image: "/images/solutions/by-industry/facilities-management/fm-capture.png",
         button: {
             text: "Explore capture",
