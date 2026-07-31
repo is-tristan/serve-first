@@ -45,7 +45,7 @@ export default function WhatDoesServeFirstDo() {
 
             <PlatformStory
                 eyebrow="How Serve First works"
-                title="Capture. Analyse. Action"
+                title="Capture<span class='colorPrimary'>.</span> Analyse<span class='colorPrimary'>.</span> Action"
                 description="Three connected layers turn scattered signals into the right next step, in one platform."
                 data={platformStoryData}
             />

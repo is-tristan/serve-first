@@ -1,11 +1,12 @@
 .lpBanner {
-    
-    @media (width >=1024px) {
-        padding-top: var(--desktopHeaderHeight);
-    }
-
     .lpBannerContainer {
-        padding-top: calc(var(--mobileHeaderHeight) * 0.875) !important;
+        @media (width < 1024px) {
+            padding-top: calc(var(--mobileHeaderHeight) * 0.875) !important;
+        }
+
+        @media (width >=1024px) {
+            padding-top: calc(var(--headerHeight) * 1.5) !important;
+        }
     }
 
     p {

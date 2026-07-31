@@ -59,13 +59,14 @@ export default function FeaturedListItem({
                     sizes="(max-width: 1023px) 100vw, 50vw"
                     style={{ objectFit: normalizedImageSizing }}
                 />
+
             </div>
 
             <div className={`${styles.colLeft} ${styles.featureListItemContent}`}>
 
                 <div className={`hasFullStop ${styles.featureListItemHeader}`}>
 
-                    {eyebrow && (<Eyebrow hasAnimation={false} textColor={`${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={eyebrow} />)}
+                    {eyebrow && (<Eyebrow hasAnimation={false} textColor={`${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={eyebrow} hasDash={true} />)}
 
                     {title && (<h2 className={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>{title}</h2>)}
 

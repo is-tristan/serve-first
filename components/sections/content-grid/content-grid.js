@@ -17,8 +17,8 @@ export default function ContentGrid({
     containerTopClass,
     containerBottomClass,
     button = {
-        text: "Lorem ipsum",
-        href: "#",
+        text: "Get a demo",
+        href: "/get-a-demo",
         target: "_self",
     },
     imageAspectRatio,

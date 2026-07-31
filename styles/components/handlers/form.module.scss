@@ -127,11 +127,15 @@
             transition: all 0.1s ease;
 
             @media (width < 768px) {
-                font-size: 0.75rem;
+                font-size: 1rem;
             }
 
             &::placeholder {
                 color: rgba(var(--lightRgb), 0.5);
+
+                @media (width < 768px) {
+                    font-size: 0.75rem;
+                }
             }
 
             &:focus,
@@ -149,6 +153,10 @@
             background-repeat: no-repeat;
             background-position: right 1rem center;
             padding-right: 2.5rem;
+
+            @media (width < 768px) {
+                font-size: 0.75rem;
+            }
 
             option {
                 color: var(--dark);
