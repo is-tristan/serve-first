@@ -77,15 +77,15 @@ export const explore = {
       href: "/eva",
     },
     {
-      label: "About Us",
+      label: "About us",
       href: "/company/about",
     },
     {
-      label: "What We Do",
+      label: "What we do",
       href: "/what-does-serve-first-do",
     },
     {
-      label: "Contact Us",
+      label: "Contact us",
       href: "/company/contact-us",
     },
     {

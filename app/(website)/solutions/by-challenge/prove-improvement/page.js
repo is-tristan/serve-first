@@ -39,7 +39,7 @@ export default function ProveImprovement() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="You know it is better. Can you prove it?"
+                title="You know it is better<span class='colorPrimaryAlt'>.</span> Can you prove it<span class='colorPrimaryAlt'>?</span>"
                 hasFullStop={false}
                 data={challengeFrameData}
             />

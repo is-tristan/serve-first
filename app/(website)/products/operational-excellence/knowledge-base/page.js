@@ -103,7 +103,7 @@ export default async function KnowledgeBase() {
 
             <ProductHighlight
                 eyebrow="More from Serve First"
-                title="More of the platform your teams can use."
+                title="More of the platform your teams can use"
                 description="Knowledge Base sits in the same platform as the rest of Serve First, so the right answer is linked to the work it supports."
                 linkText={null}
                 colCount={4}
