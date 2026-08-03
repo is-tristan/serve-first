@@ -1,7 +1,5 @@
 import { Special_Gothic_Expanded_One, Poppins } from "next/font/google";
 
-import { Analytics } from "@vercel/analytics/next";
-
 import "@/styles/main.scss";
 
 import { getPageMetadata } from "@/seo/seo-map-data";
@@ -31,8 +29,6 @@ export default function RootLayout({ children }) {
       <body>
 
         {children}
-
-        <Analytics />
 
       </body>
 

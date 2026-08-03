@@ -18,23 +18,32 @@ import styles from "@/styles/components/handlers/form.module.scss";
 // Icons
 import { shieldTick } from "@/utils/icons";
 
+// Utils
+import { splitFullName } from "@/utils/forms";
+
 export default function FormSmall({
     theme = "primary",
     hasDemoLink = true,
     formBtnText = "Send message",
     formTitle = null,
     formSmallText = "No obligation. We will not pass your details on.",
-    hasAnimation = true }) {
+    hasAnimation = true,
+    formId = "6c85505f-8f36-4de2-8618-47a73caf8144" }) {
     const [result, setResult] = useState("");
     const [isComplete, setIsComplete] = useState(false);
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Sending....");
-        const formData = new FormData(event.target);
-        formData.append("access_key", "43a999f2-ecbe-4116-b748-6416a2e176e5");
+        const form = event.target;
+        const { firstname, lastname } = splitFullName(form.name.value);
+        form.firstname.value = firstname;
+        form.lastname.value = lastname;
+        const formData = new FormData(form);
+        formData.append("pageUri", window.location.href);
+        formData.append("pageName", document.title);
 
-        const response = await fetch("https://api.web3forms.com/submit", {
+        const response = await fetch("/api/forms/hubspot", {
             method: "POST",
             body: formData
         });
@@ -72,127 +81,133 @@ export default function FormSmall({
 
             ) : (
 
-            <>
+                <>
 
-            {formTitle && (<span className={styles.formTitle}>{formTitle}</span>)}
+                    {formTitle && (<span className={styles.formTitle}>{formTitle}</span>)}
 
-            <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
+                    <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
 
-                <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="name">
+                        <input type="hidden" name="hubspot-form-id" value={formId} />
 
-                    <legend className={styles.legend}>Full Name <span className={styles.required}>*</span></legend>
+                        <input type="hidden" name="firstname" defaultValue="" />
 
-                    <div className={styles.field}>
+                        <input type="hidden" name="lastname" defaultValue="" />
 
-                        <input type="text" name="name" required autoComplete="name" placeholder="So we know who we are replying to." aria-required="true" />
+                        <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="name">
 
-                    </div>
+                            <legend className={styles.legend}>Full Name <span className={styles.required}>*</span></legend>
 
-                </fieldset>
+                            <div className={styles.field}>
 
-                <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="email">
+                                <input type="text" name="name" required autoComplete="name" placeholder="So we know who we are replying to." aria-required="true" />
 
-                    <legend className={styles.legend}>Work Email <span className={styles.required}>*</span></legend>
+                            </div>
 
-                    <div className={styles.field}>
+                        </fieldset>
 
-                        <input type="email" name="email" required autoComplete="email" placeholder="Where we will send our reply." aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="email">
 
-                    </div>
+                            <legend className={styles.legend}>Work Email <span className={styles.required}>*</span></legend>
 
-                </fieldset>
+                            <div className={styles.field}>
 
-                <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="company">
+                                <input type="email" name="email" required autoComplete="email" placeholder="Where we will send our reply." aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
-                    <legend className={styles.legend}>Company <span className={styles.required}>*</span></legend>
+                            </div>
 
-                    <div className={styles.field}>
+                        </fieldset>
 
-                        <input type="text" name="company" required autoComplete="company" placeholder="The business or group you run." aria-required="true" />
+                        <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="company">
 
-                    </div>
+                            <legend className={styles.legend}>Company <span className={styles.required}>*</span></legend>
 
-                </fieldset>
+                            <div className={styles.field}>
 
-                <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="subject">
+                                <input type="text" name="company" required autoComplete="company" placeholder="The business or group you run." aria-required="true" />
 
-                    <legend className={styles.legend}>What is this about? <span className={styles.required}>*</span></legend>
+                            </div>
 
-                    <div className={styles.field}>
+                        </fieldset>
 
-                        <select name="subject" required defaultValue="" aria-required="true" aria-label="What is this about?">
+                        <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="notes">
 
-                            <option value="" disabled>Select a topic</option>
+                            <legend className={styles.legend}>What is this about? <span className={styles.required}>*</span></legend>
 
-                            <option value="Demo">Demo</option>
+                            <div className={styles.field}>
 
-                            <option value="Sales">Sales</option>
+                                <select name="notes" required defaultValue="" aria-required="true" aria-label="What is this about?">
 
-                            <option value="Support">Support</option>
+                                    <option value="" disabled>Select a topic</option>
 
-                            <option value="Something else">Something else</option>
+                                    <option value="Demo">Demo</option>
 
-                        </select>
+                                    <option value="Sales">Sales</option>
 
-                    </div>
+                                    <option value="Support">Support</option>
 
-                </fieldset>
+                                    <option value="Something else">Something else</option>
 
-                <fieldset className={styles.fieldset} data-name="comments">
+                                </select>
 
-                    <legend className={styles.legend}>Your message <span className={styles.required}>*</span></legend>
+                            </div>
 
-                    <div className={styles.field}>
+                        </fieldset>
 
-                        <textarea name="comments" required placeholder="A line or two on how we can help." aria-required="true" />
+                        <fieldset className={styles.fieldset} data-name="notes">
 
-                    </div>
+                            <legend className={styles.legend}>Your message <span className={styles.required}>*</span></legend>
 
-                </fieldset>
+                            <div className={styles.field}>
 
-                <fieldset className={`${styles.fieldset} ${styles.consent}`} data-name="terms">
+                                <textarea name="notes" required placeholder="A line or two on how we can help." aria-required="true" />
 
-                    <legend className={styles.legend}>Consent <span className={styles.required}>*</span></legend>
+                            </div>
 
-                    <div className={styles.field}>
+                        </fieldset>
 
-                        <input type="checkbox" name="terms" id="terms" required aria-required="true" />
+                        <fieldset className={`${styles.fieldset} ${styles.consent}`} data-name="terms">
 
-                        <label htmlFor="terms" style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>I have read and agree to your <Link href="/legal/privacy-policy" target="_blank" className={theme === "primary" ? "colorSecondary" : "colorPrimaryAlt"} style={{ textDecoration: "underline" }}>privacy policy</Link>.</label>
+                            <legend className={styles.legend}>Consent <span className={styles.required}>*</span></legend>
 
-                    </div>
+                            <div className={styles.field}>
 
-                </fieldset>
+                                <input type="checkbox" name="terms" id="terms" required aria-required="true" />
 
-                <div className={styles.formFooter}>
+                                <label htmlFor="terms" style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>I have read and agree to your <Link href="/legal/privacy-policy" target="_blank" className={theme === "primary" ? "colorSecondary" : "colorPrimaryAlt"} style={{ textDecoration: "underline" }}>privacy policy</Link>.</label>
 
-                    <div className={`buttons`} style={{ gap: "1rem" }}>
+                            </div>
 
-                        <button style={{ width: hasDemoLink ? "auto" : "100%" }} className={styles.submit} type="submit">{formBtnText}</button>
+                        </fieldset>
 
-                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
+                        <div className={styles.formFooter}>
 
-                    </div>
+                            <div className={`buttons`} style={{ gap: "1rem" }}>
 
-                    <div className={styles.formFooterText}>
+                                <button style={{ width: hasDemoLink ? "auto" : "100%" }} className={styles.submit} type="submit">{formBtnText}</button>
 
-                        <div style={{ color: theme === "primary" ? "var(--light)" : "var(--primaryAlt)" }} className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
+                                {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
 
-                        {formSmallText && <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>{formSmallText}</span>}
+                            </div>
 
-                    </div>
+                            <div className={styles.formFooterText}>
 
-                    <div className={styles.result}>
+                                <div style={{ color: theme === "primary" ? "var(--light)" : "var(--primaryAlt)" }} className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
 
-                        <span>{result}</span>
+                                {formSmallText && <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>{formSmallText}</span>}
 
-                    </div>
+                            </div>
 
-                </div>
+                            <div className={styles.result}>
 
-            </form>
+                                <span>{result}</span>
 
-            </>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </>
 
             )}
 

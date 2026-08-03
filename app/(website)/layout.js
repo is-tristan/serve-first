@@ -1,9 +1,10 @@
+// Components
 import Header from "@/components/layouts/header/header";
-
 import Footer from "@/components/layouts/footer/footer";
-
 import SmoothScroll from "@/components/handlers/smooth-scroll";
+import CookieConsent from "@/components/cookie-consent/cookie-consent";
 
+// Sanity
 import { SanityLive } from "@/sanity/lib/live";
 
 export default function WebsiteLayout({ children }) {
@@ -27,6 +28,8 @@ export default function WebsiteLayout({ children }) {
         <Footer />
 
       </div>
+
+      <CookieConsent />
 
       <SanityLive />
 
