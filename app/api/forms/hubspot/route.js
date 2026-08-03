@@ -1,1 +1,1 @@
-export { POST } from "@/api/forms/hubspot";
+export { POST } from "@/helpers/forms/hubspot";
