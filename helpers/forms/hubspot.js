@@ -52,6 +52,8 @@ export async function POST(request) {
     }
 
     const properties = buildProperties(formData);
+    properties.channel_source = "Organic - Website";
+    properties.channel_source_detail = process.env.NEXT_PUBLIC_SITE_URL;
 
     if (!properties.email && !properties.firstname && !properties.lastname) {
         return Response.json(
