@@ -24,6 +24,7 @@ export default function LpClientConnect() {
                 description="Client Connect runs branded feedback programmes across your B2B accounts, so account teams see the risk early, not at the renewal conversation."
                 hasButtons={false}
                 formSmallText="See it on your own sites. No slides, no obligation."
+                utmMedium="LP Client Connect"
                 checkList={[
                     "Branded invitations, per account",
                     "Every send tracked to a response",

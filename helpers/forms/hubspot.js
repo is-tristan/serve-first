@@ -3,7 +3,7 @@ const allowedFormIds = [
     "3db08222-428e-47e7-895d-8a82a8c99686",
 ];
 
-const skippedFields = new Set(["hubspot-form-id", "pageUri", "pageName", "terms", "name"]);
+const skippedFields = new Set(["hubspot-form-id", "terms", "name"]);
 
 const hubspotApiBaseUrl = "https://api-eu1.hubapi.com";
 
@@ -53,7 +53,10 @@ export async function POST(request) {
 
     const properties = buildProperties(formData);
     properties.channel_source = "Organic - Website";
-    properties.channel_source_detail = process.env.NEXT_PUBLIC_SITE_URL;
+
+    if (properties.utm_source) {
+        properties.channel_source_detail = properties.utm_source;
+    }
 
     if (!properties.email && !properties.firstname && !properties.lastname) {
         return Response.json(

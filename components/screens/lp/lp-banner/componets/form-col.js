@@ -11,7 +11,7 @@ import FormFull from "@/components/handlers/forms/form-full";
 // Styles
 import styles from "@/styles/components/screens/lp/lp.module.scss";
 
-export default function FormCol({ formBtnText, formSmallText, formType, hasDemoLink }) {
+export default function FormCol({ formBtnText, formSmallText, formType, hasDemoLink, utmMedium }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.25 });
@@ -29,6 +29,7 @@ export default function FormCol({ formBtnText, formSmallText, formType, hasDemoL
             {formType === "full" ? (
 
                 <FormFull
+                    utmMedium={utmMedium}
                     formTitle="Book a 20-minute demo"
                     formBtnText={formBtnText}
                     theme="light"
@@ -40,6 +41,7 @@ export default function FormCol({ formBtnText, formSmallText, formType, hasDemoL
             ) : (
 
                 <FormSmall
+                    utmMedium={utmMedium}
                     formTitle="Book a 20-minute demo"
                     formBtnText={formBtnText}
                     theme="light"
@@ -47,7 +49,7 @@ export default function FormCol({ formBtnText, formSmallText, formType, hasDemoL
                     formSmallText={formSmallText}
                     hasDemoLink={hasDemoLink}
                 />
-                
+
             )}
 
 

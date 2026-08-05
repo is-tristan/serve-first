@@ -24,6 +24,7 @@ export default function LpAudit() {
                 description="Serve First replaces paper inspections with digital audits, photo evidence and a corrective task the moment a check fails, across every site you run."
                 hasButtons={false}
                 formSmallText="See it on your own sites. No slides, no obligation."
+                utmMedium="LP Audit"
                 checkList={[
                     "Every site scored against one standard",
                     "A failed check becomes a fix, automatically",

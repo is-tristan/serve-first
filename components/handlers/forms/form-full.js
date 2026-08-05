@@ -8,6 +8,7 @@ import { motion, useInView } from "motion/react";
 
 // Next
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Components
 import FormComplete from "@/components/handlers/forms/form-complete";
@@ -21,9 +22,19 @@ import { shieldTick } from "@/utils/icons";
 // Utils
 import { splitFullName } from "@/utils/forms";
 
-export default function FormFull({ theme = "primary", hasDemoLink = true, formBtnText = "Send message", hasAnimation = true, formId = "3db08222-428e-47e7-895d-8a82a8c99686" }) {
+export default function FormFull({
+    formName = "Full Form",
+    theme = "primary",
+    hasDemoLink = true,
+    formBtnText = "Send message",
+    hasAnimation = true,
+    formId = "3db08222-428e-47e7-895d-8a82a8c99686",
+    utmMedium = "Get a demo",
+}) {
+
     const [result, setResult] = useState("");
     const [isComplete, setIsComplete] = useState(false);
+    const pathname = usePathname();
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -34,8 +45,6 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
         form.lastname.value = lastname;
         const formData = new FormData(form);
         formData.set("notes", `Number of Sites: ${form.notes.value}`);
-        formData.append("pageUri", window.location.href);
-        formData.append("pageName", document.title);
 
         const response = await fetch("/api/forms/hubspot", {
             method: "POST",
@@ -78,6 +87,10 @@ export default function FormFull({ theme = "primary", hasDemoLink = true, formBt
                 <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
 
                     <input type="hidden" name="hubspot-form-id" value={formId} />
+
+                    <input type="hidden" name="utm_source" value={`${process.env.NEXT_PUBLIC_SITE_URL}${pathname} | Sales Inquiry`} />
+
+                    <input type="hidden" name="utm_medium" value={utmMedium} />
 
                     <input type="hidden" name="firstname" defaultValue="" />
 

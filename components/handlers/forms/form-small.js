@@ -8,6 +8,7 @@ import { motion, useInView } from "motion/react";
 
 // Next
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Components
 import FormComplete from "@/components/handlers/forms/form-complete";
@@ -28,9 +29,12 @@ export default function FormSmall({
     formTitle = null,
     formSmallText = "No obligation. We will not pass your details on.",
     hasAnimation = true,
-    formId = "6c85505f-8f36-4de2-8618-47a73caf8144" }) {
+    formId = "6c85505f-8f36-4de2-8618-47a73caf8144",
+    utmMedium = "Contact Us",
+}) {
     const [result, setResult] = useState("");
     const [isComplete, setIsComplete] = useState(false);
+    const pathname = usePathname();
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -40,8 +44,6 @@ export default function FormSmall({
         form.firstname.value = firstname;
         form.lastname.value = lastname;
         const formData = new FormData(form);
-        formData.append("pageUri", window.location.href);
-        formData.append("pageName", document.title);
 
         const response = await fetch("/api/forms/hubspot", {
             method: "POST",
@@ -88,6 +90,10 @@ export default function FormSmall({
                     <form className={`${styles.form}`} data-theme={theme} onSubmit={onSubmit}>
 
                         <input type="hidden" name="hubspot-form-id" value={formId} />
+
+                        <input type="hidden" name="utm_source" value={`${process.env.NEXT_PUBLIC_SITE_URL}${pathname} | New LP Forms`} />
+
+                        <input type="hidden" name="utm_medium" value={utmMedium} />
 
                         <input type="hidden" name="firstname" defaultValue="" />
 

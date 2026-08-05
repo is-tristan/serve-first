@@ -24,6 +24,7 @@ export default function LpTerminals() {
                 description="Branded terminals capture honest feedback on site in seconds and alert the right manager the moment a score drops, while you can still put it right."
                 hasButtons={false}
                 formSmallText="See it on your own sites. No slides, no obligation."
+                utmMedium="LP Terminals"
                 checkList={[
                     "In-the-moment feedback at every site",
                     "Low scores alert a manager in real time",
