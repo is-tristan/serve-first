@@ -18,18 +18,18 @@ export default async function Media() {
     const media = await getMedia()
 
     const contentGridData = (media || []).map((item) => ({
-        category: item.category,
         title: item.title,
         description: item.excerpt,
-        readTime: item.readTime,
         image: item.coverImage?.asset
-            ? urlFor(item.coverImage).width(800).height(600).fit("crop").url()
+            ? urlFor(item.coverImage).width(768).height(432).fit("crop").url()
             : imagePlaceholder,
-        button: {
-            text: "Read more",
-            href: `/resources/media/${item.slug}`,
-            target: "_self",
-        },
+        button: item.url
+            ? {
+                text: "Read more",
+                href: item.url,
+                target: "_blank",
+            }
+            : null,
     }))
 
     return (
@@ -48,8 +48,11 @@ export default async function Media() {
                 title="Press<span class='colorPrimary'>,</span> releases and recognition in the media so far"
                 button={null}
                 data={contentGridData}
+                imageAspectRatio="16/9"
+                colCount={3}
+                colCountForce={true}
             />
-            
+
             <CtaBannerOne
                 theme="primary"
                 title="See what the headlines are really about"

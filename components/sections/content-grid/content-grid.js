@@ -16,6 +16,7 @@ export default function ContentGrid({
     colCount = 4,
     containerTopClass,
     containerBottomClass,
+    colCountForce = false,
     button = {
         text: "Get a demo",
         href: "/get-a-demo",
@@ -48,7 +49,7 @@ export default function ContentGrid({
 
             {data.length > 0 && (
 
-                <div className={`container noPaddingTop ${containerBottomClass} ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`}>
+                <div className={`container noPaddingTop ${containerBottomClass} ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`} data-col-count={colCountForce}>
 
                     {data.map((item, index) => (
 

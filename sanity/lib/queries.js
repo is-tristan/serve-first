@@ -208,13 +208,11 @@ export async function getBlogBySlug(slug) {
 }
 
 export const mediaQuery = defineQuery(/* groq */ `
-    *[_type == "media" && defined(slug.current)] | order(publishedAt desc) [0...3] {
+    *[_type == "media"] | order(publishedAt desc) {
         _id,
         title,
         excerpt,
-        readTime,
-        "slug": slug.current,
-        "category": categories[0]->title,
+        url,
         coverImage {
             asset->{
                 _id,

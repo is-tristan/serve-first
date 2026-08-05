@@ -18,6 +18,7 @@ export default function BlogContentGrid({
     containerTopClass,
     containerBottomClass,
     imageAspectRatio = "1.75",
+    colCountForce = true,
     data = [],
 }) {
 
@@ -51,7 +52,7 @@ export default function BlogContentGrid({
 
             {visiblePosts.length > 0 && (
 
-                <div className={`container noPaddingTop ${containerBottomClass} ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`}>
+                <div className={`container noPaddingTop ${containerBottomClass} ${colCount === 4 ? "quadCols" : "flexAuto"} ${styles.contentGridItems}`} data-col-count={colCountForce}>
 
                     {visiblePosts.map((item, index) => (
 
