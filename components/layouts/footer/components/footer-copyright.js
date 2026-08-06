@@ -13,7 +13,7 @@ export default function FooterCopyright() {
 
         <div className={styles.footerCopyright}>
 
-            <div className={styles.footerCopyrightText}>Copyright &copy; 2026 | ServeFirst | All Rights Reserved.</div>
+            <div className={styles.footerCopyrightText}>Copyright &copy; 2026 | Serve First | All Rights Reserved.</div>
 
             <div className={styles.footerPolicyLinks}>
 
