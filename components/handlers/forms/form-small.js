@@ -20,7 +20,7 @@ import styles from "@/styles/components/handlers/form.module.scss";
 import { shieldTick } from "@/utils/icons";
 
 // Utils
-import { splitFullName } from "@/utils/forms";
+import { splitFullName, appendHubspotContext } from "@/utils/forms";
 
 export default function FormSmall({
     theme = "primary",
@@ -44,6 +44,7 @@ export default function FormSmall({
         form.firstname.value = firstname;
         form.lastname.value = lastname;
         const formData = new FormData(form);
+        appendHubspotContext(formData);
 
         const response = await fetch("/api/forms/hubspot", {
             method: "POST",

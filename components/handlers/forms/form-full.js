@@ -20,7 +20,7 @@ import styles from "@/styles/components/handlers/form.module.scss";
 import { shieldTick } from "@/utils/icons";
 
 // Utils
-import { splitFullName } from "@/utils/forms";
+import { splitFullName, appendHubspotContext } from "@/utils/forms";
 
 export default function FormFull({
     formName = "Full Form",
@@ -44,7 +44,7 @@ export default function FormFull({
         form.firstname.value = firstname;
         form.lastname.value = lastname;
         const formData = new FormData(form);
-        formData.set("notes", `Number of Sites: ${form.notes.value}`);
+        appendHubspotContext(formData);
 
         const response = await fetch("/api/forms/hubspot", {
             method: "POST",
@@ -248,13 +248,13 @@ export default function FormFull({
 
                     </fieldset>
 
-                    <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="notes">
+                    <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="no__of_locations">
 
                         <legend className={styles.legend}>Number of sites <span className={styles.required}>*</span></legend>
 
                         <div className={styles.field}>
 
-                            <input type="number" min="1" name="notes" required autoComplete="false" placeholder="How many locations you operate." aria-required="true" />
+                            <input type="number" min="1" name="0-2/no__of_locations" required autoComplete="false" placeholder="How many locations you operate." aria-required="true" />
 
                         </div>
 
