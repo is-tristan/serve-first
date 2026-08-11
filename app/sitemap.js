@@ -122,7 +122,17 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
+        path: "/products/customer-experience/client-connect",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
         path: "/products/market-intelligence/review-monitoring",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/products/market-intelligence/competitive-benchmarking",
         changeFrequency: "monthly",
         priority: 0.8,
     },
@@ -150,6 +160,36 @@ const staticRoutes = [
         path: "/products/operational-excellence/martyns-law",
         changeFrequency: "monthly",
         priority: 0.8,
+    },
+    {
+        path: "/how-it-works/capture",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/how-it-works/analyse",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/how-it-works/action",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
+        path: "/legal/cookie-policy",
+        changeFrequency: "yearly",
+        priority: 0.3,
+    },
+    {
+        path: "/legal/privacy-policy",
+        changeFrequency: "yearly",
+        priority: 0.3,
+    },
+    {
+        path: "/legal/accessability",
+        changeFrequency: "yearly",
+        priority: 0.3,
     },
 ]
 
