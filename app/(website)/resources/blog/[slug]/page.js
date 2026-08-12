@@ -11,6 +11,9 @@ import Testimonials from "@/components/sections/testimonials/testimonials"
 // Sanity
 import { getBlogBySlug } from "@/sanity/lib/queries"
 
+import JsonLd from "@/seo/json-ld"
+import { getBlogPageSchema } from "@/seo/blog-schema"
+
 // Styles
 import styles from "@/styles/components/screens/resources/blog.module.scss"
 
@@ -25,6 +28,8 @@ export default async function BlogPage({ params }) {
     return (
 
         <div className={styles.blogInner}>
+
+            <JsonLd data={getBlogPageSchema(blog)} />
 
             <BlogHeader blog={blog} />
 

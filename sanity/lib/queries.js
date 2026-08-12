@@ -116,6 +116,7 @@ export async function getAllBlogs() {
 export const blogBySlugQuery = defineQuery(/* groq */ `
     *[_type == "blog" && slug.current == $slug][0] {
         _id,
+        _updatedAt,
         title,
         excerpt,
         content[] {
