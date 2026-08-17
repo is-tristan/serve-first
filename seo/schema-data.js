@@ -1,6 +1,14 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+
+function getCanonicalSiteUrl() {
+
+    return configuredSiteUrl.replace(/^http:\/\//, "https://")
+
+}
 
 function absoluteUrl(path) {
+
+    const siteUrl = getCanonicalSiteUrl()
 
     if (!path || path === "/") {
 
@@ -69,6 +77,15 @@ function definePage({ type = "WebPage", name, path, description, crumbs }) {
         primary,
         breadcrumb: breadcrumbSchema(crumbs),
     }
+
+}
+
+function simpleBreadcrumbSchema(name, path) {
+
+    return breadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name, path },
+    ])
 
 }
 
@@ -375,13 +392,13 @@ export const pageSchemaData = {
     }),
     "/solutions/by-role/compliance-managers": definePage({
         type: "WebPage",
-        name: "Compliance Manager",
+        name: "Compliance Managers",
         path: "/solutions/by-role/compliance-managers",
         description: "Evidence compliance across every site with a full, timestamped audit trail.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
-            { name: "Compliance Manager", path: "/solutions/by-role/compliance-managers" },
+            { name: "Compliance Managers", path: "/solutions/by-role/compliance-managers" },
         ],
     }),
     "/solutions/by-challenge/inconsistent-standards": definePage({
@@ -482,6 +499,43 @@ export const pageSchemaData = {
             { name: "Media", path: "/resources/media" },
         ],
     }),
+}
+
+const simpleBreadcrumbPaths = new Set([
+    "/products/operational-excellence/audits",
+    "/products/operational-excellence/task-management",
+    "/products/operational-excellence/helpdesk",
+    "/products/operational-excellence/knowledge-base",
+    "/products/operational-excellence/martyns-law",
+    "/products/customer-experience/survey",
+    "/products/customer-experience/feedback-terminals",
+    "/products/customer-experience/client-connect",
+    "/products/customer-experience/mystery-shopping",
+    "/products/market-intelligence/competitive-benchmarking",
+    "/products/market-intelligence/review-monitoring",
+    "/solutions/by-industry/retail",
+    "/solutions/by-industry/leisure-and-hospitality",
+    "/solutions/by-industry/restaurants",
+    "/solutions/by-industry/healthcare",
+    "/solutions/by-industry/facilities-management",
+    "/solutions/by-industry/venues-and-events",
+    "/solutions/by-role/cx-leaders",
+    "/solutions/by-role/operations-directors",
+    "/solutions/by-role/compliance-managers",
+    "/solutions/by-challenge/inconsistent-standards",
+    "/solutions/by-challenge/siloed-tools-and-data",
+    "/solutions/by-challenge/prove-improvement",
+    "/solutions/by-challenge/data-to-action",
+])
+
+for (const [path, page] of Object.entries(pageSchemaData)) {
+
+    if (simpleBreadcrumbPaths.has(path)) {
+
+        page.breadcrumb = simpleBreadcrumbSchema(page.primary.name, path)
+
+    }
+
 }
 
 export function getPageSchema(path) {

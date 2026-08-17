@@ -2,10 +2,17 @@ import { urlFor } from "@/sanity/lib/image"
 
 import { getBlogPostBreadcrumbSchema } from "@/seo/schema-data"
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+
+function getCanonicalSiteUrl() {
+
+    return configuredSiteUrl.replace(/^http:\/\//, "https://")
+
+}
 
 export function getBlogPostingSchema(blog) {
 
+    const siteUrl = getCanonicalSiteUrl()
     const url = `${siteUrl}/resources/blog/${blog.slug}`
 
     const schema = {

@@ -26,6 +26,7 @@ export default function RoleContextItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const linkLabel = title || eyebrow || button?.text || "Learn more";
 
     return (
 
@@ -69,7 +70,7 @@ export default function RoleContextItem({
                         href={button.href}
                         target={button.target}
                         className="colLink"
-                        aria-label={button.text || title || "Learn more"}
+                        aria-label={linkLabel}
                     ></Link>
 
                 )}

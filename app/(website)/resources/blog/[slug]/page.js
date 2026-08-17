@@ -17,6 +17,27 @@ import { getBlogPageSchema } from "@/seo/blog-schema"
 // Styles
 import styles from "@/styles/components/screens/resources/blog.module.scss"
 
+export async function generateMetadata({ params }) {
+    const { slug } = await params
+    const blog = await getBlogBySlug(slug)
+
+    if (!blog) {
+        return {}
+    }
+
+    const title = blog.seo?.title || blog.title
+    const description = blog.seo?.description || blog.excerpt
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+        },
+    }
+}
+
 export default async function BlogPage({ params }) {
     const { slug } = await params
     const blog = await getBlogBySlug(slug)

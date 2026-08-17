@@ -1,4 +1,10 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
+
+function getCanonicalSiteUrl() {
+
+    return configuredSiteUrl.replace(/^http:\/\//, "https://")
+
+}
 
 const staticRoutes = [
     {
@@ -195,6 +201,7 @@ const staticRoutes = [
 
 export default function sitemap() {
 
+    const siteUrl = getCanonicalSiteUrl()
     const lastModified = new Date()
 
     return staticRoutes.map((route) => ({

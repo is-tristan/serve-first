@@ -23,6 +23,7 @@ export default function HeaderAd({ ad, onClick }) {
     const imageUrl = ad.image?.asset
         ? urlFor(ad.image).url()
         : imagePlaceholder
+    const linkLabel = ad.title || ad.linkText || "View promotion"
 
     if (!imageUrl && !ad.title && !ad.description && !ad.link) {
         return null
@@ -69,7 +70,7 @@ export default function HeaderAd({ ad, onClick }) {
                 <Link
                     href={ad.link}
                     className={`colLink ${styles.headerAdLink}`}
-                    aria-label={ad.linkText || ad.title || "View promotion"}
+                    aria-label={linkLabel}
                     onClick={onClick}
                 ></Link>
 

@@ -25,6 +25,7 @@ export default function ContentGridItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const linkLabel = item.title || item.button?.text || "Read more";
 
     return (
 
@@ -89,7 +90,7 @@ export default function ContentGridItem({
                         href={item.button.href}
                         target={item.button.target}
                         className={`colLink ${styles.contentGridItemLink}`}
-                        aria-label={item.button.text || item.title || "Read more"}
+                        aria-label={linkLabel}
                     />
 
                 )}

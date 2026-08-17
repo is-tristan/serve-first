@@ -28,6 +28,7 @@ export default function IndustryCard({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const linkLabel = title || eyebrow || button?.text || "Learn more";
 
     return (
 
@@ -86,7 +87,7 @@ export default function IndustryCard({
 
                 </div>
 
-                {button && (<Link href={button.href} target={button.target} className={`colLink`} aria-label={button.text} />)}
+                {button && (<Link href={button.href} target={button.target} className={`colLink`} aria-label={linkLabel} />)}
 
             </div>
 
