@@ -1,6 +1,7 @@
 const allowedFormIds = [
     "6c85505f-8f36-4de2-8618-47a73caf8144",
     "3db08222-428e-47e7-895d-8a82a8c99686",
+    "fefdfc04-baf0-4832-881b-ff5a47ce4a99",
 ];
 
 const skippedFields = new Set([

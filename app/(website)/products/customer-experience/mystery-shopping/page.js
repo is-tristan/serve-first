@@ -30,7 +30,6 @@ import {
 
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-
 export const metadata = getPageMetadata("/products/customer-experience/mystery-shopping");
 
 export default async function MysteryShopping() {
