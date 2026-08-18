@@ -1,16 +1,16 @@
 // Components
-import HeaderShell from "@/components/layouts/header/parts/header-shell"
+import HeaderClient from "@/components/layouts/header/parts/header-client"
 import HeaderContainer from "@/components/layouts/header/parts/header-container"
 
 export default function Header() {
 
     return (
 
-        <HeaderShell>
+        <HeaderClient>
 
             <HeaderContainer />
 
-        </HeaderShell>
+        </HeaderClient>
 
     )
 

@@ -38,6 +38,13 @@
             }
         }
     }
+
+    &[data-has-minimal-header="true"] {
+        [data-name="desktopMenu"],
+        [data-name="mobileMenuToggle"] {
+            display: none;
+        }
+    }
 }
 
 // Header Logo

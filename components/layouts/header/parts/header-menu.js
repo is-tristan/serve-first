@@ -62,7 +62,7 @@ export default function HeaderMenu({ menuAds }) {
 
     return (
 
-        <div className={`hidden-s hidden-m hidden-l hidden-xl ${styles.desktopMenu}`} role="navigation">
+        <div className={`hidden-s hidden-m hidden-l hidden-xl ${styles.desktopMenu}`} role="navigation" data-name="desktopMenu">
 
             {data.map((item) => {
 

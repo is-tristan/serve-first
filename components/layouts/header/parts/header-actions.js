@@ -34,7 +34,7 @@ export default function HeaderActions({ menuAds }) {
 
                 </div>
 
-                <div className={`hidden-xxl ${stylesMobileMenu.mobileMenuToggle}`} onClick={toggleMobileMenu}>
+                <div className={`hidden-xxl ${stylesMobileMenu.mobileMenuToggle}`} onClick={toggleMobileMenu} data-name="mobileMenuToggle">
 
                     <span className={stylesMobileMenu.mobileMenuToggleItem} />
 
