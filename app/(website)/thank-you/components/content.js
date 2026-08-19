@@ -45,11 +45,10 @@ export default function ThankYouContent() {
                 </div>
 
                 <Heading
-                    title="Thanks<span class='colorPrimary'>,</span> <br/> we'll be in touch<span class='colorPrimary'>!</span>"
+                    title="Thanks<span class='colorPrimary'>,</span> <br/> we'll be in touch very soon<span class='colorPrimary'>!</span>"
                     titleTag="h1"
                     headingClass="pageTitle"
                     hasFullStop={false}
-                    description="One of the team will reach out within 1 business day."
                     hasAnimation={false}
                 />
 
