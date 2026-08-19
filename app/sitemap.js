@@ -183,6 +183,11 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
+        path: "/coming-soon",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
         path: "/legal/cookie-policy",
         changeFrequency: "yearly",
         priority: 0.3,
