@@ -17,7 +17,7 @@ import styles from "@/styles/components/handlers/form.module.scss";
 import { shieldTick } from "@/utils/icons";
 
 // Utils
-import { appendHubspotContext } from "@/utils/forms";
+import { appendHubspotContext, submitHubspotForm } from "@/utils/forms";
 
 export default function FormFull({
     formName = "Full Form",
@@ -39,17 +39,14 @@ export default function FormFull({
         const formData = new FormData(event.target);
         appendHubspotContext(formData);
 
-        const response = await fetch("/api/forms/hubspot", {
-            method: "POST",
-            body: formData
-        });
+        const submission = await submitHubspotForm(formData);
 
-        const data = await response.json();
-        if (data.success) {
+        if (submission.success) {
             router.push("/thank-you");
-        } else {
-            setResult("There was an error submitting your request. Please try again.");
+            return;
         }
+
+        setResult(submission.message);
     };
 
     const ref = useRef(null);
