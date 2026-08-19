@@ -14,7 +14,7 @@ import styles from "@/styles/components/handlers/form.module.scss";
 import localStyles from "@/styles/components/screens/products/vision/coming-soon.module.scss";
 
 // Utils
-import { appendHubspotContext } from "@/utils/forms";
+import { appendHubspotContext, submitHubspotForm } from "@/utils/forms";
 
 // Icons
 import { arrowRightShort, emailIcon } from "@/utils/icons";
@@ -32,17 +32,14 @@ export default function ComingSoonForm({
         const formData = new FormData(event.target);
         appendHubspotContext(formData);
 
-        const response = await fetch("/api/forms/hubspot", {
-            method: "POST",
-            body: formData
-        });
+        const submission = await submitHubspotForm(formData);
 
-        const data = await response.json();
-        if (data.success) {
+        if (submission.success) {
             router.push("/thank-you");
-        } else {
-            setResult("There was an error submitting your request. Please try again.");
+            return;
         }
+
+        setResult(submission.message);
     };
 
     const ref = useRef(null);
