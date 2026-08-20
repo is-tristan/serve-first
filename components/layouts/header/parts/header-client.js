@@ -15,7 +15,7 @@ import styles from "@/styles/components/layouts/header/header.module.scss";
 const headerConfig = {
     "/": {
         topbar: {
-            href: "/products/vision",
+            href: "/coming-soon",
             text: "Something big is coming: The future of operational excellence. Be the first to know",
             target: "_self",
             type: "home",
