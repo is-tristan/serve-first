@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 // Styles
 import styles from "@/styles/components/screens/products/vision/coming-soon.module.scss";
 
-const countdownEndDate = new Date("2026-09-15T23:59:00");
+const countdownEndDate = new Date("2026-09-15T09:00:00Z");
 
 function getCountdownParts(endDate) {
     const remainingMs = Math.max(0, endDate.getTime() - Date.now());
