@@ -1,11 +1,16 @@
 import Script from "next/script";
 
+// GTM
 import {
     GoogleTagManager,
     GoogleAnalytics
 } from "@next/third-parties/google";
 
+// Hubspot
 import HubspotTracking from "@/seo/hubspot-tracking";
+
+// Posthog
+import { initPosthogTracking } from "@/seo/posthog-tracking";
 
 export default function AnalyticsTracking() {
 
@@ -33,6 +38,8 @@ export default function AnalyticsTracking() {
             </Script>
 
             <HubspotTracking />
+
+            {initPosthogTracking()}
 
         </>
 
