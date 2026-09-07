@@ -2,7 +2,6 @@
     display: flex;
     z-index: 999;
     width: 100%;
-    top: var(--mobileTopbarHeight);
     position: fixed;
     background: var(--light);
     border-bottom: 1px solid var(--border);
@@ -30,6 +29,8 @@
     }
 
     &[data-has-topbar="true"] {
+       top: var(--mobileTopbarHeight);
+       
         @media (width >=1024px) {
             padding-top: var(--desktopTopbarHeight);
         }
