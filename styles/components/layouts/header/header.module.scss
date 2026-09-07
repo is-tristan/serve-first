@@ -2,9 +2,11 @@
     display: flex;
     z-index: 999;
     width: 100%;
+    top: var(--mobileTopbarHeight);
     position: fixed;
     background: var(--light);
     border-bottom: 1px solid var(--border);
+    transition: var(--quickEase);
 
     @media (width >=1024px) {
         position: absolute;
@@ -39,10 +41,17 @@
         }
     }
 
-    &[data-has-minimal-header="true"] {
+    &[data-header-type="minimal"] {
+
         [data-name="desktopMenu"],
         [data-name="mobileMenuToggle"] {
             display: none;
+        }
+    }
+
+    &[data-scrolled="true"] {
+        @media (width < 1024px) {
+            top: 0;
         }
     }
 }

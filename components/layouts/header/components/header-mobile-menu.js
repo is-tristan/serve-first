@@ -17,7 +17,7 @@ import { menuItemsData as data } from "@/components/layouts/header/items/menu-it
 import { logo, closeIcon, chevronDown } from "@/utils/icons";
 
 // Components
-import HeaderAd from "@/components/layouts/header/parts/header-ad";
+import HeaderAd from "@/components/layouts/header/components/header-ad";
 
 const menuAdKeys = {
     "How it works": "howItWorks",

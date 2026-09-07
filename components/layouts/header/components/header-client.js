@@ -1,7 +1,7 @@
 "use client";
 
 // React
-import { cloneElement, isValidElement } from "react";
+import { useState, useEffect, cloneElement, isValidElement } from "react";
 
 // Next
 import { usePathname } from "next/navigation";
@@ -32,13 +32,13 @@ const headerConfig = {
         },
     },
     "/lp-audit": {
-        hasMinimalHeader: true,
+        headerType: "minimal",
     },
     "/lp-client-connect": {
-        hasMinimalHeader: true,
+        headerType: "minimal",
     },
     "/lp-terminals": {
-        hasMinimalHeader: true,
+        headerType: "minimal",
     },
 };
 
@@ -48,10 +48,20 @@ export default function HeaderClient({ children }) {
     const pageHeaderConfig = headerConfig[pathname] || {};
     const topbarProps = pageHeaderConfig.topbar;
     const hasTopbar = Boolean(topbarProps);
-    const hasMinimalHeader = Boolean(pageHeaderConfig.hasMinimalHeader);
+    const headerType = pageHeaderConfig.headerType || "default";
     const headerChildren = isValidElement(children)
-        ? cloneElement(children, { hasMinimalHeader })
+        ? cloneElement(children, { headerType })
         : children;
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
 
@@ -75,7 +85,8 @@ export default function HeaderClient({ children }) {
                 role="banner"
                 data-has-topbar={hasTopbar}
                 data-topbar-type={topbarProps?.type}
-                data-has-minimal-header={hasMinimalHeader}
+                data-header-type={headerType}
+                data-scrolled={isScrolled}
             >
 
                 {headerChildren}

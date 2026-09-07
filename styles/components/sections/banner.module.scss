@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    margin-top: var(--mobileHeaderHeight);
+    padding-top: var(--mobileHeaderHeight);
 
     @media (width >=768px) {
         min-height: calc(66.66vh - var(--mobileHeaderHeight));
@@ -8,7 +8,7 @@
 
     @media (width >=1024px) {
         min-height: calc(70vh - var(--headerHeight));
-        margin-top: 0;
+        padding-top: 0;
     }
 
     @media (width >=1280px) {
@@ -75,6 +75,10 @@
 
                 @media (width < 768px) {
                     background-size: 6rem;
+                }
+
+                @media (width >=1024px) {
+                    top: 0;
                 }
             }
 

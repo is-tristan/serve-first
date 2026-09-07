@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 import Button from "@/components/handlers/buttons"
-import HeaderMobileMenu from "@/components/layouts/header/parts/header-mobile-menu"
+import HeaderMobileMenu from "@/components/layouts/header/components/header-mobile-menu"
 
 // Styles
 import styles from "@/styles/components/layouts/header/header.module.scss"

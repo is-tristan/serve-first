@@ -17,7 +17,7 @@ import styles from "@/styles/components/layouts/header/header-desktop-menu.modul
 import { chevronDown, chevronRightAlt, arrowRightShort, aiIcon } from "@/utils/icons";
 
 // Components
-import HeaderAd from "@/components/layouts/header/parts/header-ad"
+import HeaderAd from "@/components/layouts/header/components/header-ad"
 
 const menuAdKeys = {
     "How it works": "howItWorks",

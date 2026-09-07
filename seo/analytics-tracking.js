@@ -1,16 +1,10 @@
 import Script from "next/script";
 
-// GTM
-import {
-    GoogleTagManager,
-    GoogleAnalytics
-} from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
-// Hubspot
 import HubspotTracking from "@/seo/hubspot-tracking";
 
-// Posthog
-import { initPosthogTracking } from "@/seo/posthog-tracking";
+import PosthogTracking from "@/seo/posthog-tracking";
 
 export default function AnalyticsTracking() {
 
@@ -20,26 +14,25 @@ export default function AnalyticsTracking() {
 
             <GoogleTagManager gtmId="GTM-5SFCP9R8" />
 
-            <GoogleAnalytics gaId="G-RQ0NBZ2L7D" />
-
             <Script
-                id="googleAdsGtag"
-                src="https://www.googletagmanager.com/gtag/js?id=AW-17651147189"
+                id="gtagJs"
+                src="https://www.googletagmanager.com/gtag/js?id=G-RQ0NBZ2L7D"
                 strategy="afterInteractive"
             />
 
-            <Script id="googleAdsGtagInit" strategy="afterInteractive">
+            <Script id="gtagInit" strategy="afterInteractive">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag("js", new Date());
+                    gtag("config", "G-RQ0NBZ2L7D");
                     gtag("config", "AW-17651147189");
                 `}
             </Script>
 
             <HubspotTracking />
 
-            {initPosthogTracking()}
+            <PosthogTracking />
 
         </>
 

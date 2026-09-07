@@ -12,7 +12,7 @@ import styles from "@/styles/components/layouts/footer/footer.module.scss";
 // Data
 import { company, solutions, products, explore } from "../items/footer-items-data";
 
-export default function FooterItems() {
+export default function FooterItems({ theme }) {
 
     const footerItems = [company, solutions, products, explore];
 
@@ -20,7 +20,7 @@ export default function FooterItems() {
 
         <div className={styles.footerCols}>
 
-            <FooterLogo />
+            <FooterLogo theme={theme} />
 
             {
                 footerItems.map((item, index) => (

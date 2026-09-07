@@ -15,6 +15,20 @@
     * {
         text-align: left;
     }
+
+    &[data-theme="dark"] {
+        @media all {
+            background-image: none;
+        }
+
+        a {
+            color: rgba(var(--lightAltRgb), 0.8);
+
+            &:hover {
+                color: var(--lightAlt);
+            }
+        }
+    }
 }
 
 .footerContainer {

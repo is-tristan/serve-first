@@ -1,4 +1,3 @@
-
 .footerContactItems {
     display: flex;
     flex-flow: column nowrap;
@@ -48,5 +47,15 @@
         @media (width >=1024px) {
             font-size: 0.875rem;
         }
+    }
+}
+
+:global(#footer[data-theme="dark"]) {
+    .footerContactItemIcon {
+        color: var(--lightAlt);
+    }
+
+    .footerContactItemText {
+        color: var(--lightAlt);
     }
 }

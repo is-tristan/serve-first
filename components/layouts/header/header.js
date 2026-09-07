@@ -1,6 +1,6 @@
 // Components
-import HeaderClient from "@/components/layouts/header/parts/header-client"
-import HeaderContainer from "@/components/layouts/header/parts/header-container"
+import HeaderClient from "@/components/layouts/header/components/header-client"
+import HeaderContainer from "@/components/layouts/header/components/header-container"
 
 export default function Header() {
 

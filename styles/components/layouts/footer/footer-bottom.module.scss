@@ -15,5 +15,15 @@
         &.footerWordTwo {
             justify-content: center;
         }
+
+        &.footerWordVision {
+            margin-bottom: -4.5rem;
+            max-width: calc(90% - 2rem);
+
+            svg {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }
