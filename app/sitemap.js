@@ -168,6 +168,11 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
+        path: "/products/vision",
+        changeFrequency: "monthly",
+        priority: 0.8,
+    },
+    {
         path: "/how-it-works/capture",
         changeFrequency: "monthly",
         priority: 0.8,

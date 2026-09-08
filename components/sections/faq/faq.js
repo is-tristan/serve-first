@@ -11,7 +11,9 @@ import styles from "@/styles/components/sections/faq.module.scss";
 import { faqData } from "@/data/faq-data";
 
 export default function Faq({
+    theme = "default",
     eyebrow = "- FAQ Component",
+    eyebrowColor,
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     data = faqData || [],
     button = {
@@ -26,15 +28,16 @@ export default function Faq({
         <section
             className={`row ${styles.faq}`}
             data-name="faq"
+            data-theme={theme}
         >
 
             <div className="container sectionSplitTitle noPaddingBottom">
 
                 <div className="content headingCol">
 
-                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
+                    {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} textColor={eyebrowColor} />)}
 
-                    {title && (<Text headingClass={`sectionTitle colorPrimaryAlt`} title={title} />)}
+                    {title && (<Text headingClass={`sectionTitle ${theme === "dark" ? "colorLight" : "colorPrimaryAlt"}`} title={title} />)}
 
                 </div>
 

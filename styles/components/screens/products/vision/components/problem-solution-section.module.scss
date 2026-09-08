@@ -1,0 +1,255 @@
+// Container
+.tabs {
+    display: block;
+    width: 100%;
+
+    .tabsContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1.5rem;
+        position: relative;
+
+        @media (width >=1024px) {
+            gap: 3rem;
+        }
+    }
+}
+
+// Nav
+.tabsNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .tabsNavItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        color: rgba(var(--lightRgb), 0.25);
+        flex-basis: calc(100% / 3);
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding: 0.875rem 1rem;
+        transition: var(--cubic);
+
+        @media (width >=1024px) {
+            font-size: 1.25rem;
+            letter-spacing: 1.61px;
+            padding: 0.875rem 2rem;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(var(--lightRgb), 0.25);
+            transition: var(--cubic);
+        }
+
+        &::after {
+            width: 0;
+            left: unset;
+        }
+
+        &:hover,
+        &.tabsNavItemActive {
+            color: var(--light);
+
+            &::after {
+                background: var(--secondary);
+                left: 0;
+                right: unset;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.tabItems {
+    display: block;
+    width: 100%;
+}
+
+.tabItem {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    width: 100%;
+    color: var(--light);
+
+    @media (width >=1024px) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .tabImageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 4/3;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--borderRadius);
+
+        @media (width >=1024px) {
+            flex: 1 0 calc(60% - 1.5rem);
+        }
+
+        .tabImage {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform-origin: center center;
+        }
+
+        .tabImageZoomed,
+        .tabImageDetectedFrame,
+        .tabImageDetectedText,
+        .tabImageDetectedTextPrompt,
+        .tabImageDetectedFull,
+        .tabImageDetectedFullPrompt {
+            opacity: 0;
+            transform: none;
+            filter: none;
+            animation: none;
+            will-change: transform, opacity;
+        }
+
+        .tabImageMain {
+            filter: blur(0);
+            animation: none;
+            will-change: filter;
+        }
+    }
+
+    .tabContentContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        width: 100%;
+
+        @media (width >=1024px) {
+            flex: 1 0 calc(40% - 1.5rem);
+            padding: 1.5rem;
+            margin: auto;
+        }
+    }
+
+    &[data-index="2"][data-active="true"] {
+
+        .tabImageMain {
+            animation: blur 0.15s ease-in-out forwards;
+            animation-delay: 1.6s;
+        }
+
+        .tabImageDetectedFrame {
+            animation: detectedFrameSearch 1.75s ease-in-out forwards;
+        }
+
+        .tabImageZoomed {
+            animation: scaleUp 0.33s ease-in-out forwards;
+            animation-delay: 2s;
+        }
+
+        .tabImageDetectedText {
+            animation: fadeIn 0.33s ease-in-out forwards;
+            animation-delay: 2.33s;
+        }
+
+        .tabImageDetectedTextPrompt {
+            animation: scaleUp 0.33s ease-in-out forwards;
+            animation-delay: 2.5s;
+        }
+
+    }
+
+    &[data-index="3"] {
+
+        .tabImageMain {
+            filter: blur(1rem);
+        }
+
+        .tabImageZoomed,
+        .tabImageDetectedFull {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        &[data-active="true"] {
+            .tabImageDetectedFullPrompt {
+                animation: scaleUp 0.5s ease-in-out forwards;
+            }
+        }
+    }
+}
+
+@keyframes blur {
+    from {
+        filter: blur(0);
+    }
+
+    to {
+        filter: blur(1rem);
+    }
+}
+
+@keyframes detectedFrameSearch {
+    0% {
+        opacity: 0.5;
+        transform: translate(-12%, -8%) scale(0.78);
+    }
+
+    28% {
+        opacity: 0.85;
+        transform: translate(8%, 6%) scale(0.92);
+    }
+
+    48% {
+        opacity: 1;
+        transform: translate(-3%, 2%) scale(1.04);
+    }
+
+    62%,
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -73,6 +73,10 @@ h2 {
             max-width: 27ch !important;
         }
     }
+
+    &.extraLarge {
+        font-size: clamp(1.5rem, 4vw, 4rem);
+    }
 }
 
 h3 {

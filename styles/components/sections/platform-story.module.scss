@@ -1,3 +1,5 @@
+@use "../../init/_mixins" as *;
+
 .platformStoryItems {
     @media (width < 1024px) {
         flex-flow: column nowrap !important;
@@ -26,7 +28,17 @@
         &:last-child {
             border-right: none;
         }
+    }
 
+    &.visionPlatformStory {
+        h3 {
+            font-family: var(--heading);
+            font-weight: 500;
+
+            @media (width >=1024px) {
+                font-size: 1.33rem;
+            }
+        }
     }
 }
 
@@ -77,5 +89,44 @@
     h3 {
         font-family: var(--text);
         font-weight: 500;
+    }
+}
+
+.platformStoryItemTags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+
+    @media (width >=768px) and (width < 1024px) {
+        justify-content: center;
+    }
+
+    .platformStoryItemTag {
+        & {
+            @include category();
+            color: var(--secondary);
+            background: rgba(var(--secondaryRgb), 0.1);
+        }
+    }
+}
+
+.platformStory {
+    &[data-theme="dark"] {
+
+        h2 {
+            color: var(--light);
+        }
+
+        a {
+            color: var(--secondary);
+        }
+
+        .platformStoryItem {
+            color: var(--light);
+            background: #181819;
+            border-right: none;
+            padding: 1rem;
+            border-radius: var(--borderRadius);
+        }
     }
 }

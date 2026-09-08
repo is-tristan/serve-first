@@ -52,10 +52,10 @@
 
 :global(#footer[data-theme="dark"]) {
     .footerContactItemIcon {
-        color: var(--lightAlt);
+        color: var(--secondary);
     }
 
     .footerContactItemText {
-        color: var(--lightAlt);
+        color: var(--secondary);
     }
 }

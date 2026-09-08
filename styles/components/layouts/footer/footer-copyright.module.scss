@@ -53,10 +53,20 @@
 }
 
 :global(#footer[data-theme="dark"]) {
+    .footerCopyright {
+        border-top-color: rgba(var(--secondaryRgb), 0.1);
+    }
+
+    .footerCopyrightText {
+        color: var(--secondary);
+    }
+
     .footerPolicyLinks {
         a {
+            color: var(--secondary);
+
             &::after {
-                color: rgba(var(--lightAltRgb), 0.2);
+                color: rgba(var(--secondaryRgb), 0.1);
             }
         }
     }

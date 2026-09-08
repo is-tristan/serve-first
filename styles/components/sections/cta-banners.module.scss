@@ -3,10 +3,49 @@
         min-height: 20rem;
     }
 
-    &[data-theme="light"] {
+    &[data-theme="default"] {
+        background-color: var(--primary);
+
         h2::after {
             color: var(--light);
             -webkit-text-fill-color: var(--light);
+        }
+
+        .ctaPrimaryButton {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+    }
+
+    &[data-theme="primary"] {
+        background-color: var(--primaryAlt);
+
+        .ctaPrimaryButton {
+            background-color: var(--light);
+            color: var(--primaryAlt);
+        }
+    }
+
+    &[data-theme="dark"] {
+        background-color: var(--dark);
+    }
+
+    &[data-name="visionCtaBanner"] {
+        background-image: url("/images/vision/cta-banner/vision-cta-banner.png");
+        background-size: cover;
+
+        @media (width >=1024px) {
+            min-height: 35rem;
+
+            h2 {
+                font-size: 4rem;
+            }
+        }
+
+        .ctaPrimaryButton {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: var(--dark);
         }
     }
 }
@@ -38,6 +77,12 @@
 .ctaBannerContact {
     &[data-theme="primary"] {
         color: var(--light);
+        background-color: var(--primary);
+    }
+
+    &[data-theme="default"] {
+        color: var(--light);
+        background-color: var(--primaryAlt);
     }
 
     .formCol {

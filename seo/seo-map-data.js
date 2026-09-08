@@ -98,6 +98,10 @@ export const seoMapData = {
             "operational task workflows",
         ],
     },
+    "/products/vision": {
+        title: "Vision: Intelligent Video Analytics for Multi-Location Operations | Serve First",
+        description: "Vision reads every location against your own standards, continuously. Intelligent video analytics that keeps the insight, not the image.",
+    },
     "/products/operational-excellence/reporting": {
         title: "Multi-Site Reporting and Dashboards | Serve First",
         description: "Bring customer and operational data into one view with Serve First reporting. Configurable dashboards, cross-location insight and board-ready exports.",

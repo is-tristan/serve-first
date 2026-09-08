@@ -9,6 +9,8 @@ import Button from "../handlers/buttons";
 
 export default function Heading({
     hasAnimation = true,
+    titleAnimationDelay = 0.5,
+    descriptionAnimationDelay = 0.66,
     hasFullStop = true,
     className = undefined,
     headingClass = undefined,
@@ -61,7 +63,7 @@ export default function Heading({
                 <motion.div
                     animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
                     initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
-                    transition={hasAnimation ? { duration: 0.5, delay: 0.5 } : undefined}
+                    transition={hasAnimation ? { duration: 0.5, delay: titleAnimationDelay } : undefined}
                     className={`heading ${hasFullStop ? "hasFullStop" : undefined}`}
                 >
 
@@ -93,7 +95,7 @@ export default function Heading({
                 <motion.div
                     animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }}
                     initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }}
-                    transition={hasAnimation ? { duration: 0.5, delay: 0.66 } : undefined}
+                    transition={hasAnimation ? { duration: 0.5, delay: descriptionAnimationDelay } : undefined}
                     className={contentClass}
                 >
 
@@ -121,7 +123,7 @@ export default function Heading({
                     className="buttons"
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
                     initial={{ opacity: 0, y: 16 }}
-                    transition={{ duration: 0.5, delay: description || htmlDescription ? 0.5 : 0.25 }}
+                    transition={{ duration: 0.5, delay: description || htmlDescription ? descriptionAnimationDelay : 0.25 }}
                 >
 
                     {btnTextPrimary && (<Button text={btnTextPrimary} href={btnLinkPrimary} target={btnTargetPrimary} className={btnClassPrimary} />)}

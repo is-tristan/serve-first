@@ -59,7 +59,6 @@ export const platformStoryData = [
     }
 ]
 
-
 export const productHighlightData = [
     {
         icon: messageAlertSquareIcon,

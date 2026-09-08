@@ -21,8 +21,16 @@
             background-image: none;
         }
 
+        .footerCol {
+            border-right-color: rgba(var(--secondaryRgb), 0.1);
+        }
+
+        .footerColTitle {
+            color: var(--secondary);
+        }
+
         a {
-            color: rgba(var(--lightAltRgb), 0.8);
+            color: var(--secondary);
 
             &:hover {
                 color: var(--lightAlt);

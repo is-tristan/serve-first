@@ -1,4 +1,5 @@
 // Components
+import Eyebrow from "@/components/decoration/eyebrow";
 import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
 
@@ -7,7 +8,9 @@ import styles from "@/styles/components/sections/cta-banners.module.scss";
 
 export default function CtaBannerOne({
     name = "ctaBanner1",
-    theme = "light",
+    theme = "default",
+    eyebrow = null,
+    eyebrowColor,
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus.",
     buttonPrimary = {
@@ -23,20 +26,22 @@ export default function CtaBannerOne({
     return (
 
         <section
-            className={`row colorLight ${styles.ctaBanner} ${theme === "primary" ? "bgPrimaryAlt" : "bgPrimary"}`}
-            data-theme="light"
-            data-name={name ? name : "ctaBanner1"}
+            className={`row colorLight ${styles.ctaBanner}`}
+            data-theme={theme}
+            data-name={name}
         >
 
             <div className={`container centered ctaCentered`}>
 
                 <div className="content">
 
-                    <Text headingClass={`sectionTitle ${theme === "dark" ? "lightHeadingGradient" : "colorLight"}`} title={title} description={description} />
+                    {eyebrow && (<Eyebrow text={eyebrow} textColor={eyebrowColor} />)}
+
+                    <Text headingClass={`extraLarge colorLight`} title={title} description={description} />
 
                     <div className="buttons">
 
-                        {buttonPrimary && (<Button text={buttonPrimary.text} href={buttonPrimary.href} target={buttonPrimary.target} className={`${theme === "primary" ? "primary" : "light"}`} />)}
+                        {buttonPrimary && (<Button text={buttonPrimary.text} href={buttonPrimary.href} target={buttonPrimary.target} className={`${styles.ctaPrimaryButton} ${theme === "primary" ? "primary" : "light"}`} />)}
 
                         {buttonSecondary && (<Button text={buttonSecondary.text} href={buttonSecondary.href} target={buttonSecondary.target} className="textLink colorLight" />)}
 
