@@ -1,7 +1,7 @@
 "use client";
 
 // React
-import { useState, useEffect, cloneElement, isValidElement } from "react";
+import { useState, useEffect } from "react";
 
 // Next
 import { usePathname } from "next/navigation";
@@ -9,52 +9,19 @@ import { usePathname } from "next/navigation";
 // Components
 import Topbar from "@/components/layouts/topbar/topbar";
 
+// Config
+import { getHeaderConfig, getHeaderType } from "@/components/layouts/header/components/header-config";
+
 // Styles
 import styles from "@/styles/components/layouts/header/header.module.scss";
-
-const headerConfig = {
-    "/": {
-        topbar: {
-            href: "/coming-soon",
-            text: "Something big is coming: The future of operational excellence. Be the first to know",
-            target: "_self",
-            type: "home",
-            fullLink: true,
-        },
-    },
-    "/products/customer-experience/mystery-shopping": {
-        topbar: {
-            href: "https://mysteryshopping.servefirst.ai/",
-            text: "Become a Mystery Shopper",
-            target: "_blank",
-            type: "default",
-            fullLink: false,
-        },
-    },
-    "/lp-audit": {
-        headerType: "minimal",
-    },
-    "/lp-client-connect": {
-        headerType: "minimal",
-    },
-    "/lp-terminals": {
-        headerType: "minimal",
-    },
-    "/products/vision": {
-        headerType: "productVisionHeader",
-    },
-};
 
 export default function HeaderClient({ children }) {
 
     const pathname = usePathname();
-    const pageHeaderConfig = headerConfig[pathname] || {};
+    const pageHeaderConfig = getHeaderConfig(pathname);
     const topbarProps = pageHeaderConfig.topbar;
     const hasTopbar = Boolean(topbarProps);
-    const headerType = pageHeaderConfig.headerType || "default";
-    const headerChildren = isValidElement(children)
-        ? cloneElement(children, { headerType })
-        : children;
+    const headerType = getHeaderType(pathname);
 
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -92,7 +59,7 @@ export default function HeaderClient({ children }) {
                 data-scrolled={isScrolled}
             >
 
-                {headerChildren}
+                {children}
 
             </header>
 

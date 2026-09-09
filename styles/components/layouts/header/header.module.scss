@@ -29,10 +29,9 @@
     }
 
     &[data-has-topbar="true"] {
-       top: var(--mobileTopbarHeight);
-       
-        @media (width >=1024px) {
-            padding-top: var(--desktopTopbarHeight);
+
+        @media (width < 1024px) {
+            top: var(--mobileTopbarHeight);
         }
 
         &[data-topbar-type="home"] {
@@ -55,6 +54,62 @@
             top: 0;
         }
     }
+
+    &[data-header-type="productVisionHeader"] {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-0.75rem);
+        transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+
+        &[data-banner-frame="2"],
+        &[data-banner-frame="3"] {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        @media all {
+            position: fixed;
+        }
+
+        @media (width < 1024px) {
+            background: var(--dark);
+            border-bottom: none;
+        }
+
+        [data-name="desktopMenu"],
+        [data-name="mobileMenuToggle"] {
+            display: none;
+        }
+
+        .headerContainer {
+            max-width: 100%;
+            padding-right: 5dvw;
+            padding-left: 5dvw;
+        }
+
+        .productVisionLogo {
+            width: auto;
+            height: 3rem;
+        }
+
+        .productVisionHeaderButtons {
+            .textLinkBtn {
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+
+                @media (width >=576px) {
+                    letter-spacing: 0.1em;
+                }
+
+                @media (width >=1024px) {
+                    letter-spacing: 0.2em;
+                }
+            }
+        }
+    }
 }
 
 // Header Logo
@@ -65,7 +120,7 @@
     height: 100%;
     position: relative;
     color: var(--primary);
-    transition: var(--quickEase);
+    transition: var(--ease);
 
     @media (width >=1024px) {
         min-width: 6.5rem;
@@ -95,11 +150,13 @@
     gap: 1rem;
 
     @media (width >=1024px) {
-        padding: 0 1rem;
-        height: 3.5rem;
-        background: var(--light);
-        border: 1px solid rgba(var(--lightRgb), 0.1);
-        border-radius: calc(var(--borderRadius) * 5);
+        &:not(.productVisionHeaderActions) {
+            padding: 0 1rem;
+            height: 3.5rem;
+            background: var(--light);
+            border: 1px solid rgba(var(--lightRgb), 0.1);
+            border-radius: calc(var(--borderRadius) * 5);
+        }
     }
 
     .headerButtons {

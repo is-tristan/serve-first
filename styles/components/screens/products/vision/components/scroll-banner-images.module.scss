@@ -1,0 +1,11 @@
+.imageMobile {
+    @media (width >=1024px) {
+        display: none !important;
+    }
+}
+
+.imageDesktop {
+    @media (width <1024px) {
+        display: none !important;
+    }
+}

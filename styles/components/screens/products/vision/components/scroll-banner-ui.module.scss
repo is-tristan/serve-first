@@ -1,0 +1,273 @@
+.scrollBannerVideoOverlay {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    transition: top 0.4s ease;
+    font-family: var(--font-jetbrains-mono);
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--light);
+
+    @media (width >=768px) {
+        font-size: 0.75rem;
+    }
+
+    @media (width >=1024px) {
+        font-size: 0.875rem;
+    }
+
+    @media (width >=1280px) {
+        font-size: 1rem;
+    }
+
+    .overlayContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .border {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        opacity: 0.35;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .overlayContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        &.overlayTopLeft {
+            top: 2.5dvw;
+            left: 2.5dvw;
+
+            @media (width >=768px) {
+                top: 5dvw;
+                left: 5dvw;
+            }
+
+            .border {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &.overlayTopRight {
+            flex-direction: row-reverse;
+            top: 2.5dvw;
+            right: 2.5dvw;
+
+            @media (width >=768px) {
+                top: 5dvw;
+                right: 5dvw;
+            }
+
+            .border {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        &.overlayBottomLeft {
+            bottom: 2.5dvw;
+            left: 2.5dvw;
+
+            @media (width >=768px) {
+                bottom: 5dvw;
+                left: 5dvw;
+            }
+
+            .border {
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        &.overlayBottomRight {
+            flex-direction: row-reverse;
+            bottom: 2.5dvw;
+            right: 2.5dvw;
+
+            @media (width >=768px) {
+                bottom: 5dvw;
+                right: 5dvw;
+            }
+
+            .border {
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .overlayText {
+        display: flex;
+        padding: 2.5dvw;
+    }
+
+    .elipsis {
+        display: inline-block;
+        width: 1.5rem;
+        text-align: left;
+        overflow: hidden;
+
+        &::after {
+            content: "...";
+            display: inline-block;
+            overflow: hidden;
+            width: 0;
+            animation: ellipsis 1.2s steps(4, end) infinite;
+        }
+
+        @keyframes ellipsis {
+            to {
+                width: 1.5em;
+            }
+        }
+    }
+
+    .recordingContent {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+        color: #FF5C5C;
+
+        .recordingIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0.5rem;
+            height: 0.5rem;
+            background: rgba(255, 92, 92, 0.4);
+            box-shadow: 0 0 0.75rem 0#FF5C5C;
+            border-radius: 50%;
+            animation: recordingIcon 1s infinite;
+
+            @keyframes recordingIcon {
+                0% {
+                    box-shadow: 0 0 0.75rem 0 #FF5C5C;
+                }
+
+                50% {
+                    box-shadow: 0 0 1.25rem 0 #FF5C5C;
+                }
+
+                100% {
+                    box-shadow: 0 0 0.75rem 0 #FF5C5C;
+                }
+            }
+        }
+
+    }
+
+    .notRecordingContent {
+        color: var(--light);
+        opacity: 0.55;
+    }
+
+    .trackingStatus {
+        opacity: 0.55;
+        animation: trackingStatusStandby 2.75s ease-in-out infinite;
+    }
+
+    &[data-live="true"] {
+        top: var(--mobileHeaderHeight);
+        height: auto;
+
+        @media (aspect-ratio < 16/9) and (aspect-ratio >= 9/16) {
+            top: calc(var(--headerHeight) * 0.5);
+        }
+
+        @media (aspect-ratio >= 16/9) {
+            top: 0;
+        }
+
+        .trackingStatus {
+            opacity: 1;
+            animation: trackingStatus 1.5s ease-in-out infinite;
+        }
+    }
+
+    @keyframes trackingStatusStandby {
+
+        0%,
+        100% {
+            opacity: 0.4;
+        }
+
+        50% {
+            opacity: 0.75;
+        }
+    }
+
+    @keyframes trackingStatus {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+    }
+}
+
+.scrollBannerPagination {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.875rem;
+    position: absolute;
+    z-index: 555;
+    top: 0;
+    right: 2.5dvw;
+    bottom: 0;
+    margin: auto;
+    width: max-content;
+    height: max-content;
+
+    @media (width >=768px) {
+        right: 5dvw;
+        gap: 1.25rem;
+    }
+
+    .paginationItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0.75rem;
+        height: 0.75rem;
+        background: rgba(255, 255, 255, 0.25);
+        border: none;
+        padding: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: var(--quickEase);
+
+        @media (width >=768px) {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+
+        &:hover,
+        &.paginationItemActive {
+            background: var(--light);
+            scale: 1.05;
+            box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);
+        }
+    }
+}

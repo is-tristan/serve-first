@@ -1,19 +1,23 @@
-// Next
-import Image from "next/image";
+import ScrollBannerImage from "./scroll-banner-image";
 
-// Styles
 import styles from "@/styles/components/screens/products/vision/components/scroll-banner-section.module.scss";
 
-// Images
 const scrollBannerBackgroundImage = "/images/vision/scroll-banner/vision-banner-image.png";
+const scrollBannerBackgroundImageMobile = "/images/vision/scroll-banner/vision-banner-image-mobile.png";
 
 export default function ScrollBannerBackground() {
 
     return (
 
-        <div className={styles.scrollBannerBackground}>
+        <div className={styles.scrollBannerBackground} aria-hidden="true">
 
-            <Image className={styles.scrollBannerBackgroundImage} src={scrollBannerBackgroundImage} alt="Scroll Banner Background" fill priority />
+            <ScrollBannerImage
+                className={styles.scrollBannerBackgroundImage}
+                desktopSrc={scrollBannerBackgroundImage}
+                mobileSrc={scrollBannerBackgroundImageMobile}
+                alt=""
+                priority
+            />
 
             <div className={styles.scrollBannerOverlay} />
 

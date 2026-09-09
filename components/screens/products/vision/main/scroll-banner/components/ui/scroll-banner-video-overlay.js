@@ -8,13 +8,13 @@ import { motion, useInView } from "motion/react";
 import ScrollBannerTimestamp from "./scroll-banner-timestamp";
 
 // Styles
-import styles from "@/styles/components/screens/products/vision/components/scroll-banner-section.module.scss";
+import styles from "@/styles/components/screens/products/vision/components/scroll-banner-ui.module.scss";
 
 // Borders
-const borderTopLeft = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M32 2.16216V0H0V32H2.16216V2.16216H32Z" fill="white"/> </svg>';
-const borderTopRight = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M29.8378 32L32 32L32 0L-7.7486e-07 -1.39876e-06L-8.69371e-07 2.16216L29.8378 2.16216L29.8378 32Z" fill="white"/> </svg>';
-const borderBottomRight = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M-5.85838e-07 29.8378L-7.7486e-07 32L32 32L32 -7.7486e-07L29.8378 -9.63883e-07L29.8378 29.8378L-5.85838e-07 29.8378Z" fill="white"/> </svg>';
-const borderBottomLeft = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.16216 -8.69372e-07L-1.39876e-06 -7.7486e-07L0 32L32 32L32 29.8378L2.16216 29.8378L2.16216 -8.69372e-07Z" fill="white"/> </svg>';
+const borderTopLeft = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"> <path d="M32 2.16216V0H0V32H2.16216V2.16216H32Z" fill="white"/> </svg>';
+const borderTopRight = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"> <path d="M29.8378 32L32 32L32 0L-7.7486e-07 -1.39876e-06L-8.69371e-07 2.16216L29.8378 2.16216L29.8378 32Z" fill="white"/> </svg>';
+const borderBottomRight = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"> <path d="M-5.85838e-07 29.8378L-7.7486e-07 32L32 32L32 -7.7486e-07L29.8378 -9.63883e-07L29.8378 29.8378L-5.85838e-07 29.8378Z" fill="white"/> </svg>';
+const borderBottomLeft = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"> <path d="M2.16216 -8.69372e-07L-1.39876e-06 -7.7486e-07L0 32L32 32L32 29.8378L2.16216 29.8378L2.16216 -8.69372e-07Z" fill="white"/> </svg>';
 
 const scaleIn = {
     hidden: { opacity: 0, scale: 0.85 },
@@ -27,14 +27,21 @@ const cornerTransition = (delay) => ({
     ease: [0.22, 1, 0.36, 1],
 });
 
-export default function ScrollBannerVideoOverlay() {
+export default function ScrollBannerVideoOverlay({ frameActive = 1 }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.25 });
+    const isInitiated = frameActive === 1;
+    const isLive = frameActive >= 2;
 
     return (
 
-        <div className={styles.scrollBannerVideoOverlay} ref={ref}>
+        <div
+            className={styles.scrollBannerVideoOverlay}
+            ref={ref}
+            data-live={isLive ? true : undefined}
+            aria-hidden="true"
+        >
 
             <div className={styles.overlayContainer}>
 
@@ -50,9 +57,9 @@ export default function ScrollBannerVideoOverlay() {
 
                     <div className={styles.overlayText}>
 
-                        <span>Vision - Analysing</span>
+                        <span>{isInitiated ? "Vision - Initiated" : "Vision - Analysing"}</span>
 
-                        <span className={styles.elipsis}></span>
+                        {isLive && <span className={styles.elipsis} aria-hidden="true"></span>}
 
                     </div>
 
@@ -68,7 +75,7 @@ export default function ScrollBannerVideoOverlay() {
 
                     <div className={styles.border} dangerouslySetInnerHTML={{ __html: borderTopRight }} />
 
-                    <ScrollBannerTimestamp />
+                    <ScrollBannerTimestamp isLive={isLive} />
 
                 </motion.div>
 
@@ -82,13 +89,25 @@ export default function ScrollBannerVideoOverlay() {
 
                     <div className={styles.border} dangerouslySetInnerHTML={{ __html: borderBottomLeft }} />
 
-                    <div className={`${styles.overlayText} ${styles.recordingContent}`}>
+                    {isLive ? (
 
-                        <span className={styles.recordingIcon} />
+                        <div className={`${styles.overlayText} ${styles.recordingContent}`}>
 
-                        <span>Rec</span>
+                            <span className={styles.recordingIcon} aria-hidden="true" />
 
-                    </div>
+                            <span>Rec</span>
+
+                        </div>
+
+                    ) : (
+
+                        <div className={`${styles.overlayText} ${styles.notRecordingContent}`}>
+
+                            <span>Not Recording</span>
+
+                        </div>
+
+                    )}
 
                 </motion.div>
 
@@ -104,7 +123,9 @@ export default function ScrollBannerVideoOverlay() {
 
                     <div className={styles.overlayText}>
 
-                        <span className={styles.trackingStatus}>Tracking · Standby</span>
+                        <span className={styles.trackingStatus}>
+                            {isLive ? "Tracking · Active" : "Tracking · Standby"}
+                        </span>
 
                     </div>
 

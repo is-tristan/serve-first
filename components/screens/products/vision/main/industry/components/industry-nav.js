@@ -4,35 +4,52 @@ import styles from "@/styles/components/screens/products/vision/components/indus
 export default function IndustryNav({
     navItems = [],
     tabActive,
-    setTabActive
+    setTabActive,
+    baseId,
+    onKeyDown,
 }) {
 
     return (
 
-        <nav className={styles.industryNav}>
+        <div
+            className={styles.industryNav}
+            role="tablist"
+            aria-label="Industries"
+            onKeyDown={onKeyDown}
+        >
 
-            {navItems.map((item) => (
+            {navItems.map((item) => {
 
-                <div key={item.id} className={styles.industryNavItem}>
+                const isActive = tabActive === item.id;
 
-                    <button
-                        type="button"
-                        className={`${styles.industryNavButton}${tabActive === item.id ? ` ${styles.industryNavButtonActive}` : ""}`}
-                        onClick={() => setTabActive(item.id)}
-                        aria-pressed={tabActive === item.id}
-                    >
+                return (
 
-                        <span className={styles.industryNavButtonIcon}></span>
+                    <div key={item.id} className={styles.industryNavItem} role="presentation">
 
-                        <span>{item.label}</span>
+                        <button
+                            type="button"
+                            id={`${baseId}-${item.id}-tab`}
+                            className={`${styles.industryNavButton}${isActive ? ` ${styles.industryNavButtonActive}` : ""}`}
+                            onClick={() => setTabActive(item.id)}
+                            role="tab"
+                            aria-selected={isActive}
+                            aria-controls={`${baseId}-${item.id}-panel`}
+                            tabIndex={isActive ? 0 : -1}
+                        >
 
-                    </button>
+                            <span className={styles.industryNavButtonIcon} aria-hidden="true"></span>
 
-                </div>
+                            <span>{item.label}</span>
 
-            ))}
+                        </button>
 
-        </nav>
+                    </div>
+
+                );
+
+            })}
+
+        </div>
 
     )
 

@@ -25,6 +25,7 @@
     border-radius: var(--borderRadius);
     scroll-snap-type: x mandatory;
     position: relative;
+    scrollbar-width: none;
 
     @media (width >=768px) {
         padding: 0.66rem;
@@ -131,16 +132,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        aspect-ratio: 16/9;
         position: relative;
         overflow: hidden;
         border-radius: var(--borderRadius);
         border: 1px solid rgba(var(--lightRgb), 0.1);
         width: 100%;
         flex-basis: 100%;
+        aspect-ratio: 3 / 1.5;
 
         @media (width >=1024px) {
             flex-basis: calc(55% - 1.5rem);
+            aspect-ratio: 16/9;
         }
 
         img {
@@ -174,6 +176,8 @@
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
+        padding: 0;
+        margin: 0;
 
         @media (width >=768px) {
             gap: 1.5rem;
@@ -228,27 +232,27 @@
         .industryTabListItem {
 
             .industryTabListItemLine {
-                animation: widthIn 0.5s ease-in-out forwards;
+                animation: widthIn 0.25s ease-in-out forwards;
             }
 
             &:nth-child(1) .industryTabListItemLine {
-                animation-delay: 0.35s;
+                animation-delay: 0.125s;
             }
 
             &:nth-child(2) .industryTabListItemLine {
-                animation-delay: 0.45s;
+                animation-delay: 0.25s;
             }
 
             &:nth-child(3) .industryTabListItemLine {
-                animation-delay: 0.55s;
+                animation-delay: 0.375s;
             }
 
             &:nth-child(4) .industryTabListItemLine {
-                animation-delay: 0.65s;
+                animation-delay: 0.5s;
             }
 
             &:nth-child(5) .industryTabListItemLine {
-                animation-delay: 0.75s;
+                animation-delay: 0.625s;
             }
 
         }

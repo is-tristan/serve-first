@@ -6,7 +6,7 @@ import HeaderLogo from "@/components/layouts/header/components/header-logo"
 import HeaderMenu from "@/components/layouts/header/components/header-menu"
 import HeaderActions from "@/components/layouts/header/components/header-actions"
 
-export default async function HeaderContainer({ headerType = "default" }) {
+export default async function HeaderContainer() {
 
     const menuAds = await getMenuAds()
 
@@ -16,7 +16,7 @@ export default async function HeaderContainer({ headerType = "default" }) {
 
             <HeaderLogo />
 
-            {headerType !== "minimal" && <HeaderMenu menuAds={menuAds} />}
+            <HeaderMenu menuAds={menuAds} />
 
             <HeaderActions menuAds={menuAds} />
 

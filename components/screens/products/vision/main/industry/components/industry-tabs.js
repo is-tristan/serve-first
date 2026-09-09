@@ -1,7 +1,7 @@
 "use client";
 
 // Imports
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { useInView } from "motion/react";
 
 // Components
@@ -17,8 +17,44 @@ import { industryTabsData } from "@/app/(website)/products/vision/data";
 export default function IndustryTabs() {
 
     const ref = useRef(null);
+    const baseId = useId();
     const isInView = useInView(ref, { once: true, amount: 0.5 });
     const [tabActive, setTabActive] = useState(industryTabsData[0].id);
+
+    const handleKeyDown = (event) => {
+
+        const currentIndex = industryTabsData.findIndex((item) => item.id === tabActive);
+
+        if (currentIndex < 0) {
+            return;
+        }
+
+        let nextIndex = currentIndex;
+
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+            event.preventDefault();
+            nextIndex = (currentIndex + 1) % industryTabsData.length;
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+            event.preventDefault();
+            nextIndex = (currentIndex - 1 + industryTabsData.length) % industryTabsData.length;
+        } else if (event.key === "Home") {
+            event.preventDefault();
+            nextIndex = 0;
+        } else if (event.key === "End") {
+            event.preventDefault();
+            nextIndex = industryTabsData.length - 1;
+        } else {
+            return;
+        }
+
+        const nextTabId = industryTabsData[nextIndex].id;
+        setTabActive(nextTabId);
+
+        requestAnimationFrame(() => {
+            document.getElementById(`${baseId}-${nextTabId}-tab`)?.focus();
+        });
+
+    };
 
     return (
 
@@ -28,6 +64,8 @@ export default function IndustryTabs() {
                 navItems={industryTabsData}
                 tabActive={tabActive}
                 setTabActive={setTabActive}
+                baseId={baseId}
+                onKeyDown={handleKeyDown}
             />
 
             <div className={styles.industryTabItem}>
@@ -36,6 +74,8 @@ export default function IndustryTabs() {
 
                     <IndustryTab
                         key={item.id}
+                        id={`${baseId}-${item.id}-panel`}
+                        labelledBy={`${baseId}-${item.id}-tab`}
                         isActive={tabActive === item.id}
                         isInView={isInView}
                         image={item.image}

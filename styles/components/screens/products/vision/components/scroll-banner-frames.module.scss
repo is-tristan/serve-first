@@ -1,0 +1,267 @@
+.scrollBannerFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+
+    .scrollBannerFrameContainer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+}
+
+.frame1 {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+
+    &[data-active="true"] {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scrollBannerFrameContent {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        color: var(--light);
+
+        @media (width >=768px) {
+            gap: 3rem;
+            max-width: 55rem;
+            margin: 0 auto;
+        }
+    }
+
+    .frameContentHeader {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: frameContentHeaderBefore 1.25s ease-in-out forwards;
+            animation-delay: 1s;
+
+            @keyframes frameContentHeaderBefore {
+                to {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media (width >=768px) {
+            gap: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        @media (width >=1512px) {
+            gap: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .frameEyebrow {
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+
+        @media (width >=768px) {
+            font-size: 1.5rem;
+            letter-spacing: 0.3em;
+        }
+
+        @media (width >=1512px) {
+            font-size: 2rem;
+            letter-spacing: 0.5em;
+        }
+    }
+
+    .frameTitleContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        @media (width >=768px) {
+            gap: 1.5rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+
+            @media (width >=768px) {
+                font-size: 6rem;
+            }
+
+            @media (width >=1024px) {
+                font-size: 8rem;
+            }
+
+            @media (width >=1280px) {
+                font-size: 10rem;
+            }
+        }
+    }
+
+    .frameContentDescription {
+        font-size: 1rem;
+
+        @media (width >=768px) {
+            font-size: 1.5rem;
+        }
+
+        @media (width >=1512px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.scrollIndicator {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    color: var(--light);
+    font-family: var(--font-jetbrains-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    .scrollIndicatorIcon {
+        width: 0.25rem;
+        height: 3rem;
+        background: linear-gradient(to bottom, var(--light), transparent);
+        border-radius: 0.25rem;
+    }
+}
+
+.scrollBannerFrame2,
+.scrollBannerFrame3 {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    visibility: hidden;
+
+    .frameImage {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        will-change: transform, opacity;
+    }
+
+    .frameImageBox,
+    .frameImageText,
+    .frameImagePrompt {
+        transform: none;
+    }
+
+    &[data-active="true"] {
+        visibility: visible;
+    }
+}
+
+.scrollBannerFrame2[data-active="true"] {
+    .frameImageBox {
+        animation: detectedFrameSearch 1.75s ease-in-out forwards;
+    }
+
+    .frameImageText {
+        animation: fadeIn 0.33s ease-in-out forwards;
+        animation-delay: 1.8s;
+    }
+
+    .frameImagePrompt {
+        animation: scaleUp 0.33s ease-in-out forwards;
+        animation-delay: 2.1s;
+    }
+}
+
+.scrollBannerFrame3[data-active="true"] {
+    .frameImageBox {
+        animation: fadeIn 0.55s ease-in-out forwards;
+    }
+
+    .frameImageText {
+        animation: fadeIn 0.45s ease-in-out forwards;
+        animation-delay: 0.35s;
+    }
+
+    .frameImagePrompt {
+        animation: scaleUp 0.5s ease-in-out forwards;
+        animation-delay: 0.75s;
+    }
+}
+
+@keyframes detectedFrameSearch {
+    0% {
+        opacity: 0.5;
+        transform: translate(-12%, -8%) scale(0.78);
+    }
+
+    28% {
+        opacity: 0.85;
+        transform: translate(8%, 6%) scale(0.92);
+    }
+
+    48% {
+        opacity: 1;
+        transform: translate(-3%, 2%) scale(1.04);
+    }
+
+    62%,
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

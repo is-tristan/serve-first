@@ -12,6 +12,8 @@ import Text from "@/components/content/text";
 import styles from "@/styles/components/screens/products/vision/components/industry-section.module.scss";
 
 export default function IndustryTab({
+    id,
+    labelledBy,
     isActive = false,
     isInView = false,
     image,
@@ -21,27 +23,33 @@ export default function IndustryTab({
     listItems = [],
 }) {
 
+    const shouldAnimate = isActive && isInView;
+
     return (
 
         <div
+            id={id}
             className={styles.industryTab}
+            role="tabpanel"
+            aria-labelledby={labelledBy}
             data-active={isActive ? true : undefined}
             aria-hidden={!isActive}
             inert={!isActive ? true : undefined}
+            tabIndex={isActive ? 0 : -1}
         >
 
             <motion.div
                 className={styles.industryTabImage}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
+                animate={shouldAnimate ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
                 initial={{ opacity: 0, x: -16 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
 
                 <Image
                     src={image}
                     alt={imageAlt}
                     fill
-                    sizes="768px"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className={styles.industryTabImage}
                 />
 
@@ -49,30 +57,30 @@ export default function IndustryTab({
 
             <motion.div
                 className={styles.industryTabContent}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 16 }}
+                animate={shouldAnimate ? { opacity: 1, x: 0 } : { opacity: 0, x: 16 }}
                 initial={{ opacity: 0, x: 16 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
+                transition={{ duration: 0.45, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
 
                 <Eyebrow text={eyebrow} hasAnimation={false} hasDash={false} textColor={`colorSecondary`} />
 
                 <Text titleTag="h3" hasAnimation={false} headingClass={`colorLight ${styles.industryTabTitle}`} title={title} />
 
-                <div className={styles.industryTabList}>
+                <ul className={styles.industryTabList}>
 
                     {listItems.map((item, index) => (
 
-                        <div key={index} className={styles.industryTabListItem}>
+                        <li key={index} className={styles.industryTabListItem}>
 
-                            <span className={styles.industryTabListItemLine}></span>
+                            <span className={styles.industryTabListItemLine} aria-hidden="true"></span>
 
                             {typeof item === "string" ? item : item.label}
 
-                        </div>
+                        </li>
 
                     ))}
 
-                </div>
+                </ul>
 
             </motion.div>
 

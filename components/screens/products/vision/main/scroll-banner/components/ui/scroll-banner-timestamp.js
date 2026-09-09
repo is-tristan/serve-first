@@ -1,11 +1,10 @@
 "use client";
 
 // Imports
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "motion/react";
+import { useEffect, useState } from "react";
 
 // Styles
-import styles from "@/styles/components/screens/products/vision/components/scroll-banner-section.module.scss";
+import styles from "@/styles/components/screens/products/vision/components/scroll-banner-ui.module.scss";
 
 function formatTimestampPart(value) {
     return String(value).padStart(2, "0");
@@ -19,14 +18,13 @@ function getTimestampParts(totalSeconds) {
     };
 }
 
-export default function ScrollBannerTimestamp() {
+export default function ScrollBannerTimestamp({ isLive = false }) {
 
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.25 });
     const [elapsedSeconds, setElapsedSeconds] = useState(0);
 
     useEffect(() => {
-        if (!isInView) {
+
+        if (!isLive) {
             return;
         }
 
@@ -35,28 +33,37 @@ export default function ScrollBannerTimestamp() {
         }, 1000);
 
         return () => clearInterval(intervalId);
-    }, [isInView]);
+
+    }, [isLive]);
 
     const timestamp = getTimestampParts(elapsedSeconds);
+    const hours = formatTimestampPart(timestamp.hours);
+    const minutes = formatTimestampPart(timestamp.minutes);
+    const seconds = formatTimestampPart(timestamp.seconds);
 
     return (
 
-        <div className={styles.overlayText} ref={ref}>
+        <div
+            className={styles.overlayText}
+            role="timer"
+            aria-label={`Recording time ${hours} hours ${minutes} minutes ${seconds} seconds`}
+            aria-hidden="true"
+        >
 
             <span className={`${styles.timestamp} ${styles.hours}`}>
-                {formatTimestampPart(timestamp.hours)}
+                {hours}
             </span>
 
-            <span className={styles.timestampDivider}>:</span>
+            <span className={styles.timestampDivider} aria-hidden="true">:</span>
 
             <span className={`${styles.timestamp} ${styles.minutes}`}>
-                {formatTimestampPart(timestamp.minutes)}
+                {minutes}
             </span>
 
-            <span className={styles.timestampDivider}>:</span>
+            <span className={styles.timestampDivider} aria-hidden="true">:</span>
 
             <span className={`${styles.timestamp} ${styles.seconds}`}>
-                {formatTimestampPart(timestamp.seconds)}
+                {seconds}
             </span>
 
         </div>
