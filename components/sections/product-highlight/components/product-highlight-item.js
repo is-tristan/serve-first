@@ -4,12 +4,12 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
-// Next
-import Link from "next/link";
-
 // Components
 import Eyebrow from "@/components/decoration/eyebrow";
 import Button from "@/components/handlers/buttons";
+
+// Utils
+import { exploreLabel } from "@/utils/explore-label";
 
 // Styles
 import styles from "@/styles/components/sections/product-highlight.module.scss";
@@ -25,7 +25,7 @@ export default function ProductHighlightItem({
 }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
-    const linkLabel = title || eyebrow || linkText || "Learn more";
+    const resolvedLinkText = exploreLabel(eyebrow, linkText);
 
     return (
 
@@ -57,18 +57,7 @@ export default function ProductHighlightItem({
 
                 </div>
 
-                {link && (<Button text={linkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary" />)}
-
-                {link && (
-
-                    <Link
-                        href={link}
-                        target={target}
-                        className="colLink"
-                        aria-label={linkLabel}
-                    ></Link>
-
-                )}
+                {link && (<Button text={resolvedLinkText} href={link} hasAnimation={false} target={target} className="textLink colorPrimary" />)}
 
             </div>
 

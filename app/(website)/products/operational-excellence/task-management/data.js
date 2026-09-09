@@ -45,40 +45,24 @@ export const roleContextData = [
         eyebrow: "By site and team",
         title: "Assign by site and team",
         description: "Assign each task by site and team, so every location knows what it owns and nothing sits with nobody.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: clockCheckIcon,
         eyebrow: "Priorities",
         title: "Set priorities and deadlines",
         description: "Set a priority and deadline on every task, so the key fixes stay clear and time-bound, not lost.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: listIcon,
         eyebrow: "Live tracking",
         title: "Live task progress tracking",
         description: "See progress across every site in one view, so you know what is open and where follow-through lags.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: alertHexagonIcon,
         eyebrow: "Overdue alerts",
         title: "Automatic overdue alerts",
         description: "Overdue alerts surface tasks that stall, so a long-running issue gets chased automatically.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

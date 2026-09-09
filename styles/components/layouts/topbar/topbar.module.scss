@@ -1,4 +1,7 @@
 .topbar {
+    text-decoration: none;
+    color: inherit;
+
     @media (width >=1024px) {
         background: transparent;
         position: absolute;

@@ -2,7 +2,6 @@
 
 // Next
 import Image from "next/image";
-import Link from "next/link";
 
 // Imports
 import { useRef } from "react";
@@ -11,6 +10,9 @@ import { motion, useInView } from "motion/react";
 // Components
 import Eyebrow from "@/components/decoration/eyebrow";
 import Button from "@/components/handlers/buttons";
+
+// Utils
+import { exploreLabel } from "@/utils/explore-label";
 
 // Styles
 import styles from "@/styles/components/sections/industry-cards.module.scss";
@@ -28,7 +30,9 @@ export default function IndustryCard({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
-    const linkLabel = title || eyebrow || button?.text || "Learn more";
+    const resolvedButtonText = button
+        ? exploreLabel(eyebrow || title, button.text)
+        : null;
 
     return (
 
@@ -81,13 +85,11 @@ export default function IndustryCard({
 
                     <div className={styles.industryCardFooter}>
 
-                        {button && (<Button className="textLink colorPrimary" text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+                        {button && (<Button className="textLink colorPrimary" text={resolvedButtonText} href={button.href} target={button.target} hasAnimation={false} />)}
 
                     </div>
 
                 </div>
-
-                {button && (<Link href={button.href} target={button.target} className={`colLink`} aria-label={linkLabel} />)}
 
             </div>
 

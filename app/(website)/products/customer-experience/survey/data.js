@@ -65,40 +65,24 @@ export const roleContextData = [
         eyebrow: "Templates",
         title: "Custom templates and branding",
         description: "Shape every question to your brand and start from a template, so each survey looks like yours.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: dataFlowIcon,
         eyebrow: "Smart Logic",
         title: "Logic branching keeps it short",
         description: "Customers answer only what applies to them, which keeps surveys short and lifts completion.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: announcementIcon,
         eyebrow: "Every Channel",
         title: "Web, kiosk, email and SMS",
         description: "Build a survey once and send it across web, kiosk, email and SMS, reaching customers where they are.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: graphIcon,
         eyebrow: "Live Sentiment",
         title: "Live results and sentiment",
         description: "Responses stream in live and score sentiment as they land, so themes surface the same day.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 
@@ -193,7 +177,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Hear from occupants at every site you manage.",
+        description: "Hear from guests at every site and shift.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -223,7 +207,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Facilities management",
-        description: "Facilities management.",
+        description: "Survey occupants across every contract you hold.",
         image: "/images/products/shared/facilities-management-industry-icon.svg",
         button: {
             text: "Explore",

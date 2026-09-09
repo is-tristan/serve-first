@@ -101,7 +101,7 @@
         color: var(--primary);
 
         &:hover {
-            color: rgba(var(--primaryRgb), 0.875);
+            color: var(--secondary);
         }
     }
 

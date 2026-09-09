@@ -18,6 +18,11 @@ const nextConfig = {
         destination: "/legal/privacy-policy",
         permanent: true,
       },
+      {
+        source: "/legal/accessability",
+        destination: "/legal/accessibility",
+        permanent: true,
+      },
     ];
   },
   images: {

@@ -322,6 +322,13 @@
     color: var(--light);
     overflow: hidden;
     position: relative;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--light);
+    }
 
     @media (width >=1280px) {
         flex-basis: 50%;
@@ -345,7 +352,8 @@
         padding: 1.5rem;
         background: var(--primaryAlt);
 
-        h3 {
+        h3,
+        .headerAdTitle {
             font-size: 1.33rem;
 
             &::after {

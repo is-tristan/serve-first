@@ -80,7 +80,7 @@ export const howItWorksData = [
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how records analyse",
+            text: "See how evidence is reviewed",
             href: "/how-it-works/analyse",
         }
     },

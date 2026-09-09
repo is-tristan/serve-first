@@ -55,7 +55,7 @@ export default async function ClientConnect() {
 
             <RoleContext
                 eyebrow="Client Connect capability"
-                title="Hear from the clients you serve"
+                title="B2B client feedback and NPS programmes"
                 description="Run structured feedback programmes for your B2B accounts, send branded invitations, and read every response beside the delivery behind it."
                 data={roleContextData}
                 btnPrimary={{
@@ -105,8 +105,8 @@ export default async function ClientConnect() {
 
             <ModuleStats
                 eyebrow="The difference"
-                title="What changes when standards hold"
-                description="The outcomes teams see once every site is scored and gaps are put right."
+                title="What changes when clients feel heard"
+                description="The outcomes teams see once client feedback sits next to what you delivered."
                 data={moduleStatsData}
                 btnPrimary={null}
             />

@@ -45,40 +45,24 @@ export const roleContextData = [
         eyebrow: "One home",
         title: "Centralised content and search",
         description: "Keep SOPs, policies and training in one searchable home, so teams find the answer in seconds.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: clockRefreshIcon,
         eyebrow: "Always current",
         title: "Version control built in",
         description: "Version control keeps one answer live and retires the old, so teams never work from stale guidance.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: userEditBrokenIcon,
         eyebrow: "Right access",
         title: "Role-based access controls",
         description: "Give each team the guidance that applies to their role, so a manager and a lead see the right thing.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: usersCheckIcon,
         eyebrow: "Training built in",
         title: "Built-in training modules",
         description: "Training sits beside the procedures it supports, so teams learn and check the standard in one place.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

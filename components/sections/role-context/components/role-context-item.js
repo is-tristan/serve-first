@@ -1,8 +1,5 @@
 "use client";
 
-// Next
-import Link from "next/link";
-
 // Imports  
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
@@ -26,7 +23,6 @@ export default function RoleContextItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
-    const linkLabel = title || eyebrow || button?.text || "Learn more";
 
     return (
 
@@ -63,17 +59,6 @@ export default function RoleContextItem({
                     </div>
 
                 </div>
-
-                {button && (
-
-                    <Link
-                        href={button.href}
-                        target={button.target}
-                        className="colLink"
-                        aria-label={linkLabel}
-                    ></Link>
-
-                )}
 
             </div>
 

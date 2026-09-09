@@ -44,40 +44,24 @@ export const roleContextData = [
         eyebrow: "Digital checks",
         title: "Digital checklists per site",
         description: "Score every site against your standards on mobile, so each location gets checked the same way.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: cameraCheckIcon,
         eyebrow: "Photo proof",
         title: "Photo evidence and scoring",
         description: "Capture photo evidence as you score each item, so a result rests on proof and is easy to review.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: listIcon,
         eyebrow: "Auto actions",
         title: "Automatic corrective actions",
         description: "A failed check raises a task and routes it to an owner, so the gap gets fixed, not forgotten.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: fileSearchIcon,
         eyebrow: "Pass and fail",
         title: "Clear pass and fail reporting",
         description: "See every site scored and compared in one view, so you know which locations need attention now.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

@@ -44,40 +44,24 @@ export const roleContextData = [
         eyebrow: "Real visits",
         title: "Scenario-based covert visits",
         description: "Trained assessors visit as ordinary customers on set scenarios, so you measure the real experience.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: clipBoardCheckIcon,
         eyebrow: "Scorecards",
         title: "Detailed scorecards per site",
         description: "Each visit returns a scorecard against your standards, so you see where service meets the bar or slips.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: filmIcon,
         eyebrow: "Evidence",
         title: "Photo and video evidence",
         description: "Assessors capture photo and video as they go, so findings rest on proof, not a vague impression.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: graphIcon,
         eyebrow: "Benchmarked",
         title: "Competitor benchmarking",
         description: "Score your sites and nearby rivals the same way, so you see where you lead and where you trail.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

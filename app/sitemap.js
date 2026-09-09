@@ -1,10 +1,5 @@
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.co.uk"
-
-function getCanonicalSiteUrl() {
-
-    return configuredSiteUrl.replace(/^http:\/\//, "https://")
-
-}
+import { client } from "@/sanity/lib/client"
+import { getCanonicalSiteUrl } from "@/seo/seo-map-data"
 
 const staticRoutes = [
     {
@@ -168,11 +163,6 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
-        path: "/products/vision",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
         path: "/how-it-works/capture",
         changeFrequency: "monthly",
         priority: 0.8,
@@ -203,22 +193,39 @@ const staticRoutes = [
         priority: 0.3,
     },
     {
-        path: "/legal/accessability",
+        path: "/legal/accessibility",
         changeFrequency: "yearly",
         priority: 0.3,
     },
 ]
 
-export default function sitemap() {
+async function getBlogSitemapEntries(siteUrl) {
+    const posts = await client.fetch(`
+        *[_type == "blog" && defined(slug.current)] {
+            "slug": slug.current,
+            publishedAt,
+            _updatedAt
+        }
+    `)
 
+    return (posts || []).map((post) => ({
+        url: `${siteUrl}/resources/blog/${post.slug}`,
+        lastModified: new Date(post.publishedAt || post._updatedAt || Date.now()),
+        changeFrequency: "monthly",
+        priority: 0.5,
+    }))
+}
+
+export default async function sitemap() {
     const siteUrl = getCanonicalSiteUrl()
-    const lastModified = new Date()
 
-    return staticRoutes.map((route) => ({
+    const staticEntries = staticRoutes.map((route) => ({
         url: `${siteUrl}${route.path === "/" ? "" : route.path}`,
-        lastModified,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
     }))
 
+    const blogEntries = await getBlogSitemapEntries(siteUrl)
+
+    return [...staticEntries, ...blogEntries]
 }

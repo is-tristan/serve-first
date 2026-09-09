@@ -45,40 +45,24 @@ export const roleContextData = [
         eyebrow: "Branded invites",
         title: "Branded review invitations",
         description: "Send branded invitations to your B2B contacts, so the request feels part of the account relationship.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: graphIcon,
         eyebrow: "Tracked sends",
         title: "Tracked send and delivery",
         description: "Track every invitation from delivery to response, so you always know who has replied and who to chase.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: calendarCheckIcon,
         eyebrow: "Set cadence",
         title: "Review cycles per account",
         description: "Set a cadence per account, monthly, quarterly or annual, so feedback fits each client relationship.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: shieldTick,
         eyebrow: "Safe sending",
         title: "Unsubscribe and repeat guards",
         description: "Guard contacts from over-emailing with unsubscribe and repeat limits, so programmes stay welcome.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 
@@ -91,7 +75,7 @@ export const howItWorksData = [
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how we close it",
+            text: "Explore how invitations are sent",
             href: "/how-it-works/capture",
         }
     },
@@ -103,7 +87,7 @@ export const howItWorksData = [
         imageWidth: 768,
         imageHeight: 768,
         button: {
-            text: "See how we close it",
+            text: "See the account view",
             href: "/how-it-works/analyse",
         }
     },
@@ -115,7 +99,7 @@ export const howItWorksData = [
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how we close it",
+            text: "See how renewal risk is flagged",
             href: "/how-it-works/action",
         }
     },

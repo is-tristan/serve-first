@@ -25,7 +25,7 @@ const headerConfig = {
     "/products/customer-experience/mystery-shopping": {
         topbar: {
             href: "https://mysteryshopping.servefirst.ai/",
-            text: "Become a Mystery Shopper",
+            text: "Become a mystery shopper",
             target: "_blank",
             type: "default",
             fullLink: false,

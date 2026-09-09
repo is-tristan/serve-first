@@ -10,7 +10,7 @@ export const seoMapData = {
     },
     "/products/customer-experience/mystery-shopping": {
         title: "Tailored Mystery Shopping Services & Insights - Serve First",
-        description: "Our AI-powered mystery shopping turn insights into advantage. Tailored programmes that assess the retail moments that matter. Free pilots available.",
+        description: "Mystery shopping services for multi-site brands. Trained assessors score every location against your standards, with photo evidence and free pilots available.",
         keywords: [
             "mystery shopping software",
             "covert service assessment",
@@ -81,8 +81,8 @@ export const seoMapData = {
         ],
     },
     "/products/operational-excellence/martyns-law": {
-        title: "United Outcomes and Serve First - Serve First",
-        description: "Serve First & United Outcomes partner to create a fast, 60-second Martyn's Law risk assessment app for venues. Join the waitlist now",
+        title: "Martyn's Law compliance software - Serve First",
+        description: "Meet your Martyn's Law obligations with compliance checklists, training records and timestamped evidence capture across every venue. Book a demo.",
         keywords: [
             "Martyn's Law compliance",
             "venue safety obligations",
@@ -101,6 +101,10 @@ export const seoMapData = {
     "/products/vision": {
         title: "Vision: Intelligent Video Analytics for Multi-Location Operations | Serve First",
         description: "Vision reads every location against your own standards, continuously. Intelligent video analytics that keeps the insight, not the image.",
+        robots: {
+            index: false,
+            follow: false,
+        },
     },
     "/products/operational-excellence/reporting": {
         title: "Multi-Site Reporting and Dashboards | Serve First",
@@ -324,34 +328,68 @@ export const seoMapData = {
     "/legal/privacy-policy": {
         title: "Privacy Policy - Serve First",
     },
+    "/legal/accessibility": {
+        title: "Accessibility Statement - Serve First",
+        description: "This accessibility statement explains how Serve First ensures our website is accessible to everyone.",
+    },
 };
+
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.servefirst.ai"
+
+export function getCanonicalSiteUrl() {
+    return configuredSiteUrl
+        .replace(/^http:\/\//, "https://")
+        .replace("://servefirst.ai", "://www.servefirst.ai")
+        .replace(/\/$/, "")
+}
 
 export function getPageMetadata(path) {
 
     const page = seoMapData[path];
+    const siteUrl = getCanonicalSiteUrl();
+    const canonicalPath = path === "/" ? "" : path;
+    const canonicalUrl = `${siteUrl}${canonicalPath}`;
 
     if (!page) {
 
         return {
             title: "Serve First",
             description: "Serve First connects customer, operational and market signals across every site, then turns them into the actions that put things right.",
+            metadataBase: new URL(siteUrl),
+            alternates: {
+                canonical: canonicalUrl,
+            },
         };
 
     }
 
+    const title = page.title;
+    const description = page.description;
+
     const metadata = {
-        title: page.title,
-        keywords: page.keywords,
+        title,
+        metadataBase: new URL(siteUrl),
+        alternates: {
+            canonical: canonicalUrl,
+        },
         openGraph: {
-            title: page.title,
+            title,
+        },
+        twitter: {
+            title,
         },
     };
 
-    if (page.description) {
+    if (description) {
 
-        metadata.description = page.description;
-        metadata.openGraph.description = page.description;
+        metadata.description = description;
+        metadata.openGraph.description = description;
+        metadata.twitter.description = description;
 
+    }
+
+    if (page.robots) {
+        metadata.robots = page.robots;
     }
 
     return metadata;

@@ -110,7 +110,7 @@ export const footerPolicyItems = [
   },
 //   {
 //     label: "Accessibility",
-//     href: "/legal/accessability",
+//     href: "/legal/accessibility",
 //   },
   {
     label: "Sitemap",

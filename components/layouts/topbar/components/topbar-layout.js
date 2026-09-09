@@ -1,8 +1,8 @@
-// Components
-import Button from "@/components/handlers/buttons";
-
 // Next
 import Link from "next/link";
+
+// Icons
+import { arrowRightShort } from "@/utils/icons";
 
 // Styles
 import styles from "@/styles/components/layouts/topbar/topbar.module.scss";
@@ -11,10 +11,38 @@ export default function Topbar({
     href,
     text,
     target,
-    icon,
+    icon = arrowRightShort,
     type,
     fullLink = false,
 }) {
+
+    const label = (
+
+        <span className={`btn textLink colorPrimaryAlt`}>
+
+            <span>{text}</span>
+
+            {icon && (<div className="icon" dangerouslySetInnerHTML={{ __html: icon }} />)}
+
+        </span>
+
+    );
+
+    if (fullLink) {
+        return (
+
+            <Link href={href} target={target} className={`row ${styles.topbar}`} data-type={type}>
+
+                <div className={`container ${styles.topbarContainer}`}>
+
+                    {label}
+
+                </div>
+
+            </Link>
+
+        );
+    }
 
     return (
 
@@ -22,25 +50,18 @@ export default function Topbar({
 
             <div className={`container ${styles.topbarContainer}`}>
 
-                <Button
-                    href={href}
-                    text={text}
-                    target={target}
-                    className="textLink colorPrimaryAlt"
-                    hasAnimation={false}
-                    icon={icon}
-                />
+                <Link href={href} target={target} className={`btn textLink colorPrimaryAlt`}>
+
+                    <span>{text}</span>
+
+                    {icon && (<div className="icon" dangerouslySetInnerHTML={{ __html: icon }} />)}
+
+                </Link>
 
             </div>
 
-            {fullLink && (
-
-                <Link href={href} target={target} className={`colLink`} />
-
-            )}
-
         </div>
 
-    )
+    );
 
 }

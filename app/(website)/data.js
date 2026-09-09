@@ -18,7 +18,7 @@ export const platformStoryData = [
         list: [],
         button: [
             {
-                text: "Explore Capture",
+                text: "Explore capture",
                 href: "/how-it-works/capture",
             }
         ]
@@ -34,7 +34,7 @@ export const platformStoryData = [
         list: [],
         button: [
             {
-                text: "Explore Analyse",
+                text: "Explore analyse",
                 href: "/how-it-works/analyse",
                 target: "_self",
             }
@@ -51,7 +51,7 @@ export const platformStoryData = [
         list: [],
         button: [
             {
-                text: "Explore Action",
+                text: "Explore action",
                 href: "/how-it-works/action",
                 target: "_self",
             }
@@ -142,7 +142,7 @@ export const industryCardsData = [
         title: "Consistent standards across every store.",
         image: "/images/home/home-retail.png",
         button: {
-            text: "Explore Retail",
+            text: "Explore retail",
             href: "/solutions/by-industry/retail",
             target: "_self",
         }
@@ -152,7 +152,7 @@ export const industryCardsData = [
         title: "Guest experience, every site and shift.",
         image: "/images/home/home-leisure-and-hospitality.png",
         button: {
-            text: "Explore Leisure & hospitality",
+            text: "Explore leisure and hospitality",
             href: "/solutions/by-industry/leisure-and-hospitality",
             target: "_self",
         }
@@ -162,7 +162,7 @@ export const industryCardsData = [
         title: "Service and standards across every cover.",
         image: "/images/home/home-restaurants.png",
         button: {
-            text: "Explore Restaurants",
+            text: "Explore restaurants",
             href: "/solutions/by-industry/restaurants",
             target: "_self",
         }
@@ -172,7 +172,7 @@ export const industryCardsData = [
         title: "Patient experience and compliance in one view.",
         image: "/images/home/home-healthcare.png",
         button: {
-            text: "Explore Healthcare",
+            text: "Explore healthcare",
             href: "/solutions/by-industry/healthcare",
             target: "_self",
         }
@@ -182,7 +182,7 @@ export const industryCardsData = [
         title: "Service quality across every contract.",
         image: "/images/home/home-facilities-management.png",
         button: {
-            text: "Explore Facilities management",
+            text: "Explore facilities management",
             href: "/solutions/by-industry/facilities-management",
             target: "_self",
         }
@@ -192,7 +192,7 @@ export const industryCardsData = [
         title: "Safety, standards and feedback, live.",
         image: "/images/home/home-venue-and-events.png",
         button: {
-            text: "Explore Venues & events",
+            text: "Explore venues and events",
             href: "/solutions/by-industry/venues-and-events",
             target: "_self",
         }
