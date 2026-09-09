@@ -45,40 +45,24 @@ export const roleContextData = [
         eyebrow: "One feed",
         title: "Aggregated reviews per site",
         description: "See every review from across the web in one feed, grouped by site, so nothing gets missed.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: messageChatCircleIcon,
         eyebrow: "Reply in-app",
         title: "Response management built in",
         description: "Reply to reviews inside Serve First, so your team works in one place instead of every platform.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: graphIcon,
         eyebrow: "Live alerts",
         title: "Sentiment tracking and alerts",
         description: "Serve First scores every review as it lands and flags negatives at once, so you respond in time.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: compareIcon,
         eyebrow: "Against rivals",
         title: "Competitor review comparison",
         description: "Compare your review sentiment with nearby rivals, so you know where your reputation leads or trails.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

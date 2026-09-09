@@ -9,10 +9,15 @@
         text-align: center;
     }
 
-    h2 {
+    h2,
+    blockquote {
         font-size: clamp(1.5rem, 2.5vw, 2.5rem);
         line-height: 125%;
         text-wrap: pretty;
+        margin: 0;
+        font-style: normal;
+        font-weight: inherit;
+        quotes: none;
     }
 }
 
@@ -71,10 +76,13 @@
         }
     }
 
-    h3 {
+    h3,
+    cite {
         font-family: var(--text);
         font-weight: 700;
+        font-style: normal;
         margin-bottom: 0.1rem;
+        display: block;
     }
 
     p {

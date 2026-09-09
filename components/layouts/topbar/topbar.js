@@ -6,7 +6,7 @@ import { arrowRightShort } from "@/utils/icons";
 
 export default function Topbar({
     href = "https://mysteryshopping.servefirst.ai/",
-    text = "Become a Mystery Shopper",
+    text = "Become a mystery shopper",
     target = "_blank",
     type = "default",
     icon = arrowRightShort,

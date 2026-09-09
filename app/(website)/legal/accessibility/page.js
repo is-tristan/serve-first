@@ -7,6 +7,10 @@ import { accessibilitySections } from "./data";
 // Styles
 import styles from "@/styles/components/screens/legal/legal-pages.module.scss";
 
+import { getPageMetadata } from "@/seo/seo-map-data";
+
+export const metadata = getPageMetadata("/legal/accessibility");
+
 export default function Accessibility() {
 
     return (

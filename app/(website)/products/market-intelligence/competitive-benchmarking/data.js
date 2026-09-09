@@ -64,40 +64,24 @@ export const roleContextData = [
         eyebrow: "Local rivals",
         title: "Finds your real rivals",
         description: "Serve First finds the rivals genuinely near each site and after the same customers, not a national average.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: messageChatCircleIcon,
         eyebrow: "Review sentiment",
         title: "Reads words, not stars",
         description: "Serve First reads every public review and scores how people feel, so a four-star dip cannot slip by.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: lineGapIcon,
         eyebrow: "The gap",
         title: "Shows what drives the gap",
         description: "Serve First groups reviews into topics like service and wait times, so you see what wins or loses custom.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: chartBreakoutIcon,
         eyebrow: "Always current",
         title: "Updates every month",
         description: "Serve First refreshes the comparison every month, so you hold a current read on each market, never stale.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

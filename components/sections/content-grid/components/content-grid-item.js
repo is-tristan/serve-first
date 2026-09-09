@@ -2,7 +2,6 @@
 
 // Next
 import Image from "next/image";
-import Link from "next/link";
 
 // Imports
 import { useRef } from "react";
@@ -10,6 +9,9 @@ import { motion, useInView } from "motion/react";
 
 // Components
 import Button from "@/components/handlers/buttons";
+
+// Utils
+import { exploreLabel } from "@/utils/explore-label";
 
 // Styles
 import styles from "@/styles/components/sections/content-grid.module.scss";
@@ -25,7 +27,9 @@ export default function ContentGridItem({
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
-    const linkLabel = item.title || item.button?.text || "Read more";
+    const resolvedButtonText = item.button
+        ? exploreLabel(item.title, item.button.text)
+        : null;
 
     return (
 
@@ -66,7 +70,7 @@ export default function ContentGridItem({
 
                     {item.button && (
 
-                        <Button hasAnimation={false} text={item.button.text} href={item.button.href} target={item.button.target} className={`textLink ${styles.contentGridItemButton}`} />
+                        <Button hasAnimation={false} text={resolvedButtonText} href={item.button.href} target={item.button.target} className={`textLink ${styles.contentGridItemButton}`} />
 
                     )}
 
@@ -83,17 +87,6 @@ export default function ContentGridItem({
                     )}
 
                 </div>
-
-                {item.button && (
-
-                    <Link
-                        href={item.button.href}
-                        target={item.button.target}
-                        className={`colLink ${styles.contentGridItemLink}`}
-                        aria-label={linkLabel}
-                    />
-
-                )}
 
             </div>
 

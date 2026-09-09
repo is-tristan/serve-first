@@ -28,7 +28,7 @@ export default function TestimonialItem({
 }) {
     return (
 
-        <div className={styles.testimonialItem}>
+        <figure className={styles.testimonialItem}>
 
             <div className={styles.testimonialItemRating}>
 
@@ -40,9 +40,13 @@ export default function TestimonialItem({
 
             </div>
 
-            {quote && (<h2 className={theme === "primary" ? "colorLight" : "colorPrimaryAlt"}>“{quote}”</h2>)}
+            {quote && (
+                <blockquote className={theme === "primary" ? "colorLight" : "colorPrimaryAlt"}>
+                    “{quote}”
+                </blockquote>
+            )}
 
-            <div className={styles.testimonialMeta}>
+            <figcaption className={styles.testimonialMeta}>
 
                 {companyLogo ? (
 
@@ -66,15 +70,15 @@ export default function TestimonialItem({
 
                 <div className={`${styles.testimonialMetaItems} ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>
 
-                    <h3>{name}</h3>
+                    <cite>{name}</cite>
 
                     <p>{position}</p>
 
                 </div>
 
-            </div>
+            </figcaption>
 
-        </div>
+        </figure>
 
     )
 

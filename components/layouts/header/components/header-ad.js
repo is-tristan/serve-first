@@ -2,17 +2,25 @@
 import Image from "next/image"
 import Link from "next/link"
 
-// Components
-import Button from "@/components/handlers/buttons"
-
 // Sanity
 import { urlFor } from "@/sanity/lib/image"
+
+// Icons
+import { arrowRightShort } from "@/utils/icons"
 
 // Styles
 import styles from "@/styles/components/layouts/header/header-desktop-menu.module.scss"
 
 // Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
+
+function normalizeAdLinkText(text) {
+    if (text === "Book a Demo") {
+        return "Book a demo"
+    }
+
+    return text
+}
 
 export default function HeaderAd({ ad, onClick }) {
 
@@ -23,7 +31,8 @@ export default function HeaderAd({ ad, onClick }) {
     const imageUrl = ad.image?.asset
         ? urlFor(ad.image).url()
         : imagePlaceholder
-    const linkLabel = ad.title || ad.linkText || "View promotion"
+    const linkText = normalizeAdLinkText(ad.linkText)
+    const linkLabel = ad.title || linkText || "View promotion"
 
     if (!imageUrl && !ad.title && !ad.description && !ad.link) {
         return null
@@ -51,33 +60,49 @@ export default function HeaderAd({ ad, onClick }) {
                 </div>
             )}
 
-            {(ad.title || ad.description || ad.linkText) && (
+            {(ad.title || ad.description || linkText) && (
 
                 <div className={`${styles.headerAdContent}`}>
 
-                    {ad.title && (<h3>{ad.title}</h3>)}
+                    {ad.title && (<div className={styles.headerAdTitle}>{ad.title}</div>)}
 
                     {ad.description && (<p>{ad.description}</p>)}
 
-                    {ad.linkText && (<Button hasAnimation={false} href={ad.link} text={ad.linkText} className={`btn textLink colorLight`}></Button>)}
+                    {linkText && (
+
+                        <span className={`btn textLink colorLight`}>
+
+                            <span>{linkText}</span>
+
+                            <div className="icon" dangerouslySetInnerHTML={{ __html: arrowRightShort }} />
+
+                        </span>
+
+                    )}
 
                 </div>
 
             )}
 
-            {ad.link && (
-
-                <Link
-                    href={ad.link}
-                    className={`colLink ${styles.headerAdLink}`}
-                    aria-label={linkLabel}
-                    onClick={onClick}
-                ></Link>
-
-            )}
-
         </>
     )
+
+    if (ad.link) {
+        return (
+
+            <Link
+                href={ad.link}
+                className={styles.headerAd}
+                aria-label={linkLabel}
+                onClick={onClick}
+            >
+
+                {content}
+
+            </Link>
+
+        )
+    }
 
     return (
 

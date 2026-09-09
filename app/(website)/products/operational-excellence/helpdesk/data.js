@@ -45,40 +45,24 @@ export const roleContextData = [
         eyebrow: "One inbox",
         title: "One unified ticket inbox",
         description: "Feedback, ratings, failed audits and messages all land as tickets in one inbox, so nothing slips.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: messageChatCircleIcon,
         eyebrow: "Reply in-app",
         title: "Reply by email or SMS",
         description: "Reply by email or SMS inside Serve First, so every message sends and logs against the ticket.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: aiIcon,
         eyebrow: "AI drafts",
         title: "AI-drafted responses",
         description: "AI drafts a reply for each ticket, so your team responds faster while a person controls what is sent.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: clockRewindIcon,
         eyebrow: "Full history",
         title: "Full audit trail per ticket",
         description: "Every ticket carries its full history from first contact to resolved, so you see who did what and when.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 

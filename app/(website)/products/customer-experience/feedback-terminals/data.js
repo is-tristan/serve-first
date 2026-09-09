@@ -16,40 +16,24 @@ export const roleContextData = [
         eyebrow: "On-site kiosks",
         title: "Touchscreen kiosks on site",
         description: "Branded touchscreens sit at the point of experience, so customers rate a visit in seconds while it is fresh.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: bellRingingIcon,
         eyebrow: "Instant alerts",
         title: "Real-time alerts on low scores",
         description: "A low score raises an alert and a task at once, so a manager steps in before the customer leaves.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: noWifiIcon,
         eyebrow: "Offline Ready",
         title: "Offline capture with auto-sync",
         description: "Terminals keep capturing when the connection drops and sync when it returns, so no site is a blind spot.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     },
     {
         icon: layoutIcon,
         eyebrow: "Your Brand",
         title: "Your branding, your questions",
         description: "Carry your branding and your own questions, so the experience feels like yours and asks what matters.",
-        button: {
-            text: "See it in action",
-            href: "/get-a-demo",
-        }
     }
 ]
 
@@ -62,7 +46,7 @@ export const howItWorksData = [
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "Explore survey capture",
+            text: "Explore terminal capture",
             href: "/how-it-works/capture",
         }
     },
