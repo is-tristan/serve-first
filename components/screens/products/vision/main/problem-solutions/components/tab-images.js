@@ -22,7 +22,7 @@ export default function TabImages() {
                 src={tabImageMain}
                 alt="Video analytics software auto-raising a shelf restock task after detecting an empty retail shelf"
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageMain}`}
             />
 
@@ -30,7 +30,7 @@ export default function TabImages() {
                 src={tabImageZoomed}
                 alt={'Video analytics camera view of a retail aisle and checkout, faces blurred for privacy'}
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageZoomed}`}
             />
 
@@ -38,7 +38,7 @@ export default function TabImages() {
                 src={tabImageDetectedFrame}
                 alt="AI video analytics monitoring retail shelf stock and till queue"
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageDetectedFrame}`}
             />
 
@@ -46,7 +46,7 @@ export default function TabImages() {
                 src={tabImageDetectedText}
                 alt={'Video analytics frame with issue detected label'}
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageDetectedText}`}
             />
 
@@ -54,7 +54,7 @@ export default function TabImages() {
                 src={tabImageDetectedTextPrompt}
                 alt={'Video analytics frame with prompted text to raise a restock task'}
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageDetectedTextPrompt}`}
             />
 
@@ -62,7 +62,7 @@ export default function TabImages() {
                 src={tabImageDetectedFull}
                 alt={'Video analytics issue detected frame zoomed in on an issue'}
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageDetectedFull}`}
             />
 
@@ -70,7 +70,7 @@ export default function TabImages() {
                 src={tabImageDetectedFullPrompt}
                 alt="Video analytics camera view of a retail aisle and checkout, faces blurred for privacy"
                 fill
-                sizes="768px"
+                sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageDetectedFullPrompt}`}
             />
 

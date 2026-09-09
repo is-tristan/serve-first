@@ -35,7 +35,7 @@
     .industryNavItem {
         flex: 1 0 auto;
         width: fill;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
     }
 
     .industryNavButton {
@@ -128,28 +128,29 @@
         gap: 3rem;
     }
 
-    .industryTabImage {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--borderRadius);
-        border: 1px solid rgba(var(--lightRgb), 0.1);
-        width: 100%;
+    .industryTabImageContainer {
         flex-basis: 100%;
-        aspect-ratio: 3 / 1.5;
+        width: 100%;
 
         @media (width >=1024px) {
             flex-basis: calc(55% - 1.5rem);
-            aspect-ratio: 16/9;
         }
 
-        img {
-            object-fit: cover;
+        .industryTabImage {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--borderRadius);
+            border: 1px solid rgba(var(--lightRgb), 0.1);
+            flex-basis: 100%;
             width: 100%;
-            height: 100%;
-            scale: 1.045;
+            aspect-ratio: 16/9;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+            }
         }
     }
 

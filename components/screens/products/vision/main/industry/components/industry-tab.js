@@ -39,19 +39,22 @@ export default function IndustryTab({
         >
 
             <motion.div
-                className={styles.industryTabImage}
+                className={styles.industryTabImageContainer}
                 animate={shouldAnimate ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
                 initial={{ opacity: 0, x: -16 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             >
 
-                <Image
-                    src={image}
-                    alt={imageAlt}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className={styles.industryTabImage}
-                />
+                <div className={styles.industryTabImage}>
+
+                    <Image
+                        src={image}
+                        alt={imageAlt}
+                        fill
+                        sizes="(max-width: 1023px) 100vw, 55vw"
+                    />
+
+                </div>
 
             </motion.div>
 
