@@ -1,4 +1,4 @@
-import { Special_Gothic_Expanded_One, Poppins } from "next/font/google";
+import { Special_Gothic_Expanded_One, Poppins, JetBrains_Mono } from "next/font/google";
 
 import "@/styles/main.scss";
 
@@ -18,13 +18,21 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "700"],
 });
 
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400"],
+  fallback: ["monospace"],
+  adjustFontFallback: false,
+});
+
 export const metadata = getPageMetadata("/");
 
 export default function RootLayout({ children }) {
 
   return (
 
-    <html lang="en" className={`${specialGothicExpandedOne.variable} ${poppins.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${specialGothicExpandedOne.variable} ${poppins.variable} ${jetBrainsMono.variable}`} data-scroll-behavior="smooth">
 
       <body>
 

@@ -13,8 +13,6 @@ export default function Tab2() {
             <Text
                 className={`${styles.tabContent}`}
                 headingClass={`sectionTitle colorLight`}
-                titleAnimationDelay={3.25}
-                descriptionAnimationDelay={3.5}
                 title="Read against your standard"
                 descriptionClass="large"
                 description="Vision reads the gap against your restock standard and flags it to your dashboard."

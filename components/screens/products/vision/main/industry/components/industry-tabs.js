@@ -19,7 +19,6 @@ export default function IndustryTabs() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
     const [tabActive, setTabActive] = useState(industryTabsData[0].id);
-    const activeTab = industryTabsData.find((item) => item.id === tabActive) || industryTabsData[0];
 
     return (
 
@@ -33,16 +32,20 @@ export default function IndustryTabs() {
 
             <div className={styles.industryTabItem}>
 
-                <IndustryTab
-                    key={activeTab.id}
-                    isActive={true}
-                    isInView={isInView}
-                    image={activeTab.image}
-                    imageAlt={activeTab.imageAlt}
-                    eyebrow={activeTab.eyebrow}
-                    title={activeTab.title}
-                    listItems={activeTab.listItems}
-                />
+                {industryTabsData.map((item) => (
+
+                    <IndustryTab
+                        key={item.id}
+                        isActive={tabActive === item.id}
+                        isInView={isInView}
+                        image={item.image}
+                        imageAlt={item.imageAlt}
+                        eyebrow={item.eyebrow}
+                        title={item.title}
+                        listItems={item.listItems}
+                    />
+
+                ))}
 
             </div>
 

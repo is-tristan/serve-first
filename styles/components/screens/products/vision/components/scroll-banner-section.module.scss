@@ -1,0 +1,415 @@
+// Top
+.scrollBanner {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+
+    @media (width > 1024px) {
+        max-height: calc(100vh - 1rem);
+    }
+
+    @media (width >=1512px) {
+        max-height: calc(100vh - 3rem);
+    }
+}
+
+// Background
+.scrollBannerBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .scrollBannerBackgroundImage {
+        position: relative;
+        z-index: 0;
+        filter: blur(1rem);
+    }
+
+    .scrollBannerBluredOverlay {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .scrollBannerOverlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 40%, var(--dark) 100%);
+        }
+
+        &::after {
+            background: linear-gradient(to bottom, var(--dark), transparent, var(--dark));
+        }
+    }
+}
+
+// Video Overlay
+.scrollBannerVideoOverlay {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-jetbrains-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--light);
+
+    .overlayContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    // Borders
+    .border {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        opacity: 0.35;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .overlayContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        &.overlayTopLeft {
+            top: 5dvw;
+            left: 5dvw;
+
+            .border {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &.overlayTopRight {
+            flex-direction: row-reverse;
+            top: 5dvw;
+            right: 5dvw;
+
+            .border {
+                top: 0;
+                right: 0;
+            }
+        }
+
+        &.overlayBottomLeft {
+            bottom: 5dvw;
+            left: 5dvw;
+
+            .border {
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        &.overlayBottomRight {
+            flex-direction: row-reverse;
+            bottom: 5dvw;
+            right: 5dvw;
+
+            .border {
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .overlayText {
+        display: flex;
+        padding: 1.5dvw;
+    }
+
+    .elipsis {
+        display: inline-block;
+        width: 1.5rem;
+        text-align: left;
+        overflow: hidden;
+
+        &::after {
+            content: "...";
+            display: inline-block;
+            overflow: hidden;
+            width: 0;
+            animation: ellipsis 1.2s steps(4, end) infinite;
+        }
+
+        @keyframes ellipsis {
+            to {
+                width: 1.5em;
+            }
+        }
+    }
+
+    .recordingContent {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.5rem;
+        color: #FF5C5C;
+
+        .recordingIcon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0.5rem;
+            height: 0.5rem;
+            background: rgba(255, 92, 92, 0.4);
+            box-shadow: 0 0 0.75rem 0#FF5C5C;
+            border-radius: 50%;
+            animation: recordingIcon 1s infinite;
+
+            @keyframes recordingIcon {
+                0% {
+                    box-shadow: 0 0 0.75rem 0 #FF5C5C;
+                }
+
+                50% {
+                    box-shadow: 0 0 1.25rem 0 #FF5C5C;
+                }
+
+                100% {
+                    box-shadow: 0 0 0.75rem 0 #FF5C5C;
+                }
+            }
+        }
+
+    }
+
+    .trackingStatus {
+        animation: trackingStatus 1.5s infinite;
+
+        @keyframes trackingStatus {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// Frames
+.scrollBannerFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+
+    .scrollBannerFrameContainer {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+}
+
+// Frame #1
+.frame1 {
+
+    .scrollBannerFrameContent {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        color: var(--light);
+
+        @media (width >=768px) {
+            gap: 3rem;
+            max-width: 55rem;
+            margin: 0 auto;
+        }
+    }
+
+    .frameContentHeader {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: frameContentHeaderBefore 1.25s ease-in-out forwards;
+            animation-delay: 1s;
+
+            @keyframes frameContentHeaderBefore {
+                to {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media (width >=768px) {
+            gap: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        @media (width >=1512px) {
+            gap: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .frameEyebrow {
+        font-size: 1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+
+        @media (width >=768px) {
+            font-size: 1.5rem;
+            letter-spacing: 0.3em;
+        }
+
+        @media (width >=1512px) {
+            font-size: 2rem;
+            letter-spacing: 0.5em;
+        }
+    }
+
+    .frameTitleContainer {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        @media (width >=768px) {
+            gap: 1.5rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+
+            @media (width >=768px) {
+                font-size: 6rem;
+            }
+
+            @media (width >=1024px) {
+                font-size: 8rem;
+            }
+
+            @media (width >=1280px) {
+                font-size: 10rem;
+            }
+        }
+    }
+
+    .frameContentDescription {
+        font-size: 1rem;
+
+        @media (width >=768px) {
+            font-size: 1.5rem;
+        }
+
+        @media (width >=1512px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+// Scroll Indicator
+.scrollIndicator {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    color: var(--light);
+    font-family: var(--font-jetbrains-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    .scrollIndicatorIcon {
+        width: 0.25rem;
+        height: 3rem;
+        background: linear-gradient(to bottom, var(--light), transparent);
+        border-radius: 0.25rem;
+    }
+}
+
+// Pagination
+.scrollBannerPagination {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    
+    .paginationItem {
+        width: 1rem;
+        height: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+
+        &:hover,
+        &.paginationItemActive {
+            background: var(--light);
+        }
+    }
+}

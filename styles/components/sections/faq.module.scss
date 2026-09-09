@@ -114,10 +114,9 @@
     }
 
     &[data-theme="dark"] {
-        background: var(--dark);
 
         .faqItemInner {
-            background: transparent;
+            background: rgba(var(--secondaryRgb), 0.05);
             color: var(--light);
 
             &[style*="--isOpen: 1"],

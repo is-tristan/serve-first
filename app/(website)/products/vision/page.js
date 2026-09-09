@@ -1,4 +1,5 @@
 // Components
+import ScrollBanner from "@/components/screens/products/vision/main/scroll-banner/scroll-banner";
 import IndustrySection from "@/components/screens/products/vision/main/industry/industry-section";
 import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ProblemSolutions from "@/components/screens/products/vision/main/problem-solutions/problem-solutions";
@@ -20,6 +21,8 @@ export default function VisionPage() {
     return (
 
         <div style={{ backgroundColor: "var(--dark)" }}>
+
+            <ScrollBanner />
 
             <IndustrySection />
 

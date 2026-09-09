@@ -18,15 +18,23 @@
     align-items: center;
     overflow-x: auto;
     width: 100%;
-    gap: 1rem;
-    padding: 0.75rem 0.5rem;
-    background: rgba(var(--lightAltRgb), 0.05);
+    gap: 0.5rem;
+    padding: 0.25rem;
+    background: #171618;
     border: 1px solid rgba(var(--lightAltRgb), 0.08);
     border-radius: var(--borderRadius);
+    scroll-snap-type: x mandatory;
+    position: relative;
+
+    @media (width >=768px) {
+        padding: 0.66rem;
+        gap: 1rem;
+    }
 
     .industryNavItem {
         flex: 1 0 auto;
         width: fill;
+        scroll-snap-align: center;
     }
 
     .industryNavButton {
@@ -43,7 +51,7 @@
         border-radius: var(--borderRadius);
         font-size: 0.875rem;
         text-transform: uppercase;
-        letter-spacing: 1.11px;
+        letter-spacing: 0.05em;
         width: 100%;
         position: relative;
         opacity: 0.5;
@@ -51,13 +59,9 @@
 
         @media (width >=768px) {
             font-size: 1rem;
-            letter-spacing: 1.61px;
+            letter-spacing: 0.075em;
             padding: 0.75rem;
             gap: 0.75rem;
-        }
-
-        @media (width >=1024px) {
-            font-size: 1.125rem;
         }
 
         .industryNavButtonIcon {
@@ -103,13 +107,20 @@
     }
 }
 
-// Tab
+.industryTabItem {
+    display: grid;
+    width: 100%;
+}
+
 .industryTab {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     gap: 1.5rem;
     width: 100%;
+    grid-area: 1 / 1;
+    visibility: hidden;
+    pointer-events: none;
 
     @media (width >=1024px) {
         flex-flow: row nowrap;
@@ -193,10 +204,10 @@
 
     .industryTabListItemLine {
         flex-shrink: 0;
-        width: 1rem;
+        width: 0.75rem;
         height: 0.125rem;
         background: var(--secondary);
-        margin-top: 0.25rem;
+        margin-top: 0.66rem;
         transform: scaleX(0);
         transform-origin: left center;
 
@@ -211,6 +222,8 @@
     }
 
     &[data-active="true"] {
+        visibility: visible;
+        pointer-events: auto;
 
         .industryTabListItem {
 

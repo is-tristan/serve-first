@@ -23,7 +23,12 @@ export default function IndustryTab({
 
     return (
 
-        <div className={styles.industryTab} data-active={isActive ? true : undefined}>
+        <div
+            className={styles.industryTab}
+            data-active={isActive ? true : undefined}
+            aria-hidden={!isActive}
+            inert={!isActive ? true : undefined}
+        >
 
             <motion.div
                 className={styles.industryTabImage}

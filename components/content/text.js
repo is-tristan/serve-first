@@ -33,7 +33,7 @@ export default function Heading({
 }) {
 
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const isInView = useInView(ref, { once: true, amount: 0.33 });
 
     const normalizedDescription = typeof description === "string"
         ? description.trim()

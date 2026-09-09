@@ -40,6 +40,9 @@ const headerConfig = {
     "/lp-terminals": {
         headerType: "minimal",
     },
+    "/products/vision": {
+        headerType: "productVisionHeader",
+    },
 };
 
 export default function HeaderClient({ children }) {
