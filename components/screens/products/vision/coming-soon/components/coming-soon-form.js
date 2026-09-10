@@ -20,7 +20,7 @@ import { appendHubspotContext, submitHubspotForm } from "@/utils/forms";
 import { arrowRightShort, emailIcon } from "@/utils/icons";
 
 export default function ComingSoonForm({
-    utmMedium = "Vision Coming Soon",
+    utmMedium = "VISION Coming Soon",
 }) {
     const [result, setResult] = useState("");
     const pathname = usePathname();
@@ -59,7 +59,7 @@ export default function ComingSoonForm({
 
                 <input type="hidden" name="hubspot-form-id" value={`fefdfc04-baf0-4832-881b-ff5a47ce4a99`} />
 
-                <input type="hidden" name="utm_source" value={`${process.env.NEXT_PUBLIC_SITE_URL}${pathname} | Vision Coming Soon`} />
+                <input type="hidden" name="utm_source" value={`${process.env.NEXT_PUBLIC_SITE_URL}${pathname} | VISION Coming Soon`} />
 
                 <input type="hidden" name="utm_medium" value={utmMedium} />
 

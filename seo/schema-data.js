@@ -1,5 +1,15 @@
 import { getCanonicalSiteUrl } from "@/seo/seo-map-data"
 
+import { faqData as martynsLawFaqData } from "@/app/(website)/products/operational-excellence/martyns-law/data"
+
+import { faqData as feedbackTerminalsFaqData } from "@/app/(website)/products/customer-experience/feedback-terminals/data"
+
+import { faqData as surveyFaqData } from "@/app/(website)/products/customer-experience/survey/data"
+
+import { faqData as mysteryShoppingFaqData } from "@/app/(website)/products/customer-experience/mystery-shopping/data"
+
+import { faqData as clientConnectFaqData } from "@/app/(website)/products/customer-experience/client-connect/data"
+
 function absoluteUrl(path) {
 
     const siteUrl = getCanonicalSiteUrl()
@@ -114,19 +124,31 @@ export function getSoftwareApplicationSchema() {
         "@type": "SoftwareApplication",
         name: "Serve First",
         applicationCategory: "BusinessApplication",
+        applicationSubCategory: "Customer Experience Management",
         operatingSystem: "Web-based",
         url: absoluteUrl("/"),
         description: "Serve First connects customer, operational and market signals across every site, then turns them into the actions that put things right.",
-        offers: {
-            "@type": "Offer",
-            priceCurrency: "GBP",
-            price: "0",
-            description: "Book a demo for custom pricing",
-        },
         provider: {
             "@type": "Organization",
             name: "Serve First",
         },
+    }
+
+}
+
+function faqPageSchema(faqItems) {
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+            },
+        })),
     }
 
 }
@@ -543,6 +565,28 @@ export function getPageSchema(path) {
     }
 
     return [page.primary, page.breadcrumb]
+
+}
+
+const faqPageData = {
+    "/products/operational-excellence/martyns-law": martynsLawFaqData,
+    "/products/customer-experience/feedback-terminals": feedbackTerminalsFaqData,
+    "/products/customer-experience/survey": surveyFaqData,
+    "/products/customer-experience/mystery-shopping": mysteryShoppingFaqData,
+    "/products/customer-experience/client-connect": clientConnectFaqData,
+}
+
+export function getFaqPageSchema(path) {
+
+    const faqItems = faqPageData[path]
+
+    if (!faqItems?.length) {
+
+        return null
+
+    }
+
+    return faqPageSchema(faqItems)
 
 }
 

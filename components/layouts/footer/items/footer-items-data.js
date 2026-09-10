@@ -108,13 +108,14 @@ export const footerPolicyItems = [
     label: "Cookies Policy",
     href: "/legal/cookie-policy",
   },
-//   {
-//     label: "Accessibility",
-//     href: "/legal/accessibility",
-//   },
   {
     label: "Sitemap",
     href: "/sitemap.xml",
+  },
+  {
+    label: "Security",
+    href: "https://trust.servefirst.ai",
+    target: "_blank",
   },
 ];
 

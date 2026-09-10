@@ -29,7 +29,7 @@ export default function ScrollBannerFrame1({ isActive = true }) {
             aria-hidden={!isActive}
             inert={!isActive ? true : undefined}
             role="group"
-            aria-label="Vision introduction"
+            aria-label="VISION introduction"
         >
 
             <div className={`container ${styles.scrollBannerFrameContainer}`}>
@@ -56,7 +56,7 @@ export default function ScrollBannerFrame1({ isActive = true }) {
                                 animate={isInView ? fadeUp.visible : fadeUp.hidden}
                                 transition={{ duration: 0.5, delay: 1 }}
                             >
-                                Vision
+                                VISION
                             </motion.h1>
 
                             <motion.span

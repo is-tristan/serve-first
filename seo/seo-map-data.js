@@ -99,8 +99,8 @@ export const seoMapData = {
         ],
     },
     "/products/vision": {
-        title: "Vision: Intelligent Video Analytics for Multi-Location Operations | Serve First",
-        description: "Vision reads every location against your own standards, continuously. Intelligent video analytics that keeps the insight, not the image.",
+        title: "VISION: Intelligent Video Analytics for Multi-Location Operations | Serve First",
+        description: "VISION reads every location against your own standards, continuously. Intelligent video analytics that keeps the insight, not the image.",
         robots: {
             index: false,
             follow: false,

@@ -267,7 +267,7 @@ export const contentGridData2 = [
 
 export const faqData = [
     {
-        question: "What is mystery shopping software?",
+        question: "What is mystery shopping?",
         answer: "Mystery shopping software manages covert, scenario-based visits that score the real customer experience against your brand standards. Serve First captures the visit with evidence and routes the findings into tasks, so a visit leads to a fix rather than a report on a shelf."
     },
     {

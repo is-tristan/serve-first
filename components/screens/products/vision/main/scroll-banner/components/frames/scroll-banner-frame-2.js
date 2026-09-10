@@ -21,7 +21,7 @@ export default function ScrollBannerFrame2({ isActive = false }) {
             aria-hidden={!isActive}
             inert={!isActive ? true : undefined}
             role="group"
-            aria-label="Vision detecting a staff member on the camera feed and prompting a task"
+            aria-label="VISION detecting a staff member on the camera feed and prompting a task"
         >
 
             <ScrollBannerImage

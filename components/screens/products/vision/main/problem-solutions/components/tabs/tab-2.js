@@ -15,7 +15,7 @@ export default function Tab2() {
                 headingClass={`sectionTitle colorLight`}
                 title="Read against your standard"
                 descriptionClass="large"
-                description="Vision reads the gap against your restock standard and flags it to your dashboard."
+                description="VISION reads the gap against your restock standard and flags it to your dashboard."
             />
 
         </div>

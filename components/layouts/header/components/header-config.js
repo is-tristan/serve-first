@@ -13,7 +13,7 @@ const headerConfig = {
             href: "https://mysteryshopping.servefirst.ai/",
             text: "Become a mystery shopper",
             target: "_blank",
-            type: "default",
+            type: "mysteryShopper",
             fullLink: false,
         },
     },

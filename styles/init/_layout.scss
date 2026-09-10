@@ -285,7 +285,7 @@
         gap: 1.5rem;
     }
 
-    &[data-alignment="center"] {
+    &[data-alignment="centered"] {
         @media all {
             justify-content: center;
             align-items: center;

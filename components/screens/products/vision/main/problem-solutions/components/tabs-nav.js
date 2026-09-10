@@ -8,7 +8,7 @@ const tabsNavItems = [
     },
     {
         id: 2,
-        label: "Vision's Analysis"
+        label: "VISION's Analysis"
     },
     {
         id: 3,

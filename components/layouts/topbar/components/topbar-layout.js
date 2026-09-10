@@ -16,51 +16,52 @@ export default function Topbar({
     fullLink = false,
 }) {
 
+    const Wrapper = fullLink ? Link : "div";
+
     const label = (
 
-        <span className={`btn textLink colorPrimaryAlt`}>
+        <>
 
             <span>{text}</span>
 
             {icon && (<div className="icon" dangerouslySetInnerHTML={{ __html: icon }} />)}
 
-        </span>
+        </>
 
     );
 
-    if (fullLink) {
-        return (
-
-            <Link href={href} target={target} className={`row ${styles.topbar}`} data-type={type}>
-
-                <div className={`container ${styles.topbarContainer}`}>
-
-                    {label}
-
-                </div>
-
-            </Link>
-
-        );
-    }
-
     return (
 
-        <div className={`row ${styles.topbar}`} data-type={type}>
+        <Wrapper
+            href={fullLink ? href : undefined}
+            target={fullLink ? target : undefined}
+            className={`row ${styles.topbar}`}
+            data-type={type}
+        >
 
             <div className={`container ${styles.topbarContainer}`}>
 
-                <Link href={href} target={target} className={`btn textLink colorPrimaryAlt`}>
+                {fullLink ? (
 
-                    <span>{text}</span>
+                    <span className={`btn textLink colorLight ${styles.homeLink}`}>
 
-                    {icon && (<div className="icon" dangerouslySetInnerHTML={{ __html: icon }} />)}
+                        {label}
 
-                </Link>
+                    </span>
+
+                ) : (
+
+                    <Link href={href} target={target} className={`btn textLink colorPrimaryAlt`}>
+
+                        {label}
+
+                    </Link>
+
+                )}
 
             </div>
 
-        </div>
+        </Wrapper>
 
     );
 

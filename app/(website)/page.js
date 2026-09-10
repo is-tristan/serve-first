@@ -4,6 +4,7 @@ import { Suspense } from "react";
 // Components
 import Banner from "@/components/sections/banner/banner";
 import LogoBar from "@/components/sections/logo-bar/logo-bar";
+import IntroSection from "@/components/screens/home/intro-section";
 import PlatformStory from "@/components/sections/platform-story/platform-story";
 import ProductHighlight from "@/components/sections/product-highlight/product-highlight";
 import Testimonials from "@/components/sections/testimonials/testimonials";
@@ -45,6 +46,8 @@ export default function Home() {
         }} />
 
       <LogoBar />
+
+      <IntroSection />
 
       <PlatformStory
         eyebrow={null}

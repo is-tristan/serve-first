@@ -8,6 +8,7 @@ import {
     getOrganizationSchema,
     getSoftwareApplicationSchema,
     getPageSchema,
+    getFaqPageSchema,
 } from "@/seo/schema-data"
 
 export default function PageSchema() {
@@ -23,6 +24,8 @@ export default function PageSchema() {
     }
 
     schemas.push(...getPageSchema(pathname))
+
+    schemas.push(getFaqPageSchema(pathname))
 
     return (
 

@@ -57,7 +57,7 @@ export default function ScrollBannerVideoOverlay({ frameActive = 1 }) {
 
                     <div className={styles.overlayText}>
 
-                        <span>{isInitiated ? "Vision - Initiated" : "Vision - Analysing"}</span>
+                        <span>{isInitiated ? "VISION - Initiated" : "VISION - Analysing"}</span>
 
                         {isLive && <span className={styles.elipsis} aria-hidden="true"></span>}
 

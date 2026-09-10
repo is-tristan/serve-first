@@ -17,7 +17,7 @@ export default function ProblemSolutions({
 
             <div className="container centered noPaddingBottom">
 
-                <div className="content" data-alignment="center">
+                <div className="content" data-alignment="centered">
 
                     <Eyebrow text={eyebrow} hasDash={true} textColor={`colorSecondary`} />
 

@@ -124,22 +124,22 @@ export const platformStoryData = [
 export const visionFaqData = [
     {
         question: "What is intelligent video analytics?",
-        answer: "Intelligent video analytics is software that reads a camera feed and turns what it sees into useful information, instead of just recording it. Vision is Serve First's intelligent video analytics: it reads your existing feeds against the standards you set, and raises a task the moment one slips. The video is processed on the device and never kept, so you get the insight, not the footage."
+        answer: "Intelligent video analytics is software that reads a camera feed and turns what it sees into useful information, instead of just recording it. VISION is Serve First's intelligent video analytics: it reads your existing feeds against the standards you set, and raises a task the moment one slips. The video is processed on the device and never kept, so you get the insight, not the footage."
     },
     {
         question: "Are intelligent video analytics legal?",
-        answer: "Yes, when used proportionately and in line with local data protection law, including GDPR where it applies. Vision is built privacy-first: faces are blurred as they appear, footage is processed on the device and not retained, and it keeps only whether a standard was met. As with any camera use, you keep clear signage and a lawful basis in place for each location."
+        answer: "Yes, when used proportionately and in line with local data protection law, including GDPR where it applies. VISION is built privacy-first: faces are blurred as they appear, footage is processed on the device and not retained, and it keeps only whether a standard was met. As with any camera use, you keep clear signage and a lawful basis in place for each location."
     },
     {
         question: "Are intelligent video analytics dangerous?",
-        answer: "Used well, no. The worries people have, constant surveillance and stored footage of identifiable people, are the ones Vision is designed to avoid. It blurs faces on sight, processes on the device, and keeps the insight rather than the image, so there is nothing raw to leak or misuse. It measures standards, it does not identify individuals."
+        answer: "Used well, no. The worries people have, constant surveillance and stored footage of identifiable people, are the ones VISION is designed to avoid. It blurs faces on sight, processes on the device, and keeps the insight rather than the image, so there is nothing raw to leak or misuse. It measures standards, it does not identify individuals."
     },
     {
         question: "What is video analytics in CCTV?",
-        answer: "Video analytics in CCTV means software that reads camera footage automatically, for things like queue length, footfall, dwell time or whether a task was done. Ordinary CCTV records for review after the event; CCTV analytics reads the feed as it happens, so it is active monitoring rather than passive video monitoring. Vision adds this to the cameras you already have."
+        answer: "Video analytics in CCTV means software that reads camera footage automatically, for things like queue length, footfall, dwell time or whether a task was done. Ordinary CCTV records for review after the event; CCTV analytics reads the feed as it happens, so it is active monitoring rather than passive video monitoring. VISION adds this to the cameras you already have."
     },
     {
         question: "How does video analytics work?",
-        answer: "Video analytics software reads frames from a camera and detects what you have asked it to watch for. Vision runs light detection on the device, escalates to deeper analysis only when needed, and checks what it sees against your standard. When a standard slips it raises a task and the record updates, all without keeping the footage."
+        answer: "Video analytics software reads frames from a camera and detects what you have asked it to watch for. VISION runs light detection on the device, escalates to deeper analysis only when needed, and checks what it sees against your standard. When a standard slips it raises a task and the record updates, all without keeping the footage."
     }
 ]

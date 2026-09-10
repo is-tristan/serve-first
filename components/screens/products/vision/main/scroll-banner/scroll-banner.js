@@ -9,15 +9,25 @@ import ScrollBannerFrame2 from "./components/frames/scroll-banner-frame-2";
 import ScrollBannerFrame3 from "./components/frames/scroll-banner-frame-3";
 import ScrollBannerPagination from "./components/ui/scroll-banner-pagination";
 import ScrollBannerBackground from "./components/scrollBannerBackground";
+import { setScrollBannerVirtualScroll } from "./scroll-banner-virtual-scroll";
 
 import styles from "@/styles/components/screens/products/vision/components/scroll-banner-section.module.scss";
 
 const frameCount = 3;
+const gestureIdleMs = 320;
+const snapDuration = 0.8;
+const pageSnapDuration = 1.15;
+
+const frameProgress = {
+    1: 0,
+    2: 0.45,
+    3: 0.82,
+};
 
 const frameAnnouncements = {
-    1: "Frame 1 of 3: Vision introduction",
-    2: "Frame 2 of 3: Vision analysing and detecting an issue",
-    3: "Frame 3 of 3: Vision raising a task from the detected issue",
+    1: "Frame 1 of 3: VISION introduction",
+    2: "Frame 2 of 3: VISION analysing and detecting an issue",
+    3: "Frame 3 of 3: VISION raising a task from the detected issue",
 };
 
 function getPinState(section) {
@@ -36,12 +46,92 @@ function getPinState(section) {
 
 }
 
+function getFrameFromProgress(progress, currentFrame) {
+
+    if (currentFrame <= 1) {
+        return progress >= frameProgress[2] ? 2 : 1;
+    }
+
+    if (currentFrame === 2) {
+        if (progress >= frameProgress[3]) {
+            return 3;
+        }
+
+        if (progress < frameProgress[2] * 0.5) {
+            return 1;
+        }
+
+        return 2;
+    }
+
+    return progress < (frameProgress[2] + frameProgress[3]) / 2 ? 2 : 3;
+
+}
+
+function getFrameScrollTarget(section, frame) {
+
+    const start = window.scrollY + section.getBoundingClientRect().top;
+    const range = Math.max(0, section.offsetHeight - window.innerHeight);
+
+    return start + frameProgress[frame] * range;
+
+}
+
+function isPinnedSection(section) {
+
+    const rect = section.getBoundingClientRect();
+
+    return rect.top <= 1 && rect.bottom > window.innerHeight + 1;
+
+}
+
 export default function ScrollBanner() {
 
     const sectionRef = useRef(null);
     const lenisRef = useRef(null);
+    const frameActiveRef = useRef(1);
+    const pinStateRef = useRef("before");
+    const snappingRef = useRef(false);
+    const gestureUntilRef = useRef(0);
+    const deltaAccumRef = useRef(0);
+    const scrollToFrameRef = useRef(null);
     const [frameActive, setFrameActive] = useState(1);
     const [pinState, setPinState] = useState("before");
+
+    const scrollToFrame = (frame, duration = pageSnapDuration, onComplete) => {
+
+        const section = sectionRef.current;
+        const nextFrame = Math.min(frameCount, Math.max(1, frame));
+
+        if (!section) {
+            return;
+        }
+
+        snappingRef.current = true;
+        frameActiveRef.current = nextFrame;
+        setFrameActive(nextFrame);
+
+        const target = getFrameScrollTarget(section, nextFrame);
+        const finish = () => {
+            snappingRef.current = false;
+            onComplete?.();
+        };
+
+        if (lenisRef.current) {
+            lenisRef.current.scrollTo(target, {
+                duration,
+                lock: true,
+                onComplete: finish,
+            });
+            return;
+        }
+
+        window.scrollTo({ top: target, behavior: "smooth" });
+        window.setTimeout(finish, duration * 1000);
+
+    };
+
+    scrollToFrameRef.current = scrollToFrame;
 
     useEffect(() => {
 
@@ -59,6 +149,147 @@ export default function ScrollBanner() {
 
     }, [frameActive]);
 
+    useEffect(() => {
+
+        const tickFrame = (direction) => {
+
+            const currentFrame = frameActiveRef.current;
+            const nextFrame = currentFrame + direction;
+
+            if (nextFrame < 1 || nextFrame > frameCount) {
+                return false;
+            }
+
+            gestureUntilRef.current = performance.now() + gestureIdleMs;
+            deltaAccumRef.current = 0;
+            scrollToFrameRef.current?.(nextFrame, snapDuration);
+
+            return true;
+
+        };
+
+        const shouldHoldGesture = (now) => {
+
+            if (snappingRef.current) {
+                gestureUntilRef.current = now + gestureIdleMs;
+                return true;
+            }
+
+            if (now < gestureUntilRef.current) {
+                gestureUntilRef.current = now + gestureIdleMs;
+                return true;
+            }
+
+            return false;
+
+        };
+
+        const onVirtualScroll = (data) => {
+
+            const section = sectionRef.current;
+            const event = data.event;
+
+            if (!section) {
+                return true;
+            }
+
+            if (Math.abs(data.deltaX) > Math.abs(data.deltaY)) {
+                return true;
+            }
+
+            if (!isPinnedSection(section)) {
+                return true;
+            }
+
+            const now = performance.now();
+
+            if (shouldHoldGesture(now)) {
+                deltaAccumRef.current = 0;
+
+                if (event?.cancelable) {
+                    event.preventDefault();
+                }
+
+                return false;
+            }
+
+            deltaAccumRef.current += data.deltaY;
+            const direction = deltaAccumRef.current > 0 ? 1 : -1;
+            const currentFrame = frameActiveRef.current;
+            const canLeave = (direction === 1 && currentFrame === frameCount) || (direction === -1 && currentFrame === 1);
+
+            if (canLeave) {
+                deltaAccumRef.current = 0;
+                return true;
+            }
+
+            if (event?.cancelable) {
+                event.preventDefault();
+            }
+
+            if (Math.abs(deltaAccumRef.current) < 48) {
+                return false;
+            }
+
+            tickFrame(direction);
+
+            return false;
+
+        };
+
+        const onKeyDown = (event) => {
+
+            if (event.defaultPrevented || event.repeat) {
+                return;
+            }
+
+            const section = sectionRef.current;
+
+            if (!section || !isPinnedSection(section)) {
+                return;
+            }
+
+            if (event.target instanceof Element && event.target.closest("button, a, input, textarea, select, [contenteditable]")) {
+                return;
+            }
+
+            const isDown = event.key === "ArrowDown" || event.key === "PageDown" || event.key === " ";
+            const isUp = event.key === "ArrowUp" || event.key === "PageUp";
+
+            if (!isDown && !isUp) {
+                return;
+            }
+
+            const direction = isDown ? 1 : -1;
+            const now = performance.now();
+
+            if (shouldHoldGesture(now)) {
+                event.preventDefault();
+                return;
+            }
+
+            const currentFrame = frameActiveRef.current;
+            const canLeave = (direction === 1 && currentFrame === frameCount) || (direction === -1 && currentFrame === 1);
+
+            if (canLeave) {
+                return;
+            }
+
+            event.preventDefault();
+            tickFrame(direction);
+
+        };
+
+        setScrollBannerVirtualScroll(onVirtualScroll);
+        window.addEventListener("keydown", onKeyDown);
+
+        return () => {
+            setScrollBannerVirtualScroll(null);
+            window.removeEventListener("keydown", onKeyDown);
+        };
+
+    }, []);
+
     useLenis((lenis) => {
 
         lenisRef.current = lenis;
@@ -71,7 +302,19 @@ export default function ScrollBanner() {
 
         const nextPinState = getPinState(section);
 
+        if (pinStateRef.current === "before" && nextPinState === "after" && Math.abs(lenis.velocity) > 1) {
+            pinStateRef.current = "pinned";
+            setPinState("pinned");
+            scrollToFrame(1, snapDuration);
+            return;
+        }
+
+        pinStateRef.current = nextPinState;
         setPinState((current) => current === nextPinState ? current : nextPinState);
+
+        if (snappingRef.current) {
+            return;
+        }
 
         const range = section.offsetHeight - window.innerHeight;
 
@@ -80,43 +323,14 @@ export default function ScrollBanner() {
         }
 
         const progress = Math.min(1, Math.max(0, -section.getBoundingClientRect().top / range));
-        let nextFrame = 1;
+        const nextFrame = getFrameFromProgress(progress, frameActiveRef.current);
 
-        if (progress >= 0.55) {
-            nextFrame = 3;
-        } else if (progress >= 0.22) {
-            nextFrame = 2;
+        if (nextFrame !== frameActiveRef.current) {
+            frameActiveRef.current = nextFrame;
+            setFrameActive(nextFrame);
         }
-
-        setFrameActive((current) => current === nextFrame ? current : nextFrame);
 
     });
-
-    const scrollToFrame = (frame) => {
-
-        const section = sectionRef.current;
-
-        if (!section) {
-            return;
-        }
-
-        const start = window.scrollY + section.getBoundingClientRect().top;
-        const range = section.offsetHeight - window.innerHeight;
-        const frameProgress = {
-            1: 0,
-            2: 0.22,
-            3: 0.55,
-        };
-        const target = start + frameProgress[frame] * range;
-
-        if (lenisRef.current) {
-            lenisRef.current.scrollTo(target, { duration: 1.15 });
-            return;
-        }
-
-        window.scrollTo({ top: target, behavior: "smooth" });
-
-    };
 
     return (
 
@@ -125,7 +339,7 @@ export default function ScrollBanner() {
             ref={sectionRef}
             data-frame={frameActive}
             aria-roledescription="carousel"
-            aria-label="Vision product introduction"
+            aria-label="VISION product introduction"
         >
 
             <div className="visuallyHidden" aria-live="polite" aria-atomic="true">

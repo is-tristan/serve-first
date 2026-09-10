@@ -26,7 +26,7 @@ export default function ThankYouContent() {
             style={{ width: "100%" }}
         >
 
-            <div className={`content`} data-alignment="center">
+            <div className={`content`} data-alignment="centered">
 
                 <div className={styles.successAnimation}>
 

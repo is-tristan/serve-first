@@ -3,7 +3,13 @@
 import { ReactLenis } from "lenis/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { handleScrollBannerVirtualScroll } from "@/components/screens/products/vision/main/scroll-banner/scroll-banner-virtual-scroll";
 import "lenis/dist/lenis.css";
+
+const lenisOptions = {
+  stopInertiaOnNavigate: true,
+  virtualScroll: handleScrollBannerVirtualScroll,
+};
 
 export default function SmoothScroll() {
 
@@ -26,7 +32,7 @@ export default function SmoothScroll() {
     <ReactLenis
       root
       ref={lenisRef}
-      options={{ stopInertiaOnNavigate: true }}
+      options={lenisOptions}
     />
 
   );

@@ -51,6 +51,12 @@ export default function FooterItems({ theme }) {
 
                 <FooterSocialItems />
 
+                <div className={styles.footerColItems}>
+
+                    <Link className={'hidden'} href="#">Careers</Link>
+
+                </div>
+
             </div>
 
         </div>

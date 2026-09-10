@@ -58,20 +58,36 @@
             @media (width >=1024px) {
                 min-height: 5rem;
             }
+        }
 
-            a {
-                font-family: var(--heading);
-                line-height: 150%;
-                color: var(--light);
+        .homeLink {
+            font-family: var(--heading);
+            line-height: 150%;
+            color: var(--light);
 
-                @media (width >=1024px) {
-                    font-size: 1rem;
-                    line-height: 100%;
-                }
+            @media (width >=1024px) {
+                font-size: 1rem;
+                line-height: 100%;
             }
 
             svg {
                 color: var(--lightAlt);
+            }
+        }
+    }
+
+    &[data-type="mysteryShopper"] {
+        .topbarContainer {
+            @media (width < 1024px) {
+                background: var(--primary);
+                height: calc(var(--mobileTopbarHeight) * 0.5);
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                a {
+                    color: var(--light);
+                }
             }
         }
     }

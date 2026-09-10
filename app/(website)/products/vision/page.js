@@ -29,7 +29,7 @@ export default function VisionPage() {
             <PlatformStory
                 itemClass={"visionPlatformStory"}
                 theme="dark"
-                eyebrow="Why Vision, not just another camera platform"
+                eyebrow="Why VISION, not just another camera platform"
                 title="Intelligent video analytics, built on the standards you already run"
                 titleAlignment="center"
                 eyebrowColor="colorSecondary"
@@ -50,7 +50,7 @@ export default function VisionPage() {
                 theme="dark"
                 eyebrow="Intelligent video analytics, answered"
                 eyebrowColor="colorSecondary"
-                title="Common questions about Vision"
+                title="Common questions about VISION"
                 data={visionFaqData}
                 button={null}
             />
@@ -60,7 +60,7 @@ export default function VisionPage() {
                 theme="dark"
                 eyebrow="See it on your own floor"
                 eyebrowColor="colorSecondary"
-                title="See Vision read your standards, live"
+                title="See VISION read your standards, live"
                 description="See it read a live standard on a real store feed. In closed beta now."
                 buttonSecondary={null}
             />

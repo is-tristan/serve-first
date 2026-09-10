@@ -16,7 +16,7 @@ export default function ScrollBannerPagination({
 
     return (
 
-        <nav className={styles.scrollBannerPagination} aria-label="Vision story frames">
+        <nav className={styles.scrollBannerPagination} aria-label="VISION story frames">
 
             {Array.from({ length: frameCount }, (_, index) => {
 

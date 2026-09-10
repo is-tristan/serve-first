@@ -21,7 +21,7 @@ export default function ScrollBannerFrame3({ isActive = false }) {
             aria-hidden={!isActive}
             inert={!isActive ? true : undefined}
             role="group"
-            aria-label="Vision detecting a customer on the camera feed and raising a restock task"
+            aria-label="VISION detecting a customer on the camera feed and raising a restock task"
         >
 
             <ScrollBannerImage

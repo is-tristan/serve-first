@@ -29,7 +29,6 @@
     }
 
     &[data-has-topbar="true"] {
-
         @media (width < 1024px) {
             top: var(--mobileTopbarHeight);
         }
@@ -37,6 +36,18 @@
         &[data-topbar-type="home"] {
             @media (width >=1024px) {
                 padding-top: 0;
+            }
+        }
+
+        &[data-topbar-type="mysteryShopper"] {
+            &:not([data-scrolled="true"]) {
+                @media (width < 1024px) {
+                    top: calc(var(--mobileTopbarHeight) * 0.5);
+                }
+            }
+
+            @media (width >=1024px) {
+                top: calc(var(--desktopTopbarHeight) * 0.5);
             }
         }
     }
