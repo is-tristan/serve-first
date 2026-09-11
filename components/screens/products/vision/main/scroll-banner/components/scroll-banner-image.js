@@ -1,9 +1,9 @@
+// Next
 import Image from "next/image";
-
-import styles from "@/styles/components/screens/products/vision/components/scroll-banner-images.module.scss";
 
 export default function ScrollBannerImage({
     desktopSrc,
+    tabletSrc,
     mobileSrc,
     alt,
     className = "",
@@ -19,20 +19,30 @@ export default function ScrollBannerImage({
                 src={mobileSrc}
                 alt={alt}
                 fill
-                sizes="(max-width: 1023px) 100vw, 1px"
+                sizes="(max-width: 767px) 100vw, 1px"
                 priority={priority}
                 loading={loading}
-                className={`${styles.imageMobile}${className ? ` ${className}` : ""}`}
+                className={`hidden-l hidden-xl hidden-xxl${className ? ` ${className}` : ""}`}
+            />
+
+            <Image
+                src={tabletSrc}
+                alt={alt}
+                fill
+                sizes="(min-width: 768px) and (max-width: 1279px) 100vw, 1px"
+                priority={priority}
+                loading={loading}
+                className={`hidden-s hidden-m hidden-xxl${className ? ` ${className}` : ""}`}
             />
 
             <Image
                 src={desktopSrc}
                 alt={alt}
                 fill
-                sizes="(max-width: 1023px) 1px, 100vw"
+                sizes="(min-width: 1280px) 100vw, 1px"
                 priority={priority}
                 loading={loading}
-                className={`${styles.imageDesktop}${className ? ` ${className}` : ""}`}
+                className={`hidden-s hidden-m hidden-l hidden-xl${className ? ` ${className}` : ""}`}
             />
 
         </>

@@ -23,7 +23,7 @@
     background: #171618;
     border: 1px solid rgba(var(--lightAltRgb), 0.08);
     border-radius: var(--borderRadius);
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     position: relative;
     scrollbar-width: none;
 
@@ -35,7 +35,7 @@
     .industryNavItem {
         flex: 1 0 auto;
         width: fill;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
     }
 
     .industryNavButton {
@@ -58,7 +58,7 @@
         opacity: 0.5;
         transition: var(--cubic);
 
-        @media (width >=768px) {
+        @media (width >=1024px) {
             font-size: 1rem;
             letter-spacing: 0.075em;
             padding: 0.75rem;
@@ -109,8 +109,13 @@
 }
 
 .industryTabItem {
-    display: grid;
+    display: block;
+    position: relative;
     width: 100%;
+
+    @media (width >=1024px) {
+        display: grid;
+    }
 }
 
 .industryTab {
@@ -119,13 +124,21 @@
     align-items: center;
     gap: 1.5rem;
     width: 100%;
-    grid-area: 1 / 1;
     visibility: hidden;
     pointer-events: none;
 
+    @media (width < 1024px) {
+        &:not([data-active="true"]) {
+            position: absolute;
+            inset: 0 auto;
+        }
+    }
+
     @media (width >=1024px) {
+        grid-area: 1 / 1;
         flex-flow: row nowrap;
         gap: 3rem;
+        height: max-content;
     }
 
     .industryTabImageContainer {
@@ -157,14 +170,10 @@
         display: flex;
         flex-flow: column nowrap;
         gap: 1.5rem;
-        flex-basis: 100%;
-
-        @media (width >=768px) {
-            gap: 2rem;
-        }
 
         @media (width >=1024px) {
             flex-basis: calc(45% - 1.5rem);
+            gap: 2rem;
         }
 
         .industryTabTitle {
@@ -178,10 +187,6 @@
         gap: 1rem;
         padding: 0;
         margin: 0;
-
-        @media (width >=768px) {
-            gap: 1.5rem;
-        }
 
         @media (width >=1024px) {
             gap: 2rem;
@@ -197,11 +202,11 @@
         line-height: 175%;
 
         @media (width >=768px) {
-            font-size: 1.125rem;
             gap: 0.75rem;
         }
 
         @media (width >=1024px) {
+            font-size: 1.125rem;
             gap: 1rem;
         }
     }

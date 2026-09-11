@@ -2,8 +2,9 @@ import ScrollBannerImage from "./scroll-banner-image";
 
 import styles from "@/styles/components/screens/products/vision/components/scroll-banner-section.module.scss";
 
-const scrollBannerBackgroundImage = "/images/vision/scroll-banner/vision-banner-image.png";
-const scrollBannerBackgroundImageMobile = "/images/vision/scroll-banner/vision-banner-image-mobile.png";
+const scrollBannerBackgroundImage = "/images/vision/scroll-banner/desktop/vision-banner-image.png";
+const scrollBannerBackgroundImageTablet = "/images/vision/scroll-banner/tablet/vision-banner-image.png";
+const scrollBannerBackgroundImageMobile = "/images/vision/scroll-banner/mobile/vision-banner-image.png";
 
 export default function ScrollBannerBackground() {
 
@@ -14,6 +15,7 @@ export default function ScrollBannerBackground() {
             <ScrollBannerImage
                 className={styles.scrollBannerBackgroundImage}
                 desktopSrc={scrollBannerBackgroundImage}
+                tabletSrc={scrollBannerBackgroundImageTablet}
                 mobileSrc={scrollBannerBackgroundImageMobile}
                 alt=""
                 priority

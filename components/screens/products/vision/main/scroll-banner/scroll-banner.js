@@ -135,22 +135,6 @@ export default function ScrollBanner() {
 
     useEffect(() => {
 
-        const header = document.getElementById("header");
-
-        if (!header) {
-            return;
-        }
-
-        header.dataset.bannerFrame = String(frameActive);
-
-        return () => {
-            delete header.dataset.bannerFrame;
-        };
-
-    }, [frameActive]);
-
-    useEffect(() => {
-
         const tickFrame = (direction) => {
 
             const currentFrame = frameActiveRef.current;

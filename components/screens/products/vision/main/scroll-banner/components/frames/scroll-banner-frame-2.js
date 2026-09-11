@@ -1,15 +1,25 @@
 "use client";
 
+// Components
 import ScrollBannerImage from "../scroll-banner-image";
 
+// Styles
 import styles from "@/styles/components/screens/products/vision/components/scroll-banner-frames.module.scss";
 
-const scrollBannerFrame = "/images/vision/scroll-banner/vision-banner-image-frame-2-frame.png";
-const scrollBannerFrameMobile = "/images/vision/scroll-banner/vision-banner-image-mobile-frame-2-frame.png";
-const scrollBannerFrameText = "/images/vision/scroll-banner/vision-banner-image-frame-2-frame-text.png";
-const scrollBannerFrameTextMobile = "/images/vision/scroll-banner/vision-banner-image-mobile-frame-2-frame-text.png";
-const scrollFramePrompt = "/images/vision/scroll-banner/vision-banner-image-frame-2-prompt.png";
-const scrollFramePromptMobile = "/images/vision/scroll-banner/vision-banner-image-mobile-frame-2-prompt.png";
+// Mobile
+const scrollBannerFrameMobile = "/images/vision/scroll-banner/mobile/vision-banner-image-frame-2-frame.png";
+const scrollBannerFrameTextMobile = "/images/vision/scroll-banner/mobile/vision-banner-image-frame-2-frame-text.png";
+const scrollFramePromptMobile = "/images/vision/scroll-banner/mobile/vision-banner-image-frame-2-prompt.png";
+
+// Tablet
+const scrollBannerFrameTablet = "/images/vision/scroll-banner/tablet/vision-banner-image-frame-2-frame.png";
+const scrollBannerFrameTextTablet = "/images/vision/scroll-banner/tablet/vision-banner-image-frame-2-frame-text.png";
+const scrollFramePromptTablet = "/images/vision/scroll-banner/tablet/vision-banner-image-frame-2-prompt.png";
+
+// Desktop
+const scrollBannerFrame = "/images/vision/scroll-banner/desktop/vision-banner-image-frame-2-frame.png";
+const scrollBannerFrameText = "/images/vision/scroll-banner/desktop/vision-banner-image-frame-2-frame-text.png";
+const scrollFramePrompt = "/images/vision/scroll-banner/desktop/vision-banner-image-frame-2-prompt.png";
 
 export default function ScrollBannerFrame2({ isActive = false }) {
 
@@ -26,6 +36,7 @@ export default function ScrollBannerFrame2({ isActive = false }) {
 
             <ScrollBannerImage
                 desktopSrc={scrollBannerFrame}
+                tabletSrc={scrollBannerFrameTablet}
                 mobileSrc={scrollBannerFrameMobile}
                 alt=""
                 className={`${styles.frameImage} ${styles.frameImageBox}`}
@@ -33,6 +44,7 @@ export default function ScrollBannerFrame2({ isActive = false }) {
 
             <ScrollBannerImage
                 desktopSrc={scrollBannerFrameText}
+                tabletSrc={scrollBannerFrameTextTablet}
                 mobileSrc={scrollBannerFrameTextMobile}
                 alt=""
                 className={`${styles.frameImage} ${styles.frameImageText}`}
@@ -40,6 +52,7 @@ export default function ScrollBannerFrame2({ isActive = false }) {
 
             <ScrollBannerImage
                 desktopSrc={scrollFramePrompt}
+                tabletSrc={scrollFramePromptTablet}
                 mobileSrc={scrollFramePromptMobile}
                 alt=""
                 className={`${styles.frameImage} ${styles.frameImagePrompt}`}

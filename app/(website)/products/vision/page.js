@@ -1,4 +1,5 @@
 // Components
+import VideoSection from "@/components/screens/products/vision/main/video/video-section";
 import ScrollBanner from "@/components/screens/products/vision/main/scroll-banner/scroll-banner";
 import IndustrySection from "@/components/screens/products/vision/main/industry/industry-section";
 import PlatformStory from "@/components/sections/platform-story/platform-story";
@@ -22,6 +23,8 @@ export default function VisionPage() {
 
         <div style={{ backgroundColor: "var(--dark)" }}>
 
+            <VideoSection />
+
             <ScrollBanner />
 
             <IndustrySection />
@@ -38,7 +41,7 @@ export default function VisionPage() {
                 btn={
                     {
                         text: "See how it works",
-                        href: "/products/vision",
+                        href: "/get-a-demo",
                     }
                 }
                 data={platformStoryData}
