@@ -112,28 +112,52 @@ export default function ScrollBanner() {
         setFrameActive(nextFrame);
 
         const target = getFrameScrollTarget(section, nextFrame);
+        let didFinish = false;
+
         const finish = () => {
+
+            if (didFinish) {
+                return;
+            }
+
+            didFinish = true;
             snappingRef.current = false;
             onComplete?.();
+
+        };
+
+        const safetyMs = Math.round(duration * 1000) + 250;
+        const safetyId = window.setTimeout(finish, safetyMs);
+
+        const onSnapComplete = () => {
+            window.clearTimeout(safetyId);
+            finish();
         };
 
         if (lenisRef.current) {
             lenisRef.current.scrollTo(target, {
                 duration,
                 lock: true,
-                onComplete: finish,
+                force: true,
+                onComplete: onSnapComplete,
             });
             return;
         }
 
         window.scrollTo({ top: target, behavior: "smooth" });
-        window.setTimeout(finish, duration * 1000);
+        window.setTimeout(onSnapComplete, duration * 1000);
 
     };
 
     scrollToFrameRef.current = scrollToFrame;
 
     useEffect(() => {
+
+        const isExitDirection = (direction, currentFrame) => {
+
+            return (direction === 1 && currentFrame === frameCount) || (direction === -1 && currentFrame === 1);
+
+        };
 
         const tickFrame = (direction) => {
 
@@ -155,16 +179,10 @@ export default function ScrollBanner() {
         const shouldHoldGesture = (now) => {
 
             if (snappingRef.current) {
-                gestureUntilRef.current = now + gestureIdleMs;
                 return true;
             }
 
-            if (now < gestureUntilRef.current) {
-                gestureUntilRef.current = now + gestureIdleMs;
-                return true;
-            }
-
-            return false;
+            return now < gestureUntilRef.current;
 
         };
 
@@ -172,22 +190,40 @@ export default function ScrollBanner() {
 
             const section = sectionRef.current;
             const event = data.event;
+            const eventType = event?.type;
 
             if (!section) {
                 return true;
+            }
+
+            if (eventType === "touchend" || eventType === "touchcancel") {
+                gestureUntilRef.current = 0;
+                deltaAccumRef.current = 0;
+                return !snappingRef.current;
             }
 
             if (Math.abs(data.deltaX) > Math.abs(data.deltaY)) {
                 return true;
             }
 
+            if (data.deltaX === 0 && data.deltaY === 0) {
+                return !snappingRef.current;
+            }
+
             if (!isPinnedSection(section)) {
                 return true;
             }
 
-            const now = performance.now();
+            const direction = data.deltaY > 0 ? 1 : -1;
+            const currentFrame = frameActiveRef.current;
 
-            if (shouldHoldGesture(now)) {
+            if (!snappingRef.current && isExitDirection(direction, currentFrame)) {
+                deltaAccumRef.current = 0;
+                gestureUntilRef.current = 0;
+                return true;
+            }
+
+            if (shouldHoldGesture(performance.now())) {
                 deltaAccumRef.current = 0;
 
                 if (event?.cancelable) {
@@ -198,11 +234,9 @@ export default function ScrollBanner() {
             }
 
             deltaAccumRef.current += data.deltaY;
-            const direction = deltaAccumRef.current > 0 ? 1 : -1;
-            const currentFrame = frameActiveRef.current;
-            const canLeave = (direction === 1 && currentFrame === frameCount) || (direction === -1 && currentFrame === 1);
+            const accumDirection = deltaAccumRef.current > 0 ? 1 : -1;
 
-            if (canLeave) {
+            if (isExitDirection(accumDirection, currentFrame)) {
                 deltaAccumRef.current = 0;
                 return true;
             }
@@ -215,7 +249,7 @@ export default function ScrollBanner() {
                 return false;
             }
 
-            tickFrame(direction);
+            tickFrame(accumDirection);
 
             return false;
 
@@ -245,17 +279,15 @@ export default function ScrollBanner() {
             }
 
             const direction = isDown ? 1 : -1;
-            const now = performance.now();
+            const currentFrame = frameActiveRef.current;
 
-            if (shouldHoldGesture(now)) {
-                event.preventDefault();
+            if (!snappingRef.current && isExitDirection(direction, currentFrame)) {
+                gestureUntilRef.current = 0;
                 return;
             }
 
-            const currentFrame = frameActiveRef.current;
-            const canLeave = (direction === 1 && currentFrame === frameCount) || (direction === -1 && currentFrame === 1);
-
-            if (canLeave) {
+            if (shouldHoldGesture(performance.now())) {
+                event.preventDefault();
                 return;
             }
 
