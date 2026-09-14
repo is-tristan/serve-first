@@ -7,7 +7,7 @@ import FooterContainer from "@/components/layouts/footer/components/footer-conta
 import styles from "@/styles/components/layouts/footer/footer.module.scss";
 
 const footerConfig = {
-    "/products/vision": {
+    "/products/operational-excellence/vision": {
         theme: "dark",
         bottomText: "vision",
     },

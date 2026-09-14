@@ -26,7 +26,7 @@ const headerConfig = {
     "/lp-terminals": {
         headerType: "minimal",
     },
-    "/products/vision": {
+    "/products/operational-excellence/vision": {
         headerType: "productVisionHeader",
     },
 };

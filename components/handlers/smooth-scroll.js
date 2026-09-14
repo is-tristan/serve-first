@@ -3,7 +3,7 @@
 import { ReactLenis } from "lenis/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { handleScrollBannerVirtualScroll } from "@/components/screens/products/vision/main/scroll-banner/scroll-banner-virtual-scroll";
+import { handleScrollBannerVirtualScroll } from "@/components/screens/products/operational-excellence/vision/main/scroll-banner/scroll-banner-virtual-scroll";
 import "lenis/dist/lenis.css";
 
 const lenisOptions = {

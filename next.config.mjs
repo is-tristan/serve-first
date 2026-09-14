@@ -23,6 +23,11 @@ const nextConfig = {
         destination: "/legal/accessibility",
         permanent: true,
       },
+      {
+        source: "/products/vision",
+        destination: "/products/operational-excellence/vision",
+        permanent: true,
+      },
     ];
   },
   images: {
