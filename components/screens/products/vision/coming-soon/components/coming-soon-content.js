@@ -23,7 +23,7 @@ export default function ComingSoonContent({ isInView }) {
         >
 
             <Heading
-                alignment="center"
+                alignment="centered"
                 hasAnimation={false}
                 titleTag="h1"
                 headingClass="pageTitle"
