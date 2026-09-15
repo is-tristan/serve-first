@@ -181,6 +181,10 @@ export const menuItemsData = [
                         label: "Martyn's Law Compliance",
                         href: "/products/operational-excellence/martyns-law",
                     },
+                    {
+                        label: "Vision",
+                        href: "/products/operational-excellence/vision",
+                    },
                 ],
             },
         ],
@@ -222,6 +226,6 @@ export const menuItemsData = [
     },
     {
         label: "Vision",
-        href: "/products/vision"
+        href: "/products/operational-excellence/vision"
     }
 ]
