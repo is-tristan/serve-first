@@ -1,0 +1,68 @@
+@mixin eva-menu-item {
+
+    .menuItemLink,
+    .mobileMenuItemLink {
+        background: linear-gradient(to left, var(--primary), var(--primaryAlt));
+        color: var(--light);
+        padding: 0.66rem;
+        height: max-content;
+        gap: 0.25rem;
+        border-radius: calc(var(--borderRadius) * 2);
+        white-space: nowrap;
+        transition: var(--cubic);
+
+        &.mobileMenuItemLink {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+        }
+
+        &:hover {
+            color: var(--light);
+
+            .menuItemIcon {
+                color: var(--light);
+            }
+        }
+    }
+}
+
+@mixin vision-menu-item {
+    .menuItemLabel {
+        font-family: var(--heading);
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1;
+        color: var(--dark);
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        position: relative;
+        padding-top: 0.125rem;
+
+        &::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: "New";
+            position: absolute;
+            top: -0.75rem;
+            right: -0.75rem;
+            font-family: var(--text);
+            line-height: 1.25;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--light);
+            background: var(--secondary);
+            border-radius: var(--borderRadius);
+            padding: 0 0.33rem;
+        }
+
+        @media (width >=1280px) {
+            font-size: 1rem;
+        }
+
+        @media (width >=1512px) {
+            font-size: 1.25rem;
+        }
+    }
+}

@@ -1,6 +1,9 @@
+@use "./header-menu-mixins.scss" as *;
+
 // Desktop Menu
 .desktopMenu {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     padding: 0 1.75rem;
@@ -9,6 +12,7 @@
     background: var(--light);
     border: 1px solid rgba(var(--lightRgb), 0.1);
     border-radius: calc(var(--borderRadius) * 5);
+    overflow-x: auto;
 
     @media (width < 1366px) {
         flex: 1 1 auto;
@@ -25,17 +29,14 @@
     height: 100%;
 
     &[data-menu-item="meet-eva"] {
-        .menuItemLink {
-            background: linear-gradient(to right, var(--primary), var(--primaryAlt));
-            color: var(--light);
-            padding: 0.66rem;
-            gap: 0.25rem;
-            border-radius: calc(var(--borderRadius) * 2);
-            transition: var(--cubic);
+        & {
+            @include eva-menu-item;
+        }
+    }
 
-            &:hover {
-                scale: 1.025;
-            }
+    &[data-menu-item="vision"] {
+        & {
+            @include vision-menu-item;
         }
     }
 }

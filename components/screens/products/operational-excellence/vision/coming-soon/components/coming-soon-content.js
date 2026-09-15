@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 // Components
 import Heading from "@/components/content/text";
 import ComingSoonForm from "./coming-soon-form";
-import ComingSoonCountdown from "./coming-soon-countdown";
+import Button from "@/components/handlers/buttons";
 
 // Styles
 import styles from "@/styles/components/screens/products/operational-excellence/vision/coming-soon.module.scss";
@@ -28,14 +28,12 @@ export default function ComingSoonContent({ isInView }) {
                 titleTag="h1"
                 headingClass="pageTitle"
                 title="Be one of the first to experience the future of operational excellence"
-                description="For some time, we have had a vision of what the future of operational excellence looks like, now we have the answer. Join the waitlist to be one of the first to see our vision come to life. "
+                description="For some time, we have had a vision of what the future of operational excellence looks like, now we have the answer. Join the waitlist to be one of the first to see our vision come to life."
             />
 
             <div className={styles.contentFooter}>
 
-                <ComingSoonCountdown />
-
-                <ComingSoonForm />
+                <Button text="View VISION" href="/products/operational-excellence/vision" class="primary" hasAnimation={false} />
 
             </div>
 

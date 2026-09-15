@@ -85,7 +85,12 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
 
                     {data.map((item) => (
 
-                        <div key={item.label} className={styles.mobileMenuItem} data-active={isActive(item.href)}>
+                        <div
+                            key={item.label}
+                            className={styles.mobileMenuItem}
+                            data-menu-item={item.label.toLowerCase().replaceAll(" ", "-")}
+                            data-active={isActive(item.href)}
+                        >
 
                             {item.submenu ? (
 
@@ -98,7 +103,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
                                         onClick={() => handleSubmenuToggle(item.label)}
                                     >
 
-                                        <span>{item.label}</span>
+                                        <span className={styles.menuItemLabel}>{item.label}</span>
 
                                         <span className={styles.mobileMenuItemIcon} dangerouslySetInnerHTML={{ __html: chevronDown }} />
 
@@ -118,6 +123,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
                                                             type="button"
                                                             className={styles.mobileSubmenuItemToggle}
                                                             data-submenu-open={isNestedSubmenuOpen(submenuItem)}
+                                                            data-menu-item={submenuItem.label.toLowerCase().replaceAll(" ", "-")}
                                                             onClick={() => handleNestedSubmenuToggle(submenuItem)}
                                                         >
 
@@ -142,7 +148,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
                                                                         onClick={handleLinkClick}
                                                                     >
 
-                                                                        <span>{nestedSubmenuItem.label}</span>
+                                                                        <span className={styles.mobileNestedSubmenuItemText}>{nestedSubmenuItem.label}</span>
 
                                                                     </Link>
 
@@ -156,7 +162,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
 
                                                 ) : (
 
-                                                    <Link href={submenuItem.href} className={styles.mobileSubmenuItemLink} onClick={handleLinkClick}>
+                                                    <Link href={submenuItem.href} className={styles.mobileSubmenuItemLink} data-menu-item={submenuItem.label.toLowerCase().replaceAll(" ", "-")} onClick={handleLinkClick}>
 
                                                         {submenuItem.icon && (<div className={styles.mobileSubmenuItemIcon} dangerouslySetInnerHTML={{ __html: submenuItem.icon }} />)}
 
@@ -188,7 +194,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
 
                                 <Link href={item.href} className={styles.mobileMenuItemLink} onClick={handleLinkClick}>
 
-                                    {item.label}
+                                    <span className={styles.menuItemLabel}>{item.label}</span>
 
                                     {item.icon && (<div className={styles.mobileMenuItemIcon} dangerouslySetInnerHTML={{ __html: item.icon }} />)}
 

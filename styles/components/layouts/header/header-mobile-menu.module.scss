@@ -1,3 +1,5 @@
+@use "./header-menu-mixins.scss" as *;
+
 // Mobile Menu
 .mobileMenuToggle {
     display: flex;
@@ -111,20 +113,30 @@
     display: flex;
     flex-flow: column nowrap;
 
-    &:last-child {
-        a {
-            background: linear-gradient(to right, var(--lightAlt), var(--primary));
-            padding: 1rem;
-            gap: 0.25rem;
-            border-radius: calc(var(--borderRadius) * 2);
-            text-align: center;
-            align-items: center;
-            transition: var(--cubic);
-            color: var(--primaryAlt);
+    &[data-menu-item="meet-eva"] {
+        & {
+            @include eva-menu-item;
+        }
+
+        .mobileMenuItemLink {
             justify-content: center;
-            text-align: center;
         }
     }
+
+    &[data-menu-item="vision"] {
+        & {
+            @include vision-menu-item;
+        }
+
+        .menuItemLabel {
+            color: var(--light);
+        }
+    }
+}
+
+.menuItemLabel {
+    display: inline-flex;
+    align-items: center;
 }
 
 .mobileMenuItemLink,

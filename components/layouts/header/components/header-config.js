@@ -1,8 +1,8 @@
 const headerConfig = {
     "/": {
         topbar: {
-            href: "/coming-soon",
-            text: "Something big is coming: The future of operational excellence. Be the first to know",
+            href: "/products/operational-excellence/vision",
+            text: "VISION: The Future of Operational Excellence is here.",
             target: "_self",
             type: "home",
             fullLink: true,

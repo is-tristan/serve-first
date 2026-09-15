@@ -9,7 +9,8 @@ import {
     customerExperienceIcon,
     marketingIntelligenceIcon,
     operationalExcellenceIcon,
-    aboutUsIcon, contactUsIcon
+    aboutUsIcon, 
+    contactUsIcon
 } from '@/utils/icons';
 
 export const menuItemsData = [
@@ -218,5 +219,9 @@ export const menuItemsData = [
         label: "Meet EVA",
         href: "/eva",
         icon: aiIcon,
+    },
+    {
+        label: "Vision",
+        href: "/products/vision"
     }
 ]
