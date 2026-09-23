@@ -64,5 +64,9 @@
         @media (width >=1512px) {
             font-size: 1.25rem;
         }
+
+        span {
+            text-transform: inherit;
+        }
     }
 }
