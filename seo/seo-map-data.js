@@ -101,10 +101,6 @@ export const seoMapData = {
     "/products/operational-excellence/vision": {
         title: "VISION: Intelligent Video Analytics for Multi-Location Operations | Serve First",
         description: "VISION reads every location against your own standards, continuously. Intelligent video analytics that keeps the insight, not the image.",
-        robots: {
-            index: false,
-            follow: false,
-        },
     },
     "/products/operational-excellence/reporting": {
         title: "Multi-Site Reporting and Dashboards | Serve First",
