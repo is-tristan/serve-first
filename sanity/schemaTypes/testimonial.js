@@ -1,5 +1,7 @@
 import { defineField, defineType } from "sanity"
 
+import { orderRankField, orderRankOrdering } from "@sanity/orderable-document-list"
+
 import { StarIcon } from "@sanity/icons/Star"
 
 import { svgOnlyOptions, svgOnlyValidation } from "./shared/svgOnlyImage"
@@ -9,7 +11,9 @@ export const testimonial = defineType({
     title: "Testimonial",
     type: "document",
     icon: StarIcon,
+    orderings: [orderRankOrdering],
     fields: [
+        orderRankField({ type: "testimonial" }),
         defineField({
             name: "rating",
             title: "Rating",

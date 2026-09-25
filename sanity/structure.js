@@ -1,3 +1,5 @@
+import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list"
+
 import { DocumentTextIcon } from "@sanity/icons/DocumentText"
 import { ImageIcon } from "@sanity/icons/Image"
 import { MenuIcon } from "@sanity/icons/Menu"
@@ -5,7 +7,7 @@ import { StarIcon } from "@sanity/icons/Star"
 
 const structuredTypes = ["menuAds", "blog", "media", "author", "category", "tag", "testimonial", "logo"]
 
-export const structure = (S) =>
+export const structure = (S, context) =>
     S.list()
         .title("Content")
         .items([
@@ -41,8 +43,20 @@ export const structure = (S) =>
                             S.documentTypeListItem("tag").title("Tag"),
                         ])
                 ),
-            S.documentTypeListItem("testimonial").title("Testimonials").icon(StarIcon),
-            S.documentTypeListItem("logo").title("Logos").icon(ImageIcon),
+            orderableDocumentListDeskItem({
+                type: "testimonial",
+                title: "Testimonials",
+                icon: StarIcon,
+                S,
+                context,
+            }),
+            orderableDocumentListDeskItem({
+                type: "logo",
+                title: "Logos",
+                icon: ImageIcon,
+                S,
+                context,
+            }),
             ...S.documentTypeListItems().filter(
                 (listItem) => !structuredTypes.includes(listItem.getId())
             ),

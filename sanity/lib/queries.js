@@ -239,7 +239,7 @@ export async function getMedia() {
 }
 
 export const testimonialsQuery = defineQuery(/* groq */ `
-    *[_type == "testimonial"] | order(_createdAt asc) {
+    *[_type == "testimonial"] | order(orderRank asc) {
         _id,
         rating,
         name,
@@ -268,7 +268,7 @@ export async function getTestimonials() {
 }
 
 export const logosQuery = defineQuery(/* groq */ `
-    *[_type == "logo"] | order(_createdAt asc) {
+    *[_type == "logo"] | order(orderRank asc) {
         _id,
         alt,
         image {
