@@ -58,6 +58,7 @@ export default function TestimonialItem({
                             width={72}
                             height={72}
                             sizes="72px"
+                            unoptimized
                             style={{ filter: theme === "primary" ? "invert(1) saturate(0) brightness(2)" : "none" }}
                         />
 

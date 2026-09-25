@@ -237,3 +237,58 @@ export async function getMedia() {
 
     return data
 }
+
+export const testimonialsQuery = defineQuery(/* groq */ `
+    *[_type == "testimonial"] | order(_createdAt asc) {
+        _id,
+        rating,
+        name,
+        position,
+        quote,
+        companyLogo {
+            asset->{
+                _id,
+                url,
+                mimeType,
+                metadata {
+                    lqip,
+                    dimensions
+                }
+            }
+        }
+    }
+`)
+
+export async function getTestimonials() {
+    const { data } = await sanityFetch({
+        query: testimonialsQuery,
+    })
+
+    return data
+}
+
+export const logosQuery = defineQuery(/* groq */ `
+    *[_type == "logo"] | order(_createdAt asc) {
+        _id,
+        alt,
+        image {
+            asset->{
+                _id,
+                url,
+                mimeType,
+                metadata {
+                    lqip,
+                    dimensions
+                }
+            }
+        }
+    }
+`)
+
+export async function getLogos() {
+    const { data } = await sanityFetch({
+        query: logosQuery,
+    })
+
+    return data
+}

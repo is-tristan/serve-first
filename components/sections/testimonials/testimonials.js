@@ -1,17 +1,24 @@
-// Components
-import TestimonialsCarousel from "@/components/sections/testimonials/components/testimonial-carousel";
-import Button from "@/components/handlers/buttons";
+import TestimonialsCarousel from "@/components/sections/testimonials/components/testimonial-carousel"
+import Button from "@/components/handlers/buttons"
 
-// Styles
-import styles from "@/styles/components/sections/testimonials.module.scss";
+import styles from "@/styles/components/sections/testimonials.module.scss"
 
-// Data
-import { testimonialData } from "@/data/testimonial-data";
+import { getTestimonials } from "@/sanity/lib/queries"
 
-export default function Testimonials({
+export default async function Testimonials({
     theme = "light",
     btnPrimary = null
 }) {
+
+    const testimonials = await getTestimonials()
+
+    const testimonialData = (testimonials || []).map((item) => ({
+        rating: item.rating,
+        name: item.name,
+        position: item.position,
+        quote: item.quote,
+        companyLogo: item.companyLogo?.asset?.url || null,
+    }))
 
     return (
 

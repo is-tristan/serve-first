@@ -83,6 +83,7 @@ export default function LogoBarCarousel({ data = [] }) {
                             width={384}
                             height={256}
                             loading="lazy"
+                            unoptimized
                             style={{ objectFit: "contain", width: "100%", height: "100%" }}
                         />
 

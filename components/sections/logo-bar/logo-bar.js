@@ -1,17 +1,23 @@
-// Components
-import Eyebrow from "@/components/decoration/eyebrow";
-import LogoCarousel from "@/components/sections/logo-bar/components/logo-bar-carousel";
+import Eyebrow from "@/components/decoration/eyebrow"
+import LogoCarousel from "@/components/sections/logo-bar/components/logo-bar-carousel"
 
-// Data
-import { logoData } from "@/data/logo-data";
+import styles from "@/styles/components/sections/logo-bar.module.scss"
 
-// Styles
-import styles from "@/styles/components/sections/logo-bar.module.scss";
+import { getLogos } from "@/sanity/lib/queries"
 
-export default function LogoBar({
-    eyebrow = "Trusted by",
-    data = logoData || []
+export default async function LogoBar({
+    eyebrow = "Trusted by"
 }) {
+
+    const logos = await getLogos()
+
+    const logoData = (logos || [])
+        .filter((logo) => logo.image?.asset?.url)
+        .map((logo) => ({
+            src: logo.image.asset.url,
+            alt: logo.alt,
+        }))
+
     return (
 
         <section
@@ -25,11 +31,11 @@ export default function LogoBar({
 
             </div>
 
-            {data.length > 0 && (
+            {logoData.length > 0 && (
 
                 <div className="container overflowContainer noPaddingTop">
 
-                    <LogoCarousel data={data} />
+                    <LogoCarousel data={logoData} />
 
                 </div>
 
