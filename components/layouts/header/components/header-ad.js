@@ -48,7 +48,7 @@ export default function HeaderAd({ ad, onClick }) {
 
                     <Image
                         src={imageUrl}
-                        alt={ad.title || "Header Ad"}
+                        alt={ad.image?.alt || ad.title || "Header Ad"}
                         width={512}
                         height={256}
                         loading="lazy"

@@ -21,7 +21,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-challenge/inconsistent-standards");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-challenge/inconsistent-standards");
+}
 
 export default function InconsistentStandards() {
 

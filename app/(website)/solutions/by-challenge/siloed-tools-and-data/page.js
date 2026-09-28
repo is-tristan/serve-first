@@ -21,7 +21,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-challenge/siloed-tools-and-data");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-challenge/siloed-tools-and-data");
+}
 
 export default function SiloedToolsAndData() {
 

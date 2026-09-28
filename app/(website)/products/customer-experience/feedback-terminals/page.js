@@ -29,7 +29,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/products/customer-experience/feedback-terminals");
+export async function generateMetadata() {
+    return getPageMetadata("/products/customer-experience/feedback-terminals");
+}
 
 export default async function FeedbackTerminals() {
 

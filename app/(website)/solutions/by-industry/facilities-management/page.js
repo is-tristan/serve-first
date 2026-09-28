@@ -23,7 +23,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-industry/facilities-management");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-industry/facilities-management");
+}
 
 export default function FacilitiesManagement() {
 

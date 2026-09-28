@@ -17,7 +17,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/eva");
+export async function generateMetadata() {
+    return getPageMetadata("/eva");
+}
 
 export default function Eva() {
 

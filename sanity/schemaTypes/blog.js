@@ -2,6 +2,9 @@ import { defineArrayMember, defineField, defineType } from "sanity"
 
 import { DocumentTextIcon } from "@sanity/icons/DocumentText"
 
+import { richTextMembers } from "./shared/richText"
+import { postSeoField } from "./shared/postSeo"
+
 export const blog = defineType({
     name: "blog",
     title: "Blog Post",
@@ -50,24 +53,7 @@ export const blog = defineType({
             name: "content",
             title: "Content",
             type: "array",
-            of: [
-                defineArrayMember({
-                    type: "block",
-                }),
-                defineArrayMember({
-                    type: "image",
-                    options: {
-                        hotspot: true,
-                    },
-                    fields: [
-                        defineField({
-                            name: "alt",
-                            title: "Alternative Text",
-                            type: "string",
-                        }),
-                    ],
-                }),
-            ],
+            of: richTextMembers,
         }),
         defineField({
             name: "publishedAt",
@@ -95,18 +81,6 @@ export const blog = defineType({
             ],
         }),
         defineField({
-            name: "tags",
-            title: "Tags",
-            type: "array",
-            of: [
-                defineArrayMember({
-                    type: "reference",
-                    to: [{ type: "tag" }],
-                }),
-            ],
-            validation: (rule) => rule.unique(),
-        }),
-        defineField({
             name: "authors",
             title: "Authors",
             type: "array",
@@ -117,32 +91,7 @@ export const blog = defineType({
                 }),
             ],
         }),
-        defineField({
-            name: "seo",
-            title: "SEO",
-            type: "object",
-            options: {
-                collapsible: true,
-                collapsed: false,
-            },
-            fields: [
-                defineField({
-                    name: "title",
-                    title: "SEO Title",
-                    type: "string",
-                    description: "Overrides the post title if provided",
-                    validation: (rule) => rule.max(60).warning("Keep under 60 characters"),
-                }),
-                defineField({
-                    name: "description",
-                    title: "SEO Description",
-                    type: "text",
-                    rows: 3,
-                    description: "Falls back to the excerpt if empty",
-                    validation: (rule) => rule.max(160).warning("Keep under 160 characters"),
-                }),
-            ],
-        }),
+        postSeoField,
     ],
     orderings: [
         {

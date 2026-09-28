@@ -4,7 +4,9 @@ import LogoBar from "@/components/sections/logo-bar/logo-bar";
 import Testimonials from "@/components/sections/testimonials/testimonials";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-export const metadata = getPageMetadata("/get-a-demo");
+export async function generateMetadata() {
+    return getPageMetadata("/get-a-demo");
+}
 
 export default function GetADemo() {
 

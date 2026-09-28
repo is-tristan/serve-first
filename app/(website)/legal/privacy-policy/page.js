@@ -6,7 +6,9 @@ import styles from "@/styles/components/screens/legal/legal-pages.module.scss";
 import { privacyPolicySections } from "./data";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-export const metadata = getPageMetadata("/legal/privacy-policy");
+export async function generateMetadata() {
+  return getPageMetadata("/legal/privacy-policy");
+}
 
 export default function PrivacyPolicy() {
   return (

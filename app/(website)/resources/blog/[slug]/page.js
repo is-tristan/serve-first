@@ -13,7 +13,7 @@ import { getBlogBySlug } from "@/sanity/lib/queries"
 
 import JsonLd from "@/seo/json-ld"
 import { getBlogPageSchema } from "@/seo/blog-schema"
-import { getCanonicalSiteUrl } from "@/seo/seo-map-data"
+import { getCanonicalSiteUrl } from "@/seo/site-url"
 
 // Styles
 import styles from "@/styles/components/screens/resources/blog.module.scss"
@@ -28,9 +28,10 @@ export async function generateMetadata({ params }) {
 
     const title = blog.seo?.title || blog.title
     const description = blog.seo?.description || blog.excerpt
+    const keywords = (blog.seo?.keywords || []).filter(Boolean)
     const canonicalUrl = `${getCanonicalSiteUrl()}/resources/blog/${slug}`
 
-    return {
+    const metadata = {
         title,
         description,
         alternates: {
@@ -45,6 +46,12 @@ export async function generateMetadata({ params }) {
             description,
         },
     }
+
+    if (keywords.length) {
+        metadata.keywords = keywords
+    }
+
+    return metadata
 }
 
 export default async function BlogPage({ params }) {

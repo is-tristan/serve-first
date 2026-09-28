@@ -20,7 +20,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/what-does-serve-first-do");
+export async function generateMetadata() {
+    return getPageMetadata("/what-does-serve-first-do");
+}
 
 export default function WhatDoesServeFirstDo() {
 

@@ -1,8 +1,5 @@
+// Fonts
 import { Special_Gothic_Expanded_One, Poppins, JetBrains_Mono } from "next/font/google";
-
-import "@/styles/main.scss";
-
-import { getPageMetadata } from "@/seo/seo-map-data";
 
 const specialGothicExpandedOne = Special_Gothic_Expanded_One({
   variable: "--font-special-gothic-expanded-one",
@@ -26,7 +23,11 @@ const jetBrainsMono = JetBrains_Mono({
   adjustFontFallback: false,
 });
 
-export const metadata = getPageMetadata("/");
+// SEO
+import { getPageMetadata } from "@/seo/seo-map-data";
+export async function generateMetadata() {
+  return getPageMetadata("/");
+}
 
 export default function RootLayout({ children }) {
 

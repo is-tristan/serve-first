@@ -24,7 +24,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-industry/venues-and-events");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-industry/venues-and-events");
+}
 
 export default function VenuesAndEvents() {
 

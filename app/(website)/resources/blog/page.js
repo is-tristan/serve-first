@@ -8,7 +8,9 @@ import { getPageMetadata } from "@/seo/seo-map-data"
 
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
-export const metadata = getPageMetadata("/resources/blog")
+export async function generateMetadata() {
+    return getPageMetadata("/resources/blog")
+}
 
 export default async function Blog() {
 

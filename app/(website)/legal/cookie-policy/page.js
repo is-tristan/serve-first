@@ -8,7 +8,9 @@ import styles from "@/styles/components/screens/legal/legal-pages.module.scss";
 import { cookiePolicySections } from "./data";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-export const metadata = getPageMetadata("/legal/cookie-policy");
+export async function generateMetadata() {
+  return getPageMetadata("/legal/cookie-policy");
+}
 
 export default function CookiePolicy() {
   return (

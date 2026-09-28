@@ -163,4 +163,12 @@
         height: auto;
         background: var(--light);
     }
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+        color: var(--primary);
+        text-decoration: underline;
+    }
 }

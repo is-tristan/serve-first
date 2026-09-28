@@ -26,7 +26,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data.js";
 
 
-export const metadata = getPageMetadata("/");
+export async function generateMetadata() {
+  return getPageMetadata("/");
+}
 
 export default function Home() {
 

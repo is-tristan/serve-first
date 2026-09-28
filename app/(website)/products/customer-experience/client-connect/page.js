@@ -26,7 +26,9 @@ import {
 
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-export const metadata = getPageMetadata("/products/customer-experience/client-connect");
+export async function generateMetadata() {
+    return getPageMetadata("/products/customer-experience/client-connect");
+}
 
 export default async function ClientConnect() {
 

@@ -29,7 +29,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/products/operational-excellence/martyns-law");
+export async function generateMetadata() {
+    return getPageMetadata("/products/operational-excellence/martyns-law");
+}
 
 export default async function MartynsLaw() {
 

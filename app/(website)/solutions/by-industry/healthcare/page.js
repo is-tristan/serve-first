@@ -23,7 +23,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-industry/healthcare");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-industry/healthcare");
+}
 
 export default function Healthcare() {
 

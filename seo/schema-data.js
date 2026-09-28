@@ -1,4 +1,4 @@
-import { getCanonicalSiteUrl } from "@/seo/seo-map-data"
+import { getCanonicalSiteUrl } from "@/seo/site-url"
 
 import { faqData as martynsLawFaqData } from "@/app/(website)/products/operational-excellence/martyns-law/data"
 
@@ -590,13 +590,19 @@ export function getFaqPageSchema(path) {
 
 }
 
-export function getBlogPostBreadcrumbSchema({ title, slug }) {
+export function getBlogPostBreadcrumbSchema({
+    title,
+    slug,
+    sectionName = "Blog",
+    sectionPath = "/resources/blog",
+    basePath = "/resources/blog",
+}) {
 
     return breadcrumbSchema([
         { name: "Home", path: "/" },
-        { name: "Resources", path: "/resources/blog" },
-        { name: "Blog", path: "/resources/blog" },
-        { name: title, path: `/resources/blog/${slug}` },
+        { name: "Resources", path: sectionPath },
+        { name: sectionName, path: sectionPath },
+        { name: title, path: `${basePath}/${slug}` },
     ])
 
 }

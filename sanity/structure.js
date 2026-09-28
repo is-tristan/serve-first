@@ -3,9 +3,10 @@ import { orderableDocumentListDeskItem } from "@sanity/orderable-document-list"
 import { DocumentTextIcon } from "@sanity/icons/DocumentText"
 import { ImageIcon } from "@sanity/icons/Image"
 import { MenuIcon } from "@sanity/icons/Menu"
+import { SearchIcon } from "@sanity/icons/Search"
 import { StarIcon } from "@sanity/icons/Star"
 
-const structuredTypes = ["menuAds", "blog", "media", "author", "category", "tag", "testimonial", "logo"]
+const structuredTypes = ["menuAds", "blog", "media", "author", "category", "tag", "testimonial", "logo", "pageSeo"]
 
 export const structure = (S, context) =>
     S.list()
@@ -42,6 +43,13 @@ export const structure = (S, context) =>
                             S.documentTypeListItem("category").title("Category"),
                             S.documentTypeListItem("tag").title("Tag"),
                         ])
+                ),
+            S.listItem()
+                .title("SEO")
+                .icon(SearchIcon)
+                .child(
+                    S.documentTypeList("pageSeo")
+                        .title("Page SEO")
                 ),
             orderableDocumentListDeskItem({
                 type: "testimonial",

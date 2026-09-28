@@ -9,7 +9,9 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 // Data
 import { platformStoryData } from "./data";
 
-export const metadata = getPageMetadata("/company/about");
+export async function generateMetadata() {
+    return getPageMetadata("/company/about");
+}
 
 export default function About() {
 

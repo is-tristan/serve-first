@@ -31,7 +31,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/products/operational-excellence/audits");
+export async function generateMetadata() {
+    return getPageMetadata("/products/operational-excellence/audits");
+}
 
 export default async function Audits() {
 

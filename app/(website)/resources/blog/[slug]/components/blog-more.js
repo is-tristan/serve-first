@@ -4,7 +4,14 @@ import { urlFor } from "@/sanity/lib/image"
 
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
-export default function BlogMore({ blog }) {
+export default function BlogMore({
+    blog,
+    basePath = "/resources/blog",
+    eyebrow = "More from the blog",
+    title = "Keep reading",
+    allHref = "/resources/blog",
+    allText = "View all articles",
+}) {
 
     const contentGridData = (blog.more || []).map((item) => ({
         category: item.category,
@@ -16,7 +23,7 @@ export default function BlogMore({ blog }) {
             : imagePlaceholder,
         button: {
             text: "Read more",
-            href: `/resources/blog/${item.slug}`,
+            href: `${basePath}/${item.slug}`,
             target: "_self",
         },
     }))
@@ -28,12 +35,12 @@ export default function BlogMore({ blog }) {
     return (
 
         <ContentGrid
-            eyebrow="More from the blog"
-            title="Keep reading"
+            eyebrow={eyebrow}
+            title={title}
             colCount={3}
             button={{
-                text: "View all articles",
-                href: "/resources/blog",
+                text: allText,
+                href: allHref,
                 target: "_self",
             }}
             data={contentGridData}

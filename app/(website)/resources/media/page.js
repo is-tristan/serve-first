@@ -11,26 +11,40 @@ import { getPageMetadata } from "@/seo/seo-map-data"
 // Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
-export const metadata = getPageMetadata("/resources/media")
+export async function generateMetadata() {
+    return getPageMetadata("/resources/media")
+}
 
 export default async function Media() {
 
     const media = await getMedia()
 
-    const contentGridData = (media || []).map((item) => ({
-        title: item.title,
-        description: item.excerpt,
-        image: item.coverImage?.asset
-            ? urlFor(item.coverImage).width(768).height(432).fit("crop").url()
-            : imagePlaceholder,
-        button: item.url
-            ? {
-                text: "Read more",
-                href: item.url,
-                target: "_blank",
-            }
-            : null,
-    }))
+    const contentGridData = (media || []).map((item) => {
+        const hasArticle = item.addExternalLink === false && item.hasContent && item.slug
+        const hasExternalLink = item.addExternalLink !== false && item.url
+
+        return {
+            title: item.title,
+            description: item.excerpt,
+            readTime: hasArticle ? item.readTime : null,
+            image: item.coverImage?.asset
+                ? urlFor(item.coverImage).width(768).height(432).fit("crop").url()
+                : imagePlaceholder,
+            button: hasExternalLink
+                ? {
+                    text: "Read more",
+                    href: item.url,
+                    target: "_blank",
+                }
+                : hasArticle
+                    ? {
+                        text: "Read more",
+                        href: `/resources/media/${item.slug}`,
+                        target: "_self",
+                    }
+                    : null,
+        }
+    })
 
     return (
 

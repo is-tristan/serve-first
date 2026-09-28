@@ -1,16 +1,16 @@
 import { urlFor } from "@/sanity/lib/image"
 
 import { getBlogPostBreadcrumbSchema } from "@/seo/schema-data"
-import { getCanonicalSiteUrl } from "@/seo/seo-map-data"
+import { getCanonicalSiteUrl } from "@/seo/site-url"
 
-export function getBlogPostingSchema(blog) {
+export function getBlogPostingSchema(blog, basePath = "/resources/blog", schemaType = "BlogPosting") {
 
     const siteUrl = getCanonicalSiteUrl()
-    const url = `${siteUrl}/resources/blog/${blog.slug}`
+    const url = `${siteUrl}${basePath}/${blog.slug}`
 
     const schema = {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": schemaType,
         headline: blog.seo?.title || blog.title,
         description: blog.seo?.description || blog.excerpt,
         url,
@@ -62,13 +62,21 @@ export function getBlogPostingSchema(blog) {
 
 }
 
-export function getBlogPageSchema(blog) {
+export function getBlogPageSchema(blog, options = {}) {
+
+    const basePath = options.basePath || "/resources/blog"
+    const sectionName = options.sectionName || "Blog"
+    const sectionPath = options.sectionPath || basePath
+    const schemaType = options.schemaType || "BlogPosting"
 
     return [
-        getBlogPostingSchema(blog),
+        getBlogPostingSchema(blog, basePath, schemaType),
         getBlogPostBreadcrumbSchema({
             title: blog.title,
             slug: blog.slug,
+            sectionName,
+            sectionPath,
+            basePath,
         }),
     ]
 

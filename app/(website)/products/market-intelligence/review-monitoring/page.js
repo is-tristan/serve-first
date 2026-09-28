@@ -31,7 +31,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/products/market-intelligence/review-monitoring");
+export async function generateMetadata() {
+    return getPageMetadata("/products/market-intelligence/review-monitoring");
+}
 
 export default async function ReviewMonitoring() {
 

@@ -21,7 +21,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-role/cx-leaders");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-role/cx-leaders");
+}
 
 export default function CXLeader() {
 

@@ -7,6 +7,16 @@ const menuAdFields = [
         name: "image",
         title: "Image",
         type: "image",
+        options: {
+            hotspot: true,
+        },
+        fields: [
+            defineField({
+                name: "alt",
+                title: "Alternative Text",
+                type: "string",
+            }),
+        ],
     }),
     defineField({
         name: "title",

@@ -1,5 +1,5 @@
 import { client } from "@/sanity/lib/client"
-import { getCanonicalSiteUrl } from "@/seo/seo-map-data"
+import { getCanonicalSiteUrl } from "@/seo/site-url"
 
 const staticRoutes = [
     {
@@ -276,6 +276,23 @@ async function getBlogSitemapEntries(siteUrl) {
     }))
 }
 
+async function getMediaSitemapEntries(siteUrl) {
+    const posts = await client.fetch(`
+        *[_type == "media" && addExternalLink != true && defined(slug.current)] {
+            "slug": slug.current,
+            publishedAt,
+            _updatedAt
+        }
+    `)
+
+    return (posts || []).map((post) => ({
+        url: `${siteUrl}/resources/media/${post.slug}`,
+        lastModified: new Date(post.publishedAt || post._updatedAt || Date.now()),
+        changeFrequency: "monthly",
+        priority: 0.5,
+    }))
+}
+
 export default async function sitemap() {
     const siteUrl = getCanonicalSiteUrl()
 
@@ -286,6 +303,7 @@ export default async function sitemap() {
     }))
 
     const blogEntries = await getBlogSitemapEntries(siteUrl)
+    const mediaEntries = await getMediaSitemapEntries(siteUrl)
 
-    return [...staticEntries, ...blogEntries]
+    return [...staticEntries, ...blogEntries, ...mediaEntries]
 }

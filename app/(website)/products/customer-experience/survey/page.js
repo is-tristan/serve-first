@@ -33,7 +33,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/products/customer-experience/survey");
+export async function generateMetadata() {
+    return getPageMetadata("/products/customer-experience/survey");
+}
 
 export default async function Survey() {
 

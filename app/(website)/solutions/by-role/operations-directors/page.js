@@ -21,7 +21,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-role/operations-directors");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-role/operations-directors");
+}
 
 export default function OperationsDirector() {
 

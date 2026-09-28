@@ -21,7 +21,9 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 
-export const metadata = getPageMetadata("/solutions/by-role/compliance-managers");
+export async function generateMetadata() {
+    return getPageMetadata("/solutions/by-role/compliance-managers");
+}
 
 export default function ComplianceManagers() {
 

@@ -26,7 +26,9 @@ import {
 
 import { getPageMetadata } from "@/seo/seo-map-data";
 
-export const metadata = getPageMetadata("/how-it-works/capture");
+export async function generateMetadata() {
+    return getPageMetadata("/how-it-works/capture");
+}
 
 export default function Capture() {
 
