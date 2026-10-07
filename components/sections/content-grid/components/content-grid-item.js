@@ -26,7 +26,7 @@ export default function ContentGridItem({
 }) {
 
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const isInView = useInView(ref, { once: true, amount: 0.15 });
     const resolvedButtonText = item.button
         ? exploreLabel(item.title, item.button.text)
         : null;
@@ -37,7 +37,7 @@ export default function ContentGridItem({
             ref={ref}
             className={styles.contentGridItemContainer}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
-            initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
+            initial={{ opacity: 0, y: 16 }} transition={{ duration: 0.5, delay: 0.25 + (index * 0.033) }}
         >
 
             <div className={styles.contentGridItem} data-has-link={item.button ? true : false}>
