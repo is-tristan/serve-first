@@ -1,13 +1,12 @@
+// Styles
+import "@/styles/main.scss";
+
+// Components
 import Banner from "@/components/sections/banner/banner";
-
 import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
-
 import Header from "@/components/layouts/header/header";
-
 import Footer from "@/components/layouts/footer/footer";
-
 import SmoothScroll from "@/components/handlers/smooth-scroll";
-
 import notFoundImage from "@/public/images/error-404/error_404_image.png";
 
 export default function NotFound() {

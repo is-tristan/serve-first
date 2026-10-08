@@ -1,121 +1,173 @@
- .featureListItems {
-     display: flex;
-     flex-flow: column nowrap;
-     gap: 1.5rem;
+@use "../../init/_mixins" as *;
 
-     @media (width >=1024px) {
-         gap: 0;
-     }
- }
+.featureListItems {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
 
- .featureListItem {
-     display: flex;
-     flex-flow: column nowrap;
-     gap: 1.5rem;
-     border-top: 1px solid var(--border);
-     padding-top: 1.5rem;
-     padding-bottom: 0;
-     width: 100%;
+    @media (width >=1024px) {
+        gap: 0;
+    }
+}
 
-     @media (width >=1024px) {
-         padding-top: 2rem;
-         padding-bottom: 2rem;
-         flex-flow: row-reverse nowrap;
-         justify-content: space-between;
-         align-items: center;
-         gap: 1.5rem;
+.featureListItem {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    width: 100%;
 
-         @media (width >=1280px) {
-             gap: 2rem;
-         }
+    @media (width >=1024px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
 
-         .colLeft,
-         .colRight {
-             flex-basis: calc(50% - 1.5rem);
+        @media (width >=1280px) {
+            gap: 2rem;
+        }
 
-             @media (width >=1280px) {
-                 flex-basis: calc(50% - 2rem);
-             }
-         }
+        .colLeft,
+        .colRight {
+            flex-basis: calc(50% - 1.5rem);
 
-         &:nth-child(even) {
-             flex-flow: row nowrap;
-         }
-     }
+            @media (width >=1280px) {
+                flex-basis: calc(50% - 2rem);
+            }
+        }
 
-     &:last-child {
-         @media all {
-             padding-bottom: 0;
-         }
-     }
+        &:nth-child(even) {
+            flex-flow: row nowrap;
+        }
+    }
 
-     .colRight {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         position: relative;
+    &:last-child {
+        @media all {
+            padding-bottom: 0;
+        }
+    }
 
-         @media (width < 768px) {
-             width: 100%;
-             height: auto;
+    .colRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
 
-             img {
-                 width: 100%;
-                 height: auto;
-             }
-         }
+        @media (width < 768px) {
+            width: 100%;
+            height: auto;
 
-         @media (width < 1024px) {
-             width: 100%;
-             height: auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
 
-             img {
-                 width: 100%;
-                 height: 100%;
-             }
-         }
-     }
+        @media (width < 1024px) {
+            width: 100%;
+            height: auto;
 
-     .colLeft {
-         display: flex;
-         flex-flow: column nowrap;
-         gap: 1rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 
-         @media (width >=768px) {
-             gap: 1.5rem;
-         }
+    .colLeft {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
 
-         p {
-             margin-bottom: 0;
-         }
-     }
+        @media (width >=768px) {
+            gap: 1.5rem;
+        }
 
-     .featureListItemHeader {
-         display: flex;
-         flex-flow: column nowrap;
-         gap: 0.75rem;
-     }
+        p {
+            margin-bottom: 0;
+        }
+    }
 
-     .featuredItemFooter {
-         padding-top: 0.75rem;
+    .featureListItemHeader {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.75rem;
+    }
 
-         @media (width >=768px) {
-             padding-top: 1rem;
-         }
+    .featuredItemFooter {
+        padding-top: 0.75rem;
 
-         @media (width >=1024px) {
-             padding-top: 1.5rem;
-         }
-     }
- }
+        @media (width >=768px) {
+            padding-top: 1rem;
+        }
 
- .featureList {
-     &[data-theme="primary"] {
-         background: var(--primaryAlt);
-         color: var(--light);
+        @media (width >=1024px) {
+            padding-top: 1.5rem;
+        }
+    }
 
-         .featureListItem {
-             border-color: var(--borderDark);
-         }
-     }
- }
+    &[data-image-position="left"] {
+        @media (width >=1024px) {
+            flex-flow: row nowrap;
+        }
+    }
+
+    &[data-type="lp"] {
+        border-top: none;
+        padding-top: 0;
+
+        .colRight img {
+            border-radius: var(--borderRadius);
+            overflow: hidden;
+        }
+
+        @media (width >=1024px) {
+            align-items: stretch;
+
+            .colLeft {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.lpFeatureListTags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+
+    @media (width >=768px) and (width < 1024px) {
+        justify-content: center;
+    }
+
+    @media (width >=1024px) {
+        gap: 1rem;
+    }
+
+    .lpFeatureListTag {
+        & {
+            @include category();
+            background: var(--lightAlt);
+            color: var(--primaryAlt);
+
+            @media (width >=768px) {
+                padding: 0.5rem;
+            }
+        }
+    }
+}
+
+.featureList {
+    &[data-theme="primary"] {
+        background: var(--primaryAlt);
+        color: var(--light);
+
+        .featureListItem {
+            border-color: var(--borderDark);
+        }
+    }
+}

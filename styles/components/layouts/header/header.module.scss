@@ -58,6 +58,18 @@
         [data-name="mobileMenuToggle"] {
             display: none;
         }
+
+        .headerActions {
+            @media (width >=1024px) {
+                background: transparent;
+                border: 1px solid rgba(var(--lightRgb), 0.25);
+                padding: 2rem 1rem;
+
+                a {
+                    color: var(--primary);
+                }
+            }
+        }
     }
 
     &[data-scrolled="true"] {

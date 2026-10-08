@@ -16,8 +16,12 @@
 
     .formCol {
         background: rgba(var(--primaryRgb), 0.25);
-        padding: 2rem;
+        padding: 1rem;
         border-radius: var(--borderRadius);
+
+        @media (width >=1024px) {
+            padding: 2rem;
+        }
     }
 
     .checklist {
@@ -44,6 +48,32 @@
                     height: 1.5rem;
                 }
             }
+        }
+    }
+}
+
+.lpCta {
+    .bgImage {
+        position: absolute;
+        inset: auto 0 auto auto;
+        width: 50%;
+        height: 100%;
+    }
+
+    .formCol {
+        background: var(--lightAlt);
+        padding: 1rem;
+        border-radius: var(--borderRadius);
+
+        @media (width >=1024px) {
+            padding: 2rem;
+        }
+    }
+
+    &[data-type="audit"] {
+        img {
+            object-fit: contain;
+            object-position: center bottom;
         }
     }
 }

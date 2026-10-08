@@ -2,8 +2,8 @@
 import Eyebrow from "@/components/decoration/eyebrow";
 import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
-import FormCol from "@/components/screens/lp/lp-banner/componets/form-col";
-import Checklist from "@/components/screens/lp/lp-banner/componets/checklist";
+import FormCol from "@/components/screens/lp/lp-banner/components/form-col";
+import Checklist from "@/components/screens/lp/lp-banner/components/checklist";
 
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";
@@ -12,6 +12,7 @@ import lpStyles from "@/styles/components/screens/lp/lp.module.scss";
 // Background Decorations
 import bdTr from "@/public/backgrounds/banner/banner-decoration-top-right.svg";
 import bdBl from "@/public/backgrounds/banner/banner-decoration-bottom-left.svg";
+
 export default function LpBanner({
     eyebrow = "- LP Banner Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -21,10 +22,10 @@ export default function LpBanner({
     hasButtons = true,
     hasFullStop = true,
     hasBackgroundDecoration = true,
-    formBtnText = "Book a demo",
+    formBtnText = "Request a demo",
     hasDemoLink = false,
     formSmallText,
-    formType,
+    formType = "landing",
     utmMedium,
     buttonPrimary = {
         text: "Get a demo",

@@ -5,13 +5,14 @@ import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
 // Components
-import FormSmall from "@/components/handlers/forms/form-small";
 import FormFull from "@/components/handlers/forms/form-full";
+import FormSmall from "@/components/handlers/forms/form-small";
+import FormLanding from "@/components/handlers/forms/form-landing";
 
 // Styles
 import styles from "@/styles/components/screens/lp/lp.module.scss";
 
-export default function FormCol({ formBtnText, formSmallText, formType, hasDemoLink, utmMedium }) {
+export default function FormCol({ formBtnText, formSmallText, formType = "small", hasDemoLink, utmMedium }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.25 });
@@ -26,7 +27,7 @@ export default function FormCol({ formBtnText, formSmallText, formType, hasDemoL
             transition={{ duration: 0.5, delay: 0.25 }}
         >
 
-            {formType === "full" ? (
+            {formType === "full" && (
 
                 <FormFull
                     utmMedium={utmMedium}
@@ -38,8 +39,9 @@ export default function FormCol({ formBtnText, formSmallText, formType, hasDemoL
                     hasDemoLink={hasDemoLink}
                 />
 
-            ) : (
+            )}
 
+            {formType === "small" && (
                 <FormSmall
                     utmMedium={utmMedium}
                     formTitle="Book a 20-minute demo"
@@ -49,7 +51,18 @@ export default function FormCol({ formBtnText, formSmallText, formType, hasDemoL
                     formSmallText={formSmallText}
                     hasDemoLink={hasDemoLink}
                 />
+            )}
 
+            {formType === "landing" && (
+                <FormLanding
+                    utmMedium={utmMedium}
+                    formTitle="Book a 20-minute demo"
+                    formBtnText={formBtnText}
+                    theme="light"
+                    hasAnimation={false}
+                    formSmallText={formSmallText}
+                    hasDemoLink={hasDemoLink}
+                />
             )}
 
 

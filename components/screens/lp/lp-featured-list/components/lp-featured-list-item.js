@@ -1,0 +1,155 @@
+"use client";
+
+// Imports
+import { useRef } from "react";
+import { motion, useInView } from "motion/react";
+
+// Next
+import Image from "next/image";
+
+// Components
+import Eyebrow from "@/components/decoration/eyebrow";
+import Button from "@/components/handlers/buttons";
+
+// Styles
+import styles from "@/styles/components/sections/feature-list.module.scss";
+
+// Icons
+import { checkmark, xCircle } from "@/utils/icons";
+
+export default function FeaturedListItem({
+    index = 0,
+    theme = "light",
+    image,
+    imagePosition = "right",
+    imageSizing = "contain",
+    imageWidth = 576,
+    imageHeight = 384,
+    eyebrow,
+    title,
+    hasFullStop = true,
+    descriptionNegative,
+    descriptionPositive,
+    listNegative,
+    listPositive,
+    listTags,
+    button
+}) {
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const normalizedImageSizing = imageSizing?.toLowerCase() === "contain" ? "contain" : "cover";
+
+    return (
+
+        <motion.div
+            ref={ref}
+            className={styles.featureListItem}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 16 }}
+            transition={{ duration: 0.5, delay: 0.25 + (index * 0.075) }}
+            data-image-position={imagePosition}
+            data-type="lp"
+        >
+
+            <div className={styles.colRight}>
+
+                <Image
+                    className={styles.featureListItemImage}
+                    src={image || "/decoration/how-it-works-placeholder.png"}
+                    alt={title || "How it works image"}
+                    width={imageWidth}
+                    height={imageHeight}
+                    loading="lazy"
+                    quality={90}
+                    sizes="(max-width: 1023px) 100vw, 50vw"
+                    style={{ objectFit: normalizedImageSizing }}
+                />
+
+            </div>
+
+            <div className={`${styles.colLeft} ${styles.featureListItemContent}`}>
+
+                <div className={`${styles.featureListItemHeader} ${hasFullStop ? "hasFullStop" : undefined}`}>
+
+                    {eyebrow && (<Eyebrow hasAnimation={false} textColor={`${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={eyebrow} hasDash={false} />)}
+
+                    {title && (<h2 className={`sectionTitle ${theme === "primary" ? "colorLight" : "colorPrimaryAlt"}`}>{title}</h2>)}
+
+                </div>
+
+                {descriptionNegative && (<p>{descriptionNegative}</p>)}
+
+                {listNegative.length > 0 && (
+
+                    <div className="iconList">
+
+                        {listNegative.map((listItem, listIndex) => (
+
+                            <div key={listIndex} className="iconListItem">
+
+                                <div className={`icon`} style={{ color: listItem.iconColor || "var(--primary)" }} dangerouslySetInnerHTML={{ __html: xCircle }} />
+
+                                <span>{listItem.text}</span>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                )}
+
+                {descriptionPositive && (<p>{descriptionPositive}</p>)}
+
+                {listPositive.length > 0 && (
+
+                    <div className="iconList">
+
+                        {listPositive.map((listItem, listIndex) => (
+
+                            <div key={listIndex} className="iconListItem">
+
+                                <div className={`icon`} style={{ color: listItem.iconColor || "var(--success)" }} dangerouslySetInnerHTML={{ __html: checkmark }} />
+
+                                <span>{listItem.text}</span>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                )}
+
+                {listTags && listTags.length > 0 && (
+
+                    <div className={styles.lpFeatureListTags}>
+
+                        {listTags.map((tag, tagIndex) => (
+
+                            <span key={tagIndex} className={styles.lpFeatureListTag}>{tag}</span>
+
+                        ))}
+
+                    </div>
+
+                )}
+
+                {button && button.text && (
+
+                    <div className={styles.featuredItemFooter}>
+
+                        {button && button.text && (<Button className={`textLink ${theme === "primary" ? "colorSecondary" : "colorPrimary"}`} text={button.text} href={button.href} target={button.target} hasAnimation={false} />)}
+
+                    </div>
+
+                )}
+
+            </div>
+
+        </motion.div>
+
+    );
+
+}

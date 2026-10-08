@@ -37,6 +37,12 @@
             }
         }
     }
+
+    &[data-footer-type="minimal"] {
+        .footerCols {
+            display: none;
+        }
+    }
 }
 
 .footerContainer {

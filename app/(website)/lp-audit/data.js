@@ -1,53 +1,151 @@
-export const faqData = [
+export const lpFeaturedListData = [
     {
-        question: "Will it fit how we already inspect?",
-        answer: "Yes. You build your own inspection checklists and standards, so audits match how each site actually runs, no rebuild required."
-    },
-    {
-        question: "How do we prove a site was compliant?",
-        answer: "Every check carries a timestamp, a score and photo evidence, with a full audit trail you can show on request."
-    },
-    {
-        question: "Does it work offline and across sites?",
-        answer: "Yes. Teams inspect on mobile even with no signal, and every site rolls up into one view, however many you run."
+        eyebrow: "The compliance gap",
+        title: "Most audits find problems. Few get them fixed",
+        image: "/images/lp/audit/lp-list-item-image.png",
+        imagePosition: "left",
+        imageWidth: 640,
+        imageHeight: 640,
+        descriptionNegative: "Checklists live on clipboards and spreadsheets. Findings sit in inboxes. By the next visit, the same issue is back.",
+        listNegative: [
+            {
+                text: "Paper checklists get lost or filled in late",
+            },
+            {
+                text: "Findings never reach the person who can fix them",
+            },
+            {
+                text: "The same issues fail audit after audit",
+            },
+        ],
+        descriptionPositive: "One app for every audit, at every location.",
+        listPositive: [
+            {
+                text: "Every check logged with photo proof",
+            },
+            {
+                text: "Failed items become assigned tasks",
+            },
+            {
+                text: "Recurring issues flagged across locations",
+            },
+        ],
+        button: {
+            text: null,
+            href: null,
+            target: null,
+        }
     }
 ]
 
 export const howItWorksData = [
     {
         number: "01",
-        title: "Capture",
-        description: "Teams run inspections on mobile against your standards, with photos and scores, even fully offline.",
+        title: "Audit",
+        description: "Your teams run custom checklists on mobile, tablet, or desktop, with photos, notes, and signatures on every item.",
         image: "/images/lp/audit/lp-audit-capture.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how capture works",
+            text: "Show me",
             href: "/how-it-works/capture",
         }
     },
     {
         number: "02",
         title: "Analyse",
-        description: "Every site is scored and compared in one view, so the locations slipping show up at once.",
+        description: "A branded report is ready the moment the audit ends, and AI spots trends across every location. Thanks to our helpful EVA assistant.",
         image: "/images/lp/audit/lp-audit-analyse.png",
         imageWidth: 768,
-        imageHeight: 768,
+        imageHeight: 576,
         button: {
-            text: "See how analysis works",
+            text: "Show me",
             href: "/how-it-works/analyse",
         }
     },
     {
         number: "03",
         title: "Action",
-        description: "A failed check raises a corrective task automatically, routed to an owner and tracked to done.",
+        description: "Failed items become tasks for the right manager, tracked until they're fixed.",
         image: "/images/lp/audit/lp-audit-action.png",
         imageWidth: 768,
-        imageHeight: 768,
+        imageHeight: 576,
         button: {
-            text: "See how action works",
+            text: "Show me",
             href: "/how-it-works/action",
         }
     },
+]
+
+export const lpFeaturedListData2 = [
+    {
+        eyebrow: "Why operations teams choose AuditPro:360",
+        title: "One standard, every location",
+        image: "/images/lp/audit/lp-list-item-image-2.png",
+        imageSizing: "cover",
+        imageWidth: 576,
+        imageHeight: 576,
+        listNegative: [],
+        descriptionPositive: "Hold every location, team, and process to the same standard, and see exactly where it slips.",
+        listPositive: [
+            {
+                text: "Custom checklists for any standard",
+                iconColor: "var(--primary)",
+            },
+            {
+                text: "Photo, note, and signature on every item",
+                iconColor: "var(--primary)",
+            },
+            {
+                text: "Instant branded reports",
+                iconColor: "var(--primary)",
+            },
+            {
+                text: "Tasks assigned and tracked across locations",
+                iconColor: "var(--primary)",
+            },
+            {
+                text: "AI trends that flag recurring issues",
+                iconColor: "var(--primary)",
+            },
+            {
+                text: "Mobile, tablet, and desktop, online or offline",
+                iconColor: "var(--primary)",
+            },
+        ],
+        listTags: [
+            "Internal audits",
+            "Compliance checks",
+            "Staff assessments",
+            "Risk evaluations",
+            "Food safety and HACCP",
+            "SOP checks",
+            "ISO standards",
+            "Workplace safety"
+        ],
+        button: {
+            text: "Get a demo",
+            href: "/get-a-demo",
+        }
+    }
+]
+
+
+export const faqData = [
+    {
+        question: "Do we have to rebuild our checklists?",
+        answer: "No. Bring the checklists you already use and set them up as custom forms."
+    },
+    {
+        question: "Who runs the audits?",
+        answer: "Your own teams. Area managers, store leads, and compliance teams run audits in the app, so the standard stays in your hands."
+    },
+    {
+        question: "What if there's no signal on site?",
+        answer: "Audits keep running offline and sync automatically when the connection returns."
+    },
+    {
+        question: "Does it cover HACCP and ISO?",
+        answer: "Yes. Build checklists for HACCP, SOPs, ISO standards, and safety checks, all in one place."
+    }
 ]

@@ -11,9 +11,10 @@ import stylesAlt from "@/styles/components/sections/how-it-works.module.scss";
 import { howItWorksData } from "@/data/how-it-works-data";
 
 export default function HowItWorks({
-    containerClass = "noPaddingTop",
+    containerClass = "noPaddingTop noPaddingBottom",
     eyebrow = "- How It Works Component",
     title = "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    hasFullStop = true,
     titleClass = "sectionTitleContained",
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.",
     data = howItWorksData || []
@@ -23,13 +24,13 @@ export default function HowItWorks({
 
         <section className={`row ${stylesAlt.howItWorks} ${styles.featureList}`} style={{ gap: "0" }} data-name="how-it-works">
 
-            <div className={`container centered noPaddingBottom ${stylesAlt.howItWorksHeading} ${containerClass}`}>
+            <div className={`container centered ${stylesAlt.howItWorksHeading} ${containerClass}`}>
 
                 <div className="content">
 
                     {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
 
-                    {title && (<Text headingClass={`sectionTitle sectionTitleContained ${titleClass}`} title={title} descriptionClass="fw400" description={description} />)}
+                    {title && (<Text headingClass={`sectionTitle sectionTitleContained ${titleClass}`} title={title} descriptionClass="fw400" description={description} hasFullStop={hasFullStop} />)}
 
                 </div>
 

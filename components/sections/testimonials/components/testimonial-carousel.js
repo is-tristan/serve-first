@@ -22,7 +22,7 @@ const setAccessibleRoles = (splide) => {
     });
 };
 
-export default function TestimonialCarousel({ theme = "light", data = [] }) {
+export default function TestimonialCarousel({ theme = "light", data = [], type = "default" }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -40,7 +40,7 @@ export default function TestimonialCarousel({ theme = "light", data = [] }) {
 
                     <SplideSlide key={index} className={styles.testimonialSlide}>
 
-                        <TestimonialItem theme={theme} {...item} />
+                        <TestimonialItem theme={theme} {...item} type={type} />
 
                     </SplideSlide>
 

@@ -23,6 +23,7 @@ export default function HeaderActions({ menuAds }) {
     const pathname = usePathname()
     const headerType = getHeaderType(pathname)
     const isProductVisionHeader = headerType === "productVisionHeader"
+    const isMinimalHeader = headerType === "minimal"
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -41,6 +42,18 @@ export default function HeaderActions({ menuAds }) {
                     <div className={`${styles.productVisionHeaderButtons}`}>
 
                         <Button text="Back to ServeFirst" href="/" className={`textLink colorLight ${styles.textLinkBtn}`} hasAnimation={false} />
+
+                    </div>
+
+                </div>
+
+            ) : isMinimalHeader ? (
+
+                <div className={`${styles.headerActions}`}>
+
+                    <div className={`${styles.headerButtons}`}>
+
+                        <Button text="Request a demo" href="/get-a-demo" className={`light ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
 
                     </div>
 
@@ -72,7 +85,7 @@ export default function HeaderActions({ menuAds }) {
 
             )}
 
-            {!isProductVisionHeader && (
+            {!isProductVisionHeader && !isMinimalHeader && (
 
                 <HeaderMobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} menuAds={menuAds} />
 

@@ -1,24 +1,24 @@
 "use client";
 
+// Next
 import { usePathname } from "next/navigation";
 
+// Components
 import FooterContainer from "@/components/layouts/footer/components/footer-container";
 
-import styles from "@/styles/components/layouts/footer/footer.module.scss";
+// Config
+import { getFooterConfig, getFooterType } from "@/components/layouts/footer/components/footer-config";
 
-const footerConfig = {
-    "/products/operational-excellence/vision": {
-        theme: "dark",
-        bottomText: "vision",
-    },
-};
+// Styles
+import styles from "@/styles/components/layouts/footer/footer.module.scss";
 
 export default function FooterClient() {
 
     const pathname = usePathname();
-    const pageFooterConfig = footerConfig[pathname] || {};
+    const pageFooterConfig = getFooterConfig(pathname);
     const theme = pageFooterConfig.theme || "light";
     const bottomText = pageFooterConfig.bottomText;
+    const footerType = getFooterType(pathname);
 
     return (
 
@@ -27,6 +27,7 @@ export default function FooterClient() {
             className={`${styles.footer} ${theme === "dark" ? "bgDark" : "bgLightAlt"}`}
             role="contentinfo"
             data-theme={theme}
+            data-footer-type={footerType}
         >
 
             <FooterContainer theme={theme} bottomText={bottomText} />

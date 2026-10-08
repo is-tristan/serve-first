@@ -2,7 +2,7 @@
 import Eyebrow from "@/components/decoration/eyebrow";
 import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
-import ImageCol from "@/components/sections/banner/componets/image-col";
+import ImageCol from "@/components/sections/banner/components/image-col";
 
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";

@@ -7,7 +7,8 @@ import { getTestimonials } from "@/sanity/lib/queries"
 
 export default async function Testimonials({
     theme = "light",
-    btnPrimary = null
+    btnPrimary = null,
+    type="default"
 }) {
 
     const testimonials = await getTestimonials()
@@ -32,7 +33,7 @@ export default async function Testimonials({
 
                 {testimonialData.length > 0 && (
 
-                    <TestimonialsCarousel theme={theme} data={testimonialData} />
+                    <TestimonialsCarousel theme={theme} data={testimonialData} type={type} />
 
                 )}
 

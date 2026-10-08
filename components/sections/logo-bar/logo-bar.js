@@ -6,7 +6,8 @@ import styles from "@/styles/components/sections/logo-bar.module.scss"
 import { getLogos } from "@/sanity/lib/queries"
 
 export default async function LogoBar({
-    eyebrow = "Trusted by"
+    eyebrow = "Trusted by",
+    eyebrowDash = true
 }) {
 
     const logos = await getLogos()
@@ -27,7 +28,7 @@ export default async function LogoBar({
 
             <div className="container centered noPaddingBottom mobileCentered">
 
-                <Eyebrow text={eyebrow} textColor="colorLightAlt" hasDash={true} />
+                <Eyebrow text={eyebrow} textColor="colorLightAlt" hasDash={eyebrowDash} />
 
             </div>
 

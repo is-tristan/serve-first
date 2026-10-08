@@ -1,15 +1,18 @@
 // Components
 import LpBanner from "@/components/screens/lp/lp-banner/lp-banner";
+import LpFeatureList from "@/components/screens/lp/lp-featured-list/lp-feature-list";
 import LogoBar from "@/components/sections/logo-bar/logo-bar";
 import Testimonials from "@/components/sections/testimonials/testimonials";
 import Faq from "@/components/sections/faq/faq";
 import HowItWorks from "@/components/sections/how-it-works/how-it-works";
-import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import LpCta from "@/components/screens/lp/lp-cta/lp-cta";
 
 // Data
 import {
+    lpFeaturedListData,
+    howItWorksData,
+    lpFeaturedListData2,
     faqData,
-    howItWorksData
 } from "./data";
 
 export default function LpAudit() {
@@ -19,46 +22,63 @@ export default function LpAudit() {
         <>
 
             <LpBanner
-                eyebrow="Operational excellence"
-                title="Catch the unhappy customer before they leave"
-                description="Serve First replaces paper inspections with digital audits, photo evidence and a corrective task the moment a check fails, across every site you run."
+                eyebrow="Digital audits and inspections"
+                title="Find the failed check before the inspector does"
+                description="Serve First Audits put every audit, inspection, and checklist in one app, flags failed items the moment they're logged, and assigns the fix to the right person."
                 hasButtons={false}
                 formSmallText="See it on your own sites. No slides, no obligation."
                 utmMedium="LP Audit"
                 checkList={[
-                    "Every site scored against one standard",
-                    "A failed check becomes a fix, automatically",
-                    "Live pass rates across the whole estate"
+                    "Custom checklists with photos, notes, and signatures",
+                    "Branded reports the moment an audit ends",
+                    "Works offline, syncs when you're back online"
                 ]}
             />
 
-            <LogoBar />
+            <LogoBar
+                eyebrow="Trusted by multi-location teams in retail, hospitality, and healthcare"
+                eyebrowDash={false}
+            />
 
-            <Testimonials />
-
-            <Faq
-                eyebrow="Common questions"
-                title="What multi-site teams ask us first"
-                data={faqData}
+            <LpFeatureList
+                data={lpFeaturedListData}
             />
 
             <HowItWorks
+                containerClass="noPaddingBottom"
+                hasFullStop={false}
                 eyebrow="How it works"
-                title="From standard to proof<span class='colorPrimary'>,</span> every site"
-                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
+                title="Audit. Assign. Fix."
+                description="Run custom checklists, get instant branded reports, and turn every failed item into a tracked fix."
                 data={howItWorksData}
             />
 
-            <CtaBannerOne
-                title="Bring every site up to one standard"
-                description="See it on your own sites. No slides, no obligation."
+            <LpFeatureList
+                containerClass="noPaddingTop"
+                data={lpFeaturedListData2}
+            />
+
+            <Testimonials type="alt" />
+
+            <Faq
+                eyebrow="Common questions"
+                title="What operations teams ask us"
+                data={faqData}
+                button={null}
+            />
+
+            <LpCta
+                type="audit"
+                eyebrow="AuditPro:360"
+                title="Fix it before the inspector finds it."
+                description="Get a short demo to see how AuditPro:360 runs audits, builds reports, and gets failed items fixed."
+                image="/images/lp/audit/lp-audit-cta.png"
                 buttonPrimary={
                     {
                         text: "Show me my sites",
                         href: "#banner",
                     }
                 }
-                buttonSecondary={null}
             />
 
         </>
