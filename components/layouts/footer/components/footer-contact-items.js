@@ -7,6 +7,9 @@ import styles from "@/styles/components/layouts/footer/footer-contact-items.modu
 // Data
 import { footerContactItems } from "../items/footer-items-data";
 
+// Icon
+import { mapPinIcon } from "@/utils/icons";
+
 export default function FooterContactItems() {
 
     const contactItems = Object.values(footerContactItems);
@@ -21,32 +24,34 @@ export default function FooterContactItems() {
 
                     {contactItems.map((item, index) => (
 
-                        <Link
-                            key={index}
-                            href={item.href ?? "#"}
-                            className={styles.footerContactItem}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ pointerEvents: item.href ? "auto" : "none", cursor: item.href ? "pointer" : "default" }}
-                        >
+                        <div key={index} className={styles.footerContactItem}>
 
-                            <div className={styles.footerContactItemIcon} dangerouslySetInnerHTML={{ __html: item.icon }} />
+                            <span className={styles.footerContactItemLabel}>{item.label}</span>
 
-                            <div className={styles.footerContactItemText}>
+                            <div className={styles.footerContactItemContent}>
 
-                                <span className={styles.footerContactItemTextLabel}>{item.label}</span>
+                                <div className={styles.footerContactItemIcon} dangerouslySetInnerHTML={{ __html: mapPinIcon }} />
 
-                                <span className={styles.footerContactItemTextValue}>{item.text}</span>
+                                <div className={styles.footerContactItemText}>
+
+                                    <Link href={item.phoneHref} target="_blank">{item.phone}</Link>
+
+                                    <Link href={item.addressHref} target="_blank">{item.address}</Link>
+
+                                </div>
 
                             </div>
 
-                        </Link>
+                        </div>
 
                     ))}
 
-                </div>
+                    <Link href="mailto:info@servefirst.ai" target="_blank" className={styles.footerContactItemEmail}>info@servefirst.ai</Link>
 
-            )}
+                </div >
+
+            )
+            }
 
         </>
     )

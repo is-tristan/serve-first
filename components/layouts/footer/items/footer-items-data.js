@@ -119,22 +119,22 @@ export const footerPolicyItems = [
   },
 ];
 
-// Contact Items
-import { emailIcon, mapPinIcon } from "@/utils/icons";
-
-export const footerContactItems = {
-  email: {
-    label: "Email Us",
-    text: "info@servefirst.co.uk",
-    href: "mailto:info@servefirst.co.uk",
-    icon: emailIcon,
+export const footerContactItems = [
+  {
+    label: "US Office",
+    phone: "+1 (229) 475-1777",
+    phoneHref: "tel:+12294751777",
+    address: "8000 Avalon Boulevard, Suite 100, Alpharetta, GA 30009",
+    addressHref: "https://maps.app.goo.gl/NoYq71Bkx8zJ9Ctd6"
   },
-  address: {
-    label: "Based in",
-    text: "Milton Keynes, UK",
-    icon: mapPinIcon,
+  {
+    label: "UK Office",
+    phone: "+44 (0) 203 929 4568",
+    phoneHref: "tel:+442039294568",
+    address: "The Spaces, 100 Avebury Blvd, Milton Keynes MK9 1FH",
+    addressHref: "https://maps.app.goo.gl/hgzvU3e2nchQSxiRA"
   },
-};
+];
 
 // Social Items
 import { facebookIcon, instagramIcon, linkedInIcon } from "@/utils/icons";
