@@ -203,7 +203,7 @@ export const faqData = [
     },
     {
         question: "What is a system of action?",
-        answer: "A system of action does not stop at showing you the data. Every signal becomes the next action, routed to an owner with a due date and tracked to proof of completion, so insight reliably ends in a fix rather than sitting in a report."
+        answer: "A system of action doesn't stop at showing you the data. Every signal becomes the next action, routed to an owner with a due date and tracked to proof of completion, so insight reliably ends in a fix rather than sitting in a report."
     },
     {
         question: "How does it fit with our existing dashboards?",

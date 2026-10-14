@@ -104,7 +104,7 @@ export default async function MysteryShopping() {
                 item={{
                     "eyebrow": "EVA",
                     "title": "Ask what your visits are really revealing",
-                        "description": "Ask EVA what your visits reveal across all your locations and get a clear, evidence-backed answer in seconds.",
+                        "description": "Ask EVA what your visits reveal across every location and get a clear, evidence-backed answer in seconds.",
                     "image": "/images/products/customer-experience/mystery-shopping/mystery-shopping-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,

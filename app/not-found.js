@@ -24,7 +24,7 @@ export default function NotFound() {
                 <Banner
                     eyebrow="404 - Page Not Found"
                     title="This page has failed its audit"
-                    description="We checked the site, scored the page and marked it non-compliant. It is either missing, moved or never existed. Either way, it did not meet the standard."
+                    description="We checked the site, scored the page and marked it non-compliant. It is either missing, moved or never existed. Either way, it didn't meet the standard."
                     image={notFoundImage}
                     imageSizing="contain"
                     buttonPrimary={{

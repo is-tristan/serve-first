@@ -79,7 +79,7 @@ export default async function ReviewMonitoring() {
             <HowItWorks
                 eyebrow="From comparison to a fix"
                 title="Benchmarking is only useful if it changes something"
-                description="Serve First does not stop at the chart. It turns the gap into something each location can act on."
+                description="Serve First doesn't stop at the chart. It turns the gap into something each location can act on."
                 data={howItWorksData}
             />
 

@@ -24,7 +24,7 @@ export default function FormSmall({
     hasDemoLink = true,
     formBtnText = "Send message",
     formTitle = null,
-    formSmallText = "No obligation. We won't pass your details on.",
+    formSmallText = "No obligation. We won't share your information.",
     hasAnimation = true,
     formId = "6c85505f-8f36-4de2-8618-47a73caf8144",
     utmMedium = "Contact Us",

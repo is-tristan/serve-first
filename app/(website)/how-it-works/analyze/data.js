@@ -69,7 +69,7 @@ export const howItWorksData = [
 export const contentGridData = [
     {
         title: "Read every signal",
-        description: "EVA reads each captured signal as it arrives, from terminals, surveys, reviews and audits, so nothing waits in a line to be looked at.",
+        description: "EVA reads each captured signal as it arrives, from terminals, surveys, reviews and audits, so nothing waits in line to be looked at.",
         image: "/images/how-it-works/capture/capture-collect-everywhere.svg",
         button: null
     },

@@ -286,7 +286,7 @@ export default function FormFull({
 
                         <div style={{ color: theme === "primary" ? "var(--light)" : "var(--primaryAlt)" }} className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
 
-                        <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>No obligation. We won't pass your details on.</span>
+                        <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>No obligation. We won't share your information.</span>
 
                     </div>
 

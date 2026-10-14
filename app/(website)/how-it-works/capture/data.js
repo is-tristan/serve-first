@@ -237,7 +237,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Facilities management",
-        title: "Capture standards and service signals across all your locations.",
+        title: "Capture standards and service signals across a dispersed portfolio.",
         image: "/images/home/home-facilities-management.png",
         button: {
             text: "Explore Facilities management",
