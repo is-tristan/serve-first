@@ -39,7 +39,7 @@ export default function Home() {
       <Banner
         eyebrow="Operational intelligence for customer experience"
         title="Catch every issue before your customers feel it"
-        description="Serve First connects your customer, operational and market signals across every site, then turns them into the actions that put things right."
+        description="Serve First connects your customer, operational and market signals across every location, then turns them into the actions that fix them."
         image="/images/home/home-cover.png"
         imageSizing="contain"
         buttonSecondary={{
@@ -74,9 +74,9 @@ export default function Home() {
         description={null}
         item={{
           "eyebrow": "Meet EVA",
-          "title": "The always-on analyst for every site",
+          "title": "The always-on analyst for every location",
           "description": null,
-          "htmlDescription": "<p><strong class='fw700'>EVA reads the signals across every site and hands you the next actions, no dashboard hunting.</strong></p> <p>EVA sits across every signal in one operating picture, finds what needs attention and tells you the action to take, where and why. No digging through dashboards to work out your next move.</p>",
+          "htmlDescription": "<p><strong class='fw700'>EVA reads the signals across every location and hands you the next actions, no dashboard hunting.</strong></p> <p>EVA sits across every signal in one operating picture, finds what needs attention and tells you the action to take, where and why. No digging through dashboards to work out your next move.</p>",
           "image": "/images/home/home-eva.png",
           "imageWidth": 575,
           "imageHeight": 576,
@@ -96,7 +96,7 @@ export default function Home() {
 
       <IndustryCards
         eyebrow="By industry"
-        title="Built for every multi-site business"
+        title="Built for every multi-location business"
         description="One platform, tuned to the standards and signals your sector runs on."
         button={null}
         data={industryCardsData}
@@ -113,8 +113,8 @@ export default function Home() {
 
       <CtaBannerOne
         theme="primary"
-        title="See it on your sites"
-        description="A personalised walkthrough with your locations, teams and data."
+        title="See it at your locations"
+        description="A personalized walkthrough with your locations, teams and data."
       />
 
     </>

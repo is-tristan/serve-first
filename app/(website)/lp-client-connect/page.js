@@ -21,9 +21,9 @@ export default function LpClientConnect() {
             <LpBanner
                 eyebrow="B2B client feedback"
                 title="Know an account is unhappy before they tell you"
-                description="Client Connect runs branded feedback programmes across your B2B accounts, so account teams see the risk early, not at the renewal conversation."
+                description="Client Connect runs branded feedback programs across your B2B accounts, so account teams see the risk early, not at the renewal conversation."
                 hasButtons={false}
-                formSmallText="See it on your own sites. No slides, no obligation."
+                formSmallText="See it on your own locations. No slides, no obligation."
                 utmMedium="LP Client Connect"
                 checkList={[
                     "Branded invitations, per account",
@@ -45,7 +45,7 @@ export default function LpClientConnect() {
             <HowItWorks
                 eyebrow="How it works"
                 title="From invitation to a saved renewal"
-                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
+                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyze makes sense of them. Action fixes things."
                 data={howItWorksData}
             />
 
@@ -54,7 +54,7 @@ export default function LpClientConnect() {
                 description="See it on your own accounts. No slides, no obligation."
                 buttonPrimary={
                     {
-                        text: "Show me a programme",
+                        text: "Show me a program",
                         href: "#banner",
                     }
                 }

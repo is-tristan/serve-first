@@ -22,7 +22,37 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-role/compliance-managers");
+    const metadata = await getPageMetadata("/solutions/by-role/compliance-managers");
+    const title = "Compliance Management Software, Multi-Location | Serve First";
+    const description = "Document compliance across every location with Serve First. Compliance managers get checklists, captured evidence and audit trails ready on request.";
+    const keywords = metadata.keywords?.map((keyword) => {
+        if (keyword === "multi-site compliance") {
+            return "multi-location compliance";
+        }
+
+        if (keyword === "duty of care evidence") {
+            return "compliance documentation";
+        }
+
+        return keyword;
+    });
+
+    return {
+        ...metadata,
+        title,
+        description,
+        keywords,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default function ComplianceManagers() {
@@ -33,16 +63,16 @@ export default function ComplianceManagers() {
 
             <Banner
                 eyebrow="For compliance managers"
-                title="Compliance you can evidence, not assume"
-                description="Serve First helps compliance managers run checks, capture evidence and prove duty of care across every site, with audit trails ready the moment anyone asks."
+                title="Compliance you can prove, not assume"
+                description="Serve First helps compliance managers run checks, capture evidence and prove compliance across every location, with audit trails ready the moment anyone asks."
                 image="/images/solutions/by-role/compliance-managers/compliance-managers-cover.png"
                 imageSizing="contain"
             />
 
             <RoleContext
                 eyebrow="Built for compliance managers"
-                title="If it is not evidenced<span class='colorPrimary'>,</span> it did not happen"
-                description="Compliance is about proof, not intentions. Serve First turns your obligations into checklists, captured evidence and audit trails across every site and venue you cover."
+                title="If it isn't documented<span class='colorPrimary'>,</span> it didn't happen"
+                description="Compliance is about proof, not intentions. Serve First turns your obligations into checklists, captured evidence and audit trails across every location and venue you cover."
                 btnPrimary={null}
                 data={roleContextData}
             />
@@ -50,7 +80,7 @@ export default function ComplianceManagers() {
             <HowItWorks
                 eyebrow="How it works"
                 title="From obligation to evidence<span class='colorPrimary'>,</span> without the scramble"
-                description="Three stages turn duty of care into ready proof."
+                description="Three stages turn your obligations into ready proof."
                 data={howItWorksData}
             />
 
@@ -75,7 +105,7 @@ export default function ComplianceManagers() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Could you prove compliance today<span class='colorPrimary'>,</span> at every site<span class='colorPrimary'>?</span>"
+                title="Could you prove compliance today<span class='colorPrimary'>,</span> at every location<span class='colorPrimary'>?</span>"
                 hasFullStop={false}
                 data={challengeFrameData}
             />
@@ -90,7 +120,7 @@ export default function ComplianceManagers() {
             <CtaBannerContact
                 theme="primary"
                 title="See what Serve First can do for your compliance"
-                description="Book a personalised demo and we will show you how compliance managers evidence duty of care across every site, on your data."
+                description="Book a personalized demo and we'll show you how compliance managers document compliance across every location, using your data."
             />
 
         </>

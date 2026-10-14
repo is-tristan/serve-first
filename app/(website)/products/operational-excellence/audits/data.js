@@ -13,13 +13,13 @@ export const featureListData = [
     {
         eyebrow: "From checklist to action",
         title: "Audits that close their own gaps fast",
-        description: "Score each site against your standards and capture photo evidence as you go. A failed check raises a corrective task automatically, so the gap is owned and closed rather than noted and forgotten.",
+        description: "Score each location against your standards and capture photo evidence as you go. A failed check raises a corrective task automatically, so the gap is owned and closed rather than noted and forgotten.",
         image: "/images/products/operational-excellence/audits/audits-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 576,
         list: [
             {
-                text: "Digital checklists per site",
+                text: "Digital checklists per location",
             },
             {
                 text: "Photo evidence and scoring",
@@ -42,8 +42,8 @@ export const roleContextData = [
     {
         icon: clipBoardCheckIcon,
         eyebrow: "Digital checks",
-        title: "Digital checklists per site",
-        description: "Score every site against your standards on mobile, so each location gets checked the same way.",
+        title: "Digital checklists per location",
+        description: "Score every location against your standards on a phone or tablet, so each one gets checked the same way.",
     },
     {
         icon: cameraCheckIcon,
@@ -61,7 +61,7 @@ export const roleContextData = [
         icon: fileSearchIcon,
         eyebrow: "Pass and fail",
         title: "Clear pass and fail reporting",
-        description: "See every site scored and compared in one view, so you know which locations need attention now.",
+        description: "See every location scored and compared in one view, so you know which locations need attention now.",
     }
 ]
 
@@ -69,7 +69,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Teams capture audits on mobile against your standards, recording photos and scores even when fully offline.",
+        description: "Teams capture audits on a phone or tablet against your standards, recording photos and scores even when fully offline.",
         image: "/images/products/operational-excellence/audits/audits-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -80,14 +80,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "Every site is scored and compared, so you see which locations meet standard and which need attention now.",
+        title: "Analyze",
+        description: "Every location is scored and compared, so you see which locations meet standard and which need attention now.",
         image: "/images/products/operational-excellence/audits/audits-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how sites compare",
-            href: "/how-it-works/analyse",
+            text: "See how locations compare",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -107,7 +107,7 @@ export const howItWorksData = [
 export const challengeFrameData = [
     {
         eyebrow: "Challenge 01",
-        title: "You set the standard, but you cannot prove it is being met at every site.",
+        title: "You set the standard, but you can't prove it is being met at every location.",
         subheading: "How Serve First solves it",
         description: "Digital audits score every location against your standards and link each failure to a corrective action, so consistency is something you can show, not assume.",
         tags: [
@@ -156,7 +156,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "See your sites the way customers do.",
+        title: "See your locations the way customers do.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -176,7 +176,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Audit guest standards at every site.",
+        description: "Audit guest standards at every location.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -196,7 +196,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Evidence care standards at every site.",
+        description: "Document care standards at every location.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -228,7 +228,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -272,22 +272,22 @@ export const faqData = [
     },
     {
         question: "Can audits be run offline?",
-        answer: "Yes. Teams capture audits on mobile even when fully offline, recording photos and scores, and everything syncs automatically once a connection returns, so no site is a blind spot."
+        answer: "Yes. Teams capture audits on a phone or tablet even when fully offline, recording photos and scores, and everything syncs automatically once a connection returns, so no location is a blind spot."
     },
     {
         question: "What happens when a check fails?",
         answer: "A failed item raises a corrective task automatically, routed to an owner and tracked to proof of completion, so the gap is owned and closed rather than noted and forgotten."
     },
     {
-        question: "Can we compare standards across sites?",
-        answer: "Yes. Every site is scored against the same standards in one operating picture, so you can see which locations meet standard and which need attention now, with EVA explaining the cause."
+        question: "Can we compare standards across locations?",
+        answer: "Yes. Every location is scored against the same standards in one operating picture, so you can see which locations meet standard and which need attention now, with EVA explaining the cause."
     },
     {
         question: "Does it keep an audit trail for compliance?",
         answer: "Yes. Every audit, score and corrective action is captured with a full, timestamped audit trail, so the evidence is ready for compliance and outcome tracking on request."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every audit feeds one operating picture, so you can hold every location to a single standard, however many sites you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Every audit feeds one operating picture, so you can hold every location to a single standard, however many locations you run."
     }
 ]

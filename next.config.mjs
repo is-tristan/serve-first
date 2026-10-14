@@ -4,6 +4,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/how-it-works/analyse",
+        destination: "/how-it-works/analyze",
+        permanent: true,
+      },
+      {
         source: "/solutions/by-role/compliance-manager",
         destination: "/solutions/by-role/compliance-managers",
         permanent: true,
@@ -25,6 +30,11 @@ const nextConfig = {
       },
       {
         source: "/products/vision",
+        destination: "/products/operational-excellence/vision",
+        permanent: true,
+      },
+      {
+        source: "/coming-soon",
         destination: "/products/operational-excellence/vision",
         permanent: true,
       },

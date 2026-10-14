@@ -39,7 +39,7 @@ export default function NotFound() {
                 <CtaBannerOne
                     theme="primary"
                     title="Corrective action needed: head back home"
-                    description="The homepage passed inspection. Start there, or talk to us and we will point you to the right place."
+                    description="The homepage passed inspection. Start there, or talk to us and we'll point you to the right place."
                     buttonPrimary={{
                         text: "Go to homepage",
                         href: "/",

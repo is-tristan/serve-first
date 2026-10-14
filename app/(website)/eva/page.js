@@ -18,7 +18,27 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/eva");
+    const metadata = await getPageMetadata("/eva");
+    const title = "EVA: AI Analyst For Multi-Location Operations - Serve First";
+    const description = "EVA does the analysis, so you aren't juggling reports. Ask in plain language and EVA gives you the latest status across every location";
+    const keywords = metadata.keywords?.map((keyword) => keyword === "AI assistant for multi-site operations" ? "AI assistant for multi-location operations" : keyword);
+
+    return {
+        ...metadata,
+        title,
+        description,
+        keywords,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default function Eva() {
@@ -30,7 +50,7 @@ export default function Eva() {
             <Banner
                 eyebrow="EVA, your always-on analyst"
                 title="Know what is happening. Know what to do next"
-                description="EVA does the analysis, so you are not juggling reports. Ask in plain language and EVA gives you the latest status across every site, what needs your attention, and a plan of action shaped by your role."
+                description="EVA does the analysis, so you aren't juggling reports. Ask in plain language and EVA gives you the latest status across every location, what needs your attention, and a plan of action shaped by your role."
                 image="/images/eva/eva-cover.png"
                 imageSizing="contain"
                 buttonSecondary={{ text: null }}
@@ -43,7 +63,7 @@ export default function Eva() {
                 item={{
                     "eyebrow": "Meet EVA",
                     "title": "More than a chat box. An analyst that hands you a plan",
-                    "htmlDescription": "<p>EVA does the analysis across every site, so you start from the answer, not a pile of reports.</p> <p>Ask in plain language. EVA gives the status, what is driving it and the next actions by role.</p>",
+                    "htmlDescription": "<p>EVA does the analysis across every location, so you start from the answer, not a pile of reports.</p> <p>Ask in plain language. EVA gives the status, what is driving it and the next actions by role.</p>",
                     "image": "/images/eva/eva-eva.png",
                     "imageWidth": 600,
                     "imageHeight": 600,
@@ -81,7 +101,7 @@ export default function Eva() {
             <CtaBannerOne
                 theme="primary"
                 title="See EVA turn your results into a plan of action"
-                description="Book a personalised demo and we will let EVA analyse your results and show you the plan it builds for your team."
+                description="Book a personalized demo and we'll let EVA analyze your results and show you the plan it builds for your team."
             />
 
         </>

@@ -34,7 +34,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -62,7 +62,7 @@ export const roleContextData = [
         icon: shieldTick,
         eyebrow: "Safe sending",
         title: "Unsubscribe and repeat guards",
-        description: "Guard contacts from over-emailing with unsubscribe and repeat limits, so programmes stay welcome.",
+        description: "Guard contacts from over-emailing with unsubscribe and repeat limits, so programs stay welcome.",
     }
 ]
 
@@ -81,14 +81,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Responses return as structured data, with completion rates and trends on the Client Connect dashboard.",
         image: "/images/products/customer-experience/client-connect/client-connect-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "See the account view",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -129,7 +129,7 @@ export const productHighlightData = [
     {
         icon: clipBoardCheckIcon,
         eyebrow: "Survey",
-        title: "Run CSAT and NPS across every site.",
+        title: "Run CSAT and NPS across every location.",
         linkText: "Explore",
         link: "/products/customer-experience/survey",
     },
@@ -197,7 +197,7 @@ export const moduleStatsData = [
 export const contentGridData = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -248,7 +248,7 @@ export const faqData = [
     },
     {
         question: "Can we collect feedback from more than one contact per client?",
-        answer: "Yes. You manage clients and contacts in a lightweight CRM view and can weight responses by seniority, so you hear from every stakeholder who shapes the relationship, not just a single contact, and a client with many sites still rolls up to one account view."
+        answer: "Yes. You manage clients and contacts in a lightweight CRM view and can weight responses by seniority, so you hear from every stakeholder who shapes the relationship, not just a single contact, and a client with many locations still rolls up to one account view."
     },
     {
         question: "How often can we send reviews?",

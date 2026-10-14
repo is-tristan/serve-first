@@ -74,8 +74,8 @@ export default async function MediaPage({ params }) {
 
             <CtaBannerOne
                 theme="primary"
-                title="See it on your sites"
-                description="A personalised walkthrough with your locations, teams and data."
+                title="See it on your locations"
+                description="A personalized walkthrough with your locations, teams and data."
             />
 
             <BlogMore

@@ -105,7 +105,7 @@ export const footerPolicyItems = [
     href: "/legal/privacy-policy",
   },
   {
-    label: "Cookies Policy",
+    label: "Cookie Policy",
     href: "/legal/cookie-policy",
   },
   {

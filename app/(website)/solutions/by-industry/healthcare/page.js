@@ -35,8 +35,8 @@ export default function Healthcare() {
 
             <Banner
                 eyebrow="Solutions by industry"
-                title="Patient experience, proven at every site"
-                description="In healthcare, standards and trust are everything. Serve First connects patient feedback with how each site runs, so you can raise care standards and evidence them when it matters."
+                title="Patient experience, proven at every location"
+                description="In healthcare, standards and trust are everything. Serve First connects patient feedback with how each location runs, so you can raise care standards and prove them when it matters."
                 image="/images/solutions/by-industry/healthcare/healthcare-cover.png"
                 imageSizing="contain"
             />
@@ -58,8 +58,8 @@ export default function Healthcare() {
 
             <ProductHighlight
                 eyebrow="What providers use"
-                title="One toolkit for every site"
-                description="The functions that raise care standards and evidence them, connected so insight turns into action."
+                title="One toolkit for every location"
+                description="The functions that raise care standards and prove them, connected so insight turns into action."
                 linkText={null}
                 data={productHighlightData}
             />
@@ -78,7 +78,7 @@ export default function Healthcare() {
             />
 
             <ContentGrid
-                eyebrow="Common Challenges"
+                eyebrow="Common challenges"
                 title="Challenges we solve here"
                 description="The challenges providers bring to Serve First, and where to read more."
                 data={contentGridData}
@@ -94,8 +94,8 @@ export default function Healthcare() {
 
             <CtaBannerOne
                 theme="primary"
-                title="See care standards you can evidence"
-                description="Book a personalised demo and we will show you how Serve First works across your sites, on your data."
+                title="See care standards you can prove"
+                description="Book a personalized demo and we'll show you how Serve First works across your locations, using your data."
             />
         </>
 

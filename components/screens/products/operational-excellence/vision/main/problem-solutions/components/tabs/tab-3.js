@@ -15,7 +15,7 @@ export default function Tab3() {
                 headingClass={`sectionTitle colorLight`}
                 titleAnimationDelay={0.5}
                 descriptionAnimationDelay={0.75}
-                title="A plan to put it right"
+                title="A plan to fix it"
                 descriptionClass="large"
                 description="It raises a task for the person on shift, and tracks it through to done."
             />

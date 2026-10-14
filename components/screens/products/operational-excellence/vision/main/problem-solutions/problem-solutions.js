@@ -7,7 +7,7 @@ import Tabs from "./components/tabs";
 import styles from "@/styles/components/screens/products/operational-excellence/vision/components/problem-solution-section.module.scss";
 
 export default function ProblemSolutions({
-    eyebrow = "See it, understand it, put it right",
+    eyebrow = "See it, understand it, fix it",
     title = "From what the camera sees to what gets done"
 }) {
 

@@ -26,13 +26,13 @@ export const platformStoryData = [
         ]
     },
     {
-        eyebrow: "02 | Analyse",
+        eyebrow: "02 | Analyze",
         image: "/images/home/home-analyse.png",
         imageWidth: 768,
         imageHeight: 384,
         imageSizing: "cover",
-        title: "Analyse",
-        description: "Understand the patterns, risks and root causes behind the data, not just what was reported, across every site, region and team.",
+        title: "Analyze",
+        description: "Understand the patterns, risks and root causes behind the data, not just what was reported, across every location, region and team.",
         list: [
             {
                 text: "Trends, risks and location-level performance",
@@ -47,7 +47,7 @@ export const platformStoryData = [
         button: [
             {
                 text: "See how it works",
-                href: "/how-it-works/analyse",
+                href: "/how-it-works/analyze",
             }
         ]
     },
@@ -112,7 +112,7 @@ export const challengeFrameData = [
     {
 
         title: "Customer feedback gets collected every week. Almost nothing changes as a result.",
-        description: "Every signal is analysed and turned into an assigned action with a named owner, so insight leads to a fix and proof of completion, not another report that sits untouched.",
+        description: "Every signal is analyzed and turned into an assigned action with a named owner, so insight leads to a fix and proof of completion, not another report that sits untouched.",
         tags: [
             {
                 tag: "Assigned actions",
@@ -170,7 +170,7 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "200",
         numberSuffix: "+",
-        description: "Analyse: patterns, risks and root causes surfaced by EVA",
+        description: "Analyze: patterns, risks and root causes surfaced by EVA",
     },
     {
         numberPrefix: "",
@@ -195,7 +195,7 @@ export const faqData = [
     },
     {
         question: "What industries does Serve First work with?",
-        answer: "Serve First works with multi-location businesses in retail, leisure and hospitality, healthcare, restaurants, facilities management, and venues and events. It is built for any organisation that needs the same standard to hold across many sites."
+        answer: "Serve First works with multi-location businesses in retail, leisure and hospitality, healthcare, restaurants, facilities management, and venues and events. It's built for any organization that needs the same standard to hold across many locations."
     },
     {
         question: "What is EVA and what does it do?",
@@ -210,11 +210,11 @@ export const faqData = [
         answer: "Yes. Serve First captures mystery shopping, customer surveys, feedback terminals, audits and online reviews in one platform, so the picture of each location is connected rather than split across separate tools."
     },
     {
-        question: "What is the Capture, Analyse, Action model?",
-        answer: "Capture, Analyse, Action is how Serve First works. Capture brings together every customer, operational and market signal. Analyse finds the patterns, risks and root causes behind the data. Action turns insight into assigned tasks, workflows and training, with proof of completion."
+        question: "What is the Capture, Analyze, Action model?",
+        answer: "Capture, Analyze, Action is how Serve First works. Capture brings together every customer, operational and market signal. Analyze finds the patterns, risks and root causes behind the data. Action turns insight into assigned tasks, workflows and training, with proof of completion."
     },
     {
         question: "What is Martyn's Law and does Serve First help with compliance?",
-        answer: "Martyn's Law (the Terrorism (Protection of Premises) Act) is UK legislation requiring venues and public premises to take steps to be better prepared for and protected from terrorist attacks, with duties scaling up according to a venue's capacity. Serve First helps you meet it by turning your Martyn's Law duties into structured checklists run at every venue, capturing evidence as the work is done and keeping an audit trail per site, so you can demonstrate your protection measures on request.",
+        answer: "Martyn's Law (the Terrorism (Protection of Premises) Act) is UK legislation requiring venues and public premises to take steps to be better prepared for and protected from terrorist attacks, with duties scaling up according to a venue's capacity. Serve First helps you meet it by turning your Martyn's Law duties into structured checklists run at every venue, capturing evidence as the work is done and keeping an audit trail per location, so you can demonstrate your protection measures on request.",
     },
 ]

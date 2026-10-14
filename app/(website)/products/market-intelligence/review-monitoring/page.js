@@ -32,7 +32,21 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/products/market-intelligence/review-monitoring");
+    const metadata = await getPageMetadata("/products/market-intelligence/review-monitoring");
+    const title = "Online Review Monitoring for Multi-Location Brands | Serve First";
+
+    return {
+        ...metadata,
+        title,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+        },
+    };
 }
 
 export default async function ReviewMonitoring() {
@@ -43,7 +57,7 @@ export default async function ReviewMonitoring() {
 
             <Banner
                 eyebrow="Market intelligence platform"
-                title="Every review, every site, one view"
+                title="Every review, every location, one view"
                 description="Serve First brings reviews from across your locations and platforms into one place, so you can track sentiment, respond fast and protect your reputation."
                 image="/images/products/market-intelligence/review-monitoring/review-monitoring-cover.png"
                 imageSizing="contain"
@@ -91,7 +105,7 @@ export default async function ReviewMonitoring() {
                 item={{
                     "eyebrow": "EVA",
                     "title": "Ask what your reviews really add up to overall",
-                        "description": "Ask EVA what your reviews are saying across sites and get the themes behind your rating in plain English.",
+                        "description": "Ask EVA what your reviews are saying across locations and get the themes behind your rating in plain English.",
                     "image": "/images/products/market-intelligence/review-monitoring/review-monitoring-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
@@ -148,7 +162,7 @@ export default async function ReviewMonitoring() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your reputation"
-                description="Book a personalised demo and we will show you every review across your estate, gathered in one place."
+                description="Book a personalized demo and we'll show you every review across all your locations, gathered in one place."
             />
 
         </>

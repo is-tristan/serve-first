@@ -14,10 +14,10 @@ export const challengeFrameData = [
     {
         eyebrow: "Challenge 01",
         title: "How Serve First solves it",
-        description: "Serve First reads the public reviews for your sites and their local rivals, scores them the same way, and shows the gap for every location, so you can see exactly who you are losing to and what to put right.",
+        description: "Serve First reads the public reviews for your locations and their local competitors, scores them the same way, and shows the gap for every location, so you can see exactly who you are losing to and what to fix.",
         tags: [
             {
-                tag: "Compared site by site",
+                tag: "Compared location by location",
             },
             {
                 tag: "Based on real reviews",
@@ -33,7 +33,7 @@ export const featureListData = [
     {
         eyebrow: "What you get",
         title: "A clear read on every local market",
-        description: "In one view you see how each site rates against the rivals near it, what those rivals do well, and where the gap is widest, so you know where to focus first.",
+        description: "In one view you see how each location rates against the competitors near it, what those competitors do well, and where the gap is widest, so you know where to focus first.",
         image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -42,7 +42,7 @@ export const featureListData = [
                 text: "Your score next to theirs",
             },
             {
-                text: "The rivals near each site",
+                text: "The competitors near each location",
             },
             {
                 text: "What customers praise and complain about",
@@ -53,7 +53,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -63,25 +63,25 @@ export const roleContextData = [
         icon: userCheckIcon,
         eyebrow: "Local rivals",
         title: "Finds your real rivals",
-        description: "Serve First finds the rivals genuinely near each site and after the same customers, not a national average.",
+        description: "Serve First finds the competitors genuinely near each location and after the same customers, not a national average.",
     },
     {
         icon: messageChatCircleIcon,
         eyebrow: "Review sentiment",
         title: "Reads words, not stars",
-        description: "Serve First reads every public review and scores how people feel, so a four-star dip cannot slip by.",
+        description: "Serve First reads every public review and scores how people feel, so a four-star dip can't slip by.",
     },
     {
         icon: lineGapIcon,
         eyebrow: "The gap",
         title: "Shows what drives the gap",
-        description: "Serve First groups reviews into topics like service and wait times, so you see what wins or loses custom.",
+        description: "Serve First groups reviews into topics like service and wait times, so you see what wins or loses business.",
     },
     {
         icon: chartBreakoutIcon,
         eyebrow: "Always current",
         title: "Updates every month",
-        description: "Serve First refreshes the comparison every month, so you hold a current read on each market, never stale.",
+        description: "Serve First refreshes the comparison every month, so you have a current read on each market, never stale.",
     }
 ]
 
@@ -89,7 +89,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Serve First finds the rivals near each site and collects their public reviews automatically, every month.",
+        description: "Serve First finds the competitors near each location and collects their public reviews automatically, every month.",
         image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -100,20 +100,20 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "It scores sentiment and topics for you and your rivals, so you see how you compare and what is behind the gap, location by location.",
         image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "See how analysis works",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
         number: "03",
         title: "Action",
-        description: "The gaps become tasks and training for each site, routed to an owner and tracked to done, so locations actually close the distance.",
+        description: "The gaps become tasks and training for each location, routed to an owner and tracked to done, so locations actually close the distance.",
         image: "/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-action.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -142,7 +142,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "See your sites the way your customers do.",
+        title: "See your locations the way your customers do.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -166,7 +166,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Retail",
-        description: "Compare each store with the shops near it.",
+        description: "Compare each store with the stores near it.",
         image: "/images/products/shared/retail-industry-icon.svg",
         button: {
             text: "Explore",
@@ -176,7 +176,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Compare each site with nearby venues.",
+        description: "Compare each location with nearby venues.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -196,7 +196,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Compare patient-facing sites with local peers.",
+        description: "Compare patient-facing locations with local peers.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -232,11 +232,11 @@ export const faqData = [
     },
     {
         question: "How do you know which competitors to compare us with?",
-        answer: "Serve First works out the nearby competitors for each site automatically, so every location is measured against the rivals that actually compete for its customers, not a generic national list."
+        answer: "Serve First works out the nearby competitors for each location automatically, so every location is measured against the rivals that actually compete for its customers, not a generic national list."
     },
     {
         question: "Where does the data come from?",
-        answer: "From public reviews of your sites and their local rivals. Serve First reads the words, not just the star rating, and scores the sentiment and topics behind each one."
+        answer: "From public reviews of your locations and their local competitors. Serve First reads the words, not just the star rating, and scores the sentiment and topics behind each one."
     },
     {
         question: "How often is it updated?",
@@ -244,10 +244,10 @@ export const faqData = [
     },
     {
         question: "Can we act on what it shows, or is it just a report?",
-        answer: "You can act on it. The gaps become tasks and training routed to the right site and owner, tracked through to done, so each location closes the distance on the rivals that matter to it."
+        answer: "You can act on it. The gaps become tasks and training routed to the right location and owner, tracked through to done, so each location closes the distance on the rivals that matter to it."
     },
     {
-        question: "Does it work across lots of sites?",
-        answer: "Yes. Serve First is built for multi-site operators. Every location is benchmarked in one operating picture, so you can see where you lead, where you trail and where to focus, however many sites you run."
+        question: "Does it work across lots of locations?",
+        answer: "Yes. Serve First is built for multi-location operators. Every location is benchmarked in one operating picture, so you can see where you lead, where you trail and where to focus, however many locations you run."
     }
 ]

@@ -1,23 +1,23 @@
 export const platformStoryData = [
     {
         title: "Capture",
-        description: "We bring every customer signal into one place, from feedback terminals and surveys to reviews and audits, across all your sites.",
+        description: "We bring every customer signal into one place, from feedback terminals and surveys to reviews and audits, across all your locations.",
         image: "/images/home/home-capture.png",
         button: [
             {
-                text: "How it Works",
+                text: "How it works",
                 href: "/how-it-works/capture",
             }
         ]
     },
     {
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads it all as it lands, scoring sentiment and surfacing the themes that matter, in plain English your teams can use.",
         image: "/images/home/home-analyse.png",
         button: [
             {
-                text: "Learn More",
-                href: "/how-it-works/analyse",
+                text: "See how it works",
+                href: "/how-it-works/analyze",
             }
         ]
     },

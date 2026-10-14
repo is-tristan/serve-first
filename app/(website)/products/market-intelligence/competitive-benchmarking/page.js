@@ -42,8 +42,8 @@ export default async function ReviewMonitoring() {
 
             <Banner
                 eyebrow="Market intelligence platform"
-                title="See how each of your sites compares to the competition next door"
-                description="Serve First looks at the public reviews for your locations and their nearby rivals, then shows you, site by site, where you are ahead, where you are behind and what is driving the difference."
+                title="See how each of your locations compares to the competition next door"
+                description="Serve First looks at the public reviews for your locations and their nearby competitors, then shows you, location by location, where you are ahead, where you are behind and what is driving the difference."
                 image="/images/products/market-intelligence/competitive-benchmarking/competitive-benchmarking-cover.png"
                 imageSizing="contain"
                 buttonPrimary={{
@@ -57,7 +57,7 @@ export default async function ReviewMonitoring() {
 
             <ChallengeFrame
                 eyebrow="The problem"
-                title="You know your own scores<span class='colorPrimary'>.</span> You cannot see the shop next door"
+                title="You know your own scores<span class='colorPrimary'>.</span> You can't see the store next door"
                 data={challengeFrameData}
             />
 
@@ -67,7 +67,7 @@ export default async function ReviewMonitoring() {
 
             <RoleContext
                 eyebrow="How the benchmark works"
-                title="See how each site compares locally"
+                title="See how each location compares locally"
                 description="See how every location compares with its real local rivals, built for you from public sources you can check, with no surveys to send."
                 data={roleContextData}
                 btnPrimary={{
@@ -79,7 +79,7 @@ export default async function ReviewMonitoring() {
             <HowItWorks
                 eyebrow="From comparison to a fix"
                 title="Benchmarking is only useful if it changes something"
-                description="Serve First does not stop at the chart. It turns the gap into something each site can act on."
+                description="Serve First does not stop at the chart. It turns the gap into something each location can act on."
                 data={howItWorksData}
             />
 
@@ -134,8 +134,8 @@ export default async function ReviewMonitoring() {
             />
 
             <CtaBannerOne
-                title="See how your sites compare in their local market"
-                description="Book a demo and we will benchmark your locations against the rivals that matter to them."
+                title="See how your locations compare in their local market"
+                description="Book a demo and we'll benchmark your locations against the rivals that matter to them."
             />
 
         </>

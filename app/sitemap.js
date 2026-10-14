@@ -23,11 +23,6 @@ const staticRoutes = [
         priority: 0.9,
     },
     {
-        path: "/company",
-        changeFrequency: "monthly",
-        priority: 0.7,
-    },
-    {
         path: "/company/about",
         changeFrequency: "monthly",
         priority: 0.7,
@@ -38,11 +33,6 @@ const staticRoutes = [
         priority: 0.7,
     },
     {
-        path: "/resources",
-        changeFrequency: "weekly",
-        priority: 0.6,
-    },
-    {
         path: "/resources/blog",
         changeFrequency: "weekly",
         priority: 0.6,
@@ -51,16 +41,6 @@ const staticRoutes = [
         path: "/resources/media",
         changeFrequency: "weekly",
         priority: 0.6,
-    },
-    {
-        path: "/solutions",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
-        path: "/solutions/by-role",
-        changeFrequency: "monthly",
-        priority: 0.8,
     },
     {
         path: "/solutions/by-role/cx-leaders",
@@ -74,11 +54,6 @@ const staticRoutes = [
     },
     {
         path: "/solutions/by-role/compliance-managers",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
-        path: "/solutions/by-industry",
         changeFrequency: "monthly",
         priority: 0.8,
     },
@@ -113,11 +88,6 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
-        path: "/solutions/by-challenge",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
         path: "/solutions/by-challenge/inconsistent-standards",
         changeFrequency: "monthly",
         priority: 0.8,
@@ -134,16 +104,6 @@ const staticRoutes = [
     },
     {
         path: "/solutions/by-challenge/data-to-action",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
-        path: "/products",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
-        path: "/products/customer-experience",
         changeFrequency: "monthly",
         priority: 0.8,
     },
@@ -168,22 +128,12 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
-        path: "/products/market-intelligence",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
         path: "/products/market-intelligence/review-monitoring",
         changeFrequency: "monthly",
         priority: 0.8,
     },
     {
         path: "/products/market-intelligence/competitive-benchmarking",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
-        path: "/products/operational-excellence",
         changeFrequency: "monthly",
         priority: 0.8,
     },
@@ -208,12 +158,12 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
-        path: "/products/operational-excellence/martyns-law",
+        path: "/products/operational-excellence/vision",
         changeFrequency: "monthly",
         priority: 0.8,
     },
     {
-        path: "/how-it-works",
+        path: "/products/operational-excellence/martyns-law",
         changeFrequency: "monthly",
         priority: 0.8,
     },
@@ -223,7 +173,7 @@ const staticRoutes = [
         priority: 0.8,
     },
     {
-        path: "/how-it-works/analyse",
+        path: "/how-it-works/analyze",
         changeFrequency: "monthly",
         priority: 0.8,
     },
@@ -231,16 +181,6 @@ const staticRoutes = [
         path: "/how-it-works/action",
         changeFrequency: "monthly",
         priority: 0.8,
-    },
-    {
-        path: "/coming-soon",
-        changeFrequency: "monthly",
-        priority: 0.8,
-    },
-    {
-        path: "/legal",
-        changeFrequency: "yearly",
-        priority: 0.3,
     },
     {
         path: "/legal/cookie-policy",

@@ -10,8 +10,8 @@ import styles from "@/styles/components/screens/lp/lp.module.scss";
 export default function LpCta({
     type="terminals",
     eyebrow = "Customer feedback kiosks",
-    title = "Book your personalised platform demo today",
-    description = "Tell us a little about your operation and we will tailor the whole walkthrough to what you need to see.",
+    title = "Book your personalized platform demo today",
+    description = "Tell us a little about your operation and we'll tailor the whole walkthrough to what you need to see.",
     image = "/images/lp/terminals/lp-terminals-cta.png",
     formBtnText = "Request a demo",
     hasDemoLink = false,

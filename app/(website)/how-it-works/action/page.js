@@ -38,8 +38,8 @@ export default function Action() {
 
             <Banner
                 eyebrow="How it works · Action"
-                title="Insight is not the finish line. Action is"
-                description="Action is stage three. Serve First does not stop at a screen full of insights. It turns what you learn into role-based plans and tasks, routed to the right person and tracked to proof of completion, across every site."
+                title="Insight isn't the finish line. Action is"
+                description="Action is stage three. Serve First does not stop at a screen full of insights. It turns what you learn into role-based plans and tasks, routed to the right person and tracked to proof of completion, across every location."
                 image="/images/how-it-works/action/action-cover.png"
                 imageSizing="contain"
             />
@@ -54,9 +54,9 @@ export default function Action() {
             <HowItWorks
                 containerClass={null}
                 eyebrow="The model"
-                title="Capture<span class='colorPrimary'>,</span> analyse<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage three"
+                title="Capture<span class='colorPrimary'>,</span> analyze<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage three"
                 titleClass="sectionTitleConstrained"
-                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
+                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyze makes sense of them. Action makes things right."
                 data={howItWorksData}
             />
 
@@ -114,7 +114,7 @@ export default function Action() {
 
             <CtaBannerOne
                 title="Stop at insight<span class='colorPrimary'>,</span> or actually fix it"
-                description="See how Serve First captures, analyses and actions every signal across your sites, in one connected platform."
+                description="See how Serve First captures, analyzes and acts on every signal across your locations, in one connected platform."
             />
 
         </>

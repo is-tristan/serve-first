@@ -1,6 +1,6 @@
 // Components
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function ComingSoonPage() {
-    redirect("/products/operational-excellence/vision");
+    permanentRedirect("/products/operational-excellence/vision");
 }

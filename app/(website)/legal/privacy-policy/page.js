@@ -7,7 +7,21 @@ import { privacyPolicySections } from "./data";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-  return getPageMetadata("/legal/privacy-policy");
+  const metadata = await getPageMetadata("/legal/privacy-policy");
+  const description = "Our privacy policy: how Serve First collects, uses and protects your personal data, and your rights.";
+
+  return {
+    ...metadata,
+    description,
+    openGraph: {
+      ...metadata.openGraph,
+      description,
+    },
+    twitter: {
+      ...metadata.twitter,
+      description,
+    },
+  };
 }
 
 export default function PrivacyPolicy() {
@@ -24,7 +38,7 @@ export default function PrivacyPolicy() {
         <div className={styles.privacyPolicySection}>
           <h2>Serve First Privacy Policy</h2>
 
-          <p>Last updated: 29 July 2026</p>
+          <p>Last updated: July 29, 2026</p>
 
           <p>
             Serve First CX respects your privacy and is committed to protecting

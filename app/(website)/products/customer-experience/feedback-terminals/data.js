@@ -14,7 +14,7 @@ export const roleContextData = [
     {
         icon: fingerPrintIcon,
         eyebrow: "On-site kiosks",
-        title: "Touchscreen kiosks on site",
+        title: "Touchscreen kiosks on-site",
         description: "Branded touchscreens sit at the point of experience, so customers rate a visit in seconds while it is fresh.",
     },
     {
@@ -25,13 +25,13 @@ export const roleContextData = [
     },
     {
         icon: noWifiIcon,
-        eyebrow: "Offline Ready",
+        eyebrow: "Offline ready",
         title: "Offline capture with auto-sync",
-        description: "Terminals keep capturing when the connection drops and sync when it returns, so no site is a blind spot.",
+        description: "Terminals keep capturing when the connection drops and sync when it returns, so no location is a blind spot.",
     },
     {
         icon: layoutIcon,
-        eyebrow: "Your Brand",
+        eyebrow: "Your brand",
         title: "Your branding, your questions",
         description: "Carry your branding and your own questions, so the experience feels like yours and asks what matters.",
     }
@@ -52,14 +52,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Every response is scored and themed as it lands, so sentiment shifts show up the moment they start, not at month end.",
         image: "/images/products/customer-experience/feedback-terminals/feedback-terminals-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "See the analysis",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -81,7 +81,7 @@ export const challengeFrameData = [
         eyebrow: "Challenge 01",
         title: "Customers rate you at the door, but the signal fades before anyone responds.",
         subheading: "How Serve First solves it",
-        description: "Serve First captures each terminal score in real time and routes the low ones to the right manager as a task, so a poor visit is put right while the customer still cares.",
+        description: "Serve First captures each terminal score in real time and routes the low ones to the right manager as a task, so a poor visit is fixed while the customer still cares.",
         tags: [
             {
                 tag: "Real-time capture",
@@ -107,7 +107,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "See your sites the way customers do.",
+        title: "See your locations the way customers do.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -138,7 +138,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Retail",
-        description: "Capture in-store reactions at every till and exit.",
+        description: "Capture in-store reactions at every register and exit.",
         image: "/images/products/shared/retail-industry-icon.svg",
         button: {
             text: "Explore",
@@ -148,7 +148,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Catch guest sentiment on site, before they leave.",
+        description: "Catch guest sentiment on-site, before they leave.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -168,7 +168,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Capture patient and visitor feedback on site.",
+        description: "Capture patient and visitor feedback on-site.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -178,7 +178,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Facilities management",
-        description: "Gauge satisfaction at every site you manage.",
+        description: "Gauge satisfaction at every location you manage.",
         image: "/images/products/shared/facilities-management-industry-icon.svg",
         button: {
             text: "Explore",
@@ -200,7 +200,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -244,11 +244,11 @@ export const faqData = [
     },
     {
         question: "Do the terminals work offline?",
-        answer: "Yes. Terminals keep capturing responses when the connection drops and sync automatically once it returns, so no site is ever a blind spot and you do not lose feedback on a busy day."
+        answer: "Yes. Terminals keep capturing responses when the connection drops and sync automatically once it returns, so no location is ever a blind spot and you don't lose feedback on a busy day."
     },
     {
         question: "What happens when a customer leaves a low score?",
-        answer: "A low score triggers an alert and a task, and Serve First routes it to the right manager while the customer still cares, so a poor experience is put right quickly rather than read about weeks later."
+        answer: "A low score triggers an alert and a task, and Serve First routes it to the right manager while the customer still cares, so a poor experience is fixed quickly rather than read about weeks later."
     },
     {
         question: "Can we brand the terminals and set our own questions?",
@@ -256,10 +256,10 @@ export const faqData = [
     },
     {
         question: "How does terminal feedback connect to the operation?",
-        answer: "Because terminals sit in the same platform as audits, tasks and your other signals, an in-the-moment score and the site behind it appear together, and the fix is routed to an owner and tracked to proof of completion."
+        answer: "Because terminals sit in the same platform as audits, tasks and your other signals, an in-the-moment score and the location behind it appear together, and the fix is routed to an owner and tracked to proof of completion."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every terminal reports into one operating picture, so you can compare locations, see where scores are slipping and put them right, however many sites you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Every terminal reports into one operating picture, so you can compare locations, see where scores are slipping and fix them, however many you run."
     }
 ]

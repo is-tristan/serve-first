@@ -15,7 +15,7 @@ export const roleContextData = [
     {
         icon: checkDoneIcon,
         title: "Prove the standard",
-        description: "Run digital audits and mystery shopping across every site, with scores you can compare."
+        description: "Run digital audits and mystery shopping across every location, with scores you can compare."
     },
     {
         icon: routeIcon,
@@ -30,7 +30,7 @@ export const roleContextData = [
     {
         icon: FlagAltIcon,
         title: "Manage by exception",
-        description: "EVA flags the sites that need you, so your attention goes where it matters most."
+        description: "EVA flags the locations that need you, so your attention goes where it matters most."
     }
 ]
 
@@ -38,7 +38,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Digital audits, mystery shopping and helpdesk capture how every site is really running, scored the same way everywhere.",
+        description: "Digital audits, mystery shopping and helpdesk capture how every location is really running, scored the same way everywhere.",
         image: "/images/solutions/by-role/operations-directors/operations-directors-capture.png",
         imageWidth: 768,
         imageHeight: 512,
@@ -49,14 +49,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "Every site is compared like for like, and EVA flags the locations slipping and the standard behind the slip.",
+        title: "Analyze",
+        description: "Every location is compared on the same basis, and EVA flags the ones slipping and the standard behind the slip.",
         image: "/images/solutions/by-role/operations-directors/operations-directors-analyse.png",
         imageWidth: 768,
         imageHeight: 512,
         button: {
             text: "Explore",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -77,7 +77,7 @@ export const productHighlightData = [
     {
         icon: magnifyingGlassIcon,
         eyebrow: "Audits",
-        title: "Run digital audits and inspections on site.",
+        title: "Run digital audits and inspections on-site.",
         linkText: "Explore",
         link: "/products/operational-excellence/audits",
     },
@@ -91,7 +91,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "See your sites the way your customers do.",
+        title: "See your locations the way your customers do.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -112,7 +112,7 @@ export const productHighlightData = [
     {
         icon: aiIcon,
         eyebrow: "EVA",
-        title: "Ask how the estate is doing, get next actions.",
+        title: "Ask how every location is doing, get next actions.",
         linkText: "Meet EVA",
         link: "/eva",
     },
@@ -145,15 +145,15 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "200",
         numberSuffix: "+",
-        description: "Sites on standard",
+        description: "Locations on standard",
     }
 ]
 
 export const challengeFrameData = [
     {
         eyebrow: "01 | Lack of visibility",
-        title: "You cannot see which sites are slipping until it shows up in the numbers.",
-        description: "Serve First scores every site against your standards in real time, so a slipping location is visible the moment it dips, not at month end.",
+        title: "You can't see which locations are slipping until it shows up in the numbers.",
+        description: "Serve First scores every location against your standards in real time, so a slipping location is visible the moment it dips, not at month end.",
         tags: [
             {
                 tag: "Live audit scores",
@@ -163,7 +163,7 @@ export const challengeFrameData = [
     {
         eyebrow: "02 | Lack of action",
         title: "A problem gets spotted on a visit, then lost before anyone fixes it.",
-        description: "Every failed check raises a corrective task routed to the right owner and tracked to done, so what you find on site is closed, not forgotten.",
+        description: "Every failed check raises a corrective task routed to the right owner and tracked to done, so what you find on-site is closed, not forgotten.",
         tags: [
             {
                 tag: "Routed tasks",
@@ -173,7 +173,7 @@ export const challengeFrameData = [
     {
         eyebrow: "03 | Lack of insight",
         title: "Customer and operational data live in different tools, so proving cause is slow.",
-        description: "Serve First brings both into one operating picture, so you can connect a drop in satisfaction to the standard behind it and address the real cause.",
+        description: "Serve First brings both into one operating picture, so you can connect a drop in satisfaction to the standard behind it and fix the real cause.",
         tags: [
             {
                 tag: "One operating picture",
@@ -184,8 +184,8 @@ export const challengeFrameData = [
 
 export const faqData = [
     {
-        question: "How does Serve First keep standards consistent across sites?",
-        answer: "Every site runs the same digital audits and checks, scored the same way, so you can compare locations directly and hold them all to one standard, rather than trusting each site to mark its own work.",
+        question: "How does Serve First keep standards consistent across locations?",
+        answer: "Every location runs the same digital audits and checks, scored the same way, so you can compare locations directly and hold them all to one standard, rather than trusting each location to grade its own work.",
     },
     {
         question: "What happens when a check fails?",
@@ -193,7 +193,7 @@ export const faqData = [
     },
     {
         question: "Can I see everything in one place?",
-        answer: "Yes. Audits, tasks, helpdesk and customer feedback report into one operating picture, so you manage the estate from one view instead of stitching tools together."
+        answer: "Yes. Audits, tasks, helpdesk and customer feedback report into one operating picture, so you manage every location from one view instead of stitching tools together."
     },
     {
         question: "Do I still get reporting without a separate tool?",

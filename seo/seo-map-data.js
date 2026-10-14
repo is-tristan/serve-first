@@ -1,7 +1,7 @@
 import { getPageSeo } from "@/sanity/lib/queries"
 import { getCanonicalSiteUrl } from "@/seo/site-url"
 
-const fallbackDescription = "Serve First connects customer, operational and market signals across every site, then turns them into the actions that put things right."
+const fallbackDescription = "Serve First connects customer, operational and market signals across every location, then turns them into the actions that fix them."
 
 export async function getPageMetadata(path) {
     const siteUrl = getCanonicalSiteUrl()

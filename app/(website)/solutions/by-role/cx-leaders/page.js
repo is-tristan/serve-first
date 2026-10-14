@@ -22,7 +22,21 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-role/cx-leaders");
+    const metadata = await getPageMetadata("/solutions/by-role/cx-leaders");
+    const description = "See customer experience across every location and turn it into action. Serve First gives CX leaders live sentiment, root cause and routed fixes.";
+
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default function CXLeader() {
@@ -33,7 +47,7 @@ export default function CXLeader() {
 
             <Banner
                 eyebrow="For customer experience leaders"
-                title="Own the customer experience across every site"
+                title="Own the customer experience across every location"
                 description="Serve First gives CX leaders one live view of customer sentiment across every location, and the tools to turn it into action, so you move from measuring experience to improving it."
                 image="/images/solutions/by-role/cx-leaders/cx-leaders-cover.png"
                 imageSizing="contain"
@@ -91,7 +105,7 @@ export default function CXLeader() {
             <CtaBannerContact
                 theme="primary"
                 title="See what Serve First can do for customer experience"
-                description="Book a personalised demo and we will show you how CX leaders turn estate-wide feedback into action at every site, on your data."
+                description="Book a personalized demo and we'll show you how CX leaders turn feedback from every location into action, using your data."
             />
 
         </>

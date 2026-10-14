@@ -20,7 +20,7 @@ export const featureListData = [
         imageHeight: 576,
         list: [
             {
-                text: "Aggregated reviews per site",
+                text: "Aggregated reviews per location",
             },
             {
                 text: "Response management built in",
@@ -34,7 +34,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -43,8 +43,8 @@ export const roleContextData = [
     {
         icon: listIcon,
         eyebrow: "One feed",
-        title: "Aggregated reviews per site",
-        description: "See every review from across the web in one feed, grouped by site, so nothing gets missed.",
+        title: "Aggregated reviews per location",
+        description: "See every review from across the web in one feed, grouped by location, so nothing gets missed.",
     },
     {
         icon: messageChatCircleIcon,
@@ -60,9 +60,9 @@ export const roleContextData = [
     },
     {
         icon: compareIcon,
-        eyebrow: "Against rivals",
+        eyebrow: "Against competitors",
         title: "Competitor review comparison",
-        description: "Compare your review sentiment with nearby rivals, so you know where your reputation leads or trails.",
+        description: "Compare your review sentiment with nearby competitors, so you know where your reputation leads or trails.",
     }
 ]
 
@@ -81,14 +81,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Negatives are flagged and recurring themes surfaced, so you see what is hurting reputation before it spreads.",
         image: "/images/products/market-intelligence/review-monitoring/review-monitoring-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
-            text: "See how analyse works",
-            href: "/how-it-works/analyse",
+            text: "See how analysis works",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -110,7 +110,7 @@ export const challengeFrameData = [
         eyebrow: "Challenge 01",
         title: "Reviews land across platforms faster than any one team can read them.",
         subheading: "How Serve First solves it",
-        description: "Serve First brings every review into one feed by site, flags the urgent ones and turns repeat complaints into tasks, so the same issue stops coming back.",
+        description: "Serve First brings every review into one feed by location, flags the urgent ones and turns repeat complaints into tasks, so the same issue stops coming back.",
         tags: [
             {
                 tag: "One review feed",
@@ -129,7 +129,7 @@ export const productHighlightData = [
     {
         icon: fileSearchIcon,
         eyebrow: "Competitive benchmarking",
-        title: "Compare your sites with local rivals.",
+        title: "Compare your locations with local competitors.",
         linkText: "Explore",
         link: "/products/market-intelligence/competitive-benchmarking",
     },
@@ -157,7 +157,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "See your sites the way customers do.",
+        title: "See your locations the way customers do.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -177,7 +177,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Protect your rating at every site.",
+        description: "Protect your rating at every location.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -197,7 +197,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Monitor feedback across patient-facing sites.",
+        description: "Monitor feedback across patient-facing locations.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -229,7 +229,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -273,7 +273,7 @@ export const faqData = [
     },
     {
         question: "Which review platforms does it cover?",
-        answer: "Reviews from across your locations and platforms are brought into one feed and grouped by site, so you track every site's reputation in one place rather than logging into each platform separately."
+        answer: "Reviews from across your locations and platforms are brought into one feed and grouped by location, so you track every location's reputation in one place rather than logging into each platform separately."
     },
     {
         question: "How fast can we respond to a negative review?",
@@ -281,14 +281,14 @@ export const faqData = [
     },
     {
         question: "Can we see the themes behind our rating?",
-        answer: "Yes. Reviews are scored for sentiment and recurring themes are surfaced, so you can see what is driving your rating and address the cause rather than reacting review by review."
+        answer: "Yes. Reviews are scored for sentiment and recurring themes are surfaced, so you can see what is driving your rating and fix the cause rather than reacting review by review."
     },
     {
         question: "Does review feedback connect to operations?",
         answer: "Yes. Because monitoring sits in the same platform as tasks and audits, a recurring complaint becomes a tracked corrective action, so the same issue stops coming back."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every site's reviews roll up into one operating picture, so you can compare locations, spot the ones slipping and put them right, however many you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Every location's reviews roll up into one operating picture, so you can compare locations, spot the ones slipping and fix them, however many you run."
     }
 ]

@@ -26,7 +26,7 @@ const frameProgress = {
 
 const frameAnnouncements = {
     1: "Frame 1 of 3: VISION introduction",
-    2: "Frame 2 of 3: VISION analysing and detecting an issue",
+    2: "Frame 2 of 3: VISION analyzing and detecting an issue",
     3: "Frame 3 of 3: VISION raising a task from the detected issue",
 };
 

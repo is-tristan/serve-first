@@ -28,14 +28,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Responses return as structured data, with completion rates and trends for every account.",
         image: "/images/lp/client-connect/lp-client-connect-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "See how analysis works",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {

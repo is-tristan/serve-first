@@ -4,12 +4,12 @@ export const industryTabsData = [
         label: "Retail",
         image: "/images/products/operational-excellence/vision/industries/vision-retail-image.png",
         imageAlt: "Video analytics software tracking checkout and shopper zones across store locations",
-        eyebrow: "01 | SHELF & QUEUE",
+        eyebrow: "01 | SHELF & CHECKOUT",
         title: "Keep every store on-standard",
         listItems: [
             "Retail video analytics flags shelf gaps for restock.",
-            "Displays checked against the plan head office set.",
-            "A queue at the till raises a staffing task."
+            "Displays checked against the plan corporate set.",
+            "A line at the register raises a staffing task."
         ]
     },
     {
@@ -21,7 +21,7 @@ export const industryTabsData = [
         title: "Safe floors, every shift",
         listItems: [
             "Warehouse video monitoring for spills and blocked routes.",
-            "PPE checked on site, a miss fires the training.",
+            "PPE checked on-site, a miss fires the training.",
             "Restricted-area access flagged for the record."
         ]
     },
@@ -33,7 +33,7 @@ export const industryTabsData = [
         eyebrow: "03 | SPEED & HYGIENE",
         title: "Serve fast, prove it is clean",
         listItems: [
-            "CCTV analytics flags long queues and wait times.",
+            "Camera analytics flags long lines and wait times.",
             "Temperature and cleaning checks verified as done.",
             "A spill becomes a cleaning task in seconds.",
             "Food safety checks run continuously, not just at the quarterly HACCP audit."
@@ -45,9 +45,9 @@ export const industryTabsData = [
         image: "/images/products/operational-excellence/vision/industries/vision-healthcare-image.png",
         imageAlt: "Video analytics software identifying staff and patients in a hospital corridor for healthcare compliance monitoring, face blur active",
         eyebrow: "04 | HYGIENE & IPC",
-        title: "Compliance you can evidence",
+        title: "Compliance you can prove",
         listItems: [
-            "Hand hygiene on entry and exit, always evidenced.",
+            "Hand hygiene on entry and exit, always documented.",
             "Cleaning of each bay verified and timestamped.",
             "Access to sterile areas flagged for the record."
         ]
@@ -89,7 +89,7 @@ export const platformStoryData = [
         imageHeight: 320,
         imageSizing: "cover",
         title: "Works with the cameras you already have.",
-        description: "Part of Serve First, not a camera. Connects to the CCTV you've already installed, no rip and replace.",
+        description: "Part of Serve First, not a camera. Connects to the security cameras you've already installed, no rip and replace.",
         list: [],
         tags: [{ tag: "Your cameras" }],
         button: null,
@@ -128,15 +128,15 @@ export const visionFaqData = [
     },
     {
         question: "Are intelligent video analytics legal?",
-        answer: "Yes, when used proportionately and in line with local data protection law, including GDPR where it applies. VISION is built privacy-first: faces are blurred as they appear, footage is processed on the device and not retained, and it keeps only whether a standard was met. As with any camera use, you keep clear signage and a lawful basis in place for each location."
+        answer: "Yes, when used proportionately and in line with local privacy laws, including GDPR and US state privacy laws where they apply. VISION is built privacy-first: faces are blurred as they appear, footage is processed on the device and not retained, and it keeps only whether a standard was met. As with any camera use, you keep clear signage and the right legal basis in place for each location."
     },
     {
         question: "Are intelligent video analytics dangerous?",
-        answer: "Used well, no. The worries people have, constant surveillance and stored footage of identifiable people, are the ones VISION is designed to avoid. It blurs faces on sight, processes on the device, and keeps the insight rather than the image, so there is nothing raw to leak or misuse. It measures standards, it does not identify individuals."
+        answer: "Used well, no. The worries people have, constant surveillance and stored footage of identifiable people, are the ones VISION is designed to avoid. It blurs faces on sight, processes on the device, and keeps the insight rather than the image, so there is nothing raw to leak or misuse. It measures standards, it doesn't identify individuals."
     },
     {
-        question: "What is video analytics in CCTV?",
-        answer: "Video analytics in CCTV means software that reads camera footage automatically, for things like queue length, footfall, dwell time or whether a task was done. Ordinary CCTV records for review after the event; CCTV analytics reads the feed as it happens, so it is active monitoring rather than passive video monitoring. VISION adds this to the cameras you already have."
+        question: "What is video analytics for security cameras (CCTV)?",
+        answer: "Video analytics for security cameras (CCTV) means software that reads camera footage automatically, for things like line length, foot traffic, dwell time or whether a task was done. A standard security camera records for review after the event; video analytics reads the feed as it happens, so it is active monitoring rather than passive video monitoring. VISION adds this to the cameras you already have."
     },
     {
         question: "How does video analytics work?",

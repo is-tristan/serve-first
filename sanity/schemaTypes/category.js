@@ -62,7 +62,7 @@ export const category = defineType({
                     const documentId = context.document._id.replace(/^drafts\./, "")
 
                     if (parent._ref === documentId || parent._ref === `drafts.${documentId}`) {
-                        return "A category cannot be its own parent"
+                        return "A category can't be its own parent"
                     }
 
                     return true

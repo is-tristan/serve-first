@@ -1,4 +1,7 @@
-const PROPER_NAMES = new Set(["client connect"])
+const PROPER_NAMES = new Map([
+    ["client connect", "Client Connect"],
+    ["martyn's law compliance", "Martyn's Law compliance"],
+])
 
 export function formatExploreName(name) {
     if (!name) {
@@ -9,7 +12,7 @@ export function formatExploreName(name) {
     const lower = normalized.toLowerCase()
 
     if (PROPER_NAMES.has(lower)) {
-        return "Client Connect"
+        return PROPER_NAMES.get(lower)
     }
 
     return lower

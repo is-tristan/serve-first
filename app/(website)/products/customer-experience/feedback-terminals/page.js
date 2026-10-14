@@ -66,7 +66,7 @@ export default async function FeedbackTerminals() {
             />
 
             <HowItWorks
-                eyebrow="How it works on site"
+                eyebrow="How it works on-site"
                 title="From the floor to the fix<span class='colorPrimary'>,</span> without delay"
                 description="Three connected stages, no manual collection."
                 data={howItWorksData}
@@ -85,7 +85,7 @@ export default async function FeedbackTerminals() {
                 item={{
                     "eyebrow": "EVA",
                     "title": "Ask what your scores are really telling you",
-                    "description": "EVA reads every terminal response across your estate and answers, in plain English, what is driving your scores.",
+                    "description": "EVA reads every terminal response across all your locations and answers, in plain English, what is driving your scores.",
                     "image": "/images/products/customer-experience/feedback-terminals/feedback-terminals-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
@@ -142,7 +142,7 @@ export default async function FeedbackTerminals() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your locations"
-                description="Book a personalised demo and we will show you how terminals work with your estate, your data and your team."
+                description="Book a personalized demo and we'll show you how terminals work with your locations, your data and your team."
             />
 
         </>

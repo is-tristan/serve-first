@@ -32,7 +32,25 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/products/operational-excellence/audits");
+    const metadata = await getPageMetadata("/products/operational-excellence/audits");
+    const title = "Digital Audit Software for Multi-Location Teams | Serve First";
+    const description = "Run digital audits at every location, capture photo evidence and turn every failed check into a tracked fix.";
+
+    return {
+        ...metadata,
+        title,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default async function Audits() {
@@ -43,8 +61,8 @@ export default async function Audits() {
 
             <Banner
                 eyebrow="Operational excellence"
-                title="Consistent standards at every site"
-                description="Serve First task management routes the right action to the right person at every site, with deadlines, ownership and progress you can see, not chase."
+                title="Consistent standards at every location"
+                description="Serve First audits score every location against your standards, capture photo evidence and turn each failed check into a tracked fix."
                 image="/images/products/operational-excellence/audits/audits-cover.png"
                 imageSizing="contain"
                 buttonPrimary={{
@@ -62,8 +80,8 @@ export default async function Audits() {
 
             <RoleContext
                 eyebrow="Audit capabilities"
-                title="Hold every site to one standard"
-                description="Score every site against your standards on any device, turn a failed check into a fix, and see which locations need attention now."
+                title="Hold every location to one standard"
+                description="Score every location against your standards on any device, turn a failed check into a fix, and see which locations need attention now."
                 data={roleContextData}
                 btnPrimary={{
                     text: "Get a demo",
@@ -72,9 +90,9 @@ export default async function Audits() {
             />
 
             <HowItWorks
-                eyebrow="How a task moves to done"
-                title="The step other platforms leave out"
-                description="The last step that most platforms leave out."
+                eyebrow="How an audit moves to a fix"
+                title="From checklist to closed gap"
+                description={null}
                 data={howItWorksData}
             />
 
@@ -90,8 +108,8 @@ export default async function Audits() {
                 description={null}
                 item={{
                     "eyebrow": "EVA",
-                    "title": "Ask which of your sites are really slipping",
-                    "description": "Ask EVA which sites are slipping and get a clear, evidence-backed answer drawn from every audit you run.",
+                    "title": "Ask which of your locations are really slipping",
+                    "description": "Ask EVA which locations are slipping and get a clear, evidence-backed answer drawn from every audit you run.",
                     "image": "/images/products/operational-excellence/audits/audits-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
@@ -145,7 +163,7 @@ export default async function Audits() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your standards"
-                description="Book a personalised demo and we will show you how audits run across your estate, your sites and your team."
+                description="Book a personalized demo and we'll show you how audits run across your locations and your team."
             />
 
         </>

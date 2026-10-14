@@ -12,7 +12,7 @@ import {
 export const challengeFrameData = [
     {
         eyebrow: "01 | Improvement summary",
-        title: "The numbers moved, but you cannot show what actually drove the change.",
+        title: "The numbers moved, but you can't show what actually drove the change.",
         description: "Serve First links every action to the signal it came from and the outcome that followed, so EVA can show what changed, where and why, with the record behind it.",
         tags: [
             {
@@ -22,8 +22,8 @@ export const challengeFrameData = [
     },
     {
         eyebrow: "02 | Improvement stalled",
-        title: "Improvement is asserted in meetings, but never evidenced with a record.",
-        description: "Every fix is tracked to proof of completion as the work happens, so progress is documented by default and the record builds itself, site by site.",
+        title: "Improvement is claimed in meetings, but never backed up with a record.",
+        description: "Every fix is tracked to proof of completion as the work happens, so progress is documented by default and the record builds itself, location by location.",
         tags: [
             {
                 tag: "Outcome tracking",
@@ -46,7 +46,7 @@ export const roleContextData = [
     {
         icon: usersIcon,
         title: "Operations directors",
-        description: "Show standards rising site by site, with the corrective work that drove them documented.",
+        description: "Show standards rising location by location, with the corrective work that drove them documented.",
         button: {
             text: "For ops directors",
             href: "/solutions/by-role/operations-directors",
@@ -54,7 +54,7 @@ export const roleContextData = [
     },
     {
         icon: usersUpIcon,
-        title: "CX Leaders",
+        title: "CX leaders",
         description: "Show sentiment improving and tie it to the fixes behind it, not just the trend line.",
         button: {
             text: "For CX leaders",
@@ -64,7 +64,7 @@ export const roleContextData = [
     {
         icon: usersCheckIcon,
         title: "Compliance managers",
-        description: "Show duty of care met and evidenced, with a complete audit trail for any site and date.",
+        description: "Show compliance met and documented, with a complete audit trail for any location and date.",
         button: {
             text: "For compliance managers",
             href: "/solutions/by-role/compliance-managers",
@@ -87,20 +87,20 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads the trend and the actions behind it, so you see not just that a score moved but what actually moved it.",
         image: "/images/solutions/by-challenge/prove-improvement/prove-improvement-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "Explore",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
         number: "03",
         title: "Action",
-        description: "Every fix is tracked to proof of completion, so improvement is evidenced, not asserted, whenever anyone asks for it.",
+        description: "Every fix is tracked to proof of completion, so improvement is proven, not just claimed, whenever anyone asks for it.",
         image: "/images/solutions/by-challenge/prove-improvement/prove-improvement-action.png",
         imageWidth: 768,
         imageHeight: 768,
@@ -122,7 +122,7 @@ export const productHighlightData = [
     {
         icon: fileCheckIcon,
         eyebrow: "Audits",
-        title: "Track standards rising site by site.",
+        title: "Track standards rising location by location.",
         linkText: "Explore",
         link: "/products/operational-excellence/audits",
     },
@@ -183,11 +183,11 @@ export const moduleStatsData = [
 export const faqData = [
     {
         question: "How do you prove operational improvement?",
-        answer: "By keeping the signal, the action and the outcome together. Serve First records what was found, what was done and what happened next, so improvement is a documented chain rather than a claim, for any site and any period."
+        answer: "By keeping the signal, the action and the outcome together. Serve First records what was found, what was done and what happened next, so improvement is a documented chain rather than a claim, for any location and any period."
     },
     {
         question: "What is proof of completion?",
-        answer: "Every corrective task carries evidence that it was done, by whom and when, with photos and sign-offs where relevant. That record is what turns we fixed it into here is the fix, verified."
+        answer: "Every corrective task carries evidence that it was done, by whom and when, with photos and sign-offs where relevant. That record is what turns \"we fixed it\" into \"here is the fix, verified.\""
     },
     {
         question: "Can we show ROI to the board?",
@@ -199,14 +199,14 @@ export const faqData = [
     },
     {   
         question: "Does EVA explain what drove a change?",
-        answer: "Yes. EVA reads the trend and the actions behind it and explains, in plain English, what moved the number, at which sites and why, so the cause is named rather than guessed."
+        answer: "Yes. EVA reads the trend and the actions behind it and explains, in plain English, what moved the number, at which locations and why, so the cause is named rather than guessed."
     },
     {
         question: "How do you measure operational improvement?",
-        answer: "By tying every action to the signal it came from and the outcome that followed. Serve First records what was found, what was done and what changed, so improvement is a documented chain you can measure per site and per period, not a claim."
+        answer: "By tying every action to the signal it came from and the outcome that followed. Serve First records what was found, what was done and what changed, so improvement is a documented chain you can measure per location and per period, not a claim."
     },
     {
-        question: "Can we benchmark sites against each other?",
-        answer: "Yes. Because every site is scored the same way in one operating picture, you can compare locations directly, see which are improving and which are slipping, and EVA explains what is driving the difference."
+        question: "Can we benchmark locations against each other?",
+        answer: "Yes. Because every location is scored the same way in one operating picture, you can compare locations directly, see which are improving and which are slipping, and EVA explains what is driving the difference."
     }
 ]

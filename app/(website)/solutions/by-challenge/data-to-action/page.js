@@ -22,7 +22,25 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-challenge/data-to-action");
+    const metadata = await getPageMetadata("/solutions/by-challenge/data-to-action");
+    const title = "From Data to Action, Multi-Location | Serve First";
+    const description = "Stop insight dying in dashboards. Serve First turns every signal into a routed action, tracked to proof of completion across every location.";
+
+    return {
+        ...metadata,
+        title,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default function DataToAction() {
@@ -86,8 +104,8 @@ export default function DataToAction() {
 
             <CtaBannerContact
                 theme="primary"
-                title="See insight turn into action on your sites"
-                description="Book a personalised demo and we will show you how Serve First closes the loop from signal to fix, on your data."
+                title="See insight turn into action at your locations"
+                description="Book a personalized demo and we'll show you how Serve First closes the loop from signal to fix, using your data."
             />
 
         </>

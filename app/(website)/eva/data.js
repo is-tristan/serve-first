@@ -10,7 +10,7 @@ export const featureListData = [
     {
         eyebrow: "Ask in plain language",
         title: "Answers from your data",
-        description: "Ask the way you would ask a colleague. EVA reads NPS, locations, surveys, users and activity across every site, and answers with the numbers.",
+        description: "Ask the way you would ask a colleague. EVA reads NPS, locations, surveys, users and activity across your whole business, and answers with the numbers.",
         image: "/images/eva/eva-plain.png",
         imageWidth: 576,
         imageHeight: 576,
@@ -19,7 +19,7 @@ export const featureListData = [
                 text: "NPS and CSAT",
             },
             {
-                text: "Locations and sites",
+                text: "Locations and regions",
             },
             {
                 text: "Surveys and activity",
@@ -76,7 +76,7 @@ export const featureListData = [
                 text: "The next actions",
             },
             {
-                text: "Across every site",
+                text: "Across every location",
             },
             {
                 text: "Built to do more over time",
@@ -122,11 +122,11 @@ export const howItWorksData = [
 export const faqData = [
     {
         question: "What is EVA?",
-        answer: "EVA is the AI analyst inside Serve First. You ask in plain language and EVA reads your results across every site, explains what is happening and points to the next actions for your role, so you leave with a plan rather than just a number."
+        answer: "EVA is the AI analyst inside Serve First. You ask in plain language and EVA reads your results across every location, explains what is happening and points to the next actions for your role, so you leave with a plan rather than just a number."
     },
     {
         question: "What can I ask EVA?",
-        answer: "Ask the way you would ask a colleague: how a region is doing, which sites are slipping, what your NPS or survey results show, or how a procedure should be followed. EVA answers from your live data and from the Knowledge Base you have uploaded."
+        answer: "Ask the way you would ask a colleague: how a region is doing, which locations are slipping, what your NPS or survey results show, or how a procedure should be followed. EVA answers from your live data and from the Knowledge Base you have uploaded."
     },
     {
         question: "Where do EVA's answers come from?",
@@ -141,7 +141,7 @@ export const faqData = [
         answer: "EVA answers from your data and your documents rather than guessing, and Knowledge Base answers come with the source shown, so you can check the basis of any reply. It is built to do more over time as the platform grows."
     },
     {
-        question: "Does EVA work across all our sites?",
-        answer: "Yes. EVA reads your results across every site, so you can ask about one location, a region or the whole estate and get an answer with the context of what you are viewing already applied."
+        question: "Does EVA work across all our locations?",
+        answer: "Yes. EVA reads your results across every location, so you can ask about one location, a region or your whole business and get an answer with the context of what you are viewing already applied."
     }
 ]

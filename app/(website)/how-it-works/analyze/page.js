@@ -26,36 +26,54 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    return getPageMetadata("/how-it-works/analyse");
+    const metadata = await getPageMetadata("/how-it-works/analyze");
+    const title = "Analyze Customer Feedback and Find the Cause | Serve First";
+    const description = "Go from scores to the reason behind them. Serve First scores sentiment in real time and surfaces themes per location and across your business.";
+
+    return {
+        ...metadata,
+        title,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
-export default function Analyse() {
+export default function Analyze() {
 
     return (
 
         <>
 
             <Banner
-                eyebrow="How it works · Analyse"
+                eyebrow="How it works · Analyze"
                 title="From scores to the reason behind them"
-                description="Analyse is stage two. EVA reads every signal as it lands, scores sentiment and surfaces the themes that matter, in plain English, so you see not just what happened across your sites but why."
+                description="Analyze is stage two. EVA reads every signal as it lands, scores sentiment and surfaces the themes that matter, in plain English, so you see not just what happened across your locations but why."
                 image="/images/how-it-works/analyse/analyse-cover.png"
                 imageSizing="contain"
             />
 
             <ChallengeFrame
                 eyebrow="The analysis problem"
-                title="A pile of data is not an answer"
-                description="Capturing every signal is only half the job. Most multi-site operators end up with dashboards full of scores and no time to work out what they mean. The number tells you something dropped. It does not tell you why, where, or what to do next. So the insight sits unread until the next review, and by then the moment has passed."
+                title="A pile of data isn't an answer"
+                description="Capturing every signal is only half the job. Most multi-location operators end up with dashboards full of scores and no time to work out what they mean. The number tells you something dropped. It doesn't tell you why, where, or what to do next. So the insight sits unread until the next review, and by then the moment has passed."
                 data={challengeFrameData}
             />
 
             <HowItWorks
                 containerClass={null}
                 eyebrow="The model"
-                title="Capture<span class='colorPrimary'>,</span> analyse<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage two"
+                title="Capture<span class='colorPrimary'>,</span> analyze<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage two"
                 titleClass="sectionTitleConstrained"
-                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
+                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyze makes sense of them. Action makes things right."
                 data={howItWorksData}
             />
 
@@ -73,9 +91,9 @@ export default function Analyse() {
                 description={null}
                 item={{
                     "eyebrow": "Meet EVA",
-                    "title": "The always-on analyst for every site",
+                    "title": "The always-on analyst for every location",
                     "description": null,
-                    "htmlDescription": "<p class='fw700'>EVA reads the signals across every site and hands you the reason behind the score, in plain English, no dashboard hunting.</p> <p>Unlike dashboards that show you a score, EVA shows you the reason, and what to do about it.</p> <p>EVA sits across every signal in one operating picture, scores sentiment as it lands, groups the themes that matter and tells you what needs attention, where and why. No digging through dashboards to work out your next move. EVA recommends; your team decides and assigns.</p>",
+                    "htmlDescription": "<p class='fw700'>EVA reads the signals across every location and hands you the reason behind the score, in plain English, no dashboard hunting.</p> <p>Unlike dashboards that show you a score, EVA shows you the reason, and what to do about it.</p> <p>EVA sits across every signal in one operating picture, scores sentiment as it lands, groups the themes that matter and tells you what needs attention, where and why. No digging through dashboards to work out your next move. EVA recommends; your team decides and assigns.</p>",
                     "image": "/images/how-it-works/analyse/analyse-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
@@ -126,7 +144,7 @@ export default function Analyse() {
 
             <CtaBannerOne
                 title="See the reason behind every score"
-                description="See how Serve First captures, analyses and actions every signal across your sites, in one connected platform."
+                description="See how Serve First captures, analyzes and acts on every signal across your locations, in one connected platform."
             />
 
         </>

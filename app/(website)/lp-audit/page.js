@@ -26,7 +26,7 @@ export default function LpAudit() {
                 title="Find the failed check before the inspector does"
                 description="Serve First Audits put every audit, inspection, and checklist in one app, flags failed items the moment they're logged, and assigns the fix to the right person."
                 hasButtons={false}
-                formSmallText="See it on your own sites. No slides, no obligation."
+                formSmallText="See it on your own locations. No slides, no obligation."
                 utmMedium="LP Audit"
                 checkList={[
                     "Custom checklists with photos, notes, and signatures",
@@ -75,7 +75,7 @@ export default function LpAudit() {
                 image="/images/lp/audit/lp-audit-cta.png"
                 buttonPrimary={
                     {
-                        text: "Show me my sites",
+                        text: "Show me my locations",
                         href: "#banner",
                     }
                 }

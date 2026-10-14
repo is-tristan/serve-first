@@ -42,7 +42,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Audit",
-        description: "Your teams run custom checklists on mobile, tablet, or desktop, with photos, notes, and signatures on every item.",
+        description: "Your teams run custom checklists on a phone, tablet, or desktop, with photos, notes, and signatures on every item.",
         image: "/images/lp/audit/lp-audit-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -53,14 +53,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "A branded report is ready the moment the audit ends, and AI spots trends across every location. Thanks to our helpful EVA assistant.",
         image: "/images/lp/audit/lp-audit-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "Show me",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -141,7 +141,7 @@ export const faqData = [
         answer: "Your own teams. Area managers, store leads, and compliance teams run audits in the app, so the standard stays in your hands."
     },
     {
-        question: "What if there's no signal on site?",
+        question: "What if there's no signal on-site?",
         answer: "Audits keep running offline and sync automatically when the connection returns."
     },
     {

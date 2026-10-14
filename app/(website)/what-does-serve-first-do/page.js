@@ -21,7 +21,21 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/what-does-serve-first-do");
+    const metadata = await getPageMetadata("/what-does-serve-first-do");
+    const description = "Serve First is a Customer Experience and Operational Intelligence platform for multi-location businesses. It captures, analyzes and actions every signal.";
+
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default function WhatDoesServeFirstDo() {
@@ -35,8 +49,8 @@ export default function WhatDoesServeFirstDo() {
                 title="What does Serve First do?"
                 image={null}
                 hasFullStop={false}
-                description="The Customer Experience and Operational Intelligence platform for multi-location businesses in retail, hospitality, leisure and healthcare. We capture, analyse and action every signal across every location."
-                trustLine="Trusted by retail, hospitality, leisure and healthcare brands across the UK."
+                description="The Customer Experience and Operational Intelligence platform for multi-location businesses in retail, hospitality, leisure and healthcare. We capture, analyze and action every signal across every location."
+                trustLine="Trusted by retail, hospitality, leisure and healthcare brands."
                 buttonSecondary={
                     {
                         text: "See how it works",
@@ -47,7 +61,7 @@ export default function WhatDoesServeFirstDo() {
 
             <PlatformStory
                 eyebrow="How Serve First works"
-                title="Capture<span class='colorPrimary'>.</span> Analyse<span class='colorPrimary'>.</span> Action"
+                title="Capture<span class='colorPrimary'>.</span> Analyze<span class='colorPrimary'>.</span> Action"
                 description="Three connected layers turn scattered signals into the right next step, in one platform."
                 data={platformStoryData}
             />
@@ -59,7 +73,7 @@ export default function WhatDoesServeFirstDo() {
 
             <ChallengeFrame
                 eyebrow="Why teams choose Serve First"
-                title="Built for the problems that multi-site teams know too well"
+                title="Built for the problems that multi-location teams know too well"
                 data={challengeFrameData}
             />
 
@@ -72,7 +86,7 @@ export default function WhatDoesServeFirstDo() {
                     "title": "The intelligence layer that reads every signal",
                     "titleSuffix": ".",
                     "description": "",
-                    "htmlDescription": "<p>EVA reads feedback and operational data as it arrives, clusters themes, scores sentiment and writes plain-English summaries, so teams know what matters without reading dashboards.</p> <p> <strong class='fw700'>Example input:</strong> <br> EVA: Manchester Piccadilly is down 8 points. The main driver is queue time, mentioned in 63% of negative feedback this week. I have recommended actions ready. </p>",
+                    "htmlDescription": "<p>EVA reads feedback and operational data as it arrives, clusters themes, scores sentiment and writes plain-English summaries, so teams know what matters without reading dashboards.</p> <p> <strong class='fw700'>Example input:</strong> <br> EVA: Atlanta Midtown is down 8 points. The main driver is wait time, mentioned in 63% of negative feedback this week. I have recommended actions ready. </p>",
                     "image": "/images/what-does-serve-first-do/wdsfd-eva.png",
                     "imageWidth": 576,
                     "imageHeight": 576,
@@ -95,12 +109,12 @@ export default function WhatDoesServeFirstDo() {
 
             <CtaBannerOne
                 title="See what Serve First can do across your locations"
-                description="Book a personalised demo and we will show you how the platform works with your estate, your data and your team."
+                description="Book a personalized demo and we'll show you how the platform works with your locations, your data and your team."
             />
 
             <Faq
                 eyebrow="Common questions"
-                title="What we do for LLM<span class='colorPrimary'>,</span> answered"
+                title="What Serve First does<span class='colorPrimary'>,</span> answered"
                 description={null}
                 data={faqData}
                 button={

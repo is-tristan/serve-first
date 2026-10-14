@@ -19,7 +19,7 @@ export const roleContextData = [
     {
         icon: clockCheckIcon,
         title: "Capture the evidence",
-        description: "Timestamped records and audit trails document duty of care as you go."
+        description: "Timestamped records and audit trails document compliance as you go."
     },
     {
         icon: routeIcon,
@@ -29,7 +29,7 @@ export const roleContextData = [
     {
         icon: messageAlertSquareIcon,
         title: "Prove it on request",
-        description: "Audit trails are kept per site, so evidence is ready the moment anyone asks."
+        description: "Audit trails are kept per location, so evidence is ready the moment anyone asks."
     }
 ]
 
@@ -37,7 +37,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Audits and Martyn's Law checklists capture timestamped records, photos and sign-offs as the work is done, at every site.",
+        description: "Audits and Martyn's Law checklists capture timestamped records, photos and sign-offs as the work is done, at every location.",
         image: "/images/solutions/by-role/compliance-managers/compliance-managers-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -48,14 +48,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "EVA reads compliance status across the estate and flags the sites that are due, overdue or at risk, early.",
+        title: "Analyze",
+        description: "EVA reads compliance status across every location and flags the ones that are due, overdue or at risk, early.",
         image: "/images/solutions/by-role/compliance-managers/compliance-managers-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "Explore",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -76,7 +76,7 @@ export const productHighlightData = [
     {
         icon: magnifyingGlassIcon,
         eyebrow: "Audits",
-        title: "Run digital audits and inspections on site.",
+        title: "Run digital audits and inspections on-site.",
         linkText: "Explore",
         link: "/products/operational-excellence/audits",
     },
@@ -104,7 +104,7 @@ export const productHighlightData = [
     {
         icon: aiIcon,
         eyebrow: "EVA",
-        title: "Ask which sites are due or at risk, fast.",
+        title: "Ask which locations are due or at risk, fast.",
         linkText: "Meet EVA",
         link: "/eva",
     },
@@ -123,7 +123,7 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "95",
         numberSuffix: "%",
-        description: "Sites covered",
+        description: "Locations covered",
     },
     {
         numberPrefix: "",
@@ -144,8 +144,8 @@ export const moduleStatsData = [
 export const challengeFrameData = [
     {
         eyebrow: "01 | Lack of evidence",
-        title: "When someone asks for evidence, you need it now, for every site, not next week.",
-        description: "Serve First keeps a timestamped audit trail for every site, so proof is ready on request, for any location and any date, without a scramble.",
+        title: "When someone asks for evidence, you need it now, for every location, not next week.",
+        description: "Serve First keeps a timestamped audit trail for every location, so proof is ready on request, for any location and any date, without a scramble.",
         tags: [
             {
                 tag: "Compliance checklists",
@@ -181,14 +181,14 @@ export const faqData = [
     },
     {
         question: "Is the evidence good enough for an audit?",
-        answer: "Every check is timestamped, attributed and stored with its photos and sign-offs, so the audit trail shows what was done, by whom and when, across every site."
+        answer: "Every check is timestamped, attributed and stored with its photos and sign-offs, so the audit trail shows what was done, by whom and when, across every location."
     },
     {
         question: "What happens when a check fails?",
         answer: "A corrective action is raised automatically, routed to an owner with a due date and tracked to proof of completion, so gaps are closed and documented."
     },
     {
-        question: "Can I prove compliance across every site at once?",
-        answer: "Yes. Every site reports into one operating picture, so you can see compliance status across the estate and produce evidence for any location immediately."
+        question: "Can I prove compliance across every location at once?",
+        answer: "Yes. Every location reports into one operating picture, so you can see compliance status across your business and produce evidence for any location immediately."
     }
 ]
