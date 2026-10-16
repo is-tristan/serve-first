@@ -9,7 +9,13 @@ const footerConfig = {
     "/lp-client-connect": {
         footerType: "minimal",
     },
+    "/lp-customer-surveys": {
+        footerType: "minimal",
+    },
     "/lp-terminals": {
+        footerType: "minimal",
+    },
+    "/lp-helpdesk": {
         footerType: "minimal",
     },
 };
