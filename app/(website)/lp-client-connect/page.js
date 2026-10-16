@@ -1,15 +1,18 @@
 // Components
 import LpBanner from "@/components/screens/lp/lp-banner/lp-banner";
+import LpFeatureList from "@/components/screens/lp/lp-featured-list/lp-feature-list";
 import LogoBar from "@/components/sections/logo-bar/logo-bar";
 import Testimonials from "@/components/sections/testimonials/testimonials";
 import Faq from "@/components/sections/faq/faq";
 import HowItWorks from "@/components/sections/how-it-works/how-it-works";
-import CtaBannerOne from "@/components/sections/cta-banners/cta-banner-1";
+import LpCta from "@/components/screens/lp/lp-cta/lp-cta";
 
 // Data
 import {
+    lpFeaturedListData,
+    howItWorksData,
+    lpFeaturedListData2,
     faqData,
-    howItWorksData
 } from "./data";
 
 export default function LpClientConnect() {
@@ -19,46 +22,63 @@ export default function LpClientConnect() {
         <>
 
             <LpBanner
-                eyebrow="B2B client feedback"
-                title="Know an account is unhappy before they tell you"
-                description="Client Connect runs branded feedback programs across your B2B accounts, so account teams see the risk early, not at the renewal conversation."
+                eyebrow="Client Connect"
+                title="Your client's renewal is decided long before the renewal meeting"
+                description="Client Connect hears from every stakeholder on the contract, weights it by seniority, and shows which accounts are at risk, so you can act before renewal."
                 hasButtons={false}
                 formSmallText="See it on your own locations. No slides, no obligation."
-                utmMedium="LP Client Connect"
+                utmMedium="LP Audit"
                 checkList={[
-                    "Branded invitations, per account",
-                    "Every send tracked to a response",
-                    "At-risk accounts flagged early"
+                    "Every contact heard, weighted by seniority",
+                    "A live view of which accounts are at risk",
+                    "Branded video invites, from post-meeting to QBR"
                 ]}
             />
 
-            <LogoBar />
+            <LogoBar
+                eyebrow="Trusted by service businesses that run on client relationships"
+                eyebrowDash={false}
+            />
 
-            <Testimonials />
-
-            <Faq
-                eyebrow="Common questions"
-                title="What account teams ask before they start"
-                data={faqData}
+            <LpFeatureList
+                data={lpFeaturedListData}
             />
 
             <HowItWorks
+                containerClass="noPaddingBottom"
+                hasFullStop={false}
                 eyebrow="How it works"
-                title="From invitation to a saved renewal"
-                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyze makes sense of them. Action fixes things."
+                title="Send. Track. Act."
+                description={null}
                 data={howItWorksData}
             />
 
-            <CtaBannerOne
-                title="See the risk before the renewal call"
-                description="See it on your own accounts. No slides, no obligation."
+            <LpFeatureList
+                containerClass="noPaddingTop"
+                data={lpFeaturedListData2}
+            />
+
+            <Testimonials type="alt" />
+
+            <Faq
+                eyebrow="Common questions"
+                title="What account teams ask us"
+                data={faqData}
+                button={null}
+            />
+
+            <LpCta
+                type="image-contained"
+                eyebrow="Client Connect"
+                title="Hear it from the client before the renewal."
+                description="Get a short demo to see how Client Connect gets answers from the people who decide your contracts."
+                image="/images/lp/client-connect/lp-client-connect-cta.png"
                 buttonPrimary={
                     {
-                        text: "Show me a program",
+                        text: "Show me my locations",
                         href: "#banner",
                     }
                 }
-                buttonSecondary={null}
             />
 
         </>

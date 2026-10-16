@@ -23,7 +23,13 @@ const headerConfig = {
     "/lp-client-connect": {
         headerType: "minimal",
     },
+    "/lp-customer-surveys": {
+        headerType: "minimal",
+    },
     "/lp-terminals": {
+        headerType: "minimal",
+    },
+    "/lp-helpdesk": {
         headerType: "minimal",
     },
     "/products/operational-excellence/vision": {

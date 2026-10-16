@@ -76,4 +76,11 @@
             object-position: center bottom;
         }
     }
+
+    &[data-type="image-contained"] {
+        img {
+            object-fit: contain;
+            object-position: center;
+        }
+    }
 }
