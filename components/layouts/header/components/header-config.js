@@ -1,13 +1,4 @@
 const headerConfig = {
-    "/": {
-        topbar: {
-            href: "/products/operational-excellence/vision",
-            text: "VISION: The Future of Operational Excellence is here.",
-            target: "_self",
-            type: "home",
-            fullLink: true,
-        },
-    },
     "/products/customer-experience/mystery-shopping": {
         topbar: {
             href: "https://mysteryshopping.servefirst.ai/",
