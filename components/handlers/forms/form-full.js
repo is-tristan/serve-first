@@ -154,6 +154,8 @@ export default function FormFull({
 
                             <option value="Tablet">Tablet</option>
 
+                            <option value="Learning_Development">Learning & Development</option>
+
                             <option value="Bundle">Bundle</option>
 
                             <option value="Other">Other</option>

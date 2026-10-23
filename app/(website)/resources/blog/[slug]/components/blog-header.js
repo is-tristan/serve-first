@@ -14,7 +14,7 @@ const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 export default function BlogHeader({ blog }) {
 
     const featuredImage = blog.coverImage?.asset
-        ? urlFor(blog.coverImage).width(1600).height(900).fit("crop").url()
+        ? urlFor(blog.coverImage).width(1024).height(683).fit("crop").url()
         : imagePlaceholder
     const authorImage = blog.author?.image?.asset
         ? urlFor(blog.author.image).width(64).height(64).fit("crop").url()
@@ -58,6 +58,7 @@ export default function BlogHeader({ blog }) {
                     priority
                     width={1024}
                     height={683}
+                    sizes="(max-width: 768px) 100vw, 1024px"
                 />
 
             </div>
