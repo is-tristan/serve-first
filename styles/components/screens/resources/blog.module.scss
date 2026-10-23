@@ -104,6 +104,22 @@
     filter: brightness(0.95);
     width: 100%;
     height: auto;
+    
+    @media (width <576px) {
+        max-height: 17.5rem;
+    }
+
+    @media (width >=576px) {
+        max-height: 25rem;
+    }
+
+    @media (width >=768px) {
+        max-height: 35rem;
+    }
+
+    @media (width >=1024px) {
+        max-height: 100%;
+    }
 
     img {
         object-fit: cover;
