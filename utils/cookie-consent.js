@@ -2,6 +2,8 @@ export const cookieConsentName = "cookieConsent";
 
 export const cookieConsentMaxAgeSeconds = 60 * 60 * 24 * 182;
 
+export const openCookieSettingsEventName = "openCookieSettings";
+
 export const defaultCookiePreferences = {
     necessary: true,
     measurement: false,
@@ -91,8 +93,58 @@ export function setCookieConsent(preferences) {
 
 }
 
+export function openCookieSettings() {
+
+    if (typeof window === "undefined") {
+
+        return;
+
+    }
+
+    window.dispatchEvent(new Event(openCookieSettingsEventName));
+
+}
+
 export function hasAnalyticsConsent(preferences) {
 
     return Boolean(preferences?.measurement && preferences?.marketing);
+
+}
+
+export function getGoogleConsentState(preferences) {
+
+    const measurementState = preferences?.measurement ? "granted" : "denied";
+
+    const marketingState = preferences?.marketing ? "granted" : "denied";
+
+    return {
+        ad_storage: marketingState,
+        ad_user_data: marketingState,
+        ad_personalization: marketingState,
+        analytics_storage: measurementState,
+        personalization_storage: marketingState,
+        functionality_storage: "granted",
+        security_storage: "granted",
+    };
+
+}
+
+export function updateGoogleConsent(preferences) {
+
+    if (typeof window === "undefined") {
+
+        return;
+
+    }
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = window.gtag || function gtag() {
+
+        window.dataLayer.push(arguments);
+
+    };
+
+    window.gtag("consent", "update", getGoogleConsentState(preferences));
 
 }

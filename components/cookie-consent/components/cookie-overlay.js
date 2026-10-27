@@ -12,7 +12,7 @@ import { closeIcon } from "@/utils/icons";
 // Utils
 import { defaultCookiePreferences } from "@/utils/cookie-consent";
 
-export default function CookieOverlay({ isOpen, onClose, onConsentSave }) {
+export default function CookieOverlay({ isOpen, currentPreferences, onClose, onConsentSave }) {
 
     const dialogRef = useRef(null);
 
@@ -30,7 +30,7 @@ export default function CookieOverlay({ isOpen, onClose, onConsentSave }) {
 
         if (isOpen && !dialog.open) {
 
-            setPreferences(defaultCookiePreferences);
+            setPreferences(currentPreferences || defaultCookiePreferences);
 
             dialog.showModal();
 
@@ -44,7 +44,7 @@ export default function CookieOverlay({ isOpen, onClose, onConsentSave }) {
 
         }
 
-    }, [isOpen]);
+    }, [isOpen, currentPreferences]);
 
     const handleToggle = (name) => {
 

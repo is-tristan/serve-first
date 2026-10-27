@@ -29,7 +29,16 @@
             justify-content: flex-end;
         }
 
-        a {
+        .footerCookieSettings {
+            padding: 0;
+            border: 0;
+            background: none;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        a,
+        .footerCookieSettings {
             color: rgba(var(--primaryAltRgb), 0.8);
             transition: var(--ease);
 
@@ -62,7 +71,8 @@
     }
 
     .footerPolicyLinks {
-        a {
+        a,
+        .footerCookieSettings {
             color: var(--secondary);
 
             &::after {

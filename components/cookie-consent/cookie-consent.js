@@ -5,15 +5,19 @@ import { useEffect, useState } from "react";
 
 // SEO
 import AnalyticsTracking from "@/seo/analytics-tracking";
+import GoogleTracking from "@/seo/google-tracking";
 
 // Components
 import CookieBanner from "./components/cookie-banner";
+import CookieOverlay from "./components/cookie-overlay";
 
 // Utils
 import {
     getCookieConsent,
     hasAnalyticsConsent,
+    openCookieSettingsEventName,
     setCookieConsent,
+    updateGoogleConsent,
 } from "@/utils/cookie-consent";
 
 export default function CookieConsent() {
@@ -22,11 +26,31 @@ export default function CookieConsent() {
 
     const [hasCheckedConsent, setHasCheckedConsent] = useState(false);
 
+    const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
+
     useEffect(() => {
 
-        setPreferences(getCookieConsent());
+        const savedPreferences = getCookieConsent();
+
+        if (savedPreferences) {
+
+            updateGoogleConsent(savedPreferences);
+
+        }
+
+        setPreferences(savedPreferences);
 
         setHasCheckedConsent(true);
+
+    }, []);
+
+    useEffect(() => {
+
+        const handleOpenCookieSettings = () => setIsPreferencesOpen(true);
+
+        window.addEventListener(openCookieSettingsEventName, handleOpenCookieSettings);
+
+        return () => window.removeEventListener(openCookieSettingsEventName, handleOpenCookieSettings);
 
     }, []);
 
@@ -38,7 +62,19 @@ export default function CookieConsent() {
             marketing: Boolean(nextPreferences.marketing),
         };
 
+        const isRevokingAnalytics = hasAnalyticsConsent(preferences) && !hasAnalyticsConsent(savedPreferences);
+
         setCookieConsent(savedPreferences);
+
+        updateGoogleConsent(savedPreferences);
+
+        if (isRevokingAnalytics) {
+
+            window.location.reload();
+
+            return;
+
+        }
 
         setPreferences(savedPreferences);
 
@@ -54,9 +90,25 @@ export default function CookieConsent() {
 
         <>
 
+            <GoogleTracking />
+
             {hasAnalyticsConsent(preferences) ? <AnalyticsTracking /> : null}
 
-            {!preferences ? <CookieBanner onConsentSave={handleConsentSave} /> : null}
+            {!preferences ? (
+
+                <CookieBanner
+                    onConsentSave={handleConsentSave}
+                    onManagePreferences={() => setIsPreferencesOpen(true)}
+                />
+
+            ) : null}
+
+            <CookieOverlay
+                isOpen={isPreferencesOpen}
+                currentPreferences={preferences}
+                onClose={() => setIsPreferencesOpen(false)}
+                onConsentSave={handleConsentSave}
+            />
 
         </>
 

@@ -1,6 +1,9 @@
 // Next
 import Link from "next/link";
 
+// Components
+import CookieSettingsButton from "@/components/cookie-consent/components/cookie-settings-button";
+
 // Styles
 import styles from "@/styles/components/layouts/footer/footer-copyright.module.scss";
 
@@ -22,6 +25,8 @@ export default function FooterCopyright() {
                     <Link href={item.href} target={item.target ? item.target : "_self"} key={item.label}>{item.label}</Link>
 
                 ))}
+
+                <CookieSettingsButton className={styles.footerCookieSettings} />
 
             </div>
 

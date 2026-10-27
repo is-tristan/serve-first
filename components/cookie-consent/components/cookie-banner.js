@@ -1,17 +1,9 @@
 "use client";
 
-// React
-import { useState } from "react";
-
-// Components
-import CookieOverlay from "./cookie-overlay";
-
 // Styles
 import styles from "@/styles/components/cookie-consent/cookie-banner.module.scss";
 
-export default function CookieBanner({ onConsentSave }) {
-
-    const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
+export default function CookieBanner({ onConsentSave, onManagePreferences }) {
 
     const handleAcceptAll = () => {
 
@@ -25,49 +17,39 @@ export default function CookieBanner({ onConsentSave }) {
 
     return (
 
-        <>
+        <div className={styles.cookieBanner}>
 
-            <div className={styles.cookieBanner}>
+            <div className={styles.cookieBannerContainer}>
 
-                <div className={styles.cookieBannerContainer}>
+                <p>We use cookies to ensure you get the best experience on our website. By clicking "Accept all", you agree to the use of cookies.</p>
 
-                    <p>We use cookies to ensure you get the best experience on our website. By clicking "Accept all", you agree to the use of cookies.</p>
+                <div className={`buttons ${styles.cookieOverlayButtons}`}>
 
-                    <div className={`buttons ${styles.cookieOverlayButtons}`}>
+                    <button
+                        type="button"
+                        className={`btn primary ${styles.btnAccept}`}
+                        onClick={handleAcceptAll}
+                    >
 
-                        <button
-                            type="button"
-                            className={`btn primary ${styles.btnAccept}`}
-                            onClick={handleAcceptAll}
-                        >
+                        Accept all
 
-                            Accept all
+                    </button>
 
-                        </button>
+                    <button
+                        type="button"
+                        className={`btn ${styles.btnManage}`}
+                        onClick={onManagePreferences}
+                    >
 
-                        <button
-                            type="button"
-                            className={`btn ${styles.btnManage}`}
-                            onClick={() => setIsPreferencesOpen(true)}
-                        >
+                        Manage preferences
 
-                            Manage preferences
-
-                        </button>
-
-                    </div>
+                    </button>
 
                 </div>
 
             </div>
 
-            <CookieOverlay
-                isOpen={isPreferencesOpen}
-                onClose={() => setIsPreferencesOpen(false)}
-                onConsentSave={onConsentSave}
-            />
-
-        </>
+        </div>
 
     );
 
