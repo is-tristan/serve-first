@@ -25,6 +25,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 // SEO
 import { getPageMetadata } from "@/seo/seo-map-data";
+import GoogleConsentMode from "@/seo/google-consent-mode";
 export async function generateMetadata() {
   return getPageMetadata("/");
 }
@@ -36,6 +37,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${specialGothicExpandedOne.variable} ${poppins.variable} ${jetBrainsMono.variable}`} data-scroll-behavior="smooth">
 
       <body>
+
+        <GoogleConsentMode />
 
         {children}
 
