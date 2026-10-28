@@ -10,7 +10,7 @@ import { footerContactItems } from "../items/footer-items-data";
 // Icon
 import { mapPinIcon } from "@/utils/icons";
 
-export default function FooterContactItems() {
+export default function FooterContactItems({ theme }) {
 
     const contactItems = Object.values(footerContactItems);
 
@@ -20,7 +20,7 @@ export default function FooterContactItems() {
 
             {contactItems.length > 0 && (
 
-                <div className={styles.footerContactItems}>
+                <div className={styles.footerContactItems} data-theme={theme}>
 
                     {contactItems.map((item, index) => (
 
