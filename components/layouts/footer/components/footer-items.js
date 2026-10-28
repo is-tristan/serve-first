@@ -47,9 +47,9 @@ export default function FooterItems({ theme }) {
 
                 <span className={styles.footerColTitle}>Contact Us</span>
 
-                <FooterContactItems />
+                <FooterContactItems theme={theme} />
 
-                <FooterSocialItems />
+                <FooterSocialItems theme={theme} />
 
                 <div className={styles.footerColItems}>
 
