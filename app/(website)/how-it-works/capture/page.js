@@ -112,7 +112,7 @@ export default function Capture() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/how-it-works/capture" />
 
             </Suspense>
 

@@ -27,11 +27,14 @@ const menuAdKeys = {
     "Resources": "resources",
 }
 
+const getAdKey = (label, submenuItem) => `${label}/${submenuItem?.label}`
+
 export default function HeaderMenu({ menuAds }) {
 
     const pathname = usePathname()
     const [openSubmenu, setOpenSubmenu] = useState(null)
     const [selectedSubmenuItem, setSelectedSubmenuItem] = useState(null)
+    const [adKey, setAdKey] = useState(getAdKey(data[0].label, data[0].submenu?.[0]))
 
     const isActive = (href) => {
         return pathname === href;
@@ -49,6 +52,10 @@ export default function HeaderMenu({ menuAds }) {
         const menuItem = data.find((menuItem) => menuItem.label === label);
         setOpenSubmenu(label);
         setSelectedSubmenuItem(menuItem?.submenu?.[0] ?? null);
+
+        if (menuItem?.submenu?.length) {
+            setAdKey(getAdKey(label, menuItem.submenu[0]));
+        }
     };
 
     const handleSubmenuClose = () => {
@@ -58,6 +65,7 @@ export default function HeaderMenu({ menuAds }) {
 
     const handleSubmenuItemSelect = (submenuItem) => {
         setSelectedSubmenuItem(submenuItem);
+        setAdKey(getAdKey(openSubmenu, submenuItem));
     };
 
     return (
@@ -184,7 +192,11 @@ export default function HeaderMenu({ menuAds }) {
 
                                                         )}
 
-                                                        <HeaderAd ad={menuAds?.[menuAdKeys[item.label]]} onClick={handleSubmenuClose} />
+                                                        {adKey === getAdKey(item.label, submenuItem) && (
+
+                                                            <HeaderAd ad={menuAds?.[menuAdKeys[item.label]]} onClick={handleSubmenuClose} />
+
+                                                        )}
 
                                                     </div>
 

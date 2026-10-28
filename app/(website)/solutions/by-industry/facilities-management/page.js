@@ -25,11 +25,8 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-industry/facilities-management");
-    const keywords = metadata.keywords?.map((keyword) => keyword === "multi-site FM" ? "multi-location FM" : keyword);
-
     return {
         ...metadata,
-        keywords,
     };
 }
 

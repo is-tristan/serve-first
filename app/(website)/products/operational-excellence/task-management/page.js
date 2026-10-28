@@ -146,7 +146,7 @@ export default async function TaskManagement() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/operational-excellence/task-management" />
 
             </Suspense>
 

@@ -128,7 +128,7 @@ export default function Analyze() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/how-it-works/analyze" />
 
             </Suspense>
 

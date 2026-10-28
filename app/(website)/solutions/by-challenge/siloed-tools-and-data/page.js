@@ -24,12 +24,9 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-challenge/siloed-tools-and-data");
     const title = "Connect Siloed Tools and Data, Multi-Location | Serve First";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "multi-site data consolidation" ? "multi-location data consolidation" : keyword);
-
     return {
         ...metadata,
         title,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             title,

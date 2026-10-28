@@ -55,6 +55,21 @@ h1 {
     }
 }
 
+div.pageTitle {
+    font-family: var(--heading);
+    font-weight: 400;
+    line-height: 100%;
+    font-size: clamp(1.9rem, 4vw, 4rem);
+    color: var(--primaryAlt);
+    text-wrap: pretty;
+    margin: 0;
+    padding: 0;
+
+    @media (width >=576px) and (width < 1024px) {
+        text-align: center;
+    }
+}
+
 h2,
 h3 {
     &.sectionTitle {

@@ -7,6 +7,66 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/how-it-works",
+        destination: "/how-it-works/capture",
+        permanent: true,
+      },
+      {
+        source: "/solutions",
+        destination: "/solutions/by-role/cx-leaders",
+        permanent: true,
+      },
+      {
+        source: "/solutions/by-role",
+        destination: "/solutions/by-role/cx-leaders",
+        permanent: true,
+      },
+      {
+        source: "/solutions/by-industry",
+        destination: "/solutions/by-industry/retail",
+        permanent: true,
+      },
+      {
+        source: "/solutions/by-challenge",
+        destination: "/solutions/by-challenge/inconsistent-standards",
+        permanent: true,
+      },
+      {
+        source: "/products",
+        destination: "/products/customer-experience/feedback-terminals",
+        permanent: true,
+      },
+      {
+        source: "/products/customer-experience",
+        destination: "/products/customer-experience/feedback-terminals",
+        permanent: true,
+      },
+      {
+        source: "/products/market-intelligence",
+        destination: "/products/market-intelligence/competitive-benchmarking",
+        permanent: true,
+      },
+      {
+        source: "/products/operational-excellence",
+        destination: "/products/operational-excellence/audits",
+        permanent: true,
+      },
+      {
+        source: "/company",
+        destination: "/company/about",
+        permanent: true,
+      },
+      {
+        source: "/resources",
+        destination: "/resources/blog",
+        permanent: true,
+      },
+      {
+        source: "/legal",
+        destination: "/legal/privacy-policy",
+        permanent: true,
+      },
+      {
         source: "/how-it-works/analyse",
         destination: "/how-it-works/analyze",
         permanent: true,

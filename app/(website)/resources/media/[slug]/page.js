@@ -24,10 +24,9 @@ export async function generateMetadata({ params }) {
 
     const title = media.seo?.title || media.title
     const description = media.seo?.description || media.excerpt
-    const keywords = (media.seo?.keywords || []).filter(Boolean)
     const canonicalUrl = `${getCanonicalSiteUrl()}/resources/media/${slug}`
 
-    const metadata = {
+    return {
         title,
         description,
         alternates: {
@@ -42,12 +41,6 @@ export async function generateMetadata({ params }) {
             description,
         },
     }
-
-    if (keywords.length) {
-        metadata.keywords = keywords
-    }
-
-    return metadata
 }
 
 export default async function MediaPage({ params }) {

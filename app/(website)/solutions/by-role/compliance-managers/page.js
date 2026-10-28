@@ -25,23 +25,11 @@ export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-role/compliance-managers");
     const title = "Compliance Management Software, Multi-Location | Serve First";
     const description = "Document compliance across every location with Serve First. Compliance managers get checklists, captured evidence and audit trails ready on request.";
-    const keywords = metadata.keywords?.map((keyword) => {
-        if (keyword === "multi-site compliance") {
-            return "multi-location compliance";
-        }
-
-        if (keyword === "duty of care evidence") {
-            return "compliance documentation";
-        }
-
-        return keyword;
-    });
 
     return {
         ...metadata,
         title,
         description,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             title,

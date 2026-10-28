@@ -143,7 +143,7 @@ export default async function ReviewMonitoring() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/market-intelligence/review-monitoring" />
 
             </Suspense>
 

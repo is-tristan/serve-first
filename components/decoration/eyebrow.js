@@ -13,6 +13,7 @@ export default function Eyebrow({
     type = "primary",
     textColor = "primary",
     hasDash = false,
+    tag = "span",
     text }) {
 
     const ref = useRef(null);
@@ -22,7 +23,19 @@ export default function Eyebrow({
 
         <motion.div className={styles.eyebrow} data-type={type} data-text-color={textColor} ref={ref} animate={hasAnimation ? (isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }) : { opacity: 1, y: 0 }} initial={hasAnimation ? { opacity: 0, y: 16 } : { opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: delay }}>
 
-            {text && (
+            {text && tag === "h1" && (
+
+                <>
+
+                    {hasDash && (<span className={styles.dash}>-</span>)}
+
+                    <h1 className={styles.heading}>{text}</h1>
+
+                </>
+
+            )}
+
+            {text && tag !== "h1" && (
 
                 <span className={`${styles.text}`}>
 

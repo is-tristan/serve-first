@@ -115,7 +115,7 @@ export default async function MartynsLaw() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/operational-excellence/martyns-law" />
 
             </Suspense>
 

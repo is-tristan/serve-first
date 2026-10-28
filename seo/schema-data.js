@@ -107,7 +107,7 @@ export function getOrganizationSchema() {
             addressLocality: "Milton Keynes",
             addressCountry: "GB",
         },
-        email: "info@servefirst.co.uk",
+        email: "info@servefirst.ai",
         sameAs: [
             "https://www.facebook.com/servefirstcx",
             "https://www.instagram.com/servefirstcx",

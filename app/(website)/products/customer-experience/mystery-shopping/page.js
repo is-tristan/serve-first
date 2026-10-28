@@ -142,7 +142,7 @@ export default async function MysteryShopping() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/customer-experience/mystery-shopping" />
 
             </Suspense>
 

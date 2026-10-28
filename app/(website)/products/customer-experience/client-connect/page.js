@@ -29,12 +29,9 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 export async function generateMetadata() {
     const metadata = await getPageMetadata("/products/customer-experience/client-connect");
     const description = "Automate B2B feedback, relationships and NPS with our enterprise feedback management system: Client Connect. Drive insight, engagement and growth";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "B2B feedback programmes" ? "B2B feedback programs" : keyword);
-
     return {
         ...metadata,
         description,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             description,

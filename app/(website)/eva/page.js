@@ -21,13 +21,10 @@ export async function generateMetadata() {
     const metadata = await getPageMetadata("/eva");
     const title = "EVA: AI Analyst For Multi-Location Operations - Serve First";
     const description = "EVA does the analysis, so you aren't juggling reports. Ask in plain language and EVA gives you the latest status across every location";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "AI assistant for multi-site operations" ? "AI assistant for multi-location operations" : keyword);
-
     return {
         ...metadata,
         title,
         description,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             title,

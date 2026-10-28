@@ -15,6 +15,10 @@ import {
     faqData,
 } from "./data";
 
+export const metadata = {
+    robots: "noindex",
+};
+
 export default function LpAudit() {
 
     return (

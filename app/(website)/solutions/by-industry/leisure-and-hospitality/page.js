@@ -26,12 +26,9 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-industry/leisure-and-hospitality");
     const description = "See how Serve First modernizes hospitality audits with guest experience software. From hotel and restaurant inspections to guest journey insights.";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "multi-site hospitality" ? "multi-location hospitality" : keyword);
-
     return {
         ...metadata,
         description,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             description,

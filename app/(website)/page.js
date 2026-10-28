@@ -24,6 +24,7 @@ import {
 } from "./data.js";
 
 import { getPageMetadata } from "@/seo/seo-map-data.js";
+import { getCanonicalUrl } from "@/seo/site-url";
 
 
 export async function generateMetadata() {
@@ -35,6 +36,8 @@ export default function Home() {
   return (
 
     <>
+
+      <link rel="canonical" href={getCanonicalUrl("/")} />
 
       <Banner
         eyebrow="Operational intelligence for customer experience"

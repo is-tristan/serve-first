@@ -2,15 +2,22 @@
 import ContentGrid from "@/components/sections/content-grid/content-grid"
 
 // Sanity
-import { getBlogs } from "@/sanity/lib/queries"
+import { getBlogs, getRelatedBlogs } from "@/sanity/lib/queries"
 import { urlFor } from "@/sanity/lib/image"
+
+// Data
+import { relatedPostsData } from "@/data/related-posts-data"
 
 // Placeholder
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
-export default async function BlogGrid({ eyebrow = "From the blog", title = "Worth a read", containerTopClass = "", containerBottomClass = "" }) {
+export default async function BlogGrid({ path = null, eyebrow = "From the blog", title = "Worth a read", containerTopClass = "", containerBottomClass = "" }) {
 
-    const blogs = await getBlogs()
+    const related = path ? relatedPostsData[path] : null
+
+    const blogs = related
+        ? await getRelatedBlogs({ path, tags: related.tags, categories: related.categories, terms: related.terms })
+        : await getBlogs()
 
     const contentGridData = (blogs || []).slice(0, 3).map((blog) => ({
         category: blog.category,

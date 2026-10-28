@@ -25,13 +25,10 @@ export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-challenge/inconsistent-standards");
     const title = "Fix Inconsistent Standards Across Locations | Serve First";
     const description = "Stop standards slipping from location to location. Serve First scores every location, routes the fix and proves consistency across your whole business.";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "multi-site standards" ? "multi-location standards" : keyword);
-
     return {
         ...metadata,
         title,
         description,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             title,

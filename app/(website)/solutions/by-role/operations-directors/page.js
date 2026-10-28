@@ -25,13 +25,10 @@ export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-role/operations-directors");
     const title = "Operations Management Software, Multi-Location | Serve First";
     const description = "Keep every location up to standard with Serve First. Operations leaders get live audits, routed tasks and one operating picture across all your locations.";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "multi-site operations management" ? "multi-location operations management" : keyword);
-
     return {
         ...metadata,
         title,
         description,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             title,

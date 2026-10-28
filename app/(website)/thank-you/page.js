@@ -4,6 +4,10 @@ import ThankYouContent from "./components/content";
 // Styles
 import styles from "@/styles/components/screens/thank-you/thank-you.module.scss";
 
+export const metadata = {
+    robots: "noindex",
+};
+
 export default function ThankYouPage() {
 
     return (

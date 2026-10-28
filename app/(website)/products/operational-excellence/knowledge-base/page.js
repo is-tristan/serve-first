@@ -129,7 +129,7 @@ export default async function KnowledgeBase() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/operational-excellence/knowledge-base" />
 
             </Suspense>
 

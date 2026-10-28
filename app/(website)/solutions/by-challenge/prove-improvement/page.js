@@ -24,12 +24,9 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 export async function generateMetadata() {
     const metadata = await getPageMetadata("/solutions/by-challenge/prove-improvement");
     const title = "Prove What's Improving, Multi-Location | Serve First";
-    const keywords = metadata.keywords?.map((keyword) => keyword === "evidence ROI multi-site" ? "prove ROI multi-location" : keyword);
-
     return {
         ...metadata,
         title,
-        keywords,
         openGraph: {
             ...metadata.openGraph,
             title,

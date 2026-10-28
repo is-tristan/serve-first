@@ -28,7 +28,7 @@ export const postSeoField = defineField({
             name: "tags",
             title: "Tags",
             type: "array",
-            description: "These tags are published as the SEO keywords for this post.",
+            description: "Used to match this post to the \"Worth a read\" section on product and industry pages.",
             of: [
                 defineArrayMember({
                     type: "reference",

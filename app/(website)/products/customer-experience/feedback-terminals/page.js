@@ -123,7 +123,7 @@ export default async function FeedbackTerminals() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/customer-experience/feedback-terminals" />
 
             </Suspense>
 
