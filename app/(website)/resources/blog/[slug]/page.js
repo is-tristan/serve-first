@@ -28,10 +28,9 @@ export async function generateMetadata({ params }) {
 
     const title = blog.seo?.title || blog.title
     const description = blog.seo?.description || blog.excerpt
-    const keywords = (blog.seo?.keywords || []).filter(Boolean)
     const canonicalUrl = `${getCanonicalSiteUrl()}/resources/blog/${slug}`
 
-    const metadata = {
+    return {
         title,
         description,
         alternates: {
@@ -46,12 +45,6 @@ export async function generateMetadata({ params }) {
             description,
         },
     }
-
-    if (keywords.length) {
-        metadata.keywords = keywords
-    }
-
-    return metadata
 }
 
 export default async function BlogPage({ params }) {

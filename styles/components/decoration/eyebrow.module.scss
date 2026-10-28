@@ -45,4 +45,11 @@
     &[data-text-color="colorSecondary"] {
         color: var(--secondary);
     }
+
+    .heading {
+        font: inherit;
+        color: inherit;
+        text-transform: inherit;
+        text-wrap: wrap;
+    }
 }

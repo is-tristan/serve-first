@@ -129,7 +129,7 @@ export default async function HelpDesk() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/operational-excellence/helpdesk" />
 
             </Suspense>
 

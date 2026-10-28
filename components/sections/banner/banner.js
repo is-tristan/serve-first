@@ -1,5 +1,5 @@
 // Components
-import Eyebrow from "@/components/decoration/eyebrow";
+import BannerHeading from "@/components/sections/banner/components/banner-heading";
 import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
 import ImageCol from "@/components/sections/banner/components/image-col";
@@ -48,15 +48,11 @@ export default function Banner({
 
                     <div className="content">
 
-                        {eyebrow && (<Eyebrow text={eyebrow} hasDash={true} />)}
-
-                        <Text
-                            hasFullStop={hasFullStop}
-                            headingClass={`pageTitle`}
-                            titleTag="h1"
+                        <BannerHeading
+                            eyebrow={eyebrow}
                             title={title}
                             description={description}
-                            descriptionClass={`fw400`}
+                            hasFullStop={hasFullStop}
                         />
 
                         {hasButtons && (

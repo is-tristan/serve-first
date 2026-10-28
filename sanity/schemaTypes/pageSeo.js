@@ -49,6 +49,13 @@ export const pageSeo = defineType({
             validation: (rule) => rule.required().max(70).warning("Keep under 70 characters"),
         }),
         defineField({
+            name: "h1",
+            title: "H1",
+            type: "string",
+            description: "The page's main heading for search engines. Shown above the hero slogan, which stays as the styled headline. Leave empty to use the slogan as the H1.",
+            validation: (rule) => rule.max(70).warning("Keep under 70 characters"),
+        }),
+        defineField({
             name: "description",
             title: "Description",
             type: "text",
@@ -59,6 +66,7 @@ export const pageSeo = defineType({
             name: "keywords",
             title: "Keywords",
             type: "array",
+            hidden: true,
             of: [{ type: "string" }],
             options: {
                 layout: "tags",

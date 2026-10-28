@@ -131,7 +131,7 @@ export default async function Survey() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/customer-experience/survey" />
 
             </Suspense>
 

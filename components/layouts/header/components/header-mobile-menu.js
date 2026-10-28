@@ -32,6 +32,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
     const pathname = usePathname();
     const [openSubmenu, setOpenSubmenu] = useState(null);
     const [openNestedSubmenu, setOpenNestedSubmenu] = useState(null);
+    const [adSubmenu, setAdSubmenu] = useState(null);
 
     const isActive = (href) => {
         return pathname === href;
@@ -48,6 +49,10 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
     const handleSubmenuToggle = (label) => {
         setOpenSubmenu((current) => (current === label ? null : label));
         setOpenNestedSubmenu(null);
+
+        if (openSubmenu !== label) {
+            setAdSubmenu(label);
+        }
     };
 
     const handleNestedSubmenuToggle = (submenuItem) => {
@@ -176,7 +181,7 @@ export default function HeaderMobileMenu({ isOpen = false, onClose, menuAds }) {
 
                                         ))}
 
-                                        {menuAds?.[menuAdKeys[item.label]] && (
+                                        {adSubmenu === item.label && menuAds?.[menuAdKeys[item.label]] && (
 
                                             <div className={styles.mobileMenuAd} onClick={handleLinkClick}>
 

@@ -98,7 +98,7 @@ export default function Action() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/how-it-works/action" />
 
             </Suspense>
 

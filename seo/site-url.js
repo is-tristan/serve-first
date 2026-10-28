@@ -6,3 +6,13 @@ export function getCanonicalSiteUrl() {
         .replace("://servefirst.ai", "://www.servefirst.ai")
         .replace(/\/$/, "")
 }
+
+export function getCanonicalUrl(path = "/") {
+    const siteUrl = getCanonicalSiteUrl()
+
+    if (!path || path === "/") {
+        return `${siteUrl}/`
+    }
+
+    return `${siteUrl}${path.replace(/\/$/, "")}`
+}

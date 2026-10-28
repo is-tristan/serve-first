@@ -81,6 +81,8 @@ export default function Heading({
                                 return <h5 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             case "h6":
                                 return <h6 className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
+                            case "div":
+                                return <div className={headingClass} dangerouslySetInnerHTML={{ __html: title }} />;
                             default:
                                 return null;
                         }

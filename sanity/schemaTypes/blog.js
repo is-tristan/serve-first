@@ -5,6 +5,8 @@ import { DocumentTextIcon } from "@sanity/icons/DocumentText"
 import { richTextMembers } from "./shared/richText"
 import { postSeoField } from "./shared/postSeo"
 
+import { relatedPageOptions } from "../../data/related-posts-data"
+
 export const blog = defineType({
     name: "blog",
     title: "Blog Post",
@@ -79,6 +81,16 @@ export const blog = defineType({
                     to: [{ type: "category" }],
                 }),
             ],
+        }),
+        defineField({
+            name: "relatedPages",
+            title: "Show On Pages",
+            type: "array",
+            description: "Pin this post to the \"Worth a read\" section on these pages. Posts are also matched by their tags and categories.",
+            of: [defineArrayMember({ type: "string" })],
+            options: {
+                list: relatedPageOptions,
+            },
         }),
         defineField({
             name: "authors",

@@ -127,7 +127,7 @@ export default async function Audits() {
 
             <Suspense fallback={<IsLoading />}>
 
-                <BlogGrid />
+                <BlogGrid path="/products/operational-excellence/audits" />
 
             </Suspense>
 

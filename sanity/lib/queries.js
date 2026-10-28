@@ -54,7 +54,6 @@ export const pageSeoQuery = defineQuery(/* groq */ `
     *[_type == "pageSeo" && path == $path][0]{
         title,
         description,
-        keywords,
         noIndex
     }
 `)
@@ -63,6 +62,22 @@ export async function getPageSeo(path) {
     const { data } = await sanityFetch({
         query: pageSeoQuery,
         params: { path },
+        stega: false,
+    })
+
+    return data
+}
+
+export const pageHeadingsQuery = defineQuery(/* groq */ `
+    *[_type == "pageSeo" && defined(path) && defined(h1) && h1 != ""]{
+        path,
+        h1
+    }
+`)
+
+export async function getPageHeadings() {
+    const { data } = await sanityFetch({
+        query: pageHeadingsQuery,
         stega: false,
     })
 
@@ -96,6 +111,45 @@ export const blogsQuery = defineQuery(/* groq */ `
 export async function getBlogs() {
     const { data } = await sanityFetch({
         query: blogsQuery,
+    })
+
+    return data
+}
+
+export const relatedBlogsQuery = defineQuery(/* groq */ `
+    *[_type == "blog" && defined(slug.current)] {
+        _id,
+        title,
+        excerpt,
+        readTime,
+        publishedAt,
+        "slug": slug.current,
+        "category": categories[0]->title,
+        "relevance": select($path in relatedPages => 10, 0)
+            + coalesce(count((seo.tags[]->slug.current)[@ in $tags]), 0) * 4
+            + coalesce(count((categories[]->slug.current)[@ in $categories]), 0) * 2
+            + select(count($terms[^.title match @]) > 0 => 3, 0)
+            + select(count($terms[^.excerpt match @]) > 0 => 1, 0),
+        coverImage {
+            asset->{
+                _id,
+                url,
+                metadata {
+                    lqip,
+                    dimensions
+                }
+            },
+            hotspot,
+            crop,
+            alt
+        }
+    } | order(relevance desc, publishedAt desc) [0...3]
+`)
+
+export async function getRelatedBlogs({ path = "", tags = [], categories = [], terms = [] }) {
+    const { data } = await sanityFetch({
+        query: relatedBlogsQuery,
+        params: { path, tags, categories, terms },
     })
 
     return data
@@ -189,8 +243,7 @@ export const blogBySlugQuery = defineQuery(/* groq */ `
         },
         seo {
             title,
-            description,
-            "keywords": tags[]->title
+            description
         },
         "more": *[
             _type == "blog" &&
@@ -327,8 +380,7 @@ export const mediaBySlugQuery = defineQuery(/* groq */ `
         },
         seo {
             title,
-            description,
-            "keywords": tags[]->title
+            description
         },
         "more": *[
             _type == "media" &&
