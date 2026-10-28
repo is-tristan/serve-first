@@ -60,7 +60,7 @@ export const howItWorksData = [
         imageHeight: 576,
         button: {
             text: "Show me",
-            href: "/how-it-works/analyze",
+            href: "/how-it-works/analyse",
         }
     },
     {
