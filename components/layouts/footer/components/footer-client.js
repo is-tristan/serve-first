@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 // Components
 import FooterContainer from "@/components/layouts/footer/components/footer-container";
+import LineDecoration from "@/components/decoration/line-decoration";
 
 // Config
 import { getFooterConfig, getFooterType } from "@/components/layouts/footer/components/footer-config";
@@ -31,6 +32,12 @@ export default function FooterClient() {
         >
 
             <FooterContainer theme={theme} bottomText={bottomText} />
+
+            {theme !== "dark" && (
+
+                <LineDecoration variant="footer" className={styles.footerDecoration} playInView />
+
+            )}
 
         </footer>
 

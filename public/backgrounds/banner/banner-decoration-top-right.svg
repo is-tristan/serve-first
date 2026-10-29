@@ -1,7 +1,14 @@
 <svg width="428" height="369" viewBox="0 0 428 369" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.drawForward, .drawReverse { stroke-dasharray: 1; animation: drawLine 1s cubic-bezier(0.65, 0, 0.35, 1) both; }
+.drawForward { stroke-dashoffset: 1; }
+.drawReverse { stroke-dashoffset: -1; }
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .drawForward, .drawReverse { animation: none; stroke-dashoffset: 0; } }
+</style>
 <g clip-path="url(#clip0_325_52)">
-<path d="M638.598 369.775C636.032 367.361 633.408 365.049 630.676 362.785C585.7 325.43 521.697 309.195 462.198 319.965C428.924 325.978 397.655 339.82 364.552 346.583C331.448 353.345 293.615 351.811 268.693 330.726C239.374 305.912 237.637 263.088 245.188 226.428C260.134 154.053 302.436 88.1926 316.383 15.7097C327.314 -41.2312 318.917 -100.601 294.61 -153.329" stroke="#4A2257" stroke-width="37.4424" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M430.948 175.475C308.793 194.029 179.005 160.822 92.4642 79.0345C34.9503 24.68 -3.3558 -46.4091 -60.7771 -100.88C-70.0088 -109.631 -80.1203 -117.926 -90.8504 -125.56" stroke="#B78DBF" stroke-width="37.4424" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="drawForward" pathLength="1" d="M638.598 369.775C636.032 367.361 633.408 365.049 630.676 362.785C585.7 325.43 521.697 309.195 462.198 319.965C428.924 325.978 397.655 339.82 364.552 346.583C331.448 353.345 293.615 351.811 268.693 330.726C239.374 305.912 237.637 263.088 245.188 226.428C260.134 154.053 302.436 88.1926 316.383 15.7097C327.314 -41.2312 318.917 -100.601 294.61 -153.329" stroke="#4A2257" stroke-width="37.4424" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="drawReverse" pathLength="1" d="M430.948 175.475C308.793 194.029 179.005 160.822 92.4642 79.0345C34.9503 24.68 -3.3558 -46.4091 -60.7771 -100.88C-70.0088 -109.631 -80.1203 -117.926 -90.8504 -125.56" stroke="#B78DBF" stroke-width="37.4424" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
 <clipPath id="clip0_325_52">

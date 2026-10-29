@@ -3,13 +3,10 @@ import BannerHeading from "@/components/sections/banner/components/banner-headin
 import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
 import ImageCol from "@/components/sections/banner/components/image-col";
+import LineDecoration from "@/components/decoration/line-decoration";
 
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";
-
-// Background Decorations
-import bdTr from "@/public/backgrounds/banner/banner-decoration-top-right.svg";
-import bdBl from "@/public/backgrounds/banner/banner-decoration-bottom-left.svg";
 
 export default function Banner({
     eyebrow = "- Banner Component",
@@ -108,9 +105,17 @@ export default function Banner({
 
                 <>
 
-                    <div className={`${styles.backgroundDecoration} ${styles.bdTr}`} style={{ backgroundImage: `url(${bdTr.src})` }} />
+                    <div className={`${styles.backgroundDecoration} ${styles.bdTr}`}>
 
-                    <div className={`${styles.backgroundDecoration} ${styles.bdBl}`} style={{ backgroundImage: `url(${bdBl.src})` }} />
+                        <LineDecoration variant="bannerTopRight" className={styles.backgroundDecorationSvg} />
+
+                    </div>
+
+                    <div className={`${styles.backgroundDecoration} ${styles.bdBl}`}>
+
+                        <LineDecoration variant="bannerBottomLeft" className={styles.backgroundDecorationSvg} />
+
+                    </div>
 
                 </>
 
