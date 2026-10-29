@@ -22,7 +22,24 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-role/operations-directors");
+    const metadata = await getPageMetadata("/solutions/by-role/operations-directors");
+    const title = "Operations Management Software, Multi-Location | Serve First";
+    const description = "Keep every location up to standard with Serve First. Operations leaders get live audits, routed tasks and one operating picture across all your locations.";
+    return {
+        ...metadata,
+        title,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default function OperationsDirector() {
@@ -33,8 +50,8 @@ export default function OperationsDirector() {
 
             <Banner
                 eyebrow="For operations directors"
-                title="Consistent execution across every site"
-                description="Serve First gives operations directors one view of standards, tasks and performance across the estate, and routes every issue to the person who can resolve it, so execution is something you can prove."
+                title="Consistent execution across every location"
+                description="Serve First gives operations directors one view of standards, tasks and performance across every location, and routes every issue to the person who can resolve it, so execution is something you can prove."
                 image="/images/solutions/by-role/operations-directors/operations-directors-cover.png"
                 imageSizing="contain"
             />
@@ -42,7 +59,7 @@ export default function OperationsDirector() {
             <RoleContext
                 eyebrow="Built for operations directors"
                 title="Standards mean nothing until met everywhere"
-                description="You set the standard. The hard part is knowing it is met at every site, and fixing it when it is not. Serve First brings audits, tasks and performance into one picture."
+                description="You set the standard. The hard part is knowing it is met at every location, and fixing it when it isn't. Serve First brings audits, tasks and performance into one picture."
                 btnPrimary={null}
                 data={roleContextData}
             />
@@ -75,7 +92,7 @@ export default function OperationsDirector() {
 
             <ChallengeFrame
                 eyebrow="Common challenges"
-                title="Too many sites<span class='colorPrimary'>,</span> too many tools<span class='colorPrimary'>,</span> not enough proof"
+                title="Too many locations<span class='colorPrimary'>,</span> too many tools<span class='colorPrimary'>,</span> not enough proof"
                 data={challengeFrameData}
             />
 
@@ -89,7 +106,7 @@ export default function OperationsDirector() {
             <CtaBannerContact
                 theme="primary"
                 title="See what Serve First can do for your operation"
-                description="Book a personalised demo and we will show you how operations directors hold every site to the same standard, on your data."
+                description="Book a personalized demo and we'll show you how operations directors hold every location to the same standard, using your data."
             />
 
         </>

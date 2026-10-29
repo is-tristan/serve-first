@@ -22,7 +22,20 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-challenge/siloed-tools-and-data");
+    const metadata = await getPageMetadata("/solutions/by-challenge/siloed-tools-and-data");
+    const title = "Connect Siloed Tools and Data, Multi-Location | Serve First";
+    return {
+        ...metadata,
+        title,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+        },
+    };
 }
 
 export default function SiloedToolsAndData() {
@@ -86,8 +99,8 @@ export default function SiloedToolsAndData() {
 
             <CtaBannerContact
                 theme="primary"
-                title="See your whole estate in one view"
-                description="Book a personalised demo and we will bring your sources into one operating picture, on your data and your sites."
+                title="See every location in one view"
+                description="Book a personalized demo and we'll bring your sources into one operating picture, using your data and your locations."
             />
 
         </>

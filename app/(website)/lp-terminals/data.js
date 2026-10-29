@@ -54,14 +54,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Every response is scored as it lands, so a dip in satisfaction shows up the moment it starts. EVA, our always-on AI analyst, spots the pattern behind it and tells you which location needs attention first.",
         image: "/images/lp/terminals/lp-terminals-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "Show me",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -115,7 +115,7 @@ export const lpFeaturedListData2 = [
             },
         ],
         button: {
-            text: "Get a demo",
+            text: "Request a demo",
             href: "/get-a-demo",
         }
     }

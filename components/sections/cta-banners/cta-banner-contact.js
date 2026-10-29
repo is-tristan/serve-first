@@ -6,7 +6,7 @@ import FormFull from "@/components/handlers/forms/form-full";
 // Styles
 import styles from "@/styles/components/sections/cta-banners.module.scss";
 
-export default function CtaBannerContact({ title = "Book your personalised platform demo today", description = "Tell us a little about your operation and we will tailor the whole walkthrough to what you need to see.", theme = "light", hasDemoLink = true, formBtnText = "Send message", fullForm = false }) {
+export default function CtaBannerContact({ title = "Book your personalized platform demo today", description = "Tell us a little about your operation and we'll tailor the whole walkthrough to what you need to see.", theme = "light", hasDemoLink = true, formBtnText = "Send message", fullForm = false }) {
 
     return (
 

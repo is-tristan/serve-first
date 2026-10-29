@@ -65,8 +65,8 @@ export const relatedPostsData = {
         categories: ["customer-experience"],
         terms: ["feedback", "survey*", "capture"],
     },
-    "/how-it-works/analyse": {
-        title: "How It Works: Analyse",
+    "/how-it-works/analyze": {
+        title: "How It Works: Analyze",
         tags: ["data", "cx"],
         categories: ["artificial-intelligence"],
         terms: ["insight*", "data", "analy*"],

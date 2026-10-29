@@ -31,7 +31,21 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    return getPageMetadata("/products/customer-experience/mystery-shopping");
+    const metadata = await getPageMetadata("/products/customer-experience/mystery-shopping");
+    const description = "Mystery shopping services for multi-location brands. Trained mystery shoppers score every location against your standards, with photo evidence and free pilots available.";
+
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default async function MysteryShopping() {
@@ -43,7 +57,7 @@ export default async function MysteryShopping() {
             <Banner
                 eyebrow="Customer experience platform"
                 title="See your locations the way customers do"
-                description="Serve First mystery shopping puts a trained assessor in your locations, scoring the experience against your standards and showing you exactly where service slips."
+                description="Serve First mystery shopping puts a trained mystery shopper in your locations, scoring the experience against your standards and showing you exactly where service slips."
                 image="/images/products/customer-experience/mystery-shopping/mystery-shopping-cover.png"
                 imageSizing="contain"
                 buttonPrimary={{
@@ -61,11 +75,11 @@ export default async function MysteryShopping() {
 
             <RoleContext
                 eyebrow="Mystery shopping capability"
-                title="See your sites the way customers do"
-                description="Send trained assessors into every site, score the real experience against your standards, and see exactly where service slips."
+                title="See your locations the way customers do"
+                description="Send trained mystery shoppers into every location, score the real experience against your standards, and see exactly where service slips."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
@@ -90,7 +104,7 @@ export default async function MysteryShopping() {
                 item={{
                     "eyebrow": "EVA",
                     "title": "Ask what your visits are really revealing",
-                        "description": "Ask EVA what your visits reveal across the estate and get a clear, evidence-backed answer in seconds.",
+                        "description": "Ask EVA what your visits reveal across every location and get a clear, evidence-backed answer in seconds.",
                     "image": "/images/products/customer-experience/mystery-shopping/mystery-shopping-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
@@ -147,7 +161,7 @@ export default async function MysteryShopping() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your locations"
-                description="Book a personalised demo and we will show you how mystery shopping fits your estate and your standards."
+                description="Book a personalized demo and we'll show you how mystery shopping fits your locations and your standards."
             />
 
         </>

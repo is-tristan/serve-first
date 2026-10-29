@@ -60,7 +60,7 @@ export const howItWorksData = [
         imageHeight: 576,
         button: {
             text: "Show me",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -114,7 +114,7 @@ export const lpFeaturedListData2 = [
             },
         ],
         button: {
-            text: "Get a demo",
+            text: "Request a demo",
             href: "/get-a-demo",
         }
     }

@@ -8,8 +8,8 @@
 
 export const challengeFrameData = [
     {
-        eyebrow: "01 | Store Audits",
-        title: "What head office sets and what the shop floor delivers are rarely the same.",
+        eyebrow: "01 | Store audits",
+        title: "What headquarters sets and what the sales floor delivers are rarely the same.",
         tags: []
     },
     {
@@ -18,7 +18,7 @@ export const challengeFrameData = [
         tags: []
     },
     {
-        eyebrow: "03 | Proof of Completion",
+        eyebrow: "03 | Proof of completion",
         title: "Issues spotted in store get raised, then lost before anyone fixes them.",
         tags: []
     }
@@ -37,13 +37,13 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "Every store is scored and compared like for like, with EVA flagging which locations are slipping and what is driving it.",
+        title: "Analyze",
+        description: "Every store is scored and compared side by side, with EVA flagging which locations are slipping and what is driving it.",
         image: "/images/solutions/by-industry/retail/retail-analyse.png",
         imageWidth: 768,
         button: {
             text: "See the analysis",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -83,7 +83,7 @@ export const productHighlightData = [
     {
         icon: clipBoardCheckIcon,
         eyebrow: "Survey",
-        title: "Capture CSAT at the till and online.",
+        title: "Capture CSAT at the register and online.",
         linkText: "Explore",
         link: "/products/customer-experience/survey",
     },
@@ -131,7 +131,7 @@ export const moduleStatsData = [
 export const contentGridData = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Explore",
@@ -181,8 +181,8 @@ export const faqData = [
         answer: "Yes. Mystery shopping visits and CSAT surveys feed the same operating picture as your audits, so customer perception and store execution sit side by side and EVA can show where one is dragging the other."
     },
     {
-        question: "Does it work for a large store estate?",
-        answer: "Serve First is built for multi-site retail. Every store reports into one operating picture, so head office can rank locations, spot the ones slipping and put them right, however many stores you run."
+        question: "Does it work for a large store network?",
+        answer: "Serve First is built for multi-location retail. Every store reports into one operating picture, so headquarters can rank locations, spot the ones slipping and fix them, however many stores you run."
     },
     {
         question: "How does it improve the in-store customer experience?",

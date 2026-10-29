@@ -10,7 +10,7 @@ export function useNumberCounter({
 }) {
     const startValue = Number(startNumber) || 0;
     const endValue = Number(endNumber) || 0;
-    const [currentNumber, setCurrentNumber] = useState(startValue);
+    const [currentNumber, setCurrentNumber] = useState(endValue);
     const frameRef = useRef(null);
     const hasAnimatedRef = useRef(false);
 

@@ -22,7 +22,20 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-challenge/prove-improvement");
+    const metadata = await getPageMetadata("/solutions/by-challenge/prove-improvement");
+    const title = "Prove What's Improving, Multi-Location | Serve First";
+    return {
+        ...metadata,
+        title,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+        },
+    };
 }
 
 export default function ProveImprovement() {
@@ -34,7 +47,7 @@ export default function ProveImprovement() {
             <Banner
                 eyebrow="Solutions by challenge"
                 title="Prove what is working, not just what happened"
-                description="Knowing something improved is not the same as proving it. Serve First gives each role an action plan, not just evidence, tying every fix to proof of completion so you can show what changed and why."
+                description="Knowing something improved isn't the same as proving it. Serve First gives each role an action plan, not just evidence, tying every fix to proof of completion so you can show what changed and why."
                 image="/images/solutions/by-challenge/prove-improvement/prove-improvement-cover.png"
                 imageSizing="contain"
             />
@@ -49,7 +62,7 @@ export default function ProveImprovement() {
             <RoleContext
                 eyebrow="Who feels it"
                 title="Proof that works for every seat"
-                description="Proving progress matters to every seat at the table. Serve First keeps the action and the outcome together, so each role can evidence its part of the story."
+                description="Proving progress matters to every seat at the table. Serve First keeps the action and the outcome together, so each role can prove its part of the story."
                 btnPrimary={null}
                 data={roleContextData}
                 colCount={3}
@@ -88,7 +101,7 @@ export default function ProveImprovement() {
             <CtaBannerContact
                 theme="primary"
                 title="See the improvement you can prove"
-                description="Book a personalised demo and we will show you how Serve First evidences progress across your sites, on your data."
+                description="Book a personalized demo and we'll show you how Serve First proves progress across your locations, using your data."
             />
 
         </>

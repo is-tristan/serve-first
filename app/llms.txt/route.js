@@ -8,7 +8,7 @@ const summary = "Serve First is a Customer Experience and Operational Intelligen
 
 const details = [
     "Serve First brings customer feedback, operational standards, compliance, audits, mystery shopping and online reviews into one place, then helps teams act on what it finds with assigned tasks, workflows, training and proof of completion.",
-    "The platform works on a Capture, Analyse, Action model. Capture brings together every customer, operational and market signal. Analyse finds the patterns, risks and root causes behind the data, with EVA, the built-in intelligence layer, scoring sentiment and writing plain-English summaries. Action turns insight into assigned tasks, workflows and training, with proof of completion.",
+    "The platform works on a Capture, Analyze, Action model. Capture brings together every customer, operational and market signal. Analyze finds the patterns, risks and root causes behind the data, with EVA, the built-in intelligence layer, scoring sentiment and writing plain-English summaries. Action turns insight into assigned tasks, workflows and training, with proof of completion.",
     "Serve First works with multi-location businesses in retail, leisure and hospitality, healthcare, restaurants, facilities management, and venues and events. It has offices in Alpharetta, Georgia (US) and Milton Keynes (UK), and can be reached at info@servefirst.ai.",
 ]
 
@@ -22,8 +22,8 @@ const extraPages = {
         description: "Intelligent video analytics that check standards and spot issues across every location.",
     },
     "/get-a-demo": {
-        name: "Get a Demo",
-        description: "Book a demo of the Serve First platform with the team.",
+        name: "Request a demo",
+        description: "Request a demo of the Serve First platform with the team.",
     },
     "/legal/privacy-policy": {
         name: "Privacy Policy",
@@ -47,7 +47,7 @@ const sections = [
             "/what-does-serve-first-do",
             "/eva",
             "/how-it-works/capture",
-            "/how-it-works/analyse",
+            "/how-it-works/analyze",
             "/how-it-works/action",
         ],
     },

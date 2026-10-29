@@ -24,7 +24,10 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-industry/facilities-management");
+    const metadata = await getPageMetadata("/solutions/by-industry/facilities-management");
+    return {
+        ...metadata,
+    };
 }
 
 export default function FacilitiesManagement() {
@@ -36,7 +39,7 @@ export default function FacilitiesManagement() {
             <Banner
                 eyebrow="Solutions by industry"
                 title="Every contract, every site, on standard"
-                description="FM lives on SLAs and proof. Serve First connects audits, issues and feedback across every client site, so you hold standards and show clients exactly what was done."
+                description="Facilities management lives on SLAs and proof. Serve First connects audits, issues and feedback across every client site, so you hold standards and show clients exactly what was done."
                 image="/images/solutions/by-industry/facilities-management/fm-cover.png"
                 imageSizing="contain"
             />
@@ -57,7 +60,7 @@ export default function FacilitiesManagement() {
             />
 
             <ProductHighlight
-                eyebrow="What FM teams use"
+                eyebrow="What facilities teams use"
                 title="One toolkit for every contract"
                 description="The functions that hold standards and prove them to clients, connected so insight turns into action."
                 linkText={null}
@@ -78,7 +81,7 @@ export default function FacilitiesManagement() {
             />
 
             <ContentGrid
-                eyebrow="Common Challenges"
+                eyebrow="Common challenges"
                 title="Challenges we solve here"
                 description="The challenges providers bring to Serve First, and where to read more."
                 data={contentGridData}
@@ -95,7 +98,7 @@ export default function FacilitiesManagement() {
             <CtaBannerOne
                 theme="primary"
                 title="See every contract on one operating picture"
-                description="Book a personalised demo and we will show you how Serve First works across your contracts, on your data."
+                description="Book a personalized demo and we'll show you how Serve First works across your contracts, using your data."
             />
         </>
 

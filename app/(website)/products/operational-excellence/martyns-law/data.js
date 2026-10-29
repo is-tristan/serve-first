@@ -43,7 +43,7 @@ export const featureListData = [
                 text: "Guided compliance checklists",
             },
             {
-                text: "Staff training records per site",
+                text: "Staff training records per location",
             },
             {
                 text: "Timestamped evidence capture",
@@ -54,7 +54,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -74,14 +74,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "Everything is timestamped and linked to the right site, so your readiness is documented and easy to review.",
+        title: "Analyze",
+        description: "Everything is timestamped and linked to the right location, so your readiness is documented and easy to review.",
         image: "/images/products/operational-excellence/martyns-law/martyns-law-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "See how evidence is reviewed",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -150,7 +150,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Evidence safety across every site.",
+        description: "Evidence safety across every location.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -170,7 +170,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Evidence duty of care at every site.",
+        description: "Evidence duty of care at every location.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -202,7 +202,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -246,7 +246,7 @@ export const faqData = [
     },
     {
         question: "What does Martyn's Law require, and who does it apply to?",
-        answer: "It applies to qualifying premises and events expecting 200+ people. Standard-tier sites (200 to 799) put public protection procedures in place and notify the Security Industry Authority. Enhanced-tier sites (800 or more) also document protective measures. Serve First turns each duty into a guided checklist with evidence captured."
+        answer: "It applies to qualifying premises and events expecting 200+ people. Standard-tier locations (200 to 799) put public protection procedures in place and notify the Security Industry Authority. Enhanced-tier locations (800 or more) also document protective measures. Serve First turns each duty into a guided checklist with evidence captured."
     },
     {
         question: "When does Martyn's Law come into force?",
@@ -257,11 +257,11 @@ export const faqData = [
         answer: "Yes. Audit trails show exactly what was done and when, per venue, so you can demonstrate Martyn's Law readiness on request rather than scrambling to assemble proof."
     },
     {
-        question: "Does it keep training records per site?",
-        answer: "Yes. Staff training records are kept per venue, so you can show who was trained, on what and when, across every site you run."
+        question: "Does it keep training records per location?",
+        answer: "Yes. Staff training records are kept per venue, so you can show who was trained, on what and when, across every location you run."
     },
     {
         question: "Does it work across multiple venues?",
-        answer: "Serve First is built for multi-site operations. Every venue reports into one operating picture, so you can see readiness and compliance across them all and address what is outstanding."
+        answer: "Serve First is built for multi-location operations. Every venue reports into one operating picture, so you can see readiness and compliance across them all and fix what is outstanding."
     }
 ]

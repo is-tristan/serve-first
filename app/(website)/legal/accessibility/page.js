@@ -32,7 +32,7 @@ export default function Accessibility() {
 
                     <h2>Serve First Accessibility Statement</h2>
 
-                    <p>Last updated: 22 July 2026</p>
+                    <p>Last updated: July 22, 2026</p>
 
                     <p>Contact us at <a href="mailto:info@servefirst.ai">info@servefirst.ai</a> if you have any questions about this statement.</p>
 

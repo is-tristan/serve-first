@@ -22,7 +22,24 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-challenge/inconsistent-standards");
+    const metadata = await getPageMetadata("/solutions/by-challenge/inconsistent-standards");
+    const title = "Fix Inconsistent Standards Across Locations | Serve First";
+    const description = "Stop standards slipping from location to location. Serve First scores every location, routes the fix and proves consistency across your whole business.";
+    return {
+        ...metadata,
+        title,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default function InconsistentStandards() {
@@ -33,8 +50,8 @@ export default function InconsistentStandards() {
 
             <Banner
                 eyebrow="Solutions by challenge"
-                title="The same standard, at every single site"
-                description="When standards drift between locations, customers feel it. Serve First scores every site against your standards, routes each gap to an owner and proves the fix."
+                title="The same standard, at every single location"
+                description="When standards drift between locations, customers feel it. Serve First scores every location against your standards, routes each gap to an owner and proves the fix."
                 image="/images/solutions/by-challenge/inconsistent-standards/inconsistent-standards-cover.png"
                 imageSizing="contain"
             />
@@ -42,7 +59,7 @@ export default function InconsistentStandards() {
             <ChallengeFrame
                 eyebrow="Common challenges"
                 title="Standards that slip the moment you look away"
-                description="You can see your own ratings going up or down. What you cannot see is how a competitor down the road is rated, what their customers praise, or why some of your sites lose business locally while others win it. So you are improving in the dark, with no idea whether you are pulling ahead or falling behind in each town."
+                description="You can see your own ratings going up or down. What you can't see is how a competitor down the road is rated, what their customers praise, or why some of your locations lose business locally while others win it. So you are improving in the dark, with no idea whether you are pulling ahead or falling behind in each market."
                 data={challengeFrameData}
             />
 
@@ -57,7 +74,7 @@ export default function InconsistentStandards() {
 
             <HowItWorks
                 eyebrow="From comparison to a fix"
-                title="From one standard to every single site"
+                title="From one standard to every single location"
                 description="Three connected stages, from check to proof."
                 data={howItWorksData}
             />
@@ -73,7 +90,7 @@ export default function InconsistentStandards() {
             <ModuleStats
                 eyebrow="The difference"
                 title="What changes when standards hold"
-                description="The outcomes teams see once every site is scored and gaps are put right."
+                description="The outcomes teams see once every location is scored and gaps are fixed."
                 data={moduleStatsData}
                 btnPrimary={null}
             />
@@ -87,8 +104,8 @@ export default function InconsistentStandards() {
 
             <CtaBannerContact
                 theme="primary"
-                title="See every site held to one standard"
-                description="Book a personalised demo and we will show you how Serve First keeps standards consistent across your estate, on your data."
+                title="See every location held to one standard"
+                description="Book a personalized demo and we'll show you how Serve First keeps standards consistent across all your locations, using your data."
             />
 
         </>

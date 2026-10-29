@@ -1,26 +1,26 @@
 .footer {
-    background-image: url("/decoration/footer-mobile-bottom-right.svg");
-    background-size: 12.5rem;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-
-    @media (width >=1024px) {
-        background-image: url("/decoration/footer-bottom-right.svg");
-    }
-
-    @media (width >=1280px) {
-        background-size: 30rem;
-    }
+    position: relative;
+    isolation: isolate;
 
     * {
         text-align: left;
     }
 
-    &[data-theme="dark"] {
-        @media all {
-            background-image: none;
-        }
+    .footerDecoration {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 12.5rem;
+        --drawDuration: 1.5s;
+        --drawDelay: 0s;
 
+        @media (width >=1280px) {
+            width: 30rem;
+        }
+    }
+
+    &[data-theme="dark"] {
         .footerCol {
             border-right-color: rgba(var(--secondaryRgb), 0.1);
         }

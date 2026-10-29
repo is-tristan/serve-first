@@ -32,7 +32,25 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/products/operational-excellence/task-management");
+    const metadata = await getPageMetadata("/products/operational-excellence/task-management");
+    const title = "Task Management Software for Multi-Location Teams | Serve First";
+    const description = "Turn insight into action with Serve First task management. Assign, prioritize and track tasks across every location, with deadlines and progress reporting.";
+
+    return {
+        ...metadata,
+        title,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            title,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            title,
+            description,
+        },
+    };
 }
 
 export default async function TaskManagement() {
@@ -44,7 +62,7 @@ export default async function TaskManagement() {
             <Banner
                 eyebrow="Operational excellence"
                 title="Where insight finally becomes action"
-                description="Serve First task management routes the right action to the right person at every site, with deadlines, ownership and progress you can see, not chase."
+                description="Score every site against your standards on mobile, capture photo proof, and turn each f ailed check into a corrective action with an owner and a deadline."
                 image="/images/products/operational-excellence/task-management/task-management-cover.png"
                 imageSizing="contain"
                 buttonPrimary={{
@@ -63,10 +81,10 @@ export default async function TaskManagement() {
             <RoleContext
                 eyebrow="Task management capability"
                 title="Turn insight into tracked action"
-                description="Assign each fix to a site and owner, set priorities and deadlines, and see progress across every location in one view."
+                description="Assign each fix to a location and owner, set priorities and deadlines, and see progress across every location in one view."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
@@ -74,7 +92,7 @@ export default async function TaskManagement() {
             <HowItWorks
                 eyebrow="How a task moves to done"
                 title="The step other platforms leave out"
-                description="The last step that most platforms leave out."
+                description={null}
                 data={howItWorksData}
             />
 
@@ -91,7 +109,7 @@ export default async function TaskManagement() {
                 item={{
                     "eyebrow": "EVA",
                     "title": "Ask what is really still outstanding now",
-                    "description": "Ask EVA what is outstanding across your sites and get a clear picture of what still needs to happen.",
+                    "description": "Ask EVA what is outstanding across your locations and get a clear picture of what still needs to happen.",
                     "image": "/images/products/operational-excellence/task-management/task-management-eva.png",
                     "imageWidth": 768,
                     "imageHeight": 768,
@@ -147,7 +165,7 @@ export default async function TaskManagement() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for follow-through"
-                description="Book a personalised demo and we will show you how tasks move from insight to done across your sites."
+                description="Book a personalized demo and we'll show you how tasks move from insight to done across your locations."
             />
 
         </>

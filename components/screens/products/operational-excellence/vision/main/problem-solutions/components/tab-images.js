@@ -36,7 +36,7 @@ export default function TabImages() {
 
             <Image
                 src={tabImageDetectedFrame}
-                alt="AI video analytics monitoring retail shelf stock and till queue"
+                alt="AI video analytics monitoring retail shelf inventory and register line"
                 fill
                 sizes="(max-width: 1023px) calc(100vw - 3.5rem), min(60vw, 720px)"
                 className={`${styles.tabImage} ${styles.tabImageDetectedFrame}`}

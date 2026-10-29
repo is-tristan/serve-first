@@ -20,8 +20,8 @@ export const challengeFrameData = [
         tags: []
     },
     {
-        eyebrow: "03 | Proof of Completion",
-        title: "An issue is logged on site, then stalls without an owner or a deadline.",
+        eyebrow: "03 | Proof of completion",
+        title: "An issue is logged on-site, then stalls without an owner or a deadline.",
         description: "Helpdesk and Task management route each job to an owner with a due date and track it to done, so nothing is lost between sites.",
         tags: []
     }
@@ -40,12 +40,12 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Every contract is scored in one operating picture, with EVA flagging the sites and SLAs that are at risk.",
         image: "/images/solutions/by-industry/facilities-management/fm-analyse.png",
         button: {
             text: "See the analysis",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -172,7 +172,7 @@ export const contentGridData = [
 export const faqData = [
     {
         question: "What is facilities management software?",
-        answer: "Facilities management software helps FM providers run site audits, log and resolve issues and prove performance to clients across every contract. Serve First ties each check and issue to proof of completion and brings it into one operating picture you can share, so SLAs are evidenced rather than asserted.",
+        answer: "Facilities management software helps facilities providers run site audits, log and resolve issues and prove performance to clients across every contract. Serve First ties each check and issue to proof of completion and brings it into one operating picture you can share, so SLAs are documented rather than asserted.",
     },
     {
         question: "How does it help prove SLAs to clients?",
@@ -184,11 +184,11 @@ export const faqData = [
     },
     {
         question: "Does it replace separate reporting tools?",
-        answer: "Outcome tracking is built in. You see SLA performance, completion and trends in one operating picture, with proof of completion behind every fix, so a separate reporting tool is not needed."
+        answer: "Outcome tracking is built in. You see SLA performance, completion and trends in one operating picture, with proof of completion behind every fix, so a separate reporting tool isn't needed."
     },
     {
         question: "How does it help with SLA compliance across contracts?",
-        answer: "Each contract is scored against its SLAs in one operating picture, with EVA flagging the sites and SLAs at risk, so you address a shortfall before it becomes a breach rather than finding out at the review."
+        answer: "Each contract is scored against its SLAs in one operating picture, with EVA flagging the sites and SLAs at risk, so you fix a shortfall before it becomes a breach rather than finding out at the review."
     },
     {
         question: "Can it improve how we report to clients?",

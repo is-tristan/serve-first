@@ -14,13 +14,13 @@ export const featureListData = [
     {
         eyebrow: "Action, with accountability",
         title: "Tasks the frontline actually finish",
-        description: "Create a task from a low score, a failed audit or a ticket, assign it by site and team, and follow it to done. Overdue alerts keep long-running issues visible instead of quietly slipping.",
+        description: "Create a task from a low score, a failed audit or a ticket, assign it by location and team, and follow it to done. Overdue alerts keep long-running issues visible instead of quietly slipping.",
         image: "/images/products/operational-excellence/task-management/task-management-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 768,
         list: [
             {
-                text: "Assign by site and by team",
+                text: "Assign by location and by team",
             },
             {
                 text: "Set priorities and deadlines",
@@ -34,7 +34,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -42,9 +42,9 @@ export const featureListData = [
 export const roleContextData = [
     {
         icon: mapMarkerAltIcon,
-        eyebrow: "By site and team",
-        title: "Assign by site and team",
-        description: "Assign each task by site and team, so every location knows what it owns and nothing sits with nobody.",
+        eyebrow: "By location and team",
+        title: "Assign by location and team",
+        description: "Assign each task by location and team, so every location knows what it owns and nothing sits with nobody.",
     },
     {
         icon: clockCheckIcon,
@@ -56,7 +56,7 @@ export const roleContextData = [
         icon: listIcon,
         eyebrow: "Live tracking",
         title: "Live task progress tracking",
-        description: "See progress across every site in one view, so you know what is open and where follow-through lags.",
+        description: "See progress across every location in one view, so you know what is open and where follow-through lags.",
     },
     {
         icon: alertHexagonIcon,
@@ -81,14 +81,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "Each task is prioritised and assigned by site and team, with progress visible across the whole estate.",
+        title: "Analyze",
+        description: "Each task is prioritized and assigned by location and team, with progress visible across your whole business.",
         image: "/images/products/operational-excellence/task-management/task-management-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
-            text: "See how work is analysed",
-            href: "/how-it-works/analyse",
+            text: "See how work is analyzed",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -197,7 +197,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Track corrective actions at every site.",
+        description: "Track corrective actions at every location.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -229,7 +229,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -273,22 +273,22 @@ export const faqData = [
     },
     {
         question: "Where do tasks come from?",
-        answer: "A task can be created from a low score, a failed audit or a ticket, so the signal that flags a problem also raises the action, with no re-keying between tools."
+        answer: "A task can be created from a low score, a failed audit or a ticket, so the signal that flags a problem also raises the action, with no re-entering data between tools."
     },
     {
         question: "How are tasks assigned?",
-        answer: "Tasks are assigned by site and team, with priorities and deadlines, so each location knows what it owns and the work is never sitting with nobody."
+        answer: "Tasks are assigned by location and team, with priorities and deadlines, so each location knows what it owns and the work is never sitting with nobody."
     },
     {
         question: "How do we stop tasks going quiet?",
         answer: "Automatic overdue alerts keep long-running issues visible, so a task that stalls is surfaced rather than quietly slipping off the list."
     },
     {
-        question: "Can we see progress across the estate?",
-        answer: "Yes. Live progress is visible across every site in one operating picture, so you can see what is done, what is open and where follow-through is lagging."
+        question: "Can we see progress across all your locations?",
+        answer: "Yes. Live progress is visible across every location in one operating picture, so you can see what is done, what is open and where follow-through is lagging."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every task rolls up into one operating picture, so action is tracked to done across the whole estate, however many sites you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Every task rolls up into one operating picture, so action is tracked to done across your whole business, however many locations you run."
     }
 ]

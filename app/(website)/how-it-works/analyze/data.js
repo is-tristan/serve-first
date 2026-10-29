@@ -16,13 +16,13 @@ export const challengeFrameData = [
     {
         eyebrow: "Challenge 02",
         title: "Too much to read by hand",
-        description: "Across dozens of sites and thousands of responses, manual analysis cannot keep up, so themes are spotted late or missed.",
+        description: "Across dozens of locations and thousands of responses, manual analysis can't keep up, so themes are spotted late or missed.",
         tags: []
     },
     {
         eyebrow: "Challenge 03",
         title: "Insight nobody sees in time",
-        description: "Findings land in a monthly report rather than the moment they matter, when the issue is still cheap to put right.",
+        description: "Findings land in a monthly report rather than the moment they matter, when the issue is still cheap to fix.",
         tags: []
     }
 ]
@@ -31,7 +31,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Bring every customer, operational and market signal into one place, across all your sites.",
+        description: "Bring every customer, operational and market signal into one place, across all your locations.",
         image: "/images/how-it-works/capture/capture-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -42,7 +42,7 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads every signal as it lands, scores sentiment and surfaces the themes that matter, in plain English.",
         image: "/images/how-it-works/capture/capture-analyse.png",
         imageWidth: 768,
@@ -69,7 +69,7 @@ export const howItWorksData = [
 export const contentGridData = [
     {
         title: "Read every signal",
-        description: "EVA reads each captured signal as it arrives, from terminals, surveys, reviews and audits, so nothing waits in a queue to be looked at.",
+        description: "EVA reads each captured signal as it arrives, from terminals, surveys, reviews and audits, so nothing waits in line to be looked at.",
         image: "/images/how-it-works/capture/capture-collect-everywhere.svg",
         button: null
     },
@@ -81,7 +81,7 @@ export const contentGridData = [
     },
     {
         title: "Surface the themes",
-        description: "EVA groups responses into the themes driving the score and tells you, in plain English, what is behind the numbers at each site.",
+        description: "EVA groups responses into the themes driving the score and tells you, in plain English, what is behind the numbers at each location.",
         image: "/images/how-it-works/capture/capture-tie-it-to-the-site.svg",
         button: null
     },
@@ -123,11 +123,11 @@ export const howItWorksData2 = [
         imageWidth: 768,
         imageHeight: 576,
         button: null
-    },   {
+    }, {
         eyebrow: "Built for analysis you can trust",
         eyebrowHasDash: true,
-        title: "Per site and per estate",
-        description: "See each location on its own and the whole estate together, in one view.",
+        title: "Per location and company-wide",
+        description: "See each location on its own and your whole business together, in one view.",
         image: "/images/how-it-works/analyse/analyse-per-site-and-per-estate.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -137,7 +137,7 @@ export const howItWorksData2 = [
         eyebrow: "Built for analysis you can trust",
         eyebrowHasDash: true,
         title: "One operating picture",
-        description: "Customer, operational and market signals analysed together, not in silos.",
+        description: "Customer, operational and market signals analyzed together, not in silos.",
         image: "/images/how-it-works/analyse/analyse-one-operating-picture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -168,7 +168,7 @@ export const howItWorksData2 = [
 export const industryCardsData = [
     {
         eyebrow: "Retail",
-        title: "See why a store is slipping, from queues to staffing, not just that its score dropped.",
+        title: "See why a store is slipping, from long lines to staffing, not just that its score dropped.",
         image: "/images/home/home-retail.png",
         imageFit: "cover",
         button: {
@@ -189,7 +189,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Restaurants",
-        title: "Read the themes behind table and counter feedback, site by site and shift by shift.",
+        title: "Read the themes behind table and counter feedback, location by location and shift by shift.",
         image: "/images/home/home-restaurants.png",
         button: {
             text: "Explore Restaurants",
@@ -199,7 +199,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Healthcare",
-        title: "Understand the themes behind patient and visitor sentiment across every site.",
+        title: "Understand the themes behind patient and visitor sentiment across every location.",
         image: "/images/home/home-healthcare.png",
         button: {
             text: "Explore Healthcare",
@@ -209,7 +209,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Facilities management",
-        title: "Find the patterns in standards and service signals across a dispersed estate.",
+        title: "Find the patterns in standards and service signals across a dispersed portfolio.",
         image: "/images/home/home-facilities-management.png",
         button: {
             text: "Explore Facilities management",
@@ -231,31 +231,31 @@ export const industryCardsData = [
 
 export const faqData = [
     {
-        question: "What does analyse mean in Serve First?",
-        answer: "Analyse is the second stage of the Serve First loop. EVA reads every captured signal as it lands, scores sentiment, groups the themes that matter and explains, in plain English, what is behind the numbers at each site, ready to turn into action."
+        question: "What does analyze mean in Serve First?",
+        answer: "Analyze is the second stage of the Serve First loop. EVA reads every captured signal as it lands, scores sentiment, groups the themes that matter and explains, in plain English, what is behind the numbers at each location, ready to turn into action."
     },
     {
         question: "What is EVA?",
-        answer: "EVA is the always-on analyst built into Serve First. It reads the signals across every site, scores sentiment, surfaces themes and recommends the next step. EVA is advisory: it suggests where to act and why, and your team decides and assigns the action."
+        answer: "EVA is the always-on analyst built into Serve First. It reads the signals across every location, scores sentiment, surfaces themes and recommends the next step. EVA is advisory: it suggests where to act and why, and your team decides and assigns the action."
     },
     {
         question: "Does analysis happen in real time?",
-        answer: "Yes. Each signal is scored and themed the moment it lands rather than at month end, so a shift in sentiment shows up as it starts and you can act while the issue is still cheap to put right."
+        answer: "Yes. Each signal is scored and themed the moment it lands rather than at month end, so a shift in sentiment shows up as it starts and you can act while the issue is still cheap to fix."
     },
     {
         question: "Will it tell me why a score changed, not just that it did?",
-        answer: "Yes. EVA groups responses into the themes driving the score and explains the reason in plain English, so you see the cause behind the number, by site and across the estate, without reading every comment by hand."
+        answer: "Yes. EVA groups responses into the themes driving the score and explains the reason in plain English, so you see the cause behind the number, by location and across all your locations, without reading every comment by hand."
     },
     {
         question: "Does EVA make decisions on its own?",
-        answer: "No. EVA is advisory. It surfaces what needs attention, the reason why and a recommended next step. Your team decides whether to act and assigns the task. Nothing is actioned automatically without a person."
+        answer: "No. EVA is advisory. It surfaces what needs attention, the reason why and a recommended next step. Your team decides whether to act and assigns the task. Nothing is acted on automatically without a person."
     },
     {
-        question: "Can it analyse every site together?",
-        answer: "Yes. Serve First is built for multi-site operators. EVA analyses customer, operational and market signals together in one operating picture, so you see each location on its own and the whole estate at once."
+        question: "Can it analyze every location together?",
+        answer: "Yes. Serve First is built for multi-location operators. EVA analyzes customer, operational and market signals together in one operating picture, so you see each location on its own and your whole business at once."
     },
     {
         question: "Where is EVA's analysis processed? Is my data secure?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        answer: "EVA processes all analysis securely within our cloud infrastructure hosted on AWS. Your data never leaves a trusted, enterprise grade environment."
     }
 ]

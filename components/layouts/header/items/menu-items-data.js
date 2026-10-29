@@ -24,8 +24,8 @@ export const menuItemsData = [
                 icon: captureIcon,
             },
             {
-                label: "Analyse",
-                href: "/how-it-works/analyse",
+                label: "Analyze",
+                href: "/how-it-works/analyze",
                 icon: analyseIcon,
             },
             {

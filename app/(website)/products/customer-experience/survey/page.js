@@ -34,7 +34,21 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/products/customer-experience/survey");
+    const metadata = await getPageMetadata("/products/customer-experience/survey");
+    const description = "Build, send and analyze customer surveys across web, kiosk, email and SMS with Serve First. Logic branching, real-time results and sentiment analysis.";
+
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default async function Survey() {
@@ -68,7 +82,7 @@ export default async function Survey() {
                 description="Reach customers on web, kiosk, email and SMS, and read what they tell you the same day, not at month end."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
@@ -158,7 +172,7 @@ export default async function Survey() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your locations"
-                description="Book a personalised demo and we will show you how surveys work across your channels and your sites today."
+                description="Book a personalized demo and we'll show you how surveys work across your channels and your locations today."
             />
 
         </>

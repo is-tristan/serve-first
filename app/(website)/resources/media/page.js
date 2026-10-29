@@ -53,7 +53,7 @@ export default async function Media() {
             <Banner
                 eyebrow="News and announcements"
                 title="What we are building, and why"
-                description="Company news, product releases and the milestones behind Serve First. The story of how multi-site operators are moving from reports to real intelligence."
+                description="Company news, product releases and the milestones behind Serve First. The story of how multi-location operators are moving from reports to real intelligence."
                 image={null}
             />
 
@@ -70,7 +70,7 @@ export default async function Media() {
             <CtaBannerOne
                 theme="primary"
                 title="See what the headlines are really about"
-                description="Book a personalised demo and see the platform behind the news, working with your estate and your data."
+                description="Book a personalized demo and see the platform behind the news, working with your locations and your data."
             />
 
         </>

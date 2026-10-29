@@ -24,7 +24,7 @@ export const roleContextData = [
     {
         icon: routeIcon,
         title: "From insight to fixed",
-        description: "Route each issue to the site or team that can resolve it, and track it through to done.",
+        description: "Route each issue to the location or team that can resolve it, and track it through to done.",
     },
     {
         icon: checkCircleBrokenIcon,
@@ -37,7 +37,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Feedback terminals, Survey and Review monitoring capture sentiment at every site, across web, kiosk, email, SMS and reviews.",
+        description: "Feedback terminals, Survey and Review monitoring capture sentiment at every location, across web, kiosk, email, SMS and reviews.",
         image: "/images/solutions/by-role/cx-leaders/cx-leaders-capture.png",
         imageWidth: 768,
         imageHeight: 384,
@@ -48,14 +48,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads every response as it lands and tells you, in plain English, what is driving sentiment at each location.",
         image: "/images/solutions/by-role/cx-leaders/cx-leaders-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "Explore",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -137,14 +137,14 @@ export const moduleStatsData = [
         startNumber: "0",
         endNumber: "200",
         numberSuffix: "+",
-        description: "Sites improved",
+        description: "Locations improved",
     }
 ]
 
 export const challengeFrameData = [
     {
         eyebrow: "01 | Lack of insight",
-        title: "You have feedback from every site, but no fast way to see what is driving it.",
+        title: "You have feedback from every location, but no fast way to see what is driving it.",
         tags: [
             {
                 tag: "Role-based actions",
@@ -153,7 +153,7 @@ export const challengeFrameData = [
     },
     {
         eyebrow: "02 | Lack of accountability",
-        title: "Issues get raised, but you cannot tell whether anyone actually resolved them.",
+        title: "Issues get raised, but you can't tell whether anyone actually resolved them.",
         tags: [
             {
                 tag: "Root-cause analysis",
@@ -177,16 +177,16 @@ export const faqData = [
         answer: "Customer experience management software helps you capture customer feedback and understand sentiment across every location. Serve First goes further than measuring: it connects each score to the operation behind it, names the cause with EVA and routes the fix to the right owner, so feedback ends in action, not another report."
     },
     {
-        question: "How does Serve First handle multi-site customer experience?",
-        answer: "Serve First is built for multi-site customer experience. Every location reports into one operating picture, so you can compare sites, see where experience is slipping and put it right, wherever they are. You manage the whole estate from one view, rather than a separate report for each site."
+        question: "How does Serve First handle multi-location customer experience?",
+        answer: "Serve First is built for multi-location customer experience. Every location reports into one operating picture, so you can compare locations, see where experience is slipping and fix it, wherever they are. You manage every location from one view, rather than a separate report for each one."
     },
     {
         question: "Is Serve First a customer feedback software or a survey tool?",
-        answer: "Serve First is customer feedback software for multi-site operators, not just a survey tool. Feedback terminals and Survey capture feedback on web, kiosk, email and SMS, then EVA reads it and points to the next actions, so you collect feedback and close the loop in one place."
+        answer: "Serve First is customer feedback software for multi-location operators, not just a survey tool. Feedback terminals and Survey capture feedback on web, kiosk, email and SMS, then EVA reads it and points to the next actions, so you collect feedback and close the loop in one place."
     },
     {
         question: "Does it do customer sentiment analysis and NPS?",
-        answer: "Yes. EVA gives you customer sentiment analysis in plain English, telling you what is driving sentiment at each site, and Serve First works as NPS software too, measuring NPS and CSAT by location and connecting each score to the cause behind it."
+        answer: "Yes. EVA gives you customer sentiment analysis in plain English, telling you what is driving sentiment at each location, and Serve First works as NPS software too, measuring NPS and CSAT by location and connecting each score to the cause behind it."
     },
     {
         question: "What makes Serve First different from other customer experience management platforms?",

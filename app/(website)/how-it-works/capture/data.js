@@ -16,13 +16,13 @@ export const challengeFrameData = [
     {
         eyebrow: "Challenge 02",
         title: "Captured too late to matter",
-        description: "Monthly exports and manual collection mean you learn about a problem weeks after the customer felt it, when the fix is harder and dearer.",
+        description: "Monthly exports and manual collection mean you learn about a problem weeks after the customer felt it, when the fix is harder and more expensive.",
         tags: []
     },
     {
         eyebrow: "Challenge 03",
-        title: "Gaps you cannot see",
-        description: "One channel, one site or one quiet customer slips through, and the first you hear of it is a lost contract or a public review.",
+        title: "Gaps you can't see",
+        description: "One channel, one location or one quiet customer slips through, and the first you hear of it is a lost contract or a public review.",
         tags: []
     }
 ]
@@ -31,7 +31,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Bring every customer, operational and market signal into one place, across all your sites.",
+        description: "Bring every customer, operational and market signal into one place, across all your locations.",
         image: "/images/how-it-works/capture/capture-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -42,14 +42,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads every signal as it lands, scores sentiment and surfaces the themes that matter, in plain English.",
         image: "/images/how-it-works/capture/capture-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "See how analysis works",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -75,19 +75,19 @@ export const contentGridData = [
     },
     {
         title: "Capture in real time",
-        description: "Responses land the moment they happen and sync even when a site is offline, so nothing waits for a monthly upload.",
+        description: "Responses land the moment they happen and sync even when a location is offline, so nothing waits for a monthly upload.",
         image: "/images/how-it-works/capture/capture-capture-realtime.svg",
         button: null
     },
     {
-        title: "Tie it to the site",
-        description: "Every signal is mapped to the right location, team and contract, so a client with ten sites still rolls up to one account view.",
+        title: "Tie it to the location",
+        description: "Every signal is mapped to the right location, team and contract, so a client with ten locations still rolls up to one account view.",
         image: "/images/how-it-works/capture/capture-tie-it-to-the-site.svg",
         button: null
     },
     {
         title: "Hand it to analysis",
-        description: "Captured signals pass straight to EVA and the operating picture, ready to be scored, themed and actioned. No re-keying, no export.",
+        description: "Captured signals pass straight to EVA and the operating picture, ready to be scored, themed and acted on. No re-entering data, no export.",
         image: "/images/how-it-works/capture/capture-hand-it-to-analysis.svg",
         button: null
     },
@@ -111,7 +111,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "Trained evaluators capture real-world visits against your standards, site by site.",
+        title: "Trained evaluators capture real-world visits against your standards, location by location.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -164,7 +164,7 @@ export const howItWorksData2 = [
     },   {
         eyebrow: "Built for complete capture",
         eyebrowHasDash: true,
-        title: "Mapped to every site",
+        title: "Mapped to every location",
         description: "Each signal tied to its location, team and contract automatically.",
         image: "/images/how-it-works/capture/capture-mapped-to-every-site.png",
         imageWidth: 768,
@@ -196,7 +196,7 @@ export const howItWorksData2 = [
 export const industryCardsData = [
     {
         eyebrow: "Retail",
-        title: "Capture how every store looks, serves and scores, from the shop floor to the queue.",
+        title: "Capture how every store looks, serves and scores, from the sales floor to the checkout line.",
         image: "/images/home/home-retail.png",
         imageFit: "cover",
         button: {
@@ -217,7 +217,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Restaurants",
-        title: "Capture feedback at the table and the counter, site by site and shift by shift.",
+        title: "Capture feedback at the table and the counter, location by location and shift by shift.",
         image: "/images/home/home-restaurants.png",
         button: {
             text: "Explore Restaurants",
@@ -227,7 +227,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Healthcare",
-        title: "Capture patient and visitor experience across every site, the moment it happens.",
+        title: "Capture patient and visitor experience across every location, the moment it happens.",
         image: "/images/home/home-healthcare.png",
         button: {
             text: "Explore Healthcare",
@@ -237,7 +237,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Facilities management",
-        title: "Capture standards and service signals across a dispersed estate.",
+        title: "Capture standards and service signals across a dispersed portfolio.",
         image: "/images/home/home-facilities-management.png",
         button: {
             text: "Explore Facilities management",
@@ -260,11 +260,11 @@ export const industryCardsData = [
 export const faqData = [
     {
         question: "What does capture mean in Serve First?",
-        answer: "Capture is the first stage of the Serve First loop. It brings every customer, operational and market signal into one place, in real time, across all your locations. That includes feedback terminals, surveys, reviews, mystery shopping, audits and benchmarking, ready to analyse and action."
+        answer: "Capture is the first stage of the Serve First loop. It brings every customer, operational and market signal into one place, in real time, across all your locations. That includes feedback terminals, surveys, reviews, mystery shopping, audits and benchmarking, ready to analyze and act on."
     },
     {
         question: "Which channels can Serve First capture from?",
-        answer: "Serve First captures across web, kiosk, email and SMS, plus branded feedback terminals, online reviews, mystery shopping visits, audits and competitive benchmarking. Every signal is tied to the right site, team and contract automatically."
+        answer: "Serve First captures across web, kiosk, email and SMS, plus branded feedback terminals, online reviews, mystery shopping visits, audits and competitive benchmarking. Every signal is tied to the right location, team and contract automatically."
     },
     {
         question: "Is feedback captured in real time?",
@@ -276,10 +276,10 @@ export const faqData = [
     },
     {
         question: "What happens to a signal once it is captured?",
-        answer: "Captured signals pass straight to EVA and the operating picture, where they are scored, themed and turned into recommended next steps. Your team assigns the action. Nothing has to be re-keyed or exported between tools."
+        answer: "Captured signals pass straight to EVA and the operating picture, where they are scored, themed and turned into recommended next steps. Your team assigns the action. Nothing has to be re-entered or exported between tools."
     },
     {
-        question: "Can Serve First capture across many sites at once?",
-        answer: "Yes. Serve First is built for multi-site operators. Every signal is mapped to its location, and a single client with many sites still rolls up to one account view, so you see each site and the whole estate together."
+        question: "Can Serve First capture across many locations at once?",
+        answer: "Yes. Serve First is built for multi-location operators. Every signal is mapped to its location, and a single client with many locations still rolls up to one account view, so you see each location and your whole business together."
     }
 ]

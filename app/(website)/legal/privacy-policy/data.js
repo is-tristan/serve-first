@@ -14,7 +14,7 @@ export const privacyPolicySections = [
     ],
     trailingParagraphs: [
       "You may complain to the Information Commissioner's Office at www.ico.org.uk. We would appreciate the chance to address your concerns first.",
-      "This version was last updated on 29 July 2026. Please keep us informed if your personal data changes.",
+      "This version was last updated on July 29, 2026. Please keep us informed if your personal data changes.",
       "This website may include third-party links. We do not control those websites and encourage you to read their privacy notices.",
     ],
   },
@@ -42,8 +42,8 @@ export const privacyPolicySections = [
   {
     title: "3. How is your personal data collected?",
     paragraphs: [
-      "We collect data through direct interactions when you fill in forms or correspond with us, including when you apply for services, make an enquiry, subscribe, request marketing, enter a promotion or survey, or provide feedback.",
-      "We automatically collect Technical Data through cookies, server logs, and similar technologies. The website uses Next.js, is deployed on Vercel, and uses Sanity as a headless CMS. Sanity does not collect personal data directly from your browser. See our Cookies Policy for details.",
+      "We collect data through direct interactions when you fill out forms or correspond with us, including when you apply for services, make an enquiry, subscribe, request marketing, enter a promotion or survey, or provide feedback.",
+      "We automatically collect Technical Data through cookies, server logs, and similar technologies. The website uses Next.js, is deployed on Vercel, and uses Sanity as a headless CMS. Sanity does not collect personal data directly from your browser. See our Cookie Policy for details.",
       "We may also receive personal data from third parties and public sources.",
     ],
     items: [
@@ -70,7 +70,7 @@ export const privacyPolicySections = [
   {
     title: "5. Disclosures of your personal data",
     paragraphs: [
-      "We may share personal data with the External Third Parties described in the Glossary and with third parties involved in a sale, transfer, merger, acquisition, or reorganisation of our business or assets.",
+      "We may share personal data with the External Third Parties described in the Glossary and with third parties involved in a sale, transfer, merger, acquisition, or reorganization of our business or assets.",
       "We require all third parties to respect the security of your personal data and process it in accordance with the law. Service providers may only process it for specified purposes and on our instructions.",
     ],
   },
@@ -81,7 +81,7 @@ export const privacyPolicySections = [
       "When personal data is transferred outside the EEA, we use appropriate safeguards.",
     ],
     items: [
-      "Transfers to countries recognised by the UK government as providing adequate data protection.",
+      "Transfers to countries recognized by the UK government as providing adequate data protection.",
       "The ICO International Data Transfer Agreement or UK Addendum to the EU Standard Contractual Clauses.",
       "The UK-US Data Bridge for certified US providers.",
     ],
@@ -92,7 +92,7 @@ export const privacyPolicySections = [
   {
     title: "7. Data security",
     paragraphs: [
-      "We use appropriate security measures to prevent personal data from being accidentally lost, used, accessed, altered, or disclosed without authorisation.",
+      "We use appropriate security measures to prevent personal data from being accidentally lost, used, accessed, altered, or disclosed without authorization.",
       "Access is limited to employees, agents, contractors, and third parties with a business need to know. They process data on our instructions and are subject to confidentiality duties.",
       "We have procedures for suspected personal data breaches and will notify you and the relevant regulator where legally required.",
     ],
@@ -131,7 +131,7 @@ export const privacyPolicySections = [
       "Legitimate Interest means our interest in conducting and managing the business to provide the best and most secure experience.",
       "Performance of Contract means processing necessary to perform a contract with you or take steps at your request before entering into one.",
       "Comply with a legal or regulatory obligation means processing necessary to meet an obligation that applies to us.",
-      "External Third Parties include IT and administration service providers, professional advisers, HM Revenue & Customs, regulators, and analytics or tracking providers.",
+      "External Third Parties include IT and administration service providers, professional advisors, HM Revenue & Customs, regulators, and analytics or tracking providers.",
     ],
     items: [
       "Google LLC, including Google Analytics, Google Ads, Google Tag Manager, and Google Search Console.",

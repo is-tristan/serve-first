@@ -48,45 +48,49 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-repeat: no-repeat;
+            overflow: hidden;
+            pointer-events: none;
 
-            @media (width >=768px) {
-                background-size: 12.5rem;
-            }
+            .backgroundDecorationSvg {
+                position: absolute;
+                width: 6rem;
 
-            @media (width >=1600px) {
-                background-size: 15rem;
-            }
+                @media (width >=768px) {
+                    width: 12.5rem;
+                }
 
-            @media (width >=1920px) {
-                background-size: 22.5rem;
-            }
+                @media (width >=1600px) {
+                    width: 15rem;
+                }
 
-            @media (width >=2560px) {
-                background-size: 30rem;
-            }
+                @media (width >=1920px) {
+                    width: 22.5rem;
+                }
 
-            @media (width >=3840px) {
-                background-size: 40rem;
+                @media (width >=2560px) {
+                    width: 30rem;
+                }
+
+                @media (width >=3840px) {
+                    width: 40rem;
+                }
             }
 
             &.bdTr {
-                background-position: top right;
-
-                @media (width < 768px) {
-                    background-size: 6rem;
-                }
-
                 @media (width >=1024px) {
                     top: 0;
+                }
+
+                .backgroundDecorationSvg {
+                    top: 0;
+                    right: 0;
                 }
             }
 
             &.bdBl {
-                background-position: bottom left;
-
-                @media (width < 768px) {
-                    background-size: 6rem;
+                .backgroundDecorationSvg {
+                    bottom: 0;
+                    left: 0;
                 }
             }
         }

@@ -4,14 +4,11 @@ import Text from "@/components/content/text";
 import Button from "@/components/handlers/buttons";
 import FormCol from "@/components/screens/lp/lp-banner/components/form-col";
 import Checklist from "@/components/screens/lp/lp-banner/components/checklist";
+import LineDecoration from "@/components/decoration/line-decoration";
 
 // Styles
 import styles from "@/styles/components/sections/banner.module.scss";
 import lpStyles from "@/styles/components/screens/lp/lp.module.scss";
-
-// Background Decorations
-import bdTr from "@/public/backgrounds/banner/banner-decoration-top-right.svg";
-import bdBl from "@/public/backgrounds/banner/banner-decoration-bottom-left.svg";
 
 export default function LpBanner({
     eyebrow = "- LP Banner Component",
@@ -22,13 +19,13 @@ export default function LpBanner({
     hasButtons = true,
     hasFullStop = true,
     hasBackgroundDecoration = true,
-    formBtnText = "Request a demo",
+    formBtnText = "Request my demo",
     hasDemoLink = false,
     formSmallText,
     formType = "landing",
     utmMedium,
     buttonPrimary = {
-        text: "Get a demo",
+        text: "Request a demo",
         href: "/get-a-demo",
     },
     buttonSecondary = {
@@ -112,9 +109,17 @@ export default function LpBanner({
 
                 <>
 
-                    <div className={`${styles.backgroundDecoration} ${styles.bdTr}`} style={{ backgroundImage: `url(${bdTr.src})` }} />
+                    <div className={`${styles.backgroundDecoration} ${styles.bdTr}`}>
 
-                    <div className={`${styles.backgroundDecoration} ${styles.bdBl}`} style={{ backgroundImage: `url(${bdBl.src})` }} />
+                        <LineDecoration variant="bannerTopRight" className={styles.backgroundDecorationSvg} />
+
+                    </div>
+
+                    <div className={`${styles.backgroundDecoration} ${styles.bdBl}`}>
+
+                        <LineDecoration variant="bannerBottomLeft" className={styles.backgroundDecorationSvg} />
+
+                    </div>
 
                 </>
 

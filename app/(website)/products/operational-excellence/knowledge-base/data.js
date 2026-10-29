@@ -20,7 +20,7 @@ export const featureListData = [
         imageHeight: 768,
         list: [
             {
-                text: "Centralised content and search",
+                text: "Centralized content and search",
             },
             {
                 text: "Version control keeps it current",
@@ -34,7 +34,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -43,7 +43,7 @@ export const roleContextData = [
     {
         icon: fileSearchIcon,
         eyebrow: "One home",
-        title: "Centralised content and search",
+        title: "Centralized content and search",
         description: "Keep SOPs, policies and training in one searchable home, so teams find the answer in seconds.",
     },
     {
@@ -70,7 +70,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Procedures, policies and training are captured in one place, organised by type and the teams who need them.",
+        description: "Procedures, policies and training are captured in one place, organized by type and the teams who need them.",
         image: "/images/products/operational-excellence/knowledge-base/knowledge-base-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -81,14 +81,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Version control keeps one current answer live, with role-based access controlling exactly who sees what.",
         image: "/images/products/operational-excellence/knowledge-base/knowledge-base-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "See how access works",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -110,7 +110,7 @@ export const challengeFrameData = [
         eyebrow: "Challenge 01",
         title: "Teams work from old documents because the current answer is hard to find.",
         subheading: "How Serve First solves it",
-        description: "Serve First keeps one current, searchable answer with role-based access and links it from the tasks and tickets teams use, so the right guidance is always to hand.",
+        description: "Serve First keeps one current, searchable answer with role-based access and links it from the tasks and tickets teams use, so the right guidance is always at hand.",
         tags: [
             {
                 tag: "One current answer",
@@ -177,7 +177,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Give every site the same playbook.",
+        description: "Give every location the same playbook.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -197,7 +197,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Keep clinical and site procedures current.",
+        description: "Keep clinical and facility procedures current.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -207,7 +207,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Facilities management",
-        description: "Standardise procedures across every contract.",
+        description: "Standardize procedures across every contract.",
         image: "/images/products/shared/facilities-management-industry-icon.svg",
         button: {
             text: "Explore",
@@ -229,7 +229,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -277,18 +277,18 @@ export const faqData = [
     },
     {
         question: "Can different teams see different content?",
-        answer: "Yes. Role-based access means each team sees what applies to them and nothing out of date, so a site manager and a regional lead each get the guidance relevant to their role."
+        answer: "Yes. Role-based access means each team sees what applies to them and nothing out of date, so a location manager and a regional lead each get the guidance relevant to their role."
     },
     {
         question: "How do teams find the right answer quickly?",
-        answer: "Content is centralised and searchable, and guidance links straight from the tickets and tasks teams are already working on, so the answer is found in seconds, in context."
+        answer: "Content is centralized and searchable, and guidance links straight from the tickets and tasks teams are already working on, so the answer is found in seconds, in context."
     },
     {
         question: "Can EVA answer from our documentation?",
         answer: "Yes. You can ask EVA a policy or procedure question and get the answer drawn from your own documentation, with the source shown, so you can trust where it came from."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Every site works from the same current answer in one place, so standards stay consistent however many locations you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Every location works from the same current answer in one place, so standards stay consistent however many locations you run."
     }
 ]

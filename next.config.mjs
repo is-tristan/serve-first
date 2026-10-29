@@ -67,8 +67,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/coming-soon",
-        destination: "/products/operational-excellence/vision",
+        source: "/how-it-works/analyse",
+        destination: "/how-it-works/analyze",
         permanent: true,
       },
       {
@@ -93,6 +93,11 @@ const nextConfig = {
       },
       {
         source: "/products/vision",
+        destination: "/products/operational-excellence/vision",
+        permanent: true,
+      },
+      {
+        source: "/coming-soon",
         destination: "/products/operational-excellence/vision",
         permanent: true,
       },

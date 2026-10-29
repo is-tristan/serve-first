@@ -176,6 +176,17 @@ p {
     &.extraLarge {
         font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     }
+
+    &:has(a) a {
+        color: var(--primary);
+
+        &:hover {
+            color: var(--primary);
+            text-decoration: underline;
+            text-decoration-thickness: 0.125rem;
+            text-underline-offset: 0.25rem;
+        }
+    }
 }
 
 ul {

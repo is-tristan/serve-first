@@ -20,7 +20,7 @@ export default function BlogHeader({ blog }) {
         ? urlFor(blog.author.image).width(64).height(64).fit("crop").url()
         : imagePlaceholder
     const publishedAt = blog.publishedAt
-        ? new Intl.DateTimeFormat("en-GB", {
+        ? new Intl.DateTimeFormat("en-US", {
             day: "numeric",
             month: "long",
             year: "numeric",

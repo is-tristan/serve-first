@@ -8,7 +8,7 @@ export const challengeFrameData = [
     {
         eyebrow: "Challenge 01",
         title: "Insight with no owner",
-        description: "A list of findings is not a plan. Without an owner and a deadline, the fix never gets picked up.",
+        description: "A list of findings isn't a plan. Without an owner and a deadline, the fix never gets picked up.",
         tags: []
     },
     {
@@ -20,7 +20,7 @@ export const challengeFrameData = [
     {
         eyebrow: "Challenge 03",
         title: "No proof it got done",
-        description: "When the issue returns, you cannot show what was done, by whom, or whether it ever closed.",
+        description: "When the issue returns, you can't show what was done, by whom, or whether it ever closed.",
         tags: []
     }
 ]
@@ -29,7 +29,7 @@ export const howItWorksData = [
     {
         number: "01",
         title: "Capture",
-        description: "Bring every customer, operational and market signal into one place, across all your sites.",
+        description: "Bring every customer, operational and market signal into one place, across all your locations.",
         image: "/images/how-it-works/capture/capture-capture.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -40,14 +40,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads every signal as it lands, scores sentiment and surfaces the themes that matter, in plain English.",
         image: "/images/how-it-works/capture/capture-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "See how analysis works",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -67,7 +67,7 @@ export const howItWorksData = [
 export const contentGridData = [
     {
         title: "Turn insight into a plan",
-        description: "EVA recommends the next step and Serve First shapes it into a role-based plan, so the right action lands with the right role at the right site.",
+        description: "EVA recommends the next step and Serve First shapes it into a role-based plan, so the right action lands with the right role at the right location.",
         image: "/images/how-it-works/capture/capture-collect-everywhere.svg",
         button: null
     },
@@ -94,15 +94,15 @@ export const contentGridData = [
 export const productHighlightData = [
     {
         icon: messageAlertSquareIcon,
-        eyebrow: "Action Plans",
+        eyebrow: "Action plans",
         title: "Turn what you learn into a structured improvement plan, with steps, owners and progress tracked through to resolution.",
-        linkText: "Book a demo",
+        linkText: "Request a demo",
         link: "/get-a-demo",
     },
     {
         icon: checkCircleBrokenIcon,
         eyebrow: "Task management",
-        title: "Turn any insight into a task with an owner, a deadline and proof of completion, routed to the right site and role.",
+        title: "Turn any insight into a task with an owner, a deadline and proof of completion, routed to the right location and role.",
         linkText: "Explore Task Management",
         link: "/products/operational-excellence/task-management",
     },
@@ -180,7 +180,7 @@ export const howItWorksData2 = [
 export const industryCardsData = [
     {
         eyebrow: "Retail",
-        title: "Route store fixes to the right manager and prove they closed, site by site.",
+        title: "Route store fixes to the right manager and prove they closed, store by store.",
         image: "/images/home/home-retail.png",
         imageFit: "cover",
         button: {
@@ -191,7 +191,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Leisure & hospitality",
-        title: "Act on guest issues while they are still on site, with a clear owner for each fix.",
+        title: "Act on guest issues while they are still on-site, with a clear owner for each fix.",
         image: "/images/home/home-leisure-and-hospitality.png",
         button: {
             text: "Explore Leisure & hospitality",
@@ -201,7 +201,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Restaurants",
-        title: "Assign fixes by site and shift, and prove standards were put right.",
+        title: "Assign fixes by location and shift, and prove standards were met.",
         image: "/images/home/home-restaurants.png",
         button: {
             text: "Explore Restaurants",
@@ -211,7 +211,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Healthcare",
-        title: "Turn patient and visitor feedback into owned actions, tracked to completion across every site.",
+        title: "Turn patient and visitor feedback into owned actions, tracked to completion across every location.",
         image: "/images/home/home-healthcare.png",
         button: {
             text: "Explore Healthcare",
@@ -221,7 +221,7 @@ export const industryCardsData = [
     },
     {
         eyebrow: "Facilities management",
-        title: "Route service and standards actions across a dispersed estate, tracked to done.",
+        title: "Route service and standards actions across a dispersed portfolio, tracked to done.",
         image: "/images/home/home-facilities-management.png",
         button: {
             text: "Explore Facilities management",
@@ -252,18 +252,18 @@ export const faqData = [
     },
     {
         question: "Does EVA carry out actions on its own?",
-        answer: "No. EVA is advisory. It recommends the next step and the reason why. Your team decides whether to act, assigns the task and owns it. Nothing is actioned automatically without a person."
+        answer: "No. EVA is advisory. It recommends the next step and the reason why. Your team decides whether to act, assigns the task and owns it. Nothing is acted on automatically without a person."
     },
     {
         question: "What is proof of completion?",
-        answer: "It means an action is only closed with evidence that it was done, such as a note, photo or check, rather than just marking a task complete. Records are time-stamped and site-tagged, so they are available as evidence when you need them."
+        answer: "It means an action is only closed with evidence that it was done, such as a note, photo or check, rather than just marking a task complete. Records are timestamped and location-tagged, so they are available as evidence when you need them."
     },
     {
         question: "Can I see whether the fix actually worked?",
-        answer: "Yes. Once an action closes, the result feeds back into the operating picture, so you can see the score move after the fix and prove the change, by site and across the estate."
+        answer: "Yes. Once an action closes, the result feeds back into the operating picture, so you can see the score move after the fix and prove the change, by location and across your business."
     },
     {
-        question: "Does it work across many sites and roles?",
-        answer: "Yes. Serve First is built for multi-site operators. Actions are routed by site and role, so each location and each team gets the fixes that are theirs to own, all tracked in one operating picture."
+        question: "Does it work across many locations and roles?",
+        answer: "Yes. Serve First is built for multi-location operators. Actions are routed by location and role, so each location and each team gets the fixes that are theirs to own, all tracked in one operating picture."
     }
 ]

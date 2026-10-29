@@ -1,0 +1,65 @@
+.lineDecoration {
+    display: block;
+    height: auto;
+    pointer-events: none;
+
+    .drawForward,
+    .drawReverse {
+        stroke-dasharray: 1;
+    }
+
+    .drawForward {
+        stroke-dashoffset: 1;
+    }
+
+    .drawReverse {
+        stroke-dashoffset: -1;
+    }
+
+    &[data-playing="true"] {
+
+        .drawForward,
+        .drawReverse {
+            animation: drawLine var(--drawDuration, 2s) cubic-bezier(0.65, 0, 0.35, 1) var(--drawDelay, 0.2s) both;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        .drawForward,
+        .drawReverse {
+            animation: none !important;
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .strokePrimaryAlt {
+        stroke: var(--primaryAlt);
+    }
+
+    .strokeSecondary {
+        stroke: var(--secondary);
+    }
+
+    .strokeFooterA {
+        stroke: var(--primaryAlt);
+
+        @media (width >=1024px) {
+            stroke: var(--secondary);
+        }
+    }
+
+    .strokeFooterB {
+        stroke: var(--secondary);
+
+        @media (width >=1024px) {
+            stroke: var(--primaryAlt);
+        }
+    }
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

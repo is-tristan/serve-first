@@ -39,7 +39,7 @@ export default async function Blog() {
             <Banner
                 eyebrow="The Serve First blog"
                 title="Ideas genuinely worth acting on"
-                description="Practical thinking on customer experience, operational excellence and multi-site intelligence, written for the people who run the floor, not just report on it."
+                description="Practical thinking on customer experience, operational excellence and multi-location intelligence, written for the people who run the floor, not just report on it."
                 image={null}
             />
 
@@ -52,7 +52,7 @@ export default async function Blog() {
             <CtaBannerOne
                 theme="primary"
                 title="Reading is a great start<span class='colorPrimary'>.</span> Doing is better"
-                description="Book a personalised demo and see the thinking put to work across your sites, your data and your team."
+                description="Book a personalized demo and see the thinking put to work across your locations, your data and your team."
             />
 
         </>

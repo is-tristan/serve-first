@@ -22,7 +22,7 @@ export const challengeFrameData = [
     },
     {
         eyebrow: "02 | Signals are disconnected",
-        title: "Proving how the estate is doing means stitching exports together by hand.",
+        title: "Proving how your business is doing means stitching exports together by hand.",
         // description: "EVA reads across every signal and answers in plain English, so the question how are we doing takes seconds, not a week of spreadsheet work.",
         tags: [
             {
@@ -46,7 +46,7 @@ export const roleContextData = [
     {
         icon: usersIcon,
         title: "Operations directors",
-        description: "One view of audits, tasks and performance across the estate, without stitching exports together.",
+        description: "One view of audits, tasks and performance across every location, without stitching exports together.",
         button: {
             text: "For ops directors",
             href: "/solutions/by-role/operations-directors",
@@ -54,7 +54,7 @@ export const roleContextData = [
     },
     {
         icon: usersUpIcon,
-        title: "CX Leaders",
+        title: "CX leaders",
         description: "Customer feedback connected to the operation behind it, so the cause of a dip is visible.",
         button: {
             text: "For CX leaders",
@@ -85,14 +85,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "EVA reads across every signal and gives you one operating picture, so a plain answer to how are we doing is always ready.",
         image: "/images/solutions/by-challenge/siloed-tools-and-data/siloed-tools-and-data-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "Explore",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -113,7 +113,7 @@ export const productHighlightData = [
     {
         icon: fileCheckIcon,
         eyebrow: "Audits",
-        title: "Bring site checks into the same picture.",
+        title: "Bring location checks into the same picture.",
         linkText: "Explore",
         link: "/products/operational-excellence/audits",
     },
@@ -141,7 +141,7 @@ export const productHighlightData = [
     {
         icon: clipBoardIcon,
         eyebrow: "Knowledge Base",
-        title: "Measure CSAT by site, in the same picture.",
+        title: "Keep procedures in the same place as the work.",
         linkText: "Explore",
         link: "/products/operational-excellence/knowledge-base",
     },
@@ -181,15 +181,15 @@ export const moduleStatsData = [
 export const faqData = [
     {
         question: "How do you connect siloed data sources?",
-        answer: "Serve First captures customer and operational signals, feedback, audits, tickets and reviews, into one connected platform, so they are joined at the source rather than stitched together in spreadsheets afterwards. Every site reports into the same operating picture."
+        answer: "Serve First captures customer and operational signals, feedback, audits, tickets and reviews, into one connected platform, so they are joined at the source rather than stitched together in spreadsheets afterward. Every location reports into the same operating picture."
     },
     {
         question: "What does one operating picture mean?",
-        answer: "It means customer experience and operational performance sit in one view, by site, so a drop in satisfaction and the standard behind it appear side by side. Everyone works from the same truth instead of arguing about whose export is right."
+        answer: "It means customer experience and operational performance sit in one view, by location, so a drop in satisfaction and the standard behind it appear side by side. Everyone works from the same truth instead of arguing about whose export is right."
     },
     {
         question: "Can EVA answer questions across all the data?",
-        answer: "Yes. EVA reads across your signals and answers in plain language, so you can ask how a region is doing or which sites are slipping and get the answer with the cause behind it, in seconds."
+        answer: "Yes. EVA reads across your signals and answers in plain language, so you can ask how a region is doing or which locations are slipping and get the answer with the cause behind it, in seconds."
     },
     {
         question: "How is this different from a reporting tool?",
@@ -197,7 +197,7 @@ export const faqData = [
     },
     {
         question: "What is a single view of operations?",
-        answer: "It is one operating picture that brings customer and operational signals together by site, so feedback, audits, tickets and reviews sit in the same place. Everyone works from the same source rather than exporting from separate tools and reconciling by hand."
+        answer: "It's one operating picture that brings customer and operational signals together by location, so feedback, audits, tickets and reviews sit in the same place. Everyone works from the same source rather than exporting from separate tools and reconciling by hand."
     },
     {
         question: "Do we have to replace our existing tools?",

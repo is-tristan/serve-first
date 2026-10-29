@@ -9,27 +9,45 @@ import { cookiePolicySections } from "./data";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-  return getPageMetadata("/legal/cookie-policy");
+  const metadata = await getPageMetadata("/legal/cookie-policy");
+  const title = "Cookie Policy - Serve First";
+  const description = "How Serve First uses cookies and similar technologies, and how to manage your choices.";
+
+  return {
+    ...metadata,
+    title,
+    description,
+    openGraph: {
+      ...metadata.openGraph,
+      title,
+      description,
+    },
+    twitter: {
+      ...metadata.twitter,
+      title,
+      description,
+    },
+  };
 }
 
 export default function CookiePolicy() {
   return (
     <>
       <Banner
-        eyebrow="Cookies Policy"
-        title="Cookies Policy"
-        description="This Cookies Policy explains how Serve First CX Limited uses cookies and similar technologies on our website."
+        eyebrow="Cookie Policy"
+        title="Cookie Policy"
+        description="This Cookie Policy explains how Serve First CX Limited uses cookies and similar technologies on our website."
         image={null}
       />
 
       <div className={`container ${styles.privacyPolicyContainer}`}>
         <div className={styles.privacyPolicySection}>
-          <h2>Serve First Cookies Policy</h2>
+          <h2>Serve First Cookie Policy</h2>
 
-          <p>Effective date: 29 July 2026</p>
+          <p>Effective date: July 29, 2026</p>
 
           <p>
-            This Cookies Policy explains how Serve First CX Limited ("we", "us",
+            This Cookie Policy explains how Serve First CX Limited ("we", "us",
             or "our") uses cookies and similar technologies on our website{" "}
             <a href="https://www.servefirst.ai">www.servefirst.ai</a>{" "}
             ("Website").

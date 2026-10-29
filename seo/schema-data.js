@@ -127,7 +127,7 @@ export function getSoftwareApplicationSchema() {
         applicationSubCategory: "Customer Experience Management",
         operatingSystem: "Web-based",
         url: absoluteUrl("/"),
-        description: "Serve First connects customer, operational and market signals across every site, then turns them into the actions that put things right.",
+        description: "Serve First connects customer, operational and market signals across every location, then turns them into the actions that fix them.",
         provider: {
             "@type": "Organization",
             name: "Serve First",
@@ -158,7 +158,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Audits",
         path: "/products/operational-excellence/audits",
-        description: "Digital audit and inspection software that scores every site against your standards and turns failed checks into corrective actions.",
+        description: "Digital audit and inspection software that scores every location against your standards and turns failed checks into corrective actions.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Products", path: "/products/operational-excellence" },
@@ -169,7 +169,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Task Management",
         path: "/products/operational-excellence/task-management",
-        description: "Route every failed check and issue to an owner and track it through to completion across all your sites.",
+        description: "Route every failed check and issue to an owner and track it through to completion across all your locations.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Products", path: "/products/operational-excellence" },
@@ -180,7 +180,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Helpdesk",
         path: "/products/operational-excellence/helpdesk",
-        description: "Log, manage and resolve operational issues in one place across your entire estate.",
+        description: "Log, manage and resolve operational issues in one place across all your locations.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Products", path: "/products/operational-excellence" },
@@ -246,7 +246,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Mystery Shopping",
         path: "/products/customer-experience/mystery-shopping",
-        description: "AI-powered mystery shopping programmes that assess the retail moments that matter.",
+        description: "AI-powered mystery shopping programs that assess the retail moments that matter.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Products", path: "/products/customer-experience" },
@@ -257,7 +257,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Competitive Benchmarking",
         path: "/products/market-intelligence/competitive-benchmarking",
-        description: "See how your sites perform against competitors and industry standards.",
+        description: "See how your locations perform against competitors and industry standards.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Products", path: "/products/market-intelligence" },
@@ -286,15 +286,15 @@ export const pageSchemaData = {
             { name: "Capture", path: "/how-it-works/capture" },
         ],
     }),
-    "/how-it-works/analyse": definePage({
+    "/how-it-works/analyze": definePage({
         type: "WebPage",
-        name: "Analyse",
-        path: "/how-it-works/analyse",
+        name: "Analyze",
+        path: "/how-it-works/analyze",
         description: "EVA reads it all as it lands, scoring sentiment and surfacing the themes that matter.",
         crumbs: [
             { name: "Home", path: "/" },
-            { name: "How It Works", path: "/how-it-works/analyse" },
-            { name: "Analyse", path: "/how-it-works/analyse" },
+            { name: "How It Works", path: "/how-it-works/analyze" },
+            { name: "Analyze", path: "/how-it-works/analyze" },
         ],
     }),
     "/how-it-works/action": definePage({
@@ -312,7 +312,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "EVA",
         path: "/eva",
-        description: "Ask EVA which of your sites are slipping and get a clear, evidence-backed answer.",
+        description: "Ask EVA which of your locations are slipping and get a clear, evidence-backed answer.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "EVA", path: "/eva" },
@@ -333,7 +333,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Leisure & Hospitality",
         path: "/solutions/by-industry/leisure-and-hospitality",
-        description: "Audit guest standards at every site with intuitive guest experience software.",
+        description: "Audit guest standards at every location with intuitive guest experience software.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
@@ -355,7 +355,7 @@ export const pageSchemaData = {
         type: "Service",
         name: "Healthcare",
         path: "/solutions/by-industry/healthcare",
-        description: "Evidence care standards and measure patient satisfaction at every site.",
+        description: "Evidence care standards and measure patient satisfaction at every location.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
@@ -399,7 +399,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "Operations Directors",
         path: "/solutions/by-role/operations-directors",
-        description: "Hold every site to a single operating standard with real-time visibility.",
+        description: "Hold every location to a single operating standard with real-time visibility.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
@@ -410,7 +410,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "Compliance Managers",
         path: "/solutions/by-role/compliance-managers",
-        description: "Evidence compliance across every site with a full, timestamped audit trail.",
+        description: "Evidence compliance across every location with a full, timestamped audit trail.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
@@ -421,7 +421,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "Inconsistent Standards",
         path: "/solutions/by-challenge/inconsistent-standards",
-        description: "Hold every site to the same standard with digital audits and corrective actions.",
+        description: "Hold every location to the same standard with digital audits and corrective actions.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
@@ -454,7 +454,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "Data To Action",
         path: "/solutions/by-challenge/data-to-action",
-        description: "Make every insight a tracked fix across your entire estate.",
+        description: "Make every insight a tracked fix across all your locations.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Solutions", path: "/solutions" },
@@ -465,7 +465,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "What Does Serve First Do",
         path: "/what-does-serve-first-do",
-        description: "Serve First connects customer, operational and market signals across every site, then turns them into the actions that put things right.",
+        description: "Serve First connects customer, operational and market signals across every location, then turns them into the actions that fix them.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "What Does Serve First Do", path: "/what-does-serve-first-do" },
@@ -475,7 +475,7 @@ export const pageSchemaData = {
         type: "AboutPage",
         name: "About Us",
         path: "/company/about",
-        description: "Serve First is built for the people who serve, helping multi-site operators turn every customer signal into action.",
+        description: "Serve First is built for the people who serve, helping multi-location operators turn every customer signal into action.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Company", path: "/company/about" },
@@ -497,7 +497,7 @@ export const pageSchemaData = {
         type: "WebPage",
         name: "Blog",
         path: "/resources/blog",
-        description: "Practical thinking on customer experience, operations and multi-site intelligence.",
+        description: "Practical thinking on customer experience, operations and multi-location intelligence.",
         crumbs: [
             { name: "Home", path: "/" },
             { name: "Resources", path: "/resources/blog" },

@@ -13,8 +13,8 @@ import {
 export const featureListData = [
     {
         eyebrow: "One inbox, every channel",
-        title: "Replace the shared mailbox for good",
-        description: "Survey responses, low ratings, failed audits and inbound messages all become tickets. Each one carries an owner, a status and a full history, so nothing slips between a busy mailbox and a busy shift.",
+        title: "Replace the shared inbox for good",
+        description: "Survey responses, low ratings, failed audits and inbound messages all become tickets. Each one carries an owner, a status and a full history, so nothing slips between a busy inbox and a busy shift.",
         image: "/images/products/operational-excellence/helpdesk/helpdesk-feature-list-image.png",
         imageWidth: 768,
         imageHeight: 576,
@@ -34,7 +34,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -81,14 +81,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Each ticket carries its context and history, routed by survey and location so only the right team sees it.",
         image: "/images/products/operational-excellence/helpdesk/helpdesk-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
-            text: "See how issues analyse",
-            href: "/how-it-works/analyse",
+            text: "See how issues are analyzed",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -116,7 +116,7 @@ export const challengeFrameData = [
                 tag: "One ticket inbox",
             },
             {
-                tag: "Routed by site",
+                tag: "Routed by location",
             },
             {
                 tag: "Full history",
@@ -197,7 +197,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Healthcare",
-        description: "Manage patient and site issues in one place.",
+        description: "Manage patient and facility issues in one place.",
         image: "/images/products/shared/healthcare-industry-icon.svg",
         button: {
             text: "Explore",
@@ -229,7 +229,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -269,7 +269,7 @@ export const contentGridData2 = [
 export const faqData = [
     {
         question: "What is helpdesk software?",
-        answer: "Helpdesk software turns incoming issues into trackable tickets with an owner, a status and a history. Serve First builds tickets from feedback, ratings, failed audits and messages in one inbox, so nothing slips between a busy mailbox and a busy shift."
+        answer: "Helpdesk software turns incoming issues into trackable tickets with an owner, a status and a history. Serve First builds tickets from feedback, ratings, failed audits and messages in one inbox, so nothing slips between a busy inbox and a busy shift."
     },
     {
         question: "What can raise a ticket?",
@@ -288,7 +288,7 @@ export const faqData = [
         answer: "Yes. Every ticket carries a full audit trail from first contact to resolved, so you can see what happened, who handled it and how long it took."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Tickets from every location sit in one operating picture, so you can see resolution across the estate, however many sites you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Tickets from every location sit in one operating picture, so you can see resolution across your whole business, however many locations you run."
     }
 ]

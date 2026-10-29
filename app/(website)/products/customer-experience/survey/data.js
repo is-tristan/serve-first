@@ -34,7 +34,7 @@ export const featureListData = [
         ],
         button: {
             text: "See it in action",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     }
 ]
@@ -44,13 +44,13 @@ export const challengeFrameData = [
         eyebrow: "Challenge 01",
         title: "You run surveys and watch the scores, but the causes never reach the floor.",
         subheading: "How Serve First solves it",
-        description: "Serve First scores every response as it lands and routes the cause to the right site as a task, so a falling score becomes a fix you can track, not another chart.",
+        description: "Serve First scores every response as it lands and routes the cause to the right location as a task, so a falling score becomes a fix you can track, not another chart.",
         tags: [
             {
                 tag: "Live response scoring",
             },
             {
-                tag: "Cause by site",
+                tag: "Cause by location",
             },
             {
                 tag: "Tracked follow-up",
@@ -68,19 +68,19 @@ export const roleContextData = [
     },
     {
         icon: dataFlowIcon,
-        eyebrow: "Smart Logic",
+        eyebrow: "Smart logic",
         title: "Logic branching keeps it short",
         description: "Customers answer only what applies to them, which keeps surveys short and lifts completion.",
     },
     {
         icon: announcementIcon,
-        eyebrow: "Every Channel",
+        eyebrow: "Every channel",
         title: "Web, kiosk, email and SMS",
         description: "Build a survey once and send it across web, kiosk, email and SMS, reaching customers where they are.",
     },
     {
         icon: graphIcon,
-        eyebrow: "Live Sentiment",
+        eyebrow: "Live sentiment",
         title: "Live results and sentiment",
         description: "Responses stream in live and score sentiment as they land, so themes surface the same day.",
     }
@@ -101,14 +101,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
+        title: "Analyze",
         description: "Results stream in live with sentiment scoring, so the themes worth acting on surface as the answers arrive.",
         image: "/images/products/customer-experience/survey/survey-analyse.png",
         imageWidth: 768,
         imageHeight: 576,
         button: {
             text: "See the analysis",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -136,7 +136,7 @@ export const productHighlightData = [
     {
         icon: shoppingBagSimpleIcon,
         eyebrow: "Mystery shopping",
-        title: "See your sites the way customers do.",
+        title: "See your locations the way customers do.",
         linkText: "Explore",
         link: "/products/customer-experience/mystery-shopping",
     },
@@ -177,7 +177,7 @@ export const contentGridData = [
     {
         category: "By Industry",
         title: "Leisure & hospitality",
-        description: "Hear from guests at every site and shift.",
+        description: "Hear from guests at every location and shift.",
         image: "/images/products/shared/hospitality-industry-icon.svg",
         button: {
             text: "Explore",
@@ -229,7 +229,7 @@ export const contentGridData = [
 export const contentGridData2 = [
     {
         title: "Inconsistent standards",
-        description: "Hold every site to the same standard.",
+        description: "Hold every location to the same standard.",
         image: "/images/solutions/by-industry/retail/Inconsistent_standards_across_locations_icon.svg",
         button: {
             text: "Fix inconsistent standards",
@@ -315,10 +315,10 @@ export const faqData = [
     },
     {
         question: "Does survey feedback connect to operations?",
-        answer: "Yes. Because surveys sit in the same platform as audits, tasks and the rest of your operation, a drop in a score and the site behind it appear together, and the follow-up is routed to an owner and tracked."
+        answer: "Yes. Because surveys sit in the same platform as audits, tasks and the rest of your operation, a drop in a score and the location behind it appear together, and the follow-up is routed to an owner and tracked."
     },
     {
-        question: "Does it work across multiple sites?",
-        answer: "Serve First is built for multi-site operations. Survey results roll up into one operating picture, so you can compare locations, spot the ones slipping and put them right, however many sites you run."
+        question: "Does it work across multiple locations?",
+        answer: "Serve First is built for multi-location operations. Survey results roll up into one operating picture, so you can compare locations, spot the ones slipping and fix them, however many you run."
     }
 ]

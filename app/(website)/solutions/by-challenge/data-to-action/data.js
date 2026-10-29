@@ -13,7 +13,7 @@ export const challengeFrameData = [
     {
         eyebrow: "01 | Plenty of dashboards",
         title: "You have no shortage of dashboards, and no shortage of unread reports.",
-        description: "EVA reads each signal and names the next action, with the site and the reason, so insight arrives ready to use, not waiting to be interpreted.",
+        description: "EVA reads each signal and names the next action, with the location and the reason, so insight arrives ready to use, not waiting to be interpreted.",
         tags: [
             {
                 tag: "System of action",
@@ -54,8 +54,8 @@ export const roleContextData = [
     },
     {
         icon: usersUpIcon,
-        title: "CX Leaders",
-        description: "Customer issues route straight to the site that can fix them, tracked through to done.",
+        title: "CX leaders",
+        description: "Customer issues route straight to the location that can fix them, tracked through to done.",
         button: {
             text: "For CX leaders",
             href: "/solutions/by-role/cx-leaders",
@@ -64,7 +64,7 @@ export const roleContextData = [
     {
         icon: usersCheckIcon,
         title: "Compliance managers",
-        description: "Gaps raise corrective actions automatically, so nothing stays open and unevidenced.",
+        description: "Gaps raise corrective actions automatically, so nothing stays open or undocumented.",
         button: {
             text: "For compliance managers",
             href: "/solutions/by-role/compliance-managers",
@@ -87,14 +87,14 @@ export const howItWorksData = [
     },
     {
         number: "02",
-        title: "Analyse",
-        description: "EVA reads each signal and names the next action, with the site and the reason, so no one digs to know what to do.",
+        title: "Analyze",
+        description: "EVA reads each signal and names the next action, with the location and the reason, so no one digs to know what to do.",
         image: "/images/solutions/by-challenge/data-to-action/data-to-action-analyse.png",
         imageWidth: 768,
         imageHeight: 768,
         button: {
             text: "Explore",
-            href: "/how-it-works/analyse",
+            href: "/how-it-works/analyze",
         }
     },
     {
@@ -187,11 +187,11 @@ export const faqData = [
     },
     {
         question: "What does closing the loop mean?",
-        answer: "It means an issue is captured, resolved and verified, with the customer or site outcome recorded at the end. Nothing is closed on paper alone: the loop ends when the fix is evidenced, not when the report is filed."
+        answer: "It means an issue is captured, resolved and verified, with the customer or location outcome recorded at the end. Nothing is closed on paper alone: the loop ends when the fix is verified, not when the report is filed."
     },
     {
         question: "Can EVA answer questions across all the data?",
-        answer: "Yes. EVA reads across your signals and answers in plain language, so you can ask how a region is doing or which sites are slipping and get the answer with the cause behind it, in seconds."
+        answer: "Yes. EVA reads across your signals and answers in plain language, so you can ask how a region is doing or which locations are slipping and get the answer with the cause behind it, in seconds."
     },
     {
         question: "Who decides what the next action is?",
@@ -203,10 +203,10 @@ export const faqData = [
     },
     {
         question: "What is a system of action?",
-        answer: "A system of action does not stop at showing you the data. Every signal becomes the next action, routed to an owner with a due date and tracked to proof of completion, so insight reliably ends in a fix rather than sitting in a report."
+        answer: "A system of action doesn't stop at showing you the data. Every signal becomes the next action, routed to an owner with a due date and tracked to proof of completion, so insight reliably ends in a fix rather than sitting in a report."
     },
     {
         question: "How does it fit with our existing dashboards?",
-        answer: "Serve First gives you the operating picture and, crucially, turns what it shows into routed, tracked action. Where you keep other dashboards, it adds the missing step: the fix, owned and evidenced, rather than another view to read."
+        answer: "Serve First gives you the operating picture and, crucially, turns what it shows into routed, tracked action. Where you keep other dashboards, it adds the missing step: the fix, owned and documented, rather than another view to read."
     }
 ]

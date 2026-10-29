@@ -27,7 +27,20 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    return getPageMetadata("/products/customer-experience/client-connect");
+    const metadata = await getPageMetadata("/products/customer-experience/client-connect");
+    const description = "Automate B2B feedback, relationships and NPS with our enterprise feedback management system: Client Connect. Drive insight, engagement and growth";
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default async function ClientConnect() {
@@ -39,7 +52,7 @@ export default async function ClientConnect() {
             <Banner
                 eyebrow="Customer experience platform"
                 title="Hear from the clients you serve"
-                description="Client Connect lets you run structured feedback programmes for your B2B accounts, sending branded invitations, tracking every send and reporting on the results."
+                description="Client Connect lets you run structured feedback programs for your B2B accounts, sending branded invitations, tracking every send and reporting on the results."
                 image="/images/products/customer-experience/client-connect/client-connect-cover.png"
                 imageSizing="contain"
                 buttonPrimary={{
@@ -57,17 +70,17 @@ export default async function ClientConnect() {
 
             <RoleContext
                 eyebrow="Client Connect capability"
-                title="B2B client feedback and NPS programmes"
-                description="Run structured feedback programmes for your B2B accounts, send branded invitations, and read every response beside the delivery behind it."
+                title="B2B client feedback and NPS programs"
+                description="Run structured feedback programs for your B2B accounts, send branded invitations, and read every response beside the delivery behind it."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
 
             <HowItWorks
-                eyebrow="How a programme runs"
+                eyebrow="How a program runs"
                 title="One workflow<span class='colorPrimary'>,</span> from invite to outcome"
                 description="A managed invitation workflow, built on the survey engine."
                 data={howItWorksData}
@@ -135,7 +148,7 @@ export default async function ClientConnect() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your accounts"
-                description="Book a personalised demo and we will show you how Client Connect runs feedback across your B2B accounts."
+                description="Book a personalized demo and we'll show you how Client Connect runs feedback across your B2B accounts."
             />
 
         </>

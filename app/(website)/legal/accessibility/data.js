@@ -3,14 +3,14 @@ export const accessibilitySections = [
         title: "Our commitment",
         paragraphs: [
             "Serve First (\"we\", \"us\", or \"our\") is committed to making our website usable by as many people as possible, including people with disabilities.",
-            "This accessibility statement template describes our approach in general terms. It is for demonstration purposes only and is not a formal legal accessibility audit or advice.",
+            "This statement describes our approach to accessibility in general terms.",
         ],
     },
     {
         title: "Standards we aim to meet",
         paragraphs: [
             "We aim to follow the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA where reasonably practical.",
-            "This includes clear structure, readable text, sufficient colour contrast, keyboard access, and meaningful labels for interactive elements.",
+            "This includes clear structure, readable text, sufficient color contrast, keyboard access, and meaningful labels for interactive elements.",
         ],
     },
     {
@@ -38,7 +38,7 @@ export const accessibilitySections = [
         title: "Testing and improvements",
         paragraphs: [
             "We review accessibility as part of ongoing design and development, using a mix of manual checks and automated tools.",
-            "When we find issues, we prioritise fixes based on user impact and how widely the affected content is used.",
+            "When we find issues, we prioritize fixes based on user impact and how widely the affected content is used.",
         ],
     },
     {

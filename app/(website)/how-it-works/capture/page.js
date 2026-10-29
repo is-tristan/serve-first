@@ -27,7 +27,21 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    return getPageMetadata("/how-it-works/capture");
+    const metadata = await getPageMetadata("/how-it-works/capture");
+    const description = "Bring every customer signal into one place: terminals, surveys, reviews and audits, across every location, in real time and offline-ready.";
+
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default function Capture() {
@@ -38,7 +52,7 @@ export default function Capture() {
 
             <Banner
                 eyebrow="How it works · Capture"
-                title="Every signal, every site, in one place"
+                title="Every signal, every location, in one place"
                 description="Capture is where it starts. Serve First brings every customer, operational and market signal into a single operating picture, in real time, across every location you run."
                 image="/images/how-it-works/capture/capture-cover.png"
                 imageSizing="contain"
@@ -46,17 +60,17 @@ export default function Capture() {
 
             <ChallengeFrame
                 eyebrow="The capture problem"
-                title="You cannot fix what you never captured"
-                description="Most multi-site operators are not short of feedback. They are short of feedback in one place. Signals arrive across terminals, surveys, reviews, audits and inboxes, sit in separate tools, and never meet. By the time anyone joins the dots, the moment to act has passed."
+                title="You can't fix what you never captured"
+                description="Most multi-location operators have no shortage of feedback. What they lack is feedback in one place. Signals arrive across terminals, surveys, reviews, audits and inboxes, sit in separate tools, and never meet. By the time anyone connects the dots, the moment to act has passed."
                 data={challengeFrameData}
             />
 
             <HowItWorks
                 containerClass={null}
                 eyebrow="The model"
-                title="Capture<span class='colorPrimary'>,</span> analyse<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage one"
+                title="Capture<span class='colorPrimary'>,</span> analyze<span class='colorPrimary'>,</span> action<span class='colorPrimary'>.</span> This is stage one"
                 titleClass="sectionTitleConstrained"
-                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyse makes sense of them. Action puts things right."
+                description="Everything Serve First does runs on one loop. Capture brings the signals in. Analyze makes sense of them. Action makes things right."
                 data={howItWorksData}
             />
 
@@ -85,7 +99,7 @@ export default function Capture() {
 
             <IndustryCards
                 eyebrow="Capture, in your world"
-                title="Built for every multi-site business"
+                title="Built for every multi-location business"
                 description="One platform, tuned to the standards and signals your sector runs on."
                 button={null}
                 data={industryCardsData}
@@ -114,7 +128,7 @@ export default function Capture() {
 
             <CtaBannerOne
                 title="Start catching every signal worth acting on"
-                description="See how Serve First captures, analyses and actions every signal across your sites, in one connected platform."
+                description="See how Serve First captures, analyzes and acts on every signal across your locations, in one connected platform."
             />
 
         </>

@@ -24,7 +24,21 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    return getPageMetadata("/solutions/by-industry/retail");
+    const metadata = await getPageMetadata("/solutions/by-industry/retail");
+    const description = "Visualize your customer journey and optimize store performance with retail analytics tools. Serve First powers audits, insights, and smarter retail decisions.";
+
+    return {
+        ...metadata,
+        description,
+        openGraph: {
+            ...metadata.openGraph,
+            description,
+        },
+        twitter: {
+            ...metadata.twitter,
+            description,
+        },
+    };
 }
 
 export default function Retail() {
@@ -36,7 +50,7 @@ export default function Retail() {
             <Banner
                 eyebrow="Solutions by industry"
                 title="Every store, the same standard"
-                description="From the shop floor to head office, Serve First connects what customers feel with how each store runs, so you can raise standards and prove they hold, everywhere you trade."
+                description="From the sales floor to headquarters, Serve First connects what customers feel with how each store runs, so you can raise standards and prove they hold, everywhere you operate."
                 image="/images/solutions/by-industry/retail/retail-cover.png"
                 imageSizing="contain"
             />
@@ -51,7 +65,7 @@ export default function Retail() {
 
             <HowItWorks
                 eyebrow="How it works"
-                title="From the shop floor to one standard"
+                title="From the sales floor to one standard"
                 description="Three connected stages, from check to proof."
                 data={howItWorksData}
             />
@@ -78,7 +92,7 @@ export default function Retail() {
             />
 
             <ContentGrid
-                eyebrow="Common Challenges"
+                eyebrow="Common challenges"
                 title="Challenges we solve here"
                 description="The challenges retailers bring to Serve First, and where to read more."
                 data={contentGridData}
@@ -95,7 +109,7 @@ export default function Retail() {
             <CtaBannerOne
                 theme="primary"
                 title="See every store held to one standard"
-                description="Book a personalised demo and we will show you how Serve First works across your stores, on your data."
+                description="Book a personalized demo and we'll show you how Serve First works across your stores, using your data."
             />
         </>
 

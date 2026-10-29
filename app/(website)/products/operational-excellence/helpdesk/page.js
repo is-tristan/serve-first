@@ -66,7 +66,7 @@ export default async function HelpDesk() {
                 description="Bring feedback, ratings, failed audits and messages into one inbox, reply in the same place, and track each ticket through to resolved."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
@@ -74,7 +74,7 @@ export default async function HelpDesk() {
             <HowItWorks
                 eyebrow="How a ticket works"
                 title="From inbound issue to a closed loop"
-                description="From inbound issue to closed loop, in one place."
+                description={null}
                 data={howItWorksData}
             />
 
@@ -148,7 +148,7 @@ export default async function HelpDesk() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for resolution"
-                description="Book a personalised demo and we will show you how Helpdesk handles issues across your sites and teams."
+                description="Book a personalized demo and we'll show you how Helpdesk handles issues across your locations and teams."
             />
 
         </>

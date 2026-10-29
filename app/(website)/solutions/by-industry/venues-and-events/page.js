@@ -37,7 +37,7 @@ export default function VenuesAndEvents() {
             <Banner
                 eyebrow="Solutions by industry"
                 title="Safe, smooth, sold-out, every event"
-                description="Venues juggle safety, crowds and experience at once. Serve First connects safety checks, guest feedback and issues on the night, so every event runs to standard and you can prove it."
+                description="Venues juggle safety, crowds and experience at once. Serve First connects safety checks, guest feedback and issues during the event, so every event runs up to standard and you can prove it."
                 image="/images/solutions/by-industry/venues-and-events/venues-and-events-cover.png"
                 imageSizing="contain"
             />
@@ -96,7 +96,7 @@ export default function VenuesAndEvents() {
             />
 
             <ContentGrid
-                eyebrow="Common Challenges"
+                eyebrow="Common challenges"
                 title="Challenges we solve here"
                 description="The challenges providers bring to Serve First, and where to read more."
                 data={contentGridData}
@@ -113,7 +113,7 @@ export default function VenuesAndEvents() {
             <CtaBannerOne
                 theme="primary"
                 title="See every event run safe and smooth"
-                description="Book a personalised demo and we will show you how Serve First works across your venues, on your data."
+                description="Book a personalized demo and we'll show you how Serve First works across your venues, using your data."
             />
         </>
 

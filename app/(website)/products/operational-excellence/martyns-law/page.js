@@ -41,7 +41,7 @@ export default async function MartynsLaw() {
 
             <Banner
                 eyebrow="Operational excellence"
-                title="Martyn's Law, evidenced at every site"
+                title="Martyn's Law, evidenced at every location"
                 description="Serve First helps you meet Martyn's Law obligations with compliance checklists, training records and evidence capture, so duty of care is documented, not assumed."
                 image="/images/products/operational-excellence/martyns-law/martyns-law-cover.png"
                 imageSizing="contain"
@@ -134,7 +134,7 @@ export default async function MartynsLaw() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for compliance"
-                description="Book a personalised demo and we will show you how Serve First evidences Martyn's Law across your venues."
+                description="Book a personalized demo and we will show you how Serve First evidences Martyn's Law across your venues."
             />
 
         </>

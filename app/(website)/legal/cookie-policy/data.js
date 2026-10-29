@@ -2,7 +2,7 @@ export const cookiePolicySections = [
   {
     title: "What are cookies?",
     paragraphs: [
-      "Cookies are small text files placed on your device when you visit a website. They are used to make websites work more efficiently, provide functionality, analyse traffic, and personalise content.",
+      "Cookies are small text files placed on your device when you visit a website. They are used to make websites work more efficiently, provide functionality, analyze traffic, and personalize content.",
     ],
   },
   {
@@ -10,11 +10,11 @@ export const cookiePolicySections = [
     paragraphs: ["We use cookies to:"],
     items: [
       "Ensure the Website operates correctly (essential cookies)",
-      "Analyse and improve performance (analytics cookies)",
+      "Analyze and improve performance (analytics cookies)",
       "Remember your preferences (functional cookies)",
       "Enable third-party services (e.g. embedded video or support tools)",
-      "Deliver personalised advertising and marketing messages (where consent is given)",
-      "Track user behaviour and session recordings to improve the user experience (Microsoft Clarity)",
+      "Deliver personalized advertising and marketing messages (where consent is given)",
+      "Track user behavior and session recordings to improve the user experience (Microsoft Clarity)",
       "Measure the effectiveness of our Google Ads campaigns and attribute conversions",
       "Manage and deploy third-party scripts via Google Tag Manager",
       "Monitor website indexing and search performance via Google Search Console",
@@ -122,7 +122,7 @@ export const cookiePolicySections = [
             provider: "Microsoft Clarity",
             type: "Performance / Analytics",
             purpose:
-              "Persists the Clarity User ID and preferences, unique to that site, on the browser.",
+              "Persists the Clarity User ID and preferences, unique to that location, on the browser.",
             duration: "1 year",
           },
           {
@@ -138,7 +138,7 @@ export const cookiePolicySections = [
             provider: "Microsoft Clarity",
             type: "Performance / Analytics",
             purpose:
-              "Identifies the first time Clarity saw this user on any site using Clarity.",
+              "Identifies the first time Clarity saw this user on any location using Clarity.",
             duration: "1 year",
           },
         ],
@@ -189,11 +189,11 @@ export const cookiePolicySections = [
       "You can:",
     ],
     items: [
-      "Accept or reject cookies when you first visit the site.",
+      "Accept or reject cookies when you first visit the website.",
       "Control cookies via your browser settings.",
     ],
     trailingParagraphs: [
-      "Blocking certain cookies may affect your experience on our site.",
+      "Blocking certain cookies may affect your experience on our website.",
     ],
   },
   {
@@ -215,7 +215,7 @@ export const cookiePolicySections = [
   {
     title: "Contact us",
     paragraphs: [
-      "If you have any questions about this Cookies Policy or our data practices, contact:",
+      "If you have any questions about this Cookie Policy or our data practices, contact:",
     ],
   },
 ];

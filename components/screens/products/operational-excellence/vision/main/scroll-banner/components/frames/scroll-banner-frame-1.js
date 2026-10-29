@@ -63,7 +63,7 @@ export default function ScrollBannerFrame1({ isActive = true }) {
 
                             <motion.span
                                 role="img"
-                                aria-label="by ServeFirst"
+                                aria-label="by Serve First"
                                 dangerouslySetInnerHTML={{ __html: serveFirstText }}
                                 initial={fadeUp.hidden}
                                 animate={isInView ? fadeUp.visible : fadeUp.hidden}

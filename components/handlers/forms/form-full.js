@@ -26,7 +26,7 @@ export default function FormFull({
     formBtnText = "Send message",
     hasAnimation = true,
     formId = "3db08222-428e-47e7-895d-8a82a8c99686",
-    utmMedium = "Get a demo",
+    utmMedium = "Request a demo",
 }) {
 
     const [result, setResult] = useState("");
@@ -100,7 +100,7 @@ export default function FormFull({
 
                     <div className={styles.field}>
 
-                        <input type="email" name="email" required autoComplete="email" placeholder="Where we will send our reply." aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        <input type="email" name="email" required autoComplete="email" placeholder="Where we'll send our reply." aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
                     </div>
 
@@ -142,13 +142,13 @@ export default function FormFull({
 
                             <option value="Audits">Audits</option>
 
-                            <option value="feedback_solutions">Feedback Solutions</option>
+                            <option value="feedback_solutions">Feedback Terminals</option>
 
                             <option value="Client connect">Client Connect</option>
 
                             <option value="martyns_law_app">Martyn's Law App</option>
 
-                            <option value="mystery_shopping_b2b">Mystery Shopping B2B</option>
+                            <option value="mystery_shopping_b2b">Mystery Shopping</option>
 
                             <option value="Becoming a mystery shopper">Customer Satisfaction Surveys</option>
 
@@ -238,7 +238,7 @@ export default function FormFull({
 
                 <fieldset className={`${styles.fieldset} ${styles.half}`} data-name="no__of_locations">
 
-                    <legend className={styles.legend}>Number of sites <span className={styles.required}>*</span></legend>
+                    <legend className={styles.legend}>Number of locations <span className={styles.required}>*</span></legend>
 
                     <div className={styles.field}>
 
@@ -280,7 +280,7 @@ export default function FormFull({
 
                         <button style={{ width: hasDemoLink ? "auto" : "100%" }} className={styles.submit} type="submit">{formBtnText}</button>
 
-                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
+                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, Request a demo</Link>)}
 
                     </div>
 
@@ -288,7 +288,7 @@ export default function FormFull({
 
                         <div style={{ color: theme === "primary" ? "var(--light)" : "var(--primaryAlt)" }} className={styles.formFooterTextIcon} dangerouslySetInnerHTML={{ __html: shieldTick }} />
 
-                        <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>No obligation. We will not pass your details on.</span>
+                        <span style={{ color: theme === "primary" ? "var(--light)" : "var(--dark)" }}>No obligation. We won't share your information.</span>
 
                     </div>
 

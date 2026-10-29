@@ -27,19 +27,19 @@ const fieldLabels = {
     message: "Message",
     product_interest: "Topic",
     hs_role: "Role",
-    no__of_locations: "Number of sites",
+    no__of_locations: "Number of locations",
 };
 
 const errorTypeMessages = {
     REQUIRED_FIELD: (fieldLabel) => `${fieldLabel} is required.`,
     INVALID_EMAIL: () => "Please enter a valid work email address.",
-    BLOCKED_EMAIL: () => "That email address cannot be used. Please try a different work email.",
+    BLOCKED_EMAIL: () => "That email address can't be used. Please try a different work email.",
     INVALID_NUMBER: (fieldLabel) => `${fieldLabel} must be a valid number.`,
     NUMBER_OUT_OF_RANGE: (fieldLabel) => `${fieldLabel} is outside the allowed range.`,
     INPUT_TOO_LARGE: (fieldLabel) => `${fieldLabel} is too long. Please shorten it and try again.`,
     INVALID_PHONE_NUMBER: () => "Please enter a valid phone number.",
     VALUE_NOT_IN_FIELD_DEFINITION: (fieldLabel) => `Please choose a valid option for ${fieldLabel.toLowerCase()}.`,
-    FIELD_NOT_IN_FORM_DEFINITION: (fieldLabel) => `${fieldLabel} is not accepted on this form.`,
+    FIELD_NOT_IN_FORM_DEFINITION: (fieldLabel) => `${fieldLabel} isn't accepted on this form.`,
 };
 
 function parseFieldName(name) {
@@ -210,7 +210,7 @@ export async function POST(request) {
 
     if (!formGuid || !allowedFormIds.includes(String(formGuid))) {
         return Response.json(
-            { success: false, message: "This form is not available. Please refresh the page and try again." },
+            { success: false, message: "This form isn't available. Please refresh the page and try again." },
             { status: 400 },
         );
     }

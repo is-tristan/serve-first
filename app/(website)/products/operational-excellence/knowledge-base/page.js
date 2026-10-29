@@ -66,7 +66,7 @@ export default async function KnowledgeBase() {
                 description="Keep SOPs, policies and training in one searchable place, so frontline teams find the current answer in seconds without asking around."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
@@ -74,7 +74,7 @@ export default async function KnowledgeBase() {
             <HowItWorks
                 eyebrow="How knowledge works"
                 title="Knowledge that stays current and found"
-                description="Knowledge that stays current and stays found."
+                description={null}
                 data={howItWorksData}
             />
 
@@ -148,7 +148,7 @@ export default async function KnowledgeBase() {
             <CtaBannerOne
                 theme="primary"
                 title="See what Serve First can do for your teams"
-                description="Book a personalised demo and we will show you how Knowledge Base keeps every site working to the same answer."
+                description="Book a personalized demo and we'll show you how Knowledge Base keeps every location working to the same answer."
             />
 
         </>

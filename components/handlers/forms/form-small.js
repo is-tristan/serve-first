@@ -24,7 +24,7 @@ export default function FormSmall({
     hasDemoLink = true,
     formBtnText = "Send message",
     formTitle = null,
-    formSmallText = "No obligation. We will not pass your details on.",
+    formSmallText = "No obligation. We won't share your information.",
     hasAnimation = true,
     formId = "6c85505f-8f36-4de2-8618-47a73caf8144",
     utmMedium = "Contact Us",
@@ -102,7 +102,7 @@ export default function FormSmall({
 
                     <div className={styles.field}>
 
-                        <input type="email" name="email" required autoComplete="email" placeholder="Where we will send our reply." aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                        <input type="email" name="email" required autoComplete="email" placeholder="Where we'll send our reply." aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 
                     </div>
 
@@ -176,7 +176,7 @@ export default function FormSmall({
 
                         <button style={{ width: hasDemoLink ? "auto" : "100%" }} className={styles.submit} type="submit">{formBtnText}</button>
 
-                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
+                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, Request a demo</Link>)}
 
                     </div>
 
