@@ -66,7 +66,7 @@ export default async function HelpDesk() {
                 description="Bring feedback, ratings, failed audits and messages into one inbox, reply in the same place, and track each ticket through to resolved."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

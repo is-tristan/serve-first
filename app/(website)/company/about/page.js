@@ -66,7 +66,7 @@ export default function About() {
                 description="Book a personalized demo and see how Serve First works with your locations, your data and your whole team."
                 buttonPrimary={
                     {
-                        text: "Get a demo",
+                        text: "Request a demo",
                         href: "/get-a-demo",
                     }
                 }

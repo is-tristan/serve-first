@@ -22,8 +22,8 @@ const extraPages = {
         description: "Intelligent video analytics that check standards and spot issues across every location.",
     },
     "/get-a-demo": {
-        name: "Get a Demo",
-        description: "Book a demo of the Serve First platform with the team.",
+        name: "Request a demo",
+        description: "Request a demo of the Serve First platform with the team.",
     },
     "/legal/privacy-policy": {
         name: "Privacy Policy",

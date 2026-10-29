@@ -26,7 +26,7 @@ export default function FormFull({
     formBtnText = "Send message",
     hasAnimation = true,
     formId = "3db08222-428e-47e7-895d-8a82a8c99686",
-    utmMedium = "Get a demo",
+    utmMedium = "Request a demo",
 }) {
 
     const [result, setResult] = useState("");
@@ -280,7 +280,7 @@ export default function FormFull({
 
                         <button style={{ width: hasDemoLink ? "auto" : "100%" }} className={styles.submit} type="submit">{formBtnText}</button>
 
-                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, book a demo</Link>)}
+                        {hasDemoLink && (<Link href="/get-a-demo" className={`textLink ${styles.demoLink}`}>Or, Request a demo</Link>)}
 
                     </div>
 

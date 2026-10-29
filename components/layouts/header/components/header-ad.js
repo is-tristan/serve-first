@@ -15,8 +15,8 @@ import styles from "@/styles/components/layouts/header/header-desktop-menu.modul
 const imagePlaceholder = "/decoration/no-image-placeholder.webp"
 
 function normalizeAdLinkText(text) {
-    if (text === "Book a Demo") {
-        return "Book a demo"
+    if (text === "Request a demo") {
+        return "Request a demo"
     }
 
     return text

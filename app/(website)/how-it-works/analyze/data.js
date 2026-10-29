@@ -123,7 +123,7 @@ export const howItWorksData2 = [
         imageWidth: 768,
         imageHeight: 576,
         button: null
-    },   {
+    }, {
         eyebrow: "Built for analysis you can trust",
         eyebrowHasDash: true,
         title: "Per location and company-wide",
@@ -256,6 +256,6 @@ export const faqData = [
     },
     {
         question: "Where is EVA's analysis processed? Is my data secure?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        answer: "EVA processes all analysis securely within our cloud infrastructure hosted on AWS. Your data never leaves a trusted, enterprise grade environment."
     }
 ]

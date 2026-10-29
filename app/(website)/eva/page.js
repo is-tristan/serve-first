@@ -59,14 +59,14 @@ export default function Eva() {
                 description={null}
                 item={{
                     "eyebrow": "Meet EVA",
-                    "title": "More than a chat box. An analyst that hands you a plan",
+                    "title": "More than a chat bot. An analyst that hands you a plan",
                     "htmlDescription": "<p>EVA does the analysis across every location, so you start from the answer, not a pile of reports.</p> <p>Ask in plain language. EVA gives the status, what is driving it and the next actions by role.</p>",
                     "image": "/images/eva/eva-eva.png",
                     "imageWidth": 600,
                     "imageHeight": 600,
                     "imageSizing": "contain",
                     "button": {
-                        "text": "Get a demo",
+                        "text": "Request a demo",
                         "href": "/get-a-demo",
                     }
                 }}

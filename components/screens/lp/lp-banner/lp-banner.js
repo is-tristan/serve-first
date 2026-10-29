@@ -22,13 +22,13 @@ export default function LpBanner({
     hasButtons = true,
     hasFullStop = true,
     hasBackgroundDecoration = true,
-    formBtnText = "Request a demo",
+    formBtnText = "Request my demo",
     hasDemoLink = false,
     formSmallText,
     formType = "landing",
     utmMedium,
     buttonPrimary = {
-        text: "Get a demo",
+        text: "Request a demo",
         href: "/get-a-demo",
     },
     buttonSecondary = {

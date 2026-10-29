@@ -41,7 +41,7 @@ export default function HeaderActions({ menuAds }) {
 
                     <div className={`${styles.productVisionHeaderButtons}`}>
 
-                        <Button text="Back to ServeFirst" href="/" className={`textLink colorLight ${styles.textLinkBtn}`} hasAnimation={false} />
+                        <Button text="Back to Serve First" href="/" className={`textLink colorLight ${styles.textLinkBtn}`} hasAnimation={false} />
 
                     </div>
 
@@ -67,7 +67,7 @@ export default function HeaderActions({ menuAds }) {
 
                         <Button text="Sign in" href="https://app.servefirst.co.uk/user/login" target="_blank" rel="noopener noreferrer" className={`textLink colorDark ${styles.textLinkBtn}`} hasAnimation={false} icon={null} />
 
-                        <Button text="Book a demo" href="/get-a-demo" className={`primary ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
+                        <Button text="Request a demo" href="/get-a-demo" className={`primary ${styles.primaryBtn}`} icon={chevronRightAlt} hasAnimation={false} />
 
                     </div>
 

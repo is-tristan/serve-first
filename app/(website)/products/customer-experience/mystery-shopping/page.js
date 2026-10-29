@@ -79,7 +79,7 @@ export default async function MysteryShopping() {
                 description="Send trained mystery shoppers into every location, score the real experience against your standards, and see exactly where service slips."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

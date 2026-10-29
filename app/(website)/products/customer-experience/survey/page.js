@@ -82,7 +82,7 @@ export default async function Survey() {
                 description="Reach customers on web, kiosk, email and SMS, and read what they tell you the same day, not at month end."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

@@ -47,7 +47,7 @@ export const platformStoryData = [
         imageHeight: 384,
         imageSizing: "cover",
         title: "Action on the frontline",
-        description: "Tasks routed to whoever can resolve it.",
+        description: "Each task routed to whoever can resolve it.",
         list: [],
         button: [
             {

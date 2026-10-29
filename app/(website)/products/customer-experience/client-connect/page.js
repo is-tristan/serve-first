@@ -74,7 +74,7 @@ export default async function ClientConnect() {
                 description="Run structured feedback programs for your B2B accounts, send branded invitations, and read every response beside the delivery behind it."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

@@ -119,7 +119,7 @@ export default function WhatDoesServeFirstDo() {
                 data={faqData}
                 button={
                     {
-                        text: "Get a demo",
+                        text: "Request a demo",
                         href: "/get-a-demo",
                     }
                 }

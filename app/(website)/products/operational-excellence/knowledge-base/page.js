@@ -66,7 +66,7 @@ export default async function KnowledgeBase() {
                 description="Keep SOPs, policies and training in one searchable place, so frontline teams find the current answer in seconds without asking around."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

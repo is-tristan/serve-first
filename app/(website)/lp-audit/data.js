@@ -124,7 +124,7 @@ export const lpFeaturedListData2 = [
             "Workplace safety"
         ],
         button: {
-            text: "Get a demo",
+            text: "Request a demo",
             href: "/get-a-demo",
         }
     }

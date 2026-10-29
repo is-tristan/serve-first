@@ -71,7 +71,7 @@ export default async function ReviewMonitoring() {
                 description="See how every location compares with its real local rivals, built for you from public sources you can check, with no surveys to send."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />
@@ -135,7 +135,7 @@ export default async function ReviewMonitoring() {
 
             <CtaBannerOne
                 title="See how your locations compare in their local market"
-                description="Book a demo and we'll benchmark your locations against the rivals that matter to them."
+                description="Request a demo and we'll benchmark your locations against the rivals that matter to them."
             />
 
         </>

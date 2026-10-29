@@ -13,7 +13,7 @@ export default function LpCta({
     title = "Book your personalized platform demo today",
     description = "Tell us a little about your operation and we'll tailor the whole walkthrough to what you need to see.",
     image = "/images/lp/terminals/lp-terminals-cta.png",
-    formBtnText = "Request a demo",
+    formBtnText = "Request my demo",
     hasDemoLink = false,
     formSmallText,
     formType = "landing",

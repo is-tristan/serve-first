@@ -96,7 +96,7 @@ export const productHighlightData = [
         icon: messageAlertSquareIcon,
         eyebrow: "Action plans",
         title: "Turn what you learn into a structured improvement plan, with steps, owners and progress tracked through to resolution.",
-        linkText: "Get a demo",
+        linkText: "Request a demo",
         link: "/get-a-demo",
     },
     {

@@ -60,7 +60,7 @@ export default async function FeedbackTerminals() {
                 description="Catch how customers feel at every location the moment they act, and route a low score to the right manager before they leave."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

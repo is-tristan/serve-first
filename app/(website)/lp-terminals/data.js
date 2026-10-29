@@ -115,7 +115,7 @@ export const lpFeaturedListData2 = [
             },
         ],
         button: {
-            text: "Get a demo",
+            text: "Request a demo",
             href: "/get-a-demo",
         }
     }

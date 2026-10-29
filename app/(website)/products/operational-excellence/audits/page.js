@@ -84,7 +84,7 @@ export default async function Audits() {
                 description="Score every location against your standards on any device, turn a failed check into a fix, and see which locations need attention now."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

@@ -18,7 +18,7 @@ export default function ContentGrid({
     containerBottomClass,
     colCountForce = false,
     button = {
-        text: "Get a demo",
+        text: "Request a demo",
         href: "/get-a-demo",
         target: "_self",
     },

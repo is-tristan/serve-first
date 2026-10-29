@@ -23,7 +23,7 @@ export default function Banner({
     hasBackgroundDecoration = true,
     trustLine = null,
     buttonPrimary = {
-        text: "Get a demo",
+        text: "Request a demo",
         href: "/get-a-demo",
     },
     buttonSecondary = {

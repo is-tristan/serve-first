@@ -80,7 +80,7 @@ export default async function ReviewMonitoring() {
                 description="See every review from across the web in one place, reply without switching tools, and catch a drop in sentiment while you can still act."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

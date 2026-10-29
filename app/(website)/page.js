@@ -119,7 +119,6 @@ export default function Home() {
         title="See it at your locations"
         description="A personalized walkthrough with your locations, teams and data."
       />
-
     </>
 
   );

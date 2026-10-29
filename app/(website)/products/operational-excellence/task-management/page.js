@@ -62,7 +62,7 @@ export default async function TaskManagement() {
             <Banner
                 eyebrow="Operational excellence"
                 title="Where insight finally becomes action"
-                description="Serve First task management routes the right action to the right person at every location, with deadlines, ownership and progress you can see, not chase."
+                description="Score every site against your standards on mobile, capture photo proof, and turn each f ailed check into a corrective action with an owner and a deadline."
                 image="/images/products/operational-excellence/task-management/task-management-cover.png"
                 imageSizing="contain"
                 buttonPrimary={{
@@ -84,7 +84,7 @@ export default async function TaskManagement() {
                 description="Assign each fix to a location and owner, set priorities and deadlines, and see progress across every location in one view."
                 data={roleContextData}
                 btnPrimary={{
-                    text: "Get a demo",
+                    text: "Request a demo",
                     href: "/get-a-demo",
                 }}
             />

@@ -15,7 +15,7 @@ export const roleContextData = [
         icon: fingerPrintIcon,
         eyebrow: "On-site kiosks",
         title: "Touchscreen kiosks on-site",
-        description: "Branded touchscreens sit at the point of experience, so customers rate a visit in seconds while it is fresh.",
+        description: "Smiley face feedback buttons and touchscreen kiosks sit at the point of experience, so customers rate a visit in seconds while it's fresh.",
     },
     {
         icon: bellRingingIcon,
