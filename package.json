@@ -11,6 +11,7 @@
     "sanity": "sanity dev"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
     "@next/third-parties": "^16.2.12",
     "@sanity/image-url": "^2.1.1",
     "@sanity/orderable-document-list": "^2.0.24",

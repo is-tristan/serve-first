@@ -1,0 +1,138 @@
+.consent {
+  --heading: var(--font-special-gothic-expanded-one), ui-sans, sans;
+  --text: var(--font-poppins), ui-sans-serif, sans-serif;
+  --primary: #965ea2;
+  --primaryRgb: 150, 94, 162;
+  --dark: #0c0c0d;
+  --darkRgb: 12, 12, 13;
+  --light: #ffffff;
+  --lightRgb: 255, 255, 255;
+  --btnRadius: 10rem;
+  --borderRadius: 0.875rem;
+  --ease: all 0.25s ease;
+  font-family: var(--text);
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.consent :global(*) {
+  box-sizing: border-box;
+}
+
+.consent :global(button) {
+  font: inherit;
+  color: inherit;
+}
+
+.consent :global(h2),
+.consent :global(h3) {
+  font-family: var(--heading);
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+  text-wrap: balance;
+}
+
+.consent :global(h2) {
+  font-size: 1.5rem;
+}
+
+.consent :global(h3) {
+  font-size: clamp(1.1rem, 1.25vw, 1.25rem);
+  line-height: 125%;
+}
+
+.consent :global(p) {
+  margin-top: 0;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  font-weight: 300;
+  line-height: 165%;
+  text-wrap: pretty;
+}
+
+.consent :global(.buttons) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1.5rem 1rem;
+}
+
+.consent :global(.btn) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-align: center;
+  width: auto;
+  padding: 0.875rem;
+  border-radius: var(--btnRadius);
+  border: 1px solid transparent;
+  font-family: var(--text);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+  transition: var(--ease);
+  cursor: pointer;
+  box-shadow: 0 0 1.5rem 0 rgba(var(--darkRgb), 0.1);
+}
+
+.consent :global(.btn.primary) {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--light);
+}
+
+.consent :global(.btn.primary:hover),
+.consent :global(.btn.primary:focus) {
+  background: rgba(var(--primaryRgb), 0.95);
+}
+
+.consent :global(.textLink) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  width: max-content;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  position: relative;
+  color: var(--primary);
+  background: transparent;
+  font-weight: 400;
+  box-shadow: unset;
+  transition: var(--ease);
+}
+
+.consent :global(.textLink:hover) {
+  color: rgba(var(--primaryRgb), 0.875);
+}
+
+@media (width < 576px) {
+  .consent :global(.textLink) {
+    font-size: 0.75rem;
+  }
+}
+
+@media (width >= 768px) {
+  .consent :global(.btn) {
+    flex: 0 0 auto;
+    font-size: 0.75rem;
+    width: max-content;
+    padding: 1rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .consent :global(.buttons) {
+    gap: 2rem;
+  }
+
+  .consent :global(.btn) {
+    font-size: 0.875rem;
+  }
+}
