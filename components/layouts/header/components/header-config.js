@@ -1,4 +1,10 @@
 const headerConfig = {
+    "/": {
+        topbar: {
+            href: "/cx-is-broken",
+            type: "cxBanner",
+        },
+    },
     "/products/customer-experience/mystery-shopping": {
         topbar: {
             href: "https://mysteryshopping.servefirst.ai/",

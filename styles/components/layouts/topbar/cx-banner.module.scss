@@ -1,0 +1,193 @@
+.cxBanner {
+    --cxBannerInk: #0A0A0A;
+    --cxBannerWhite: #FFFFFF;
+    --cxBannerPink: #EC3890;
+    --cxBannerYellow: #FDF86A;
+    --cxBannerLine: #262626;
+    --cxBannerTilt: 3deg;
+
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 75px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 0 clamp(16px, 6.25vw, 120px);
+    background-color: var(--cxBannerInk);
+    background-image: image-set(url("/cx-is-broken/banner-dither.webp") 1x, url("/cx-is-broken/banner-dither@2x.webp") 2x);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--cxBannerLine);
+    font-family: var(--font-unbounded), sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    @media (width <=640px) {
+        gap: 12px;
+    }
+}
+
+.cxBannerBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.cxBannerText,
+.cxBannerCta {
+    position: relative;
+    z-index: 1;
+}
+
+.cxBannerText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    min-width: 0;
+}
+
+.cxBannerHeading {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    white-space: nowrap;
+    font-family: var(--font-unbounded), sans-serif;
+    font-size: clamp(18px, 1.35vw, 26px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    color: var(--cxBannerWhite);
+
+    @media (width <=480px) {
+        font-size: 17px;
+    }
+
+    @media (width <=360px) {
+        font-size: 15px;
+    }
+}
+
+.cxBannerBlock {
+    display: inline-block;
+    background: var(--cxBannerPink);
+    color: var(--cxBannerInk);
+    padding: 0.12em 0.3em 0.2em;
+    transform-origin: left center;
+    transform: rotate(var(--cxBannerTilt));
+}
+
+.cxBannerTagline {
+    margin: 0;
+    white-space: nowrap;
+    font-family: var(--font-jetbrains), monospace;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    color: #D4D4D4;
+
+    @media (width <=480px) {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+    }
+
+    @media (width <=360px) {
+        font-size: 8px;
+    }
+}
+
+.cxBannerCta {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cxBannerYellow);
+    color: var(--cxBannerInk);
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: var(--font-unbounded), sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    padding: 13px 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        transition: transform 0.2s ease;
+    }
+
+    &:hover {
+        background: var(--cxBannerPink);
+        color: var(--cxBannerInk);
+
+        svg {
+            transform: translateX(4px);
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--cxBannerWhite);
+        outline-offset: 3px;
+    }
+
+    @media (width <=640px) {
+        font-size: 11px;
+        padding: 11px 12px;
+        gap: 6px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    @media (width <=480px) {
+        padding: 11px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        svg {
+            transition: none;
+        }
+    }
+}
+
+.cxBannerCtaLong {
+    @media (width <=640px) {
+        display: none;
+    }
+}
+
+.cxBannerCtaLabel {
+    @media (width <=480px) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        border: 0;
+    }
+}

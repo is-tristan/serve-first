@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 // Components
 import Topbar from "@/components/layouts/topbar/topbar";
+import CxBanner from "@/components/layouts/topbar/components/cx-banner";
 
 // Config
 import { getHeaderConfig, getHeaderType } from "@/components/layouts/header/components/header-config";
@@ -21,6 +22,7 @@ export default function HeaderClient({ children }) {
     const pageHeaderConfig = getHeaderConfig(pathname);
     const topbarProps = pageHeaderConfig.topbar;
     const hasTopbar = Boolean(topbarProps);
+    const isCxBanner = topbarProps?.type === "cxBanner";
     const headerType = getHeaderType(pathname);
 
     const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +39,13 @@ export default function HeaderClient({ children }) {
 
         <>
 
-            {hasTopbar && (
+            {isCxBanner && (
+
+                <CxBanner href={topbarProps.href} />
+
+            )}
+
+            {hasTopbar && !isCxBanner && (
 
                 <Topbar
                     fullLink={topbarProps.fullLink}

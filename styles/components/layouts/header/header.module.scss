@@ -39,6 +39,14 @@
             }
         }
 
+        &[data-topbar-type="cxBanner"] {
+            &:not([data-scrolled="true"]) {
+                @media (width < 1024px) {
+                    top: 75px;
+                }
+            }
+        }
+
         &[data-topbar-type="mysteryShopper"] {
             &:not([data-scrolled="true"]) {
                 @media (width < 1024px) {
