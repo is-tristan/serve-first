@@ -1,7 +1,7 @@
 import { menuItemsData } from "@/components/layouts/header/items/menu-items-data"
 import { company, solutions, products, explore, footerPolicyItems } from "@/components/layouts/footer/items/footer-items-data"
 
-const extraPaths = ["/", "/get-a-demo", "/legal/accessibility"]
+const extraPaths = ["/", "/get-a-demo", "/legal/accessibility", "/cx-is-broken"]
 
 function collectPaths(items = []) {
     return items.flatMap((item) => [item.href, ...collectPaths(item.submenu)])
