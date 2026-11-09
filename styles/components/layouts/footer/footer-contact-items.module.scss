@@ -3,6 +3,12 @@
     flex-flow: column nowrap;
     gap: 1rem;
 
+    @media (width >=1024px) {
+        flex-flow: row nowrap;
+        gap: 3rem;
+        justify-content: space-between;
+    }
+
     .footerContactItem {
         display: flex;
         flex-flow: column nowrap;

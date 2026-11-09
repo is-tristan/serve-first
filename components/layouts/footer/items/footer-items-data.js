@@ -119,20 +119,33 @@ export const footerPolicyItems = [
   },
 ];
 
+// Icons
+import { mapPinIcon, lifeBuoyIcon } from "@/utils/icons";
+
 export const footerContactItems = [
   {
-    label: "US Office",
+    icon: mapPinIcon,
+    label: "US Office (Sales)",
     phone: "+1 (229) 475-1777",
     phoneHref: "tel:+12294751777",
     address: "8000 Avalon Boulevard, Suite 100, Alpharetta, GA 30009",
     addressHref: "https://maps.app.goo.gl/NoYq71Bkx8zJ9Ctd6"
   },
   {
-    label: "UK Office",
+    icon: mapPinIcon,
+    label: "UK Office (Sales)",
     phone: "+44 (0) 203 929 4568",
     phoneHref: "tel:+442039294568",
     address: "The Spaces, 100 Avebury Blvd, Milton Keynes MK9 1FH",
     addressHref: "https://maps.app.goo.gl/hgzvU3e2nchQSxiRA"
+  },
+  {
+    icon: lifeBuoyIcon,
+    label: "Support",
+    phone: "Client support: +44 (0) 203 868 1116",
+    phoneHref: "tel:+442038681116",
+    phoneTwo: "Mystery Shopper Support: +44 (0) 190 802 0020",
+    phoneHrefTwo: "tel:+441908020020",
   },
 ];
 

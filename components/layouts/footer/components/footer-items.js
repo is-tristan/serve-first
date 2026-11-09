@@ -4,7 +4,6 @@ import Link from "next/link";
 // Components
 import FooterLogo from "./footer-logo";
 import FooterContactItems from "./footer-contact-items";
-import FooterSocialItems from "./footer-social-items";
 
 // Styles
 import styles from "@/styles/components/layouts/footer/footer.module.scss";
@@ -18,38 +17,40 @@ export default function FooterItems({ theme }) {
 
     return (
 
-        <div className={styles.footerCols}>
+        <>
 
-            <FooterLogo theme={theme} />
+            <div className={styles.footerCols}>
 
-            {
-                footerItems.map((item, index) => (
+                <FooterLogo theme={theme} />
 
-                    <div className={`${styles.footerCol} ${styles[`footerCol-${index + 1}`]}`} key={item.title}>
+                {
+                    footerItems.map((item, index) => (
 
-                        <span className={styles.footerColTitle}>{item.title}</span>
+                        <div className={`${styles.footerCol} ${styles[`footerCol-${index + 1}`]}`} key={item.title}>
 
-                        <div className={styles.footerColItems}>
+                            <span className={styles.footerColTitle}>{item.title}</span>
 
-                            {item.items.map((item) => (
+                            <div className={styles.footerColItems}>
 
-                                <Link href={item.href} key={item.label}>{item.label}</Link>
+                                {item.items.map((item) => (
 
-                            ))}
+                                    <Link href={item.href} key={item.label}>{item.label}</Link>
+
+                                ))}
+
+                            </div>
 
                         </div>
+                    ))
+                }
 
-                    </div>
-                ))
-            }
+            </div>
 
-            <div className={`${styles.footerCol} ${styles.footerColContact}`}>
+            <div className={`${styles.footerColContact}`}>
 
-                <span className={styles.footerColTitle}>Contact Us</span>
+                <span className={`${styles.footerColTitle} ${styles.footerColTitleContact}`}>Contact Us</span>
 
                 <FooterContactItems theme={theme} />
-
-                <FooterSocialItems theme={theme} />
 
                 <div className={styles.footerColItems}>
 
@@ -59,7 +60,7 @@ export default function FooterItems({ theme }) {
 
             </div>
 
-        </div>
+        </>
 
     )
 

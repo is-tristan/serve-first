@@ -30,13 +30,23 @@ export default function FooterContactItems({ theme }) {
 
                             <div className={styles.footerContactItemContent}>
 
-                                <div className={styles.footerContactItemIcon} dangerouslySetInnerHTML={{ __html: mapPinIcon }} />
+                                <div className={styles.footerContactItemIcon} dangerouslySetInnerHTML={{ __html: item.icon ? item.icon : mapPinIcon }} />
 
                                 <div className={styles.footerContactItemText}>
 
                                     <Link href={item.phoneHref} target="_blank">{item.phone}</Link>
 
-                                    <Link href={item.addressHref} target="_blank">{item.address}</Link>
+                                    {item.address && (
+
+                                        <Link href={item.addressHref} target="_blank">{item.address}</Link>
+
+                                    )}
+
+                                    {item.phoneTwo && (
+
+                                        <Link href={item.phoneHrefTwo} target="_blank">{item.phoneTwo}</Link>
+
+                                    )}
 
                                 </div>
 
@@ -46,12 +56,9 @@ export default function FooterContactItems({ theme }) {
 
                     ))}
 
-                    <Link href="mailto:info@servefirst.ai" target="_blank" className={styles.footerContactItemEmail}>info@servefirst.ai</Link>
+                </div>
 
-                </div >
-
-            )
-            }
+            )}
 
         </>
     )
