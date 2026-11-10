@@ -149,10 +149,10 @@ form{display:grid;gap:18px;border:3px solid var(--line);padding:clamp(20px,3vw,3
 .err{color:var(--black);font-weight:700;min-height:1.4em;margin:0}
 .done-msg{border:3px solid var(--line);padding:clamp(24px,3vw,36px);display:grid;gap:14px}
 .done-msg h3{margin:0;font:900 clamp(28px,3.4vw,44px)/1 var(--display);text-transform:uppercase}
-footer{padding-block:48px 48px;border-top:2px solid var(--white)}
+footer{padding:48px 0 calc(48px + 72px);border-top:2px solid var(--white)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
 footer .footerMethodology{margin-top:48px;justify-content:flex-start}
-footer .footerMethodology p{margin:0;max-width:52rem}
+footer .footerMethodology p{margin:0;max-width:52rem;line-height:1.55}
 footer .footerMethodologyBody{display:block;margin-top:8px;color:#bdbdbd}
 .seq{display:none}
 [data-concept="d"] .h2c{display:flex;flex-wrap:wrap;align-items:baseline;gap:.08em .3em}
