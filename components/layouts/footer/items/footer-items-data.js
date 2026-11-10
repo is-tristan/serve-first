@@ -126,8 +126,8 @@ export const footerContactItems = [
   {
     icon: mapPinIcon,
     label: "US Office (Sales)",
-    phone: "+1 (229) 475-1777",
-    phoneHref: "tel:+12294751777",
+    phone: "(678) 821-9657",
+    phoneHref: "tel:+16788219657",
     address: "8000 Avalon Boulevard, Suite 100, Alpharetta, GA 30009",
     addressHref: "https://maps.app.goo.gl/NoYq71Bkx8zJ9Ctd6"
   },
