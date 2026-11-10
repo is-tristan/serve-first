@@ -1523,11 +1523,11 @@ export default function CxIsBroken() {
             </a>
             <span>{"© 2026 Serve First"}</span>{" "}
           </div>{" "}
-          <div className="wrap mono">
+          <div className="wrap mono footerMethodology">
             {" "}
-            <p style={{ marginTop: '48px' }}>
+            <p>
               {"Research Methodology"}
-              <span style={{ display: 'block', marginTop: '8px' }} className="mono by">{"Research was conducted by 3Gem on behalf of Serve First in August 2026 among 250 UK customer experience leaders and decision-makers working in retail, hospitality and other customer-facing sectors."}</span>{" "}
+              <span className="mono footerMethodologyBody">{"Research was conducted by 3Gem on behalf of Serve First in August 2026 among 250 UK customer experience leaders and decision-makers working in retail, hospitality and other customer-facing sectors."}</span>{" "}
             </p>
           </div>{" "}
         </footer>{" "}
