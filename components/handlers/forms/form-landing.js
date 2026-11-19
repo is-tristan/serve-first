@@ -18,8 +18,10 @@ import { shieldTick } from "@/utils/icons";
 
 // Utils
 import { appendHubspotContext, submitHubspotForm } from "@/utils/forms";
+import { trackFormSubmissionSuccess } from "@/utils/posthog";
 
 export default function FormLanding({
+    formName = "landing page form",
     theme = "primary",
     hasDemoLink = true,
     formBtnText = "Send message",
@@ -54,6 +56,10 @@ export default function FormLanding({
         const submission = await submitHubspotForm(formData);
 
         if (submission.success) {
+            trackFormSubmissionSuccess({
+                formName,
+                email: formData.get("email"),
+            });
             router.push("/thank-you");
             return;
         }

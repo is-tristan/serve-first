@@ -15,11 +15,13 @@ import localStyles from "@/styles/components/screens/products/operational-excell
 
 // Utils
 import { appendHubspotContext, submitHubspotForm } from "@/utils/forms";
+import { trackFormSubmissionSuccess } from "@/utils/posthog";
 
 // Icons
 import { arrowRightShort, emailIcon } from "@/utils/icons";
 
 export default function ComingSoonForm({
+    formName = "vision waitlist",
     utmMedium = "VISION Coming Soon",
 }) {
     const [result, setResult] = useState("");
@@ -35,6 +37,10 @@ export default function ComingSoonForm({
         const submission = await submitHubspotForm(formData);
 
         if (submission.success) {
+            trackFormSubmissionSuccess({
+                formName,
+                email: formData.get("email"),
+            });
             router.push("/thank-you");
             return;
         }

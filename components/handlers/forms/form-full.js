@@ -18,9 +18,10 @@ import { shieldTick } from "@/utils/icons";
 
 // Utils
 import { appendHubspotContext, submitHubspotForm } from "@/utils/forms";
+import { trackFormSubmissionSuccess } from "@/utils/posthog";
 
 export default function FormFull({
-    formName = "Full Form",
+    formName = "demo request",
     theme = "primary",
     hasDemoLink = true,
     formBtnText = "Send message",
@@ -42,6 +43,10 @@ export default function FormFull({
         const submission = await submitHubspotForm(formData);
 
         if (submission.success) {
+            trackFormSubmissionSuccess({
+                formName,
+                email: formData.get("email"),
+            });
             router.push("/thank-you");
             return;
         }

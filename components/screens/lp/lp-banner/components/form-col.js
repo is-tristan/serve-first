@@ -12,7 +12,7 @@ import FormLanding from "@/components/handlers/forms/form-landing";
 // Styles
 import styles from "@/styles/components/screens/lp/lp.module.scss";
 
-export default function FormCol({ formBtnText, formSmallText, formType = "small", hasDemoLink, utmMedium }) {
+export default function FormCol({ formBtnText, formSmallText, formType = "small", formName, hasDemoLink, utmMedium }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.25 });
@@ -30,6 +30,7 @@ export default function FormCol({ formBtnText, formSmallText, formType = "small"
             {formType === "full" && (
 
                 <FormFull
+                    formName={formName || "demo request"}
                     utmMedium={utmMedium}
                     formTitle="Book a 20-minute demo"
                     formBtnText={formBtnText}
@@ -43,6 +44,7 @@ export default function FormCol({ formBtnText, formSmallText, formType = "small"
 
             {formType === "small" && (
                 <FormSmall
+                    formName={formName || "contact"}
                     utmMedium={utmMedium}
                     formTitle="Book a 20-minute demo"
                     formBtnText={formBtnText}
@@ -55,6 +57,7 @@ export default function FormCol({ formBtnText, formSmallText, formType = "small"
 
             {formType === "landing" && (
                 <FormLanding
+                    formName={formName || "landing page form"}
                     utmMedium={utmMedium}
                     formTitle="Book a 20-minute demo"
                     formBtnText={formBtnText}

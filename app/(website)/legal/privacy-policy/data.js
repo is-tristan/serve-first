@@ -33,6 +33,7 @@ export const privacyPolicySections = [
       "Profile Data, including purchases, interests, preferences, feedback, and survey responses.",
       "Usage Data, including information about how you use our website and services.",
       "Marketing and Communications Data, including your marketing and communication preferences.",
+      "Analytics event data from form interactions, including a readable form name (such as demo request, contact, or landing page form), page context, and a visitor identifier used to link analytics activity with your CRM contact where you have consented to analytics cookies.",
     ],
     trailingParagraphs: [
       "We do not collect Special Categories of Personal Data or information about criminal convictions and offences.",
@@ -48,6 +49,7 @@ export const privacyPolicySections = [
     ],
     items: [
       "Technical Data from analytics providers and advertising or search networks such as Google.",
+      "Product analytics data from PostHog, including page usage and successful form submission events when you have accepted analytics cookies.",
       "Behavioural and session data from Microsoft Clarity.",
       "CRM and marketing data from HubSpot.",
       "Contact, Financial, and Transaction Data from technical, payment, and delivery providers.",
@@ -55,7 +57,16 @@ export const privacyPolicySections = [
     ],
   },
   {
-    title: "4. How we use your personal data",
+    title: "4. Website forms, HubSpot and PostHog",
+    paragraphs: [
+      "When you submit a form on this website, the information you enter is sent to HubSpot so we can respond to your enquiry, provide a demo, or manage related sales and support communications.",
+      "If you have accepted analytics cookies through our cookie banner, we also send a form submission event to PostHog. That event includes a readable form name (for example, demo request, contact, landing page form, or vision waitlist) and does not include your email address in the event properties.",
+      "Where analytics consent has been given, we may call PostHog's identify function with the email address you submitted so PostHog can associate that website visitor with the related HubSpot contact. If you have not accepted analytics cookies, PostHog is not loaded and no identify call or form submission event is sent to PostHog.",
+      "You can change or withdraw analytics cookie consent at any time using the cookie preferences controls on this website. See our Cookie Policy for more detail.",
+    ],
+  },
+  {
+    title: "5. How we use your personal data",
     paragraphs: ["We only use your personal data when the law allows us to."],
     items: [
       "To perform a contract we are about to enter into or have entered into with you.",
@@ -68,14 +79,14 @@ export const privacyPolicySections = [
     ],
   },
   {
-    title: "5. Disclosures of your personal data",
+    title: "6. Disclosures of your personal data",
     paragraphs: [
       "We may share personal data with the External Third Parties described in the Glossary and with third parties involved in a sale, transfer, merger, acquisition, or reorganization of our business or assets.",
       "We require all third parties to respect the security of your personal data and process it in accordance with the law. Service providers may only process it for specified purposes and on our instructions.",
     ],
   },
   {
-    title: "6. International transfers",
+    title: "7. International transfers",
     paragraphs: [
       "Some external third parties are based outside the European Economic Area, so their processing may involve an international transfer.",
       "When personal data is transferred outside the EEA, we use appropriate safeguards.",
@@ -90,7 +101,7 @@ export const privacyPolicySections = [
     ],
   },
   {
-    title: "7. Data security",
+    title: "8. Data security",
     paragraphs: [
       "We use appropriate security measures to prevent personal data from being accidentally lost, used, accessed, altered, or disclosed without authorization.",
       "Access is limited to employees, agents, contractors, and third parties with a business need to know. They process data on our instructions and are subject to confidentiality duties.",
@@ -98,7 +109,7 @@ export const privacyPolicySections = [
     ],
   },
   {
-    title: "8. Data retention",
+    title: "9. Data retention",
     paragraphs: [
       "We retain personal data only as long as necessary for the purposes for which it was collected, including legal, accounting, and reporting requirements.",
       "We consider the amount, nature, and sensitivity of the data, the risk of harm, the processing purposes, available alternatives, and legal requirements.",
@@ -107,7 +118,7 @@ export const privacyPolicySections = [
     ],
   },
   {
-    title: "9. Your legal rights",
+    title: "10. Your legal rights",
     paragraphs: [
       "Under data protection law, you may have the following rights:",
     ],
@@ -126,7 +137,7 @@ export const privacyPolicySections = [
     ],
   },
   {
-    title: "10. Glossary",
+    title: "11. Glossary",
     paragraphs: [
       "Legitimate Interest means our interest in conducting and managing the business to provide the best and most secure experience.",
       "Performance of Contract means processing necessary to perform a contract with you or take steps at your request before entering into one.",
@@ -137,6 +148,7 @@ export const privacyPolicySections = [
       "Google LLC, including Google Analytics, Google Ads, Google Tag Manager, and Google Search Console.",
       "Microsoft Corporation, including Microsoft Clarity.",
       "HubSpot Inc., including CRM and marketing automation services.",
+      "PostHog Inc., including product analytics used to understand website usage and successful form submissions after analytics cookie consent.",
     ],
   },
 ];

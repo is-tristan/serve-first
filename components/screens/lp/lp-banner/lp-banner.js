@@ -23,6 +23,7 @@ export default function LpBanner({
     hasDemoLink = false,
     formSmallText,
     formType = "landing",
+    formName,
     utmMedium,
     buttonPrimary = {
         text: "Request a demo",
@@ -101,7 +102,7 @@ export default function LpBanner({
 
                 </div>
 
-                <FormCol formBtnText={formBtnText} formSmallText={formSmallText} formType={formType} hasDemoLink={hasDemoLink} utmMedium={utmMedium} />
+                <FormCol formBtnText={formBtnText} formSmallText={formSmallText} formType={formType} formName={formName} hasDemoLink={hasDemoLink} utmMedium={utmMedium} />
 
             </div>
 

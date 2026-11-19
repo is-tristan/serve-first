@@ -1,4 +1,5 @@
 import { appendHubspotContext, submitHubspotForm } from "./forms";
+import { trackFormSubmissionSuccess } from "@/utils/posthog";
 
 /* ============================================================
    CX is Broken · site settings. Fill these in before launch.
@@ -443,6 +444,10 @@ function runSite() {
         if (button) button.disabled = false;
         return;
       }
+      trackFormSubmissionSuccess({
+        formName: "cx is broken report",
+        email: email,
+      });
       var C = window.CXB_CONFIG || {};
       if (C.reportPdfUrl) {
         var dl = document.createElement('a'); dl.href = C.reportPdfUrl; dl.download = ''; document.body.appendChild(dl); dl.click(); dl.remove();
@@ -1026,6 +1031,10 @@ function runSite() {
             if (leadButton) leadButton.disabled = false;
             return;
           }
+          trackFormSubmissionSuccess({
+            formName: "cx is broken benchmark",
+            email: em,
+          });
           showLoading();   /* the email is never stored in the browser */
         });
       }
@@ -1050,6 +1059,10 @@ function runSite() {
             if (bookButton) bookButton.disabled = false;
             return;
           }
+          trackFormSubmissionSuccess({
+            formName: "cx is broken book a call",
+            email: m,
+          });
           bookForm.hidden = true;
           document.getElementById('cxb-ok').hidden = false;
           bookForm.closest('.cxb-upgrade').classList.add('booked');

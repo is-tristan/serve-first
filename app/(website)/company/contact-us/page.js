@@ -18,6 +18,7 @@ export default function GetADemo() {
                 eyebrow="Talk to the real people behind it"
                 title="Built for the people who serve"
                 description="Whether you want a demo, have a question or need support, you will reach a real person who knows the platform, not a ticket queue."
+                formName="contact"
                 formBtnText="Request my demo"
                 hasDemoLink={false}
                 buttonPrimary={

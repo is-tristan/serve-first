@@ -4,6 +4,22 @@ const nextConfig = {
   experimental: {
     agentUpgrade: "security",
   },
+  async rewrites() {
+    return [
+      {
+        source: "/sf-relay/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/sf-relay/array/:path*",
+        destination: "https://us-assets.i.posthog.com/array/:path*",
+      },
+      {
+        source: "/sf-relay/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+    ];
+  },
   async redirects() {
     return [
       {

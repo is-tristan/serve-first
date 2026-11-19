@@ -17,6 +17,7 @@ export default function LpCta({
     hasDemoLink = false,
     formSmallText,
     formType = "landing",
+    formName = "landing page form",
     utmMedium,
 }) {
 
@@ -45,7 +46,7 @@ export default function LpCta({
 
                     <div className={`formCol ${styles.formCol}`}>
 
-                        <FormLanding theme="light" formBtnText={formBtnText} formSmallText={formSmallText} formType={formType} hasDemoLink={hasDemoLink} utmMedium={utmMedium} />
+                        <FormLanding theme="light" formBtnText={formBtnText} formSmallText={formSmallText} formName={formName} hasDemoLink={hasDemoLink} utmMedium={utmMedium} />
 
                     </div>
 

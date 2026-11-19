@@ -38,6 +38,7 @@ export default function GetADemo() {
                 title="See Serve First across your locations"
                 description="A personalized walkthrough with your locations, your data and your team in mind. No generic tour, just the platform working the way it would for you."
                 formType="full"
+                formName="demo request"
                 formBtnText="Request my demo"
                 hasDemoLink={false}
                 buttonPrimary={
