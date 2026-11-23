@@ -5,25 +5,7 @@ import Testimonials from "@/components/sections/testimonials/testimonials";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/get-a-demo");
-    const title = "Request a demo | See Serve First Across Your Locations";
-    const description = "Book a personalized Serve First demo and see how it works with your data and your teams across every location you run.";
-
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/get-a-demo");
 }
 
 export default function GetADemo() {

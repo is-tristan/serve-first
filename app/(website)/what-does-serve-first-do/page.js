@@ -21,21 +21,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/what-does-serve-first-do");
-    const description = "Serve First is a Customer Experience and Operational Intelligence platform for multi-location businesses. It captures, analyzes and actions every signal.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/what-does-serve-first-do");
 }
 
 export default function WhatDoesServeFirstDo() {

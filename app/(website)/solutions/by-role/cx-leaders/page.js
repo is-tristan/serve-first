@@ -22,21 +22,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-role/cx-leaders");
-    const description = "See customer experience across every location and turn it into action. Serve First gives CX leaders live sentiment, root cause and routed fixes.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-role/cx-leaders");
 }
 
 export default function CXLeader() {

@@ -22,24 +22,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-role/operations-directors");
-    const title = "Operations Management Software, Multi-Location | Serve First";
-    const description = "Keep every location up to standard with Serve First. Operations leaders get live audits, routed tasks and one operating picture across all your locations.";
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-role/operations-directors");
 }
 
 export default function OperationsDirector() {

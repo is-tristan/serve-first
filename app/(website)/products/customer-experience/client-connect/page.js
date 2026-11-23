@@ -27,20 +27,7 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/products/customer-experience/client-connect");
-    const description = "Automate B2B feedback, relationships and NPS with our enterprise feedback management system: Client Connect. Drive insight, engagement and growth";
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/products/customer-experience/client-connect");
 }
 
 export default async function ClientConnect() {

@@ -26,25 +26,7 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/how-it-works/analyze");
-    const title = "Analyze Customer Feedback and Find the Cause | Serve First";
-    const description = "Go from scores to the reason behind them. Serve First scores sentiment in real time and surfaces themes per location and across your business.";
-
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/how-it-works/analyze");
 }
 
 export default function Analyze() {

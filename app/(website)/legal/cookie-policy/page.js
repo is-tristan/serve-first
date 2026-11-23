@@ -9,25 +9,7 @@ import { cookiePolicySections } from "./data";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-  const metadata = await getPageMetadata("/legal/cookie-policy");
-  const title = "Cookie Policy - Serve First";
-  const description = "How Serve First uses cookies and similar technologies, and how to manage your choices.";
-
-  return {
-    ...metadata,
-    title,
-    description,
-    openGraph: {
-      ...metadata.openGraph,
-      title,
-      description,
-    },
-    twitter: {
-      ...metadata.twitter,
-      title,
-      description,
-    },
-  };
+  return getPageMetadata("/legal/cookie-policy");
 }
 
 export default function CookiePolicy() {

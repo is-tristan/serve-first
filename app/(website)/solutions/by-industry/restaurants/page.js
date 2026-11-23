@@ -24,20 +24,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-industry/restaurants");
-    const description = "Keep safety and service up to standard at every table. Serve First connects guest feedback with how each location runs, and turns gaps into action.";
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-industry/restaurants");
 }
 
 export default function LeisureAndHospitality() {

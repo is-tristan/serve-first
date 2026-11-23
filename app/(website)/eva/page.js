@@ -18,24 +18,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/eva");
-    const title = "EVA: AI Analyst For Multi-Location Operations - Serve First";
-    const description = "EVA does the analysis, so you aren't juggling reports. Ask in plain language and EVA gives you the latest status across every location";
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/eva");
 }
 
 export default function Eva() {

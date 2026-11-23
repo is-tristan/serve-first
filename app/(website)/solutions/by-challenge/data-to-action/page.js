@@ -22,25 +22,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-challenge/data-to-action");
-    const title = "From Data to Action, Multi-Location | Serve First";
-    const description = "Stop insight dying in dashboards. Serve First turns every signal into a routed action, tracked to proof of completion across every location.";
-
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-challenge/data-to-action");
 }
 
 export default function DataToAction() {

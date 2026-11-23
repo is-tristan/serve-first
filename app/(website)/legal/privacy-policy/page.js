@@ -7,21 +7,7 @@ import { privacyPolicySections } from "./data";
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-  const metadata = await getPageMetadata("/legal/privacy-policy");
-  const description = "Our privacy policy: how Serve First collects, uses and protects your personal data, and your rights.";
-
-  return {
-    ...metadata,
-    description,
-    openGraph: {
-      ...metadata.openGraph,
-      description,
-    },
-    twitter: {
-      ...metadata.twitter,
-      description,
-    },
-  };
+  return getPageMetadata("/legal/privacy-policy");
 }
 
 export default function PrivacyPolicy() {

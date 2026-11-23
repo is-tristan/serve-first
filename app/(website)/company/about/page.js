@@ -10,21 +10,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 import { platformStoryData } from "./data";
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/company/about");
-    const description = "Serve First helps multi-location operators turn every customer signal into action, not another dashboard. Trusted by brands including The Body Shop.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/company/about");
 }
 
 export default function About() {

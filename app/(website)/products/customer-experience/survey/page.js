@@ -34,21 +34,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/products/customer-experience/survey");
-    const description = "Build, send and analyze customer surveys across web, kiosk, email and SMS with Serve First. Logic branching, real-time results and sentiment analysis.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/products/customer-experience/survey");
 }
 
 export default async function Survey() {

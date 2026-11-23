@@ -22,25 +22,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-role/compliance-managers");
-    const title = "Compliance Management Software, Multi-Location | Serve First";
-    const description = "Document compliance across every location with Serve First. Compliance managers get checklists, captured evidence and audit trails ready on request.";
-
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-role/compliance-managers");
 }
 
 export default function ComplianceManagers() {

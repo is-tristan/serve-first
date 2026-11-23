@@ -24,21 +24,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-industry/retail");
-    const description = "Visualize your customer journey and optimize store performance with retail analytics tools. Serve First powers audits, insights, and smarter retail decisions.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-industry/retail");
 }
 
 export default function Retail() {

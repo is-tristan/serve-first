@@ -22,24 +22,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-challenge/inconsistent-standards");
-    const title = "Fix Inconsistent Standards Across Locations | Serve First";
-    const description = "Stop standards slipping from location to location. Serve First scores every location, routes the fix and proves consistency across your whole business.";
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/solutions/by-challenge/inconsistent-standards");
 }
 
 export default function InconsistentStandards() {

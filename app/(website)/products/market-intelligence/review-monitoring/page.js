@@ -32,21 +32,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/products/market-intelligence/review-monitoring");
-    const title = "Online Review Monitoring for Multi-Location Brands | Serve First";
-
-    return {
-        ...metadata,
-        title,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-        },
-    };
+    return getPageMetadata("/products/market-intelligence/review-monitoring");
 }
 
 export default async function ReviewMonitoring() {

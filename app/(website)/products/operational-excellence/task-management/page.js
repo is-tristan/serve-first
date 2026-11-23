@@ -32,25 +32,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/products/operational-excellence/task-management");
-    const title = "Task Management Software for Multi-Location Teams | Serve First";
-    const description = "Turn insight into action with Serve First task management. Assign, prioritize and track tasks across every location, with deadlines and progress reporting.";
-
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/products/operational-excellence/task-management");
 }
 
 export default async function TaskManagement() {

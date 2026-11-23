@@ -22,20 +22,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/solutions/by-challenge/prove-improvement");
-    const title = "Prove What's Improving, Multi-Location | Serve First";
-    return {
-        ...metadata,
-        title,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-        },
-    };
+    return getPageMetadata("/solutions/by-challenge/prove-improvement");
 }
 
 export default function ProveImprovement() {

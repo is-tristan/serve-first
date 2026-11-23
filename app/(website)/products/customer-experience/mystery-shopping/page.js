@@ -31,21 +31,7 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/products/customer-experience/mystery-shopping");
-    const description = "Mystery shopping services for multi-location brands. Trained mystery shoppers score every location against your standards, with photo evidence and free pilots available.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/products/customer-experience/mystery-shopping");
 }
 
 export default async function MysteryShopping() {

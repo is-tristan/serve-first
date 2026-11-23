@@ -27,21 +27,7 @@ import {
 import { getPageMetadata } from "@/seo/seo-map-data";
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/how-it-works/capture");
-    const description = "Bring every customer signal into one place: terminals, surveys, reviews and audits, across every location, in real time and offline-ready.";
-
-    return {
-        ...metadata,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            description,
-        },
-    };
+    return getPageMetadata("/how-it-works/capture");
 }
 
 export default function Capture() {
