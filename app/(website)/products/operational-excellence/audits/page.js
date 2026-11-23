@@ -32,25 +32,7 @@ import { getPageMetadata } from "@/seo/seo-map-data";
 
 
 export async function generateMetadata() {
-    const metadata = await getPageMetadata("/products/operational-excellence/audits");
-    const title = "Digital Audit Software for Multi-Location Teams | Serve First";
-    const description = "Run digital audits at every location, capture photo evidence and turn every failed check into a tracked fix.";
-
-    return {
-        ...metadata,
-        title,
-        description,
-        openGraph: {
-            ...metadata.openGraph,
-            title,
-            description,
-        },
-        twitter: {
-            ...metadata.twitter,
-            title,
-            description,
-        },
-    };
+    return getPageMetadata("/products/operational-excellence/audits");
 }
 
 export default async function Audits() {
