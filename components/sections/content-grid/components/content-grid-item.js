@@ -2,6 +2,7 @@
 
 // Next
 import Image from "next/image";
+import Link from "next/link";
 
 // Imports
 import { useRef } from "react";
@@ -89,6 +90,8 @@ export default function ContentGridItem({
                 </div>
 
             </div>
+
+            {item.button && (<Link href={item.button.href} target={item.button.target ? item.button.target : "_self"} className={`colLink`} />)}
 
         </motion.article >
 

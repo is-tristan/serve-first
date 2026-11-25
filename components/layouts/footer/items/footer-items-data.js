@@ -73,8 +73,9 @@ export const explore = {
   title: "Explore",
   items: [
     {
-      label: "Meet EVA",
-      href: "/eva",
+      label: "Careers",
+      href: "https://www.careers-page.com/servefirst-co",
+      target: "_blank",
     },
     {
       label: "About us",

@@ -34,7 +34,7 @@ export default function FooterItems({ theme }) {
 
                                 {item.items.map((item) => (
 
-                                    <Link href={item.href} key={item.label}>{item.label}</Link>
+                                    <Link href={item.href} target={item.target ? item.target : "_self"} key={item.label}>{item.label}</Link>
 
                                 ))}
 
