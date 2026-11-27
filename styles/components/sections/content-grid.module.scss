@@ -19,6 +19,11 @@
     }
 }
 
+.contentGridItemContainer {
+    position: relative;
+    height: 100%;
+}
+
 .contentGridItem {
     display: flex;
     flex-flow: column nowrap;
